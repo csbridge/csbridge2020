@@ -1,0 +1,81 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTk.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Gizemli Kare
+			</h1>
+			<p>
+				Problemi yazan: gizemli bir CS106A profesörü.
+			</p>
+
+		</div>
+		<hr/>
+
+		
+
+		<div class="row">
+			<div class="col-md-12">
+				Ekranın tam ortasında (100'e 100 piksellik) bir kare çizin ve her saniye rengini değiştirin.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Çözüm</h2>
+
+
+<pre id="editor" style="height:400px">/**
+ * Draws a Mystery Square that changes color
+ * -----------------------------------------
+ * Really does what it says.
+ */
+public class MysterySquare extends GraphicsProgram {
+
+	private static RandomGenerator rg = new RandomGenerator();
+	
+	public void run() {
+		// Draw a square in the center of the screen.
+		GRect rect = new GRect(100, 100);
+		double x = (getWidth() - rect.getWidth()) / 2;
+		double y = (getHeight() - rect.getHeight()) / 2;
+		rect.setFilled(true);
+		add(rect, x, y);
+		
+		// Change its color every second.
+		while(true) {
+			rect.setColor(rg.nextColor()); 
+			pause(1000);
+		}
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	</div>
+	</div>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

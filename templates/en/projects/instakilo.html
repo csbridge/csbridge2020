@@ -1,0 +1,241 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Instakilo
+			</h1>
+			<p>
+				Written by Julia Lee and Chris Piech. Based on FacePamphlet by Mehran Sahami and Eric Roberts.
+			</p>
+			<!--<p>
+				Worked Example: 
+				<a href="{{pathToRoot}}projects/emc2.html">RandomSquare</a>
+			</p>-->
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					In this project, you will build something like Instagram...except that it will be 1000 times more fun and cool because you made it, so we've appropriately named Instakilo! In the process you will make use of three major concepts: Interactors, HashMaps and ArrayLists.
+
+				</p>
+
+				<p>
+					The inital state of the app greets users with the friendly message: "Welcome to Instakilo!"" and loads profile data from a text file into the app. At this point and any point, the user has 3 core actions she/he can take: 
+						<ol>
+							<li>browse a profile with a given name
+							<li>post pictures on the current profile
+							<li>create a new profile associated with a given name
+						</ol>
+				</p>
+				<p>Bellow is an example of the app running. It is showing the profile for the user "Chris Piech" and associated photos.
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/instakilo/fullPhotos.png">	
+					</center>
+				</p>
+				<p>
+					When the program is closed and opened again, previously created profiles, and posted photos should still exist (Whenever a profile is created or picture is posted to a profile, a data file is updated to reflect the current state of all profiles). Each profile consists of a unique name and a list of file names of images that have been posted to that profile.
+				</p>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 1: Welcome</h2>
+
+				<p>As a warm-up to displaying a profile with images, you should first implement a method <code><b>displayMessage</b></code> that takes a string as a parameter and displays it to the user in the center of the screen. This method will be useful for displaying the welcome message on application start, as well as later when you respond to user input via the interactors. The message should be centered and be given the font MESSAGE_FONT defined in IKConstants. In other words, the method should look something like the following:</p>
+
+<div class="well"><code>
+private void displayMessage(String message) {
+<br/>&nbsp;&nbsp;&nbsp;removeAll(); // clear the screen
+<br/>&nbsp;&nbsp;&nbsp;// create text graphics object with the given message
+<br/>&nbsp;&nbsp;&nbsp;// set the font and location of the graphics object
+<br/>&nbsp;&nbsp;&nbsp;// display the message!
+<br/>}
+</code></div>
+
+<p>
+As a reminder you can use <code>getWidth()</code> to get the width of the applicaiton window. Now call this method to display "Welcome to Instakilo!" when the application starts.<p>
+
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/instakilo/welcome.png">	
+					</center>
+				</p>
+
+
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 2: Interactors</h2>
+
+				<p>The next part of this assignment is to add the necessary interactors. Create the panel shown bellow with the appropriate combination of JLabel, JButton, and JTextField objects. Don't forget to call <code>addActionListeners()</code></p>
+
+				<p>
+					<br/>
+					<center>
+						<img style="width:400px" src="{{pathToRoot}}img/projects/instakilo/interactors.png">	
+					</center>
+					<br/>
+				</p>
+
+				<p>Next we want to make sure that we can respond to button clicks. To test that your iteractors are connected correctly display a message, using the <code><b>displayMessage</b></code> method you wrote in the first milestone when a user clicks a button. For now show this message when someone hits the "display" button:
+					<div class="well"><code>
+						"display profile: <i>profileName</i>"
+					</code></div>
+				For example if we type in Bob Marley and hit display message your program should show the following screen:
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/instakilo/message.png">	
+					</center>
+				</p>
+
+
+				Similarly, show this message when someone hits the create button,
+					<div class="well"><code>
+						"create profile: <i>profileName</i>"
+					</code></div>
+				And show this message when someone hits the post button
+					<div class="well"><code>
+						"post profile: <i>profileName</i>"
+					</code></div>
+				</p>
+
+				<p>Later we will replace showing a message with the actual funcitonality!</p>
+
+
+				
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 3: Database</h2>
+				<p>Now that we have our interactors set up, our next step is to create the appropriate datastructure to store all profiles. For this project, you should use a <code>HashMap&lt;String, ArrayList&lt;String&gt;&gt;</code> to map from profile names to the list of file names for the photos associated with each profile. </p>
+
+				<p>Create the HashMap when the program starts and for now lets put some prefabricated data into it. Make a profile with the name "Bob Marley" who has four image file names (they should be strings): ["bob.jpg", "bobFamily.jpg" "bobYoung.jpg" and "bobSinging.jpg"]</p>
+
+				<p>Bob Marley was one of the most successful singers around the world... so it seems appropriate that he would have a profile on Instakilo</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 4: Display Profile</h2>
+				<p>It's now time to start showing profiles. If a profile exists in our HashMap with the name entered in the profile text field, then Instakilo should display that profile name and images associated with it; otherwise, you should display the message "No profile exists with that name".
+</p>
+
+			<p></p>
+
+			<p> At the moment our HashMap only contains one profile Bob Marley. When we display Bob Marley's profile it should look like this (we no longer show the message "display profile: Bob Marley"):
+
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/instakilo/bob.png">	
+					</center>
+				</p>
+
+				<h3>Images from filenames</h3>
+				<p>If you have a filename, it is very simple to create the corresponding GImage (A GImage is like a GRect, except that instead of displaying a rectangle it displays an image)
+					<div class="well"><code>GImage <i>myImage</i> = new GImage(<i>fileName</i>);</code></div>
+
+				<h3>Scaling images</h3>
+				<p>The images you display should all be of the height ROW_HEIGHT, but when you load them from file, they could be any size! In order to make them the right size you are going to have to use the GImage scale method. 
+					<div class="well"><code><i>image</i>.scale(<i>fraction</i>);</code></div>
+				For example if you wrote <code>image.scale(0.5)</code> it would make both the width and the heigh of your image half the size. You can get the height of your image using <code><i>image</i>.getHeight();</code> How much should you scale your image by so that it is ROW_HEIGHT?
+				</p>
+
+				<h3>Layout</h3>
+				<p>	Add images one by one starting from the top left. Add images to the current row until you reach the point where adding a new image would extend the image past the right side of the screen. When an image would extend past the right side of the screen, change to placing images on the next row.</p>
+				<p>There is a margin that is size MARGIN pixels between everything.</p>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 4: Create a Profile</h2>
+
+				<p>when the user clicks "Create", you should first check if a profile already exists with that name. If a profile exists, then display a message to the user ("A profile already exists for that name"). Otherwise, you want to create a new entry in your data hashmap to store this new profile and display it for the user.
+				</p>
+
+<p>For example if you type in Julia Lee in the profileName field and hit the Create button you should end up displaying the new, empty profile for Julia.</p>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 5: Post Photo</h2>
+
+				<p>To post a new photo on the current profile, the user will enter an image name in the lower text area (labeled "New photo name:"") and click "Post".
+				1) If no profile is currently displayed, then display the message "Please select a profile before posting a picture"
+				2) If a profile is displayed, first check that an image exists with the given name using the provided method FileSystem.imageFileExists. If true, add the photo name to the ArrayList of photos associated with that profile, redisplay the current profile.
+				</p>
+
+				<p>If we post the photo julia1.jpg to Julia's profile, it should get displayed!</p>
+
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/instakilo/post.png">	
+					</center>
+				</p>
+				<p>Instakilo finds images from the img folder in the Instakilo project. We put a lot of photos there for you to play with. Add your own photos to the img folder so you can create a profile for yourself!</p>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 6: Load and Save</h2>
+
+				<p>You can save your HashMap to file using the method:
+					<div class="well"><code>
+						FileSystem.saveMap(<i>myMap</i>, <i>fileName</i>);
+						</code></div>
+					And you can load a hash map from file using the method:
+					<div class="well"><code>HashMap&lt;String, &lt;ArrayList&lt;String&gt;&gt; <i>myMap = </i>FileSystem.loadMap(<i>fileName</i>);</code></div>
+					If no hashMap exists with the given fileName, loadMap will return null.
+				</p>
+				<p>
+					Your final milestone is to make changes to your instakilo hashMap persist between runs. Any time you change your hashMap save it to file! When you start the program, load the hashMap from file.
+				</p>
+
+				<p>Thats it! You are done with Instakilo.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Extensions</h2>
+				<p>
+					One feature that made Instagram so popular was that users could apply filters to their photos. Create a feature where a user can click on an image (which will select it) and then hit a button to make the image black and white. Ask the staff for more instructions if you are interested!
+				</p>
+			</div>
+		</div>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

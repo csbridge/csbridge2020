@@ -1,0 +1,130 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				8Ball (with solution)
+			</h1>
+			<p>
+				Problem written by Chris Piech.
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					The idea behind an 8-Ball is very simple. You ask the eight ball a yes or no question, and it tells you the answer.
+				</p>
+
+				<p>Except, that the answer it choses is randomly selected from a set of prefabricated responses.</p>
+				<p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/8Ball/real.gif">	
+						<p style="text-align:center"><i>A real life 8-Ball</i></p>
+					</center>
+				</p>
+
+				<p>Write a program that continuously prompts the user for a yes or no question, and then randomly selects from 5 canned answers:</p>
+				<ul>
+					<li>Without a doubt.</li>
+					<li>Yes.</li>
+					<li>Ask again later.</li>
+					<li>No.</li>
+					<li>Karel thinks so.</li>
+				</ul>
+				<p>Here is an example run of the program.</p>
+
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/8Ball/sampleRun.png">	
+						
+					</center>
+				</p>
+				
+				<p>To generate random numbers create a RandomGenerator instance variable (a variable declared outside all methods) like so:
+					<div class="well"><code>private RandomGenerator rgen = new RandomGenerator();</code></div>
+				</p>
+				<p>You can then use the variable to generate random numbers.
+					<div class="well"><code>
+						rgen.nextInt(<i>max</i>)  //generates a random int in the range [0, max)
+					</code></div>
+				</p>
+</p>
+				
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:580px">/**
+ * Class: Eight Ball
+ * -----------------
+ * Simulates an eight ball and gives sage answers to yes or
+ * no questions.
+ */
+public class EightBall extends ConsoleProgram {
+	
+	private static RandomGenerator rg = new RandomGenerator();
+	
+	public void run() {
+		while(true) {
+			readLine("Ask a yes or no question: ");
+			
+			int choice = rg.nextInt(5);
+			println(choice);
+			if(choice == 0) {
+				println("Without a doubt");
+			}
+			if(choice == 1) {
+				println("Yes");
+			}
+			if(choice == 2) {
+				println("Ask again later.");
+			}
+			if(choice == 3) {
+				println("No");
+			}
+			if(choice == 4) {
+				println("Karel thinks so.");
+			}
+			println("");
+		}
+	}
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	</div>
+	</div>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

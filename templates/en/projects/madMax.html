@@ -1,0 +1,52 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Mad Max
+			</h1>
+			<p>
+				Written by Chris
+			</p>
+			<p>
+				Example:
+				<a href ="{{pathToRoot}}en/projects/halfGreen.html">Half Green</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Complete the <code>MadMax</code> program by filling in the <code>max</code> method:
+				</p>
+				<div class="well"><code>private int max(int i, int j)</code></div>
+				<p>
+					Your output should look like this:
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/madMax/madMax.png">	
+					</center>
+				</p>
+				
+
+			</div>
+
+		</div>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

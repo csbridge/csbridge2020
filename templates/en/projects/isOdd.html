@@ -1,0 +1,80 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Half Green
+			</h1>
+			<p>
+				Written by Chris Piech
+			</p>
+			<p>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					This demo shows a simple method that takes in input and returns whether or not that 
+					input is odd.
+				</p>
+				
+
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:200px">public class IsOdd extends ConsoleProgram {
+
+	public void run() {
+		for(int i = 0; i < 100; i++) {
+			println(isOdd(0));
+		}
+	}
+
+	private boolean isOdd(int value) {
+		return (value % 2) == 1;
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

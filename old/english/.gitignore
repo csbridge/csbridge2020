@@ -1,0 +1,6 @@
+.DS_Store
+*.pyc
+index.html
+plugins/*.pyc
+/projects
+/handouts

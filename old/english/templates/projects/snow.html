@@ -1,0 +1,97 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Snow
+			</h1>
+			<p>
+				Written by Chris Piech
+			</p>
+			<p>
+				Handouts:
+				<a href ="{{pathToRoot}}handouts/arrayLists.html">ArrayLists</a>
+				
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Animate GOvals (snow) falling down from the sky and pilling up on the ground.</p>
+				<p>
+					<center>
+						<img style="width:100%" src="{{pathToRoot}}img/projects/snow/snow.png">	
+					</center>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:460px">public class Snow extends GraphicsProgram {
+
+	private RandomGenerator rg = new RandomGenerator();
+
+	public void run() {
+		ArrayList&lt;GOval&gt; balls = new ArrayList&lt;GOval&gt;();
+
+		while(true) {
+			for(int i = 0; i &lt; balls.size(); i++) {
+				GOval ball = balls.get(i);
+				if(ball.getY() &lt; getHeight() - 10) {
+					ball.move(0, 1);
+				}
+			}
+
+			if(rg.nextBoolean(0.1)) {
+				GOval g = new GOval(10, 10);
+				g.setFilled(true);
+				add(g, rg.nextInt(getWidth()), -10);
+				balls.add(g);
+			}
+
+			pause(10);
+		}
+
+	}
+
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+</div>
+</div>
+
+		
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

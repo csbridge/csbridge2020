@@ -1,0 +1,131 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Rockets
+			</h1>
+			<p>
+				Written by Chris Piech
+			</p>
+			<p>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/arrayLists.html">ArrayLists</a>
+				
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					On mouseclick fire a rocket! There is no limit to the number of rockets you can fire.	
+				</p>
+				<p>
+					<center>
+						<img style="width:100%" src="{{pathToRoot}}img/projects/rockets/demo.png">	
+					</center>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:1000px">public class RocketPaddle extends GraphicsProgram {
+	
+	// constants
+	public static final int APPLICATION_HEIGHT = 600;
+	private static final double BALL_SIZE = 10;
+	private static final int PADDLE_Y = APPLICATION_HEIGHT - 50;
+	private static final int PADDLE_WIDTH = 100;
+	private static final int PADDLE_HEIGHT = 20;
+	
+	// the list of rockets
+	private ArrayList<GOval> rocketList;
+	private GRect paddle;
+	
+	public void run() {
+		rocketList = new ArrayList<GOval>();
+		paddle = new GRect(0, PADDLE_Y, PADDLE_WIDTH, PADDLE_HEIGHT);
+		paddle.setFilled(true);
+		add(paddle);
+		addMouseListeners();
+		while(true) {
+			animateRockets();
+			pause(10);
+		}
+	}
+	
+	public void mouseMoved(MouseEvent e){
+		double x = e.getX() - PADDLE_WIDTH/2;
+		paddle.setLocation(x, PADDLE_Y);
+	}
+	
+	public void mousePressed(MouseEvent e) {
+		double x = e.getX();
+		double y = PADDLE_Y;
+		GOval r = new GOval(x, y, BALL_SIZE, BALL_SIZE);
+		r.setFilled(true);
+		r.setColor(Color.BLUE);
+		
+		// add the rocket to the screen
+		add(r);
+		
+		// add the rocket to the list
+		rocketList.add(r);
+	}
+
+	private void animateRockets() {
+		// loop over list backwards so that we can safely remove
+		// from the list.
+		for(int i = rocketList.size() - 1; i >= 0; i--) {
+			GOval oval = rocketList.get(i);
+			
+			// move the rocket
+			oval.move(0, -5);
+			
+			// remove the rocket?
+			if(oval.getY() < 0) {
+				remove(rocketList.get(i));
+				rocketList.remove(i);
+			}
+		}
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+</div>
+</div>
+
+		
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

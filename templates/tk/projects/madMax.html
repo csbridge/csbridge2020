@@ -1,0 +1,52 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTk.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Mad Max
+			</h1>
+			<p>
+				Yazan: Chris
+			</p>
+			<p>
+				Örnek:
+				<a href ="{{pathToRoot}}tk/projects/halfGreen.html">Yeşilimtrak</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					<code>max</code> metodunu yazarak <code>MadMax</code> programını tamamlayın:
+				</p>
+				<div class="well"><code>private int max(int i, int j)</code></div>
+				<p>
+					Programın çıktısı şu şekilde görünmeli:
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/madMax/madMax.png">	
+					</center>
+				</p>
+				
+
+			</div>
+
+		</div>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

@@ -1,0 +1,39 @@
+<head>
+	%include templates/parts/head.html
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Random Generator Reference
+			</h1>
+			<p>
+				Written by Danielle Kain
+			</p>
+		</div>
+		<hr/>
+
+		Random Generators allow you to add randomness to your program. Regardless of what type of random object you want, you will first have to make a Random Generator: 
+		<div class="well"><code><pre>
+RandomGenerator rgen = new RandomGenerator();
+		</pre></code></div>
+		<br>
+		You can make many types of random objects using RandomGenerators. Here are some examples:
+		<div class="well"><code><pre>
+int randomInt = rgen.nextInt(); //Returns a random int
+double randomDouble = rgen.nextDouble(); //Returns a random double
+Color randomCol = rgen.nextColor(); //Returns a random color
+boolean randomBoolean = rgen.nextBoolean(); //Returns a random boolean
+		</pre></code></div>		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

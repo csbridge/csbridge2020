@@ -1,0 +1,88 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Go to Center
+			</h1>
+			<p>
+				Problem written by Chris and Julia.
+			</p>
+
+		</div>
+		<hr/>
+
+		
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+				This program animates a square that moves until it is in the center of the screen. It starts on the left side.
+			</p>
+			<p>
+				<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/goCenter/demo.png">	
+					</center>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:400px">public class GoCenter extends GraphicsProgram {
+
+    private static final int SIZE = 20;
+    private static final int DELAY = 100;
+	
+	public void run() {
+		// Draw a square on the left of the screen.
+		GRect rect = new GRect(SIZE, SIZE);
+		double x = 0;
+		double y = (getHeight() - rect.getHeight()) / 2;
+		rect.setFilled(true);
+		add(rect, x, y);
+		
+		// Move until the center
+		// rect.getX() returns the x coordinate of the rectangle
+		double maxX = (getWidth() - rect.getWidth()) /2;
+		while(rect.getX() < maxX) {
+		    // move one pixel to the right
+			rect.move(1, 0);
+			// animation pause.
+			pause(DELAY);
+		}
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	</div>
+	</div>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

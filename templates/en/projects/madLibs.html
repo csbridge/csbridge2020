@@ -1,0 +1,81 @@
+<head>
+
+  %include templates/parts/head.html
+
+
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  %include templates/parts/navBar.html
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Header -->
+    <div id="pageHeader">
+      <h1>
+        MadLibs
+      </h1>
+      <p>
+        Problem by Julia Lee and Bryce Cronkite-Ratcliff
+      </p>
+      <p>
+        Example: <a href="{{pathToRoot}}en/projects/madMax.html">MadMax</a>
+      </p>
+
+    </div>
+    <hr/>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          Write a console program that prints 10 3-word sentences, each of the form "{subject} {verb} {object}." We have provided a sets of words to randomly select from (see below), but you may also create your own word sets! Here's an example run:
+        </p>
+          <center>
+            <img style="width:50%" src="{{pathToRoot}}img/projects/sandcastles/madLibs.png"> 
+          </center>
+        </p>
+        <p>        
+          Your solution should include three methods (in additon to <code>run</code>), each of which returns a random word from the word set. You can do this by randomly picking a number 1, 2, or 3, and returning the corresponding <code>String</code> in that category:
+          <ul>
+            <li><code>getSubject</code>: returns a random <code>String</code> from the list of subjects</li>
+            <li><code>getVerb</code>: returns a random <code>String</code> from the list of verbs</li>
+            <li><code>getObject</code>: returns a random <code>String</code> from the list of objects</li>
+          </ul>
+          Finally, you should concatenate and print the values returned by your methods, adding the appropriate spacing and punctutation.
+        </p>
+        <p>
+          <h3>Word sets</h3>
+          <center>
+          <table style="width: 50%">
+            <tr>
+              <th>Subjects</th>
+              <th>Verbs</th>
+              <th>Objects</th>
+            </tr>
+            <tr>
+              <td>1. Chris</td>
+              <td>1. eats</td> 
+              <td>1. iskender</td>
+            </tr>
+            <tr>
+              <td>2. Nick</td>
+              <td>2. teaches</td> 
+              <td>2. programming</td>
+            </tr>
+            <tr>
+              <td>3. Karel</td>
+              <td>3. likes</td> 
+              <td>3. graphics</td>
+            </tr> 
+          </table>
+        </center>
+      </p>
+      </div>
+    </div>
+    
+    %include templates/parts/footer.html
+
+  </div>
+</body>

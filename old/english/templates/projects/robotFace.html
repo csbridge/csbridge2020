@@ -1,0 +1,170 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Draw Robot Face
+			</h1>
+			<p>
+				Problem written by Eric Roberts. Updated by Chris Piech.
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Write a program that draws this picture. You should use the constants provided, but feel free to change them (or recolor any part of the face)</p>
+
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/robotFace/face.png">	
+					</center>
+				</p>
+
+				<p>A few constants are provided. Use them so that you don't have "magic" numbers in your program.</p>
+
+				<p>
+					<div class="well">
+						<code style = "font-size:12px">
+							/*The width of the robot face:*/
+							<br/>private static final int FACE_WIDTH = 300;
+							<br/>
+							<br/>/*The height of the robot face:*/
+							<br/>private static final int FACE_HEIGHT = 350;
+							<br/>
+							<br/>/*The diameter of each robot eye:*/
+							<br/>private static final int EYE_DIAMETER = 70;
+							<br/>
+							<br/>/*The distance from the top of the head to the top of the eyes:*/
+							<br/>private static final int EYE_Y_OFFSET = 40;
+							<br/>
+							<br/>/*The width of the mouth:*/
+							<br/>private static final int MOUTH_WIDTH = 150;
+							<br/>
+							<br/>/*The height of the mouth:*/
+							<br/>private static final int MOUTH_HEIGHT = 30;
+							<br/>
+							<br/>/*The distance from the top of the head to the top of the mouth:*/
+							<br/>private static final int MOUTH_Y_OFFSET = 200;
+							<br/>
+							<br/>/*The distance from the top of the screen to the base of the label:*/
+							<br/>private static final int LABEL_Y = 50;
+						</code>
+					</div>
+				</p>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:1220px">/**
+ * Draw Face
+ * ---------
+ * Draws an awesome robot face, with label and different colored
+ * eyes!!!@#$%#@!
+ */
+public class DrawFace extends GraphicsProgram {
+
+	private static final int FACE_WIDTH = 300;
+	private static final int FACE_HEIGHT = 350;
+	private static final int EYE_DIAMETER = 70;
+	private static final int EYE_Y_OFFSET = 40;
+	private static final int MOUTH_WIDTH = 150;
+	private static final int MOUTH_HEIGHT = 30;
+	private static final int MOUTH_Y_OFFSET = 200;
+	private static final int LABEL_Y = 50;
+
+	public void run() {
+		drawHead();
+		drawLeftEye();
+		drawRightEye();
+		drawMouth();
+		drawLabel();
+	}
+
+	private void drawHead() {
+		double x = (getWidth() - FACE_WIDTH) / 2;
+		double y = (getHeight() - FACE_HEIGHT) / 2;
+		GRect head = new GRect(x, y, FACE_WIDTH, FACE_HEIGHT);
+		head.setFilled(true);
+		head.setFillColor(Color.ORANGE);
+		add(head);
+	}
+	
+	private void drawLeftEye() {
+		double eyeSpacing = (FACE_WIDTH - 2 * EYE_DIAMETER) / 3;
+		double headX = (getWidth() - FACE_WIDTH) / 2;
+		double headY = (getHeight() - FACE_HEIGHT) / 2;
+		double x =  headX + eyeSpacing;
+		double y = headY + EYE_Y_OFFSET;
+		GOval eye = new GOval(x, y, EYE_DIAMETER, EYE_DIAMETER);
+		eye.setFilled(true);
+		eye.setFillColor(Color.BLUE);
+		add(eye);
+	}
+	
+	private void drawRightEye() {
+		double eyeSpacing = (FACE_WIDTH - 2 * EYE_DIAMETER) / 3;
+		double headX = (getWidth() - FACE_WIDTH) / 2;
+		double headY = (getHeight() - FACE_HEIGHT) / 2;
+		double x =  headX + eyeSpacing * 2 + EYE_DIAMETER;
+		double y = headY + EYE_Y_OFFSET;
+		GOval eye = new GOval(x, y, EYE_DIAMETER, EYE_DIAMETER);
+		eye.setFilled(true);
+		eye.setFillColor(Color.GREEN);
+		add(eye);
+	}
+	
+	private void drawMouth() {
+		double headX = (getWidth() - FACE_WIDTH) / 2;
+		double headY = (getHeight() - FACE_HEIGHT) / 2;
+		double x = headX + (FACE_WIDTH - MOUTH_WIDTH) / 2;
+		double y = headY + MOUTH_Y_OFFSET;
+		GRect mouth = new GRect(x, y, MOUTH_WIDTH, MOUTH_HEIGHT);
+		mouth.setFilled(true);
+		add(mouth);
+	}
+	
+	private void drawLabel() {
+		GLabel label = new GLabel("Robot Face");
+		label.setFont("Courier-50");
+		double x = (getWidth() - label.getWidth()) / 2;
+		add(label, x, LABEL_Y);
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	</div>
+	</div>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

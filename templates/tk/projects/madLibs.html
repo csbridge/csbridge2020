@@ -1,0 +1,81 @@
+<head>
+
+  %include templates/parts/head.html
+
+
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  %include templates/parts/navBarTk.html
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Header -->
+    <div id="pageHeader">
+      <h1>
+        Sana Laflar Hazırladım
+      </h1>
+      <p>
+        Hazırlayanlar: Julia Lee ve Bryce Cronkite-Ratcliff
+      </p>
+      <p>
+        Örnek: <a href="{{pathToRoot}}tk/projects/madMax.html">Mad Max</a>
+      </p>
+
+    </div>
+    <hr/>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          3 kelimelik 10 tane cümle yazdıran bir konsol programı yazın. Cümlelerin her biri "{özne} {yüklem} {nesne}." biçiminde olsun. İçinden rastgele kelimeler seçebileceğiniz kelime kümeleri veriyoruz (aşağıda bulabilirsiniz), ama kendi kelime kümelerinizi de oluşturabilirsiniz! Programın örnek bir çalışması:
+        </p>
+          <center>
+            <img style="width:50%" src="{{pathToRoot}}img/projects/sandcastles/madLibs.png"> 
+          </center>
+        </p>
+        <p>        
+          Çözümünüz (<code>run</code>'a ek olarak) kelime kümesinden rastgele bir kelime döndüren üç metottan oluşmalı. Rastgele olarak 1, 2, veya 3'ü seçerek ve o kategoride buna karşılık gelen <code>String</code>'i döndürerek bunu yapabilirsiniz:
+          <ul>
+            <li><code>getSubject</code>:  özneler listesinden rastgele <code>String</code> döndürüyor</li>
+            <li><code>getVerb</code>: yüklemler listesinden rastgele <code>String</code> döndürüyor</li>
+            <li><code>getObject</code>: nesneler listesinden rastgele <code>String</code> döndürüyor</li>
+          </ul>
+          Son olarak, metotlarınız tarafından döndürülen değerleri birleştirmeli ve yazdırmalısınız. Gerekli boşlukları ve noktalamayı eklemeyi unutmayın.
+        </p>
+        <p>
+          <h3>Kelime kümeleri</h3>
+          <center>
+          <table style="width: 50%">
+            <tr>
+              <th>Özneler</th>
+              <th>Yüklemler</th>
+              <th>Nesneler</th>
+            </tr>
+            <tr>
+              <td>1. Chris</td>
+              <td>1. eats</td> 
+              <td>1. iskender</td>
+            </tr>
+            <tr>
+              <td>2. Nick</td>
+              <td>2. teaches</td> 
+              <td>2. programming</td>
+            </tr>
+            <tr>
+              <td>3. Karel</td>
+              <td>3. likes</td> 
+              <td>3. graphics</td>
+            </tr> 
+          </table>
+        </center>
+      </p>
+      </div>
+    </div>
+    
+    %include templates/parts/footer.html
+
+  </div>
+</body>

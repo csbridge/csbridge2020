@@ -1,0 +1,60 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Making Tracks
+			</h1>
+			<p>
+				Problem written by a mystery CS106A Lecturer.
+			</p>
+
+			<p>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/events.html">Events</a>
+			<br/>
+				Worked Examples: 
+				<a href="{{pathToRoot}}en/projects/stampTool.html">Stamp Tool</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Write a program that draws a bear print anywhere the user clicks.</p>
+
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/icons/makingTracks.png">	
+					</center>
+				</p>
+
+				<p>You are provided with a method <code>drawBearTrack</code> that draws a single bear
+					track at the given (x, y) position:</p>
+
+					<pre>private void drawBearTrack(double x, double y)</pre>
+
+				
+			</div>
+		</div>
+		
+		
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

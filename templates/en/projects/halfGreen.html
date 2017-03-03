@@ -1,0 +1,105 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Half Green
+			</h1>
+			<p>
+				Written by Chris Piech
+			</p>
+			<p>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					We are going to create 1000 circles in random positions on the screen. Circles closer to the bottom-left corner will be blue and circles closer to the top-right corner will be green. This is an example of return values.
+				</p>
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/halfGreen/halfGreen.png">	
+					</center>
+				</p>
+				<p>
+					Each circle is 20 pixels by 20 pixels.
+				</p>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:500px">public class CircleRandom2 extends GraphicsProgram {
+
+	private RandomGenerator rd = new RandomGenerator();
+	public static final int APPLICATION_WIDTH = 500;
+	public static final int APPLICATION_HEIGHT = 500;
+	private static final int SIZE = 20;
+	
+	public void run() {
+		for(int i = 0; i &lt; 1000; i++) {
+			int x = rd.nextInt(getWidth()-SIZE);
+			int y = rd.nextInt(getHeight()-SIZE);
+
+			GOval o = new GOval(x, y, SIZE, SIZE);
+			o.setFilled(true);
+			o.setColor(getColor(x, y));
+			add(o);
+			pause(2);
+		}
+	}
+
+	private Color getColor(int x, int y) {
+		if(isGreen(x, y)) {
+			return Color.green;
+		}
+		return Color.blue;
+	}
+	
+	private boolean isGreen(int x, int y) {
+		return x > y;
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

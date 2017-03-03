@@ -1,0 +1,63 @@
+<head>
+
+  %include templates/parts/head.html
+
+
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  %include templates/parts/navBar.html
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Header -->
+    <div id="pageHeader">
+      <h1>
+        Catch Me If You Can
+      </h1>
+      <p>
+        Problem by Julia Lee, Kerem Goksel, and Chris Piech
+      </p>
+      <p>
+        Handouts:
+        <a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a>, <a href ="{{pathToRoot}}en/handouts/events.html">Events</a>
+        <br/>
+         Examples:
+         <a href ="{{pathToRoot}}en/projects/stampTool.html">Stamp Tool</a>
+      </p>
+
+    </div>
+    <hr/>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          <ol>
+            <li>Add a blue "sneaky" square to the canvas.</li>
+            <li>Add 20 black squares to the canvas.</li>
+            <li>Add a mouse event listener that moves the "sneaky" square to a random position whenever the mouse touches it.</li>
+          </ol>
+        </p>
+        <p>
+          <center>
+            <img style="width:500px" src="{{pathToRoot}}img/projects/catchMeIfYouCan/demo1.png">  
+          </center>
+        </p>
+        <p>
+          
+          <center>
+            When the mouse touches the "sneaky" square, it moves
+            <img style="width:500px" src="{{pathToRoot}}img/projects/catchMeIfYouCan/demo2.png">  
+          </center>
+        </p>
+      </div>
+    </div>
+
+    <br/>
+    
+    %include templates/parts/footer.html
+
+  </div>
+</body>

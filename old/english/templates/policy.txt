@@ -1,0 +1,18 @@
+{
+  "Id": "Policy1380877762691",
+  "Statement": [
+    {
+      "Sid": "Stmt1380877761162",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::www.stanford-bogazici.com/*",
+      "Principal": {
+        "AWS": [
+          "*"
+        ]
+      }
+    }
+  ]
+}

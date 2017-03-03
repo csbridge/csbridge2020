@@ -1,0 +1,172 @@
+
+// constants
+var KAREL_SIZE = 40;
+var CANVAS_WIDTH = 610;
+var CANVAS_HEIGHT = 610;
+
+// globals
+var application = new Application();
+
+/****************************************************
+ *                    MAIN                          *
+ ****************************************************/
+
+window.onload = function() {
+	canvas = document.getElementById('canvas');
+
+	// Check the element is in the DOM and the browser supports canvas
+	if(canvas && canvas.getContext) {
+		canvas.width = CANVAS_WIDTH;
+		canvas.height = CANVAS_HEIGHT;
+		application.init();			
+	} else {
+		alert("canvas not supported by your browser");	
+	}
+}
+
+/****************************************************
+ *                   PUBLIC                         *
+ ****************************************************/
+function Application() {
+	// constants
+	var ACTION_HEARTBEATS = 1;
+	var HEART_BEAT = 10;	
+
+	// instance variables
+	var canvas = null;
+	var context = null;
+	var karel = null;
+	var karelWorld = null;
+	var animating = false;
+	var actionCountdown = ACTION_HEARTBEATS;
+	var codeMirror = null;
+	var worldName = null;
+
+	karelWorld = new KarelWorld(CANVAS_WIDTH, CANVAS_HEIGHT);
+	karel = new Karel(karelWorld);
+
+	this.init = function () {
+		initCodeMirror();
+
+		canvas = document.getElementById('canvas');
+		context = canvas.getContext('2d');
+
+		worldName = "15x15.w";
+		loadCurrentWorld();
+		setInterval("application.heartbeat();", HEART_BEAT);
+
+	}
+
+	this.changeWorld = function(selector) {
+		worldName = selector.options[selector.selectedIndex].text;
+		loadCurrentWorld();
+	}
+
+	function loadCurrentWorld() {
+		karelWorld.loadWorld(worldName, karel);
+		draw();
+	}
+
+	this.runButton = function () {
+		var code = codeMirror.getCode();
+		var karelApplication = new KarelApplication(code, karel);
+		animating = true;
+		loadCurrentWorld();
+		karelApplication.start();
+	}
+
+	function initCodeMirror() {
+
+		var textArea = document.getElementById('code');
+
+		codeMirror = CodeMirror.fromTextArea(textArea, {
+  			parserfile: ["tokenizejavascript.js", "parsejavascript.js"],
+  			path: "../codeMirror/js/",
+  			stylesheet: "../codeMirror/css/jscolors.css",
+  			indentUnit:4,
+			height: 1
+		});
+		
+		useCookies(codeMirror);
+
+	}
+
+	this.heartbeat = function() {
+		if (!animating) return;
+			
+		update();
+		draw();
+	}
+
+	function update() {
+		actionCountdown = actionCountdown - 1;
+		if (actionCountdown == 0 ) {
+			animating = karel.executeNextAction();
+			actionCountdown = ACTION_HEARTBEATS;
+		}
+	}
+
+	function draw() {
+		clear();
+		karelWorld.draw(context);
+		karel.draw(context);
+		karelWorld.drawWalls(context);
+	}
+
+
+	function clear() {
+		context.fillStyle = "#91b9df";
+		context.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+	}
+	
+	
+	
+	//CODE FROM HERE DOWN DEALS WITH COOKIES
+	
+	var COOKIE_NAME = "karel_code";
+	
+       	function useCookies(codeMirror) {
+		if (codeMirror) {
+		    var program = readCookie(COOKIE_NAME);
+		    alert(program);
+		    if (program) {
+				codeMirror.setCode(program);
+			}
+		}
+		saveTextToCookie(codeMirror);
+	}
+	
+	//Creates a cookie with the give key, value, and days before expiration
+	function createCookie(name,value,days) {
+		if (days) {
+			var date = new Date();
+			date.setTime(date.getTime()+(days*24*60*60*1000));
+			var expires = "; expires="+date.toGMTString();
+		}
+		else var expires = "";
+		document.cookie = escape(name)+"="+escape(value)+expires+"; path=/";
+	}
+	
+	//Gets the value of the cookie with the give name
+	function readCookie(name) {
+		var nameEQ = escape(name) + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0;i < ca.length;i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1,c.length);
+			if (c.indexOf(nameEQ) == 0) return unescape(c.substring(nameEQ.length,c.length));
+		}
+		return null;
+	}
+	
+	function saveTextToCookie(codeMirror) {
+		if (codeMirror) {
+			var program = codeMirror.getCode();
+			if (program) {
+			    createCookie(COOKIE_NAME, program, 1);
+			}
+		}
+		setTimeout(function(){ saveTextToCookie(codeMirror) }, 1000);
+	}
+}
+

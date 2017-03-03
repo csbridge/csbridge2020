@@ -1,0 +1,104 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				JavaScript Syntax Handout
+			</h1>
+			<p>
+				Written by Brian Lam
+			</p>
+			
+
+		</div>
+		<hr/>
+
+<h2 id="toc_1">Declaring and Using Variables</h2>
+
+<h1 id="toc_0">JavaScript Syntax Handout</h1>
+
+<h2 id="toc_1">Declaring and Using Variables</h2>
+
+<p>Variables in JavaScript do not have a fixed type like in Java. Because of this, you do not have to specify the type when creating a variable. Instead you will use the keyword <strong>var</strong>.</p>
+
+<pre><code>var a = 10;
+var b = 20;
+var c = a + b;</code></pre>
+
+<h2 id="toc_2">If Statements</h2>
+
+<p>If statements are exactly the same as in Java.</p>
+
+<pre><code>if (someBooleanFunction()) {
+    return 1;
+}</code></pre>
+
+<h2 id="toc_3">While Loops</h2>
+
+<p>While loops are the same as well.</p>
+
+<pre><code>while (someCondition()) {
+    sum += 1;
+}</code></pre>
+
+<h2 id="toc_4">For Loops</h2>
+
+<p>For loops are almost exactly the same, except for the counter variable.</p>
+
+<pre><code>// Finds the sum of numbers 0 through 10, inclusive
+var sum = 0;
+for (var i = 0; i &lt;= 10; i++) {
+    sum += i;
+}</code></pre>
+
+<h2 id="toc_5">Functions</h2>
+
+<p>Notice where you are used to seeing <strong>private void</strong>, you will use the keyword <strong>function</strong>. Notice that the parameters do not have the type specified.</p>
+
+<pre><code>function someFunction (a, b) {
+    return a === b;
+}</code></pre>
+
+<h2 id="toc_6">Operators</h2>
+
+<p>All operators are the same, except the comparison (==). The comparison operator in Java is == (two equal signs), while the comparison in JavaScript is ===.</p>
+
+<pre><code>a === b; // a equals b
+a !== b; // a does not equal b</code></pre>
+
+<h2 id="toc_7">Event Listeners</h2>
+
+<pre><code>object.event = function(e) { 
+    // your code  
+}</code></pre>
+
+<h3 id="toc_8">Common Events</h3>
+
+<ul>
+<li>onclick</li>
+<li>onmousedown</li>
+<li>onmouseup</li>
+<li>onkeypress</li>
+<li>onkeydown</li>
+<li>onkeyup</li>
+</ul>
+
+
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

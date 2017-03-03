@@ -1,0 +1,91 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				String Art (Worked Example)
+			</h1>
+			<p>
+				Based on a demonstration by Eric Roberts.
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					By repeatedly drawing lines, we can make a curved looking shape. Consider the example below where we imagine dots evenly space along the bottom and the left of a canvas. If we connect the topmost dot on the left edge to the left most dot on the right edge, we would be a line like the picture of the far left. If we then connect the next 10 dots we get a picture in the middle and if we connect all dots we get the picture on the right.
+				</p>
+				
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/stringArt/startToEnd.png">	
+					</center>
+				</p>
+				<p>Write a program that creates the "curve" in the above right image using straight lines.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:400px">public class StringArt extends GraphicsProgram {
+
+	/** The size of the screen **/
+	public static final int APPLICATION_WIDTH = 400;
+	public static final int APPLICATION_HEIGHT = 400;
+	
+	/** The number of pixels between end points of the line **/
+	public static final int LINE_SPACING = 20;
+	
+	/** The number of lines we will have to draw **/
+	public static final int NUM_LINES = APPLICATION_WIDTH / LINE_SPACING;
+
+	public void run() {
+		for(int i = 0; i &lt; NUM_LINES; i++) {
+			int offset = i * LINE_SPACING;
+			int startX = offset;
+			int startY = getHeight();
+			int endX = 0;
+			int endY = offset;
+			GLine line = new GLine(startX, startY, endX, endY);
+			add(line);
+		}
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+
+			</div>
+		</div>
+
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

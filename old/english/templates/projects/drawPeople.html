@@ -1,0 +1,80 @@
+<head>
+
+  %include templates/parts/head.html
+
+
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  %include templates/parts/navBar.html
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Header -->
+    <div id="pageHeader">
+      <h1>
+        Three's a Crowd
+      </h1>
+      <p>
+        Problem written by Julia Lee and Chris Piech.
+      </p>
+      <p>
+        Handouts:
+        <a href ="{{pathToRoot}}handouts/graphics.html">Graphics Reference</a>
+        <br/>
+        Worked Example: 
+        <a href ="{{pathToRoot}}projects/target.html">Target</a>
+        <br/>
+      </p>
+
+    </div>
+    <hr/>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          One awesome application of computer science is using it to construct intersting custom data visualizations like this one:
+        </p>
+        <p>
+          <center>
+            <img style="width:500px" src="{{pathToRoot}}img/projects/drawPeople/twitter.jpg">  
+          </center>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          With your new graphics skills, you can too! Write a GraphicsProgram that draws a person graphic at three different locations.
+        </p>
+        <p>
+          <center>
+            <img style="width:500px" src="{{pathToRoot}}img/projects/drawPeople/demo.png">  
+          </center>
+        </p>
+        <h2>Details</h2>
+        <ol>
+          <li>A person is composed of a head, body, and legs. The starter file (drawPerson.java) contains the default dimensions and colors.</li>
+          <li>
+            <div>You should write a method with two parameters -- an x-coordinate and a y-coordinate -- that draws a person with a head is at those coordinates.</div>
+            <div class="well"><code><b>private</b> void drawPerson(<b>int</b> headX, <b>int</b> headY)</code></div>
+          <li>You should draw a person at the following three locations: 
+            <ol>
+              <li>(40, 40)</li>
+              <li>(300, 300)</li>
+              <li>(600, 175)</li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <br/>
+    
+    %include templates/parts/footer.html
+
+  </div>
+</body>

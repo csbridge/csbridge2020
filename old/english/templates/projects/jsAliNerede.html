@@ -1,0 +1,77 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Ali Nerede?
+			</h1>
+			<p>
+		Created by Brian Lam, Amy Nguyen, and Bryce Cronkite-Ratcliff		
+			</p>
+
+		</div>
+		<hr/>
+
+<hr>
+<p>&quot;Ali Nerede?&quot;yi hat&#305;rl&#305;yor musun? In the United Kingdom, where this children's book series originated, Ali is known as Wally; in the United States, he is our beloved Waldo.</p>
+<div style="text-align: center"><img style="height: 320px" src="http://i.imgur.com/TNHKoSk.jpg"><img style="height: 320px" src="http://i.imgur.com/IIQLOy2.jpg"> <img style="height: 320px" src="http://i.imgur.com/O8a17M5.jpg"></div>
+<p>The goal is to find the elusive Ali in a crowd of people. Here's an example of a puzzle:</p>
+<div style="text-align: center">
+    <img style="width: 820px" src="http://i.imgur.com/KK1NZo7.jpg">
+  <p style="text-align: center"><i>(Hint: He's near a striped green towel!)</i></p>
+</div>
+<p>Today, we're going to let people play Ali Nerede? on the web! When a user clicks on the image, you will let them know whether they successfully found Ali.</p>
+<h1>Getting Started</h1>
+<p>Open <b>ali.js</b> with Notepad++, which can be found inside the "jsday2" folder on your desktop. Open <b>index.html</b> in Google Chrome. It should show a picture of a game of Ali Nerede.</p>
+
+<h3>Milestone 1</h3>
+<p>Use the Pythagorean Theorem to write a method that returns the distance between two points. You will use this to determine whether the user found Ali by clicking near him.</p>
+<p>In ali.js, you are given a method that takes in the x and y values for two points. In the Pythagorean Theorem equation, you will use the two x values as one side of the triangle and the two y values as another side of the triangle. Return the distance between the two points, which is also the hypotenuse of this triangle!</p>
+
+<h3>Milestone 2</h3>
+<p>Fill in the mouseClicked method, which takes in information about a mouse click and tells the user whether they successfully clicked on Ali. Use the getDistance method you just wrote to figure this out.</p>
+
+<h3>Milestone 3</h3>
+<p>Add a listener for the page's image element for the mouseClicked method.
+
+<h3>Extra Features</h3>
+<ul>
+  <li>Can you let the user know when they are close to Ali, but haven't found him yet?</li>
+  <li>How would you randomly choose the Ali game to display? There are more games in the images folder!</li>
+  <li>Your JavaScript code assumes that the Waldo game will be placed at the top left corner of the window. How would you change the code to check where on the screen the image is?</li>
+</ul>
+
+<h1>Useful Functions</h1>
+<p>To get the square root of a value:</p>
+<pre><code>Math.sqrt(value);</code></pre>
+
+<p>To get the x and y coordinates from a JavaScript mouse event:</p>
+<pre><code>function mouseClicked(e) {
+  var mouseX = e.pageX;
+  var mouseY = e.pageY;
+}</code></pre>
+
+<p>To add a mouse click listener in JavaScript:</p>
+<pre><code>var <i>elem</i> = document.getElementById(<i>id</i>);
+<i>elem</i>.onclick = <i>functionName</i>;</code></pre>
+
+<p>To display a message to the user:</p>
+<pre><code>alert("Merhaba!");</code></pre>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

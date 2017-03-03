@@ -1,0 +1,260 @@
+<head>
+
+	%include templates/parts/head.html
+
+	<script src="{{pathToRoot}}plugins/acmjs/pixi.js"></script>
+    <script src="{{pathToRoot}}plugins/acmjs/pixidust.js"></script>
+    <script src="{{pathToRoot}}plugins/acmjs/graphicsapp.js"></script>
+</head>
+<body onload="run();">
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Breakout!
+			</h1>
+			<p>
+				Written by Eric Roberts
+			</p>
+			<p>
+				Handouts: 
+				<a href ="{{pathToRoot}}en/handouts/events.html">Events Reference</a><br>
+				Worked Example: 
+				<a href="{{pathToRoot}}en/projects/stampTool.html">StampTool</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Your job in this assignment is to write the classic arcade game of Breakout, which was invented by Steve Wozniak before he founded Apple with Steve Jobs (moment of silence).  It is a large assignment, but entirely manageable as long as you break the problem up into pieces.  
+				</p>
+			</div>
+		</div>
+		<h2>The Breakout Game</h2>
+		<div class="row">
+
+			<div class="col-md-12">
+				<p>
+					In Breakout, the initial configuration of the world appears as shown on the right. The colored rectangles in the top part of the screen are <b>bricks</b>, and the slightly larger rectangle at the bottom is the <b>paddle</b>. The paddle is in a fixed position in the vertical dimension, but moves back and forth across the screen along with the mouse until it reaches the edge of its space. 
+				</p>
+
+				<p>
+					<center><img style="padding:10px;max-width:100%" src="/img/projects/breakout/breakoutGameH.png"></img></center>
+				</p>
+
+				<p>
+					A complete game consists of three turns. On each turn, a ball is launched from the center of the window toward the bottom of the screen at a random angle. That ball bounces off the paddle and the walls of the world, in accordance with the physical principle generally expressed as "the angle of incidence equals the angle of reflection" (which turns out to be very easy to implement as discussed later in this handout). Thus, after two bounces--one off the paddle and one off the right wall--the ball might have the trajectory shown in the second diagram. (Note that the dotted line is there to show the ball's path and won't appear on the screen.)
+				</p>
+				<p>
+					As you can see from the second diagram, the ball is about to collide with one of the bricks on the bottom row.  When that happens, the ball bounces just as it does on any other collision, but the brick disappears.  The third diagram shows what the game looks like after that collision and after the player has moved the paddle to put it in line with the oncoming ball.
+				</p>
+				<p>
+					The play on a turn continues in this way until one of two conditions occurs: 
+					<ol>
+						<li>The ball hits the lower wall, which means that the player must have missed it with the paddle.  In this case, the turn ends and the next ball is served if the player has any turns left.  If not, the game ends in a loss for the player.</li>
+						<li>The last brick is eliminated.  In this case, the player wins, and the game ends immediately.</li>
+					</ol>
+				</p>
+				<p>
+					Success in this assignment will depend on breaking up the problem into manageable pieces and getting each one working before you move on to the next.  The next few sections describe a reasonable staged approach to the problem.
+				</p>
+			</div>
+		</div>
+
+		<h2>1. Create bricks</h2>
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Before you start playing the game, you have to set up the various pieces.  Thus, it probably makes sense to implement the run method as two method calls: one that sets up the game and one that plays it.  An important part of the setup consists of creating the rows of bricks at the top of the game, which look like this:
+				</p>
+				<p>
+					<center><img style="padding:10px;max-width:100%" src="/img/projects/breakout/breakoutBricks.png"></img></center>
+				</p>
+				<p>
+					The number, dimensions, and spacing of the bricks are specified using named constants in the starter file, as is the distance from the top of the window to the first line of bricks.  The only value you need to compute is the x coordinate of the first column, which should be chosen so that the bricks are centered in the window, with the leftover space divided equally on the left and right sides.  The color of the bricks remain constant for two rows and run in the following rainbow-like sequence: RED, ORANGE, YELLOW, GREEN, CYAN.
+				</p>
+			</div>
+		</div>
+
+		<h2>2. Create the paddle</h2>
+		<div class="row">
+			<div class="col-md-12">
+				<p>The next step is to create the paddle.   There is only one paddle, which is a filled GRect.  You even know its position relative to the bottom of the window.</p>
+				<p>
+					The challenge in creating the paddle is to make it track the mouse. Here, however, you only have to pay attention to the x coordinate of the mouse because the y position of the paddle is fixed.  
+				</p>
+				<p> If you call the method (perhaps from run):
+					<div class="well"><code>addMouseListeners();</code></div>
+					<p>And implement the method:
+					<div class="well"><code>public void mouseMoved(MouseEvent e)</code></div>
+					<p>Then any time the mouse is moved the method mouseMoved will be executed.
+					<p>You can learn more about MouseEvents <a href="{{pathToRoot}}handouts/events.html">here</a>.
+			</div>
+		</div>
+
+		<h2>3. Make the ball move</h2>
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					At one level, creating the ball is easy, given that it's just a filled GOval.  The interesting part lies in getting it to move and bounce appropriately.  You are now past the "setup" phase and into the "play" phase of the game.  To start, create a ball and put it in the center of the window.  As you do so, keep in mind that the coordinates of the GOval do not specify the location of the center of the ball but rather its upper left corner.
+				</p>
+				<p>
+					The program needs to keep track of the velocity of the ball, which consists of two separate components, which you will presumably declare as instance variables like this:
+				</p>
+				<p>
+					<div class="well"><code>private double vx, vy;</code></div>
+				</p>
+				<p>
+					The velocity components represent the change in position that occurs on each time step.  Initially, the ball should be heading downward, and you might try a starting velocity of +3.0 for vy (remember that y values in Java increase as you move down the screen).  The game would be boring if every ball took the same course, so you should choose the vx component randomly.  You should simply do the following:
+				</p>
+				<p>
+					<ol>
+						<li><p>Declare an instance variable rgen, which will serve as a random-number generator:	
+<div class="well"><code>private RandomGenerator rgen = RandomGenerator.getInstance();</code></div>Remember that instance variables are declared outside of any method but inside the class.
+
+						</li>
+						<li>
+							Initialize the vx variable as follows:
+
+vx = rgen.nextDouble(1.0, 3.0);
+if (rgen.nextBoolean(0.5)) vx = -vx;
+
+	This code sets vx to be a random double in the range 1.0 to 3.0 and then makes it negative half the time.  This strategy works much better for Breakout than calling
+
+nextDouble(-3.0, +3.0)
+
+which might generate a ball going more or less straight down.  That would make life far too easy for the player.
+
+						</li>
+					</ol>
+				</p>
+				<p>
+					Once you've done that, your next challenge is to get the ball to bounce around the world, ignoring entirely the paddle and the bricks.  To do so, you need to check to see if the coordinates of the ball have gone beyond the boundary, taking into account that the ball has a nonzero size.  Thus, to see if the ball has bounced off the right wall, you need to see whether the coordinate of the right edge of the ball has become greater than the width of the window; the other three directions are treated similarly.  For now, have the ball bounce off the bottom wall so that you can watch it make its path around the world.
+				</p>
+				<p>
+					Computing what happens after a bounce is extremely simple.  If a ball bounces off the top or bottom wall, all you need to do is reverse the sign of vy.  Symmetrically, bounces off the side walls simply reverse the sign of vx.
+				</p>
+			</div>
+		</div>
+		
+		<h2>4. Check for Collisions</h2>
+		<div class="row">
+			<div class="col-md-12">
+				<p>Now comes the interesting part.  In order to make Breakout into a real game, you have to be able to tell whether the ball is colliding with another object in the window.  As scientists often do, it helps to begin by making a simplifying assumption and then relaxing that assumption later.  Suppose the ball were a single point rather than a circle.  In that case, how could you tell whether it had collided with another object?</p>
+
+				<p>
+					There is a method:
+
+					<div class="well"><code>public GObject getElementAt(double x, double y)</code></div>
+
+					that takes a position in the window and returns the graphical object at that location, if any.  If there are no graphical objects that cover that position, getElementAt returns the special constant null.  If there is more than one, getElementAt always chooses the one closest to the top of the stack, which is the one that appears to be in front on the display.
+				</p>
+
+				<p>
+					The easiest thing to do, which is in fact typical of real computer games, is to check a few carefully chosen points on the outside of the ball and see whether any of those points has collided with anything.  As soon as you find something at one of those points, you can declare that the ball has collided with that object.
+				</p>
+
+					In your implementation, check the four corner points on the square in which the ball is inscribed.  Remember that a GOval is defined in terms of its bounding rectangle, so that if the upper left corner of the ball is at the point (x, y), the other corners will be at the locations shown in this diagram:
+
+				</p>
+
+				<p>
+					<center><img src="/img/projects/breakout/breakoutCollision.png"></img></center>
+				</p>
+				<p>
+					These points have the advantage of being outside the ball but nonetheless close enough to make it appear that collisions have occurred.  Thus, for each of these four points, you need to:
+				</p>
+				<p>
+					<ol>
+						<li>Call getElementAt on that location to see whether anything is there.</li>
+						<li>If the value you get back is not null, then you need look no farther and can take that value as the GObject with which the collision occurred.</li>
+						<li>If getElementAt returns null for a particular corner, go on and try the next corner.</li>
+						<li>If you get through all four corners without finding a collision, then no collision exists.</li>
+					</ol>
+				</p>
+				<p> 
+					It would be very useful to write this section of code as a separate method
+						<div class="well"><code>public GObject getCollidingObject()</code></div>
+					That returns the object involved in the collision, if any, and <b>null</b> otherwise. You could then use it in a declaration like:
+					<div class="well"><code>GObject collider = getCollidingObject();</code></div>
+				</p>
+				<p>
+					From here, the only remaining thing you need to do is decide what to do when a collision occurs.  There are only two possibilities.  First, the object you get back might be the paddle, which you can test by checking</p>
+					<div class="well"><code>if (collider == paddle)</code></div>
+				</p>
+				<p>
+					If it is the paddle, you need to bounce the ball so that it starts traveling up.  If it isn't the paddle, the only other thing it might be is a brick, since those are the only other objects in the world.  Once again, you need to cause a bounce in the vertical direction, but you also need to take the brick away.  To do so, all you need to do is remove it from the screen by calling the remove method.
+				</p>
+
+			</div>
+		</div>
+
+		<h2 style="color:blue">Extra Touches</h2>
+		<div class="row">
+			<div class="col-md-12">
+				<p>If you've gotten to here, you've done all the hard parts.  There are, however, a few more details you could take into account if you have time.</p>
+				<ol>
+					<li>Take care of the case when the ball hits the bottom wall.  In the prototype you've been building, the ball just bounces off this wall like all the others, but that makes the game pretty hard to lose.  Modify your loop structure so that it tests for hitting the bottom wall as one of its terminating conditions.</li>
+					<li>Check for the other terminating condition, which is hitting the last brick. How do you know when you've done so?  Although there are other ways to do it, one of the easiest is to have your program keep track of the number of bricks remaining.  Every time you hit one, subtract one from that counter.  When the count reaches zero, you must be done.  It would be nice to give the player a little feedback that at least indicates whether the game was won or lost.</li>
+					<li>Test your program to see that it works.  If you think everything is working, here is something to try: Just before the ball is going to pass the paddle level, move the paddle quickly so that the paddle collides with the ball rather than vice-versa.  Does everything still work, or does your ball seem to get "glued" to the paddle? This error occurs because the ball collides with the paddle, changes direction, and then collides with the paddle again before escaping. How can you fix this bug?</li>
+				</ol>
+
+				</div>
+		</div>
+
+		<h2 style="color:blue">Demo</h2>
+		<div class="row">
+			<div class="col-md-12">
+				<p></p>
+				<div id="breakoutDemo" style="width: 425px; border: solid;"> 
+				<script src="{{pathToRoot}}js/projects/breakout/breakout.js"></script>
+				</div>
+				</div>
+		</div>
+
+
+		<h2 style="color:blue">Extensions</h2>
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					If you have the basic play working well, then this would be a great opportunity to go above and beyond. Here are a few ideas of for possible extensions (of course, we encourage you to use your imagination to come up with other ideas as well):
+				</p>
+				<ul>
+					<li style="margin-bottom:10px">
+						<i>Add sounds.</i>  
+						<p>The version that is running as an applet on the CS 106A assignment page plays a short bounce sound every time the ball collides with a brick or the paddle.  This extension turns out to be very easy.  The starter project contains an audio clip file called bounce.au that contains that sound.  You can load the sound by writing
+						<div class="well"><code>AudioClip bounceClip = MediaTools.loadAudioClip("res/bounce.au");</code></div>
+						<p>and later play it by calling
+						<div class="well"><code>bounceClip.play();</code></div>
+						The Java libraries do make some things easy.
+					</p>
+					</li>
+					<li style="margin-bottom:10px" >
+						<i>Improve the user control over bounces.</i>
+						The program gets rather boring if the only thing the player has to do is hit the ball.  It is far more interesting, if the player can control the ball by hitting it at different parts of the paddle.  The way the old arcade game worked was that the ball would bounce in both the x and y directions if you hit it on the edge of the paddle from which the ball was coming.  The web version implements this feature.
+					</li>
+					<li style="margin-bottom:10px">
+						<i>Use your imagination</i>
+						What else have you always wanted a game like this to do?
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<br/>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

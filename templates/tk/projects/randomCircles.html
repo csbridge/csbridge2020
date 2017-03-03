@@ -1,0 +1,67 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTk.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Tesadüfi Daireler
+			</h1>
+			<p>
+				Eric Roberts'ın ders notları temel alınmıştır.
+			</p>
+			<p>
+				Ders Notları:
+				<a href ="{{pathToRoot}}tk/handouts/graphics.html">Grafik Referansı</a>
+				<br/>
+				Çalışan Örnek: 
+				<a href="{{pathToRoot}}tk/projects/8Ball.html">8 Top</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Farklı boyutlarda, konumlarda ve renklerde on daire çizen bir GraphicsProgram'ı yazınız.  Her bir dairenin rastgele seçilmiş bir rengi, 70 ile 200 piksel arasından rastgele seçilmiş yarıçapı, ve kanvas üzerinde rastgele seçilmiş bir pozisyonu olmalı. Seçilen bu pozisyona göre dairenin tamamı kenarlardan taşmayacak şekilde kanvasın içine sığmalı.  Programın aşağıdaki örnek çalışması olası sonuçlardan birini gösteriyor:
+				</p>
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/randomCircles/demo1.png">	
+					</center>
+				</p>
+				<p>
+					Programı her çalıştırışınızda on daire görmeyebilirsiniz. Sizce neden?
+				</p>
+
+				<p>Rastgele sayılar üretmek için,  şu şekilde bir RandomGenerator örnek değişkeni (tüm metotların dışında tanımlanmış) yaratın :
+					<div class="well"><code>private RandomGenerator rgen = new RandomGenerator();</code></div>
+				</p>
+				<p>Sonrasında rastgele sayılar üretmek için bu değişkeni kullanabilirsiniz.
+					<div class="well"><code>
+						rgen.nextInt(<i>min</i>, <i>max</i>)  //(min, max) aralığında rastgele bir int üretir
+						<br>rgen.nextColor() //rastgele Color üretir
+					</code></div>
+				</p>
+				
+				<p>Erken bitirirseniz, rastgele tatlı çörekler (doughnut) yapmayı düşünün.</p>
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

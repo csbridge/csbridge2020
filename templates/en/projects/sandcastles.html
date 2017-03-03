@@ -1,0 +1,113 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Sandcastles
+			</h1>
+
+			<p>
+				Handouts: 
+				<a href ="{{pathToRoot}}en/handouts/console.html">Console</a>,
+				<a href ="{{pathToRoot}}en/handouts/random.html">Random Generator</a>
+		`<br/>
+				Worked Examples: 
+				<a href="{{pathToRoot}}en/projects/emc2.html">E=MC2</a>,
+				<a href="{{pathToRoot}}en/projects/fibb.html">Fibbonacci</a>,
+				<a href="{{pathToRoot}}en/projects/carbonDating.html">Carbon Dating</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+
+				<p>Write the following three programs to get warmed up to Java variabels.</p>
+				
+				<h2>1. Hello world</h2>
+				<p>
+					Write a console program that displays hello world (or any message you like):
+				</p>
+				<p>
+					<center>
+						<img style="width:400px" src="{{pathToRoot}}img/projects/sandcastles/hello.png">	
+					</center>
+				</p>
+
+				<hr/>
+
+				<h2>2. Moon Weight</h2>
+				<p>The user (an earthling) enters his or her weight on earth. Your program will print the user`s weight on the moon, which is 16.5% of his or her weight on earth.</p>
+
+				<p>
+					<center>
+						<img style="width:400px" src="{{pathToRoot}}img/projects/sandcastles/moon.png">	
+					</center>
+				</p>
+
+
+				<h2>3. Random Numbers</h2>
+				<p>
+					Write a program that prints 1,000 random numbers between 0 and 100.
+				</p>
+				<p>
+					<center>
+						<img style="width:400px" src="{{pathToRoot}}img/projects/sandcastles/randoms.png">	
+					</center>
+				</p>
+
+				<p>The file RandomNumbers.java has code that generates a single random number.
+					<pre id="editor" style="height:200px">public class RandomNumbers extends ConsoleProgram {
+	
+   // A random number generator
+   private RandomGenerator rgen = new RandomGenerator();
+
+   public void run() {
+      // change this code to print 1000 random numbers
+      // in the range 0 to 100.	
+      int example = rgen.nextInt(0, 10);
+      println(example);	
+   }
+}</pre>
+				</p>
+
+				<p>In order to generate random numbers create a RandomGenerator instance variable (a variable declared outside all methods) like so:
+					<div class="well"><code>private RandomGenerator rgen = new RandomGenerator();</code></div>
+				</p>
+				<p>You can then use the variable to generate random numbers.
+					<div class="well"><code>
+						rgen.nextInt(<i>min</i>, <i>max</i>)  //generates a random int in the range (min, max) inclusive
+					</code></div>
+				</p>
+			</div>
+		</div>
+
+		<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+				
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

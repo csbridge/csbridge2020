@@ -1,0 +1,41 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Karel Reference
+			</h1>
+			<p>
+				Written by Eric Roberts
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<!--<p>
+					Karel is a very simple robot who lives in a very simple world. Karel has been used to teach computer science to generations of Stanford students. Below is a complete description of Karel.
+				</p>-->
+				<center><img style="width:700px;" src="{{pathToRoot}}img/handouts/karel/karelHandout.png"></img></center>
+			</div>
+		</div>
+
+		
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

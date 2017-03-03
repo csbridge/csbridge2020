@@ -1,0 +1,59 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Random Ovals
+			</h1>
+			<p>
+				Based on a handout by Eric Roberts
+			</p>
+			<p>
+				Topics:
+				<a href ="{{pathToRoot}}handouts/jsgraphics.html">Javascript Graphics</a>
+				<br/>
+				Worked Example: 
+				<a href="{{pathToRoot}}projects/breakoutOnline.html">Breakout Online!</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+<p>
+                                        Remember those good times making random circles with Java? Let's have those again, but in javascript!
+                                        Write a program that has a canvas and two buttons, 'Make Circle!' and 'Clear Canvas'. When 'Make Circle!' is pressed, create a circle with a randomly chosen color and a random width and height, subject to the condition that the entire circle must fit inside the canvas without extending past the edge. One (of MANY) possible runs could look like the following:
+				</p>
+				<p>
+					<center>
+						<img style="width:400px" src="../img/projects/randomOvals/randomOvals.jpg">	
+					</center>
+				</p>
+
+				<p>To generate random numbers, use the javascript call Math.random(), which returns a number in between 0 and 1 (inclusive of 0 but not 1). How can you use this to generate random numbers in any range? 
+					<div class="well"><code>var randomNumber = Math.random(); // randomNumber has random value between 0 and 1</code></div>
+				</p>
+				
+				<p>If you finish early, consider making random ovular doughnuts.</p>
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

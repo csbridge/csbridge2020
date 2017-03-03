@@ -1,0 +1,74 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Music Cannon
+			</h1>
+			<p>
+				Created by Bryce Cronkite-Ratcliff
+			</p>
+            <p>
+				Handouts:
+				<a href ="{{pathToRoot}}en/projects/jsJSSyntax.html">JavaScript Syntax Handout</a>
+			</p>
+			
+
+		</div>
+		<hr/>
+
+<p>Clients! Servers! Music! Three great tastes that taste great together!</p>
+
+<p>Your mission is to write a client program that presents the user with a text box. When the
+        user enters the name of a note in the text box and presses the 'Enter' key, that note
+        is sent to our server and the server plays it!</p>
+        
+        <p><img src="../img/icons/jsCannon.jpg" alt="Random Circles"></p>
+
+<h3 id="toc_2">First thing to do!</h3>
+
+<p>Navigate to your Desktop, open the jsday3 folder, open the folder called musicCannon. Open <strong>index.html</strong> and <strong>musicCannon.js</strong> in Notepad++. Also open <strong>index.html</strong> in Google chrome</p>
+
+<h3 id="toc_3">Now create a text box</h3>
+
+<p>Create a text input box on the client's web page. You will add this in <strong>index.html</strong></p>
+        <p>To create an input box in HTML, use input tag: an example follows. The placeholder attribute sets the text that appears inside the box before the user enters anything; it is optional.</p>
+<pre><code>&lt;input type=&quot;text&quot; placeholder=&quot;Enter some text in this box!&quot;&gt;</code></pre>
+        
+        <h3 id="toc_4">Now write a callback</h3>
+        
+        <p>Now, in the <strong>musicCannon.js</strong> file, write a function that takes one parameter. Inside that function, let's do a push to our server using the parameter passed into
+        this function.</p>
+        
+        <p>The code to do a push has the following format:</p>
+        <pre><code>$.post( "http://A COOL URL", { A KEY: VALUE TO USE } );</code></pre>
+        <p>A COOL URL, A KEY, and VALUE TO USE are not real program values; they represent what we have to replace to make this code work in our specific program. <p>Now, in this program, our url is</p>
+    <pre>http://music-cannon.meteor.com/music</pre>
+    , our key is <strong>note</strong>, and our value is passed into the function as a parameter.
+    
+            <h3 id="toc_4">Now hook up the callback to your text box!</h3>
+    
+    <p>Now that we can push to the server, we need to hook up our text box to the function we just created so that when the text box entry changes, the function we wrote is called so that the data is passed to the server! We can do this with an event listener, much like we did with random circles. We just need to add the following to our input tag, where this.value is used to retrieve the current text inside the text box and pass it to the function</p>
+    <pre><code>&lt;input type=&quot;text&quot; onchange=&quot;NAME_OF_FUNCTION_THAT_PUSHES(this.value)&quot;&gt;</code></pre>
+    
+    <p>Make sure to put the right function name into the above code</p>
+    
+    <p>Now test your code! Try putting a lowercase note that is in the A blues scale into the text box, and listen carefully...</p>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

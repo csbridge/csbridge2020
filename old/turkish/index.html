@@ -1,0 +1,1002 @@
+<head>
+<head>
+
+<title>Bilgisayara Giriş</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- Java Script -->
+<script src="plugins/jquery.min.js"></script>
+<script src="plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+
+<script src="karel/ace/ace.js" type="text/javascript"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+  </script>-->
+
+	<script src="karel/js/html/websiteImports.js"></script>
+	<script>importCss();</script>
+	<script>importJs();</script>
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+<nav class="navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Navigasyonu aç/kapa</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/">Bilgisayara Giriş</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <!--<li ><a href="#">Link</a></li>-->
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ders Notları <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="handouts/sections.html">Section'lar</a></li>
+	          	<li><a href="handouts/karel.html">Karel Referansı</a></li>
+	          	
+	          	<li><a href="handouts/console.html">Konsol Referansı</a></li>
+	          	<li><a href="handouts/random.html">Rasgele Sayı Üreticisi Referansı</a></li>
+	          	<li><a href="handouts/graphics.html">Grafik Referansı</a></li>
+	          	<li><a href="handouts/events.html">Olaylar(Events) Referansı</a></li>
+                <li><a href="projects/jsJSSyntax.html">JavaScript Referansı</a></li>
+                <li><a href="handouts/htmlReference.html">HTML Referansı</a></li>
+                <li><a href="handouts/uploadWebsite.html">Web Sitesi Upload Etme Referansı</a></li>
+
+	          	<li><a href="handouts/whatsNext.html">Bundan Sonrası</a></li>
+	          	<!--<li><a href="handouts/forLoops.html">For Döngüsü</a></li>
+	          	<li><a href="handouts/loopAndAHalf.html">Bir Buçuk Döngü</a></li>
+	          	<li><a href="handouts/whileLoops.html">While Döngüsü</a></li>
+	          	<li><a href="handouts/ifStatements.html">If Kalıbı</a></li>
+	          	<li><a href="handouts/variables.html">Değişkenler</a></li>
+	            <li><a href="handouts/scope.html">Scope</a></li>
+	            <li><a href="handouts/operations.html">İşlemler</a></li>
+	            <li><a href="handouts/graphics.html">Grafik</a></li>
+	            <li><a href="handouts/passingData.html">Veri Alışverişi</a></li>-->
+	            
+	          </ul>
+	        </li>
+
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projeler <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="projects/collectNewspaper.html">Gazete Alma</a></li>
+	          	<li><a href="projects/efes.html">Efes İnşaatı</a></li>
+	          	<li><a href="projects/mountain.html">Dağcı Karel</a></li>
+	          	<li><a href="projects/randomPainter.html">Deli Ressam</a></li>
+	          		<li class="divider"></li>
+
+	          	<li><a href="projects/medicine.html">Sahte İlaç</a></li>
+	          	<li><a href="projects/gameOfStones.html">Nimm</a></li>
+	          	<li><a href="projects/awesome.html">Programcılık Bir Harika</a></li>
+	          	<li><a href="projects/someSum.html">Üç Aşağı Beş Yukarı</a></li>
+	            <li><a href="projects/randomCircles.html">Tesadüfi Daireler</a></li>
+	            <li><a href="projects/bouncingBall.html">Zıp zıp top</a></li>
+
+	          	<li><a href="projects/madMax.html">Mad Max</a></li>
+	          	<li><a href="projects/target.html">Hedef Tahtası</a></li>
+	          	<li><a href="projects/sunset.html">Kısa Film</a></li>
+	            <li><a href="projects/drawPeople.html">Çekirge Bir Sıçrar İki Sıçrar</a></li>
+	            <li><a href="projects/illusion.html">Optik İllüzyon</a></li>
+	            <li><a href="projects/madLibs.html">Sana Laflar Hazırladım</a></li>
+	            <li><a href="projects/secret.html">Çok Gizli</a></li>
+
+	     
+
+                <li class="divider"></li>
+	            
+	            <li><a href="projects/breakout.html">Breakout</a></li>
+	            
+	            
+	            <li><a href="projects/music.html">Ses Dalgaları</a></li>
+	        	
+	        	
+	            <li><a href="projects/project.html">Final Projesi</a></li>
+
+	            
+              
+	            
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Örnekler <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="projects/stepUp.html">Adım adım</a></li>
+	          	<li><a href="projects/place100.html">100 Koymak</a></li>
+	          	<li><a href="projects/beeperLine.html">Beeper Hattı</a></li>
+	          	<li><a href="projects/invert.html">Ters Çevir</a></li>
+	          	<li><a href="projects/unKarel.html">İnsani Yardım Karel'i</a></li>
+	          	<li class="divider"></li>
+	            <li><a href="projects/emc2.html">E=MC2</a></li>
+	            <li><a href="projects/fibb.html">Fibonacci</a></li>
+	           <li><a href="projects/favoriteNumber.html">Favori Sayı</a></li>
+	           <li><a href="projects/mysterySquare.html">Gizemli Kare</a></li>
+	            
+	            <li><a href="projects/robotFace.html">Robot Surat</a></li>
+	            <!--<li><a href="projects/findPi.html">Pi Bulmaca</a></li>-->
+	            <li><a href="projects/8Ball.html">8 Top</a></li>
+	            <li><a href="projects/halfGreen.html">Yeşilimtrak</a></li>
+	            
+	            <li><a href="projects/stringArt.html">String Sanatı</a></li>
+	             
+	             <li><a href="projects/stampTool.html">Damga Makinesi</a></li>
+	            <li><a href="projects/snow.html">Kar</a></li>
+                   <!--<li class="divider"></li>
+	            <li><a href="projects/breakoutOnline.html">Breakout Online</a></li>-->
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slaytlar <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="slides/01.pptx">Karel</a></li>
+	          	<li><a href="slides/02.pptx">Basit Java</a></li>
+	          	<li><a href="slides/03.pptx">Metodlar</a></li>
+	          	<li><a href="slides/04.pptx">Tekrar</a></li>
+	          	<li><a href="slides/06.pptx">Array List'ler</a></li>
+	          	<li><a href="slides/AI.pptx">A.I. (Yapay Zeka)</a></li>
+	          	<li><a href="slides/TheEnd.pptx">Son</a></li>
+	          	
+	          </ul>
+	        </li>
+
+
+	        <!--<li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">İnternet <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="https://www.dropbox.com/s/1jtjo9hde8in0xn/1-How%20the%20internet%20works.pptx">İnterne Nasıl Çalışır</a></li>
+	          	<li><a href="https://www.dropbox.com/s/1t7pwltugsy4pxg/2-day-in-the-life-of-packet.pptx">Bir Paket'in Sıradan Bir GÜnü</a></li>
+	          	<li><a href="https://www.dropbox.com/s/1n0lzrl32urfsnr/3-How%20packets%20routed.pptx">Paketler Nasıl Yolunu Bulur</a></li>
+	          	<li class="divider"></li>
+	          	<li><a href="http://yuba.stanford.edu/~huangty/dacka/lab1.html">Lab 1</a></li>
+	          	<li><a href="http://yuba.stanford.edu/~huangty/dacka/lab2.html">Lab 2</a></li>
+	          	<li class="divider"></li>
+	          	<li><a href="internet/echo.zip">Echo Client Kodu</a></li>
+	          	<li><a href="internet/2person-breakout.zip">Breakout Online Kodu</a></li>
+
+	          	
+	          </ul>
+	        </li>-->
+
+	        <!--<li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Section<b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="projects/stepUp.html">Gazeteci Karel</a></li>
+	          	<li><a href="projects/place100.html">Sahte İlaçlar</a></li>
+	          	<li><a href="projects/beeperLine.html">Hedef Tahtası</a></li>
+	          </ul>
+	        </li>-->
+
+
+
+	      </ul>
+
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">Hakkında</a></li>
+	        
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+    <div class="page-header" style="backgroud-color:#cdbfe3">
+    	<div class="container">
+   			<div>
+	        	<div id="logo">
+					<img id="logoImg" src="img/logo.png"/>
+				</div>
+				<div id="headerText" style="padding-bottom:15px;">
+					<div class="h1" style="margin-top:0px;font-size:40px;">
+						Bilgisayar Bilimine Giriş
+					</div>
+					<div>
+						2016 Yazı
+					</div>
+					<div>
+						15 Haziran - 1 Temmuz, Koç Üniversitesi, Istanbul
+					</div>
+				</div>
+	          
+	        </div>
+		</div>
+	</div>
+
+
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<div class="section" id="information">
+
+			
+
+		<div style="margin-top:30px;" class="alert alert-success"><b>Güzel hatıralar</b>: Lütfen <a href="https://www.surveymonkey.com/s/6756TNB">ders anketini</a> doldurun.</div>
+		
+		<div style="margin-top:30px;" class="alert alert-success"><b>Neredeyse bitti</b>: Lütfen <a href="https://sendtomycloud.com/students
+">final projenizi gönderin</a>.</div>
+		
+
+		<!--<div>
+			<h2>Şu videolara bir bakın</h2>
+
+		
+
+			<p>Solda: Will.I.Am'a göre programcılar geleceğin rockstar'ları. Sağda: Programcılık din, dil, ırk, cinsiyet (ya da en sevdiği renk) ayrımı olmaksızın herkes içindir.</p>
+
+				<center>
+
+					<iframe width="400" height="315" src="//www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+
+					<iframe width="400" height="315" src="//www.youtube.com/embed/DqrfPCGo2aQ" frameborder="0" allowfullscreen></iframe>
+
+				</center>
+
+
+			</p>
+		</div>-->
+
+		<div>
+			<h2>
+				Bu Dersin Amacı
+			</h2>
+
+			<p>Bu iki haftalık dersin amacı, size daha sonrasında kendi başınıza öğrenmeye devam edebilecek seviyede programcılığın temellerini öğretmek. Stanford ve (Koç) Üniversitesi'nden gelen bir grup eğitmen tarafından verilecek. Programcılığı Stanford Üniversitesi'nin Bilgisayar Bilimine Giriş dersinde kullanılan materyeller üzerinden öğreneceksiniz.</p>
+
+<div>
+				<div class="bs-example">
+					<!-- Row -->
+				    <div class="row">
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img class = "thumbnailImg" src="img/peeps/chris.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					        <b>Chris</b>
+					      </div>
+					    </div>
+				      </div>
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/alisha.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					        <b>Alisha</b>
+					      </div>
+					    </div>
+				      </div>
+				      
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/amy.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					        <b>Amy</b>
+					      </div>
+					    </div>
+				      </div>
+
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/brian.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					       <b>Brian</b>
+					      </div>
+					    </div>
+				      </div>
+
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/bryce.png" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					        <b>Bryce</b>
+					      </div>
+					    </div>
+				      </div>
+
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/cagatay.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					       <b>Çağatay</b>
+					      </div>
+					    </div>
+				      </div>
+
+				  </div>
+
+				  <!-- Row -->
+				  <div class="row">
+
+				  	<div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/danielle.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					       <b>Danielle</b>
+					      </div>
+					    </div>
+				      </div>
+
+				  	  
+
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/dilara.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					       <b>Dilara</b>
+					      </div>
+					    </div>
+				      </div>
+
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/goktu.png" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					        <b>Göktuğ</b>
+					      </div>
+					    </div>
+				      </div>
+
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/julia2.png" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					        <b>Julia</b>
+					      </div>
+					    </div>
+				      </div>
+
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/kerem.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					       <b>Kerem</b>
+					      </div>
+					    </div>
+				      </div>
+
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/kevin.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					        <b>Kevin</b>
+					      </div>
+					    </div>
+				      </div>
+
+				      
+
+
+				  </div>
+ 				  <!-- Row -->
+				  <div class="row">
+
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/ozlem.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					        <b>Özlem</b>
+					      </div>
+					    </div>
+				      </div>
+
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/iyi.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					       <b>Pınar Ö</b>
+					      </div>
+					    </div>
+				      </div>
+
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/sahin.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					       <b>Şahin</b>
+					      </div>
+					    </div>
+				      </div>
+
+				       <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/jessy.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					        <b>Jessy</b>
+					      </div>
+					    </div>
+				      </div>
+
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/sean.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					        <b>Sean</b>
+					      </div>
+					    </div>
+				      </div>
+
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/pinar.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					        <b>Pınar Y</b>
+					      </div>
+					    </div>
+				      </div>
+				      
+				     
+				   </div>
+				 
+
+				  <!-- Row -->
+				  <div class="row">
+				      
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/nick2.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					        <b>Nick</b>
+					      </div>
+					    </div>
+				      </div>
+
+				      <div class="col-xs-2">
+				        <div class="thumbnail">
+					      <img src="img/peeps/asena.jpg" alt="Generic placeholder thumbnail">
+					      <div class="caption">
+					        <b>Asena</b>
+					      </div>
+					    </div>
+				      </div>
+				   </div>
+			</div>		</div>
+
+
+		<div>
+			<h2>
+				Ders Bittikten Sonra Devam Etmek
+			</h2>
+
+			<p>Artık dersimiz bitti. Umarım keyif almışsınızdır! Stanford'ın CS106 Programming Methodologies dersinin büyük bir kısmını bitirdiniz. Ama umarım bu sizin için daha başlangıç. Peki sırada ne var? Bu <a href="handouts/whatsNext.html">sayfaya</a> bir göz atın. İsterseniz 
+				<a href="mailto:alisha.adam13@gmail.com">Alisha</a> ya da 
+				<a href="mailtobkgoksel@gmail.com">Kerem</a>'e  mail atarak
+			öğrenmeye devam etmek istediğinizi haber verin. </p>
+		</div>
+
+		<div>
+
+		<div class="section" id="schedule">
+			<h2>
+				Programlar
+			</h2>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<!--<th style="width: 80px;">Date</th>-->
+						<th></th>
+						<!--<th>Reading</th>-->
+						<th>Adı</th>
+						<th>Konu</th>
+						<th>Başlangıç Kodu</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<th colspan = "6"><b>
+						<br>
+						[Ders Sonrası]</b></th>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/instakilo.png"></img></td>
+						<td><a href="projects/instakilo.html">Instakilo</a></td>
+						<td>Hashmap'ler</td>
+						<td><a href="starter/Instakilo.zip">Instakilo.zip</a> </td>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/hangman.png"></img></td>
+						<td><a href="projects/hangman.html">Adam Asmaca</a></td>
+						<td>String'ler</td>
+						<td><a href="starter/Hangman.zip">Hangman.zip</a> </td>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/mouseGame.png"></img></td>
+						<td><a href="projects/mouseGame.html">Çizgide</a></td>
+						<td>Konu Tekrarı</td>
+						<td><a href="starter/TheLine.zip">TheLine.zip</a> </td>
+					</tr>
+                
+                
+
+
+
+					<tr>
+						<th colspan = "6"><b>
+						<br>
+						[Projeler]</b></th>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/project.png"></img></td>
+						<td><a href="projects/project.html">Kendi Projeni Yap</a></td>
+						<td>Tüm Konular</td>
+						<td><a href="starter/FinalProject.zip">FinalProject.zip</a></td>
+					</tr>
+
+					
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/music3.jpg"></img></td>
+						<td><a href="projects/music.html">Ses Dalgaları</a></td>
+						<td>ArrayList'ler</td>
+						<td><a href="starter/Sound.zip">Sound.zip</a> </td>
+					</tr>
+
+					
+             
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/breakout.jpg"></img></td>
+						<td><a href="projects/breakout.html">Breakout!</a></td>
+						<td>Interactor'ler</td>
+						<td><a href="starter/Breakout.zip">Breakout.zip</a></td>
+					</tr>
+
+					<tr>
+						<th colspan = "6"><b>
+						<br>
+						[JavaScript]</b></th>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/jsCannon.jpg"></img></td>
+						<td><a href="projects/musicCannon.html">Ses Kanonu</a></td>
+						<td>Web Programcılığı</td>
+						<td><a href="starter/JSDay3.zip">JavaScriptDay3.zip</a></td>
+					</tr>
+
+            <!--<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/handouts/uploadWebsite/github-octocat.png"></img></td>
+						<td><a href="handouts/uploadWebsite.html">Uploading Your Website</a></td>
+						<td>Web Programming</td>
+                        <td></td>
+					</tr>-->
+            <tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="http://www.muratarik.com.tr/wp-content/uploads/2015/03/k13.jpg"></img></td>
+						<td><a href="projects/myhomepage.html">HTML'ye Merhaba</a></td>
+						<td>Web Programcılığı</td>
+                        <td></td>
+					</tr>
+            
+
+                
+                    <tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/waldo.jpg"></img></td>
+						<td><a href="projects/jsAliNerede.html">Ali Nerede?</a></td>
+						<td>Web Programcılığı</td>
+						<td><a href="starter/jsday2.zip">JavaScriptDay2.zip</a></td>
+					</tr>
+
+                    <tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/randomCircles.png"></img></td>
+						<td><a href="projects/jsRandomCircles.html">Tesadüfi Dairelere Dönüş</a></td>
+						<td>Web Programcılığı</td>
+						<td><a href="starter/jsday1.zip">JavaScriptDay1.zip</a></td>
+					</tr>
+
+                
+                    <tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/jawa.jpg"></img></td>
+						<td><a href="projects/jawascript.html">Karşınızda Javascript!</a></td>
+						<td>Web Programcılığı</td>
+						<td><a href="starter/jsday1.zip">JavaScriptDay1.zip</a></td>
+					</tr>
+					
+
+					<tr>
+						<th colspan = "6"><b>
+						<br>
+						[Java]</b></th>
+					</tr>
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/secret.jpg"></img></td>
+						<td><a href="projects/secret.html">Çok Gizli</a></td>
+						<td>Sandcastle</td>
+						<td><a href="starter/Day7.zip">Day7.zip</a></td>
+					</tr>
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/madLibs.png"></img></td>
+						<td><a href="projects/madLibs.html">Sana Laflar Hazırladım</a></td>
+						<td>Sandcastle</td>
+						<td><a href="starter/Day6.zip">Day6.zip</a></td>
+					</tr>
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/catchMeIfYouCan.png"></img></td>
+						<td><a href="projects/catchMeIfYouCan.html">Yakalarsam...</a></td>
+						<td>Sandcastle</td>
+						<td><a href="starter/Day5.zip">Day5.zip</a></td>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/illusion.png"></img></td>
+						<td><a href="projects/illusion.html">Optik İllüzyon</a></td>
+						<td>For Döngüsü</td>
+						<td><a href="starter/Day4.zip">Day4.zip</a></td>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/drawPeople.png"></img></td>
+						<td><a href="projects/drawPeople.html">Çekirge Bir Sıçrar İki Sıçrar...</a></td>
+						<td>Sandcastle</td>
+						<td><a href="starter/Day4.zip">Day4.zip</a></td>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/sunset.png"></img></td>
+						<td><a href="projects/sunset.html">Kısa Film</a></td>
+						<td>Parametreler ve Return'ler</td>
+						<td><a href="starter/Day3.zip">Day3.zip</a></td>
+					</tr>
+					
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/target.png"></img></td>
+						<td><a href="projects/target.html">Hedef Tahtası</a></td>
+						<td>Parametreler</td>
+						<td><a href="starter/Day3.zip">Day3.zip</a></td>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/madMax.jpg"></img></td>
+						<td><a href="projects/madMax.html">Mad Max</a></td>
+						<td>Parametreler ve Return'ler</td>
+						<td><a href="starter/Day3.zip">Day3.zip</a></td>
+					</tr>
+
+					<!--<tr>
+						<th colspan = "6"><b>
+						<br>
+						[Variables]</b></th>
+					</tr>-->
+
+					
+
+
+
+					
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/bouncing.png"></img></td>
+						<td><a href="projects/bouncingBall.html">Zıp Zıp Top</a></td>
+						<td>Animasyon</td>
+						<td><a href="starter/Day3.zip">Day3.zip</a></td>
+					</tr>
+					
+					
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/randomCircles.png"></img></td>
+						<td><a href="projects/randomCircles.html">Tesadüfi Daireler</a></td>
+						<td>Rasgelelik</td>
+						<td><a href="starter/Day2.zip">Day3.zip</a></td>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/someSum.png"></img></td>
+						<td><a href="projects/someSum.html">Üç Aşağı Beş Yukarı</a></td>
+						<td>Sandcastle</td>
+						<td><a href="starter/Day3.zip">Day3.zip</a></td>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/awesome.png"></img></td>
+						<td><a href="projects/awesome.html">Programcılık Bir Harika</a></td>
+						<td>Grafikler</td>
+						<td><a href="starter/Day2.zip">Day2.zip</a></td>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/nim.jpg"></img></td>
+						<td><a href="projects/gameOfStones.html">Nimm Oyunu</a></td>
+						<td>Değişkenler</td>
+						<td><a href="starter/Day2.zip">Day2.zip</a></td>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/medicine.png"></img></td>
+						<td><a href="projects/medicine.html">Kaçak İlaç</a></td>
+						<td>Değişkenler</td>
+						<td><a href="starter/Day2.zip">Day2.zip</a></td>
+					</tr>
+					
+
+					
+					<tr>
+						<th colspan = "6"><b>
+						<br/>
+						[Karel]</b></th>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/randomPainter2.png"></img></td>
+						<td><a href="projects/randomPainter.html">Deli Ressam</a></td>
+						<td>If Kalıbı</td>
+						<td><a href="starter/Day1.zip">Day1.zip</a> </td>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/mountain.png"></img></td>
+						<td><a href="projects/mountain.html">Dağcı Karel</a></td>
+						<td>While Döngüsü</td>
+						<td><a href="starter/Day1.zip">Day1.zip</a> </td>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><img class="projectImg" src="img/icons/efes.jpg"></img></td>
+						<td><a href="projects/efes.html">Efes İnşaatı</a></td>
+						<td>For Döngüsü</td>
+						<td><a href="starter/Day1.zip">Day1.zip</a> </td>
+					</tr>
+
+					<tr class="table-bordered table-striped">
+						<td><a href="projects/collectNewspaper.html"><img class="projectImg" src="img/icons/newspaper.jpg"></img></a></td>
+						<td><a href="projects/collectNewspaper.html">Gazete Alma</a></td>
+						<td>Metod'lar</td>
+						<td><a href="starter/Day1.zip">Day1.zip</a> </td>
+					</tr>
+					
+					
+
+					
+					
+					
+
+				</tbody>
+			</table>
+
+		</div>
+
+		<div class="section" id="playWithKarel">
+			<h2>
+				Sınıf Selfie'si
+			</h2>
+			<img src = "img/fun/selfie.jpg" style="width:49%; margin-right:1%"></img>
+			<img src = "img/fun/selfie2.jpg" style="width:49%"></img>
+		</div>
+
+			
+		<div class="section" id="playWithKarel">
+			<h2>
+				Müfredat
+			</h2>
+			<img src = "img/icons/curriculum.png" style="width:100%"></img>
+		</div>
+
+	
+		<div class="section" id="playWithKarel">
+			<h2>
+				Karel'la Oyna
+			</h2>
+
+			<p>Karşınızda Karel, Stanford'ın öğrencilere programlama öğretmek için kullandığı Java Robotu. </p>
+
+			<p>Karel'ın bildiği komutları kullanarak hattın tepesindeki beeper'a gitmesini sağlayın. Normalde programlarınızı Eclipse adındaki bir programın içinde yazacaksınız, ama siz rahatça deneyebilesiniz diye web sitemiz için minik bir Eclipse geliştirdik:</p>
+			<div>
+			<!--<div id = 'firstIdeCanvasDiv' >
+				            <canvas id = 'firstIdeCanvas' ></canvas>
+				         </div>
+			<div id="cmdButtonBar" class="buttonBar" style="height:60px;">
+				<button id="move" class='btn btn-default interactor programButton'>move();</button>
+				<button id="left" class='btn btn-default interactor programButton'>turnLeft();</button>
+				<button id="pick" class='btn btn-default interactor programButton'>pickBeeper();</button>
+				<button id="put" class='btn btn-default interactor programButton'>putBeeper();</button>
+			</div> 
+		</div>
+		<p>Your karel programs will be written in Eclipse. But you can test things out here, online:</p>-->
+			
+
+				<div style="width:100%;">
+				   <div id ='mainIde' class = "getStarted">
+				 
+				      <div id = "mainIdeCenter" >
+				      	<div id = 'mainIdeCanvasDiv' class = 'orange'>
+				            <canvas id = 'mainIdeCanvas' class = 'red'></canvas>
+				         </div>
+				         <div id = 'mainIdeEditorDiv'>
+				            <script>importEditor('mainIdeEditor','mainIdeEditorDiv');</script>
+				         </div>
+				         
+				      </div>
+
+				   </div>
+
+
+				   
+				   <div id="runButtonBar" class="buttonBar"></div> 
+				       <script>importButtonBar();</script>
+				      <br/>
+				</div>
+			   
+			   <script>
+
+			   		
+
+			      function init() {
+			      	 var stepUpWorld = null;
+			         var karelIde = null;
+
+			         var onReadyCalled = false;
+
+			         var buttonState = 'play';
+
+			         document.onready = function() {
+			            if (onReadyCalled) return;
+			            onReadyCalled = true;
+			            $("[title]").tooltip({ position: "bottom center", opacity: 0.9});
+			            
+			            initTabs();
+			            var canvas = document.getElementById('mainIdeCanvas');
+			            karelIde = KarelIde(window._editor, canvas, INITIAL_WORLD);
+
+			            var stepUpCanvase = document.getElementById('firstIdeCanvas');
+			            stepUpWorld = KarelIde(window._editor, stepUpCanvase, 'ledge');
+			            
+			            $('#playButton').click(function(){playClicked()});
+			            $('#move').click(function(){stepUpWorld.stepMove()});
+			            $('#left').click(function(){stepUpWorld.stepTurnLeft()});
+			            $('#right').click(function(){stepUpWorld.stepTurnRight()});
+			            $('#put').click(function(){stepUpWorld.stepPutBeeper()});
+			            $('#pick').click(function(){stepUpWorld.stepPickBeeper()});
+			            /*$('#worldSelector').change(
+			               function() {
+			                  var worldName = $("#worldSelector option:selected").text();
+			                  karelIde.stopButton();
+			                  var playText = '<span class="glyphicon glyphicon-play"></span> Run Program';
+				         	  $('#playButton').html(playText);
+				         	  buttonState = 'play';
+					          karelIde.changeWorld(worldName);
+					        }
+			            );*/
+			            window.onresize();
+			            
+			         }
+
+			         function playClicked() {
+			         	if(buttonState == 'play') {
+			         		karelIde.playButton();
+				         	
+				         	var resetText = '<span class="glyphicon glyphicon-repeat"></span> Reset\'le';
+				         	$('#playButton').html(resetText);
+				         	buttonState = 'reset';
+				         } else if (buttonState == 'reset') {
+				         	karelIde.stopButton();
+				         	var playText = '<span class="glyphicon glyphicon-play"></span> Programı Çalıştır';
+				         	$('#playButton').html(playText);
+				         	buttonState = 'play';
+				         }
+			         	
+			       }
+
+			         window.onresize = function() { 
+			            var parentHeight = 300;
+			            var parentWidth = $("#playWithKarel").width();
+			            console.log('pw: ' + parentWidth);
+
+			            var ide = document.getElementById('mainIde');
+			            var editorDiv = document.getElementById('mainIdeEditorDiv');
+			            var canvas = document.getElementById('mainIdeCanvasDiv');
+			            var center = document.getElementById('mainIdeCenter');
+			            
+			            var ideHeight = parentHeight
+			            ide.style.height = (ideHeight)+ 'px';
+			            ide.style.width = parentWidth + 'px';
+			            
+			            var centerHeight = ideHeight;
+			            center.style.height = centerHeight + 'px';
+			            center.style.width = parentWidth + 'px';
+
+			            //center.style.top = centerTop + 'px';
+
+			            var availibleWidth = parentWidth ;
+			            var elementSpacing = 12;
+		
+			            
+			            var canvasWidth = parentHeight;
+			            canvas.style.width = canvasWidth + 'px';
+			            canvas.style.left = 0+ 'px';
+
+			           	var editorWidth = availibleWidth - canvasWidth - elementSpacing; 
+			           	//editorWidth = Math.max(editorWidth, Const.MIN_EDITOR_WIDTH)
+
+			            editorDiv.style.left = (canvasWidth + elementSpacing) + 'px'
+			            editorDiv.style.width = editorWidth + 'px';
+
+			            if (karelIde) {
+			               karelIde.resizeCanvas(canvasWidth, centerHeight);
+			               stepUpWorld.resizeCanvas($("#firstIdeCanvas").width(), 200);
+			            }
+			            if (window._editor) {
+			               window._editor.renderer.onResize();
+			            }
+			            ReferenceDialog.resize();
+			            DeployDialog.resize();
+			         }
+
+			         
+			      }
+			      init();
+			   </script>
+		</div>
+
+		
+
+
+
+		<div class="section" id="getStarted">
+			<h2>
+				Bilgisayarınızı Hazırlama
+			</h2>
+
+			<h3>Eclipse'i Yükleyin</h3>
+			<p>Yapmanız gereken ilk adım Eclipse'i indirmek. Bilgisayarınıza uygun olan <a href="resources/eclipse_helios_mac.zip">Mac versiyonu</a>'nu ya da<a href="resources/eclipse_helios_windows.zip">windows versiyonu</a>'nu indirin. Yardıma ihtiyaç duyarsanız <a href="handouts/DownloadingEclipse.pdf">bu rehbere</a> bakabilirsiniz. Eğer Eclipse'e zaten sahipseniz Stanford eklentisini yüklemeniz gerekiyor.  <a href="starter/edu.stanford.cs106_1.0.0.jar">Burada</a> bulabilirsiniz.</p>
+
+			<h3>Eclipse'e Proje Ekleyin</h3>
+			<p>Eclipse'i kurduktan sonra, artık Eclipse'e bir proje ekleyerek çalışmaya başlayabilirsiniz. Bunu (Stanford Menu -> Import Project) düğmesinden yapabilirsiniz. Sıfırdan bir program yazmak için bu <a href="resources/BlankProject.zip">boş proje</a>'yi kullanın.</p>
+
+			<h3>Create an executable</h3>
+			<p>If you want to turn a project into a stand-alone executable, read <a href="handouts/CreatingJarFiles.pdf">this</a> handout.</p>
+		</div>
+
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+		&#169; Stanford 2016 &#124; Yaratanlar 
+		<a href="http://stanford.edu/~cpiech">Chris</a> ve tüm ekip.
+		Bu ders pek çok değerli profesörün yarattığı CS106A dersinden esinlenmiştir. Özellikle <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> ve <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>'ye teşekkür ederiz.
+	</p>
+	<!--<p class="pull-right">
+		<a href="fall12">Fall 2012</a>
+	</p>-->
+</div>
+<!--<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>-->
+
+	</div>
+</body>

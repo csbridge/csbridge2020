@@ -1,0 +1,68 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				The Line
+			</h1>
+			<p>
+				Written by Chris
+			</p>
+			
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Write a game where the user can use the mouse to move a ball at the bottom of the screen. A path animates coming down the screen and if the ball hits a barrier the game ends.
+				</p>
+				<p>
+					<center>
+						<img style="float:left; width:400px" src="{{pathToRoot}}img/projects/mouseGame/path.png">	
+						<img style="float:left; width:400px" src="{{pathToRoot}}img/projects/mouseGame/loops.png">
+					</center>
+				</p>
+				<p>
+					One insight that we found very useful was that its easier to:
+					<ul>
+						<li>make the background black, 
+						<li>add white rectangles (the path)
+						<li>make sure that all corners of the users ball was always colliding with something :). 
+					</ul>
+				</p>
+				<p>In the examples above we created GRects way above the screen, put all of the rectangles into an ArrayList and then every frame moved all
+					GRects in the array list down.</p>
+				<p>There are many other versions of a similar concept. In the example on the left we randomly created a path. In the example on the right the user should dodge randomly created dropping blocks
+				</p>
+
+				<p>
+					<center>
+						<img style="float:left; width:400px" src="{{pathToRoot}}img/projects/mouseGame/random.png">	
+						<img style="float:left; width:400px" src="{{pathToRoot}}img/projects/mouseGame/demo1.png">
+					</center>
+				</p>
+
+				
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

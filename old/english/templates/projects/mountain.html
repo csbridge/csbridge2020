@@ -1,0 +1,80 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Mountain Karel
+			</h1>
+			<p>
+				Based on a handout by Eric Roberts
+			</p>
+
+			<p>
+				Handouts: 
+				<a href ="{{pathToRoot}}handouts/karel.html">KarelReference</a>
+				<br/>
+				Worked Example: 
+				<a href="{{pathToRoot}}projects/beeperLine.html">Beeper Line</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Karel dreams of climbing mountains. Teach her to get to the top of a mountain of any height. For example, for the following mountain:
+				</p>
+				<p>
+					<center>
+						<img class="psetImg" style="width:400px" src="{{pathToRoot}}img/projects/mountain/mountain0.png">	
+					</center>
+				</p>
+				<p>
+					Karel should climb to the top and leave a flag (a beeper) at the summit as shown bellow:
+				</p>
+				<p>
+					<center>
+						<img class="psetImg" style="width:400px"  src="{{pathToRoot}}img/projects/mountain/mountain1.png">	
+					</center>
+				</p>
+				<p>
+					Unlike the previous problems, you are <b>not</b> garunteed the height of the mountain before hand. The program you write should allow Karel to climb mountains of any size. For example the following three:
+				</p>
+				<p>
+					<center>
+						<img class="psetImg" style="width:100%"  src="{{pathToRoot}}img/projects/mountain/mountains.png">	
+					</center>
+				</p>
+				<p>
+				 	You can assume:
+					<ul>
+						<li>Karel starts on the bottom left of the world, facing east.
+						<li>There is one space (on the left and the right) between the mountain and the world boundry. 
+						<li>The mountain is at least one square high.
+					</ul>
+				</p>
+				<p>
+					Use while loops.
+				</p>
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

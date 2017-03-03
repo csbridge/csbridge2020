@@ -1,0 +1,276 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Waves of Sound
+			</h1>
+			<p>
+				Inspired by, and built off an assignment by Keith Schwarz. Created by Chris Piech Kevin Miller and Bryce Cronkite-Ratcliff
+			</p>
+			<p>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/arrayLists.html">ArrayLists</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				
+				<p>Humans are always looking for new sounds, and recently a growing number of artists have been using programs to create experiences that instruments are unable to produce. Here are two examples of songs that were created with computer generated sounds:</p>
+				<p>
+					<center>
+					<iframe width="400" height="315" src="//www.youtube.com/embed/mehLx_Fjv_c" frameborder="0" allowfullscreen></iframe>
+					<iframe width="400" height="315" src="//www.youtube.com/embed/Sk9XYQMRiLY" frameborder="0" allowfullscreen></iframe>
+					</center>
+				</p>
+				<p>
+					Write a program that reads in notes from a file and play the composition back to the user.
+				</p>
+				<!--<p>
+					<center>
+						<img style="width:450px" src="{{pathToRoot}}img/projects/music/mary.png">
+
+					</center>
+				</p>
+				<p>Just for fun: Can you figure out what the above song plays?</p>-->
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Audio</h2>
+				<p>
+					There are three Audio methods that will allow you to generate and play notes.
+				</p>
+				<div class="well"><code>ArrayList&lt;Double&gt; <i>samples</i> = Audio.getNoteSamples(<i>frequency</i>, <i>length</i>)</code></div>
+				<div class="well"><code>Audio.play(<i>arrayListOfDoubles</i>)</code></div>
+				
+				<p><b>getNoteSamples</b> is a method that takes in two numbers, a frequency and a length in samples (there are 44,100 samples per second in CD quality sound). The frequency defines the note being played. For example a C note has frequency 130.81 Hz and a G note has frequency 196.00 Hz. You should use the contants defined. This method returns an ArrayList of Doubles, which represents the samples of the wave that makes the sound. </p>
+
+				<p>Let's take the wave below as an example. It has a frequency of 130.81 Hz which is a C note. The method will sample the wave, and return the doubles collected from the sample, in the range (-1, 1):</p>
+
+				<p>
+					<center>
+					<img style="width:450px" src="{{pathToRoot}}img/projects/music/sound2.png">
+					<br><i style="text-align:center">Image courtesy of Keith</i>
+				</center>
+				<p></p>
+
+				<p><b>play</b> is a method that takes in a list of samples (which must be of type ArrayList&lt;Double&gt;) and plays it to the user.</p>
+
+        <p><b>getNotes</b> is a method that takes in the name of a song, and returns an ArrayList&lt;String&gt; with all the notes in the song. The letters in the ArrayList can be lower or upper case notes (a-g and p for pause). Here is an example ArrayList: {a, a, G, f, p, B}.</p>
+				
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>1) Play a Note</h2>
+				<p>To get started try to generate a single C note of length <i>NOTE_LENGTH</i> and play it back to the user. Then try to play some different notes. Try to play the notes E, C, C. Finally, play a note an octave up and make sure you can tell the difference. </p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>2) Make a Musical Program</h2>
+				<p>This project is open ended. At this point you can program what ever you would like. Would you like to create a graphical piano? How about generating more complex sounds? See the extensions and try and implement as many as you would like.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Tips and Tricks</h2>
+				<p><b>Playing up an Octave<br/></b>To play an octave up all you have to do is double the frequency. For example, if the original C is 130.81, then the higher C one octave up is 2 * 130.81 = 261.62
+				</p>
+
+				<p>
+					<b>Use Methods<br/></b>
+					You might find it easier to write a method to play each note:
+					<div class="well"><code>private void playG() {<br/>
+		&nbsp;&nbsp;&nbsp;ArrayList&lt;Double&gt; example = Audio.getNoteSamples(G, NOTE_LENGTH); <br/>
+		&nbsp;&nbsp;&nbsp;Audio.play(example);<br/>
+	}</code></div>
+				</p>
+
+				<b>Compare Strings<br/></b>
+        		<p>To compare strings, don't use the == operator. Instead you should use:</p>
+				<div class="well"><code><i>s1</i>.equals(<i>s2</i>)</code></div>
+				<p>That's all! Welcome to the world of ArrayLists and computer music. If you finish early try an extension.</p>
+        
+        
+
+			</div>
+		</div>
+
+		<hr>
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Extension 1: Write your Own Music</h2>
+				<p>
+					Try and compose a melody from different notes. 
+					Add higher level phrases to the songs. Use loops and methods to make complex sounds. 
+       			 </p>
+				
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Extension 2: Chords</h2>
+				<p>
+					Two play two (or more) notes simultaneously you simply add up each value in the sample. Then, to make the volume normal, divide the resulting sample by its maximum value.
+				</p>
+
+				<p>You can make richer sounds, that are closer to the ones used by Tycho and Pretty Lights (in the examples at the beggining).</p>
+				
+				
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Extension 3: Graphical Interface</h2>
+				<p>
+					Make a graphical interface using a grid of GRects where each row represents a note (C, D, G, E, A) and each column represents a point in time. If a GRect is turned on (is colored blue) you should play that note at that time.
+				</p>
+
+				<p>Ask us about buttons</p>
+
+				<p>
+					</p><center>
+					<img style="width:100%" src="{{pathToRoot}}img/projects/music/gcomposer.png">
+				</center>
+				<p></p>
+
+
+				
+			</div>
+		</div>
+
+		<!--<div class="row">
+			<div class="col-md-12">
+				<h2>Audio</h2>
+				<p>
+					There are two Audio methods that will allow you to generate and play notes.
+				</p>
+				<div class="well"><code>ArrayList&lt;Double&gt; <i>samples</i> = Audio.getNoteSamples(<i>frequency</i>, <i>length</i>)</code></div>
+				<div class="well"><code>Audio.play(<i>arrayListOfDoubles</i>)</code></div>
+				<p><b>getNoteSamples</b> is a method that takes in two numbers, a frequency and a length in samples (there are 44,100 samples per second in CD quality sound). The frequency defines the note being played. For example a C note has frequency 130.81 Hz and a G note has frequency 196.00 Hz. You should use the contants defined. The method returns an ArrayList of Doubles, which represents the samples of the wave that makes the sound. </p>
+
+				<p>Say the wave below has a frequency of 130.81 Hz (and is thus a C note). The method will sample the wave, and return the doubles collected from the sample, in the range (-1, 1):</p>
+
+				<p>
+					<center>
+					<img style="width:450px" src="{{pathToRoot}}img/projects/music/sound2.png">
+					<br/><i style="text-align:center">Image courtesy of Keith</i>
+				</center>
+				</p>
+
+				<p><b>play</b> is a method that takes in a list of samples (which must be of type ArrayList&lt;Double&gt;) and plays it to the users.</p>
+				
+				<p>To get started try and generate a single C note of length <i>NOTE_LENGTH</i> and play it back to the user.</p>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>User Composition</h2>
+				<p>
+					Write code that continually collects notes from the user (until they type "play") and puts them together into a single song. If the user enters one of the notes in the pentatonic scale (C, D, G, E or A) add the samples for that note to the song. If the user enters "pause", add <i>NOTE_LENGTH</i> number of samples with value 0. 
+				</p>
+
+				<p>To compare strings, don't use the == operator. Instead you should use:</p>
+				<div class="well"><code><i>s1</i>.equals(<i>s2</i>)</code></div>
+				<p>That's all! Welcome to the world of ArrayLists and computer music. If you finish early try an extension.</p>
+			</div>
+		</div>
+
+		<hr>
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Extension 1: Chords</h2>
+				<p>
+					If you want to play two notes at the same time the solution is simple, you just add the waves together (in other words you add each value in the list of doubles together).
+				</p>
+
+				<p>
+					<center>
+					<img style="width:450px" src="{{pathToRoot}}img/projects/music/sumofwaves.png">
+				</center>
+				</p>
+
+				<p>
+					When you add two waves together, some points may become larger than 1 or smaller than -1 (the bounds for a sound wave). After you add your samples together you should normalize the wave. In plainer words, find the maximum value in your ArrayList and divide all values by the max.
+				</p>
+
+				<p>Add "c-chord" to the list of commands the user can enter. C chords are made up of the notes C, E and G played at the same time.</p>
+
+				
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Extension 2: Algorithmic Song</h2>
+				<p>
+					Add higher level phrases that the user can enter. Use loops and methods to make complex sounds. For example, maybe you want to let the user enter the text "chorus" and then you can algorithmically create a series of notes that make up the chorus of a song.
+				</p>
+
+				<p>You can make richer sounds, that are closer to the ones used by Tycho and Pretty Lights (in the examples at the beggining).</p>
+
+				<p>Please share any songs you create with us.</p>
+				
+				
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Extension 3: Graphical Interface</h2>
+				<p>
+					Make a graphical interface using a grid of GRects where each row represents a note (C, D, G, E, A) and each column represents a point in time. If a GRect is turned on (is colored blue) you should play that note at that time.
+				</p>
+
+				<p>Ask us about buttons</p>
+
+				<p>
+					<center>
+					<img style="width:100%" src="{{pathToRoot}}img/projects/music/gcomposer.png">
+				</center>
+				</p>
+
+
+				
+			</div>
+		</div>-->
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

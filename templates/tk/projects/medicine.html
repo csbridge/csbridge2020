@@ -1,0 +1,143 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTk.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Sahte İlaç
+			</h1>
+			<p>
+				Problemi yazan: Chris Piech
+			</p>
+			<p>
+				Çalışan Örnekler: 
+				<a href="{{pathToRoot}}tk/projects/emc2.html">E=MC2</a>,
+				<a href="{{pathToRoot}}tk/projects/fibb.html">Fibonacci</a>,
+				<a href="{{pathToRoot}}tk/projects/carbonDating.html">Karbon Tarihi</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2 style="margin-top:0px;">Hikaye</h2>
+				<p>
+					Problem hüzünlü bir hikaye ile başlıyor. Kenya'da büyüdüğüm zamanlar, eczanelerde satılan ilaçların %38'inden fazlasının sahte olduğu tahmin ediliyordu [1]. Bu büyük bir problemdi! Sorduğunuz organizasyona bağlı olarak, sahte tıptan kaynaklanan ölümlerin sayısı yılda 100.000'den (WHO) 700.000'e kadar (IPN) uzanmaktadır [2]. <blockquote>Sahte ilaçlardan kaynaklanan ölümler "dört tamamen yüklenmiş jumbo jetin her gün çarpışmasından kaynaklanan ölümlere" denktir" [2]</blockquote> <!--Wow. Why would anyone do such a terrible thing? Because counterfeit medicine is a $200 billion-per-year business.--></p>
+
+					<p>
+					2009'da Bright Simons adında Ganalı bir araştırmacı mPedigree olarak isimlendirdiği basit bir teknolojik çözümle ortaya çıktı. İlaç yapan firmalarla birlikte çalıştı. Her bir meşru ilaç paketine eşsiz bir çizgi kodu mühürlediler. Günümüzde Kenya'da bir eczaneden ilaç satın aldığınızda çizgi kodu kontrol ediyorsunuz ve mPedigree'ye SMS mesajı atıyorsunuz. Eğer kod sistemlerinde varsa, ve daha önceden hiç kullanılmadıysa, mPedigree geriye "geçerli" olduğunu söyleyen bir mesaj atıyor.
+				
+					Sadece sıtmadan kaynaklanan çocuk ölümleri %58 düştü [3]. Bazen basit programlama çözümleri bile dünya üzerinde büyük ve olumlu bir etkiye yol açabiliyor. 
+
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Göreviniz</h2>
+				<p>1.000 ilaç paketi için 10 basamaklı sayılar üreten bir program yazın. Ürettiğiniz her sayı (1) eşsiz ve (2) tahmin edilemez olmalı. 
+				</p>
+
+				<p>
+					Örnek bir yürütmenin ekran görüntüsünü burada bulabilirsiniz:
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/medicine/medicineRun.png">	
+						<p style="text-align:center"><!--<i>Unique, unpredictable numbers for medicines.</i>--></p>
+					</center>
+				</p>
+
+				<p>Bu sayılar ilaç paketlerine koyulacak. Sahte ilaç üreticilerinin hiç şansı yok!</p>
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Rastgele Sayılar</h2>
+				<p>Rastgele sayılar üretmek için,  şu şekilde bir RandomGenerator örnek değişkeni (tüm metotların dışında tanımlanmış) yaratın:
+					<div class="well"><code>private RandomGenerator rgen = new RandomGenerator();</code></div>
+				</p>
+				<p>Sonrasında rastgele sayılar üretmek için bu değişkeni kullanabilirsiniz.
+					<div class="well"><code>
+						rgen.nextInt(<i>min</i>, <i>max</i>)  //(min, max) kapalı aralığında rastgele bir int üretir
+					</code></div>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>Hepsi bu! Anlamadığınız bir şey olursa (veya sahte ilaçlar üzerine daha çok şey öğrenmek istiyorsanız) soru sorabilirsiniz.</p>
+			</div>
+		</div>
+		<!--<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:580px">/**
+ * Carbon Dating
+ * -------------
+ * This program shows how to translate between percent of natural carbon-14 found
+ * in a sample. First, it prints out a carbon-14 (c14) lookup table, then it has users
+ * enter a percent of c14 and returns the expected age. 
+ */
+public class CarbonDating extends ConsoleProgram {
+	
+	private static final int HALF_LIFE = 5700;
+	
+	public void run() {
+		// 1. Show the c-14 lookup table
+		double percent = 100.0;
+		int elapsed = 0;
+		println("Carbon dating lookup table");
+		println("fraction C-14 remaining:  years passed");
+		println("--------------------------");
+		for(int i = 0; i &lt; 10; i++) {
+			println(percent + "%:  " + elapsed + " years");
+			elapsed += HALF_LIFE;
+			percent /= 2;
+		}
+		println("");
+		
+		// 2. Look up the age of a sample
+		while(true) {
+			double percentLeft = readDouble("What percent of natural carbon-14 does your sample have? ");
+			double years = HALF_LIFE * Math.log(percentLeft / 100.0) / Math.log(0.5);
+			println(percentLeft + "% carbon-14 left...");
+			println("The sample is " + years + " years old");
+			println("");
+		}
+	}
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	</div>
+	</div>-->
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

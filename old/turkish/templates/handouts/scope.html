@@ -1,0 +1,153 @@
+<!--Translated-->
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Değişkenlerin Kapsamı
+			</h1>
+			<p>
+				Yazanlar Chris Piech ve Mehran Sahami
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Local Variable'lar (Yerel Değişkenler)</h3>
+				<p>
+					Local variable'lar içinde yazıldıkları metod (veya bloklar, fazlası için aşağıdaki "Blok Kapsamı" bölümüne bakın) için yaratılır. Metodun yürütmesi bittiğinde de yok edilirler. Local variable'lar sadece içinde yazıldıkları metodda kullanılabilirler. Bu geçici özelliklerinden ötürü local variable'lar birden fazla metodda kullanılması gereken kalıcı bilgileri saklamak için kullanılmazlar.
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Local Variable Örnekleri</h3>
+				<p>
+					Mesela aşağıdaki kod parçasına bakın.
+				</p>
+				<pre id="editor" style="height:200px">public class AnExample extends ConsoleProgram {
+
+	public void methodOne {
+		int a = readInt("Enter a: ");
+		println("a = " + a);
+ 	}
+
+	public void methodTwo {
+		int b = a;  // BUG!: methodOne'da yazılmış local variable a methodTwo'da kullanılamaz.
+		println("b = " + b);
+	}
+}</pre>
+				<p>
+					a ve b variable'ları, AnExample class'ı içerisindeki farklı metodların içinde yazılmış local variable'lar. Bu variable'lar local variable'lar oldukları için a sadece methodOne'da, b ise sadece methodTwo'da erişilebilir. b variable'ını a'nın değerini kullanarak yaratmamız çalışmıyor çünkü methodTwo'da yazılan bu kod methodOne ya da başka herhangi bir method'daki local variable'ları kullanamaz.
+				</p>
+				<p>
+				Local variable'ların değerleri içinde oldukları metodun yürütmesi bittikten sonra saklanmadığı için, methodOne'ın yürütmesi bittikten sonra a variable'ı yok olacak. methodOne tekrar yürütüldüğünde ise sıfırdan yeni bir a variable'ı yaratılacak.
+			</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Blok Kapsamı</h3>
+				<p>
+					Genelde local variable'ları belli bir metoda ait olarak düşünürüz, ancak aslında Java'da local variable'lar belli bir kod bloğuna aittir. Metodlar sadece bir çeşit kod bloğudur. Java'da kodun etrafına konan süslü parantezler ("{" ve "}") bir kod bloğu belirler. Mesela bir metodun başına ve sonuna konan süslü parantezler onu bir kod bloğu yapar. Ama aynısı for ve while döngüleri ve if kalıpları da kod bloklarıdır (etraflarında süslü parantez olduğu için). Java'da etrafında süslü parantez olan tüm kod grupları bir kod bloğudur.
+					Ne zaman bir süslü parantez çiftinin içinde bir variable yaratsak, o variable o kod bloğuna ait bir local variable olur ve ancak o blok içerisinde kullanılabilir. Ne zaman o kod bloğunun yürütmesi biterse o zaman da yok edilir.</p>
+				<p>Aşağıdaki örneğe bakın:</p>
+				<pre id="editor2" style="height:400px">public class AnExample extends ConsoleProgram {
+	
+	public void methodThree {
+		int a = 4;
+
+ 	 	for (int i = 0; i &lt; 5; i++) {
+			int b = a; // burada sorun yok
+
+			if (a > b) { // a ve b burada da kullanılabilir
+				int c = 3;
+
+				println(i); // i burada da kullanılabilir
+				println(b); // b burada da kullanılabilir
+				println(c); // c burada da kullanılabilir
+			}
+
+			println(c); // bozuk! : c artık burada kapsam içinde değil
+		}
+
+		println(a); // a burada kullanılabilir
+		println(b); // bozuk! : b sadece for döngüsünün içinde kullanılabilir
+		println(i); // bozuk! : i sadece for döngüsünün içinde kullanılabilir
+	}
+}</pre>
+				<p>
+					a variable'ı methodThree'ye ait bir local variable, dolayısıyla hem for döngüsünün hem de println'nin içinde kullanılabilir. i ve b variable'ları ise sadece içinde yazıldıkları for loop'un içerisinde kapsam içindeler. Sondaki iki println yürütüldüğü zaman artık erişilebilir değiller. c variable'ı ise sadece içinde yazıldığı if kalıbının içinde kullanılabilir. Unutmayın ki for döngüsünün her bir döngüsünde if kalıbı baştan yürütüldüğü için c variable'ı da baştan yaratılıyor, dolayısıyla c variable'ı for'un farklı döngüleri arasında veri saklamaya uygun değil.
+				</p>
+			</div>
+		</div>
+		<!--<div class="row">
+			<div class="col-md-12">
+				<h3>Instance Variables</h3>
+				<p>More coming...</p>
+			</div>
+		</div>-->
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Constant'lar (Sabitler)</h3>
+				<p>
+					Kimi zaman program çalıştığı süre boyunca değeri hiç değişmeyecek olan bir variable yaratmak isteyebiliriz. Böyle variable'lara "constant" denir. Constant'lar normalde variable'ların kullanıldığı durumlarda kullanılmaz (mesela geçici bir değeri saklamak). Bir variable'ı constant olarak yaratmak için variable'ı ilk yazarken başına "final" kelimesini ekleyin. Constant'lar tüm metodların dışında yazılır, dolayısıyla kapsamları bütün programdır.
+				</p>
+				<p> Constant'lar genellikle büyük harflerle yazılır. Bunun amacı onların constant olduğunu ve hiç değişmeyeceklerini belirtmektir. "private static final" kelimelerini ise iyi bir kodlama alışkanlığı olarak ekleriz. Bu kelimeler özellikle daha büyük programlar yazdığınızda önemli olacaktır.
+				<p>
+					Aşağıdaki örneğe bakın:
+				</p>
+				<pre id="editor3" style="height:180px">public class AnExample extends ConsoleProgram {
+	
+	private static final YERCEKIMI_IVMESI = 9.8;
+
+	public void run() {
+		double baslangicHizi = 0;
+		double yeniHiz = baslangicHizi + YERCEKIMI_IVMESI;
+		println("1 s sonraki hız: " + yeniHiz);
+	}
+}</pre>
+			</div>
+		</div>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+
+   var editor2 = ace.edit("editor2");
+   editor2.setTheme('ace/theme/eclipse');
+   editor2.getSession().setMode("ace/mode/java");
+   editor2.setReadOnly(true);
+   editor2.renderer.setShowGutter(false);
+
+   var editor3 = ace.edit("editor3");
+   editor3.setTheme('ace/theme/eclipse');
+   editor3.getSession().setMode("ace/mode/java");
+   editor3.setReadOnly(true);
+   editor3.renderer.setShowGutter(false);
+</script>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

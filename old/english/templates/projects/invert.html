@@ -1,0 +1,130 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Invert (with solution)
+			</h1>
+			<p>
+				Problem written by Eric Roberts
+			</p>
+
+			<p>
+			Handouts: 
+				<a href ="{{pathToRoot}}handouts/karel.html">KarelReference</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					For a world of any size, with any configuration of beepers (no square will have more than one), invert all the beepers so that, where there was a beeper previously there is no beeper... and where there was no beeper previously, there is a beeper. Consider the following example.
+				</p>
+
+				<p>
+					<center>
+						<img style="width:600px" src="{{pathToRoot}}img/projects/invert/invert.png">	
+					</center>
+				</p>
+				
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:1010px">/**
+ * Program: Invert
+ * ---------------
+ * Invert all the beepers so that, where there was a beeper previously 
+ * there is no beeper... and where there was no beeper previously, there is a 
+ * beeper.
+ */
+public class InvertBeepers extends SuperKarel {
+	
+	public void run() {
+		invertRow();
+		returnToWest();
+		while(leftIsClear()) {
+			turnLeft();
+			move();
+			turnRight();
+			invertRow();
+			returnToWest();
+		}
+	}
+
+	/**
+	 * Method: Invert Row
+	 * ------------------
+	 * Invert a single row. At the start, Karel should be facing east from 
+	 * the west side of the row. After Karel should be facing east from the
+	 * east side of the same row, and all beepers in the row will be inverted.
+	 */
+	private void invertRow() {
+		while(frontIsClear()) {
+			invertBeeper();
+			move();
+		}
+		invertBeeper();
+	}
+
+	/**
+	 * Method: Invert Beeper
+	 * --------------------
+	 * Inverts the beeper configuration on a square. If there was previously
+	 * a beeper, it is picked up. If there was previously no beeper, a beeper
+	 * is placed.
+	 */
+	private void invertBeeper() {
+		if(beepersPresent()) {
+			pickBeeper();
+		} else {
+			putBeeper();
+		}
+	}
+
+	/**
+	 * Method: Return To West
+	 * ----------------------
+	 * Turn around and go back to the wall that you came from!
+	private void returnToWest() {
+		turnAround();
+		while(frontIsClear()) {
+			move();
+		}
+		turnAround();
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

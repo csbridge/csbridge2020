@@ -1,0 +1,82 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Place 100 (with solution)
+			</h1>
+			<p>
+				Problem written by Chris
+			</p>
+			<p>
+				Handouts: 
+				<a href ="{{pathToRoot}}handouts/karel.html">KarelReference</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Your goal is to have Karel create a pile of 100 beepers on square infront of where she starts. Please!!! Do not type out putBeeper 100 times in a row! (hint: use a for loop.) 
+				</p>
+
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/place100/place100.png">	
+					</center>
+				</p>
+				
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:280px">/**
+ * Program: Place100
+ * -------------
+ * This program makes karel place a pile of 100 beepers. Good times.
+ */
+public class Place100 extends SuperKarel {
+	
+	public void run() {
+		move();
+		// This for-loop will repeat the code inside 100 times.
+		for(int i = 0; i &lt; 100; i++) {
+			putBeeper();
+		}
+		move();
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

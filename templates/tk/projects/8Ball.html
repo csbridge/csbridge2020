@@ -1,0 +1,130 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTk.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				8 Top (ve çözümü)
+			</h1>
+			<p>
+				Problemi yazan: Chris Piech.
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					8 Top'un arkasındaki fikir çok basit. Topa bir evet hayır sorusu soruyorsunuz, ve o da size cevabı söylüyor.
+				</p>
+
+				<p> Cevabın önceden hazırlanmış cevaplardan rastgele seçiliyor olması haricinde doğru cevabı söylüyor.</p>
+				<p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/8Ball/real.gif">	
+						<p style="text-align:center"><i>Gerçek hayattaki bir 8 Top</i></p>
+					</center>
+				</p>
+
+				<p>Sürekli olarak kullanıcıdan bir evet hayır sorusu bekleyen ve sonrasında da önceden hazırlanmış 5 cevaptan birini rastgele olarak seçen bir progra yazın:</p>
+				<ul>
+					<li>Şüphesiz.</li>
+					<li>Evet.</li>
+					<li>Sonra tekrar sorun.</li>
+					<li>Hayır.</li>
+					<li>Karel öyle düşünüyor.</li>
+				</ul>
+				<p>Programın örnek bir çıktısını burada görebilirsiniz.</p>
+
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/8Ball/sampleRun.png">	
+						
+					</center>
+				</p>
+				
+				<p>Rastgele sayılar üretmek için,  şu şekilde bir RandomGenerator örnek değişkeni (tüm metotların dışında tanımlanmış) yaratın :
+					<div class="well"><code>private RandomGenerator rgen = new RandomGenerator();</code></div>
+				</p>
+				<p>Sonrasında rastgele sayılar üretmek için bu değişkeni kullanabilirsiniz.
+					<div class="well"><code>
+						rgen.nextInt(<i>max</i>)  //[0, max) aralığında rastgele bir int üretir
+					</code></div>
+				</p>
+</p>
+				
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Çözüm</h2>
+
+
+<pre id="editor" style="height:580px">/**
+ * Class: Eight Ball
+ * -----------------
+ * Simulates an eight ball and gives sage answers to yes or
+ * no questions.
+ */
+public class EightBall extends ConsoleProgram {
+	
+	private static RandomGenerator rg = new RandomGenerator();
+	
+	public void run() {
+		while(true) {
+			readLine("Ask a yes or no question: ");
+			
+			int choice = rg.nextInt(5);
+			println(choice);
+			if(choice == 0) {
+				println("Without a doubt");
+			}
+			if(choice == 1) {
+				println("Yes");
+			}
+			if(choice == 2) {
+				println("Ask again later.");
+			}
+			if(choice == 3) {
+				println("No");
+			}
+			if(choice == 4) {
+				println("Karel thinks so.");
+			}
+			println("");
+		}
+	}
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	</div>
+	</div>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

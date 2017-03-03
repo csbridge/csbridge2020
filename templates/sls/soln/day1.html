@@ -1,0 +1,207 @@
+<head>
+
+   %include templates/parts/head.html
+
+
+</head>
+<body>
+
+
+   <!-- Main Content -->
+   <div class="container">
+
+      <!-- Header -->
+      <div id="pageHeader">
+         <h1>
+            Day 1 Solutions
+         </h1>
+            
+
+      </div>
+      <hr/>
+      <div class="row">
+         <div class="col-md-12">
+            <h2>Collect Newspaper</h2>
+
+            <p>Strongly encourage students to define useful methods</p>
+
+<pre class="well" style="background:white">public CollectNewspaperKarel extends Karel {
+   public void run() {
+      moveToNewspaper();
+      pickUpNewspaper();
+      returnToHouse();
+   }
+
+   private void moveToNewspaper() {
+      move();
+      move();
+      turnRight();
+      move();
+      turnLeft();
+      move();
+   }
+
+   private void pickUpNewspaper() {
+      pickBeeper();
+   }
+
+   private void returnToHouse() {
+      turnAround();
+      move();
+      move();
+      move();
+      turnRight();
+      move();
+      turnRight();
+   }
+
+   private void turnAround() {
+      turnLeft();
+      turnLeft();
+   }
+
+   private void turnRight() {
+      turnLeft();
+      turnLeft();
+      turnLeft();
+   }
+}</pre>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-md-12">
+            <h2>Build Effes</h2>
+
+            <p>Make sure students use for loops</p>
+
+<pre class="well" style="background:white">public class BuildEfes extends SuperKarel {
+   
+   public void run() {
+      for(int i = 0; i < 3; i++) {
+         buildColumn();
+         moveToNextColumn();
+      }
+      buildColumn();
+   }
+   
+   private void buildColumn() {
+      turnLeft();
+      for (int i = 0; i < 4; i++) {
+         putBeeper();
+         move();
+      }
+      putBeeper();
+      
+      // Karel Descends the Column
+      turnAround();
+      for (int i = 0; i < 4; i++) {
+         move();
+      }
+      turnLeft();
+   }
+   
+   private void moveToNextColumn() {
+      for (int i = 0; i < 4; i++) {
+         move();
+      }
+   }
+}</pre>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-md-12">
+            <h2>Mountain Karel</h2>
+
+            <p>Make sure students use for loops</p>
+
+<pre class="well" style="background:white">public class MountainKarel extends SuperKarel {
+   public void run() {
+      while (frontIsBlocked()) {
+         stepUp();
+      }
+      putBeeper();
+      move();
+      while (rightIsClear()) {
+         dropDown();
+      }
+   }
+
+   private void dropDown() {
+      turnRight();
+      move();
+      turnLeft();
+      if (frontIsClear()) {
+         move();
+      }
+   }
+
+   private void stepUp() {
+      turnLeft();
+      move();
+      turnRight();
+      move();
+   }
+
+   private void stepDown() {
+      move();
+      turnRight();
+      move();
+      turnLeft();
+   }
+}</pre>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-md-12">
+            <h2>Random Painter</h2>
+
+            <p>Make sure students use for loops</p>
+
+<pre class="well" style="background:white">public class RandomPainter extends SuperKarel {
+   
+   public void run() {
+      paintRow();
+      returnToWest();
+      while(leftIsClear()) {
+         turnLeft();
+         move();
+         turnRight();
+         paintRow();
+         returnToWest();
+      }
+   }
+
+   private void paintRow() {
+      while(frontIsClear()) {
+         paintSquare();
+         move();
+      }
+      paintSquare();
+   }
+
+   private void paintSquare() {
+      if(random()) {
+         paintCorner(GREEN);
+      } else {
+         paintCorner(BLUE);
+      }
+   }
+
+   private void returnToWest() {
+      turnAround();
+      while(frontIsClear()) {
+         move();
+      }
+      turnAround();
+   }
+}</pre>
+         </div>
+      </div>
+      
+      %include templates/parts/footer.html
+
+   </div>
+</body>

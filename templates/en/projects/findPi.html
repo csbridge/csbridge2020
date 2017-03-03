@@ -1,0 +1,113 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Find Pi
+			</h1>
+			<p>
+				Problem written by Eric Roberts.
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Pi (&pi;) is a mathematical thing of true beauty. It comes up in many equations, most notably in the equation for the area of a circle, the p.d.f. of a normal distribution and finally, and oh so wonderously, in <a href="http://en.wikipedia.org/wiki/Euler's_identity">Euler's Identity</a>.
+				</p>
+
+				<p>But how do we know that the value of &pi; is 3.14159265359...? There are several ways to calculate pi. In this problem we show how to do it using darts.</p>
+
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/findPi/lifeOfPi.jpg">	
+						<p style="text-align:center"><i>This boy's name is also Pi. This problem is unrelated (other than name) to him.</i></p>
+					</center>
+				</p>
+
+				<p>Imagine throwing darts at the yellow circle bellow to the left. If you randomly throw a series of darts at the dartboard, some will land inside the yellow circle and some in the gray area outside it. If you count both the number of darts that fall inside the circle and the number that fall anywhere inside the square, the ratio of those numbers should be proportional to the relative area of the two figures.
+ 
+</p>
+
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/findPi/darts.png">	
+						
+					</center>
+				</p>
+				
+
+				<p>Because the area of the circle is &pi; and that of the square is 4, the fraction that falls inside the circle should approach &pi; / 4.
+</p>
+				
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:580px">/**
+ * Find Pi
+ * -------------
+ * Find the value of pi by throwing random darts at a unit circle inscribed in
+ * a square. The fraction that land in the circle should equal pi / 4.
+ */
+public class FindPi extends ConsoleProgram {
+	
+	private RandomGenerator rd = new RandomGenerator();
+	
+	public void run() {
+		int numInCircle = 0;
+		int numDarts = 50000000;
+		for(int i = 0; i &lt; numDarts; i++) {
+			// get a random x, y in a 2x2
+			double x = rd.nextDouble(-1, 1);
+			double y = rd.nextDouble(-1, 1);
+			// test if the dart landed in the circle
+			double dist = Math.sqrt(x * x + y * y);
+			if(dist &lt;= 1) {
+				numInCircle++;
+			}
+		}
+		// if we don't cast to double, this will always be 0.
+		double fraction = (double)numInCircle / numDarts;
+		double pi = fraction * 4;
+		print(pi);
+	}
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	</div>
+	</div>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

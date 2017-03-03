@@ -1,0 +1,63 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Snow
+			</h1>
+			<p>
+				Written by Chris Piech
+			</p>
+			<p>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/arrayLists.html">ArrayLists</a>
+				<br/>
+				Examples:
+				<a href ="{{pathToRoot}}en/projects/rocketShip.html">Rockets</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Animate GOvals (snow) falling down from the sky and pilling up on the ground.</p>
+				<p>
+					<center>
+						<img style="width:100%" src="{{pathToRoot}}img/projects/snow/snow.png">	
+					</center>
+				</p>
+
+				<p>
+					Use an animation loop. Each time through the loop:
+					<ol>
+						<li>Animate all snow flakes not on the ground</li>
+						<li>Generate a new snow flake at the top of the screen with 10% probability</li>
+						<li>Pause for 10 milliseconds </p>
+					</ol>
+				</p>
+			</div>
+		</div>
+
+		
+
+		
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

@@ -1,0 +1,151 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Variable Scope
+			</h1>
+			<p>
+				Written by Chris Piech and Mehran Sahami
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Local Variables</h3>
+				<p>
+					Local variables are created local to the method (or the block...see "Block Scope" section below) in which they are defined. They are destroyed when execution of the method has been completed. Local variables can only be accessed from within the method in which they are declared.  Because of their transient nature, local variables cannot store persistent information about an object between method calls.
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Local Variables Example</h3>
+				<p>
+					Consider, for example, the following snippet of code.
+				</p>
+				<pre id="editor" style="height:200px">public class AnExample extends ConsoleProgram {
+
+	public void methodOne {
+		int a = readInt("Enter a: ");
+		println("a = " + a);
+ 	}
+
+	public void methodTwo {
+		int b = a;  // BUG!: cannot refer to variable a in methodOne
+		println("b = " + b);
+	}
+}</pre>
+				<p>
+					The variables a and b are local variables declared within different methods in the class AnExample. Because these variables are local variables, a can only be referred to within methodOne and variable b can only be accessed within methodTwo. Our attempt to initialize b using the value of a is illegal, as code in methodTwo cannot access local variables from methodOne or any other method.
+				</p>
+				<p>
+				Because local variable values do not persist after their containing method has completed, the variable a will be destroyed when methodOne has completed execution. The next time methodOne is called, a new variable a will be created.
+			</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Block Scope</h3>
+				<p>
+					While we typically think of local variables as local to a particular method, in Java local variables are actually local to a block of code. While a method defines a block of code (since the opening and closing braces of the method define a block), for and while loops, if-statements, and other constructs are also considered blocks of code. If we declare a local variable inside one of these constructs, the local variable will be created when it is declared in the block and destroyed when the block ends execution.</p>
+				<p>Consider the following example:</p>
+				<pre id="editor2" style="height:400px">public class AnExample extends ConsoleProgram {
+	
+	public void methodThree {
+		int a = 4;
+
+ 	 	for (int i = 0; i &lt; 5; i++) {
+			int b = a; // this is okay
+
+			if (a > b) { // okay to access a and b here
+				int c = 3;
+
+				println(i); // okay to access i here
+				println(b); // okay to access b here
+				println(c); // okay to access c here
+			}
+
+			println(c); // illegal: c is no longer in scope here
+		}
+
+		println(a); // okay to access a here
+		println(b); // illegal: b is only in scope in body of for loop
+		println(i); // illegal: i is only in scope in body of for loop
+	}
+}</pre>
+				<p>
+					The variable a is local to methodThree, so accessing a within the for loop, or in the println is fine.  The variables i and b are only in scope (i.e., "alive") within the confines of the for loop in which they are declared.  They are no longer available by the time the last two printlns try to access them.  The variable c is only in scope within the confines of the if statement body in which it is declared.  Note that a new copy of c will get created each time the if statement body is executed, therefore it cannot be used to store values across iterations of the for loop.
+				</p>
+			</div>
+		</div>
+		<!--<div class="row">
+			<div class="col-md-12">
+				<h3>Instance Variables</h3>
+				<p>More coming...</p>
+			</div>
+		</div>-->
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Constants</h3>
+				<p>
+					we will sometimes find it useful to define a "variable" whose value does not change during the entire program. Such a variable is called a constant. In this case, the constant does not fulfill the traditional purpose of a variable (i.e., storing a temporary program value).  To declare a variable as a constant, use the keyword final when declaring the variable. Virtually all constants are declared outside all method calls so that their scope is the entire program. 
+				</p>
+				<p> Constants are usually written in all upper case letters to show that they do not change. The key-words private static final, which we include for good practice, are important when you write larger programs.
+				<p>
+					Consider this example:
+				</p>
+				<pre id="editor3" style="height:180px">public class AnExample extends ConsoleProgram {
+	
+	private static final GRAVITY_ACCELERATION = 9.8;
+
+	public void run() {
+		double initialVelocity = 0;
+		double newVelocity = intialVelocity + GRAVITY_ACCELERATION;
+		println("velocity after 1 s: " + newVelocity);
+	}
+}</pre>
+			</div>
+		</div>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+
+   var editor2 = ace.edit("editor2");
+   editor2.setTheme('ace/theme/eclipse');
+   editor2.getSession().setMode("ace/mode/java");
+   editor2.setReadOnly(true);
+   editor2.renderer.setShowGutter(false);
+
+   var editor3 = ace.edit("editor3");
+   editor3.setTheme('ace/theme/eclipse');
+   editor3.getSession().setMode("ace/mode/java");
+   editor3.setReadOnly(true);
+   editor3.renderer.setShowGutter(false);
+</script>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

@@ -1,0 +1,64 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Repair Efes
+			</h1>
+			<p>
+				Based on a handout by Eric Roberts
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Karel has been hired to repair parts of the columns in the Temple of Artemis in Efes that have fallen down. In particular, Karel is to repair a set of arches where some of the stones (represented by beepers, of course) are missing from the columns supporting the arches, as follows:
+				</p>
+				<p>
+					<center>
+						<img class="psetImg" src="{{pathToRoot}}projects/img/efes/efesBroken.png">	
+					</center>
+				</p>
+				<p>
+					As shown above the arches are separated by three avenues and are all five rows high. When Karel is done, the missing columns should be replaced by beepers, so the final picture would look like this:
+				</p>
+				<p>
+					<center>
+						<img class="psetImg" src="{{pathToRoot}}projects/img/efes/efesRepaired.png">	
+					</center>
+				</p>
+				<p>
+					Karel's final location and the final direction he is facing at end of the run do not matter. Karel may count on the following facts about the world, listed below:
+				<ul>
+					<li>Karel starts at 1st Avenue and 1st Street, facing east.
+					<li>The columns are exactly four units apart, on 1st, 5th, 9th and 13th Avenue.
+					<li>Karel can assume that columns are always five units high.
+				</ul>
+				</p>
+				<p>
+					Even though the program is only a few lines, it is still worth getting at least a little practice in decomposition.  In your solution, include a private method for each of the steps shown in the outline.
+				</p>
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

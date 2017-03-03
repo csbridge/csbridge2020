@@ -1,0 +1,241 @@
+<head>
+
+<title>Intro to CS</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+<!-- Java Script -->
+<script src="../plugins/jquery.min.js"></script>
+<script src="../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+
+<script src="../karel/ace/ace.js" type="text/javascript"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+  </script>-->
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Sandcastles
+			</h1>
+			<p>
+				Written by Bryce Cronkite-Ratcliff, Julia Lee, TY Huang and Chris Piech.
+			</p>
+			<p>
+				Handouts:
+				<a href ="../handouts/graphics.html">Graphics Reference</a>,  
+				<a href ="../handouts/arrayLists.html">ArrayList Reference</a>, 
+				<a href ="../handouts/karel.html">Karel Reference</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Sandcastles may be short-lived, but they're fun and beautiful, just like this collection of small problems. Complete these problems individually.
+				</p>
+				<p>
+					<center>
+						<img src="../img/projects/sandcastles/sandcastle.jpg">	
+					</center>
+				</p>
+				<h2>1. Mooning (Moon.java)</h2>
+				<p>
+The user (an earthling) enters his or her weight on earth. Your program will print the user`s weight on the moon, which is 16.5% of his or her weight on earth. 
+				</p>
+					<center>
+						<img style="width: 450px" src="../img/projects/sandcastles/moon.png">	
+					</center>
+				<h2>2. Random Tandem (GenerateRandomNumbers.java)</h2>
+				<p>
+Print 30 randomly generated numbers using a RandomGenerator.
+				</p>
+					<center>
+						<img style="width: 450px" src="../img/projects/sandcastles/generateRandomNumbers.png">	
+					</center>
+				<h2>3. All your GObject (Eraser.java)</h2>
+				<p>
+Add 2 GRects and 2 GOvals to the screen (any size or color). If the user clicks any of the GObjects, it should be removed from the screen. 
+				</p>
+					<center>
+						<img style="width: 450px" src="../img/projects/sandcastles/eraser.png">	
+					</center>
+				<h2>4. Mysteriously Random (RandomNumberGuesser.java)</h2>
+				<p>
+Generate a random integer between 0 and 100. Ask the user to guess the random number. Tell the user if their guess is too high, too low, or correct. Continue asking for guesses until the user guesses the correct number.
+				</p>
+					<center>
+						<img style="width: 450px" src="../img/projects/sandcastles/numberGuess.png">	
+					</center>
+				<h2>5. Squares (Squares.java)</h2>
+				<p>
+Accept integer inputs from the user until a zero is entered. When that happends, print out the squares of all values entered.
+				</p>
+					<center>
+						<img style="width: 450px" src="../img/projects/sandcastles/squares.png">	
+					</center>
+				<h2>6. Name that tune! (BackwardSounds.java)</h2>
+				<p>
+Write a method that accepts an ArrayList of audio samples (Doubles). Create a new ArrayList that is the reverse of the given ArrayList. What song do you hear when you hit run?
+				</p>
+					<center>
+						<img style="width: 450px" src="../img/projects/sandcastles/nameThatTune.png">	
+					</center>
+
+				<h1>
+					Extra (optional)
+				</h1>
+				<p>
+				<p>
+					Try these out for a little extra practice! :)
+				</p>
+				<h2>Paint Diagonal (PaintDiagonal.java)</h2>
+				<p>
+Karel loves stairs! Make a diagonal line of blue corners across the world. You may assume the world is square.
+				</p>
+					<center>
+						<img style="width: 450px" src="../img/projects/sandcastles/karel2.png">	
+					</center>
+				<h2>Five's a Crowd (MultiplesOfFive.java)</h2>
+				<p>
+Print out the number sequence 0, 5, 10, 15, 20, 25... Print 20 numbers in all.
+				</p>
+					<center>
+						<img style="width: 450px" src="../img/projects/sandcastles/multiplesOfFive.png">	
+					</center>
+				
+				<h2>The Best Number is 12 (MyFavoriteNumber.java)</h2>
+				<p>
+Write a method that returns a boolean indicating whether an integer (provided as a parameter) is your favorite number or not (choose your favorite number if you don`t have one already!!). Use this method to write a program that accepts an integer and tells the user if the integer is your favorite number.
+
+				</p>
+					<center>
+						<img style="width: 450px" src="../img/projects/sandcastles/faveNumber1.png">	
+					</center>
+				<h2>That`s Some Sum (ComputeSum.java)</h2>
+				<p>
+Accept input from the user. Keep track of the sum of all the numbers you have seen so far and print that sum to the user.
+				</p>
+					<center>
+						<img style="width: 450px" src="../img/projects/sandcastles/computeSum.png">	
+					</center>
+				<h2>GStairway to Heaven (Staircase.java)</h2>
+				<p>
+Draw a staircase! Use GRects and a double for loop to draw the image below. Do not fill the GRects. Hint: There is a first row with 0 GRects.
+				</p>
+					<center>
+						<img style="width: 450px" src="../img/projects/sandcastles/staircase.png">	
+					</center>
+				<h2>Tax Me Maybe (TaxCalculator.java)</h2>
+				<p>
+Fill in the provided method so that it takes in an income and returns the corresponding amount of tax (in YTL) that is collected (a double). 
+				</p>
+					<center>
+						<img style="width: 450px" src="../img/projects/sandcastles/tax2.png">
+					
+				<p>The percentage you are taxed is based off of your income, as shown in the table below:</p>
+				<style>
+				.tg  {clear:left;border-collapse:collapse;border-spacing:0;}
+				.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+				.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+				</style>
+				<table class="tg">
+				  <tr>
+				    
+				    <th class="tg-031e">The Tax Base (YTL)</th>
+				    <th class="tg-031e">Tax %</th>
+				  </tr>
+				  <tr>
+				   
+				    <td class="tg-031e">0-20.000</td>
+				     <td class="tg-031e">15</td>
+				  </tr>
+				  <tr>
+				   
+				    <td class="tg-031e">20.001 or greater</td>
+				     <td class="tg-031e">20</td>
+				  </tr>
+				</table>
+					</center>
+
+					<h2 style="padding-top:20px;">Thats all! Thanks for playing.</h2>
+
+					<hr>
+
+					<h2>11. [Optional] Black Oval Sun (GrowingGOvals.java)</h2>
+				<p>
+Draw 5 GOvals. Using an ArrayList, make the GOvals grow bigger forever.
+				</p>
+					<center>
+						<img style="width: 350px" src="../img/projects/sandcastles/growingGOvals1.png">	
+						<img style="width: 350px" src="../img/projects/sandcastles/growingGOvals2.png">	
+					</center>
+				
+
+		
+
+
+
+			</div>
+
+		
+		</div>
+
+		</div>
+
+
+		
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+		&#169; Stanford 2014 &#124; Created by 
+		<a href="#">Bryce</a>, 
+		<a href="http://stanford.edu/~cpiech">Chris</a>, 
+		<a href="#">Julia</a> and  
+		<a href="#">Nick</a>.
+		Based on the wonderful CS106A class which was developed by many talented teachers.
+	</p>
+	<!--<p class="pull-right">
+		<a href="../fall12">Fall 2012</a>
+	</p>-->
+</div>
+<!--<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>-->
+
+	</div>
+</body>

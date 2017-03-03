@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html> 
+<head> 
+   <title>Karel IDE</title> 
+   <script src="./js/html/websiteImports.js"></script>
+	<script>importCss();</script>
+	<script>importJs();</script>
+
+</head> 
+
+<body> 
+
+   <script>
+      function init() {
+         
+         $.get('http://www.stanfordkarel.appspot.com/submitRemote?code=helloworld&title=Program&author=ChrisPiech', {} , function(data) {
+            alert(data);
+         });
+      }
+
+      init();
+
+   </script>
+
+</body> 
+</html>

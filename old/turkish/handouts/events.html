@@ -1,0 +1,287 @@
+<!-- Translated -->
+<head>
+
+<title>Bilgisayara Giriş</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+<!-- Java Script -->
+<script src="../plugins/jquery.min.js"></script>
+<script src="../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+
+<script src="../karel/ace/ace.js" type="text/javascript"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+  </script>-->
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+<nav class="navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Navigasyonu aç/kapa</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/">Bilgisayara Giriş</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <!--<li ><a href="#">Link</a></li>-->
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ders Notları <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../handouts/sections.html">Section'lar</a></li>
+	          	<li><a href="../handouts/karel.html">Karel Referansı</a></li>
+	          	
+	          	<li><a href="../handouts/console.html">Konsol Referansı</a></li>
+	          	<li><a href="../handouts/random.html">Rasgele Sayı Üreticisi Referansı</a></li>
+	          	<li><a href="../handouts/graphics.html">Grafik Referansı</a></li>
+	          	<li><a href="../handouts/events.html">Olaylar(Events) Referansı</a></li>
+                <li><a href="../projects/jsJSSyntax.html">JavaScript Referansı</a></li>
+                <li><a href="../handouts/htmlReference.html">HTML Referansı</a></li>
+                <li><a href="../handouts/uploadWebsite.html">Web Sitesi Upload Etme Referansı</a></li>
+
+	          	<li><a href="../handouts/whatsNext.html">Bundan Sonrası</a></li>
+	          	<!--<li><a href="../handouts/forLoops.html">For Döngüsü</a></li>
+	          	<li><a href="../handouts/loopAndAHalf.html">Bir Buçuk Döngü</a></li>
+	          	<li><a href="../handouts/whileLoops.html">While Döngüsü</a></li>
+	          	<li><a href="../handouts/ifStatements.html">If Kalıbı</a></li>
+	          	<li><a href="../handouts/variables.html">Değişkenler</a></li>
+	            <li><a href="../handouts/scope.html">Scope</a></li>
+	            <li><a href="../handouts/operations.html">İşlemler</a></li>
+	            <li><a href="../handouts/graphics.html">Grafik</a></li>
+	            <li><a href="../handouts/passingData.html">Veri Alışverişi</a></li>-->
+	            
+	          </ul>
+	        </li>
+
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projeler <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="../projects/collectNewspaper.html">Gazete Alma</a></li>
+	          	<li><a href="../projects/efes.html">Efes İnşaatı</a></li>
+	          	<li><a href="../projects/mountain.html">Dağcı Karel</a></li>
+	          	<li><a href="../projects/randomPainter.html">Deli Ressam</a></li>
+	          		<li class="divider"></li>
+
+	          	<li><a href="../projects/medicine.html">Sahte İlaç</a></li>
+	          	<li><a href="../projects/gameOfStones.html">Nimm</a></li>
+	          	<li><a href="../projects/awesome.html">Programcılık Bir Harika</a></li>
+	          	<li><a href="../projects/someSum.html">Üç Aşağı Beş Yukarı</a></li>
+	            <li><a href="../projects/randomCircles.html">Tesadüfi Daireler</a></li>
+	            <li><a href="../projects/bouncingBall.html">Zıp zıp top</a></li>
+
+	          	<li><a href="../projects/madMax.html">Mad Max</a></li>
+	          	<li><a href="../projects/target.html">Hedef Tahtası</a></li>
+	          	<li><a href="../projects/sunset.html">Kısa Film</a></li>
+	            <li><a href="../projects/drawPeople.html">Çekirge Bir Sıçrar İki Sıçrar</a></li>
+	            <li><a href="../projects/illusion.html">Optik İllüzyon</a></li>
+	            <li><a href="../projects/madLibs.html">Sana Laflar Hazırladım</a></li>
+	            <li><a href="../projects/secret.html">Çok Gizli</a></li>
+
+	     
+
+                <li class="divider"></li>
+	            
+	            <li><a href="../projects/breakout.html">Breakout</a></li>
+	            
+	            
+	            <li><a href="../projects/music.html">Ses Dalgaları</a></li>
+	        	
+	        	
+	            <li><a href="../projects/project.html">Final Projesi</a></li>
+
+	            
+              
+	            
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Örnekler <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../projects/stepUp.html">Adım adım</a></li>
+	          	<li><a href="../projects/place100.html">100 Koymak</a></li>
+	          	<li><a href="../projects/beeperLine.html">Beeper Hattı</a></li>
+	          	<li><a href="../projects/invert.html">Ters Çevir</a></li>
+	          	<li><a href="../projects/unKarel.html">İnsani Yardım Karel'i</a></li>
+	          	<li class="divider"></li>
+	            <li><a href="../projects/emc2.html">E=MC2</a></li>
+	            <li><a href="../projects/fibb.html">Fibonacci</a></li>
+	           <li><a href="../projects/favoriteNumber.html">Favori Sayı</a></li>
+	           <li><a href="../projects/mysterySquare.html">Gizemli Kare</a></li>
+	            
+	            <li><a href="../projects/robotFace.html">Robot Surat</a></li>
+	            <!--<li><a href="../projects/findPi.html">Pi Bulmaca</a></li>-->
+	            <li><a href="../projects/8Ball.html">8 Top</a></li>
+	            <li><a href="../projects/halfGreen.html">Yeşilimtrak</a></li>
+	            
+	            <li><a href="../projects/stringArt.html">String Sanatı</a></li>
+	             
+	             <li><a href="../projects/stampTool.html">Damga Makinesi</a></li>
+	            <li><a href="../projects/snow.html">Kar</a></li>
+                   <!--<li class="divider"></li>
+	            <li><a href="../projects/breakoutOnline.html">Breakout Online</a></li>-->
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slaytlar <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../slides/01.pptx">Karel</a></li>
+	          	<li><a href="../slides/02.pptx">Basit Java</a></li>
+	          	<li><a href="../slides/03.pptx">Metodlar</a></li>
+	          	<li><a href="../slides/04.pptx">Tekrar</a></li>
+	          	<li><a href="../slides/06.pptx">Array List'ler</a></li>
+	          	<li><a href="../slides/AI.pptx">A.I. (Yapay Zeka)</a></li>
+	          	<li><a href="../slides/TheEnd.pptx">Son</a></li>
+	          	
+	          </ul>
+	        </li>
+
+
+	        <!--<li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">İnternet <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="https://www.dropbox.com/s/1jtjo9hde8in0xn/1-How%20the%20internet%20works.pptx">İnterne Nasıl Çalışır</a></li>
+	          	<li><a href="https://www.dropbox.com/s/1t7pwltugsy4pxg/2-day-in-the-life-of-packet.pptx">Bir Paket'in Sıradan Bir GÜnü</a></li>
+	          	<li><a href="https://www.dropbox.com/s/1n0lzrl32urfsnr/3-How%20packets%20routed.pptx">Paketler Nasıl Yolunu Bulur</a></li>
+	          	<li class="divider"></li>
+	          	<li><a href="http://yuba.stanford.edu/~huangty/dacka/lab1.html">Lab 1</a></li>
+	          	<li><a href="http://yuba.stanford.edu/~huangty/dacka/lab2.html">Lab 2</a></li>
+	          	<li class="divider"></li>
+	          	<li><a href="../internet/echo.zip">Echo Client Kodu</a></li>
+	          	<li><a href="../internet/2person-breakout.zip">Breakout Online Kodu</a></li>
+
+	          	
+	          </ul>
+	        </li>-->
+
+	        <!--<li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Section<b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../projects/stepUp.html">Gazeteci Karel</a></li>
+	          	<li><a href="../projects/place100.html">Sahte İlaçlar</a></li>
+	          	<li><a href="../projects/beeperLine.html">Hedef Tahtası</a></li>
+	          </ul>
+	        </li>-->
+
+
+
+	      </ul>
+
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">Hakkında</a></li>
+	        
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Olaylar (Event) Referansı
+			</h1>
+			<p>
+				Yazanlar Danielle Kain ve Kevin Miller
+			</p>
+		</div>
+		<hr/>
+		Öncelikle ne zaman MouseEvent kullanırsanız aşağıdaki satırı run metodunuza eklemeyi unutmayın:
+		<div class="well"><code>
+addMouseListeners();
+		</code></div>
+		Böylece programa MouseEvent'lere dikkat etmesi gerektiğini söylersiniz. KeyListeners kullanıyorsanız da benzeri şekilde aşağıdaki satırı run metodunuza ekleyin:
+		<div class="well"><code>
+addKeyListeners();
+		</code></div>
+
+		Bu şekilde listener'larınızı kurduktan sonra, sıra onları kodda kullanmaya geliyor. Aşağıda Breakout için işinize yarayabilecek dört olayı listeledik. Tam bir liste isterseniz KeyEvent'ler için <a href="http://docs.oracle.com/javase/7/docs/api/java/awt/event/MouseListener.html">bu linke, </a> MouseEvent'ler içinse <a href="http://docs.oracle.com/javase/7/docs/api/java/awt/event/KeyListener.html">bu linke</a> bakabilirsiniz.<br><br>
+
+		<div class="well"><code><pre>
+public void mouseClicked(MouseEvent e) {
+	//Mouse her tıklandığında bu metod çağrılır.
+}
+
+public void mouseMoved(MouseEvent e) {
+	//Mouse her hareket ettiğinde bu metod çağrılır.
+}
+			
+public void keyPressed(KeyEvent e) {
+	//Mouse'a her basıldığında bu metod çağrılır.
+}
+
+waitForClick(); //Bu satır kullanıcı mouse'a tıklayana kadar programı durdurur.
+		</pre></code></div>
+
+		<p>Aşağıda bazı olay kullanım örneklerini görebilirsiniz:
+		<div class="well"><code><pre>
+public void mouseClicked(MouseEvent e) {
+	System.out.println("x: " + e.getX() + " y: " + e.getY());
+	//Bu metod tıkladığınız noktanın koordinatlarını konsola yazar.
+}
+
+public void KeyPressed(KeyEvent e) {
+	System.out.println("key pressed: " + e.getKey());
+	//Bu metod klavyede bastığınız tuşu konsola yazar.
+}
+		</pre></code></div>
+		
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+		&#169; Stanford 2016 &#124; Yaratanlar 
+		<a href="http://stanford.edu/~cpiech">Chris</a> ve tüm ekip.
+		Bu ders pek çok değerli profesörün yarattığı CS106A dersinden esinlenmiştir. Özellikle <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> ve <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>'ye teşekkür ederiz.
+	</p>
+	<!--<p class="pull-right">
+		<a href="../fall12">Fall 2012</a>
+	</p>-->
+</div>
+<!--<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>-->
+
+	</div>
+</body>

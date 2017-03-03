@@ -1,0 +1,107 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Build Efes
+			</h1>
+			<p>
+				Based on a handout by Eric Roberts
+			</p>
+			<p>
+				Handouts: 
+				<a href ="{{pathToRoot}}en/handouts/karel.html">KarelReference</a>
+				<br/>
+				Worked Example: 
+				<a href="{{pathToRoot}}en/projects/place100.html">Place100</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Karel has been hired to build the columns in the Temple of Artemis in Efes. In particular, there are a set of arches where the stones (represented by beepers, of course) are missing from the columns supporting the arches, as follows:
+				</p>
+				<p>
+					<center>
+						<img style="width:600px" src="{{pathToRoot}}img/projects/efes/efesBroken.png">	
+					</center>
+				</p>
+				<p>
+					When Karel is done, the missing columns should be replaced by beepers, so the final picture would look like this:		
+				</p>
+				<p>
+					<center>
+						<img style="width:600px" src="{{pathToRoot}}img/projects/efes/efesRepaired.png">	
+					</center>
+				</p>
+				<p>
+					Karel may count on the following facts about the world, listed below:
+				<ul>
+					<li>Karel starts at 1st Avenue and 1st Street, facing east.
+					<li>The columns are exactly four squares apart, on 1st, 5th, 9th and 13th Avenue.
+					<li>Karel can assume that columns are always five units high.
+				</ul>
+				</p>
+				<p>
+					Even though the program is only a few lines, it is still worth getting a little practice in decomposition. For example, it would make sense to have a <code>buildColumn</code> method. 
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>For Loops</h2>
+				<p>One thing that computers are really good at is repeating commands.</p>
+
+				<p>
+					In general, if you know before hand that there is a block of code you would like to repeat many times you can use a "for" loop, which looks like this:
+
+					<div class="well">
+						<code>
+							for(int i = 0; i &lt; <i>N</i>; i++) {
+								<br/>&nbsp;&nbsp;&nbsp;<i>your code</i>
+							<br/>}
+						</code>
+					</div>
+					Instead of <i>N</i> you should write the number of times you want your code to be repeated.
+				</p>
+
+				<p>
+					For example if you want to move forward ten times, instead of writing the move(); command ten times you could write
+					<div class="well">
+						<code>
+							for(int i = 0; i &lt; 10; i++) {
+								<br/>&nbsp;&nbsp;&nbsp;move();
+							<br/>}
+						</code>
+					</div>
+					See the <a href="{{pathToRoot}}projects/place100.html">Place 100 beepers</a> program for another example.
+				</p>
+				<p>Your program will be much easier to write and easier to read, if you use for loops. There are multiple opportunities to use for loops in this problem! 
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>Good luck and ask questions!</p>
+			</div>
+		</div>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

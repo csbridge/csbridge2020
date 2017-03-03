@@ -1,0 +1,95 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Programming is Awesome
+			</h1>
+			<p>
+				Written by Chris Piech and Eric Roberts
+			</p>
+			<p>
+				Handouts: 
+				<a href="{{pathToRoot}}handouts/graphics.html">Graphics Reference</a>
+			<br/>
+				Worked Examples: 
+				<a href="{{pathToRoot}}projects/robotFace.html">Robot Face</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					The point of this program is to get you to create your first graphics program. You should draw three rectangles (one red, one blue and one yellow) and in the center of the screen write "Programming is Awesome." You can make your rectangles of any size and put them in any position--as long as they are visible. Here is what our program looked like.
+				</p>
+				<p>
+					<center>
+						<img style="width:100%" src="{{pathToRoot}}img/projects/awesome/demo.png">	
+					</center>
+				</p>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 1: Draw Rectangles</h2>
+				<p>
+					Very simple geometric art sometimes sells for huge amounts of money. For example, this painting, Composition II by Piet Mondrian, sold for $40 million:
+				</p>
+				<p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/awesome/mondrian.jpg">	
+					</center>
+				</p>
+				<p>
+					Your first task is to add three rectangles, one red, one blue, one yellow. You <b>don't</b> have to create the image above. You can put your rectangles anywhere on the screen that you want. If you sell your picture for millions of dollars... remember your teachers :). If you feel like adding more rectangles, thats cool. Just make sure to finish milestone #2 first.
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 2: Centered Text</h2>
+				<p>
+					Create and add a GLabel in the center of the screen. You can get the width and height of the screen with the commands:
+					<div class="well"><code>getWidth();<br/>getHeight();</code></div>
+				</p>
+				<p>
+					Similarly, if you have a GLabel called label, you can get the width and height of the label with the commands:
+					<div class="well"><code>label.getWidth();<br/>label.getHeight();</code></div>
+				</p>
+				<p>
+					If you want your text to look more snazzy, you can change its font:
+					<div class="well"><code>label.setFont("Courier-50");</code></div>
+					
+				</p>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				That's all! If you finish early, feel free to add to your picture. If you like ovals... you can add ovals too.
+			</div>
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

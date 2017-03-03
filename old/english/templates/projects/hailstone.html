@@ -1,0 +1,102 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Hailstone
+			</h1>
+			<p>
+				Based on a handout by Eric Roberts
+			</p>
+			<p>
+				Worked Examples: 
+				<a href="{{pathToRoot}}projects/emc2.html">E=MC2</a>,
+				<a href="{{pathToRoot}}projects/fibb.html">Fibbonacci</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Our world contains many interesting mathematical puzzles, many of which can be expressed in the form of computer programs.  One such wonderful problem that is well within the scope of what we have learned is the hailstone problem.</p>
+				<p>The problem can be expressed as follows:</p>
+
+<p>
+<div class="well">Pick some positive integer and call it n.
+<br/>If n is even, divide it by two.
+<br/>If n is odd, multiply it by three and add one.
+<br/>Continue this process until n is equal to one.</div>
+</p>
+
+	<p>The following example, starting with the number 15, illustrates this process:</p>
+
+<p style="padding-left:1em">
+	15	is odd, so I make 3n+1:	46
+	<br>46	is even, so I take half:	23
+	<br>23	is odd, so I make 3n+1:	70
+	<br>70	is even, so I take half:	35
+	<br>35	is odd, so I make 3n+1:	106
+	<br>106	is even, so I take half:	53
+	<br>53	is odd, so I make 3n+1:	160
+	<br>160	is even, so I take half:	80
+	<br>80	is even, so I take half:	40
+	<br>40	is even, so I take half:	20
+	<br>20	is even, so I take half:	10
+	<br>10	is even, so I take half:	5
+	<br>5	is odd, so I make 3n+1:	16
+	<br>16	is even, so I take half:	8
+	<br>8	is even, so I take half:	4
+	<br>4	is even, so I take half:	2
+	<br>2	is even, so I take half:	1
+</p>
+
+	As you can see from this example, the numbers go up and down, but eventually, at least for all numbers that have ever been tried, comes down to end in 1.  In some respects, this process is reminiscent of the formation of hailstones, which get carried upward by the winds over and over again before they finally descend to the ground.  Because of this analogy, this sequence of numbers is usually called the Hailstone sequence, although it goes by many other names as well.</p>
+
+	<p>Write a ConsoleProgram that reads in a number from the user and then displays the Hailstone sequence for that number, followed by a line showing the number of steps taken to reach 1.  For example, your program should be able to produce a sample run that looks like this:
+
+				<p>
+					<center>
+						<img style="width:50%" src="{{pathToRoot}}img/projects/hailstone/17.png">	
+					</center>
+				</p>
+				<p>
+					The fascinating thing about this problem is that no one has yet been able to prove that it always stops.  The number of steps in the process can certainly get very large.  How many steps, for example, does your program take when n is 27?
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Checking Even or Odd</h2>
+				<p>
+					In order to solve the hailstone problem, we are going to need as way to determine if an integer is even or odd. In addition to the regular operators that you know and love (like +, -, *, and /) programming languages provide a remainder operator: %. 
+					<div class="well"><code>a % b</code></div>
+					Returns the value remaining when you divide <i>a</i> by <i>b</i>. For example <code>10 % 3</code> is 1 because when you divide 10 by 3 you get 3 with 1 left over.
+				</p>
+				<p>When you divide any number by 2, the remainder is 0 if the number is even and 1 if the number is odd. Thus:
+					<div class="well"><code>n % 2 == 0</code></div>
+					Is a test of whether n is even</p>
+			</div>
+
+		</div>
+
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

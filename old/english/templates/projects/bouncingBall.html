@@ -1,0 +1,95 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Bouncing Ball
+			</h1>
+			<p>
+				Based on an example by Mehran Sahami
+			</p>
+			<p>
+				Handouts:
+				<a href ="{{pathToRoot}}handouts/graphics.html">Graphics Reference</a>
+				<br/>
+				Worked Example: 
+				<a href="{{pathToRoot}}projects/mysterySquare.html">Mystery Square</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Write a GraphicsProgram that creates a ball (an instance of GOval) and makes it bounce around the screen. Ignore gravity and have a collision with the right or left wall reflect the x direction of the ball, and have a collision with the top or bottom wall change the y direction of the ball.
+				</p>
+				<p>The figure below shows a ball moving through a bounce with the bottom wall.</p>
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/bouncingBall/demo.png">	
+					</center>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 1: Create a Ball</h2>
+				<p>
+					It can be any size.
+				</p>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 2: Make it move</h2>
+				<p>
+					Loop forever and in the loop update the ball and pause. You can pause using the command:
+					<div class="well"><code>pause(<i>milliseconds</i>);</code></div>
+					If you don't pause the computer will animate faster that the human eye can see the movement!
+				</p>
+
+				<p>
+					There is also a method to move a GOval (or a GRect):
+					<div class="well"><code><i>object</i>.move(<i>dx</i>, <i>dy</i>);</code></div>
+					<i>dx</i> is the number of pixels the object will move in the x direction.
+					<br/> <i>dy</i> is the number of pixels the object will move in the y direction.
+				</p>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 3: Bounce</h2>
+				<p>
+					Now, before you update the position of the ball, you should check if the ball has collided with the wall and if so you should update the direction it is moving.
+				</p>
+				<p>Reflections should follow the rule the angle of incidence equals the angle of reflection. This turns out to be simple to implement. You simple flip the x direction if you hit a left or right wall and flip the y direction if you hit a bottom or top wall</p>
+
+				<p>How do you figure out the position of the ball? You can use the methods:</p>
+				<div class="well"><code><i>object</i>.getX();<br/><i>object</i>.getY();</code></div>
+				
+			</div>
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

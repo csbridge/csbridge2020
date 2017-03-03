@@ -1,0 +1,95 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTk.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Programcılık Bir Harika
+			</h1>
+			<p>
+				Yazanlar: Chris Piech ve Eric Roberts
+			</p>
+			<p>
+				Ders Notları: 
+				<a href="{{pathToRoot}}tk/handouts/graphics.html">Grafik Referansı</a>
+			<br/>
+				Çalışan Örnekler: 
+				<a href="{{pathToRoot}}tk/projects/robotFace.html">Robot Surat</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Bu programın amacı sizin ilk grafik programınızı oluşturmanızı sağlamaktır. Biri kırmızı, biri mavi ve biri sarı olmak üzere üç dikdörtgen çizmelisiniz ve ekranın merkezine "Programming is Awesome." ("Programcılık Bir Harika.") yazmalısınız. Dikdörtgenlerinizi herhangi bir boyutta yapabilirsiniz ve görülebilir olduğu sürece ekranda istediğiniz yere yerleştirebilirsiniz. Bizim programımızın görünüşü şu şekilde:
+				</p>
+				<p>
+					<center>
+						<img style="width:100%" src="{{pathToRoot}}img/projects/awesome/demo.png">	
+					</center>
+				</p>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Aşama 1: Dikdörtgenler Çizin</h2>
+				<p>
+					Çok basit geometrinin kullanıldığı sanat bazen çok fazla paraya satılır. Örneğin, şu tablo, Piet Mondrian'ın Composition II adlı eseri, 40 milyon dolara satıldı:
+				</p>
+				<p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/awesome/mondrian.jpg">	
+					</center>
+				</p>
+				<p>
+					İlk göreviniz biri kırmızı, biri mavi, biri sarı üç dikdötgen eklemek. Yukarıdaki resmi oluşturmak zorunda <b>değilsiniz</b>. Dikdörtgenlerinizi ekranda istediğiniz herhangi bir yere koyabilirsiniz. Eğer resimleriniz milyonlarca dolara satılırsa... öğretmenlerinizi unutmayın :). Daha çok dikdörtgen eklemeye ihtiyaç duyuyorsanz, bu harika. Sadece önce aşama #2'yi bitirdiğinize emin olun.
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Aşama 2: Ortalanmış Metin</h2>
+				<p>
+					Bir GLabel yaratın ve ekranın merkezine ekleyin. Ekranın genişliğini ve yüksekliğini şu komutlarla alabilirsiniz:
+					<div class="well"><code>getWidth();<br/>getHeight();</code></div>
+				</p>
+				<p>
+					Aynı şekilde, label adında bir GLabel'ınız varsa, label'ın genişliğini ve yüksekliğini şu komutlarla alabilirsiniz:
+					<div class="well"><code>label.getWidth();<br/>label.getHeight();</code></div>
+				</p>
+				<p>
+					Metninizin daha havalı görünmesini istiyorsanız, yazı tipini değiştirebilirsiniz:
+					<div class="well"><code>label.setFont("Courier-50");</code></div>
+					
+				</p>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				Hepsi bu kadar! Eğer çabuk bitirebilirseniz, resminize istediğinizi eklemekte özgürsünüz. Elipsleri seviyorsanız... onları da ekleyebilirsiniz.
+			</div>
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

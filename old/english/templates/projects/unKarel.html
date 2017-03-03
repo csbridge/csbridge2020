@@ -1,0 +1,149 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				UN Karel (with solution)
+			</h1>
+			<p>
+				Problem written by Eric Roberts
+			</p>
+			<p>
+				Handouts: 
+				<a href ="{{pathToRoot}}handouts/karel.html">KarelReference</a>
+			</p>	
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Karel has been hired by the UN to come and help build houses. The day needs saving and Karel is clearly the best robot for the job. Your goal is to have Karel walk along the bottom row and build a house like the following:
+				</p>
+
+				<p>
+					<center>
+						<img style="width:150px" src="{{pathToRoot}}img/projects/unKarel/house.png">	
+					</center>
+				</p>
+
+				<p>
+					Every time Karel finds a beeper. The bellow images show what Karel should do for two example worlds. You can assume that no houses will overlap and that all houses will fit inside the world. You can't assume the size of the world or the number of houses!
+				</p>
+
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/unKarel/un1.png">	
+					</center>
+				</p>
+
+				<p>
+					<center>
+						<img style="width:600px" src="{{pathToRoot}}img/projects/unKarel/un2.png">	
+					</center>
+				</p>
+				
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:1100px">/**
+ * Program: UN Karel
+ * -----------------
+ * This program makes Karel builds houses, as work for the UN.
+ */
+public class UNKarel extends SuperKarel {
+	
+	public void run() {
+		while(frontIsClear()) {
+			move();
+			if(beepersPresent()) {
+				buildHouse();
+			}
+		}
+	}
+
+	/**
+	 * Method: Build House
+	 * -------------------
+	 * Constructs a single house centered around Karel's current position.
+	 * You can assume that there is a beeper present at the start state.
+	 * At the end of the method, Karel will be facing east on the bottom-
+	 * right corner of the house.
+	 */
+	private void buildHouse() {
+		pickBeeper();
+		turnAround();
+		move();
+		turnRight();
+		placeThree();
+		turnRight();
+		move();
+		turnRight();
+		placeThree();
+		turnLeft();
+		move();
+		turnLeft();
+		placeThree();
+		turnAround();
+		moveToWall();
+		turnLeft();
+	}
+
+	/**
+	 * Method: Move To Wall
+	 * --------------------
+	 * Move forward until Karel hits a wall.
+	 */
+	private void moveToWall() {
+		while(frontIsClear()) {
+			move();
+		}
+	}
+
+	/**
+	 * Method: Place Three
+	 * -------------------
+	 * Place's three beepers in a row and moves three times!
+	 */
+	private void placeThree() {
+		for(int i = 0; i &lt; 3; i++) {
+			putBeeper();
+			move();
+		}
+	}
+
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html> 
+<head> 
+   <title>Learn to Program</title> 
+   <script src="./js/html/websiteImports.js"></script>
+	<script>importCss();</script>
+	<script>importJs();</script>
+	<style type="text/css">
+body {margin:0px;
+	height:100%;
+	font-family: Optima, "Lucida Grande", Lucida, Verdana, Geneva, Arial, sans-serif;
+	font-size: medium;
+	background:#fff;
+	min-width:850px;
+	background:white;
+	overflow:scroll}
+</style>
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25118186-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head> 
+
+<body> 
+   <script>importWebsiteHeader('share.html');</script>
+   <div id="featuredPrograms">Featured</b><br/>
+
+      <script>
+         var programMap = {
+            'Maze' : 'http://stanfordkarel.com/program.html#/cexjo',
+            'Pyramid' : 'http://stanfordkarel.com/program.html#/cexjp',
+         }
+         for(var key in programMap) {
+            var url = programMap[key];
+            var link = '<div class="commLinkDiv"><a class="commLink" href="'+url+'">'+key+'</a></div>'
+            document.write(link);
+         }
+      
+      </script>
+   
+   </div>
+   <div id="commetBox">
+      <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="stanfordkarel.com" num_posts="10" width="400" height="1000"></fb:comments>
+   </div>
+   <script>
+      function init() {
+         
+         document.onready = function() {
+            initTabs();
+            window.onresize();
+         }    
+
+         window.onresize = function(){
+            ReferenceDialog.resize();
+            var windowHeight = $(window).height() - 1;
+            var windowWidth = $(window).width() - 1;
+            windowWidth = Math.max(windowWidth, Const.MIN_IDE_WIDTH);
+
+            var featuredLeft = Const.PADDING;
+            var featuredHeight = windowHeight - Const.HEADER_HEIGHT;
+            var featuredWidth = windowWidth - Const.COMMENT_WIDTH - 2*Const.PADDING;
+
+            var featured = document.getElementById('featuredPrograms');
+            featured.style.height = featuredHeight + 'px';
+            featured.style.width = featuredWidth + 'px';
+            featured.style.left = featuredLeft + 'px'
+         }     
+      }
+      init();
+   </script>
+
+</body> 
+</html>

@@ -1,0 +1,52 @@
+<!-- Translated -->
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Grafik Referansı
+			</h1>
+			<p>
+				Yazan Eric Roberts
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<center><img style="width:700px;" src="{{pathToRoot}}img/handouts/graphics/graphicsHandout.png"></img></center>
+			</div>
+		</div>
+
+		<p>
+			<br/>
+			Başka faydalı grafik komutları:<br/>
+
+			<div class="well"><code>
+				getWidth(); // pencerenin genişliğini verir. <br>
+				getHeight(); // pencerenin yüksekliğini verir. <br>
+				add(<i>object</i>); // pencereye bir obje ekler. <br>
+				remove(<i>object</i>); // penceredeki bir objeyi kaldırır. <br>
+				getElementAt(<i>x</i>, <i>y</i>); // x, y koordinatlarındaki objeyi verir.
+			</code></div>
+		</p>
+
+		
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

@@ -1,0 +1,187 @@
+<head>
+
+	%include templates/parts/head.html
+
+	<style type="text/css" media="screen">
+  #console {
+    overflow: hide;
+    border: solid 1px black;
+    background-color: white;
+    width: 500px;
+    height: 300px;
+  }
+</style>
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Ancient Game of Nimm
+			</h1>
+			<p>
+				Problem written by Danielle Kain and Chris Piech.
+			</p>
+			<p>
+				Worked Examples: 
+				<a href="{{pathToRoot}}en/projects/emc2.html">E=MC2</a>,
+				<a href="{{pathToRoot}}en/projects/fibb.html">Fibbonacci</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Nimm is an ancient game of strategy that is named after the old German word for "take." It is also called Tiouk Tiouk in West Africa and Tsynshidzi in China. Players alternate taking stones until there is zero left. The game of Nimm goes as follows:
+<ol>
+<li>The game starts with a pile of 20 stones between the players</li>
+<li>The two players alternate turns</li>
+<li>On a given turn, a player may take either 1 or 2 stone from the center pile</li>
+<li>The two players continue until the center pile has run out of stones.</li>
+</ol>
+The last player to take a stone loses. Here is a screen shot from an example execution:
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/nimm/nimm.png">	
+						<p style="text-align:center"><!--<i>Unique, unpredictable numbers for medicines.</i>--></p>
+					</center>
+				</p>
+
+				<p>Write a program to play Nimm. To make your life easier we have broken the problem down into smaller milestones. You have a lot of time for this program. Take it slowly, piece by piece.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 1</h2>
+				<p>Start with 20 stones. Repeat the process of removing stones and printing out how many stones are left until there are less than zero. Don't worry about whose turn it is. Don't worry about making sure only one or two stones are removed. Use the method <code>readInt(<i>msg</i>)</code> which prints msg and waits for the user to enter a number. 
+				</p>
+
+
+				<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/nimm/nimm_m1.png">	
+						
+					</center>
+			</div>
+		</div>
+
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 2</h2>
+				<p>Create a variable of type <code>int</code> to keep track of whose turn it is (remember there are two players). Tell the user whose turn it is. Each time someone picks up stones, change the player number.</p>
+
+				<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/nimm/nimm_m2.png">	
+						
+					</center>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 3</h2>
+				<p>Make sure that each turn only one or two stones are removed. After you read a number of stones to remove from a user (their input), you can use the following pattern to check if it was valid and keep asking until it is valid.</p>
+				<div class="well"><code>
+				while(<i>input is invalid</i>) {<br/>
+					&nbsp;&nbsp;&nbsp;<i>input</i> = readInt("Please enter 1 or 2: ");<br/>
+				}
+				</code></div>
+				</p>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 4</h2>
+				<p>Announce the winner.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Extensions</h2>
+				<p>Can you write an AI opponent? You can start with a dummy AI that always plays a random number. Then try to make one that plays intelligently...</p>
+
+				<p>Some other extension ideas:</p>
+				<ul>
+					<li>Make sure that if there is only one stick left, the last player may only remove one stone</li>
+					<li>Give the user the option for the winner to be the player that doesn’t take the last stone, or the player that does take the last stone.</li>
+					<li>Expand the game to let players take 1, 2, or 3, sticks per turn.</li>
+					<li>Divisible by 3 rule: if the number of sticks remaining at the end of a player’s turn is divisible by 3, they must go again.</li>
+					<li>Give the user the option to play against the computer and design a process for the computer to choose how many sticks to remove.</li>
+					<li>Come up with your own extension.</li>
+			</div>
+		</div>
+
+		
+		<!--<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:580px">/**
+ * Carbon Dating
+ * -------------
+ * This program shows how to translate between percent of natural carbon-14 found
+ * in a sample. First, it prints out a carbon-14 (c14) lookup table, then it has users
+ * enter a percent of c14 and returns the expected age. 
+ */
+public class CarbonDating extends ConsoleProgram {
+	
+	private static final int HALF_LIFE = 5700;
+	
+	public void run() {
+		// 1. Show the c-14 lookup table
+		double percent = 100.0;
+		int elapsed = 0;
+		println("Carbon dating lookup table");
+		println("fraction C-14 remaining:  years passed");
+		println("--------------------------");
+		for(int i = 0; i &lt; 10; i++) {
+			println(percent + "%:  " + elapsed + " years");
+			elapsed += HALF_LIFE;
+			percent /= 2;
+		}
+		println("");
+		
+		// 2. Look up the age of a sample
+		while(true) {
+			double percentLeft = readDouble("What percent of natural carbon-14 does your sample have? ");
+			double years = HALF_LIFE * Math.log(percentLeft / 100.0) / Math.log(0.5);
+			println(percentLeft + "% carbon-14 left...");
+			println("The sample is " + years + " years old");
+			println("");
+		}
+	}
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	</div>
+	</div>-->
+		
+		%include templates/parts/footer.html
+
+	</div>
+
+	<script data-main="gameOfStones.js" src="js/requirejs/require.js"></script>
+</body>

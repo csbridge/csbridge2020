@@ -1,0 +1,67 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Random Circles
+			</h1>
+			<p>
+				Based on a handout by Eric Roberts
+			</p>
+			<p>
+				Handouts:
+				<a href ="{{pathToRoot}}handouts/graphics.html">Graphics Reference</a>
+				<br/>
+				Worked Example: 
+				<a href="{{pathToRoot}}projects/8Ball.html">8Ball</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Write a GraphicsProgram that draws a set of ten circles with different sizes, positions, and colors.  Each circle should have a randomly chosen color, a randomly chosen radius between 70 and 200 pixels, and a randomly chosen position on the canvas, subject to the condition that the entire circle must fit inside the canvas without extending past the edge.  The following sample run shows one possible outcome:
+				</p>
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/randomCircles/demo1.png">	
+					</center>
+				</p>
+				<p>
+					On some runs of this program you might not see ten circles.  Why?
+				</p>
+
+				<p>To generate random numbers create a RandomGenerator instance variable (a variable declared outside all methods) like so:
+					<div class="well"><code>private RandomGenerator rgen = new RandomGenerator();</code></div>
+				</p>
+				<p>You can then use the variable to generate random numbers.
+					<div class="well"><code>
+						rgen.nextInt(<i>min</i>, <i>max</i>)  //generates a random int in the range (min, max)
+						<br>rgen.nextColor() //generates a random Color
+					</code></div>
+				</p>
+				
+				<p>If you finish early, consider making random doughnuts.</p>
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

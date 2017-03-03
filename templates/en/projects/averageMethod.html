@@ -1,0 +1,78 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Average Method
+			</h1>
+			<p>
+				Written by Chris Piech and Mehran Sahami
+			</p>
+			
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					This demo shows a simple method that takes in two inputs and returns the average:
+					<div class="well"><code>private double average(double a, double b)</code></div>
+				</p>
+				
+				
+
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:200px">public class AverageMethod extends ConsoleProgram {
+
+	public void run() {
+		println(average(4, 5));
+		println(average(10, 2));
+		println(average(-4.1, 9.8));
+	}
+
+	private double average(double a, double b) {
+		return (a + b) / 2;
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

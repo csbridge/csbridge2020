@@ -1,0 +1,143 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Counterfeit Medicine
+			</h1>
+			<p>
+				Problem written by Chris Piech
+			</p>
+			<p>
+				Worked Examples: 
+				<a href="{{pathToRoot}}en/projects/emc2.html">E=MC2</a>,
+				<a href="{{pathToRoot}}en/projects/fibb.html">Fibbonacci</a>,
+				<a href="{{pathToRoot}}en/projects/carbonDating.html">Carbon Dating</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2 style="margin-top:0px;">The Story</h2>
+				<p>
+					This problem starts with a sad story. When I was growing up in Kenya it was estimated that over 38% of medicines sold at pharmacies were fake [1]. That was a big problem! Depending on which organization you ask, deaths from counterfeit medicine ranged from 100,000 per year (WHO) to 700,000 (IPN) [2]. <blockquote>Deaths from counterfeit drugs are equivalent to, "four fully laden jumbo jets crashing everyday" [2]</blockquote> <!--Wow. Why would anyone do such a terrible thing? Because counterfeit medicine is a $200 billion-per-year business.--></p>
+
+					<p>
+					In 2009 a Ghanaian fellow named Bright Simmons came up with a straightforward technology solution he called mPedigree. He partnered with companies that make medicine. On each legitimate package of medicine they stamped a unique scratch code. Now when you buy medicine at a pharmacy in Kenya you check the scratch code and text message mPedigree. If the code is in their system, and has never been used before, mPedigree sends a text message back saying: "valid."
+				
+					There has been a 58% decrease in child deaths from Malaria alone [3]. Sometimes simple programming solutions can have a large, positive impact on the world. 
+
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Your Job</h2>
+				<p>Write a program that generates 10 digit numbers for 1,000 packages of medicine. Each number you generate should be (1) unique and (2) unpredictable. 
+				</p>
+
+				<p>
+					Here is a screen shot from an example execution:
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/medicine/medicineRun.png">	
+						<p style="text-align:center"><!--<i>Unique, unpredictable numbers for medicines.</i>--></p>
+					</center>
+				</p>
+
+				<p>Those numbers will be put on medicine packages. Counterfiters won't stand a chance!</p>
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Random Numbers</h2>
+				<p>To generate random numbers create a RandomGenerator instance variable (a variable declared outside all methods) like so:
+					<div class="well"><code>private RandomGenerator rgen = new RandomGenerator();</code></div>
+				</p>
+				<p>You can then use the variable to generate random numbers.
+					<div class="well"><code>
+						rgen.nextInt(<i>min</i>, <i>max</i>)  //generates a random int in the range (min, max) inclusive
+					</code></div>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>That's all! Ask questions if you don't understand something (or want to know more about counterfeit medicine)</p>
+			</div>
+		</div>
+		<!--<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:580px">/**
+ * Carbon Dating
+ * -------------
+ * This program shows how to translate between percent of natural carbon-14 found
+ * in a sample. First, it prints out a carbon-14 (c14) lookup table, then it has users
+ * enter a percent of c14 and returns the expected age. 
+ */
+public class CarbonDating extends ConsoleProgram {
+	
+	private static final int HALF_LIFE = 5700;
+	
+	public void run() {
+		// 1. Show the c-14 lookup table
+		double percent = 100.0;
+		int elapsed = 0;
+		println("Carbon dating lookup table");
+		println("fraction C-14 remaining:  years passed");
+		println("--------------------------");
+		for(int i = 0; i &lt; 10; i++) {
+			println(percent + "%:  " + elapsed + " years");
+			elapsed += HALF_LIFE;
+			percent /= 2;
+		}
+		println("");
+		
+		// 2. Look up the age of a sample
+		while(true) {
+			double percentLeft = readDouble("What percent of natural carbon-14 does your sample have? ");
+			double years = HALF_LIFE * Math.log(percentLeft / 100.0) / Math.log(0.5);
+			println(percentLeft + "% carbon-14 left...");
+			println("The sample is " + years + " years old");
+			println("");
+		}
+	}
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	</div>
+	</div>-->
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

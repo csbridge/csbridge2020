@@ -1,0 +1,63 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Graphics Reference
+			</h1>
+			<p>
+				Written by Eric Roberts
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>Here are the most common graphics commands:</p>
+				<center><img style="width:700px;" src="{{pathToRoot}}img/handouts/graphics/graphicsHandout.png"></img></center>
+				<br/>
+
+				<p>
+					
+					Some other helpful graphics commands:
+				</p>
+
+					<div class="well"><code>
+						getWidth(); // returns the width of the screen. <br>
+						getHeight(); // returns the height of the screen.<br>
+						add(<i>object</i>); // adds an object to the screen.<br>
+						remove(<i>object</i>); // removes an object from the screen.<br>
+						getElementAt(<i>x</i>, <i>y</i>); // returns the element at x, y
+					</code></div>
+				</p>
+
+				<p>
+					Full documentation: <br/>
+					<a href="http://cs.stanford.edu/people/eroberts/jtf/javadoc/student/index.html">http://cs.stanford.edu/people/eroberts/jtf/javadoc/student/index.html</a>
+				</p>
+				
+
+			</div>
+		</div>
+
+
+
+		
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

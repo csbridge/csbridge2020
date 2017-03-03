@@ -1,0 +1,148 @@
+<head>
+<head>
+
+	%include templates/parts/head.html
+
+	<script src="../karel/js/html/websiteImports.js"></script>
+	<script>importCss();</script>
+	<script>importJs();</script>
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+    <div class="page-header" style="backgroud-color:#cdbfe3">
+    	<div class="container">
+   			<div>
+	        	<div id="logo">
+					<img id="logoImg" src="{{pathToRoot}}img/logo.jpg"/>
+				</div>
+				<div id="headerText" style="padding-bottom:15px;">
+					<div class="h1" style="margin-top:0px;font-size:40px;">
+						Intro to Computer Science
+					</div>
+					<div>
+						Summer 2016
+					</div>
+					<div>
+						June 20th to June 30th in Koç University, Istanbul
+					</div>
+				</div>
+	          
+	        </div>
+		</div>
+	</div>
+
+
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<div class="section" id="information">
+		<br/>
+		<div class="alert alert-success">
+			<b> We want your feedback</b>. Fill in the class survey here: <a href="https://www.surveymonkey.com/r/9QP595L">www.surveymonkey.com/r/9QP595L</a>.
+		</div>
+
+		<div class="alert alert-success">
+			<b> Submit your final project</b>. Use the same submission process: <a href="{{pathToRoot}}en/handouts/submission.html">submission handout</a>.
+		</div>
+
+		<div class="alert alert-info">
+			Sign in to lab here: <a href="http://bit.ly/1Yzw2kS">http://bit.ly/1Yzw2kS</a>
+		</div>
+
+		<div class="alert alert-info">
+			Add to the class playlist here: <a href="https://open.spotify.com/user/1251835474/playlist/2E1ccnzfMTqDv2D1JEoFF3">Spotify Playlist</a>
+		</div>
+
+
+
+		
+		
+
+		<div>
+			<h2>
+				The Idea of the Course
+			</h2>
+
+			<p>The point of this two week course is to teach you the fundamentals of computer programming to the point where you can go and learn on your own. It is taught by a collaboration of instructors from Stanford, Boğaziçi and Koç University. You will learn to program using material for Stanford's Introduction to Computer Science course (which is very similar to the Koç intro course). </p>
+
+			<hr/>
+		</div>
+
+
+		
+
+		<div>
+
+		<div class="section" id="schedule">
+			<h2>
+				Programs
+			</h2>
+			%include templates/parts/programTable.html
+			<hr/>
+
+		</div>
+
+		<div class="section" id="staff">
+			<h2>
+				Teachers
+			</h2>
+
+			%include templates/parts/peeps.html
+			<hr/>
+		</div>
+
+		<div class="section" id="getStarted">
+			<h2>
+				Set Up Your Computer
+			</h2>
+
+			<h3>Download Eclipse</h3>
+			<p>Your first step is to install eclipse. Here is the <a href="{{pathToRoot}}resources/eclipse_helios_mac.zip">mac</a> version and here is the <a href="{{pathToRoot}}resources/eclipse_helios_windows.zip">windows</a> version. If you need instructions <a href="{{pathToRoot}}handouts/DownloadingEclipse.pdf">here</a> is a handout. 
+				If you just want the Stanford plugin you can find it <a href="{{pathToRoot}}starter/edu.stanford.cs106_1.0.0.jar">here</a>.</p>
+
+			<h3>Import a project</h3>
+			<p>Once you have Eclipse installed you can import a project (Standord Menu -> Import Project). For new programs download and import <a href="{{pathToRoot}}resources/BlankProject.zip">this</a> blank project.</p>
+
+			<!--<h3>Create an executable</h3>
+			<p>If you want to turn a project into a stand-alone executable, read <a href="{{pathToRoot}}handouts/CreatingJarFiles.pdf">this</a> handout.</p>-->
+			<hr/>
+		</div>
+
+			
+		<div class="section" id="playWithKarel">
+			<h2>
+				Curriculum
+			</h2>
+			<img src = "{{pathToRoot}}img/icons/curriculum.jpg" style="width:100%"></img>
+			<hr/>
+		</div>
+
+	
+		<div class="section" id="playWithKarel">
+			<h2>
+				Play With Karel
+			</h2>
+
+			<p>Meet Karel, The Java Robot that Stanford uses to introduce university students to programming. </p>
+
+			<p>Use Karel's commands to get her to move the beeper to the top of the ledge. Normally you will write your programs in an application called Eclipse, but to get you started we made a mini-eclipse for our website:
+			</p>
+
+			%include templates/parts/playWithKarel.html
+		</div>
+
+		
+
+
+
+		
+
+		%include templates/parts/footer.html
+
+	</div>
+</body>

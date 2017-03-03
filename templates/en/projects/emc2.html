@@ -1,0 +1,98 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				E=MC2 (with solution)
+			</h1>
+			<p>
+				Problem written by Chris, discovered by Einstein
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					One of the exciting human discoveries is that mass and energy are interchangable and are related by the equation E = M &times; C <sup>2</sup>. This relationship was uncovered by Albert Einstein almost 100 years ago and we now know that the sun produces its heat by transforming small amounts of mass into large amounts of energy.
+				</p>
+
+				<p> Write a program that continually reads in mass from the user and then outputs the amount of energy. Show your work in the following way:</p>
+				<p>
+					<center>
+						<img style="width:400px" src="{{pathToRoot}}img/projects/emc2/demo.png">	
+					</center>
+				</p>
+				<p>If you ask the user to input kilograms, and you use speed of light equals 299792458 (which is in meters per second) the result of calculating E = M &times; C <sup>2</sup> will be in Jouls.</p>
+
+				<p> Note that 3.0E8 is scientific notation for 3.0 &times; 10 <sup>8</sup>... which is 300,000,000. You don't need to do anything for java to print doubles in scientific notation. It will automatically do so when numbers get big enough.</p>
+				<p>
+					Since the speed of light will never change, it makes sense to declare it as a constant.
+				</p>
+				
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:480px">/**
+ * Program: EMC2
+ * -------------
+ * This program helps users calculate how much energy they could
+ * get if they transformed their mass. Thanks Einstein!
+ */
+public class EMC2 extends ConsoleProgram {
+	
+	// This declares a constant... it can never change value.
+	// Speed of light in m/s
+	private static final double C = 299792458;
+	
+	public void run() {
+		while(true) {
+			// Read the mass in from the user.
+			double massInKg = readDouble("Enter kilos of mass: ");
+			
+			// Calculate energy
+			double energyInJoules = massInKg * C * C;
+			
+			// Display work to the user
+			println("e = m * C^2...");
+			println("m = " + massInKg + " kg");
+			println("C = " + C + " m/s");
+			println(energyInJoules + " joules of energy!");
+			println("");
+		}
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

@@ -1,0 +1,53 @@
+<head>
+
+  %include templates/parts/head.html
+
+
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  %include templates/parts/navBar.html
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Header -->
+    <div id="pageHeader">
+      <h1>
+        Catch Me If You Can
+      </h1>
+      <p>
+        Problem by Julia Lee, Kerem Goksel, and Chris Piech
+      </p>
+      <p>
+        Handouts:
+        <a href ="{{pathToRoot}}handouts/graphics.html">Graphics Reference</a>, <a href ="{{pathToRoot}}handouts/events.html">Events</a>
+        <br/>
+      </p>
+
+    </div>
+    <hr/>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          <ol>
+            <li>Add a circle to the canvas.</li>
+            <li>Add a mouse event listener that moves the circle to a random position whenever the mouse touches the circle.</li>
+          </ol>
+        </p>
+        <p>
+          <center>
+            <img style="width:500px" src="{{pathToRoot}}img/projects/sandcastles/catchMeIfYouCan.png">  
+          </center>
+        </p>
+      </div>
+    </div>
+
+    <br/>
+    
+    %include templates/parts/footer.html
+
+  </div>
+</body>

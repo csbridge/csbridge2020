@@ -1,0 +1,119 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Step Up
+			</h1>
+			<p>
+				Based on a handout by Eric Roberts
+			</p>
+
+			<p>
+				<!--Topics:
+				KarelCommands,
+				Methods
+			<br/>-->
+			Handouts:
+				<a href ="{{pathToRoot}}en/handouts/karel.html">Karel Reference</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Karel starts in the world on the left. How would you program Karel to pick up the beeper and transport it to the top of the ledge?  Karel should drop the beeper at the corner of 2nd Street and 4th Avenue and then continue one more corner to the east, ending up on 5th Avenue. At the end of your program, Karel's world should look like the picture on the right.
+				</p
+				<p>
+					<center>
+						<img style="width:700px" class="psetImg" src="{{pathToRoot}}img/projects/stepUp/stepUp.png">	
+					</center>
+				</p>
+				
+				<br/>
+				<p>
+					If Karel only knows the commands: 
+					<div class="well">
+						<code>
+							move()
+							<br/>pickBeeper()
+							<br/>putBeeper()
+							<br/>turnLeft()
+						</code>
+					</div>
+					How can you make Karel turn to the right?
+				</p>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+				<p>
+					A solution is provided for this example, so that you can see what a full program looks like!
+				</p>
+
+
+<pre id="editor" style="height:460px">/**
+ * Program: Step Up
+ * ----------------
+ * Your first example Karel program. Have Karel pick up the beeper infront
+ * of her and place it on top of the ledge.
+ * This is a comment. Your computer will ignore it.
+ */
+public class StepUp extends Karel {
+	
+	// When you start your program, this code will be executed.
+	public void run() {
+		move();
+		pickBeeper();
+		turnLeft();
+		move();
+		turnRight();
+		move();
+		putBeeper();
+		move();
+	}
+
+	// Defines a new command called turnRight
+	private void turnRight() {
+        turnLeft();
+        turnLeft();
+        turnLeft();
+    }
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+			</div>
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

@@ -1,0 +1,95 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Stamp Tool
+			</h1>
+			<p>
+				Problem written by a mystery CS106A Lecturer.
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Write a program that has a GRect (which represents a stamp) follow a users mouse around and draw a GRect on the screen centered around the mouse when the user clicks </p>
+
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/stampTool/demo.png">	
+					</center>
+				</p>
+
+				<p>Rember that since you need to have a variable that you can change inside a mouse event class (the GRect which represents your stamp) you are going to have to declare it as an istance variable. Ask one of the teachers to explain this if it doesn't make sense.</p>
+
+				
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:470px">public class StampTool extends GraphicsProgram {
+
+	private static final int SIZE = 50;
+	
+	private GRect stamp = new GRect(SIZE, SIZE);
+	
+	public void run() {
+		stamp.setColor(Color.BLUE);
+		stamp.setFilled(true);
+		add(stamp);
+		addMouseListeners();
+	}
+	
+	public void mouseClicked(MouseEvent e) {
+		int x = e.getX() - SIZE / 2;
+		int y = e.getY() - SIZE / 2;
+		
+		GRect r = new GRect(SIZE, SIZE);
+		r.setFilled(true);
+		add(r, x, y);
+	}
+	
+	public void mouseMoved(MouseEvent e) {
+		int x = e.getX() - SIZE / 2;
+		int y = e.getY() - SIZE / 2;
+		stamp.setLocation(x, y);
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	</div>
+	</div>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

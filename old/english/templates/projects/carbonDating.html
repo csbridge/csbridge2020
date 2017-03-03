@@ -1,0 +1,163 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Carbon Dating
+			</h1>
+			<p>
+				Problem written by Chris Piech
+			</p>
+			<p>
+				Worked Examples: 
+				<a href="{{pathToRoot}}projects/emc2.html">E=MC2</a>,
+				<a href="{{pathToRoot}}projects/fibb.html">Fibbonacci</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					You probably have seen or read news stories about fascinating ancient artifacts. At an archaeological dig a piece of wooden tool is unearthed and the archaeologist finds it to be 5,000 years old.  A child mummy is found high in the Andes and the archaeologist says the child lived more than 2,000 years ago. Ever wondered how they know?
+				</p>
+				<p>Carbon dating is a way of determining the age of certain archaeological artifacts of biological origin. Your job is to write a program that figures out how old a sample is.
+				</p>
+
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/carbonDating/real.jpg">	
+						<p style="text-align:center"><i>This is a real velociraptor fossil. It's very old.</i></p>
+					</center>
+				</p>
+
+				<p>When an orgnanism is alive, its matter will have a constant amount of a special type of carbon called carbon-14 (c14). It turns out all living things have the same fraction: wood, mammoths, your body right now... small cats... all have the same amount.</p>
+				
+
+				<p>An important property of c14 is that it dissapears at a constant rate: every 5,700 years the amount of c14 is halfed (its half life is 5,700 years). For example, if one starts with 100% of the natural occurence of c14:
+				<p> &nbsp;&nbsp;&nbsp;&nbsp;In 5,700 years we expect there will only be 50% left. 
+				<br/> &nbsp;&nbsp;&nbsp;&nbsp;In 11,400 years we would expect there will only have 25% left. 
+				<br/> &nbsp;&nbsp;&nbsp;&nbsp;And so on...</p>
+
+				<p>When an organism is alive, it keeps replentishing its supply of c14 to the natural level. But when it dies (moment of silence), the amount of c14 starts to decrease. By testing how much c14 is left, scientists know how how long a dead thing has been dead for. Good times.</p>
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Lookup Table</h2>
+				<p>To get started, lets make a lookup table that maps the percent of c14 remaining to the number of years the sample has been dead for. Print out the percent c14 remaining, and the number of years passed for the first 20 half lives. Your table should look like the following:</p>
+				<p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/carbonDating/lookupTable.png">	
+					</center>
+				</p>
+				<p>Think about the variable type that you use to keep track of the amount of carbon left. What happens if you use an integer for percent?</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Extension</h2>
+				<p>If you finish early, and have extra time, try this extension.</p>
+				<p>For scientists it will be much more useful for them to input the percent of natural c14 that they measured, and have the program tell them the age. Repeatedly ask the user to enter a percent of natural c14 remaining and then output the age of their sample.  </p>
+				<p>
+					<center>
+						<img style="width:490px" src="{{pathToRoot}}img/projects/carbonDating/enter.png">	
+					</center>
+				</p>
+				<p>The formula for the age in years of a sample, given the percent of natural c14 remaining is:</p>
+				<p>
+					<br/>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/carbonDating/formula.png">	
+					</center>
+					<br/>
+				</p>
+
+				<p>To take the natural log of a number (the ln function) use the method:
+					<div class="well"><code>Math.log(<i>value</i>)</code></div>
+				</p>	
+
+				<p>Overall, your program should look like the following</p>
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/carbonDating/program.png">	
+					</center>
+				</p>
+				<p>All the best, and ask questions if you don't understand something (or want to know more about the archaeology)</p>
+			</div>
+		</div>
+		<!--<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:580px">/**
+ * Carbon Dating
+ * -------------
+ * This program shows how to translate between percent of natural carbon-14 found
+ * in a sample. First, it prints out a carbon-14 (c14) lookup table, then it has users
+ * enter a percent of c14 and returns the expected age. 
+ */
+public class CarbonDating extends ConsoleProgram {
+	
+	private static final int HALF_LIFE = 5700;
+	
+	public void run() {
+		// 1. Show the c-14 lookup table
+		double percent = 100.0;
+		int elapsed = 0;
+		println("Carbon dating lookup table");
+		println("fraction C-14 remaining:  years passed");
+		println("--------------------------");
+		for(int i = 0; i &lt; 10; i++) {
+			println(percent + "%:  " + elapsed + " years");
+			elapsed += HALF_LIFE;
+			percent /= 2;
+		}
+		println("");
+		
+		// 2. Look up the age of a sample
+		while(true) {
+			double percentLeft = readDouble("What percent of natural carbon-14 does your sample have? ");
+			double years = HALF_LIFE * Math.log(percentLeft / 100.0) / Math.log(0.5);
+			println(percentLeft + "% carbon-14 left...");
+			println("The sample is " + years + " years old");
+			println("");
+		}
+	}
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	</div>
+	</div>-->
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

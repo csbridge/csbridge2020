@@ -1,0 +1,39 @@
+<head>
+	%include templates/parts/head.html
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Console Program Reference
+			</h1>
+			<p>
+				Written by Danielle Kain, Kevin Miller
+			</p>
+		</div>
+		<hr/>
+
+		Console Programs allow for interaction between your program and the user. In order to write a program, make sure your program extends ConsoleProgram: 
+		<div class="well"><code><pre>
+public class Example extends ConsoleProgram {
+		</pre></code></div>
+		<br>
+		One cool thing that Console Programs let you do is get input from the user. Below are some examples:
+		<div class="well"><code><pre>
+readLine(String promptMessage); //Reads a String from the user and return it
+readInt(String promptMessage); //Reads an int from the user and return it
+readDouble(String promptMessage); //Reads a double from the user and return it
+println(String printMessage); //Prints a message to the Console
+		</pre></code></div>		
+		%include templates/parts/footer.html
+
+	</div>
+</body>
