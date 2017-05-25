@@ -18,7 +18,7 @@
 				Graphics Reference
 			</h1>
 			<p>
-				Written by Eric Roberts
+				Written by Eric Roberts and Lisa Yan
 			</p>
 
 		</div>
@@ -39,8 +39,9 @@
 						getWidth(); // returns the width of the screen. <br>
 						getHeight(); // returns the height of the screen.<br>
 						add(<i>object</i>); // adds an object to the screen.<br>
+                        add(<i>object</i>, <i>x</i>, <i>y</i>); // adds an object to the screen at coordinates (x, y).<br>
 						remove(<i>object</i>); // removes an object from the screen.<br>
-						getElementAt(<i>x</i>, <i>y</i>); // returns the element at x, y
+						getElementAt(<i>x</i>, <i>y</i>); // returns the element at (x, y).
 					</code></div>
 				</p>
 
@@ -48,6 +49,29 @@
 					Full documentation: <br/>
 					<a href="http://cs.stanford.edu/people/eroberts/jtf/javadoc/student/index.html">http://cs.stanford.edu/people/eroberts/jtf/javadoc/student/index.html</a>
 				</p>
+
+                <h3>GLabel</h3>
+                <p>Recall that setLocation(x,y) sets the <i>origin</i> of a GRect, GOval, or GLine to the coordinates (x,y), where the origin is defined as the top-left corner. GLabel has the same definition of origin, but the height is defined a bit taller than the actual text height. Here is a detailed look at all the different height definitions for GLabel:</p>
+				<center><img style="width:700px;" src="{{pathToRoot}}img/handouts/graphics/GLabelGeometry.png"></img></center>
+				<br/>
+                <p>
+                Side note: The origin is the middle-left in the image above, because we are dealing with a multi-line GLabel. For GLabels with single lines, the origin is the top-left.
+                </p>
+                <p>
+                So to center a GLabel vertically, we would actually use the <i>ascent</i> of a GLabel:
+                </p>
+					<div class="well"><code>
+                        double y = getHeight()/2 + label.getAscent()/2;
+					</code></div>
+
+                <h3>GImage</h3>
+                <p>You can also upload your own images and add them to your graphics program!</p>
+                <p>A few tips:</p>
+                <ul>
+                    <li>Save your image to the same "src" (source) folder that contains your java file.</li>
+                    <li>Find where your java file is located by going to Eclipse, right-clicking on the java file in Project Explorer (the left-hand menu), and going to "Properties."</li>
+                </ul>
+
 				
 
 			</div>

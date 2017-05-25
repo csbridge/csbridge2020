@@ -286,23 +286,52 @@
 				Random Generator Reference
 			</h1>
 			<p>
-				Written by Danielle Kain
+				Written by Danielle Kain and Lisa Yan
 			</p>
 		</div>
 		<hr/>
 
 		Random Generators allow you to add randomness to your program. Regardless of what type of random object you want, you will first have to make a Random Generator: 
-		<div class="well"><code><pre>
+		<div class="well"><code>
 RandomGenerator rgen = new RandomGenerator();
-		</pre></code></div>
+		</code></div>
 		<br>
 		You can make many types of random objects using RandomGenerators. Here are some examples:
-		<div class="well"><code><pre>
-int randomInt = rgen.nextInt(); //Returns a random int
-double randomDouble = rgen.nextDouble(); //Returns a random double
-Color randomCol = rgen.nextColor(); //Returns a random color
+		<div class="well"><code>
+                int randomInt = rgen.nextInt(); //Returns a random int<br>
+                double randomDouble = rgen.nextDouble(); //Returns a random double<br>
+                Color randomCol = rgen.nextColor(); //Returns a random color<br>
 boolean randomBoolean = rgen.nextBoolean(); //Returns a random boolean
-		</pre></code></div>		
+		</code></div>		
+
+
+
+        <h2>Integers</h2>
+        <p>The default method call (with no arguments) returns an <i>unbounded</i> integer, which could be very large or very small. To restrict the range of the integers you get, you can specify bounds. So to get an integer between 0 and 10, inclusive, you could do the following:</p>
+		<div class="well"><code>
+                int lb = 0;<br>
+                int ub = 10;<br>
+                int x = rgen.nextInt(lb, ub); // integer in the range [0,10]<br>
+		</code></div>		
+        <h2>Doubles</h2>
+        <p>The default method call returns a double between 0.0 and 1.0. To increase the range of doubles, you can specify bounds:</p>
+		<div class="well"><code>
+        double y = rgen.nextDouble(-3, 5.5); // note -3 is casted from integer to double -3.0
+		</code></div>		
+
+        <h2>Booleans</h2>
+        <p>Unlike integers and doubles, there is a single argument <code>p</code> that defines the behavior of <code>rgen.nextBoolean(p)</code>:
+        <ul>
+            <li>Return <code>true</code> with probability <code>p</code>.</li>
+            <li>Return <code>false</code> with probability <code>1-p</code>.</li>
+            <li><code>p</code> must be a double between 0 and 1.0.</li>
+            <li>The default value of <code>p</code> is 0.5.</li>
+        </ul>
+		<div class="well"><code>
+                bool equalProb = rgen.nextBoolean();<br>
+                bool unequalProb = rgen.nextBoolean(0.75); // returns true 3/4ths of the time<br>
+		</code></div>		
+
 <hr>
 
 <div class="footer">

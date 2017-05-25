@@ -285,10 +285,14 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Graphics Reference
+				Countdown
 			</h1>
 			<p>
-				Written by Eric Roberts and Lisa Yan
+                Written by Lisa Yan
+			</p>
+			<p>
+				Handouts:
+				<a href ="../../en/handouts/graphics.html">Graphics Reference</a>
 			</p>
 
 		</div>
@@ -296,60 +300,72 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<p>Here are the most common graphics commands:</p>
-				<center><img style="width:700px;" src="../../img/handouts/graphics/graphicsHandout.png"></img></center>
-				<br/>
-
 				<p>
-					
-					Some other helpful graphics commands:
-				</p>
-
-					<div class="well"><code>
-						getWidth(); // returns the width of the screen. <br>
-						getHeight(); // returns the height of the screen.<br>
-						add(<i>object</i>); // adds an object to the screen.<br>
-                        add(<i>object</i>, <i>x</i>, <i>y</i>); // adds an object to the screen at coordinates (x, y).<br>
-						remove(<i>object</i>); // removes an object from the screen.<br>
-						getElementAt(<i>x</i>, <i>y</i>); // returns the element at (x, y).
-					</code></div>
-				</p>
-
-				<p>
-					Full documentation: <br/>
-					<a href="http://cs.stanford.edu/people/eroberts/jtf/javadoc/student/index.html">http://cs.stanford.edu/people/eroberts/jtf/javadoc/student/index.html</a>
-				</p>
-
-                <h3>GLabel</h3>
-                <p>Recall that setLocation(x,y) sets the <i>origin</i> of a GRect, GOval, or GLine to the coordinates (x,y), where the origin is defined as the top-left corner. GLabel has the same definition of origin, but the height is defined a bit taller than the actual text height. Here is a detailed look at all the different height definitions for GLabel:</p>
-				<center><img style="width:700px;" src="../../img/handouts/graphics/GLabelGeometry.png"></img></center>
-				<br/>
-                <p>
-                Side note: The origin is the middle-left in the image above, because we are dealing with a multi-line GLabel. For GLabels with single lines, the origin is the top-left.
+                    This is a bonus program! It's meant to be a bit challenging, but completing this program will definitely help you write your final project.
                 </p>
                 <p>
-                So to center a GLabel vertically, we would actually use the <i>ascent</i> of a GLabel:
+                    Write a GraphicsProgram that displays a timer counting down from ten, once a second, and displays a message once the timer hits zero.
                 </p>
-					<div class="well"><code>
-                        double y = getHeight()/2 + label.getAscent()/2;
-					</code></div>
+            <h2> Setup the timer</h2>
+            <p>
+            To implement this timer, we will need both a logical representation and a visual representation of our countdown value, which are given by two class variables:
+            </p>
+			<div class="well"><code>
+                private GLabel countdownLabel; // display of timer value<br>
+                private int countdown; // actual timer value
+			</code></div>
+            <p>
+            Choose a large font for your timer, and start by displaying the starting time (TOTAL_TIME) on the screen. You can convert integers to strings by adding the following method to your code:
+            </p>
+<pre>public String formatIntToString(int x) {
+    return "" + x;
+}</pre>
+            
+            Your starting canvas should look something like this (I used the font Consolas with size 200):
+					<center>
+						<img style="width:500px" src="../../img/projects/countdown/countdown10.png">	
+					</center>
 
-                <h3>GImage</h3>
-                <p>You can also upload your own images and add them to your graphics program!</p>
-                <p>A few tips:</p>
-                <ul>
-                    <li>Save your image to the same "src" (source) folder that contains your java file.</li>
-                    <li>Find where your java file is located by going to Eclipse, right-clicking on the java file in Project Explorer (the left-hand menu), and going to "Properties."</li>
-                </ul>
+            <h2>Implement the countdown</h2>
+            <p>
+            Write your animation loop which updates both the logical and visual countdown representations every second.<br>
+            Do not add new GLabels! Just keep changing the text of the old one using GLabel's method <code>setLabel()</code>.
+            </p>
+			<div class="well"><code>
+            // Sets countdownLabel's text to be "hello world"<br>
+            countdownLabel.setLabel("hello world");
+			</code></div>
 
-				
+            <p>Remember that  delay is counted in milliseconds, and we want the timer to operate by the second.</p>
+
+
+            <h2>Formatting your timer</h2>
+            <h3>Zero-padding</h3>
+            <p>Since this is a timer, we want to <i>zero-pad</i> our numbers, which means adding a zero to the front of a number so that it stays the same width. How would you update the visual representation of your countdown timer to display the following?</p>
+            <p>Hint: Make your changes to <code>formatIntToString()</code>.</p>
+			<center>
+				<img style="width:500px" src="../../img/projects/countdown/countdown03.png">	
+			</center>
+            <h3>Fixed-width fonts</h3>
+            <p>Depending on your choice of font, your timer might still not align, even after zero-padding. This is something that a lot of graphics-oriented programmers struggle with! Make sure you are picking a fixed-width font, where each character/digit is the same width. Common examples are Consolas, Monaco, and Courier.
+            </p>
+
+            <h2>Finishing up</h2>
+            <p>
+            Once the timer hits zero, display a message. It can be anything!
+            </p>
+			<center>
+				<img style="width:500px" src="../../img/projects/countdown/timesUp.png">	
+			</center>
+
+
+
+
 
 			</div>
+
 		</div>
 
-
-
-		
 		
 <hr>
 
