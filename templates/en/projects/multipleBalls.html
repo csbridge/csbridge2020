@@ -1,0 +1,67 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Multiple Balls
+			</h1>
+			<p>
+                Written by Tyler Conklin
+								</br>
+			</p>
+			<p>
+				Handouts:
+                <a href ="{{pathToRoot}}en/handouts/random.html">Random Generator Reference</a><br/>
+                <a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a><br/>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+						This is a bonus program! It's meant to be challenging.
+				</p>
+				<p>
+					Write a program that animates two different balls bouncing around the canvas. If a ball hits off of a wall, it should bounce back in the opposite direciton. The two balls can also bounce off of each other. An example is shown in the below gif.
+					<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/multipleBalls/multipleBalls.gif">	
+					</center>
+					In this run, the width of each ball is 50 pixels, but feel free to use whichever numbers you would like. Note that when creating the balls it is important to give the balls different, random velocities and starting X,Y positions. Refer to the random generator reference linked above for help generating random values.
+        </p>
+				<p>
+					When computer scientists tackle a large problem, it helps to break it down into smaller steps. One way to break this problem down would be:
+					<ul>
+						<li>To start, add two balls to the screen with different, random positions.</li>
+						<li>Get the balls to move with random velocities.</li>
+						<li>Get the balls to start bouncing off the walls correctly. Remember that you can get the X position of a GOval ball by calling ball.getX() (same thing goes for the Y position). </li>
+						<li>Have the balls bounce off of each other. For this part, the getElementAt method, shown below, will be useful.</li>
+					</ul>
+				</p>
+				<center> 
+					<img style="width:600px;border:2px solid grey" src="{{pathToRoot}}img/projects/duplicatingShapes/getElementAt.png"> 
+				</center> 
+
+				</br>
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

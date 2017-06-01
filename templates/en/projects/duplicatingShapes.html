@@ -1,0 +1,65 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Duplicating Shapes
+			</h1>
+			<p>
+                Written by Tyler Conklin
+								</br>
+			</p>
+			<p>
+				Handouts:
+                <a href ="{{pathToRoot}}en/handouts/random.html">Random Generator Reference</a><br/>
+                <a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a><br/>
+                <a href ="{{pathToRoot}}en/handouts/events.html">Events Reference</a><br/>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+						This is a bonus program! It's meant to be challenging.
+				</p>
+				<p>
+					Write a graphics program to duplicate an oval ten times if the user clicks on the oval. Your program should start by populating the canvas with ten randomly generated ovals, much like the ten random circles example. Note that this means the X, Y, width, height, and color of the GOval should all be random. After this initial step, the canvas may look something like this:
+					<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/duplicatingShapes/duplicatingShapesStart.png">	
+					</center>
+					If the user then clicks on an oval. This oval should be duplicated ten times. The characteristics of the oval should be the same as the original oval, but the X,Y position should change. So the new ovals should have the same color, height, and width of the oval that was clicked on, but a new random X,Y position. After one click on the red oval, the canvas may now look like this:
+ 					<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/duplicatingShapes/duplicatingShapesEnd.png">	
+					</center>
+					Note that we do not care if the entire oval is on screen, but at least part of the oval should be on screen (the X,Y of the oval must be within the width and height of the canvas).
+        </p>
+				<p>
+					Hint: The method below will be useful.
+					<center>
+						<img style="width:600px;border:2px solid grey" src="{{pathToRoot}}img/projects/duplicatingShapes/getElementAt.png">	
+					</center>
+				</p>
+
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>
