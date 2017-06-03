@@ -1,1 +1,1 @@
-# Stanford-Bogazici
+# Stanford-Koç
