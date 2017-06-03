@@ -66,7 +66,7 @@
             countdownLabel.setLabel("hello world");
 			</code></div>
 
-            <p>Remember that  delay is counted in milliseconds, and we want the timer to operate by the second.</p>
+            <p>Remember that delay is counted in milliseconds, and we want the timer to operate by the second.</p>
 
 
             <h2>Formatting your timer</h2>
@@ -88,6 +88,19 @@
 				<img style="width:500px" src="{{pathToRoot}}img/projects/countdown/timesUp.png">	
 			</center>
 
+
+            <h2>Bonus: Add minutes</h2>
+            <p>Now add minutes to your countdown display, so that the timer reads 1:00, 0:59, 0:58, and so on.</p>
+            <p>
+            General guidelines:
+            </p>
+            <ul>
+                <li>Try to keep a <i>single variable</i> that records your remaining time in seconds. Avoid tracking minutes and seconds separately.</li>
+                <li>Separate your single variable into minutes and seconds when you display the counter. Consider defining methods to make your logic very clear.</li>
+                <li>To debug quickly, speed up your timer by reducing the pause time.</li>
+                <li>Remember the "mod" function! Example: <code>5 % 2 = 1</code></li>
+            </ul>
+            <p>Bonus bonus: How would you add milliseconds? The display convention is: 1:03.234.</p>
 
 
 

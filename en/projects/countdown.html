@@ -246,6 +246,24 @@
 	          </ul>
 	        </li>-->
 
+	        <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bonus <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+                <li><a href="../../en/bonus-index.html">Bonus overview</a></li>
+	           <li class="divider"></li>
+                <li><a href="../../en/projects/stepUp.html">Step Up</a></li>
+	          	<li><a href="../../projects/stepUp.html">Newspaper Karel</a></li>
+	           <li class="divider"></li>
+                <li><a href="../../en/projects/stepUp.html">Step Up</a></li>
+	          	<li><a href="../../projects/stepUp.html">Newspaper Karel</a></li>
+                <li><a href="../../en/projects/stepUp.html">Step Up</a></li>
+	          	<li><a href="../../projects/stepUp.html">Newspaper Karel</a></li>
+	           <li class="divider"></li>
+                <li><a href="../../en/projects/stepUp.html">Step Up</a></li>
+	          	<li><a href="../../projects/stepUp.html">Newspaper Karel</a></li>
+	          </ul>
+	        </li>
+
 
 
 	      </ul>
@@ -336,7 +354,7 @@
             countdownLabel.setLabel("hello world");
 			</code></div>
 
-            <p>Remember that  delay is counted in milliseconds, and we want the timer to operate by the second.</p>
+            <p>Remember that delay is counted in milliseconds, and we want the timer to operate by the second.</p>
 
 
             <h2>Formatting your timer</h2>
@@ -359,6 +377,19 @@
 			</center>
 
 
+            <h2>Bonus: Add minutes</h2>
+            <p>Now add minutes to your countdown display, so that the timer reads 1:00, 0:59, 0:58, and so on.</p>
+            <p>
+            General guidelines:
+            </p>
+            <ul>
+                <li>Try to keep a <i>single variable</i> that records your remaining time in seconds. Avoid tracking minutes and seconds separately.</li>
+                <li>Separate your single variable into minutes and seconds when you display the counter. Consider defining methods to make your logic very clear.</li>
+                <li>To debug quickly, speed up your timer by reducing the pause time.</li>
+                <li>Remember the "mod" function! Example: <code>5 % 2 = 1</code></li>
+            </ul>
+            <p>Bonus bonus: How would you add milliseconds? The display convention is: 1:03.234.</p>
+
 
 
 
@@ -371,7 +402,7 @@
 
 <div class="footer">
 	<p class="pull-left">
-		&#169; Stanford 2016 &#124; Created by 
+		&#169; Stanford 2017 &#124; Created by 
 		<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
 		Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
 	</p>
