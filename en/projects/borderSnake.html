@@ -324,44 +324,26 @@
             If you haven't completed BorderBox yet, go implement it and come back.
             </p>
 
-            <h2>Snake setup</h2>
-            <p>Open BorderSnake.java. You'll find that the main() method is exactly the same as BorderBox. However, some of the class variables are different. Instead of a single GRect, we now have an ArrayList of GRects. We still have one direction for the snake, though.</p>
-			<div class="well"><code>
-                private ArrayList&lt;GRect&gt; snake;<br>
-                private int snakeDirection = EAST; // starting direction
-			</code></div>
-
-            <p>
-            Implement makeSnake(). To make your life easier later, add the head of the snake first (so that snake.get(0) returns the GRect for the head). Remember that the snake starts out facing EAST, so the head is the rightmost GRect. Our snake is SNAKE_LENGTH = 5 blocks long.
-            </p>
-					<center>
-						<img style="width:300px" src="../../img/projects/borderSnake/borderSnake.png">	
-					</center>
-
-            <h2>Move eastward</h2>
-            <p>Set frontIsClear() to always return true for now, so we can test our snake moving in one direction (eastward). Implement moveSnake() to move the snake one box to the right; remember, the snake should be moving SQUARE_LENGTH + SQUARE_GAP to keep the gap between the different parts of the snake!</p>
-            <p>There is a trick here; you don't need to move every single block in the snake. In fact, you just need to move one block! Think about which block you would move to give the illusion of the entire snake moving.</p>
-            <p>The block you chose will now be the head of the snake, so not only do you have to update its location on the canvas, but you also need to update its position in the ArrayList. Remove the block and add it to the head (in the previous part, we designated the head to be the 0th position of the ArrayList).</p>
+            <h2>Hints and tricks</h2>
+            <ul>
+                <li>Use ArrayLists!</li>
+                <li>When moving the snake, you don't need to move every single block in the snake. In fact, you just need to move one block! Think about which block you would move to give the illusion of the entire snake moving.</li>
+                </ul>
+            <h3>Invariants</h3>
+            <p>In this program, as hinted above, you only need to move a single block to give the illusion that your entire snake has moved. Every time the snake moves, different blocks in the ArrayList now represent the new head and tail of the snake. How do you reliably access the head of your snake in your program?</p>
+            <p>One option you have is to define a logical <i>invariant</i> that the head of your snake will always be the 0th position of your ArrayList. An <i>invariant</i> is a computer science term that refers to something that can always assumed to be true. While there is no exact coding analogy, having this logical understanding will help the coder proceed through their program. The below code helps translate the logical invariant into the coding you need to do:</p>
 			<div class="well"><code>
                 snake.remove(block); // the GRect you moved<br>
                 snake.add(0, block); // becomes the new head
 			</code></div>
-            <p>
-            Next, implement frontIsClear() to check when you've reached the rightmost wall. Again, there's a trick here: can you check if the entire snake can move by just checking a single block? (Hint: it's the head)
-            </p>
-            <p>
-            You should now be able to see your snake move step-by-step to the east wall!
-            </p>
-
-            <h2>Move along the border</h2>
-            <p>You're very close to the finish line!! Implement turnLeft(). This should be VERY simple; remember what we did in BorderBox.
-            </p>
-            <p>Now, we have to extend moveSnake() and frontIsClear() to handle multiple directions. There's one last trick. Suppose we have the snake in the following configuration, where snakeDirection = NORTH:
+            <p>Note that defining this invariant will also help you figure out which position of the ArrayList will always be the tail of the snake.</p>
+            <h3>Turning corners</h3>
+            <p>Suppose we have the snake in the following configuration, where snakeDirection = NORTH:
             </p>
 					<center>
 						<img style="width:300px" src="../../img/projects/borderSnake/snakeTurn.png">	
 					</center>
-            <p>In order to move the snake (read: give the illusion that the entire snake has moved), do we care that part of the snake is still turning? (Hint: No, we don't) Given this information, how do we move that single block that you selected in the previous part to move north, in the direction that the snake is facing?
+            <p>In order to move the snake, do we care that part of the snake is still turning? (Hint: No, we don't) Given this information, how do we move a single block to the right position on the Canvas?
             </p>
             <br>
             <p>
