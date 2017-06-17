@@ -1,0 +1,119 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                More Method Programs
+			</h1>
+			<p>
+                Written by Tyler Conklin
+								</br>
+								Based on past problems as created by Mehran Sahami, Keith Schwarz, Eric Roberts and others.
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+						These are bonus programs! They are meant to be challenging. They are not listed in order of difficulty, so choose whichever programs sound interesting!
+				</p>
+
+				<p>
+					Methods provide a service to other, higher-level parts of the program and therefore act as tools.  The run method can call subsidiary methods to accomplish parts of the overall task.  Those methods in turn call other methods that perform simpler operations, and so on.  The caller views the method in terms of the effect it accomplishes.  The method supplies all the details about how that operation is done.  By hiding the details of complex operations, methods simplify the conceptual structure of a program considerably and allow you as a programmer to view it at varying levels of detail.
+				</p>
+				<p>
+					The fundamental difference between methods in Karel and their counterparts in Java is that Java makes it possible for data to pass back and forth between the caller and the method.  Callers supply information to the method by supplying arguments; methods give information back to their callers by returning results.  The entire process of passing this data between the two levels is in many respects the most important issue for you to understand.
+				</p>
+				<p>
+					Arguments in the calling method are assigned to the corresponding formal parameters in the callee according to their position in the argument list.  Thus, the first argument is assigned to the first parameter name, the second to the second, and so on.  The names of the variables are completely irrelevant to this process.
+				</p>
+				<p>
+					Arguments are copied rather than shared.  If you change the value of a formal parameter, the corresponding actual argument—even if it is a variable with the same name—is unaffected.
+				</p>
+				<p>
+					The return statement causes a method to return immediately to its caller and also indicates the value to be returned as a result.
+				</p>
+				<p>
+					Methods can return values of any of the types you have encountered so far.  Most of you will have little trouble with methods that return numeric data because you are familiar with this concept.  For some reason, methods that return objects or Boolean data seem harder, although the basic idea is precisely the same.
+				</p>
+
+				<h2>
+					Fibonacci
+				</h2>
+				<p>
+					In the 13th century, the Italian mathematician Leonardo Fibonacci—as a way to explain the geometric growth of a population of rabbits—devised a mathematical sequence that now bears his name.  The first two terms in this sequence, Fib(0) and Fib(1), are 0 and 1, and every subsequent term is the sum of the preceding two.  Thus, the first several terms in the Fibonacci sequence look like this:
+					<center>
+						Fib(0)	=	0</br>
+						Fib(1)	=	1</br>
+						Fib(2)	=	1	(0 + 1)</br>
+						Fib(3)	=	2	(1 + 1)</br>
+						Fib(4)	=	3	(1 + 2)</br>
+						Fib(5)	=	5	(2 + 3)</br>
+					</center>
+					</br>
+        </p>
+				<p>
+					Write a program that displays the terms in the Fibonacci sequence. This will require writing a method that takes as a parameter, the value of the max term that should be printed. The run method has already been written:
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/moreMethods/fibonacciRun.png">
+					</center>
+					</br>
+					This would produce an output of:
+					<center>
+						<img style="height:400px" src="{{pathToRoot}}img/projects/moreMethods/fibonacciOutput.png">
+					</center>
+				</p>
+				</br>
+				<h2>
+					Centered Label
+				</h2>
+				<p>
+					Write a program that draws and centers a label. This label should be a parameter to a method. The Run method is already written for you:
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/moreMethods/centeredLabelRun.png">
+					</center>
+					</br>
+					This would produce an output like below:
+ 					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/moreMethods/centeredLabelOutput.png">
+					</center>
+       </p>
+				</br>
+				<h2>
+					Speedy Shopper
+				</h2>
+				<p>
+					Items on sale at a store are listed with the percent off for that item. For example, an item that originally costs 100 Turkish Lira at 25% off would cost 75 Turkish Lira. Write a program that calculates the cost of an on-sale item. Specifically, write a method that takes in a price, and the percent off for that item. This method should return the new price for that item. The Run method is already written for you:
+ 					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/moreMethods/speedyShopperRun.png">
+					</center>
+					</br>
+					This would produce an output like below:
+ 					<center>
+						<img style="height:50px" src="{{pathToRoot}}img/projects/moreMethods/speedyShopperOutput.png">
+					</center>
+        </p>
+				</br>
+
+			</div>
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>
