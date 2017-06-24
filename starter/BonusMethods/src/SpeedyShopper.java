@@ -14,6 +14,6 @@ public class SpeedyShopper extends ConsoleProgram {
 	}
 
 	private double calculatePrice(double originalPrice, double percentOff) {
-		return originalPrice * (1 - percentOff);
+		return 0;
 	}
 }
