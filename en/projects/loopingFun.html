@@ -1,0 +1,429 @@
+<head>
+
+<title>Intro to CS</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../style.css">
+
+<!-- Java Script -->
+<script src="../../plugins/jquery.min.js"></script>
+<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+
+<script src="../../karel/ace/ace.js" type="text/javascript"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+  </script>-->
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+<nav class="navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/">CS Bridge</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <!--<li ><a href="#">Link</a></li>-->
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<!--<li><a href="../../en/handouts/sections.html">Sections</a></li>-->
+	          	<li><a href="../../en/handouts/karel.html">Karel Reference</a></li>
+	          	<li><a href="../../en/handouts/submission.html">How to Submit Your Work</a></li>
+	          	
+	          	<li><a href="../../en/handouts/console.html">Console Reference</a></li>
+	          	<li><a href="../../en/handouts/random.html">Random Generator Reference</a></li>
+	          	<li><a href="../../en/handouts/graphics.html">Graphics Reference</a></li>
+	          	<li><a href="../../en/handouts/events.html">Events Reference</a></li>
+
+	          	
+	            <li><a href="../../en/handouts/arrayLists.html">Array Lists</a></li>
+	          	<!--
+	          	<li><a href="../../handouts/events.html">Events Reference</a></li>
+                <li><a href="../../projects/jsJSSyntax.html">JavaScript Syntax Reference</a></li>
+                <li><a href="../../handouts/htmlReference.html">HTML Reference</a></li>
+                <li><a href="../../handouts/uploadWebsite.html">Uploading a Website Reference</a></li>
+
+	          	<li><a href="../../handouts/whatsNext.html">Whats Next</a></li>
+	          	
+	          	
+	            <li><a href="../../handouts/operations.html">Operations</a></li>
+	            <li><a href="../../handouts/graphics.html">Graphics</a></li>
+	            <li><a href="../../handouts/passingData.html">Passing Data</a></li>-->
+	            
+	          </ul>
+	        </li>
+
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a></li>
+	          	<li><a href="../../en/projects/efes.html">Build Efes</a></li>
+	          	<li><a href="../../en/projects/mountain.html">Mountain Karel</a></li>
+	          	<li><a href="../../en/projects/randomPainter.html">Random Painter</a></li>
+	          	
+	          	<li class="divider"></li>
+	          	<li><a href="../../en/projects/sandcastles.html">Sandcastles</a></li>
+	          	<li><a href="../../en/projects/favoriteNumber.html">Favorite Number</a></li>
+	          	<li><a href="../../en/projects/medicine.html">Medicine</a></li>
+	          	<li><a href="../../en/projects/someSum.html">Some Sum</a></li>
+	          	<li><a href="../../en/projects/gameOfStones.html">Nimm</a></li>
+	          	
+
+	          	<li class="divider"></li>
+
+	          	<li><a href="../../en/projects/awesome.html">Programming is Awesome</a></li>
+	          	<li><a href="../../en/projects/stringArt.html">String Art</a></li>
+	          	<li><a href="../../en/projects/randomCircles.html">Random Circles</a></li>
+	            <li><a href="../../en/projects/bouncingBall.html">Bouncing Ball</a></li>
+
+	            <li class="divider"></li>
+	          	<li><a href="../../en/projects/madMethods.html">Mad Methods</a></li>
+	          	<li><a href="../../en/projects/target.html">Target</a></li>
+	          	<li><a href="../../en/projects/illusion.html">Optical Illusion</a></li>
+	          	<li><a href="../../en/projects/sunset.html">Short Film</a></li>
+
+	          	<li class="divider"></li>
+
+	          	<li><a href="../../en/projects/makingTracks.html">Making Tracks</a></li>
+	          	<li><a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a></li>
+	          	<li><a href="../../en/projects/breakout.html">Breakout</a></li>
+
+	          	<li class="divider"></li>
+
+	          	<li><a href="../../en/projects/sortedNumbers.html">Sorted Numbers</a></li>
+	          	<li><a href="../../en/projects/snow.html">Snow</a></li>
+	          	<li><a href="../../en/projects/mouseGame.html">The Line</a></li>
+	          	<li><a href="../../en/projects/music.html">Music</a></li>
+	          	<li><a href="../../en/projects/project.html">Final Project</a></li>
+	          	<!--
+	            <li><a href="../../projects/drawPeople.html">Three's a Crowd</a></li>
+	            
+	            <li><a href="../../projects/madLibs.html">Mad Libs</a></li>
+	            <li><a href="../../projects/secret.html">Secret</a></li>
+
+	     
+
+                <li class="divider"></li>
+	            
+	            <li><a href="../../projects/breakout.html">Breakout</a></li>
+	            
+	            
+	            <li><a href="../../projects/music.html">Waves of Sound</a></li>
+	        	
+	        	
+	            <li><a href="../../projects/project.html">Final Project</a></li>-->
+
+	            
+              
+	            
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../en/projects/stepUp.html">Step Up</a></li>
+	          	<li><a href="../../en/projects/place100.html">Place 100</a></li>
+	          	<li><a href="../../en/projects/beeperLine.html">Beeper Line</a></li>
+	          	<li><a href="../../en/projects/invert.html">Invert</a></li>
+	          	<li><a href="../../en/projects/unKarel.html">UN Karel</a></li>
+	          	<li class="divider"></li>
+	            <li><a href="../../en/projects/emc2.html">E=MC2</a></li>
+	            <li><a href="../../en/projects/fibb.html">Fibonacci</a></li>
+	           <!--<li><a href="../../en/projects/favoriteNumber.html">Favorite Number</a></li>-->
+	           <li><a href="../../en/projects/findPi.html">Find Pi</a></li>
+	           <li><a href="../../en/projects/8Ball.html">8-Ball</a></li>
+	           <li class="divider"></li>
+	           
+	            
+	            <li><a href="../../en/projects/robotFace.html">Robot Face</a></li>
+
+	            <li><a href="../../en/projects/mysterySquare.html">Mystery Square</a></li>
+
+	            <li><a href="../../en/projects/goCenter.html">Go To Center</a></li>
+
+	            <li><a href="../../en/projects/gravityBall.html">Gravity Ball</a></li>
+	            
+	          	<li class="divider"></li>
+
+	          	<li><a href="../../en/projects/averageMethod.html">Average Method</a></li>	
+	          	<li><a href="../../en/projects/drawPeople.html">Draw People</a></li>	
+
+	          	<li><a href="../../en/projects/halfGreen.html">Half Green</a></li>
+	          	<li><a href="../../en/projects/stringArtSoln.html">String Art Soln</a></li>	
+
+	          	<li class="divider"></li>
+	          	<li><a href="../../en/projects/stampTool.html">Stamp Tool</a></li>
+				<li><a href="../../en/projects/rocketShip.html">Rockets</a></li>
+
+	          	<!--<li><a href="../../en/projects/debrisSweeper.html">Debris Sweeper</a></li>	
+	          	<li><a href="../../en/projects/suchADrag.html">Such a Drag</a></li>-->
+	            <!--
+	              
+	             
+	             <li><a href="../../projects/stampTool.html">Stamp Tool</a></li>
+	            <li><a href="../../projects/snow.html">Snow</a></li>
+                 <li class="divider"></li>
+	            <li><a href="../../projects/breakoutOnline.html">Breakout Online</a></li>-->
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../slides/Welcome.pptx">Karel</a></li>
+	          	<li><a href="../../slides/ControlFlow.pptx">ControlFlow</a></li>
+	          	<li><a href="../../slides/Variables.pptx">Variables</a></li>
+	          	<li><a href="../../slides/Variables2.pptx">Variables2</a></li>
+	          	<li><a href="../../slides/Graphics.pptx">Graphics</a></li>
+	          	<li><a href="../../slides/Methods.pptx">Methods</a></li>
+	          	<li><a href="../../slides/Events.pptx">Events</a></li>
+	          	<li><a href="../../slides/ArrayLists.pptx">Array Lists</a></li>
+	          	<li><a href="../../slides/AI.pptx">AI</a></li>
+	          	<li><a href="../../slides/Classes.zip">Classes</a></li>
+	          	<!--<li><a href="../../slides/TheEnd.pptx">The End</a></li>-->
+	          	
+	          </ul>
+	        </li>
+
+	        <!-- <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extra Challenges <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../en/projects/isOdd.html">Is Odd</a></li>	
+	          	
+	          </ul>
+	        </li>-->
+
+
+	        <!--<li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Internet <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="https://www.dropbox.com/s/1jtjo9hde8in0xn/1-How%20the%20internet%20works.pptx">How the Internet Works</a></li>
+	          	<li><a href="https://www.dropbox.com/s/1t7pwltugsy4pxg/2-day-in-the-life-of-packet.pptx">Day in the Life of a Packet</a></li>
+	          	<li><a href="https://www.dropbox.com/s/1n0lzrl32urfsnr/3-How%20packets%20routed.pptx">How packets are routed in the Internet</a></li>
+	          	<li class="divider"></li>
+	          	<li><a href="http://yuba.stanford.edu/~huangty/dacka/lab1.html">Lab 1</a></li>
+	          	<li><a href="http://yuba.stanford.edu/~huangty/dacka/lab2.html">Lab 2</a></li>
+	          	<li class="divider"></li>
+	          	<li><a href="../../internet/echo.zip">Echo Client Code</a></li>
+	          	<li><a href="../../internet/2person-breakout.zip">2Person Breakout Code</a></li>
+
+	          	
+	          </ul>
+	        </li>-->
+
+	        <!--<li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Section<b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../projects/stepUp.html">Newspaper Karel</a></li>
+	          	<li><a href="../../projects/place100.html">Counterfit Drugs</a></li>
+	          	<li><a href="../../projects/beeperLine.html">Target</a></li>
+	          </ul>
+	        </li>-->
+
+	        <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bonus <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+                <li><a href="../../en/bonus-index.html">Bonus overview</a></li>
+	          </ul>
+	        </li>
+
+
+
+	      </ul>
+
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/english_flag.png"></img></a></li>
+	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
+	        
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tk/");
+		window.location.href = url;
+	}
+
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tk/", "/en/");
+		window.location.href = url;
+	}
+
+</script>
+
+
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Looping Fun
+			</h1>
+			<p>
+                Written by Lisa Yan
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+                These are practice programs to help you get familiar with loops in Java. They are ordered from easiest to hardest.
+				</p>
+                <h2>Loop refresher</h2>
+                <p>Recall the general structure of a for loop:
+<pre>
+for(int i = 0; i < 15; i++) {
+    // some code...
+}
+</pre>
+            <p>The loop above runs for 15 iterations. You can parse the meaning of a for loop from the first line:</p>
+            <ul>
+                <li>Create a counter <code>i</code> that starts at 0.</li>
+                <li>Every iteration of the for loop, check if <code>i < 15</code>.</li>
+                <li>If <code>i < 15</code>, run the code inside the loop. While running the loop code, you can use the value of <code>i</code>. So for example, the first time the loop runs, the value of <code>i</code> is zero.
+                <li>At the end of running the loop code, increment <code>i++</code>.</li>
+                <li>If <code>!(i < 15)</code>, exit the loop. So the last time the loop code runs, the value of <code>i</code> is 14, and <code>i</code> is incremented to 15. Then it fails the check for <code>i < 15 </code> and the loop code doesn't run.</li>
+            </ul>
+            <br>
+            <p><u><b>Caution!</b></u> It is very difficult to catch programming bugs in the loop condition! So we always suggest that you design the most basic loop, and increment the loop counter by one (that is, <code>i++</code>). And then don't change the value of the loop counter within the loop itself!</p>
+                <ul>
+                    <li>The following code will only run four times!!!  Do you see why?</li>
+<pre>
+// Don't do this! This is hard to debug!
+for(int i = 0; i < 10; i ++) {
+    i += 2; // bad!!!
+    println(i);
+}
+</pre>
+                    <li>A better way to do the above code:</li>
+<pre>
+// Uses another variable to keep the loop counter safe
+for(int i = 0; i < 10; i ++) {
+    int j = i + 2; // does not change the value of i
+    println(j);
+}
+</pre>
+                </ul>
+                <br>
+            <p>
+            The following exercises are all about using the for-loop counter <code>i</code>.
+            </p>
+
+                <h2>Looping Fun 1</h2>
+                <p>Try to produce the following output with a loop. Print the first ten odd numbers, starting from 1.</p>
+					<center>
+						<img style="width:500px;border:2px solid grey" src="../../img/projects/loopingFun/loopingfun1.png">	
+					</center>
+                    <p>Extension: Now try to print the first ten even numbers, starting from 0.</p>
+
+                <h2>Looping Fun 2</h2>
+                <p>Try to produce the following output with a loop. Print the first ten even numbers in decreasing order.</p>
+					<center>
+						<img style="width:700px;border:2px solid grey" src="../../img/projects/loopingFun/loopingfun2.png">	
+					</center>
+                <p>Can you solve this problem without changing the loop condition from the previous problem? That is, start from the following for loop code:</p>
+<pre>
+for(int i = 0; i < 10; i++) {
+    // some code...
+}
+</pre>
+                <p>How would you solve the problem by using the following loop condition?</p>
+<pre>
+for(int i = 0; i < 20; i++) {
+    // some code...
+}
+</pre>
+                </p>
+                <h2>Looping Fun 3</h2>
+                <p>Use a loop, but print out everything on a single line. Recall that <code>println()</code> adds a line break/new line, whereas <code>print()</code> does not.</p>
+                <p>Print out the squares, starting from 1.</p>
+					<center>
+						<img style="width:700px;border:2px solid grey" src="../../img/projects/loopingFun/loopingfun3.png">	
+					</center>
+                <p>Try avoiding a comma at the end of the last square!</p>
+                <h2>Looping Fun 4</h2>
+                <p>Time for nested for loops! Print out the coordinates of a 5x5 grid.</p>
+					<center>
+						<img style="width:500px;border:2px solid grey" src="../../img/projects/loopingFun/loopingfun4.png">	
+					</center>
+                <p>Hint: try the following code structure:</p>
+<pre>
+for(int i = 0; i < 5; i++) {
+    for(int j = 0; j < 5; j++) {
+        // some code...
+    }
+}
+</pre>
+
+                <h2>Additional practice: While loops</h2>
+                <p>Want more practice with while loops? Do all the above exercises with a while loop instead of a for loop. Good luck!</p>
+
+			</div>
+		</div>
+
+		
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+		&#169; Stanford 2017 &#124; Created by 
+		<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
+		Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
+	</p>
+	<!--<p class="pull-right">
+		<a href="../../fall12">Fall 2012</a>
+	</p>-->
+</div>
+<!--<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>-->
+
+	</div>
+</body>
