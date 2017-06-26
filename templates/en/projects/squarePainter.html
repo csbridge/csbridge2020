@@ -1,0 +1,74 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Square Painter
+			</h1>
+			<p>
+                Written by Lisa Yan
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+                This is a bonus program. It's meant to be a bit challenging!
+				</p>
+                    <p>Remember to use <b><u>methods</u></b> to organize your code!</p>
+                    <h2></h2>
+                <p>
+                Karel wants to make some real art. Help her fill in any rectangular world with alternating squares of blue and green.
+                </p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/squarePainter/5x5.png">	
+					</center>
+                    <br>
+
+                <p><b><u>Note</u></b>: You might have to use some extra logic for this problem. You will learn more about this logic tomorrow.</p>
+                <p>To check the opposite of any conditional, use the "bang," commonly known as the exclamation point:</p>
+<pre>
+// checks that the corner you are on is NOT a certain color
+if (!cornerColorIs(color)) {
+    ...
+}
+</pre>
+<br>
+
+                <p>Karel should be able to paint any type of rectangular world:</p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/squarePainter/8x8.png">	
+					</center>
+                    <br>
+                    <p>Even non-square rectangles are within Karel's realm of artistic talent:</p>
+					<center>
+						<img style="width:400px" src="{{pathToRoot}}img/projects/squarePainter/16x20.png">	
+					</center>
+                    <br>
+                    <p>It doesn't matter where Karel ends up once she's finished; she just wants to maximize her artistic expression.</p>
+
+
+
+
+			</div>
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

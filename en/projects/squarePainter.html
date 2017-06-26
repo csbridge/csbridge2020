@@ -292,16 +292,10 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-                Checkerboard Karel
+                Square Painter
 			</h1>
 			<p>
-                Written by Tyler Conklin
-								</br>
-								Based on past editions of this assignment as created by Mehran Sahami, Keith Schwarz, Eric Roberts, and others.
-			</p>
-			<p>
-				Handouts:
-                <a href ="../../en/handouts/karel.html">Karel Reference</a><br/>
+                Written by Lisa Yan
 			</p>
 
 		</div>
@@ -310,36 +304,44 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-						This is a bonus program! It's meant to be challenging.
+                This is a bonus program. It's meant to be a bit challenging!
 				</p>
-				<p>
-					Program Karel to create a checkerboard pattern of beepers inside an empty rectangular world. If Karel starts in a world as shown below...
-                    <p>
+                    <p>Remember to use <b><u>methods</u></b> to organize your code!</p>
+                    <h2></h2>
+                <p>
+                Karel wants to make some real art. Help her fill in any rectangular world with alternating squares of blue and green.
+                </p>
 					<center>
-						<img style="width:300px;border:2px solid grey" src="../../img/projects/checkerboardKarel/checkerboardKarelStart.png">	
+						<img style="width:300px" src="../../img/projects/squarePainter/5x5.png">	
 					</center>
-                    </p>
-                    <p>...then the world should end up looking like this.</p>
-                    <p>
- 					<center>
-						<img style="width:300px;border:2px solid grey" src="../../img/projects/checkerboardKarel/checkerboardKarelFinish.png">	
-					</center>
-                    </p>
-                    <p>
-					 Note that where Karel finishes, as well as which direction Karel is facing at the finish, does not matter.
-        </p>
+                    <br>
 
-				<p>
-					Please ensure that your solution works with different sized worlds. For example, your solution should work for worlds with only one column or only one row. Your solution should also work for worlds that are not perfectly square.
-				</p>
-				</br>
-				<p>
-					Remember that you may only use Karel syntax and can not use Java variables. As you think about your solution, keep in mind all of the different sized worlds you could encounter. Be sure to test on these different worlds after you have completed your first attempt at a solution!
-				</p>
+                <p><b><u>Note</u></b>: You might have to use some extra logic for this problem. You will learn more about this logic tomorrow.</p>
+                <p>To check the opposite of any conditional, use the "bang," commonly known as the exclamation point:</p>
+<pre>
+// checks that the corner you are on is NOT a certain color
+if (!cornerColorIs(color)) {
+    ...
+}
+</pre>
+<br>
+
+                <p>Karel should be able to paint any type of rectangular world:</p>
+					<center>
+						<img style="width:300px" src="../../img/projects/squarePainter/8x8.png">	
+					</center>
+                    <br>
+                    <p>Even non-square rectangles are within Karel's realm of artistic talent:</p>
+					<center>
+						<img style="width:400px" src="../../img/projects/squarePainter/16x20.png">	
+					</center>
+                    <br>
+                    <p>It doesn't matter where Karel ends up once she's finished; she just wants to maximize her artistic expression.</p>
+
+
 
 
 			</div>
-
 		</div>
 
 		
