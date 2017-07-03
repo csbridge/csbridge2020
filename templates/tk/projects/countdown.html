@@ -1,0 +1,116 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Countdown
+			</h1>
+			<p>
+                Written by Lisa Yan
+			</p>
+			<p>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+                    This is a bonus program! It's meant to be a bit challenging, but completing this program will definitely help you write your final project.
+                </p>
+                <p>
+                    Write a GraphicsProgram that displays a timer counting down from ten, once a second, and displays a message once the timer hits zero.
+                </p>
+            <h2> Setup the timer</h2>
+            <p>
+            To implement this timer, we will need both a logical representation and a visual representation of our countdown value, which are given by two class variables:
+            </p>
+			<div class="well"><code>
+                private GLabel countdownLabel; // display of timer value<br>
+                private int countdown; // actual timer value
+			</code></div>
+            <p>
+            Choose a large font for your timer, and start by displaying the starting time (TOTAL_TIME) on the screen. You can convert integers to strings by adding the following method to your code:
+            </p>
+<pre>public String formatIntToString(int x) {
+    return "" + x;
+}</pre>
+            
+            Your starting canvas should look something like this (I used the font Consolas with size 200):
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/countdown/countdown10.png">	
+					</center>
+
+            <h2>Implement the countdown</h2>
+            <p>
+            Write your animation loop which updates both the logical and visual countdown representations every second.<br>
+            Do not add new GLabels! Just keep changing the text of the old one using GLabel's method <code>setLabel()</code>.
+            </p>
+			<div class="well"><code>
+            // Sets countdownLabel's text to be "hello world"<br>
+            countdownLabel.setLabel("hello world");
+			</code></div>
+
+            <p>Remember that delay is counted in milliseconds, and we want the timer to operate by the second.</p>
+
+
+            <h2>Formatting your timer</h2>
+            <h3>Zero-padding</h3>
+            <p>Since this is a timer, we want to <i>zero-pad</i> our numbers, which means adding a zero to the front of a number so that it stays the same width. How would you update the visual representation of your countdown timer to display the following?</p>
+            <p>Hint: Make your changes to <code>formatIntToString()</code>.</p>
+			<center>
+				<img style="width:500px" src="{{pathToRoot}}img/projects/countdown/countdown03.png">	
+			</center>
+            <h3>Fixed-width fonts</h3>
+            <p>Depending on your choice of font, your timer might still not align, even after zero-padding. This is something that a lot of graphics-oriented programmers struggle with! Make sure you are picking a fixed-width font, where each character/digit is the same width. Common examples are Consolas, Monaco, and Courier.
+            </p>
+
+            <h2>Finishing up</h2>
+            <p>
+            Once the timer hits zero, display a message. It can be anything!
+            </p>
+			<center>
+				<img style="width:500px" src="{{pathToRoot}}img/projects/countdown/timesUp.png">	
+			</center>
+
+
+            <h2>Bonus: Add minutes</h2>
+            <p>Now add minutes to your countdown display, so that the timer reads 1:00, 0:59, 0:58, and so on.</p>
+            <p>
+            General guidelines:
+            </p>
+            <ul>
+                <li>Try to keep a <i>single variable</i> that records your remaining time in seconds. Avoid tracking minutes and seconds separately.</li>
+                <li>Separate your single variable into minutes and seconds when you display the counter. Consider defining methods to make your logic very clear.</li>
+                <li>To debug quickly, speed up your timer by reducing the pause time.</li>
+                <li>Remember the "mod" function! Example: <code>5 % 2 = 1</code></li>
+            </ul>
+            <p>Bonus bonus: How would you add milliseconds? The display convention is: 1:03.234.</p>
+
+
+
+
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

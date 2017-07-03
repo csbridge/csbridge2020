@@ -1,0 +1,87 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Border Snake
+			</h1>
+			<p>
+                Written by Lisa Yan
+			</p>
+			<p>
+				Handouts:
+                <a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a><br/>
+				<a href ="{{pathToRoot}}en/handouts/arrayLists.html">ArrayLists</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+                    This is a bonus program! It's meant to be a bit challenging, but completing this program will definitely help you write your final project.
+                </p>
+                <p>
+                    Write a GraphicsProgram that moves a snake counter-clockwise around the border of the canvas.
+                </p>
+					<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/borderSnake/borderSnake.gif">	
+					</center>
+                </p>
+            <h2>BorderBox</h2>
+            <p>
+            This exercise assumes that you have completed BorderBox. A lot of the logic is similar (there's only one additional trick), so it really helps to know the general problem setup.
+            If you haven't completed BorderBox yet, go implement it and come back.
+            </p>
+
+            <h2>Hints and tricks</h2>
+            <ul>
+                <li>Use ArrayLists!</li>
+                <li>When moving the snake, you don't need to move every single block in the snake. In fact, you just need to move one block! Think about which block you would move to give the illusion of the entire snake moving.</li>
+                </ul>
+            <h3>Invariants</h3>
+            <p>In this program, as hinted above, you only need to move a single block to give the illusion that your entire snake has moved. Every time the snake moves, different blocks in the ArrayList now represent the new head and tail of the snake. How do you reliably access the head of your snake in your program?</p>
+            <p>One option you have is to define a logical <i>invariant</i> that the head of your snake will always be the 0th position of your ArrayList. An <i>invariant</i> is a computer science term that refers to something that can always assumed to be true. While there is no exact coding analogy, having this logical understanding will help the coder proceed through their program. The below code helps translate the logical invariant into the coding you need to do:</p>
+			<div class="well"><code>
+                snake.remove(block); // the GRect you moved<br>
+                snake.add(0, block); // becomes the new head
+			</code></div>
+            <p>Note that defining this invariant will also help you figure out which position of the ArrayList will always be the tail of the snake.</p>
+            <h3>Turning corners</h3>
+            <p>Suppose we have the snake in the following configuration, where snakeDirection = NORTH:
+            </p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/borderSnake/snakeTurn.png">	
+					</center>
+            <p>In order to move the snake, do we care that part of the snake is still turning? (Hint: No, we don't) Given this information, how do we move a single block to the right position on the Canvas?
+            </p>
+            <br>
+            <p>
+            Congratulations, you now have a moving snake! :)</p>
+
+
+
+
+
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

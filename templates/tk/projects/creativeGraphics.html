@@ -1,0 +1,56 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+			Creative Graphics
+			</h1>
+			<p>
+            Written by Lisa Yan
+			</p>
+			<p>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a>
+				<br/>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+                This is a bonus program!
+                </p>
+                <p>
+                Write a GraphicsProgram that does anything you want!!! Here is an example of something you can make.
+				</p>
+				<p>
+					<center>
+						<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/creativeGraphics/example.gif">	
+					</center>
+				</p>
+            <p>Here is a Karel to help you out.</p>
+			<center>
+						<img style="width:80px" src="{{pathToRoot}}img/projects/creativeGraphics/karel.png">	
+            </center>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

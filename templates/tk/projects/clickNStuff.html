@@ -1,0 +1,145 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Click N' Stuff
+			</h1>
+			<p>
+                Written by Lisa Yan
+			</p>
+			<p>
+				Handouts:
+                <a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a><br/>
+				<a href ="{{pathToRoot}}en/handouts/events.html">Events Reference</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+                    This is a bonus program! It's meant to be a bit challenging, but completing this program will definitely help you write your final project.
+                </p>
+                <p>
+                Write GraphicsPrograms that do some animation after the user clicks.
+                </p>
+            <h2>Part one: Pausing the English alphabet</h2>
+            <p>In <code><b>ClickNPause.java</b></code>, write a GraphicsProgram that loops through the English alphabet (from A to Z). Also add functionality so that when the user clicks somewhere on the screen, a "pausing..." label shows up where the user clicked.
+					<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/clickNStuff/character.gif">	
+			</center>
+                </p>
+            <p>
+            General guidelines:
+            </p>
+            <ul>
+                <li>Use a 100 millisecond or less delay between each alphabet character.</li>
+                <li>Add a 1 second pause after each user click.</li>
+                <li>Start with animating numbers before the alphabet to establish your main animation loop.</li>
+                <li>Add a <code>pausing...</code> label that shows up where the user clicked.</li>
+            </ul>
+            <p>
+            <h3>Animating the characters</h3>
+            <p>Since we are animating letters and not integers, we should keep track of a <code>char</code> class variable. 
+            A <code>char</code> is a single character long (so it's different from String, which can be multiple characters). To set a GLabel's text to a single character:
+            </p>
+			<div class="well"><code>
+                char c = 'c';<br>
+                label.setLabel(c + "");
+			</code></div>
+            <p>The benefit of using a <code>char</code> over a String is that each character has a unique numeric representation representation, using something we call ASCII. So if we converted the character <code>A</code> to an integer:</p>
+			<div class="well"><code>
+                System.out.println((int) 'A'); // returns 65
+			</code></div>
+            <p>Likewise, the numeric representation of <code>Z</code> is <code>65 + 26 - 1 = 90</code>. The <code>char</code> to <code>int</code> mapping is decided by the <a href ="http://ascii.cl/">ASCII Codes</a>.</p>
+            <p>Use this insight to devise a method for looping through the letters A through Z, then loop back to A again.
+
+            <h3>Event Flags</h3>
+            <p>Add a mouse listener so that when a user clicks, the counter temporarily stops incrementing, and "pausing..." sign shows up at the location that the user clicked. After one second, the "pausing..." sign should go away and the counter should continue incrementing.</p>
+			<center>
+				<img style="width:300px" src="{{pathToRoot}}img/projects/clickNStuff/pauseCharacter.png">	
+			</center>
+            <br>
+            <p><b>It will be difficult to implement this all in <code>mouseClicked()</code>!!!</b> You cannot pause inside a listener method like <code>mouseClicked()</code> or <code>mouseMoved()</code>, because these methods are designed to act quickly. Instead, you need to use <i>Event Flags</i>.</p>
+
+            <p>A <b>flag</b> is a boolean variable that the programmer sets to <code>true</code> when an event happens, and is set back to <code>false</code> when the event ends. In practice, a programmer sets event flags to true in mouse listeners, checks if they are true in the main animation loop, and then does some action after it sees the flag is turned on. Here is an example of a main animation loop that also checks a flag:</p>
+
+            <div class="well"><code><pre>private boolean eventFlag = false;
+public void run() {
+    while(true) {
+        if (eventFlag) {
+            doSomethingSpecial();
+            eventFlag = false; // reset the flag once you're done
+        }
+        doSomethingNormal();
+        pause(DELAY);
+    }
+}
+
+public void mouseMoved(MouseEvent e) {
+    eventFlag = true; // turn on the flag
+}</pre></code></div>
+            <p>With this newfound knowledge, finish up part one.</p>
+
+            <h2>Part two: The Amazing Jumping Karel</h2>
+            <p>In <code><b>ClickNJump.java</b></code>, implement a program where Karel (below) moves side to side forever. When the user clicks, Karel jumps high, lands, and continues moving side to side.
+            </p>
+			<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/clickNStuff/karelJump.gif">	
+            </center>
+
+            <p>
+            General guidelines:
+            </p>
+            <ul>
+                <li>Save the Karel png to the <code>src</code> folder where your java files are located. You can find your project location by going to Eclipse, right-clicking on the project folder, and selecting "Properties."</li>
+                <li>Refresh the folder in Eclipse until you see <code>karel.png</code> visible in the Project Explorer.</li>
+                <li>Karel should move smoothly, so about once every 50 milliseconds (or even more frequently).</li>
+            </ul>
+            <p>Guidelines for jumping:</p>
+            <ul>
+                <li>The total jump should last two seconds.</li>
+                <li>While Karel is jumping, she should not be able to restart the jump.</li>
+                <li>Start by having Karel jump vertically up and down, constant velocity.</li>
+                <li>Then, consider adding in gravity. What should your starting velocity be?</li>
+                <li>Finally, add horizontal movement as Karel is jumping.</li>
+            </ul>
+
+            <p>Here are some images of Karel to help you out.</p>
+			<center>
+						<img style="width:80px" src="{{pathToRoot}}img/projects/clickNStuff/karel.png">	
+						<img style="width:80px" src="{{pathToRoot}}img/projects/clickNStuff/karelFlipped.png">	
+            </center>
+
+
+            <h2>Part three: The Amazing Anything Karel</h2>
+            <p>Modify your Karel program to do crazy things!!</p>
+
+
+
+
+
+
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

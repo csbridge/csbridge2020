@@ -1,0 +1,90 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Border Box
+			</h1>
+			<p>
+                Written by Lisa Yan
+			</p>
+			<p>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+                    This is a bonus program! It's meant to be a bit challenging, but completing this program will definitely help you write your final project.
+                </p>
+                <p>
+                    Write a GraphicsProgram that moves a box counter-clockwise around the border of the canvas.
+					<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/borderBox/borderBox.gif">	
+					</center>
+                </p>
+            <h2>BorderKarel</h2>
+            <p>
+            Before we start with the Java version, let's write the Karel version. Implement the Karel version in BorderKarel.java. Remember that Karel always starts out in the bottom-left; move him counter-clockwise around the border of the map. Make him move forever!
+            </p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/borderBox/borderKarel.png">	
+					</center>
+
+            <h2>BorderBox</h2>
+            <p>Now open BorderBox.java. Copy over your border-moving code from BorderKarel. <b>Remember to rename move() to moveBox()</b>, as you will need to define moveBox().</p>
+            <p>Instead of Karel, we now have a box (a GRect), represented by the following two variables:</p>
+			<div class="well"><code>
+                private GRect box;<br>
+                private int boxDirection = EAST; // starting direction
+			</code></div>
+            <h2>Box Setup</h2>
+            <p>Make the box by implementing the method makeBox(). Like Karel, start him off in the bottom-left of the canvas.</p>
+			<center>
+				<img style="width:300px" src="{{pathToRoot}}img/projects/borderBox/boxSetup.png">	
+			</center>
+
+            <h2>Move eastward</h2>
+            <p>For the time being, let's get our box moving a bit! Set frontIsClear() to always return true for now (it currently always returns false) so that we can just test our box moving in one direction.</p>
+            <p>Implement moveBox() similar to the Karel functionality; that is, move one step in the direction that the box is facing. Our lovely box starts out facing east, so implement moveBox to move just one step to the right. Make sure it moves SQUARE_LENGTH + SQUARE_GAP!
+            </p>
+            <p>Now implement frontIsClear() so that our box stops when it reaches the rightmost wall.
+            </p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/borderBox/boxMove.png">	
+					</center>
+            <h2>Move along the border</h2>
+            <p>You're almost there! In order to move along the border, we need to implement turnLeft(), and also extend our frontIsClear() and moveBox() to handle different directions.</p>
+            <p>Start by implementing turnLeft(). Hint: you should only be changing the boxDirection; you shouldn't see anything happen visually to the box, since it's a square and exhibits rotational symmetry.</p>
+            <p>Finally, implement moveBox() and frontIsClear(), depending on which direction the box is facing. Again, remember to move the box SQUARE_LENGTH + SQUARE_GAP!
+            </p>
+            
+
+
+
+
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

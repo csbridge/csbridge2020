@@ -1,0 +1,117 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Console Bonus Programs
+			</h1>
+			<p>
+                Written by Tyler Conklin
+								</br>
+								Based on past problems as created by Mehran Sahami, Keith Schwarz, Eric Roberts, Marty Stepp, and others.
+			</p>
+			<p>
+				Handouts:
+                <a href ="{{pathToRoot}}en/handouts/console.html">Console Reference</a><br/>
+                <a href ="{{pathToRoot}}en/handouts/random.html">Random Generator Reference</a><br/>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+						These are bonus programs! They are meant to be challenging. They are not listed in order of difficulty, so choose whichever programs sound interesting!
+				</p>
+				<h2>
+					Piglet
+				</h2>
+				<p>
+					Write a console program for a 1-player dice game called "Piglet", based on the game "Pig". The player's goal is to get as many points as possible without rolling a 1. Each turn, the player rolls the die; if they roll a 1, the game ends and the player gets a score of 0. If the player rolls any number besides a 1, that number is added to their score. The player then chooses whether to roll again or end the game with his or her current score. Two sample game outputs are shown below.
+					<center>
+						Welcome to Piglet!</br>
+						You rolled a 5!</br>
+						Roll again? yes</br>
+						You rolled a 4!</br>
+						Roll again? yes</br>
+						You rolled a 1!</br>
+						You got 0 points.</br>
+					</center>
+					</br>
+ 					<center>
+						Welcome to Piglet!</br>
+						You rolled a 6!</br>
+						Roll again? yes</br>
+						You rolled a 2!</br>
+						Roll again? yes</br>
+						You rolled a 2!</br>
+						Roll again? no</br>
+						You got 10 points.</br>
+					</center>
+        </p>
+				</br>
+				<h2>
+					Conversion
+				</h2>
+				<p>
+					America uses a confusing measurement system where units of length are measured in inches, feet, yards, and miles. There are twelve inches in a foot, and three feet in a yard. However when doing scientific measurements it is important to use centimeters, meters, and kilometers since these units of measurement are used worldwide and actually make sense. Write a program that converts from centimeters to inches given that there are 2.54 centimeters = 1 inch. Below is some sample output from the program. 
+					<center>
+						This program can convert centimeters to inches</br>
+						Enter cm: 2.54</br>
+						2.54 centimeters equals 1.0 inches</br>
+						Enter cm: 68</br>
+						68.0 centimeters equals 26.771653543307085 inches</br>
+						Enter cm: 100</br>
+						100.0 centimeters equals 39.37007874015748 inches</br>
+					</center>
+					</br>
+					You can now write a program to convert any kind of units that you want!
+        </p>
+				</br>
+				<h2>
+					Fizzbuzz
+				</h2>
+				<p>
+					Fizzbuzz is a classic coding problem. Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers that are multiples of both three and five print “FizzBuzz”. Below is some sample output for the first 16 numbers.
+					<center>
+						1</br>
+						2</br>
+						Fizz</br>
+						4</br>
+						Buzz</br>
+						Fizz</br>
+						7</br>
+						8</br>
+						Fizz</br>
+						Buzz</br>
+						11</br>
+						Fizz</br>
+						13</br>
+						14</br>
+						FizzBuzz</br>
+						16</br>
+					</center>
+        </p>
+				</br>
+
+			</div>
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

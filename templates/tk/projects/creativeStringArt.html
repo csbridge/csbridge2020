@@ -1,0 +1,56 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+			Creative String Art
+			</h1>
+			<p>
+            Written by Lisa Yan
+			</p>
+			<p>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a>
+				<br/>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+                This is a bonus program!
+                </p>
+                <p>
+                Write a GraphicsProgram that extends the String Art you wrote in <a href="{{pathToRoot}}en/projects/stringArt.html">String Art</a>. This time, add four curves to the canvas.
+				</p>
+				<p>
+					<center>
+						<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/creativeStringArt/corners.png">	
+					</center>
+				</p>
+            <h2>Extension</h2>
+            <p>Make your own cool string art!!!</p>
+					<center>
+						<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/creativeStringArt/customFancy.png">	
+					</center>
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>

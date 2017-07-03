@@ -1,0 +1,128 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Looping Fun
+			</h1>
+			<p>
+                Written by Lisa Yan
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+                These are practice programs to help you get familiar with loops in Java. They are ordered from easiest to hardest.
+				</p>
+                <h2>Loop refresher</h2>
+                <p>Recall the general structure of a for loop:
+<pre>
+for(int i = 0; i < 15; i++) {
+    // some code...
+}
+</pre>
+            <p>The loop above runs for 15 iterations. You can parse the meaning of a for loop from the first line:</p>
+            <ul>
+                <li>Create a counter <code>i</code> that starts at 0.</li>
+                <li>Every iteration of the for loop, check if <code>i < 15</code>.</li>
+                <li>If <code>i < 15</code>, run the code inside the loop. While running the loop code, you can use the value of <code>i</code>. So for example, the first time the loop runs, the value of <code>i</code> is zero.
+                <li>At the end of running the loop code, increment <code>i++</code>.</li>
+                <li>If <code>!(i < 15)</code>, exit the loop. So the last time the loop code runs, the value of <code>i</code> is 14, and <code>i</code> is incremented to 15. Then it fails the check for <code>i < 15 </code> and the loop code doesn't run.</li>
+            </ul>
+            <br>
+            <p><u><b>Caution!</b></u> It is very difficult to catch programming bugs in the loop condition! So we always suggest that you design the most basic loop, and increment the loop counter by one (that is, <code>i++</code>). And then don't change the value of the loop counter within the loop itself!</p>
+                <ul>
+                    <li>The following code will only run four times!!!  Do you see why?</li>
+<pre>
+// Don't do this! This is hard to debug!
+for(int i = 0; i < 10; i ++) {
+    i += 2; // bad!!!
+    println(i);
+}
+</pre>
+                    <li>A better way to do the above code:</li>
+<pre>
+// Uses another variable to keep the loop counter safe
+for(int i = 0; i < 10; i ++) {
+    int j = i + 2; // does not change the value of i
+    println(j);
+}
+</pre>
+                </ul>
+                <br>
+            <p>
+            The following exercises are all about using the for-loop counter <code>i</code>.
+            </p>
+
+                <h2>Looping Fun 1</h2>
+                <p>Try to produce the following output with a loop. Print the first ten odd numbers, starting from 1.</p>
+					<center>
+						<img style="width:500px;border:2px solid grey" src="{{pathToRoot}}img/projects/loopingFun/loopingfun1.png">	
+					</center>
+                    <p>Extension: Now try to print the first ten even numbers, starting from 0.</p>
+
+                <h2>Looping Fun 2</h2>
+                <p>Try to produce the following output with a loop. Print the first ten even numbers in decreasing order.</p>
+					<center>
+						<img style="width:700px;border:2px solid grey" src="{{pathToRoot}}img/projects/loopingFun/loopingfun2.png">	
+					</center>
+                <p>Can you solve this problem without changing the loop condition from the previous problem? That is, start from the following for loop code:</p>
+<pre>
+for(int i = 0; i < 10; i++) {
+    // some code...
+}
+</pre>
+                <p>How would you solve the problem by using the following loop condition?</p>
+<pre>
+for(int i = 0; i < 20; i++) {
+    // some code...
+}
+</pre>
+                </p>
+                <h2>Looping Fun 3</h2>
+                <p>Use a loop, but print out everything on a single line. Recall that <code>println()</code> adds a line break/new line, whereas <code>print()</code> does not.</p>
+                <p>Print out the squares, starting from 1.</p>
+					<center>
+						<img style="width:700px;border:2px solid grey" src="{{pathToRoot}}img/projects/loopingFun/loopingfun3.png">	
+					</center>
+                <p>Try avoiding a comma at the end of the last square!</p>
+                <h2>Looping Fun 4</h2>
+                <p>Time for nested for loops! Print out the coordinates of a 5x5 grid.</p>
+					<center>
+						<img style="width:500px;border:2px solid grey" src="{{pathToRoot}}img/projects/loopingFun/loopingfun4.png">	
+					</center>
+                <p>Hint: try the following code structure:</p>
+<pre>
+for(int i = 0; i < 5; i++) {
+    for(int j = 0; j < 5; j++) {
+        // some code...
+    }
+}
+</pre>
+
+                <h2>Additional practice: While loops</h2>
+                <p>Want more practice with while loops? Do all the above exercises with a while loop instead of a for loop. Good luck!</p>
+
+			</div>
+		</div>
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>
