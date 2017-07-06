@@ -41,6 +41,7 @@
 			</div>
 		</div>
 		
+<!--
 		<div class="row">
 			<div class="col-md-12">
 				<h2>Solution</h2>
@@ -50,28 +51,13 @@
 
 	private static final int SIZE = 50;
 	
-	private GRect stamp = new GRect(SIZE, SIZE);
-	
 	public void run() {
-		stamp.setColor(Color.BLUE);
-		stamp.setFilled(true);
-		add(stamp);
-		addMouseListeners();
 	}
 	
 	public void mouseClicked(MouseEvent e) {
-		int x = e.getX() - SIZE / 2;
-		int y = e.getY() - SIZE / 2;
-		
-		GRect r = new GRect(SIZE, SIZE);
-		r.setFilled(true);
-		add(r, x, y);
 	}
 	
 	public void mouseMoved(MouseEvent e) {
-		int x = e.getX() - SIZE / 2;
-		int y = e.getY() - SIZE / 2;
-		stamp.setLocation(x, y);
 	}
 }</pre>
     
@@ -86,9 +72,10 @@
     /*editor.setTheme("ace/theme/eclipse");
     editor.getSession().setMode("ace/mode/java");*/
 </script>
+	
 	</div>
 	</div>
-		
+	-->	
 		%include templates/parts/footer.html
 
 	</div>
