@@ -1,0 +1,96 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Sorted Numbers
+			</h1>
+			<p>
+				Written by Chris Piech
+			</p>
+			<p>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/arrayLists.html">ArrayLists</a>
+				<br/>
+				Examples:
+				<a href ="{{pathToRoot}}en/projects/rocketShip.html">Rockets</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Ask the user to under 10 numbers, then print thoses numbers in sorted order.</p>
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/sorted/demo.png">	
+					</center>
+				</p>
+
+				<p>
+					Store the numbers that the user entered in an ArrayList. You can sort the content of an ArrayList using:
+					<pre>Collections.sort(<i>arrayList</i>);</pre>
+
+					Calling sort re-orders the elements in the array passed in. For example calling sort on the following array has the given result:
+				</p>
+				<p>
+					<center>
+						<img style="width:400px" src="{{pathToRoot}}img/projects/sorted/sorting.png">	
+					</center>
+				</p>
+
+				<h2>Hints</h2>
+
+				<p>
+					To create an array list of numbers use:
+					<pre>ArrayList&lt;Integer> myList = new ArrayList&lt;Integer>();</pre>
+				</p>
+				<br/>
+				<p>
+					Recall that you can read an intenger from the user using:
+					<pre>int number = readInt(<i>prompt</i>);</pre>
+				</p>
+				<br/>
+
+				<p>
+					To add an element to a list:
+					<pre>myList.add(<i>newValue</i>);</pre>
+				</p>
+				<br/>
+				<p>
+					To get an element from a list:
+					<pre>myList.get(<i>index</i>);</pre>
+				</p>
+				<br/>
+				<p>
+					To loop over all elements in a list:
+					<pre>for(int i = 0; i < myList.size(); i++) {
+    myList.get(i);
+}</pre>
+				</p>
+			</div>
+		</div>
+
+		
+
+		
+
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>
