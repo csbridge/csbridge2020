@@ -1,4 +1,4 @@
-from util.bottle.bottle import SimpleTemplate
+from plugins.bottle.bottle import SimpleTemplate
 
 import os.path
 
@@ -6,7 +6,6 @@ IGNORE_DIRS = [
     'parts'
 ]
 TEMPLATE_DIR = 'templates'
-HTML_DIR = ''
 
 class Compiler(object):
 
@@ -27,15 +26,13 @@ class Compiler(object):
     def compileTemplate(self, relativePath):
         print(relativePath)
         pathToRoot = self.getPathToRoot(relativePath)
-        templateFilePath = os.path.join(TEMPLATE_DIR, relativePath)
-        htmlFilePath = os.path.join(HTML_DIR, relativePath)
-        templateText = open(templateFilePath).read()
+        filePath = os.path.join(TEMPLATE_DIR, relativePath)
+        templateText = open(filePath).read()
         compiledHtml = SimpleTemplate(templateText).render(pathToRoot = pathToRoot)
+        self.makePath(relativePath)
         fileName, fileExtension = os.path.splitext(relativePath)
-
-        self.makePath(htmlFilePath)
         compiledHtml = compiledHtml.encode('utf8')
-        open(htmlFilePath, 'wb').write(compiledHtml)
+        open(relativePath, 'wb').write(compiledHtml)
 
     def makePath(self, path):
         dirPath = os.path.dirname(path)
