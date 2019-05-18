@@ -2,19 +2,17 @@
 
 When making a new course, please use this repository as a template.
 
-1. Clone this repository.
+1. Create a new repository under the ```csbridge``` GitHub, e.g. ```csbridge2019koc```.
 
-    ```git clone git@github.com:csbridge/csbridge.github.io.git```
+1. Clone this repository and add it as an upstream.
 
-2. Create a new repository under the ```csbridge``` GitHub, e.g. ```csbridge2019koc```.
+    ```
+    git clone <new repository csbridge2019koc>
+    git remote add upstream <master repository, csbridge.github.io>
+    git pull upstream master # update your fork
+    git push origin master # push new fork back into GitHub
+    ```
 
-3. Change the ```origin``` on your local repo to point to this new GitHub repo. Then push to GitHub.
-
-    ```git remote origin remove```
-
-    ```git remote add origin <ssh or html repo link>```
-
-    ```git push origin master```
 
 4. Enable GitHub pages on your new repo:
 
