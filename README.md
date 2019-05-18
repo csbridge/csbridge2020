@@ -11,7 +11,9 @@ When making a new course, please use this repository as a template.
 3. Change the ```origin``` on your local repo to point to this new GitHub repo. Then push to GitHub.
 
     ```git remote origin remove```
+
     ```git remote add origin <ssh or html repo link>```
+
     ```git push origin master```
 
 4. Enable GitHub pages on your new repo:
@@ -24,7 +26,7 @@ When making a new course, please use this repository as a template.
 
     4. Fill in the 'Custom domain' field with your desired custom domain (e.g., koc.csbridge.org). Note that this automatically populates the CNAME file in ```docs/CNAME```. Do not delete this.
 
-        Note: If you do not have a custom domain, contact the domain manager. We can create this on our Domain manager (steps to create ```koc``` subdomain: (1) go to DNS management, (2) add a CNAME record with domain ```koc``` and value ```csbridge.github.io```)
+        Note: If you do not have a custom domain, contact the domain manager. We can create this on our Domain manager (If you are a domain manager, here are steps to create the ```koc``` subdomain: (1) go to DNS management, (2) add a CNAME record with domain ```koc``` and value ```csbridge.github.io```)
 
 
 5. Now you can update the website!
