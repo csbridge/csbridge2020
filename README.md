@@ -11,7 +11,7 @@ When making a new course, please use this repository as a template.
 3. Change the ```origin``` on your local repo to point to this new GitHub repo. Then push to GitHub.
 
     ```git remote origin remove```
-    ```git remote add origin <ssh or html repo link```
+    ```git remote add origin <ssh or html repo link>```
     ```git push origin master```
 
 4. Enable GitHub pages on your new repo:
