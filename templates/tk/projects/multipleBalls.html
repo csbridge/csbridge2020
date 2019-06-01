@@ -15,16 +15,17 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-                Multiple Balls
+				Birkaç Top
 			</h1>
 			<p>
-                Written by Tyler Conklin
-								</br>
+				<br>
+					Yazan Tyler Conklin
+				</br>
 			</p>
 			<p>
-				Handouts:
-                <a href ="{{pathToRoot}}en/handouts/random.html">Random Generator Reference</a><br/>
-                <a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a><br/>
+				Ders Notları:
+				<a href ="{{pathToRoot}}tk/handouts/random.html">Rasgele Sayı Üreticisi Referansı</a><br/>
+				<a href ="{{pathToRoot}}tk/handouts/graphics.html">Grafik Referansı</a><br/>
 			</p>
 
 		</div>
@@ -33,22 +34,21 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-						This is a bonus program! It's meant to be challenging.
+					Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır, ancak bu egzersizi tamamlamak kesinlikle Final Projenize yardımcı olacaktır.
 				</p>
-				<p>
-					Write a program that animates two different balls bouncing around the canvas. If a ball hits off of a wall, it should bounce back in the opposite direciton. The two balls can also bounce off of each other. An example is shown in the below gif.
+				<p> Ekran üzerinde seken iki topun olduğu bir program yazın. Eğer bir top herhangi bir duvara çarparsa ters yöne doğru sekmelidir.Toplar ayrıca birbirlerine çarparak da sekebilmelidir. Aşağıdaki "gif" örnek bir animasyonu göstermektedir.
 					<center>
 						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/multipleBalls/multipleBalls.gif">	
 					</center>
-					In this run, the width of each ball is 50 pixels, but feel free to use whichever numbers you would like. Note that when creating the balls it is important to give the balls different, random velocities and starting X,Y positions. Refer to the random generator reference linked above for help generating random values.
+					Bizim örneğimizde topların genişliği 50 pikseldi fakat siz istediğiniz bir genişlik kullanabilirsiniz. Topları yaratırken başlangıç konum, yön ve hızlarının rastgele seçilmesini sağlayın. Rastgele sayılar üretmek için yukarıdaki ders notları linklerinden faydalanabilirsiniz.
         </p>
 				<p>
-					When computer scientists tackle a large problem, it helps to break it down into smaller steps. One way to break this problem down would be:
+					Bilgisayar bilimciler büyük bir problemle karşı karşıya kaldıklarında, bu problemi küçük parçalara ayırmak işe yarar. Bu egzersizi de küçük aşamalara ayırmak için aşağıdaki emsal aşamalara bir göz gezdirin:
 					<ul>
-						<li>To start, add two balls to the screen with different, random positions.</li>
-						<li>Get the balls to move with random velocities.</li>
-						<li>Get the balls to start bouncing off the walls correctly. Remember that you can get the X position of a GOval ball by calling ball.getX() (same thing goes for the Y position). </li>
-						<li>Have the balls bounce off of each other. For this part, the getElementAt method, shown below, will be useful.</li>
+						<li>Başlangıç olarak ekrana rastgele konumlarda iki top ekleyin.</li>
+						<li>Topları rastgele hızlarda hareket ettirmeye başlayın.</li>
+						<li>Topların duvarlardan sekmesini sağlayın. Dikkat: Bir GOval objesinin X koordinatını öğrenmek için ball.getX() metodunu kullanabilirsiniz (aynı yöntemle Y koordinatını da bulabilirsiniz). </li>
+						<li>Topların birbirlerinden de sekmelerini sağlayın. Bunun için getElementAt metodu, aşağıda gösterilmektedir, kullanışlı olacaktır.</li>
 					</ul>
 				</p>
 				<center> 

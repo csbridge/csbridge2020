@@ -15,17 +15,17 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Sorted Numbers
+				Sıralayıcı
 			</h1>
 			<p>
-				Written by Chris Piech
+				Yazan: Chris Piech
 			</p>
 			<p>
-				Handouts:
-				<a href ="{{pathToRoot}}en/handouts/arrayLists.html">ArrayLists</a>
+				Ders Notları:
+				<a href ="{{pathToRoot}}tk/handouts/arrayLists.html">ArrayLists</a>
 				<br/>
-				Examples:
-				<a href ="{{pathToRoot}}en/projects/rocketShip.html">Rockets</a>
+				Örnekler:
+				<a href ="{{pathToRoot}}tk/projects/rocketShip.html">Roketler</a>
 			</p>
 
 		</div>
@@ -33,8 +33,7 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<p>
-					Ask the user to under 10 numbers, then print thoses numbers in sorted order.</p>
+				<p>Kullanıcıdan 10 sayı vermesini isteyin ve bu sayıları sıralı olarak yazdırın.</p>
 				<p>
 					<center>
 						<img style="width:500px" src="{{pathToRoot}}img/projects/sorted/demo.png">	
@@ -42,10 +41,10 @@
 				</p>
 
 				<p>
-					Store the numbers that the user entered in an ArrayList. You can sort the content of an ArrayList using:
+					Kullanıcının verdiği sayıları ArrayList kullanarak saklayın. Bir ArrayList içinde bulunan sayıları sıralamak için:
 					<pre>Collections.sort(<i>arrayList</i>);</pre>
 
-					Calling sort re-orders the elements in the array passed in. For example calling sort on the following array has the given result:
+					"sort" metodunun çağırmak verilen array içindeki sayıları yeniden sıralar. Örnek olarak aşağıdaki array'in sıralanmasını inceleyebilirsiniz:
 				</p>
 				<p>
 					<center>
@@ -53,31 +52,31 @@
 					</center>
 				</p>
 
-				<h2>Hints</h2>
+				<h2>İpuçları</h2>
 
 				<p>
-					To create an array list of numbers use:
+					Sayılardan oluşan bir ArrayList yaratmak için:
 					<pre>ArrayList&lt;Integer> myList = new ArrayList&lt;Integer>();</pre>
 				</p>
 				<br/>
 				<p>
-					Recall that you can read an intenger from the user using:
+					Kullanıcıdan bir tam sayı almak için:
 					<pre>int number = readInt(<i>prompt</i>);</pre>
 				</p>
 				<br/>
 
 				<p>
-					To add an element to a list:
+					Bir listeye yeni bir eleman eklemek için:
 					<pre>myList.add(<i>newValue</i>);</pre>
 				</p>
 				<br/>
 				<p>
-					To get an element from a list:
+					Bir listedeki elemanları almak için:
 					<pre>myList.get(<i>index</i>);</pre>
 				</p>
 				<br/>
 				<p>
-					To loop over all elements in a list:
+					Bir listedeki elemanlar arasında döngü kurabilmek için:
 					<pre>for(int i = 0; i < myList.size(); i++) {
     myList.get(i);
 }</pre>
