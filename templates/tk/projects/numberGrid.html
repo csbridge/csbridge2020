@@ -15,14 +15,14 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-                Number Grid
+				Sayı Şebekesi
 			</h1>
 			<p>
-            Written by Lisa Yan
+				Yazan: Lisa Yan
 			</p>
 			<p>
-				Handouts:
-				<a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a>
+				Ders Notları:
+				<a href ="{{pathToRoot}}tk/handouts/graphics.html">Grafik Referansı</a>
 				<br/>
 			</p>
 
@@ -31,44 +31,40 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<p>
-                This is a bonus program! It's meant to be a bit difficult.
-                </p>
-                <p>
-                Write a GraphicsProgram that draws a centered, numbered square grid on the screen.
-                </p>
+				<p>Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır, ancak bu egzersizi tamamlamak kesinlikle Final Projesnize yardımcı olacaktır.</p>
+				<p>Ekranın ortasına sayılarla işaretlenmiş karelerden oluşan bir desen oluşturan bir GraphicsProgram yazın.</p>
 				<p>
 					<center>
 						<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/numberGrid/grid25.jpg">	
 					</center>
 				</p>
-                <p>Your program should be able to handle different sizes of the grid:</p>
+                <p>Programınız farklı boyutlardaki desenleri de çizebiliyor olmalıdır:</p>
 				<p>
 					<center>
 						<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/numberGrid/grid36.jpg">	
 					</center>
 				</p>
-            <h2>Guidelines</h2>
-            <p>Start by making a grid that starts at position (0,0):</p>
+            <h2>Yönergeler</h2>
+            <p>(0,0) pozisyonundan başlayan bir desen oluşturun:</p>
 				<p>
 					<center>
 						<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/numberGrid/grid25notcentered.jpg">	
 					</center>
 				</p>
-            <p>Once you've made the above image, think about how to center the grid.</p>
-            <p>Hints and tips:</p>
+            <p>Yukarıdaki görüntüdekine benzer bir desen oluşturduktan sonra bu deseni nasıl ortalayabileceğinizi düşünün.</p>
+            <p>İpuçları:</p>
             <ul>
-                <li>Use at least two methods: one that takes in the overall size (5-by-5), and one that draws an individual square.</li>
-                <li>You will need to use a nested for loop to draw all the squares!</li>
-                <li>To draw and label an individual square, you will need the <code>(i, j)</code> location in the grid, as well as the total width (in squares, not pixels) of the grid (e.g., 5 for a 5x5 grid). These values are essential for determining the location of the square on the canvas.</li>
-                <li>My squares have a width of 50 pixels. The gap between each square is 10 pixels.</li>
-                <li>GLabel tips:</li>
+                <li>En az iki metot yazmış olun: bir tanesi genel boyutu girdi olarak alsın (5x5), diğeri de her bir küçük kareyi çizsin.</li>
+                <li>Tüm kareleri çizebilmek için iç içe döngüler kullanmanız gerekecek!</li>
+                <li>Her bir kareyi çizebilmek ve üzerine sayı ekleyebilmek için desen içindeki <code>(i, j)</code> lokasyon bilgisini tutmanız gerekecek. Buna ek olarak genel boyutları (kare sayısı cinsinden) da tutmanız gerekecektir. Bu değerler yeni karenin ekranın neresine çizilmesi gerektiğini saptamak için çok değerli olacaktır.</li>
+                <li>Bizim karelerimizin genişliği 50 piksel ve her bir kare arasındaki uzaklık 10 piksel.</li>
+                <li>GLabel ipucu:</li>
                 <ul>
-                    <li>To make a GLabel with numerical text, use <code>new GLabel(x + "")</code>, where <code>x</code> is an integer or double.</li>
-                    <li>The location of a GLabel object is the <i>bottom-left</i> of the label.</li>
-                    <li>I used "Helvetica-30" as the font size for my labels.</li>
-                    <li>Start by positioning the label in the top left of each square.</li>
-                    <li>Once you are confident, first center the GLabel horizontally in each square. Then center the GLabel horizontally. Recall that the height of a GLabel can be gotten using <code>label.getAscent()</code>.</li>
+                    <li>Sayısal metinler içeren GLabel objesi yaratmak için <code>new GLabel(x + "")</code> ifadesini kullanabilirsiniz (<code>x</code> bir tam sayı ya da "double" olabilir).</li>
+                    <li>Bir GLabel objesinin lokasyonu <i>sol-alt</i> köşesinden ölçülür.</li>
+                    <li>Yazı tipi olarak biz "Helvetica-30" kullandık.</li>
+                    <li>Yazılarınızı karenin sol üst köşesinde konumlandırarak başlayabilirsiniz.</li>
+                    <li>Hazır hissettiğinizde GLabel ongelerinizi her bir karenin içinde dikey olarak ortalamaya çalışın. Daha sonra yatay olarak ortalayın. Bir GLabel objesinin yüksekliği <code>label.getAscent()</code> ifadesi ile bulunabilir.</li>
                 </ul>
             </ul>
 		</div>

@@ -18,7 +18,7 @@
 				WeatherBug
 			</h1>
 			<p>
-				Created by Nick Troccoli and Bryce Cronkite-Ratcliff
+				Yazan: Nick Troccoli ve Bryce Cronkite-Ratcliff
 			</p>
 
 
@@ -28,7 +28,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				
-				<p>If you've ever used weather.com or another weather site to look up the weather, you know how useful (and cool!) it is to be able to look up the weather online for both your current location and any location around the world.  And, as it turns out, it's also a great way to learn about and practice JavaScript callbacks!  In this assignment, you're going to complete a website that, using JavaScript, fetches and displays weather for any place the user types in, or the user's current location.</p>
+				<p>Daha önce hiç weather.com veya benzeri bir siteden hava durumuna baktıysanız, o halde çevrimiçi olarak bulunduğunuz konumun veya dünya üzerindeki herhangi bir yerin hava durumunu öğrenmenin ne kadar kullanışlı (ve havalı!) olduğunu biliyorsunuzdur. Ayrıca bu siteler JavaScript becerilerinizi pratik etmek ve geliştirmek için de çok değerli fırsatlar! Bu egzersizde JavaScript kullanarak kullanıcının belirttiği veya bulunduğu konumun hava durumunu gösteren bir web sitesi yapacaksınız.</p>
 				
 				<p>
 					<center>
@@ -36,36 +36,34 @@
 
 					</center>
 				</p>
-				<p>We know you're all GRect and GLabel ninjas - therefore, we've done all of the graphics code for you!  What we want you to do is write all of the callbacks to make the website work properly.  We suggest you break this down into milestones, and get each milestone working before moving on.</p>
+				<p>GRect ve GLabel konusunda yeteri kadar pratik yaptığınızı biliyoruz. Bu sebeple gerekli grafikleri sizin için hazırladık! Sizden istediğimiz şey ise sayfayının doğru çalışması için gereken tüm "callback" fonksiyonlarını yazmanız. Bu projeyi aşamalara bölmeniz ve aşama aşama ilerlemenizi öneririz.</p>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Milestone 1: Buttons</h2>
-				<p>
-					The first task you should tackle is getting your website's button callbacks working properly.  Your page should have two buttons - "Show Weather" and "Show Local Weather".</p>
+				<h2>Aşama 1: Butonlar</h2>
+				<p>İlk aşama olarak web sitenizin buton fonksiyonlarını çalışır hale getireceksiniz. Sayfanızda iki adet buton bulunmalı. Bunlar "Hava Durumunu Göster" ve "Yerel Hava Durumunu Göster" olmalı.</p>
 
-				<p>
 					<center>
 						<img style="width:450px" src="{{pathToRoot}}img/projects/weatherbug/buttons.png">
 
 					</center>
 				</p>
 				
-				<p>To add buttons to the screen, use the <b>addButton()</b> method of <b>GraphicsApp</b>.  <b>addButton()</b> takes 2 parameters - the text the button should display, and the function callback that should be executed when the button is clicked.</p>
+				<p>Ekrana buton eklemek için <b>GraphicsApp</b> metodunun <b>addButton()</b> fonksiyonunu kullanabilirsiniz. <b>addButton()</b> fonksiyonu 2 girdi alır. Bunlar buton üzerinde yazacak yazı ve buton tıklandığında çağırılacak fonksiyonlardır.</p>
 
-				<p>Remember that when you want to pass a function as a callback, you type the name of the function <i>without parentheses</i>.</p>
+				<p>Unutmayın! Bir fonksiyonu "callback" olarak çağırmak istediğinizde, fonksiyonun ismini <i>parantezler olmadan</i> kullanırsınız.</p>
 				
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Milestone 2: The "Show Weather" Button</h2>
-				<p>Now that you have your buttons set up, it's time to tackle the first of the two buttons - fetching weather for a place the user types in.  You can get the text the user typed in the text field from the value property of your text field variable.  Otherwise, there are only 2 GraphicsApp functions you'll need for this milestone: <b>fetchWeatherForQuery()</b> and <b>displayErrorMessage()</b>.  Your website should fetch the 7-day forecast for the place the user typed in.  If the fetch is successful, you should display the weather data that you get back.  Note that the success callback function should take one parameter - the weather data.</p>
+				<h2>Aşama 2: "Hava Durumunu Göster" Butonu</h2>
+				<p>Buton oluşturabildiğinize göre, artık ilk gerçek butonumuzu sayfaya ekleyebiliriz. "Hava Durumunu Göster" butonu kullanıcının girdiği konumdaki hava durumunu ekrana getirir. Kullanıcının metin kısmına girdiği metni elde etmek için metik alanının "value" özelliğinden faydalanabilirsiniz. Onun dışında bu aşama için sadece 2 GraphicsApp fonksiyonuna ihtiyaç duyacaksınız: <b>fetchWeatherForQuery()</b> ve <b>displayErrorMessage()</b>.  Web sayfanız kullanıcının girdiği konumdaki 7 günlük hava tahmini verisini ekrana getirmelidir. Veri çekme işlemi başarılı olursa bu veriyi ekrana yansıtmalısının. Dikkat: "success callback" fonksiyonu tek bir girdi kabul eder - hava durumu verisi.</p>
 
-				<p>Remember, when fetching data from the web, the request could fail for a variety of reasons.  That's why you need to pass an error callback when fetching weather data.  If the fetch does fail, you should display an error message to the user using <b>displayStatusMessage()</b>.</p>
+				<p>Web üzerinden veri çekerken sorgunuzun çeşitli sebeplerden başarısız olabileceğini unutmayın. Bu sebeple hava durumu verisi çekerken "error callback" değeri kullanmalısınız. Çağırma işleme başarısız olursa kullanıcıya alınan hata bilgisini <b>displayStatusMessage()</b> fonksiyonunu kullanarak göstermelisiniz.</p>
 			</div>
 		</div>
 
@@ -73,12 +71,12 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Milestone 3: The "Show Local Weather" Button</h2>
-				<p>Now let's tackle the second button - fetching weather for the user's current location.  Instead of getting the text the user entered, you should instead fetch the user's current location coordinates (latitude and longitude).  Getting the current location requires a callback, because it takes a long time to locate the user!  That callback function should take 2 parameters - the latitude and longitude.</p>
+				<h2>Aşama 3: "Yerel Hava Durumunu Göster" Butonu</h2>
+				<p>Haydi şimdi de ikinci butonu halladelim. Bu sefer yerel hava durumu bilgisini çekeceğiz. Kullanıcının girdiği metin yerine kullanıcının koordinat bilgilerini almalısınız. Kullanıcı konumunu almak başka bir "callback" gerektiri çünkü kullanıcının yerini belirlemek zaman alan bir iştir! Bu "callback" fonksiyonu 2 parametre kabul eder: Enlem ve Boylam.</p>
 
-				<p>Once you get the user's location, your website should again fetch the 7-day forecast for the place the user typed in, but this time using <b>fetchWeatherForCoodinates()</b>.  If the fetch is successful, you should display the weather data that you get back.  Note that the success callback function should take one parameter - the weather data.</p>
+				<p>Kullanıcının konum bilgisini aldıktan sonra web sayfanız bu konumun hava durumu verisini çekmeli ve ekrana getirmelidir. Bu sefer <b>fetchWeatherForCoodinates()</b> fonksiyonunu kullanmalısınız. Dikkat: "success callback" fonksiyonu bu sefer tek bir parametre kabul etmelidir - hava durumu verisi.</p>
 
-				<p>Again, remember that, when fetching data from the web, the request could always fail for a variety of reasons.  That's why you need to pass a second callback when fetching weather data.  If the fetch does fail, you should display an error message to the user using <b>displayStatusMessage()</b>.
+				<p>Tekrardan hatırlatalım! Veri çekme işlemi çeşitli sebeplerden dolayı başarısız olabilir. Bu sebeple veri çekerken ikinci bir "callback" kullanmalısınız.  Çağırma işleme başarısız olursa kullanıcıya alınan hata bilgisini <b>displayStatusMessage()</b> fonksiyonunu kullanarak göstermelisiniz</b>.
 			</div>
 		</div>
 
@@ -86,8 +84,8 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Extensions</h2>
-				<p>Now that you've finished the callbacks portion, try extending the WeatherBug graphics!  For example, try adding day names to the screen when the weather is displayed.  The weather data that you get back has a dayName property that is the day that weather is for.  Try displaying another label for each day that displays the name of the day.</p>
+				<h2>Ekstra Aşama</h2>
+				<p>"callback" fonksiyonlarını bitirdiğinize göre WeatherBug grafiklerini geliştirmeyi deneyin! Örneğin, veri ekranda gösterilirken gün bilgisini de gösterebilirsiniz. Çektiğiniz veride tahminin hangi güne ayit olduğunu gösteren "dayName" alanı bulunmaktadır. Her bir günü ayrı ayrı göstermeyi deneyin.</p>
 
 				<p>
 					<center>

@@ -15,18 +15,18 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Sandcastles
+				Kumdan Kaleler
 			</h1>
 
 			<p>
-				Handouts: 
-				<a href ="{{pathToRoot}}tk/handouts/console.html">Console</a>,
-				<a href ="{{pathToRoot}}tk/handouts/random.html">Random Generator</a>
+				Ders Notları: 
+				<a href ="{{pathToRoot}}tk/handouts/console.html">Konsol Referansı</a>,
+				<a href ="{{pathToRoot}}tk/handouts/random.html">Rasgele Sayı Üreticisi Referansı</a>
 		`<br/>
-				Worked Examples: 
+				Çalışılan Örnekler: 
 				<a href="{{pathToRoot}}tk/projects/emc2.html">E=MC2</a>,
 				<a href="{{pathToRoot}}tk/projects/fibb.html">Fibbonacci</a>,
-				<a href="{{pathToRoot}}tk/projects/carbonDating.html">Carbon Dating</a>
+				<a href="{{pathToRoot}}tk/projects/carbonDating.html">Karbon Tarihi Saptama</a>
 			</p>
 
 		</div>
@@ -35,11 +35,11 @@
 		<div class="row">
 			<div class="col-md-12">
 
-				<p>Write the following three programs to get warmed up to Java variabels.</p>
+				<p>Aşağıdaki üç programı yazarak Java değişkenleri konusunda egzersiz yapabilirsiniz.</p>
 				
-				<h2>1. Hello world</h2>
+				<h2>1. Merhaba Dünya</h2>
 				<p>
-					Write a console program that displays hello world (or any message you like):
+					Ekrana "Merhaba Dünya" (ya da istediğiniz herhangi bir mesaj) yazan bir konsol programı yazın:
 				</p>
 				<p>
 					<center>
@@ -49,8 +49,8 @@
 
 				<hr/>
 
-				<h2>2. Moon Weight</h2>
-				<p>The user (an earthling) enters his or her weight on earth. Your program will print the user`s weight on the moon, which is 16.5% of his or her weight on earth.</p>
+				<h2>2. Ay'daki ağırlığım</h2>
+				<p>Kullanıcı (Dünya'lı) kaç kilogram olduğu bilgisini girer. Sizin programınız da bu bilgi ile kullanıcının Ay üzerinde kaç kilogram olacağı (Dünya ağırlığının %16,5'i) bilgisini ekrana yansıtır.</p>
 
 				<p>
 					<center>
@@ -59,9 +59,9 @@
 				</p>
 
 
-				<h2>3. Random Numbers</h2>
+				<h2>3. Rastgele Sayılar</h2>
 				<p>
-					Write a program that prints 1,000 random numbers between 0 and 100.
+					0 ile 100 arasında 1000 tane rastgele sayı üretip bu sayıları ekrana yazdıran bir program yazın.
 				</p>
 				<p>
 					<center>
@@ -69,25 +69,26 @@
 					</center>
 				</p>
 
-				<p>The file RandomNumbers.java has code that generates a single random number.
+				<p>RandomNumbers.java dosyası içinde rastgele sayı üreten örnek kodu bulabilirsiniz.
 					<pre id="editor" style="height:200px">public class RandomNumbers extends ConsoleProgram {
-	
-   // A random number generator
-   private RandomGenerator rgen = new RandomGenerator();
+							
+						// A random number generator
+						private RandomGenerator rgen = new RandomGenerator();
 
-   public void run() {
-      // change this code to print 1000 random numbers
-      // in the range 0 to 100.	
-      int example = rgen.nextInt(0, 10);
-      println(example);	
-   }
-}</pre>
+						public void run() {
+							// change this code to print 1000 random numbers
+							// in the range 0 to 100.	
+							int example = rgen.nextInt(0, 10);
+							println(example);	
+						}
+						}
+					</pre>
 				</p>
 
-				<p>In order to generate random numbers create a RandomGenerator instance variable (a variable declared outside all methods) like so:
+				<p>Rastgele bir sayı üretmek için RandomGenerator değişkeni yaratın (tüm metotların dışında yaratılmış bir değişken):
 					<div class="well"><code>private RandomGenerator rgen = new RandomGenerator();</code></div>
 				</p>
-				<p>You can then use the variable to generate random numbers.
+				<p>Sonrasında bu değişkeni kullanarak yeni sayılar elde edebilirsiniz.
 					<div class="well"><code>
 						rgen.nextInt(<i>min</i>, <i>max</i>)  //generates a random int in the range (min, max) inclusive
 					</code></div>

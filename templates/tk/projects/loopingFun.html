@@ -15,11 +15,11 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-                Looping Fun
-			</h1>
-			<p>
-                Written by Lisa Yan
-			</p>
+                Eğlenceli Döngüler
+            </h1>
+            <p>
+                Yazan: Lisa Yan
+            </p>
 
 		</div>
 		<hr/>
@@ -27,97 +27,98 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-                These are practice programs to help you get familiar with loops in Java. They are ordered from easiest to hardest.
-				</p>
-                <h2>Loop refresher</h2>
-                <p>Recall the general structure of a for loop:
-<pre>
-for(int i = 0; i < 15; i++) {
-    // some code...
-}
-</pre>
-            <p>The loop above runs for 15 iterations. You can parse the meaning of a for loop from the first line:</p>
+                    Bu egzersizde Java döngülerini pratik etmenizi saylayacak programlar verilmiştir. Programlar kolaydan zora doğru sıralı olarak verilmiştir.
+                </p>
+                <h2>Döngüleri Hatırlayalım</h2>
+                <p>For döndüsünün genel yapısını hatırlayalım:
+                <pre>
+                    for(int i = 0; i < 15; i++) {
+                    // some code...
+                    }
+                <pre>
+
+            <p>Yukarıdaki döngü 15 kez tekrarlanmaktadır. İlk satırdan döndünün ne anlama geldiğini çıkartabilirsiniz:</p>
             <ul>
-                <li>Create a counter <code>i</code> that starts at 0.</li>
-                <li>Every iteration of the for loop, check if <code>i < 15</code>.</li>
-                <li>If <code>i < 15</code>, run the code inside the loop. While running the loop code, you can use the value of <code>i</code>. So for example, the first time the loop runs, the value of <code>i</code> is zero.
-                <li>At the end of running the loop code, increment <code>i++</code>.</li>
-                <li>If <code>!(i < 15)</code>, exit the loop. So the last time the loop code runs, the value of <code>i</code> is 14, and <code>i</code> is incremented to 15. Then it fails the check for <code>i < 15 </code> and the loop code doesn't run.</li>
+                <li>Sıfırdan başlayan <code>i</code> isminde bir sayaç yaratın.</li>
+                <li>Her turda <code>i < 15</code> ifadesi doğru mu diye bakın.</li>
+                <li>Eğer <code>i < 15</code> ise döngünün içindeki kodu çalıştırın. Döngü kodunu kullanırken <code>i</code> değişkeninin değerini kullanabilirsiniz. Örneğin döngünün ilk turunda <code>i</code> değişkeninin değer sıfırdır.
+                <li>Döngü kodunun sonunda <code>i++</code> ifadesi ile değişkenin değerini 1 arttırın.</li>
+                <li>Eğer <code>!(i < 15)</code> ise döngüden çıkın. Dolayısıyla döngü kodunun çalıştığı son turda <code>i</code> değişkeninin değeri 14'tür ve sonunda 15'e yükseltilecektir. Böylece <code>i < 15 </code> kontrolünden geçemeyecek ve kod çalışmayacaktır.</li>
             </ul>
             <br>
-            <p><u><b>Caution!</b></u> It is very difficult to catch programming bugs in the loop condition! So we always suggest that you design the most basic loop, and increment the loop counter by one (that is, <code>i++</code>). And then don't change the value of the loop counter within the loop itself!</p>
-                <ul>
-                    <li>The following code will only run four times!!!  Do you see why?</li>
-<pre>
-// Don't do this! This is hard to debug!
-for(int i = 0; i < 10; i ++) {
-    i += 2; // bad!!!
-    println(i);
-}
-</pre>
-                    <li>A better way to do the above code:</li>
-<pre>
-// Uses another variable to keep the loop counter safe
-for(int i = 0; i < 10; i ++) {
-    int j = i + 2; // does not change the value of i
-    println(j);
-}
-</pre>
+            <p><u><b>Dikkat!</b></u> Döngü koşullarında programlama hatalarını ("bug") bulmak çok zordur! Dolayısıyla her zaman en basit döngüleri kullanmanızı ve sayacı 1 arttırmanızı (<code>i++</code>) öneririz. Ayrıca sayacın değerini döngü kodu içerisinde de değiştirmemeye önem gösterim!</p>
+            <ul>
+                <li>Aşağıdaki kod sadece 4 defa çalışacaktır!!! Nedenini görebiliyor musunuz?</li>
+            <pre>
+                // Don't do this! This is hard to debug!
+                for(int i = 0; i < 10; i ++) {
+                    i += 2; // bad!!!
+                    println(i);
+                }
+            </pre>
+                    <li>Yukarıdaki işlemi yapmanın daha güzel bir yolu:</li>
+            <pre>
+            // Uses another variable to keep the loop counter safe
+            for(int i = 0; i < 10; i ++) {
+                int j = i + 2; // does not change the value of i
+                println(j);
+            }
+            </pre>
                 </ul>
                 <br>
             <p>
-            The following exercises are all about using the for-loop counter <code>i</code>.
+                Aşağıdaki egzersizlerin tamamı for döngüsünün sayacı <code>i</code> ile alıştırmaları kapsamaktadır.
             </p>
 
-                <h2>Looping Fun 1</h2>
-                <p>Try to produce the following output with a loop. Print the first ten odd numbers, starting from 1.</p>
-					<center>
-						<img style="width:500px;border:2px solid grey" src="{{pathToRoot}}img/projects/loopingFun/loopingfun1.png">	
-					</center>
-                    <p>Extension: Now try to print the first ten even numbers, starting from 0.</p>
+            <h2>Eğlenceli Döngüler 1</h2>
+            <p>Aşağıdaki çıktıyı bir döngü kullanarak oluşturmaya çalışın. 1'den başlayarak ilk 10 tek sayıyı yazdırın.</p>
+            <center>
+                <img style="width:500px;border:2px solid grey" src="{{pathToRoot}}img/projects/loopingFun/loopingfun1.png">	
+            </center>
+            <p>Bonus: Şimdş de 0'dan başlayarak ilk 10 çift sayıyı yazdırın.</p>
 
-                <h2>Looping Fun 2</h2>
-                <p>Try to produce the following output with a loop. Print the first ten even numbers in decreasing order.</p>
-					<center>
-						<img style="width:700px;border:2px solid grey" src="{{pathToRoot}}img/projects/loopingFun/loopingfun2.png">	
-					</center>
-                <p>Can you solve this problem without changing the loop condition from the previous problem? That is, start from the following for loop code:</p>
-<pre>
-for(int i = 0; i < 10; i++) {
-    // some code...
-}
-</pre>
-                <p>How would you solve the problem by using the following loop condition?</p>
-<pre>
-for(int i = 0; i < 20; i++) {
-    // some code...
-}
-</pre>
-                </p>
-                <h2>Looping Fun 3</h2>
-                <p>Use a loop, but print out everything on a single line. Recall that <code>println()</code> adds a line break/new line, whereas <code>print()</code> does not.</p>
-                <p>Print out the squares, starting from 1.</p>
-					<center>
-						<img style="width:700px;border:2px solid grey" src="{{pathToRoot}}img/projects/loopingFun/loopingfun3.png">	
-					</center>
-                <p>Try avoiding a comma at the end of the last square!</p>
-                <h2>Looping Fun 4</h2>
-                <p>Time for nested for loops! Print out the coordinates of a 5x5 grid.</p>
-					<center>
-						<img style="width:500px;border:2px solid grey" src="{{pathToRoot}}img/projects/loopingFun/loopingfun4.png">	
-					</center>
-                <p>Hint: try the following code structure:</p>
-<pre>
-for(int i = 0; i < 5; i++) {
-    for(int j = 0; j < 5; j++) {
-        // some code...
-    }
-}
-</pre>
+            <h2>Eğlenceli Döngüler 2</h2>
+            <p>Aşağıdaki çıktıyı bir döngü kullanarak oluşturmaya çalışın. ilk 10 çift sayıyı azalan şekilde yazdırın.</p>
+            <center>
+                <img style="width:700px;border:2px solid grey" src="{{pathToRoot}}img/projects/loopingFun/loopingfun2.png">	
+            </center>
+            <p>Bir önceki döngüde kullandığınız koşu değiştirmeden bu problemi de çözebilir misiniz? Yani bu egzersiz için aşağıdaki kod ile başlayın:</p>
+            <pre>
+            for(int i = 0; i < 10; i++) {
+                    // some code...
+            }
+            </pre>
+            <p>Peki bu problemi aşağıdak döngü koşulu ile nasıl çözerdiniz?</p>
+            <pre>
+            for(int i = 0; i < 20; i++) {
+                    // some code...
+            }
+            </pre>
+            </p>
+            <h2>Eğlenceli Döngüler 3</h2>
+            <p>Bir döngü kullanın fakat bütük çıktıyı tek bir satırda yazdırın. <code>println()</code> her seferinde "line break/new line" (yeni satır) eklemektedir. Oysa <code>print()</code> böyle şeyler yapmak.</p>
+            <p>1'den başlayarak kareleri yazdırın.</p>
+            <center>
+                <img style="width:700px;border:2px solid grey" src="{{pathToRoot}}img/projects/loopingFun/loopingfun3.png">	
+            </center>
+            <p>Son kareden sonra virgün koymamaya çalışın!</p>
+            <h2>Eğlenceli Döngüler 4</h2>
+            <p>Artık iç içe döngülere geçebiliriz! 5'e 5'lik bir haritanın koordinatlarını yazdırın.</p>
+            <center>
+                <img style="width:500px;border:2px solid grey" src="{{pathToRoot}}img/projects/loopingFun/loopingfun4.png">	
+            </center>
+            <p>İpucu: Aşağıdaki kod yapısını deneyin:</p>
+            <pre>
+            for(int i = 0; i < 5; i++) {
+                    for(int j = 0; j < 5; j++) {
+                            // some code...
+                    }
+            }
+            </pre>
 
-                <h2>Additional practice: While loops</h2>
-                <p>Want more practice with while loops? Do all the above exercises with a while loop instead of a for loop. Good luck!</p>
-
+            <h2>Ek egzersiz: While Döngüleri</h2>
+            <p>Biraz da while döngüsü mü çalışmak istiyorsunuz? Yukarıdaki alıştırmaların tamamını while döngüsü kullanarak yapmayı deneyin. İyi Şanslar!</p>
+    
 			</div>
 		</div>
 
