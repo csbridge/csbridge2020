@@ -1,0 +1,68 @@
+<head>
+
+	%include templates/parts/headTr.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTr.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Gazete Alma
+			</h1>
+			<p>
+				Eric Roberts'ın bir ders notu temel alınmıştır.
+			</p>
+			<p>
+				<!--Topics:
+				KarelCommands,
+				Methods
+				<br/>-->
+				Ders Notları: 
+				<a href ="{{pathToRoot}}tk/handouts/karel.html">Karel Referansı</a>
+				<br/>
+				Çalışılan Örnek: 
+				<a href="{{pathToRoot}}tk/projects/stepUp.html">Adım Adım</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					İlk göreviniz Karel'ın dünyasında basit bir hikaye problemini çözmek. Varsayın ki, Karel evine, aşağıdaki şemanın merkezindeki kare alana, yerleşmiş olsun:
+				</p>
+				<center>
+					<img class="psetImg" src="{{pathToRoot}}img/projects/newspaper/newspaper.png">	
+				</center>
+				<p>
+					Karel şemada gösterildiği gibi evinin köşesinden harekete başlıyor. Karel'ın çözmesi gereken problem hemen kapının dışındaki (Karel'ın dünyasındaki tüm nesneler gibi) bir beeper tarafından temsil edilen gazeteyi almak ve onu başlangıç konumuna getirmek.
+				</p>
+				<p>
+					Dünyanın her bir kısmının şemada göründüğü gibi olduğunu varsayabilirsiniz. Ev birebir gösterildiği büyüklükte, kapı her zaman gösterildiği konumda, ve beeper da kapının hemen dışında. Bu yüzden, tüm yapmanız gereken Karel'a şunları yaptırmak için gereken komut serisini yazmak:
+					<ol>
+						<li>Gazetenin yanına gitmek,</li>
+						<li>Onu almak, ve</li>
+						<li>Başlangıç noktasına geri dönmek.</li>
+					</ol>
+				</p>
+				<p>
+					Program sadece birkaç satır olmasına rağmen, problemi küçük parçalara ayırmaya hala az da olsa değer. Çözümünüzde, listede görülen her bir adım için private bir metot yazın.
+				</p>
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footerTr.html
+
+	</div>
+</body>

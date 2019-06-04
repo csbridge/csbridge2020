@@ -1,0 +1,75 @@
+<head>
+
+	%include templates/parts/headTr.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTr.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Orta Nokta
+			</h1>
+			<p>
+				Yazan: Tyler Conklin
+								</br>
+								Geçmişte Mehran Sahami, Keith Schwarz, Eric Roberts ve diğerlerinin hazırladıkları egzersizden esinlenilmiştir.
+			</p>
+			<p>
+				Handouts:
+                <a href ="{{pathToRoot}}tk/handouts/karel.html">Karel Referansı</a><br/>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır, ancak bu egzersizi tamamlamak kesinlikle Final Projenize yardımcı olacaktır.
+				</p>
+				<p>
+					Karel'i ilk "street" (satır) üzerinde ortalanmış bir beeper yerleştirmesi için programlayın. Karel'in aşağıdaki gibi dünyada başladığını varsayabilirsiniz:
+					<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/midpointKarel/midpointKarelStart.png">	
+					</center>
+					Karel ortaya beeper'ı yerleştirdikten sonra aşağıdaki çalışmayı gibi bitirmelidir.
+ 					<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/midpointKarel/midpointKarelFinish.png">	
+					</center>
+					Karel sadece ilk satırın ortasına tek bir beeper yerleştirmiş olmalıdır. Program sırasında birden çok beeper yerleştirse de Karel çalışmayı bitirmeden önce bunları toplamalıdır.
+        </p>
+
+				<p>
+					Aşağıdaki bilgileri her zaman doğry kabul edebilirsiniz:
+				</p>
+				<ul>
+					<li>Karel sol alt köşede doğu yönüne bakarak başlamalıdır ve çantasında sonsuz sayıda beeper bulunmaktadır.</li>
+					<li>Başlangıçta, dünyanın hiçbir yerinde duvar ve beeper bulunmamaktadır.</li>
+					<li>Dünya kare olmak zorunda değildir ancak en az genişliği kadar yüksek olduğunu varsayabilirsiniz.</li>
+					<li>Dünyanın genişliği tek ise Karel beeper'ı tam ortadaki kareye koymalıdır. Aksi durumda ise Karel beeper'ı ortanın herhangi bir yanındaki kareye bırakabilir.</li>
+					<li>Programın sonunda Karel'in ne yöne baktığı önemli değildir.</li>
+				</ul>
+
+				</br>
+				<p>
+					Dikkat: Sadece Karel metotlarını kullanabilirsiniz. Java değişkenleri kullanmayınız. Bu problem Karel'in sayı sayamaması nedeni ile zordur. Problemi çözmek için birçok yöntem mevcuttur. Dolayısıyla kendi yaratıcı yönteminizi geliştirmekten çekinmeyin!
+				</p>
+
+
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footerTr.html
+
+	</div>
+</body>

@@ -1,0 +1,105 @@
+<head>
+
+	%include templates/parts/headTr.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTr.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Hareketli Daireler
+			</h1>
+			<p>
+				Yazan: Chris Piech
+			</p>
+			<p>
+				Dern Notları:
+				<a href ="{{pathToRoot}}tk/handouts/graphics.html">Grafik Referansı</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Bu program bir daire çizmekte ve bu daireyi ekranda hareket ettirerek bir animasyon oluşturmaktadır.
+				</p>
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/halfGreen/halfGreen.png">	
+					</center>
+				</p>
+				<p>
+					Her bir daire 20 piksel genişliğinde ve yüksekliğindedir.
+				</p>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Çözüm</h2>
+
+
+<pre id="editor" style="height:500px">public class CircleRandom2 extends GraphicsProgram {
+
+	private RandomGenerator rd = new RandomGenerator();
+	public static final int APPLICATION_WIDTH = 500;
+	public static final int APPLICATION_HEIGHT = 500;
+	private static final int SIZE = 20;
+	
+	public void run() {
+		for(int i = 0; i &lt; 1000; i++) {
+			int x = rd.nextInt(getWidth()-SIZE);
+			int y = rd.nextInt(getHeight()-SIZE);
+
+			GOval o = new GOval(x, y, SIZE, SIZE);
+			o.setFilled(true);
+			o.setColor(getColor(x, y));
+			add(o);
+			pause(2);
+		}
+	}
+
+	private Color getColor(int x, int y) {
+		if(isGreen(x, y)) {
+			return Color.green;
+		}
+		return Color.blue;
+	}
+	
+	private boolean isGreen(int x, int y) {
+		return x > y;
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footerTr.html
+
+	</div>
+</body>

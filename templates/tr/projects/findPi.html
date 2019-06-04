@@ -1,0 +1,112 @@
+<head>
+
+	%include templates/parts/headTr.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTr.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Pi'yi Bul
+			</h1>
+			<p>
+				Yazan: Eric Roberts.
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Pi (&pi;) gerçen güzelliğin matematiksel halidir. Birçok denklemde karşımıza çıkar. Özellikle de dairesel hesaplar yaparken, çan eğrisi hesaplarken ve son olarak da, inanılmaz bir şekilde, <a href="https://tr.0wikipedia.org/wiki/Euler_%C3%B6zde%C5%9Fli%C4%9Fi">Euler Özdeşliği'nde</a>.
+				</p>
+
+				<p>Peki &pi; değerinin 3.14159265359... olduğunu nereden bliyoruz? Pi sayısını hesaplamanın birçok yöntemi var. Bu egzersiz ile pi sayısını dart tahtasını kullanarak hesaplamayı öğreneceğiz.</p>
+
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/findPi/lifeOfPi.jpg">	
+						<p style="text-align:center"><i>Bu arkadaşon ismi de Pi ama bizim problemimiz onunki ile alakalı değil.</i></p>
+					</center>
+				</p>
+
+				<p>Aşağıdaki (sol) sarı daireye bir dart oku attığınızı hayal edin. Eğer rastgele bir şekilde birçok ok atarsanız, bazıları sarı bölgenin içine bazıları da dışarıdaki gri alana isabet edecektir. Eğer hem içerideki daireye hem de dışarıdaki kareye denk gelen okları sayacak olursanız, bu toplamların oranı iki şeklin alanları oranına eşit olmalıdır.</p>
+
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/findPi/darts.png">	
+						
+					</center>
+				</p>
+				
+
+				<p>Dairenin alanı &pi; ve karenin alanı 4 olduğuna göre, dairenin içine isabet eden okların oranı &pi; / 4 civarında olmalıdır.</p>
+				
+			</div>
+		</div>
+		
+
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Çözüm</h2>
+
+
+<pre id="editor" style="height:580px">/**
+ * Find Pi
+ * -------------
+ * Find the value of pi by throwing random darts at a unit circle inscribed in
+ * a square. The fraction that land in the circle should equal pi / 4.
+ */
+public class FindPi extends ConsoleProgram {
+	
+	private RandomGenerator rd = new RandomGenerator();
+	
+	public void run() {
+		int numInCircle = 0;
+		int numDarts = 50000000;
+		for(int i = 0; i &lt; numDarts; i++) {
+			// get a random x, y in a 2x2
+			double x = rd.nextDouble(-1, 1);
+			double y = rd.nextDouble(-1, 1);
+			// test if the dart landed in the circle
+			double dist = Math.sqrt(x * x + y * y);
+			if(dist &lt;= 1) {
+				numInCircle++;
+			}
+		}
+		// if we don't cast to double, this will always be 0.
+		double fraction = (double)numInCircle / numDarts;
+		double pi = fraction * 4;
+		print(pi);
+	}
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	</div>
+	</div>
+		
+		%include templates/parts/footerTr.html
+
+	</div>
+</body>

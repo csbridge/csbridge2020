@@ -1,0 +1,562 @@
+<head>
+
+<title>Bilgisayar Bilimine Giriş</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../style.css">
+
+<!-- Java Script -->
+<script src="../../plugins/jquery.min.js"></script>
+<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+
+<script src="../../karel/ace/ace.js" type="text/javascript"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+  </script>-->
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+<nav class="navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Navigasyonu aç/kapa</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/tk">CS Bridge</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <!--<li ><a href="#">Link</a></li>-->
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ders Notları <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<!--<li><a href="../../tr/handouts/sections.html">Section'lar</a></li>-->
+	          	<li><a href="../../tr/handouts/karel.html">Karel Referansı</a></li>
+	          	
+	          	<li><a href="../../tr/handouts/console.html">Konsol Referansı</a></li>
+	          	<li><a href="../../tr/handouts/random.html">Rasgele Sayı Üreticisi Referansı</a></li>
+	          	<li><a href="../../tr/handouts/graphics.html">Grafik Referansı</a></li>
+	          	<li><a href="../../tr/handouts/events.html">Olaylar(Events) Referansı</a></li>
+	          	<li><a href="../../tr/handouts/arrayLists.html">Array Lists</a></li>
+	          	<!--
+	          	<li><a href="../../handouts/events.html">Olaylar(Events) Referansı</a></li>
+                <li><a href="../../projects/jsJSSyntax.html">JavaScript Referansı</a></li>
+                <li><a href="../../handouts/htmlReference.html">HTML Referansı</a></li>
+                <li><a href="../../handouts/uploadWebsite.html">Web Sitesi Upload Etme Referansı</a></li>
+
+	          	<li><a href="../../handouts/whatsNext.html">Bundan Sonrası</a></li>
+	          	<li><a href="../../handouts/forLoops.html">For Döngüsü</a></li>
+	          	<li><a href="../../handouts/loopAndAHalf.html">Bir Buçuk Döngü</a></li>
+	          	<li><a href="../../handouts/whileLoops.html">While Döngüsü</a></li>
+	          	<li><a href="../../handouts/ifStatements.html">If Kalıbı</a></li>
+	          	<li><a href="../../handouts/variables.html">Değişkenler</a></li>
+	            <li><a href="../../handouts/scope.html">Scope</a></li>
+	            <li><a href="../../handouts/operations.html">İşlemler</a></li>
+	            <li><a href="../../handouts/graphics.html">Grafik</a></li>
+	            <li><a href="../../handouts/passingData.html">Veri Alışverişi</a></li>-->
+	            
+	          </ul>
+	        </li>
+
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projeler <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="../../tr/projects/collectNewspaper.html">Gazete Alma</a></li>
+	          	<li><a href="../../tr/projects/efes.html">Efes'in İnşaatı</a></li>
+	          	<li><a href="../../tr/projects/mountain.html">Dağcı Karel</a></li>
+	          	<li><a href="../../tr/projects/randomPainter.html">Deli Ressam</a></li>
+	          	<li class="divider"></li>
+
+	          	<li><a href="../../tr/projects/sandcastles.html">Sandcastles</a></li>
+	          	<li><a href="../../tr/projects/favoriteNumber.html">Favorite Number</a></li>
+	          	<li><a href="../../tr/projects/medicine.html">Sahte İlaç</a></li>
+	          	<li><a href="../../tr/projects/someSum.html">Üç Aşağı Beş Yukarı</a></li>
+	          	<li><a href="../../tr/projects/gameOfStones.html">Nimm</a></li>
+
+	          	<li class="divider"></li>
+
+	          	<li><a href="../../tr/projects/awesome.html">Programcılık Bir Harika</a></li>
+	          	<li><a href="../../tr/projects/stringArt.html">String Art</a></li>
+	          	<li><a href="../../tr/projects/randomCircles.html">Tesadüfi Daireler</a></li>
+	          	<li><a href="../../tr/projects/hailstone.html">Dolu Tanesi</a></li>
+
+	            <li class="divider"></li>
+	            <li><a href="../../tr/projects/bouncingBall.html">Zıp zıp top</a></li>
+	          	<li><a href="../../tr/projects/madMethods.html">Çılgın Metotlar</a></li>
+	          	<li><a href="../../tr/projects/target.html">Hedef</a></li>
+	          	<li><a href="../../tr/projects/illusion.html">Optik İllüzyon</a></li>
+	          	<li><a href="../../tr/projects/sunset.html">Kısa Film</a></li>
+
+	          	<li class="divider"></li>
+
+	          	<li><a href="../../tr/projects/makingTracks.html">İz Çıkartmaca</a></li>
+	             <li><a href="../../tr/projects/stampTool.html">Damga Makinesi</a></li>
+	          	<li><a href="../../tr/projects/catchMeIfYouCan.html">Yakala Yakalayabilirsen</a></li>
+							<li><a href="../../tr/projects/breakout.html">Breakout!</a></li>
+							<!--
+	          	<li class="divider"></li>
+
+	          	<li><a href="../../en/projects/sortedNumbers.html">Sorted Numbers</a></li>
+	          	<li><a href="../../en/projects/snow.html">Snow</a></li>
+	          	<li><a href="../../en/projects/mouseGame.html">The Line</a></li>
+	          	<li><a href="../../en/projects/music.html">Music</a></li>
+	          	<li><a href="../../tr/projects/project.html">Final Project</a></li>
+
+	          	<li><a href="../../projects/medicine.html">Sahte İlaç</a></li>
+	          	<li><a href="../../projects/gameOfStones.html">Nimm</a></li>
+	          	<li><a href="../../projects/awesome.html"></a></li>
+	          	<li><a href="../../projects/someSum.html">Üç Aşağı Beş Yukarı</a></li>
+	            <li><a href="../../projects/randomCircles.html"></a></li>
+	            <li><a href="../../projects/bouncingBall.html"></a></li>
+
+	          	<li><a href="../../projects/madMax.html">Mad Max</a></li>
+	          	<li><a href="../../projects/target.html">Hedef Tahtası</a></li>
+	          	<li><a href="../../projects/sunset.html">Kısa Film</a></li>
+	            <li><a href="../../projects/drawPeople.html">Çekirge Bir Sıçrar İki Sıçrar</a></li>
+	            <li><a href="../../projects/illusion.html">Optik İllüzyon</a></li>
+	            <li><a href="../../projects/madLibs.html">Sana Laflar Hazırladım</a></li>
+	            <li><a href="../../projects/secret.html">Çok Gizli</a></li>
+
+	     
+
+                <li class="divider"></li>
+	            
+	            <li><a href="../../projects/breakout.html">Breakout</a></li>
+	            
+	            
+	            <li><a href="../../projects/music.html">Ses Dalgaları</a></li>
+	        	
+	        	
+	            <li><a href="../../projects/project.html">Final Projesi</a></li>
+							-->
+              
+	            
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Örnekler <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../tr/projects/stepUp.html">Adım adım</a></li>
+	          	<li><a href="../../tr/projects/place100.html">100 Koymak</a></li>
+	          	<li><a href="../../tr/projects/beeperLine.html">Beeper Hattı</a></li>
+	          	<li><a href="../../tr/projects/invert.html">Ters Çevir</a></li>
+	          	<li><a href="../../tr/projects/unKarel.html">İnsani Yardım Karel'i</a></li>
+	          	<li class="divider"></li>
+	            <li><a href="../../tr/projects/emc2.html">E=MC2</a></li>
+	            <li><a href="../../tr/projects/fibb.html">Fibonacci</a></li>
+	           <li><a href="../../en/projects/favoriteNumber.html">En Sevdiğim Numara</a></li>
+	           <li><a href="../../en/projects/findPi.html">Pi'yi Bul</a></li>
+	           <li><a href="../../en/projects/8Ball.html">8 Numaralı Top</a></li>
+
+	           <li class="divider"></li>
+	           <li><a href="../../tr/projects/robotFace.html">Robot Surat</a></li>
+
+	            <li class="divider"></li>
+	           <li><a href="../../tr/projects/mysterySquare.html">Gizemli Kare</a></li>
+	            <li><a href="../../tr/projects/goCenter.html">Merkeze Git</a></li>
+	            
+	            <li><a href="../../tr/projects/gravityBall.html">Seken Top</a></li>
+
+	          	<li><a href="../../tr/projects/averageMethod.html">Ortalama Metodu</a></li>	
+	          	<li><a href="../../tr/projects/drawPeople.html">İnsan Çizme</a></li>	
+
+	          	<li><a href="../../tr/projects/halfGreen.html">Yarısı Yeşil</a></li>
+	            
+							<!--
+	            <li class="divider"></li>
+	          	<li><a href="../../en/projects/debrisSweeper.html">Debris Sweeper</a></li>	
+	          	<li><a href="../../tr/projects/stampTool.html">Stamp Tool</a></li>
+	          	<li><a href="../../en/projects/rocketShip.html">Rockets</a></li>
+	            
+	           <li><a href="../../projects/mysterySquare.html"></a></li>
+	            
+	            <li><a href="../../projects/robotFace.html"></a></li>
+	            <li><a href="../../projects/findPi.html">Pi Bulmaca</a></li>
+	            <li><a href="../../projects/8Ball.html">8 Top</a></li>
+	            <li><a href="../../projects/halfGreen.html">Yeşilimtrak</a></li>
+	            
+	            <li><a href="../../projects/stringArt.html">String Sanatı</a></li>
+	             
+	             <li><a href="../../projects/stampTool.html">Damga Makinesi</a></li>
+	            <li><a href="../../projects/snow.html">Kar</a></li>
+                   <li class="divider"></li>
+	            <li><a href="../../projects/breakoutOnline.html">Breakout Online</a></li>
+							-->
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slaytlar <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../slides/Welcome.pdf">Karel</a></li>
+	          	<li><a href="../../slides/ControlFlow.pdf">ControlFlow</a></li>
+	          	<li><a href="../../slides/Variables.pdf">Değişkenler</a></li>
+	          	<li><a href="../../slides/Graphics.pdf">Grafikler</a></li>
+	          	<li><a href="../../slides/Animation.pdf">Animasyon</a></li>
+	          	<li><a href="../../slides/Methods.pdf">Metotlar</a></li>
+	          	<li><a href="../../slides/Review.pdf">Özet</a></li>
+	          	<li><a href="../../slides/Events.pdf">Events</a></li>
+	          	<li><a href="../../slides/Internet.pdf">Internet</a></li>
+	          	<li><a href="../../slides/Arrays.pdf">Arrays</a></li>
+	          	<li><a href="../../slides/ArrayLists.pdf">Array Lists</a></li>
+	          	<li><a href="../../slides/Strings.pdf">Strings</a></li>
+							<!--
+	          	<li><a href="../../slides/AI.pdf">Artificial Intelligence</a></li>
+	          	<li><a href="../../slides/loopVariableReview.pdf">Loop/Variable Review</a></li>
+	          	<li><a href="../../slides/Interactors.pdf">Interactors</a></li>
+	          	<li><a href="../../slides/02.pdf">Basit Java</a></li>
+	          	<li><a href="../../slides/03.pdf">Metodlar</a></li>
+	          	<li><a href="../../slides/04.pdf">Tekrar</a></li>
+	          	<li><a href="../../slides/06.pdf">Array List'ler</a></li>
+	          	<li><a href="../../slides/AI.pdf">A.I. (Yapay Zeka)</a></li>
+	          	<li><a href="../../slides/TheEnd.pdf">Son</a></li>
+	          	
+							-->
+	          </ul>
+	        </li>
+
+
+	        <!--<li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">İnternet <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="https://www.dropbox.com/s/1jtjo9hde8in0xn/1-How%20the%20internet%20works.pptx">İnterne Nasıl Çalışır</a></li>
+	          	<li><a href="https://www.dropbox.com/s/1t7pwltugsy4pxg/2-day-in-the-life-of-packet.pptx">Bir Paket'in Sıradan Bir GÜnü</a></li>
+	          	<li><a href="https://www.dropbox.com/s/1n0lzrl32urfsnr/3-How%20packets%20routed.pptx">Paketler Nasıl Yolunu Bulur</a></li>
+	          	<li class="divider"></li>
+	          	<li><a href="http://yuba.stanford.edu/~huangty/dacka/lab1.html">Lab 1</a></li>
+	          	<li><a href="http://yuba.stanford.edu/~huangty/dacka/lab2.html">Lab 2</a></li>
+	          	<li class="divider"></li>
+	          	<li><a href="../../internet/echo.zip">Echo Client Kodu</a></li>
+	          	<li><a href="../../internet/2person-breakout.zip">Breakout Online Kodu</a></li>
+
+	          	
+	          </ul>
+	        </li>-->
+
+	        <!--<li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Section<b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../projects/stepUp.html">Gazeteci Karel</a></li>
+	          	<li><a href="../../projects/place100.html">Sahte İlaçlar</a></li>
+	          	<li><a href="../../projects/beeperLine.html">Hedef Tahtası</a></li>
+	          </ul>
+	        </li>-->
+	        <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bonus <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+                <li><a href="../../tr/bonus-index.html">Bonus Özet</a></li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Formlar <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+                <li><a href="../../en/handouts/submission.html">Çalışmaları Teslim Etme</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSffsKTNU3mu-21-ZjZFJ3d-fPdvw6uQcvhAjbpXhux43_3gpg/viewform?usp=sf_link">Sign in To Lab</a></li>
+	          </ul>
+	        </li>
+
+	      </ul>
+
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/english_flag.png"></img></a></li>
+	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+
+</script>
+
+
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Instakilo
+			</h1>
+			<p>
+				Yazanlar : Julia Lee ve Chris Piech. Mehran Sahami ve Eric Roberts'ın FacePamphlet'inden yola çıkarak hazırlanmıştır.
+			</p>
+			<!--<p>
+				Worked Example: 
+				<a href="../../projects/emc2.html">RandomSquare</a>
+			</p>-->
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Bu projede Instagram'a benzer bir program yazacaksınız, ama tek bir farkla. Bu programı siz yazdığınız için tabi ki 1000 kat daha eğlenceli ve cool olacak, bu yüzden biz de programın adını Instakilo koyduk. Bu programı yazarken üç önemli konuyu kullanacaksınız: Interactor'ler, HashMap'ler ve ArrayList'ler.
+				</p>
+
+				<p>
+					Uygulama ilk açıldığında kullanıcılara dostane bir selam vererek başlayacak: "Welcome to Instakilo!" ve bir metin dosyasından profil bilgilerini yükleyecek. Bu noktadan sonra kullanıcıların yapabileceği 3 temel aksiyon olacak:
+						<ol>
+							<li>adını yazarak başka bir profile bakmak
+							<li>o anda açık olan bir profile bir resim eklemek
+							<li>yeni bir isimle yeni bir profil yaratmak
+						</ol>
+				</p>
+				<p>Aşağıda örnek bir kullanım görüyorsunuz. Şu anda uygulama "Chris Piech" profilini ve o profile ait fotoğrafları gösteriyor.
+				<p>
+					<center>
+						<img style="width:700px" src="../../img/projects/instakilo/fullPhotos.png">	
+					</center>
+				</p>
+				<p>
+					Program kapatılıp açıldığında daha önce yaratılmış profiller ve eklenmiş fotoğraflar yerine kalmalı (bunun için ne zaman bir profil yaratılsa veya bir profile resim eklense, bu bilgiyi saklayan bir data dosyası güncellenir. Bu dosya bütün profillerin bilgilerini saklar) Her profilin özgün bir adı ve o profile eklenmiş olan fotoğraf dosyalarının adından oluşan bir fotoğraf listesi vardır.
+				</p>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>1. Adım: Merhaba</h2>
+
+				<p>Pek çok resim gösterecek bir profilin kodunu yazmadan önce ısınma olarak<code><b>displayMessage</b></code> metodunu yazın. Bu metod bir string parametresi alır ve o string'i ekrana ortalanmış olarak gösterir. Bu metodu hem baştaki karşılama mesajını göstermek, hem de daha sonra kullanıcıyla etkileşim için kullanacaksınız. Mesaj ortalanmış olmalı ve IKConstants'da belirtilmiş MESSAGE_FONT font'unu kullanmalı. Başka bir deyişle metod aşağıdaki yapıya sahip olmalı:</p>
+
+<div class="well"><code>
+private void displayMessage(String message) {
+<br/>&nbsp;&nbsp;&nbsp;removeAll(); // clear the screen
+<br/>&nbsp;&nbsp;&nbsp;// create text graphics object with the given message
+<br/>&nbsp;&nbsp;&nbsp;// set the font and location of the graphics object
+<br/>&nbsp;&nbsp;&nbsp;// display the message!
+<br/>}
+</code></div>
+
+<p>
+Unutmayın ki <code>getWidth()</code> metodunu kullanarak uygulama penceresinin genişliğine ulaşabilirsiniz. Şimdi bu metodu çağırarak uygulama açıldığında ekrana "Welcome to Instakilo!" mesajını yazın.<p>
+
+				<p>
+					<center>
+						<img style="width:700px" src="../../img/projects/instakilo/welcome.png">	
+					</center>
+				</p>
+
+
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>2. Adım: Interactor'ler</h2>
+
+				<p>Bu projenin bir sonraki adımı ise gerekli interactor'leri eklemek. Aşağıda gösterilen paneli yaratın ve uygun olan JLabel, JButton ve JTextField objelerini ekleyin. <code>addActionListeners()</code> metodunu çağırmayı unutmayın.</p>
+
+				<p>
+					<br/>
+					<center>
+						<img style="width:400px" src="../../img/projects/instakilo/interactors.png">	
+					</center>
+					<br/>
+				</p>
+
+				<p>Bundan sonra ise düğmelere tıklandığında çalışmaları için gerekli değişiklikleri yapmak gerekiyor. Öncelikle interactor'lerin çalıştığını görmek için kullanıcı ne zaman bir düğmeye tıklasa <code><b>displayMessage</b></code> metodunu kullanarak ekrana bir mesaj yazın. Şimdilik birisi "display" düğmesine bastığında aşağıdaki mesajı gösterin:
+					<div class="well"><code>
+						"display profile: <i>profileName</i>"
+					</code></div>
+				Mesela metin kutusuna Bob Marley yazıp display düğmesine basarsak program bize aşağıdaki gibi bir görüntü vermeli:
+				<p>
+					<center>
+						<img style="width:700px" src="../../img/projects/instakilo/message.png">	
+					</center>
+				</p>
+
+				Benzeri bir şekilde birisi create düğmesine tıkladığında aşağıdaki mesajı gösterin:
+					<div class="well"><code>
+						"create profile: <i>profileName</i>"
+					</code></div>
+				Post düğmesine tıklandığında ise aşağıdaki mesajı gösterin:
+					<div class="well"><code>
+						"post profile: <i>profileName</i>"
+					</code></div>
+				</p>
+
+				<p>İlerleyen aşamalarda programın gerçek fonksiyonlarını belirten mesajlar ekleyeceğiz.</p>
+
+
+				
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>3.Adım: Database(Veritabanı)</h2>
+				<p>Artık interactor'larımızı eklediğimize göre sıradaki adım profil bilgilerimizi saklayacağımız datastructure'ları seçmek. Bu projede profil adıyla profile ait fotoğrafların dosya adlarını saklamak için bir <code>HashMap&lt;String, ArrayList&lt;String&gt;&gt;</code> kullanın. </p>
+
+				<p>HashMap'i program açılır açılmaz yaratın. Şimdilik içine önceden hazırlanmış data koyalım. "Bob Marley" adında bir profil yaratın ve ona ait dört resim dosya adı ekleyin (bunlar String olacak): ["bob.jpg", "bobFamily.jpg" "bobYoung.jpg" and "bobSinging.jpg"]</p>
+
+				<p>Bob Marley dünyanın en ünlü şarkıcılarından biriydi, bu yüzden tabi ki onun da Instakilo'da bir hesabı olurdu.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>4. Adım: Profili Göstermek</h2>
+				<p>Artık profilleri kullanıcılara göstermenin zamanı geldi. Eğer profil metin kutusuna girilen isme sahip bir profil HashMap'imizde mevcutsa, Instakilo bu profilin adını ve o profile ait resimleri göstermeli, yoksa şu mesajı vermeli: "No profile exists with that name".
+</p>
+
+			<p></p>
+
+			<p> Şu anda HashMap'imizde sadece Bob Marley'in profili var. Bob Marley'in profilini gösterdiğimiz zaman şöyle görünmeli: (Artık "display profile: Bob Marley" mesajını göstermiyoruz):
+
+				<p>
+					<center>
+						<img style="width:700px" src="../../img/projects/instakilo/bob.png">	
+					</center>
+				</p>
+
+				<h3>Dosya adlarından resimlere ulaşmak</h3>
+				<p>Eğer dosya adını biliyorsanız o dosyaya ait GImage'ı yaratmak çok kolay. (GImage'lar GRect'ler gibidir ama bir dikdörtgen göstermek yerine bir resim gösterirler)
+					<div class="well"><code>GImage <i>myImage</i> = new GImage(<i>fileName</i>);</code></div>
+
+				<h3>Resimlerin boyutunu değiştirmek</h3>
+				<p>Ekrandaki resimlerin gepsinin yüksekliği ROW_HEIGHT olmalıdır; ama resimleri dosyadan yüklediğinizde boyutlarının ne olduğunu bilmiyorsunuz! Resim boyutlarını düzeltmek için GImage'lara ait scale metodunu kullnmanız gerekiyor. 
+					<div class="well"><code><i>image</i>.scale(<i>fraction</i>);</code></div>
+				Mesela <code>image.scale(0.5)</code> yazarsanız resmin hem genişliğini hem de yüksekliğini yarıya indirir. Resmin yüksekliğini öğrenmek için <code><i>image</i>.getHeight();</code> metodunu kullanabilirsiniz. Öyleyse resmin yüksekliğinin ROW_HEIGHT olması için onu ne kadar scale etmeniz gerekir?
+				</p>
+
+				<h3>Resimlerin Dizilimi</h3>
+				<p>	Resimleri ekrana sol üst köşeden başlayarak yerleştirin. Resimler ekrara sığdığı sürece aynı satıra yerleştirin. Satır dolduğunda bir alt satıra geçin.</p>
+				<p>MARGIN size resimler ve diğer her şey arasındaki boşluğun ne kadar olması gerektiğini söyler.</p>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>4. Adım: Profil Yaratmak</h2>
+
+				<p>Kullanıcı "Create" düğmesine bastığında, öncelikle o isme sahip bir profilin zaten var olup olmadığına bakmanız gerekiyor. Eğer o isimde bir profil zaten varsa kullanıcıya bir mesaj gösterin ("A profile already exists for that name") ve yeni bir profil yaratmayın. Öteki halde HashMap'inizde bu profil için yeni bir girdi yaratın ve kullanıcıya bu yeni profili gösterin.
+				</p>
+
+<p>Mesela profileName metin kutusuna Julia Lee yazıp Create'e basarsanız Julia'ya ait yeni ve boş profili göstermeniz gerekir.</p>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>5. Adım: Fotoğraf Eklemek</h2>
+
+				<p>Mevcut profile yeni bir fotoğraf ekelmek için kullanıcılar aşağıdaki metin kutusuna (label'ı "New photo name:" olan) resim dosyasının adını yazacak ve "Post" düğmesine basacak.
+				1) Şu anda gösterilen bir profil yoksa "Please select a profile before posting a picture" mesajını gösterin
+				2) Eğer şu anda gösterilen bir profil varsa, öncelikle o isimde bir resim dosyasının gerçekten var olduğunu kontrol edin (bunun için FileSystem.imageFileExists metodunu kullanın). Eğer varsa dosya adını o profile ait fotoğraf ArrayList'ine ekleyin ve mevcut profili baştan gösterin.
+				</p>
+
+				<p>Mesela julia1.jpg dosyasını Julia'nın profiline eklersek görüntülenmesi gerekir!</p>
+
+				<p>
+					<center>
+						<img style="width:700px" src="../../img/projects/instakilo/post.png">	
+					</center>
+				</p>
+				<p>Instakilo resim dosyalarını Instakilo projesinin içindeki img klasöründe arar. Başlangıçta kullanabilmeniz için o klasöre pek çok resim koyduk, ama img klasörüne istediğiniz fotoğrafları ekleyebilir ve böylece kendi profilinizi de yapabilirsiniz!</p>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>6. Adım: Yüklemek ve Kaydetmek</h2>
+
+				<p>HashMap'inizi bir dosyaya kaydetmek için aşağıdaki metodu kullanabilirsiniz:
+					<div class="well"><code>
+						FileSystem.saveMap(<i>myMap</i>, <i>fileName</i>);
+						</code></div>
+					Bir dosyadan HashMap yüklemek için ise aşağıdaki metod:
+					<div class="well"><code>HashMap&lt;String, &lt;ArrayList&lt;String&gt;&gt; <i>myMap = </i>FileSystem.loadMap(<i>fileName</i>);</code></div>
+					Eğer o isimde bir HashMap dosyası yoksa bu metod null döndürür.
+				</p>
+				<p>
+					Son adımınız ise programın farklı çalışmaları arasında Instakilo hashMap'inizin kaydedilmesini sağlamak! Programınız ilk çalıştığında hashMap'inizi dosyadan yükleyin.
+				</p>
+
+				<p>İşte bu kadar! Instakilo'yu bitirdiniz!</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Eklentiler</h2>
+				<p>
+					Instagram'ın bu kadar popüler olmasını sağlayan bir özelliği, kullanıcıların fotoğraflara filtre uygulamasını sağlamaktı. Siz de basit bir filtre yazabilrsiniz. Programınızı öyle bir değiştirin ki kullanıcılar bir fotoğrafa tıklayıp onu seçebilsin, sonra da bir düğmeye basıp onu siyah beyaza çevirebilsinler. Eğer ilgileniyorsunuz bizden yardım isteyin!
+				</p>
+			</div>
+		</div>
+		
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+		&#169; Stanford 2019 &#124; Hazırlayan: 
+    <a href="http://stanford.edu/~cpiech">Chris</a> (Tüm ekibin de yardımıyla).
+		Pek yetenekli birçok eğitimci tarafından hazırlanan muhteşem CS106A sınıfından esinlenilmiştir. <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> ve <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>'a özel teşekkürlerimizi sunarız.
+	</p>
+	<!--<p class="pull-right">
+		<a href="../../fall12">Fall 2012</a>
+	</p>-->
+</div>
+<!--<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>-->
+
+	</div>
+</body>

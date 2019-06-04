@@ -1,0 +1,84 @@
+<head>
+
+	%include templates/parts/headTr.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTr.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Sınırdaki Yılan
+			</h1>
+			<p>
+                Yazan Lisa Yan
+			</p>
+			<p>
+                Ders Notları:
+                <a href ="{{pathToRoot}}tk/handouts/graphics.html">Grafik Referansı</a><br/>
+				<a href ="{{pathToRoot}}tk/handouts/arrayLists.html">ArrayLists</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+                    Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır, ancak bu egzersizi tamamlamak kesinlikle Final Projesnize yardımcı olacaktır.
+                </p>
+                <p>
+                    Yazacağınız Grafik Programı ile ekranın sınırlarında, saat yönünün tersine, dönen bir yılan yaratın.
+                </p>
+					<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/borderSnake/borderSnake.gif">	
+					</center>
+                </p>
+            <h2>Sınırdaki Kutu</h2>
+            <p>
+                Bu egzersiz üzerinde çalışmadan önce Sınırdaki Kutu egzersizini tamamlayın. Zira büyük ölçüde aynı mantıkta çalışacağız. (Küçük bir farklılıkla elbette) Dolayısıyla genel problem düzenini anlamak için Sınırdaki Kutu egzersizini çözmüş olmak size yardımcı olacaktır.
+            </p>
+
+            <h2>İpucu:</h2>
+            <ul>
+                <li>ArrayList kullanın!</li>
+                <li>Yılanı hareket ettirirken, yılandaki her bloğu teker teker hareket ettirmenize gerek yok. Aslına bakarsanız tek bir bloğu hareket ettirmek yeterli olacaktır! Yılanın hareket ediyormuş gibi görünmesi için hangi bloğun tek başına hareket etmesinin yeterli olacağını düşünün.</li>
+                </ul>
+            <h3>Değişmezler</h3>
+            <p>Bu programda, yukarıda da belirtildiği gibi, tek bir bloğu hareket ettirerek tüm yılanı hareket ediyormuş gibi gösterebilirsiniz. Yılanın her hareketinde ArrayList içindeki farklı bir blok baş ve kuruğu oluşturmaktadır. Program içinde yılanın başına kolayca nasıl erişebilirsiniz?</p>
+            <p>İlk alternatif, mantıksal bir <i>invariant (değişmez)</i> tanımlayarak yılanın başının her zaman ArrayList içinde sıfırıncı pozisyonda kalmasını sağlayabilirsiniz. <i>Invariant (değişmez)</i>, bilgisayar biliminde her zaman doğru (True) kabul edilen bir değerdir. Kodlamada tam bir karşılığı olmasa da, bu mantıkal konsepti anlamak programcıya ilerlemesinde yardımcı olur. Aşaıdaki kod, mantıksal değişmezinizin kodunuzun içine eklenebilmesi için kullanışlı olacaktır:</p>
+			<div class="well"><code>
+                snake.remove(block); // the GRect you moved<br>
+                snake.add(0, block); // becomes the new head
+			</code></div>
+            <p>Ayrıca, değişmez tanımlamak ArrayList içinde kuyruğun da nerede olduğunu takip etmenizde işinize yarayacaktır.</p>
+            <h3>Köşeleri dönme</h3>
+            <p>Diyelim ki yılanımız aşağıdaki pozisyonda (snakeDirection = NORTH):
+            </p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/borderSnake/snakeTurn.png">	
+					</center>
+            <p>Yılanı hareket ettirebilmek için yılanın hangi kısmının hala dönüş yapmakta olduğu bizim için nemli mi? (İpucu: Hayır değil.) Buna göre, hangi bloğun yerini değiştirmek yeterli olacaktır?</p>
+            <br>
+            <p>Tebrikler, artık hareket eden bir yılanınız var! :)</p>
+
+
+
+
+
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footerTr.html
+
+	</div>
+</body>

@@ -1,0 +1,82 @@
+<head>
+
+	%include templates/parts/headTr.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTr.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				100 Koymak (ve çözümü)
+			</h1>
+			<p>
+				Problemi Yazan: Chris
+			</p>
+			<p>
+				Ders Notları: 
+				<a href ="{{pathToRoot}}tk/handouts/karel.html">Karel Referansı</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Hedefiniz Karel'ın başladığı yerin önündeki karede 100 beeper'dan oluşan bir yığın oluşturmasını sağlamak.  Lütfen bir satırda 100 kez putBeeper yazmayın!!! (ipucu: for döngüsü kullanın.) 
+				</p>
+
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/place100/place100.png">	
+					</center>
+				</p>
+				
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Çözüm</h2>
+
+
+<pre id="editor" style="height:280px">/**
+ * Program: Place100
+ * -------------
+ * This program makes karel place a pile of 100 beepers. Good times.
+ */
+public class Place100 extends SuperKarel {
+	
+	public void run() {
+		move();
+		// This for-loop will repeat the code inside 100 times.
+		for(int i = 0; i &lt; 100; i++) {
+			putBeeper();
+		}
+		move();
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+		
+		%include templates/parts/footerTr.html
+
+	</div>
+</body>

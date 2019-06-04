@@ -1,0 +1,100 @@
+<head>
+
+	%include templates/parts/headTr.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTr.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Dolu Tanesi
+			</h1>
+			<p>
+				Eric Roberts'ın ders notlarından esinlenilerek hazırlanmıştır.
+			</p>
+			<p>
+				Çalışan Örnekler: 
+				<a href="{{pathToRoot}}tk/projects/emc2.html">E=MC2</a>,
+				<a href="{{pathToRoot}}tk/projects/fibb.html">Fibbonacci</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>Dünyamız çok ilginç matematiksel bilmecelerle dolu. Bu bilmecelerin çoğu da bilgisayar programları şeklinde gösterilebilir. Bir tanesi de, öğrendiklerimize de uygun olarak, dolu tanesi problemidir.</p>
+				<p>Problem aşağıdaki gibidir:</p>
+
+<p>
+	<div class="well">
+		Pozitif bir n değeri seçelim.
+		<br/>Eğer n çift ise, ikiye bölelim.
+		<br/>Eğer n tek ise üç ile çarpıp bir ekleyelim.
+		<br/>n değeri 1 olana kadar bu hesaba devam edelim.
+	</div>
+</p>
+
+	<p>Aşağıda 15 ile başlayan bir örnek gösterilmektedir:</p>
+
+<p style="padding-left:1em">
+	15	tektir, o halde 3n+1:	46
+	<br>46	çifttir, dolayısıyla yarıya bölerim:	23
+	<br>23	tektir, o halde 3n+1:	70
+	<br>70	çifttir, dolayısıyla yarıya bölerim:	35
+	<br>35	tektir, o halde 3n+1:	106
+	<br>106	çifttir, dolayısıyla yarıya bölerim:	53
+	<br>53	tektir, o halde 3n+1:	160
+	<br>160	çifttir, dolayısıyla yarıya bölerim:	80
+	<br>80	çifttir, dolayısıyla yarıya bölerim:	40
+	<br>40	çifttir, dolayısıyla yarıya bölerim:	20
+	<br>20	çifttir, dolayısıyla yarıya bölerim:	10
+	<br>10	çifttir, dolayısıyla yarıya bölerim:	5
+	<br>5	tektir, o halde 3n+1:	16
+	<br>16	çifttir, dolayısıyla yarıya bölerim:	8
+	<br>8	çifttir, dolayısıyla yarıya bölerim:	4
+	<br>4	çifttir, dolayısıyla yarıya bölerim:	2
+	<br>2	çifttir, dolayısıyla yarıya bölerim:	1
+</p>
+
+	<p>Gördüğünüz gibi sayılar bir aşağı bir yukarı hareket ediyorlar; fakat sonunda bir şekilde 1'e geliyorlar. (Hiç olmazsa bugüne kdar denenen hepsi geldi) Bir açıdan dolu tanesinin düşüş şekline benzeyen bir süreç bu. Rüzgarla birlikte aşağı yukarı savrulsalar da günün sonunda yere düşerler. Bu benzerlik sebebiyle, bu sayı serisine Hailstone(Dolu tanesi) serisi denir. Elbette başka isimleri de vardır. Örneğin: Collatz sanısı</p>
+	<p>Kullanıcıdan bir sayı alan ve bu sayının Hailstone serisini yazan bir konsol programı yazım. Program son basamaktan sonra kullanıcıya 1'e ulaşmak için kaç basamak geçtiğini de belirtmelidir. Programınız aşağıdaki örnek çıktıya benzer bir çıktı üretebilmelidir:
+
+			<p>
+				<center>
+					<img style="width:50%" src="{{pathToRoot}}img/projects/hailstone/17.png">	
+				</center>
+			</p>
+			<p>Bu serinin en çarpıcı özelliği, daha önce hiç kimsenin bu serinin her zaman 1'e indirgeneceğinin kanıtlayamamış olmasıdır. Elbette bazen çok fazla adımın gerektiği de olmaktadır. Örneğin sizin programınız 27 sayısı için kaç basamak gerektiriyor?</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Tek mi Çift mi</h2>
+				<p>
+					Bu problemi çözebilmek için verilen bir sayının tek mi çift mi olduğuna bakmamız gerekecektir. Bildiğimiz sıradan operatörlere (+, -, * ve /) ek olarak praogramlama dilleri kalan operatörünü (%) de kabul ederler.
+					<div class="well"><code>a % b</code></div>
+					İşlemi <i>a</i> değerini <i>b</i> değerine böldüğümüzde kalan değeri hesaplar. Örneğin <code>10 % 3</code> 1 olacaktır çünkü 10'un 3'e bölümünden kalan 1'dir.
+				</p>
+				<p>Herhangi bir sayıyı 2'ye böldüğünüzde kalan, sayı çift ise 0 ya da sayı tek ise 1 olacaktır.:
+					<div class="well"><code>n % 2 == 0</code></div>
+					Bir sayısnın tek mi çift mi olduğunu saptamının en basit yöntemidir.</p>
+			</div>
+
+		</div>
+
+
+		
+		%include templates/parts/footerTr.html
+
+	</div>
+</body>

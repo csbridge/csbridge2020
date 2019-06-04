@@ -1,0 +1,60 @@
+<head>
+
+	%include templates/parts/headTr.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTr.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Patika
+			</h1>
+			<p>
+				Yazan: Chris
+			</p>
+			
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Kullanıcının ekranın altında bulunan topu mouse ile hareket ettirebildiği bir oyun yazın. Bir patika ekranda aşağıya doğru ilerlemektedir ve eğer top kenarlara değerse oyun biter.
+				</p>
+				<p>
+					Aşağıdaki adımları uygulamak size yardımcı olabilir:
+					<ul>
+						<li>Arka planı siyah yapın, 
+						<li>Beyaz dikdörtgenler ekleyin (patika)
+						<li>Topun köşelerinin sürekli olarak bir obje ile üst üste geldiğinden emin olun :). 
+					</ul>
+				</p>
+				<p>Yukarıdaki örnekte biz ekranın çok üstünden başlayarak çok sayıda GRect objesi ürettik. Tüm objeleri bir ArrayList içine koyduk ve bu ArrayList içinde döngü ile her objenin aşağı inmesini sağladık.</p>
+				<p>Benzer tasarımlar için başka yöntemler de kullanılabilir. Saoldaki örnekte patikamızı rastgele üretmiştik. Sağdaki örnekte kullanıcının rastgele üretilmiş düşen bloklar arasından sıyrılması gerekiyor.</p>
+
+				<p>
+					<center>
+						<img style="float:left; width:400px" src="{{pathToRoot}}img/projects/mouseGame/random.png">	
+						<img style="float:left; width:400px" src="{{pathToRoot}}img/projects/mouseGame/demo1.png">
+					</center>
+				</p>
+
+				
+			</div>
+
+		</div>
+
+		
+		%include templates/parts/footerTr.html
+
+	</div>
+</body>

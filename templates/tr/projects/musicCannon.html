@@ -1,0 +1,78 @@
+<head>
+
+	%include templates/parts/headTr.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTr.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+                <h1>
+                        Müzik Bombardımanı
+                </h1>
+                <p>
+                        Hazırlayan: Bryce Cronkite-Ratcliff
+                </p>
+                <p>
+                        Ders Notları:
+                        <a href ="{{pathToRoot}}tk/projects/jsJSSyntax.html">JavaScript Syntax Referansı</a>
+                </p>
+			
+
+		</div>
+		<hr/>
+
+<       p>İstemciler! Sunucular! Muzik! Bir araya gelince daha da lezzetli olan üç harika lezzet!</p>
+
+        <p>Göreviniz bir imtemci programı yazmak. Bu program kullanıcıya bir metin kutusu sunacak. 
+	Kullanıcı bu metin kutusuna bir notanın ismini girdiğinde ve 'Enter' tuşuna bastığında,
+	o nota bizim sunucumuza gönderilecek ve sunucumuz da bu notayı çalacak!</p>
+        
+        <p><img src="../img/icons/jsCannon.jpg" alt="Random Circles"></p>
+
+        <h3 id="toc_2">Yapılacak ilk iş!</h3>
+
+        <p>Masaüstünüzde jsday3 klasörünü açın. Burada musicCannon isimli klasörün içine girin. <strong>index.html</strong> ve <strong>musicCannon.js</strong> dosyalarını Notepad++ ile açın. Ayrıca Google Chrome ile <strong>index.html</strong> dosyasını açın</p>
+
+        <h3 id="toc_3">Şimdi sıra metin kutusunu yaratmakta</h3>
+
+        <p>İstemcinin web sayfasında metin girdi kutusu oluşturun. Bunu <strong>index.html</strong> içine ekleyeceksiniz</p>
+        <p>HTML ile girdi kutusu oluşturmak için girdi etiketi kullanmanız gerekmektedir: "placeholder" alanı kullanıcı kutuya bir şey yazmadan önce kutu içinde gösterilecek metini belirler. (Opsiyoneldir)</p>
+        <pre><code>&lt;input type=&quot;text&quot; placeholder=&quot;Buraya bir metin girin!&quot;&gt;</code></pre>
+                
+        <h3 id="toc_4">Şimdi de bir "callback" yazın.</h3>
+                
+        <p><strong>musicCannon.js</strong> dosyası içine tek bir parametre alan bir fonksiyon yazın. Bu fonksiyonun içine girdi parametresini kullanarak sunucuya ileten bir kod yazın.</p>
+        
+        <p>Sunucuya iletme işlemini (push) gerçekleştiren örnek kodun formatını aşağıda görebilirsiniz:</p>
+        <pre><code>$.post( "http://A COOL URL", { A KEY: VALUE TO USE } );</code></pre>
+        <p>"A COOL URL", "A KEY" ve "VALUE TO USE" değişkenleri gerçek değişkenler değildir. 
+                Bu değişkenler kendi programımızın çalışması için değiştirmemiz gereken ksıımları göstermektedirler.</p>
+        <p>Bu program dahilinde kullanacağımız URL:</p>
+        <pre>http://music-cannon.meteor.com/music</pre>
+            , "KEY" olarak <strong>note</strong> ve "VALUE" olarak da kullanıcının istediği nota bilgisini yazacağız.
+            
+        <h3 id="toc_4">Now hook up the callback to your text box!</h3>
+    
+        <p>Notalarımzı sunucuya iletebildiğimize göre, metin kutumuz ile az önce yazdığımız fonksiyonu bağlayabilriz. 
+        Böylece kutuya yeni bir nota yazıldığında, fonksiyonumuz çağırılır ve veri sunucuya iletilir! 
+        Bunu tesadüfi daireler egzersizinde yaptığımız gibi"event listener" ile yapabiliriz. 
+        Sadece aşağıdakini this.value değişkenini içeren girdi etiketimize eklememiz yeterli.</p>
+        <pre><code>&lt;input type=&quot;text&quot; onchange=&quot;NAME_OF_FUNCTION_THAT_PUSHES(this.value)&quot;&gt;</code></pre>
+    
+        <p>Yukarıdaki koda doğru fonksiyon ismi girdiğinizden emin olun.</p>
+        
+        <p>Şimdi kodunuzu test edebilirsiniz! Küçük harf ile nota ismi girmeyi deneyin. Bu "A blues" ölçeğinde olacaktır. Dikkatlice dinleyin...</p>
+
+		
+		%include templates/parts/footerTr.html
+
+	</div>
+</body>

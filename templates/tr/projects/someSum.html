@@ -1,0 +1,72 @@
+<head>
+
+  %include templates/parts/headTr.html
+
+
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  %include templates/parts/navBarTr.html
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Header -->
+    <div id="pageHeader">
+      <h1>
+        Üç Aşağı Beş Yukarı
+      </h1>
+      <p>
+        Problemi Yazanlar: Bryce C-R, Julia Lee, Chris Piech ve TY Huang
+      </p>
+
+    </div>
+    <hr/>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p> Kullanıcıdan 10 integer okuyan ve sonrasında girilen sayıların toplamlarını gösteren bir program yazınız.</p>
+        <p>
+          <center>
+            <img style="width:600px" src="{{pathToRoot}}img/projects/someSum/demo.png">  
+          </center>
+        </p>
+      </div>
+
+<!--pre id="editor" style="height:400px">/**
+ * Program: That's Some Sum
+ * -------------
+ * This program reads in 10 integers from the user and then prints their sum.
+ */
+
+public class SomeSum extends ConsoleProgram {
+  
+  public void run() {
+    println("Enter 10 nums. I will show you the sum!");
+    int sum = 0;
+      
+    for(int i=0; i<10; i++) {
+      sum = sum + readInt("Please enter an integer: ");
+    }
+
+    println("");
+    println("The sum is: " + sum);
+  }
+}</pre-->
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+    
+    %include templates/parts/footerTr.html
+
+  </div>
+</body>

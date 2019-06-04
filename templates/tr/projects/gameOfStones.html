@@ -1,0 +1,187 @@
+<head>
+
+	%include templates/parts/headTr.html
+
+	<style type="text/css" media="screen">
+  #console {
+    overflow: hide;
+    border: solid 1px black;
+    background-color: white;
+    width: 500px;
+    height: 300px;
+  }
+</style>
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTr.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Nimm
+			</h1>
+			<p>
+				Problemi yazanlar: Danielle Kain ve Chris Piech.
+			</p>
+			<p>
+				Çalışılan Örnekler: 
+				<a href="{{pathToRoot}}tk/projects/emc2.html">E=MC2</a>,
+				<a href="{{pathToRoot}}tk/projects/fibb.html">Fibonacci</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Nimm antik bir strateji oyunudur. "almak" kelimesinin karşılığı olan eski bir Almanca kelimeden ismini almıştır. Batı Afrika'da Tiouk Tiouk ve Çin'de Tsynshidzi olarak bilinir. Oyuncular taş kalmayana kadar sırayla taşları alırlar. Nimm oyunu aşağıdaki gibi ilerler:
+<ol>
+<li>Oyun oyuncular arasında duran 20 taşlık bir yığınla başlar</li>
+<li>İki oyuncu sırasıyla oynar</li>
+<li>Her elde, bir oyuncu ortadaki yığından 1 ya da 2 taş alabilir</li>
+<li>İki oyuncu ortada taş kalmayana kadar devam eder.</li>
+</ol>
+Son taşı alan oyuncu kaybeder. Örnek bir programın ekran görüntüsünü burada görebilirsiniz:
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/nimm/nimm.png">	
+						<p style="text-align:center"><!--<i>Unique, unpredictable numbers for medicines.</i>--></p>
+					</center>
+				</p>
+
+				<p>Nimm oynamak için bir program yazın. İşinizi kolaylaştırmak için problemi daha küçük parçalara böldük. Bu program için çok fazla zamanınız var. Yavaşça, parça parça yapın.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Aşama 1</h2>
+				<p>20 taşla başlayın. Sıfırdan az taş kalana kadar taşları yığından çıkarmaya ve kaç tane taş kaldığını göstermeye tekrar edin. Kimin sırası olduğu konusunda endişelenmeyin. Sadece bir veya iki tane taşın çıkarıldığına emin olmaya da çalışmayın. msg'yi yazdıran ve kullanıcının bir sayı girmesi için bekleyen <code>readInt(<i>msg</i>)</code> metodunu kullanın.
+				</p>
+
+
+				<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/nimm/nimm_m1.png">	
+						
+					</center>
+			</div>
+		</div>
+
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Aşama 2</h2>
+				<p>Kimin sırası olduğunu takip etmek için <code>int</code> tipinde bir değişken oluşturun (iki oyuncu olduğunu unutmayın). Kullanıcıya kimin sırası olduğunu söyleyin. Birisi taş aldığı her zaman, oyuncu numarasını değiştirin.</p>
+
+				<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/nimm/nimm_m2.png">	
+						
+					</center>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Aşama 3</h2>
+				<p>Her elde sadece bir veya iki taşın çıkarıldığına emin olun. Bir kullanıcıdan (onun girdisinden) çıkarılacak taş miktarını okuduktan sonra, geçerli olup olmadığını kontrol etmek ve geçerli olana kadar sormaya devam etmek için aşağıdaki kalıbı kullanabilirsiniz.</p>
+				<div class="well"><code>
+				while(<i>input is invalid</i>) {<br/>
+					&nbsp;&nbsp;&nbsp;<i>input</i> = readInt("Please enter 1 or 2: ");<br/>
+				}
+				</code></div>
+				</p>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Aşama 4</h2>
+				<p>Kazananı ilan edin.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Eklentiler</h2>
+				<p>Rakip olarak bir yapay zeka (YZ) yazabilir misiniz? Sürekli olarak rastgele bir sayı söyleyerek oynayan işlevsiz bir YZ ile başlayabilirsiniz. Sonrasında zekice oynayan bir tane yapmayı deneyebilirsiniz...</p>
+
+				<p>Bazı diğer geliştirme fikirleri:</p>
+				<ul>
+					<li>Sadece bir parça kaldığında, son oyuncunun tek bir taş kaldırabildiğinden emin olun</li>
+					<li>Kullanıcıya kazananın son taşı alan oyuncu mu yoksa almayan oyuncu mu olacağını seçme şansını verin.</li>
+					<li>Oyuncuların her elde 1, 2 veya 3 taş alabileceği bir şekilde oyunu genişletin.</li>
+					<li>3'e bölünme kuralı: eğer bir oyuncunun sırasının sonunda kalan parça sayısı 3'e tam bölünüyorsa, tekrar oynamalılar.</li>
+					<li>Kullanıcıya bilgisayara karşı oynama seçeneği ver ve bilgisayar için kaç taş alacağına karar vermesi için bir yöntem tasarla.</li>
+					<li>Kendi fikirlerini bul.</li>
+			</div>
+		</div>
+
+		
+		<!--<div class="row">
+			<div class="col-md-12">
+				<h2>Çözüm</h2>
+
+
+<pre id="editor" style="height:580px">/**
+ * Carbon Dating
+ * -------------
+ * This program shows how to translate between percent of natural carbon-14 found
+ * in a sample. First, it prints out a carbon-14 (c14) lookup table, then it has users
+ * enter a percent of c14 and returns the expected age. 
+ */
+public class CarbonDating extends ConsoleProgram {
+	
+	private static final int HALF_LIFE = 5700;
+	
+	public void run() {
+		// 1. Show the c-14 lookup table
+		double percent = 100.0;
+		int elapsed = 0;
+		println("Carbon dating lookup table");
+		println("fraction C-14 remaining:  years passed");
+		println("--------------------------");
+		for(int i = 0; i &lt; 10; i++) {
+			println(percent + "%:  " + elapsed + " years");
+			elapsed += HALF_LIFE;
+			percent /= 2;
+		}
+		println("");
+		
+		// 2. Look up the age of a sample
+		while(true) {
+			double percentLeft = readDouble("What percent of natural carbon-14 does your sample have? ");
+			double years = HALF_LIFE * Math.log(percentLeft / 100.0) / Math.log(0.5);
+			println(percentLeft + "% carbon-14 left...");
+			println("The sample is " + years + " years old");
+			println("");
+		}
+	}
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	</div>
+	</div>-->
+		
+		%include templates/parts/footerTr.html
+
+	</div>
+
+	<script data-main="gameOfStones.js" src="js/requirejs/require.js"></script>
+</body>

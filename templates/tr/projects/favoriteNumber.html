@@ -1,0 +1,56 @@
+<head>
+
+	%include templates/parts/headTr.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTr.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				En Sevdiğim Numara
+			</h1>
+			<p>
+				Yazan: Chris, Bryce and Julia
+			</p>
+
+			<p>
+				Çalışan Örnekler: 
+				<a href="{{pathToRoot}}tk/projects/emc2.html">E=MC2</a>,
+				<a href="{{pathToRoot}}tk/projects/fibb.html">Fibbonacci</a>,
+				<a href="{{pathToRoot}}tk/projects/carbonDating.html">Karbon Tarihi Saptama</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				
+				<p>
+					İlk olarak aklınızdan 0 ile 100 arasında bir sayı tutun. Daha sonra favori numaranızı kullanıcıların sürekli tahmin etmeye çalıştığı bir program yazın. Her tahminde kullanıcıya sayınızın daha mı büyük veya daha mı küçük olduğunu söyleyin.
+				</p>
+				<p>
+					Örneğin benim en sevdiğim sayı 88. Aşağıda kullanıcının bunu tahmin etmeye çalıştığı bir örnek görebilirsiniz:
+				</p>
+				<p>
+					<center>
+						<img style="width:600px" src="{{pathToRoot}}img/projects/favoriteNumber/demo.png">	
+					</center>
+				</p>
+				
+    
+			</div>
+		</div>
+		
+		%include templates/parts/footerTr.html
+
+	</div>
+</body>

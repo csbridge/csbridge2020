@@ -1,0 +1,95 @@
+<head>
+
+	%include templates/parts/headTr.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTr.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Sıralayıcı
+			</h1>
+			<p>
+				Yazan: Chris Piech
+			</p>
+			<p>
+				Ders Notları:
+				<a href ="{{pathToRoot}}tk/handouts/arrayLists.html">ArrayLists</a>
+				<br/>
+				Örnekler:
+				<a href ="{{pathToRoot}}tk/projects/rocketShip.html">Roketler</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>Kullanıcıdan 10 sayı vermesini isteyin ve bu sayıları sıralı olarak yazdırın.</p>
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/sorted/demo.png">	
+					</center>
+				</p>
+
+				<p>
+					Kullanıcının verdiği sayıları ArrayList kullanarak saklayın. Bir ArrayList içinde bulunan sayıları sıralamak için:
+					<pre>Collections.sort(<i>arrayList</i>);</pre>
+
+					"sort" metodunun çağırmak verilen array içindeki sayıları yeniden sıralar. Örnek olarak aşağıdaki array'in sıralanmasını inceleyebilirsiniz:
+				</p>
+				<p>
+					<center>
+						<img style="width:400px" src="{{pathToRoot}}img/projects/sorted/sorting.png">	
+					</center>
+				</p>
+
+				<h2>İpuçları</h2>
+
+				<p>
+					Sayılardan oluşan bir ArrayList yaratmak için:
+					<pre>ArrayList&lt;Integer> myList = new ArrayList&lt;Integer>();</pre>
+				</p>
+				<br/>
+				<p>
+					Kullanıcıdan bir tam sayı almak için:
+					<pre>int number = readInt(<i>prompt</i>);</pre>
+				</p>
+				<br/>
+
+				<p>
+					Bir listeye yeni bir eleman eklemek için:
+					<pre>myList.add(<i>newValue</i>);</pre>
+				</p>
+				<br/>
+				<p>
+					Bir listedeki elemanları almak için:
+					<pre>myList.get(<i>index</i>);</pre>
+				</p>
+				<br/>
+				<p>
+					Bir listedeki elemanlar arasında döngü kurabilmek için:
+					<pre>for(int i = 0; i < myList.size(); i++) {
+    myList.get(i);
+}</pre>
+				</p>
+			</div>
+		</div>
+
+		
+
+		
+
+		
+		%include templates/parts/footerTr.html
+
+	</div>
+</body>
