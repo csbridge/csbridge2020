@@ -7394,6 +7394,7 @@ canon.addCommand({
     bindKey: bindKey("Ctrl-D", "Command-D"),
     exec: function(env, args, request) { env.editor.removeLines(); }
 });
+/* Lisa removing
 canon.addCommand({
     name: "gotoline",
     bindKey: bindKey("Ctrl-L", "Command-L"),
@@ -7404,6 +7405,7 @@ canon.addCommand({
         }
     }
 });
+*/
 canon.addCommand({
     name: "togglecomment",
     bindKey: bindKey("Ctrl-7", "Command-7"),
@@ -7419,6 +7421,7 @@ canon.addCommand({
     bindKey: bindKey("Ctrl-Shift-K", "Command-Shift-G"),
     exec: function(env, args, request) { env.editor.findPrevious(); }
 });
+/* Lisa removing
 canon.addCommand({
     name: "find",
     bindKey: bindKey("Ctrl-F", "Command-F"),
@@ -7440,6 +7443,7 @@ canon.addCommand({
         env.editor.replace(replacement, {needle: needle});
     }
 });
+*/
 canon.addCommand({
     name: "replaceall",
     bindKey: bindKey("Ctrl-Shift-R", "Command-Shift-Option-F"),
