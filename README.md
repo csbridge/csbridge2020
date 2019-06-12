@@ -1,2 +1,1 @@
-# CSBridge website - Koc version
-
+# CSBridge Koc
