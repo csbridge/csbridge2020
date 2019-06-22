@@ -48,7 +48,7 @@
 				</p>
 
 				<p>
-					<center><img style="padding:10px;max-width:100%" src="/img/projects/breakout/breakoutGameH.png"></img></center>
+        <center><img style="padding:10px;max-width:100%" src="{{pathToRoot}}img/projects/breakout/breakoutGameH.png"></img></center>
 				</p>
 
 				<p>
@@ -77,7 +77,7 @@
 					Before you start playing the game, you have to set up the various pieces.  Thus, it probably makes sense to implement the run method as two method calls: one that sets up the game and one that plays it.  An important part of the setup consists of creating the rows of bricks at the top of the game, which look like this:
 				</p>
 				<p>
-					<center><img style="padding:10px;max-width:100%" src="/img/projects/breakout/breakoutBricks.png"></img></center>
+        <center><img style="padding:10px;max-width:100%" src="{{pathToRoot}}img/projects/breakout/breakoutBricks.png"></img></center>
 				</p>
 				<p>
 					The number, dimensions, and spacing of the bricks are specified using named constants in the starter file, as is the distance from the top of the window to the first line of bricks.  The only value you need to compute is the x coordinate of the first column, which should be chosen so that the bricks are centered in the window, with the leftover space divided equally on the left and right sides.  The color of the bricks remain constant for two rows and run in the following rainbow-like sequence: RED, ORANGE, YELLOW, GREEN, CYAN.
@@ -168,7 +168,7 @@ which might generate a ball going more or less straight down.  That would make l
 				</p>
 
 				<p>
-					<center><img src="/img/projects/breakout/breakoutCollision.png"></img></center>
+        <center><img src="{{pathToRoot}}img/projects/breakout/breakoutCollision.png"></img></center>
 				</p>
 				<p>
 					These points have the advantage of being outside the ball but nonetheless close enough to make it appear that collisions have occurred.  Thus, for each of these four points, you need to:
