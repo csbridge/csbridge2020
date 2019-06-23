@@ -11905,7 +11905,7 @@ exports.commands = [{
     bindKey: bindKey("Ctrl-A", "Command-A"),
     exec: function(editor) { editor.selectAll(); },
     readOnly: true
-}, {
+}, /*{
     name: "centerselection",
     bindKey: bindKey(null, "Ctrl-L"),
     exec: function(editor) { editor.centerSelection(); },
@@ -11920,7 +11920,7 @@ exports.commands = [{
         }
     },
     readOnly: true
-}, {
+}*/, {
     name: "fold",
     bindKey: bindKey("Alt-L|Ctrl-F1", "Command-Alt-L|Command-F1"),
     exec: function(editor) { editor.session.toggleFold(false); },
