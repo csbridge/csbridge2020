@@ -1,0 +1,101 @@
+<head>
+
+	%include templates/parts/headTr.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBarTr.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Hole Puncher (with Solution)
+			</h1>
+			<p>
+				Problem written by Chris Piech.
+        <br/>
+        Day5: <code>HolePuncher.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+        <p><b>This is all placeholder text to fix:</b></p>
+				<p>
+					Write a program that has a GRect (which represents a stamp) follow a users mouse around and draw a GRect on the screen centered around the mouse when the user clicks </p>
+
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/holePuncher/demo.png">	
+					</center>
+				</p>
+
+				<p>Remember that since you need to have a variable that you can change inside a mouse event class (the GRect which represents your stamp) you are going to have to declare it as an istance variable. Ask one of the teachers to explain this if it doesn't make sense.</p>
+
+        <p><b>End all placeholder text.</b></p>
+				
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:480px">
+/**
+ * Class: HolePuncher
+ * -----------------
+ * A program that draws filled black circles on the screen whenever
+ * the mouse
+ * is pressed.
+ */
+public class HolePuncher extends GraphicsProgram {
+  /* The radius of each hole that we punch. */
+  private static final double HOLE_RADIUS = 10;
+
+  public void run() {
+    addMouseListeners();
+  }
+
+  /**
+   * Draws a black circle centered at the mouse location whenever the mouse
+   * is pressed.
+   */
+  public void mousePressed(MouseEvent e) {
+    double x = e.getX() - HOLE_RADIUS;
+    double y = e.getY() - HOLE_RADIUS;
+
+    GOval hole = new GOval(x, y, 2 * HOLE_RADIUS, 2 * HOLE_RADIUS);
+    hole.setFilled(true);
+    add(hole);
+  }
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	
+	</div>
+	</div>
+		%include templates/parts/footerTr.html
+
+	</div>
+</body>

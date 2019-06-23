@@ -1,0 +1,143 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Rocket Paddle (with Solution)
+			</h1>
+			<p>
+        Problem written by Chris Piech.
+        <br/>
+        Day7: <code>RocketPaddle.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+        <p><b>This is all placeholder text to fix:</b></p>
+				<p>
+					Write a program that has a GRect (which represents a stamp) follow a users mouse around and draw a GRect on the screen centered around the mouse when the user clicks </p>
+
+				<p>
+					<center>
+						<img style="width:500px;border:1px solid #000000" src="{{pathToRoot}}img/projects/rocketPaddle/demo.png">	
+					</center>
+				</p>
+
+				<p>Remember that since you need to have a variable that you can change inside a mouse event class (the GRect which represents your stamp) you are going to have to declare it as an istance variable. Ask one of the teachers to explain this if it doesn't make sense.</p>
+        <p><b>End all placeholder text.</b></p>
+
+				
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:1050px">
+/**
+ * Class: RocketPaddle
+ * -----------------
+ * Shoots rockets from a paddle launcher on mouse click.
+ */
+public class RocketPaddle extends GraphicsProgram {
+
+    // constants
+    public static final int APPLICATION_HEIGHT = 600;
+    private static final double BALL_SIZE = 10;
+    private static final int PADDLE_Y = APPLICATION_HEIGHT - 50;
+    private static final int PADDLE_WIDTH = 100;
+    private static final int PADDLE_HEIGHT = 20;
+
+    // the list of rockets
+    private ArrayList<GOval> rocketList;
+    private GRect paddle;
+
+    public void run() {
+        rocketList = new ArrayList<GOval>();
+        createPaddle();
+        addMouseListeners();
+        while(true) {
+            animateRockets();
+            pause(100);
+        }
+    }
+
+    public void mouseMoved(MouseEvent e){
+        double x = e.getX() - PADDLE_WIDTH/2;
+        paddle.setLocation(x, PADDLE_Y);
+    }
+
+    public void mousePressed(MouseEvent e) {
+        double x = e.getX();
+        double y = PADDLE_Y;
+        GOval r = new GOval(x, y, BALL_SIZE, BALL_SIZE);
+        r.setFilled(true);
+        r.setColor(Color.BLUE);
+
+        // add the rocket to the screen
+        add(r);
+
+        // add the rocket to the list
+        rocketList.add(r);
+    }
+
+    private void animateRockets() {
+        // loop over list backwards so that we can safely remove
+        // from the list.
+        for(int i = rocketList.size() - 1; i >= 0; i--) {
+            GOval oval = rocketList.get(i);
+
+            // move the rocket
+            oval.move(0, -5);
+
+            // remove the rocket?
+            if(oval.getY() < 0) {
+              remove(rocketList.get(i));
+              rocketList.remove(i);
+            }
+        }
+    }
+
+    private void createPaddle() {
+      paddle = new GRect(0, PADDLE_Y, PADDLE_WIDTH, PADDLE_HEIGHT);
+      paddle.setFilled(true);
+      add(paddle);
+    }
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	
+	</div>
+	</div>
+		%include templates/parts/footer.html
+
+	</div>
+</body>

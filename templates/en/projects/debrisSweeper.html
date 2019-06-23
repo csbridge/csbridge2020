@@ -1,0 +1,129 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Debris Sweeper (with Solution)
+			</h1>
+			<p>
+        Written by Chris Piech and Mystery CS106A people.
+        <br/>
+        Day5: <code>DebrisSweeper.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+        <p><b>This is all placeholder text to fix:</b></p>
+				<p>
+					Write a program that has a GRect (which represents a stamp) follow a users mouse around and draw a GRect on the screen centered around the mouse when the user clicks </p>
+
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/debrisSweeper/demo.png">	
+					</center>
+				</p>
+
+				<p>Remember that since you need to have a variable that you can change inside a mouse event class (the GRect which represents your stamp) you are going to have to declare it as an istance variable. Ask one of the teachers to explain this if it doesn't make sense.</p>
+
+				
+        <p><b>End all placeholder text.</b></p>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:950px">
+/**
+ * Class: DebrisSweeper
+ * -----------------
+ * Puts a random collection of debris (GOvals) on the screen
+ * and then allows the user to click and remove the debris.
+ */
+public class DebrisSweeper extends GraphicsProgram {
+    /* Minimum and maxmimum size of a piece of debris. */
+    private static final double MIN_DEBRIS_SIZE = 50;
+    private static final double MAX_DEBRIS_SIZE = 150;
+  
+    /* Number of pieces of debris. */
+    private static final double NUM_DEBRIS_PIECES = 100;
+  
+    public void run() {
+        createDebris();
+        addMouseListeners();
+    }
+  
+    public void mousePressed(MouseEvent e) {
+        GObject hitObject = getElementAt(e.getX(), e.getY());
+        if (hitObject != null) {
+          remove(hitObject);
+        }
+    }
+  
+    /* * * * * Code for adding debris to the screen. * * * * */
+  
+    /* Creates debris and strews it randomly on the canvas. */
+    private void createDebris() {
+        for (int i = 0; i < NUM_DEBRIS_PIECES; i++) {
+            createSingleDebrisPiece();
+        }
+    }
+  
+    /* Creates a single piece of debris and adds it to the
+     * canvas.
+     */
+    private void createSingleDebrisPiece() {
+        RandomGenerator rgen = RandomGenerator.getInstance();
+  
+        /* Compute the width and height first so that we know where we can
+         * safely put the object on screen.
+         */
+        double width  = rgen.nextDouble(MIN_DEBRIS_SIZE, MAX_DEBRIS_SIZE);
+        double height = rgen.nextDouble(MIN_DEBRIS_SIZE, MAX_DEBRIS_SIZE);
+        double x = rgen.nextDouble(0, getWidth() - width);
+        double y = rgen.nextDouble(0, getHeight() - height);
+  
+        /* Add an oval of that size and position to the screen. */
+        GOval oval = new GOval(x, y, width, height);
+        oval.setFilled(true);
+        oval.setColor(rgen.nextColor());
+        add(oval);
+    }
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	
+	</div>
+	</div>
+		%include templates/parts/footer.html
+
+	</div>
+</body>
