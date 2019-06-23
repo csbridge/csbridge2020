@@ -1,0 +1,69 @@
+<head>
+
+	%include templates/parts/head.html
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+        Banish Winter (a debugging problem)
+			</h1>
+			<p>
+				Problem written by Eric Roberts and Lisa Yan
+			</p>
+			<p>
+				Handouts: 
+				<a href ="{{pathToRoot}}en/handouts/karel.html">KarelReference</a>
+        <br/>
+        Day1: <code>BanishWinter.java</code>
+			</p>	
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+        <p>
+        This is a bonus program! It's meant to be challenging. This program is an exercise in <b>debugging</b>. Some <i>buggy</i> code is written for you (the program does not run correctly), and it is up to you to fix it.
+        </p>
+
+				<p>
+        Karels first large assignment is to walk across Koç campus and spruce it up a bit for Spring. Spring has sprung, but the campus trees haven't gotten the memo and are still leafless. Karel needs to walk across campus from west to east, adorning all trees with artificial leaves and transforming the campus as follows:
+				</p>
+
+				<p>
+					<center>
+            <img style="width:800px" src="{{pathToRoot}}img/projects/banishWinter/banishWinter1.png">
+					</center>
+				</p>
+
+        <p>
+        The problem is complicated because Karel doesn't know how tall each tree is, nor does she know the distances between trees. She does know, however, that she has just enough beepers in her beeper bag starting out to decorate all of the trees. You can likely intuit the program requirement by looking at the two snapshots above (the world is called <code>BanishWinter1.w</code>. Your program must therefore also work for the following configuration (<code>BanishWinter2.w</code>):
+        </p>
+
+				<p>
+					<center>
+            <img style="width:500px" src="{{pathToRoot}}img/projects/banishWinter/banishWinter2.png">
+					</center>
+				</p>
+        <p>
+        The file <code>Day1/BanishWinter.java</code> has some code to get you started, but it is <b><i>buggy and incorrect</i></b>. Try to understand what the errors are in the code and debug the program.
+        </p>
+				
+			</div>
+
+		</div>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>
