@@ -93,13 +93,14 @@
 	          	<li><a href="../../en/projects/someSum.html">Some Sum</a></li>
 	          	<li><a href="../../en/projects/gameOfStones.html">Nimm</a></li>
 	          	
-              <!--
 	          	<li class="divider"></li>
 	          	<li><a href="../../en/projects/awesome.html">Programming is Awesome</a></li>
-	          	<li><a href="../../en/projects/stringArt.html">String Art</a></li>
 	          	<li><a href="../../en/projects/randomCircles.html">Random Circles</a></li>
+	          	<li><a href="../../en/projects/stringArt.html">String Art</a></li>
+              <li><a href="../../tr/projects/mysterySquare.html">Mystery Square</a></li>
 	            <li><a href="../../en/projects/bouncingBall.html">Bouncing Ball</a></li>
 
+              <!--
 	            <li class="divider"></li>
 	          	<li><a href="../../en/projects/madMethods.html">Mad Methods</a></li>
 	          	<li><a href="../../en/projects/target.html">Target</a></li>
@@ -155,25 +156,22 @@
 	            <li><a href="../../en/projects/8Ball.html">8-Ball</a></li>
 	          	<li><a href="../../en/projects/averageMethod.html">Average Method</a></li>	
 	           
-            <!--
             <li class="divider"></li>
 	            <li><a href="../../en/projects/robotFace.html">Robot Face</a></li>
 	          	<li><a href="../../en/projects/drawPeople.html">Draw People</a></li>	
 	          	<li><a href="../../en/projects/halfGreen.html">Half Green</a></li>
 	            
+            <!--
 	          <li class="divider"></li>
-	            <li><a href="../../en/projects/mysterySquare.html">Mystery Square</a></li>
 	            <li><a href="../../en/projects/goCenter.html">Go To Center</a></li>
 	            <li><a href="../../en/projects/gravityBall.html">Gravity Ball</a></li>
 
 	          <li class="divider"></li>
 	             <li><a href="../../en/projects/stampTool.html">Stamp Tool</a></li>
            
-           Should be commented out too
 	          	<li><a href="../../en/projects/holePuncher.html">Hole Puncher</a></li>	
 	          	<li><a href="../../en/projects/debrisSweeper.html">Debris Sweeper</a></li>	
 	          	<li><a href="../../en/projects/suchADrag.html">Such a Drag</a></li>
-	          	<li><a href="../../en/projects/holePuncher.html">Hole Puncher</a></li>	
 
           	<li class="divider"></li>
 							<li><a href="../../en/projects/rocketPaddle.html">Rocket Paddle</a></li>
@@ -323,53 +321,14 @@
 		<div class="row">
 			<div class="col-md-12">
 				Draw a square (100 pixels by 100 pixels) in the center of the screen and change its color every second.
+				<p>
+					<center>
+						<img style="width:500px;border:1px solid #000000" src="../../img/projects/mysterySquare/mysterySquare.gif">	
+					</center>
+				</p>
+
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Solution</h2>
-
-
-<pre id="editor" style="height:450px">/**
- * Draws a Mystery Square that changes color
- * -----------------------------------------
- * Really does what it says.
- */
-public class MysterySquare extends GraphicsProgram {
-
-    private static final int SIZE = 100;
-    private static final int DELAY = 1000;
-
-	private static RandomGenerator rg = new RandomGenerator();
-	
-	public void run() {
-		// Draw a square in the center of the screen.
-		GRect rect = new GRect(SIZE, SIZE);
-		double x = (getWidth() - rect.getWidth()) / 2;
-		double y = (getHeight() - rect.getHeight()) / 2;
-		rect.setFilled(true);
-		add(rect, x, y);
-		
-		// Change its color every second.
-		while(true) {
-			rect.setColor(rg.nextColor()); 
-			pause(DELAY);
-		}
-	}
-}</pre>
-    
-<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-   editor.setTheme('ace/theme/eclipse');
-   editor.getSession().setMode("ace/mode/java");
-   editor.setReadOnly(true);
-   editor.setShowPrintMargin(false);
-   editor.renderer.setShowGutter(false); 
-    /*editor.setTheme("ace/theme/eclipse");
-    editor.getSession().setMode("ace/mode/java");*/
-</script>
-	</div>
 	</div>
 		
 <hr>

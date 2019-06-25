@@ -94,13 +94,14 @@
 	          	<li><a href="../../tr/projects/someSum.html">Üç Aşağı Beş Yukarı</a></li>
 	          	<li><a href="../../tr/projects/gameOfStones.html">Nimm</a></li>
 
-							<!--
 	          	<li class="divider"></li>
 	          	<li><a href="../../tr/projects/awesome.html">Programcılık Bir Harika</a></li>
 	          	<li><a href="../../tr/projects/stringArt.html">String Sanatı</a></li>
 	          	<li><a href="../../tr/projects/randomCircles.html">Tesadüfi Daireler</a></li>
+              <li><a href="../../tr/projects/mysterySquare.html">Gizemli Kare</a></li>
 	            <li><a href="../../tr/projects/bouncingBall.html">Zıp Zıp Top</a></li>
 
+							<!--
 	            <li class="divider"></li>
 	          	<li><a href="../../tr/projects/madMethods.html">Çılgın Metotlar</a></li>
 	          	<li><a href="../../tr/projects/target.html">Hedef Tahtası</a></li>
@@ -154,14 +155,13 @@
 	            <li><a href="../../tr/projects/8Ball.html">8 Numaralı Top</a></li>
 	          	<li><a href="../../tr/projects/averageMethod.html">Ortalama Metodu</a></li>	
 
-            <!--
 	          <li class="divider"></li>
 	            <li><a href="../../tr/projects/robotFace.html">Robot Surat</a></li>
 	          	<li><a href="../../tr/projects/drawPeople.html">İnsan Çizme</a></li>	
 	          	<li><a href="../../tr/projects/halfGreen.html">Yarısı Yeşil</a></li>
 
+            <!--
 	          <li class="divider"></li>
-	            <li><a href="../../tr/projects/mysterySquare.html">Gizemli Kare</a></li>
 	            <li><a href="../../tr/projects/goCenter.html">Merkeze Git</a></li>
 	            <li><a href="../../tr/projects/gravityBall.html">Seken Top</a></li>
 
@@ -317,32 +317,6 @@
 			<div class="col-md-12">
 				<h2>Çözüm</h2>
 
-
-<pre id="editor" style="height:400px">/**
- * Draws a Mystery Square that changes color
- * -----------------------------------------
- * Really does what it says.
- */
-public class MysterySquare extends GraphicsProgram {
-
-	private static RandomGenerator rg = new RandomGenerator();
-	
-	public void run() {
-		// Draw a square in the center of the screen.
-		GRect rect = new GRect(100, 100);
-		double x = (getWidth() - rect.getWidth()) / 2;
-		double y = (getHeight() - rect.getHeight()) / 2;
-		rect.setFilled(true);
-		add(rect, x, y);
-		
-		// Change its color every second.
-		while(true) {
-			rect.setColor(rg.nextColor()); 
-			pause(1000);
-		}
-	}
-}</pre>
-    
 <script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
