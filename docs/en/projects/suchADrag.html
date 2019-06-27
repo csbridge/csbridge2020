@@ -316,22 +316,29 @@
 
 		<div class="row">
 			<div class="col-md-12">
-        <p><b>This is all placeholder text to fix:</b></p>
-				<p>
-					Write a program that has a GRect (which represents a stamp) follow a users mouse around and draw a GRect on the screen centered around the mouse when the user clicks </p>
+        <p>
+        This program allows users to drag shapes around the screen. Let's take a look at 
+        how it's implemented. 
+        </p>
+        <p>
+        First, we generate 10 GOvals and place them randomly about the canvas. This 
+        happens in the method addRandomObjects( ). Notice how we use the constants 
+        NUM_RANDOM_OBJECTS and OBJECT_SIZE instead of the magic numbers 10 and 50 when creating
+        the objects. 
 
-				<p>
-        <b>Currently no image available for this program. Feel free ot make one</b></p>
         <p>
 					<center>
-						<img style="width:500px" src="../../img/projects/stampTool/demo.png">	
+						<img style="width:500px" src="../../img/projects/suchADrag/demo.png">	
 					</center>
 				</p>
 
-				<p>Remember that since you need to have a variable that you can change inside a mouse event class (the GRect which represents your stamp) you are going to have to declare it as an instance variable. Ask one of the teachers to explain this if it doesn't make sense.</p>
-
-        <p><b>End all placeholder text.</b></p>
-				
+		<p>
+        Once we've added the random objects, we tell the program to listen for mouse events
+        like mouse clicks and drags with the addMouseListeners( ) method. We also specify
+        what the program should do in the event of a mouse click or drag by implementing the mousePressed and mouseDragged
+        methods. Because we can't pass variables other than the MouseEvent to the mouseDragged method,
+        we need an instance variable to keep track of which oval was clicked. 
+        Ask one of the teachers to explain why we need an instance variable here if it doesn't make sense.</p>
 			</div>
 		</div>
 		

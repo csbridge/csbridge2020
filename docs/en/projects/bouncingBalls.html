@@ -316,19 +316,27 @@
 
 		<div class="row">
 			<div class="col-md-12">
-        <p><b>This is all placeholder text to fix:</b></p>
-				<p>
-					Write a program that has a GRect (which represents a stamp) follow a users mouse around and draw a GRect on the screen centered around the mouse when the user clicks </p>
+        <p>
+        This program creates a beautiful animation of colorful bouncing balls. The finished
+        product could definitely make a solid screen saver.
+        </p>
+        <p>
 
-				<p>
+        We'll have to generate 50 circles and place them randomly about the canvas. 
+        Note that in addition to creating the balls, we'll also need to generate initial 
+        x and y velocities for each ball. 
+        These velocities should be random. Importantly, we will store the balls and 
+        velocities in three ArrayLists. 
+        We can decompose all of this into a method.
+        </p>
+
 					<center>
 						<img style="width:500px;border:1px solid #000000" src="../../img/projects/bouncingBalls/demo.png">	
 					</center>
-				</p>
-
-				<p>Remember that since you need to have a variable that you can change inside a mouse event class (the GRect which represents your stamp) you are going to have to declare it as an istance variable. Ask one of the teachers to explain this if it doesn't make sense.</p>
-
-        <p><b>End all placeholder text.</b></p>
+        <p>
+        On each iteration of the animation while loop, we'll also need to check for bounces on all of the 
+        balls using an inner for loop. 
+        </p>
 				
 			</div>
 		</div>
