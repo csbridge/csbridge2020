@@ -107,11 +107,12 @@
 	          	<li><a href="../../tr/projects/illusion.html">Optik İllüzyon</a></li>
 	          	<li><a href="../../tr/projects/sunset.html">Kısa Film</a></li>
 
-							<!--
 	          	<li class="divider"></li>
 	          	<li><a href="../../tr/projects/makingTracks.html">İz Çıkartmaca</a></li>
 	          	<li><a href="../../tr/projects/catchMeIfYouCan.html">Yakala Yakalayabilirsen</a></li>
+	          	<li class="divider"></li>
 							<li><a href="../../tr/projects/breakout.html">Breakout!</a></li>
+							<!--
 
 	          	<li class="divider"></li>
 	          	<li><a href="../../tr/projects/sortedNumbers.html">Sorted Numbers</a></li>
@@ -163,12 +164,12 @@
 	            <li><a href="../../tr/projects/goCenter.html">Merkeze Git</a></li>
 	            <li><a href="../../tr/projects/gravityBall.html">Seken Top</a></li>
 
-              <!--
 	          <li class="divider"></li>
 	             <li><a href="../../tr/projects/stampTool.html">Damga Makinesi</a></li>
 	          	<li><a href="../../tr/projects/holePuncher.html">Hole Puncher</a></li>	
 	          	<li><a href="../../tr/projects/debrisSweeper.html">Debris Sweeper</a></li>	
 	          	<li><a href="../../tr/projects/suchADrag.html">Such a Drag</a></li>
+              <!--
 
 	          <li class="divider"></li>
 	          	<li><a href="../../en/projects/rocketPaddle.html">Roket Atar</a></li>
@@ -192,9 +193,9 @@
 	          	<li><a href="../../slides/Graphics.pdf">Grafikler</a></li>
 	          	<li><a href="../../slides/Animation.pdf">Animasyon</a></li>
 	          	<li><a href="../../slides/Methods.pdf">Metotlar</a></li>
+	          	<li><a href="../../slides/Events.pdf">Events</a></li>
             <!--
 	          	<li><a href="../../slides/Review.pdf">Özet</a></li>
-	          	<li><a href="../../slides/Events.pdf">Events</a></li>
 	          	<li><a href="../../slides/Internet.pdf">Internet</a></li>
 	          	<li><a href="../../slides/Arrays.pdf">Diziler (Arrays)</a></li>
 	          	<li><a href="../../slides/ArrayLists.pdf">Array Lists</a></li>
@@ -306,22 +307,29 @@
 
 		<div class="row">
 			<div class="col-md-12">
-        <p><b>This is all placeholder text to fix:</b></p>
-				<p>
-					Write a program that has a GRect (which represents a stamp) follow a users mouse around and draw a GRect on the screen centered around the mouse when the user clicks </p>
+        <p>
+        This program allows users to drag shapes around the screen. Let's take a look at 
+        how it's implemented. 
+        </p>
+        <p>
+        First, we generate 10 GOvals and place them randomly about the canvas. This 
+        happens in the method addRandomObjects( ). Notice how we use the constants 
+        NUM_RANDOM_OBJECTS and OBJECT_SIZE instead of the magic numbers 10 and 50 when creating
+        the objects. 
 
-				<p>
-        <b>Currently no image available for this program. Feel free ot make one</b></p>
         <p>
 					<center>
-						<img style="width:500px" src="../../img/projects/stampTool/demo.png">	
+						<img style="width:500px" src="../../img/projects/suchADrag/demo.png">	
 					</center>
 				</p>
 
-				<p>Remember that since you need to have a variable that you can change inside a mouse event class (the GRect which represents your stamp) you are going to have to declare it as an istance variable. Ask one of the teachers to explain this if it doesn't make sense.</p>
-
-        <p><b>End all placeholder text.</b></p>
-				
+		<p>
+        Once we've added the random objects, we tell the program to listen for mouse events
+        like mouse clicks and drags with the addMouseListeners( ) method. We also specify
+        what the program should do in the event of a mouse click or drag by implementing the mousePressed and mouseDragged
+        methods. Because we can't pass variables other than the MouseEvent to the mouseDragged method,
+        we need an instance variable to keep track of which oval was clicked. 
+        Ask one of the teachers to explain why we need an instance variable here if it doesn't make sense.</p>
 			</div>
 		</div>
 		
