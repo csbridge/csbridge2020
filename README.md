@@ -1,40 +1,27 @@
-# CSBridge website master copy
+# CSBridge Website: Czech Technical University Summer 2019 (Prague)
 
-When making a new course, please use this repository as a template.
+This site uses GitHub pages with a custom domain.  You can find these settings on the main settings page for this project - specifically, all files in the `docs` folder of the master branch are published.
 
-1. Clone this repository.
+## Website Updates
 
-    ```git clone git@github.com:csbridge/csbridge.github.io.git```
+1. Change any file templates in ```templates/```
 
-2. Create a new repository under the ```csbridge``` GitHub, e.g. ```csbridge2019koc```.
+2. ```python compile.py``` creates full html pages underneath the ```docs/``` folder.
 
-3. Change the ```origin``` on your local repo to point to this new GitHub repo. Then push to GitHub.
+3. Any slides or starter code changed in the top directory are symlinked to change the actual files in ```docs/```.
 
-    ```git remote remove origin```
-
-    ```git remote add origin <ssh or html repo link>```
-
-    ```git push origin master```
-
-4. Enable GitHub pages on your new repo:
-
-    1. Go to setting on the GitHub page for your repo.
-
-    2. Change the 'Source' section of the GitHub pages to point to ```master branch/docs folder```.
-
-    3. Check ```Enforce HTTPS.```
-
-    4. Fill in the 'Custom domain' field with your desired custom domain (e.g., koc.csbridge.org). Note that this automatically populates the CNAME file in ```docs/CNAME```. Do not delete this.
-
-        Note: If you do not have a custom domain, contact the domain manager. We can create this on our Domain manager (If you are a domain manager, here are steps to create the ```koc``` subdomain: (1) go to DNS management, (2) add a CNAME record with domain ```koc``` and value ```csbridge.github.io```)
+4. After pushing to GitHub, it may take a few minutes for the changes to appear on the CSBridge website.
 
 
-5. Now you can update the website!
+## Handling Student Submissions
+- The assignments zips each contain a jar file called `zipper.jar`. Double-clicking on this file inside the assignment folder zips the current assignment folder.
+- Every student will need an ID number. At CTU, this will be something like CTU0012. Make sure that student nametags have this information (where all the section leaders know these made-up student ID numbers for each of their sections).
+- Once students zip up their assignment, they still need to manually upload it for the staff to access. The students should submit to this URL: https://sendtomycloud.com/csbridge2019.  This drops files off in a Google Drive on Lisa Yan's Stanford account.  For security, please have the Section Leaders write the URL on the board during lab.  Students should submit their assignments at the end of the day (not after every assignment).
+- Instructors should have received an invite to the Google Drive submission folder; within this folder, we can create subfolders to organize the project zips that students submit.
+- There are some instructions on https://koc.csbridge.org/en/handouts/submission.html for students with the zipper.jar information.
 
-    1. Change any file templates in ```templates/```
 
-    2. ```python compile.py``` creates full html pages underneath the ```docs/``` folder.
+## Base Course Content Update Notes
+For Day1 there is one description missing for `BanishWinter.java` located in `Day1.zip`. The program as-is does not work, so it's been turned into a level 1 bonus problem. The writeup is now located on the master website (`csbridge.github.io` repo).
 
-    3. Any slides or starter code changed in the top directory are symlinked to change the actual files in ```docs/```.
-
-    4. After pushing to GitHub, it may take a few minutes for the changes to appear on the CSBridge website.
+Make sure to look at `templates/en/projects/banishWinter.html`, `templates/parts/bonusTable.html`, `docs/img/icons/banishWinter.jpeg`, `docs/img/projects/banishWinter/`, **and** the updated `Day1.zip` (which has a second configuration for BanishWinter debugging) if you'd like to incorporate it.
