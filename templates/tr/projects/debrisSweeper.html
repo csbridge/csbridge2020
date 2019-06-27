@@ -1,49 +1,68 @@
 <head>
 
-	%include templates/parts/headTr.html
+	%include templates/parts/head.html
 
 
 </head>
 <body>
 
 	<!-- Navigation Bar -->
-	%include templates/parts/navBarTr.html
+	%include templates/parts/navBar.html
 
 	<!-- Main Content -->
 	<div class="container">
 
 		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-				Debris Sweeper (with Solution)
-			</h1>
-			<p>
+        <div id="pageHeader">
+            <h1>
+                Debris Sweeper (with Solution)
+            </h1>
+            <p>
         Written by Chris Piech and Mystery CS106A people.
         <br/>
+ 
+        Handouts: 
+        <a href ="{{pathToRoot}}en/handouts/graphics.html">GraphicsReference</a>, 
+        <a href ="{{pathToRoot}}en/handouts/events.html">EventsReference</a>
+ 
+        <br/>
         Day5: <code>DebrisSweeper.java</code>
-			</p>
+            </p>
 
-		</div>
-		<hr/>
+        </div>
+        <hr/>
 
-		<div class="row">
-			<div class="col-md-12">
-        <p><b>This is all placeholder text to fix:</b></p>
-				<p>
-					Write a program that has a GRect (which represents a stamp) follow a users mouse around and draw a GRect on the screen centered around the mouse when the user clicks </p>
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    The goal of this example is to write a program that fills the screen with a random collection of debris (GOvals) and then allows the user to click and remove debris pieces. This program lets you practice so many techniques that we learned in the first week of class. You will be using methods, for loops, graphics, random numbers, mouse listeners, and maybe even more!
+                </p>
 
-				<p>
-					<center>
-						<img style="width:500px" src="{{pathToRoot}}img/projects/debrisSweeper/demo.png">	
-					</center>
-				</p>
+                <p>
+                    The first step is to make the debris. Create constants that set limits for how large the debris pieces can be and how many pieces the screen will contain. For every piece, create a new GOval with a random size, position, and color (within the limits you have set). Remember, this should work with any size screen. Perhaps you want to split this into a few methods to make your code easy to read!
+                </p>
 
-				<p>Remember that since you need to have a variable that you can change inside a mouse event class (the GRect which represents your stamp) you are going to have to declare it as an istance variable. Ask one of the teachers to explain this if it doesn't make sense.</p>
+                <p>
+                    <center>
+                        <img style="width:500px" src="{{pathToRoot}}img/projects/debrisSweeper/demo.png">   
+                    </center>
+                </p>
 
-				
-        <p><b>End all placeholder text.</b></p>
-			</div>
-		</div>
+                <p>
+                    Next, we need to let users remove debris from the screen. Add a mouse listener and check if the user has clicked on an object. If they have, clean that debris up (remove it from the screen)!
+                </p>
+
+                <br/>
+
+              <p><b>BONUS!</b></p>
+
+                <p>
+                    If you want, as a bonus, you could add a way to check if all the debris is clear. When it is, tell the user congratulations and thank them for cleaning up the screen!
+                </p>
+
+                
+            </div>
+        </div>
 		
 		<div class="row">
 			<div class="col-md-12">
@@ -123,7 +142,7 @@ public class DebrisSweeper extends GraphicsProgram {
 	
 	</div>
 	</div>
-		%include templates/parts/footerTr.html
+		%include templates/parts/footer.html
 
 	</div>
 </body>
