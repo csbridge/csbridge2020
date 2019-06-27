@@ -1,1 +1,0 @@
-Dimension: (16, 20)BeeperBag: 999Karel: (1, 1) EastSpeed: 0.20
