@@ -27,11 +27,11 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Bu resmi çizdiren bir program yazın. Verilmiş sabitleri (constant) kullanmalısınız, ama değerlerini (veya yüzün herhangi bir kısmının rengini) değiştirmekten çekinmeyin </p>
+					Bu resmi çizdiren bir program yazın. Verilmiş sabitleri (constant) kullanmalısınız, ama değerlerini (veya yüzün herhangi bir kısmının rengini) değiştirmekten çekinmeyin. </p>
 
 				<p>
 					<center>
-						<img style="width:500px" src="{{pathToRoot}}img/projects/robotFace/face.png">	
+						<img style="width:500px;border:1px solid #000000" src="{{pathToRoot}}img/projects/robotFace/face.jpg">	
 					</center>
 				</p>
 
@@ -75,28 +75,30 @@
 
 
 <pre id="editor" style="height:1220px">/**
- * Draw Face
+ * Robot Face
  * ---------
  * Draws an awesome robot face, with label and different colored
  * eyes!!!@#$%#@!
  */
-public class DrawFace extends GraphicsProgram {
+public class RobotFace extends GraphicsProgram {
 
 	private static final int FACE_WIDTH = 300;
 	private static final int FACE_HEIGHT = 350;
 	private static final int EYE_DIAMETER = 70;
 	private static final int EYE_Y_OFFSET = 40;
+	private static final int EYE_X_SEPARATION = 40;
+
 	private static final int MOUTH_WIDTH = 150;
 	private static final int MOUTH_HEIGHT = 30;
 	private static final int MOUTH_Y_OFFSET = 200;
+
 	private static final int LABEL_Y = 50;
 
 	public void run() {
 		drawHead();
-		drawLeftEye();
-		drawRightEye();
-		drawMouth();
 		drawLabel();
+		drawMouth();
+		drawEyes();
 	}
 
 	private void drawHead() {
@@ -104,47 +106,42 @@ public class DrawFace extends GraphicsProgram {
 		double y = (getHeight() - FACE_HEIGHT) / 2;
 		GRect head = new GRect(x, y, FACE_WIDTH, FACE_HEIGHT);
 		head.setFilled(true);
-		head.setFillColor(Color.ORANGE);
+		head.setFillColor(Color.YELLOW);
 		add(head);
 	}
-	
-	private void drawLeftEye() {
-		double eyeSpacing = (FACE_WIDTH - 2 * EYE_DIAMETER) / 3;
-		double headX = (getWidth() - FACE_WIDTH) / 2;
+
+	private void drawEyes() {
 		double headY = (getHeight() - FACE_HEIGHT) / 2;
-		double x =  headX + eyeSpacing;
-		double y = headY + EYE_Y_OFFSET;
-		GOval eye = new GOval(x, y, EYE_DIAMETER, EYE_DIAMETER);
-		eye.setFilled(true);
-		eye.setFillColor(Color.BLUE);
-		add(eye);
+		double eyeY = headY + EYE_Y_OFFSET;
+
+		double leftX = getWidth()/2 - EYE_X_SEPARATION/2 - EYE_DIAMETER;
+		GOval leftEye = new GOval(leftX, eyeY, EYE_DIAMETER, EYE_DIAMETER);
+		leftEye.setFilled(true);
+		leftEye.setFillColor(Color.BLUE);
+		add(leftEye);
+
+		double rightX = getWidth()/2 + EYE_X_SEPARATION/2;
+		GOval rightEye = new GOval(rightX, eyeY, EYE_DIAMETER, EYE_DIAMETER);
+		rightEye.setFilled(true);
+		rightEye.setFillColor(Color.GREEN);
+		add(rightEye);
 	}
-	
-	private void drawRightEye() {
-		double eyeSpacing = (FACE_WIDTH - 2 * EYE_DIAMETER) / 3;
-		double headX = (getWidth() - FACE_WIDTH) / 2;
-		double headY = (getHeight() - FACE_HEIGHT) / 2;
-		double x =  headX + eyeSpacing * 2 + EYE_DIAMETER;
-		double y = headY + EYE_Y_OFFSET;
-		GOval eye = new GOval(x, y, EYE_DIAMETER, EYE_DIAMETER);
-		eye.setFilled(true);
-		eye.setFillColor(Color.GREEN);
-		add(eye);
-	}
-	
+
 	private void drawMouth() {
 		double headX = (getWidth() - FACE_WIDTH) / 2;
 		double headY = (getHeight() - FACE_HEIGHT) / 2;
-		double x = headX + (FACE_WIDTH - MOUTH_WIDTH) / 2;
-		double y = headY + MOUTH_Y_OFFSET;
-		GRect mouth = new GRect(x, y, MOUTH_WIDTH, MOUTH_HEIGHT);
+
+		double mouthX = headX + (FACE_WIDTH - MOUTH_WIDTH) / 2;
+		double mouthY = headY + MOUTH_Y_OFFSET; // we did this!!!
+
+		GRect mouth = new GRect(mouthX, mouthY, MOUTH_WIDTH, MOUTH_HEIGHT);
 		mouth.setFilled(true);
 		add(mouth);
 	}
-	
+
 	private void drawLabel() {
 		GLabel label = new GLabel("Robot Face");
-		label.setFont("Courier-50");
+		label.setFont("Times New Roman-44");
 		double x = (getWidth() - label.getWidth()) / 2;
 		add(label, x, LABEL_Y);
 	}
