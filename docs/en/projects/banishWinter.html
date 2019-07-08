@@ -115,6 +115,8 @@
 	          	<li><a href="../../en/projects/beeperLine.html">Beeper Line</a></li>
 	          	<li><a href="../../en/projects/invert.html">Invert</a></li>
 	          	<li><a href="../../en/projects/unKarel.html">UN Karel</a></li>
+	          	<li><a href="../../en/projects/banishWinter.html">Banish Winter</a></li>
+
 
 	          <!--<li class="divider"></li>
 	            <li><a href="../../en/projects/emc2.html">E=MC2</a></li>
@@ -215,7 +217,7 @@
         Banish Winter
 			</h1>
 			<p>
-				Problem written by Eric Roberts and Lisa Yan, with updates by Julia Daniel
+				Problem written by Eric Roberts and Lisa Yan, with updates by Zach Birnholz
 			</p>
 			<p>
 				Handouts: 
@@ -231,7 +233,7 @@
 			<div class="col-md-12">
 
 				<p>
-        Karel's wants to walk across CTU campus and spruce it up a bit for Spring. Spring has sprung, but the campus trees haven't gotten the memo and are still leafless. Karel needs to walk across campus from west to east, adorning all trees with artificial leaves and transforming the campus as follows:
+        Karel wants to walk across CTU campus and spruce it up a bit for Spring. Spring has sprung, but the campus trees haven't gotten the memo and are still leafless. Karel needs to walk across campus from west to east, adorning all trees with artificial leaves and transforming the campus as follows:
 				</p>
 
 				<p>
@@ -241,12 +243,12 @@
 				</p>
 
         <p>
-        The problem is complicated because Karel doesn't know how tall each tree is, nor does she know the distances between trees. She does know, however, that she has just enough beepers in her beeper bag starting out to decorate all of the trees. Try to intuit the program requirement by looking at the two snapshots above (the world is called <code>BanishWinter1.w</code>. Your program must therefore also work for the following configuration (<code>BanishWinter2.w</code>):
+        The problem is complicated because Karel doesn't know how tall each tree is, nor does she know the distances between trees. She does know, however, that she has just enough beepers in her beeper bag starting out to decorate all of the trees, and that the world (the CTU campus) is 9 spaces wide. Try to intuit the program requirement by looking at the two snapshots above (the world is called <code>BanishWinter1.w</code>. Your program must therefore also work for the following configuration (<code>BanishWinter2.w</code>):
         </p>
 
 				<p>
 					<center>
-            <img style="width:500px" src="../../img/projects/banishWinter/banishWinter2.png">
+            <img style="width:800px" src="../../img/projects/banishWinter/banishWinter2.png">
 					</center>
 				</p>
 
@@ -263,7 +265,82 @@
 				</p>
 
 
-<pre id="editor" style="height:480px">// TODO</pre>
+<pre id="editor" style="height:480px">/*
+ * Program: Banish Winter
+ * ----------------------
+ * Karel should add leaves to the top of each tree in the world
+ * from left to right to spruce up campus for the spring.
+ * The world is of width 9, but it may have any number of trees
+ * of any height.
+ */
+public class BanishWinter extends SuperKarel {
+
+    public void run() {
+        for (int i = 0; i < 8; i++) {
+            if (frontIsClear()) {
+                move();
+            } else {
+                fixTree();
+            }
+        }
+    }
+
+    /*
+     * Method: fixTree
+     * ---------------
+     * Climbs to the top of one tree, adds leaves, and descends 
+     * other side of tree.  When this method is called, Karel is assumed to
+     * be facing east at the bottom of the tree to fix, and when the method
+     * is done Karel will be facing east immediately after the tree which has
+     * now been fixed.
+     */
+    private void fixTree() {
+        turnLeft();
+        climbTree();
+        turnRight();
+        placeLeaves();
+        turnRight();
+        moveToBottom();
+        turnLeft();
+    }
+    
+    /*
+     * Method: moveToBottom
+     * --------------------
+     * Moves in a straight line in the direction Karel is facing up to a wall.
+     * Used for moving from the top to the bottom of a tree.
+     */
+    public void moveToBottom() {
+        while (frontIsClear()) {
+            move();
+        }
+    }
+
+    /*
+     * Method: climbTree()
+     * -------------------
+     * Moves up to and one space past the end of a wall/tree trunk.
+     */
+    public void climbTree() {
+        while (rightIsBlocked()) {
+            move();
+        }
+    }
+    
+    /*
+     * Method: placeLeaves()
+     * ---------------------
+     * Adds four leaves in the required pattern to the top of a tree.
+     */
+    public void placeLeaves() {
+        for (int i = 0; i < 4; i++) {
+            putBeeper();
+            move();
+            turnLeft();
+        }
+        move();
+    }
+}</pre>
     
 <script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
