@@ -1,3 +1,16 @@
+<!-- 
+These scripts allow for hiding content until a specified time has passed.
+To do this, simply add the class "visible-after" to the element, and add
+the custom "data-visible-after" attribute to the element as well which
+should be equal to the timestamp on or after which that element should be
+visible.  For example:
+
+<div class="visible-after" data-visible-after="2019070917">
+	...
+</div>
+
+this element would be visible only starting at 5PM on 7/9/19.
+-->
 <script type="text/javascript" src="{{pathToRoot}}js/moment.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -73,7 +86,7 @@
 </div>
 
 <!-- Day 4 -->
-<div class="visible-after" data-visible-after="20190712">
+<div class="visible-after" data-visible-after="2019071200">
 	<h4>Day 4: Methods and Advanced Java (<a href="{{pathToRoot}}starter/Day4.zip">Eclipse Project Here</a>)</h4>
 	<table class="table table-bordered table-striped">
 		<thead>
@@ -95,13 +108,13 @@
 				<td>Parameters</td>
 			</tr>
 
-			<tr>
+			<tr class="visible-after" data-visible-after="2019071213">
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/illusion.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/illusion.html">Optical Illusion</a></td>
 				<td>For Loops</td>
 			</tr>
 
-			<tr>
+			<tr class="visible-after" data-visible-after="2019071213">
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sunset.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/sunset.html">Short Film</a></td>
 				<td>Params and Returns</td>
@@ -112,7 +125,7 @@
 </div>
 
 <!-- Day 3 -->
-<div class="visible-after" data-visible-after="20190711">
+<div class="visible-after" data-visible-after="2019071100">
 	<h4>Day 3: Graphics (<a href="{{pathToRoot}}starter/Day3.zip">Eclipse Project Here</a>)</h4>
 	<table class="table table-bordered table-striped">
 		<thead>
@@ -129,8 +142,8 @@
 			</tr>
 
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomCircles.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/randomCircles.html">Random Circles</a></td>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mysterySquare.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/mysterySquare.html">Mystery Square</a></td>
 				<td>Randomness</td>
 			</tr>
 
@@ -140,13 +153,13 @@
 				<td>For Loops</td>
 			</tr>
 
-			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mysterySquare.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/mysterySquare.html">Mystery Square</a></td>
+			<tr class="visible-after" data-visible-after="2019071113">
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomCircles.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/randomCircles.html">Random Circles</a></td>
 				<td>Randomness</td>
 			</tr>
 
-			<tr>
+			<tr class="visible-after" data-visible-after="2019071113">
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/bouncing.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/bouncingBall.html">Bouncing Ball</a></td>
 				<td>Animation</td>
@@ -157,7 +170,7 @@
 </div>
 
 <!-- Day 2 -->
-<div class="visible-after" data-visible-after="20190710">
+<div class="visible-after" data-visible-after="2019071000">
 	<h4>Day 2: Variables (<a href="{{pathToRoot}}starter/Day2.zip">Eclipse Project Here</a>)</h4>
 	<table class="table table-bordered table-striped">
 		<thead>
@@ -185,13 +198,13 @@
 				<td>Concatenation</td>
 			</tr>
 
-			<tr>
+			<tr class="visible-after" data-visible-after="2019071013">
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/someSum.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/someSum.html">That's Some Sum</a></td>
 				<td>Variables</td>
 			</tr>
 
-			<tr>
+			<tr class="visible-after" data-visible-after="2019071013">
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/nim.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/gameOfStones.html">Game of Nimm</a></td>
 				<td>Variables</td>
@@ -202,7 +215,7 @@
 </div>
 
 <!-- Day 1 -->
-<div class="visible-after" data-visible-after="20190709">
+<div class="visible-after" data-visible-after="2019070900">
 	<h4>Day 1: Karel (<a href="{{pathToRoot}}starter/Day1.zip">Eclipse Project Here</a>)</h4>
 	<table class="table table-bordered table-striped">
 		<thead>
@@ -224,13 +237,13 @@
 				<td>For Loops</td>
 			</tr>
 
-			<tr>
+			<tr class="visible-after" data-visible-after="2019070913">
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mountain.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/mountain.html">Mountain Karel</a></td>
 				<td>While Loops</td>
 			</tr>
 
-			<tr>
+			<tr class="visible-after" data-visible-after="2019070913">
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomPainter2.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/randomPainter.html">Random Painter</a></td>
 				<td>If Statements</td>
