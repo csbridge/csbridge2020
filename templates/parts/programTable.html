@@ -1,208 +1,238 @@
-<table class="table table-hover">
-				<thead>
-					<tr>
-						<!--<th style="width: 80px;">Date</th>-->
-						<th></th>
-						<!--<th>Reading</th>-->
-						<th>Name</th>
-						<th>Topic</th>
-						<th>Starter Code</th>
-					</tr>
-				</thead>
-				<tbody>
+<script type="text/javascript" src="{{pathToRoot}}js/moment.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
 
+		const urlParams = new URLSearchParams(window.location.search);
+		const isTAMode = urlParams.get('ta');
+		console.log("It's equal to: " + isTAMode);
+		if (isTAMode == null) {
+			// only show certain content if they should be released
+			$(".visible-after").each(function(i) {
+			    var dateStr = $(this).attr("data-visible-after");
+			    var releaseDate = moment(dateStr, "YYYYMMDD");
+			    if (!releaseDate.isSameOrBefore(moment())) {
+			    	$(this).remove();
+			    }
+			});
+		}
+	});
+</script>
 
-	<!--				<tr>
-						<th colspan = "6"><b>
-						<br>
-						[Breakout]</b></th>
-					</tr>
+<!-- Final Project -->
+<div class="visible-after" data-visible-after="20190717">
+	<h4>Final Project (<a href="{{pathToRoot}}starter/BlankJavaProject.zip">Eclipse Project Here</a>)</h4>
+	<br />
+</div>
 
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/breakout.jpg"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/breakout.html">Breakout!</a></td>
-						<td>Interactors</td>
-						<td><a href="{{pathToRoot}}starter/Breakout.zip">Breakout.zip</a></td>
-					</tr>
+<!-- Breakout -->
+<div class="visible-after" data-visible-after="20190715">
+	<h4>Breakout (<a href="{{pathToRoot}}starter/Breakout.zip">Eclipse Project Here</a>)</h4>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Topic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/breakout.jpg"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/breakout.html">Breakout!</a></td>
+				<td>Interactors</td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
 
+	<!-- Day 5 -->
+	<h4>Day 5: Events (<a href="{{pathToRoot}}starter/Day5.zip">Eclipse Project Here</a>)</h4>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Topic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/makingTracks.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/makingTracks.html">Making Tracks</a></td>
+				<td>Events</td>
+			</tr>
 
-					<tr>
-						<th colspan = "6"><b>
-						<br>
-						[Day 5 - Events]</b></th>
-					</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/catchMeIfYouCan.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/catchMeIfYouCan.html">Catch Me If You Can</a></td>
+				<td>Instance Variables</td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+</div>
 
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/makingTracks.png"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/makingTracks.html">Making Tracks</a></td>
-						<td>Events</td>
-						<td><a href="{{pathToRoot}}starter/Day5.zip">Day5.zip</a></td>
-					</tr>
+<!-- Day 4 -->
+<div class="visible-after" data-visible-after="20190712">
+	<h4>Day 4: Methods and Advanced Java (<a href="{{pathToRoot}}starter/Day4.zip">Eclipse Project Here</a>)</h4>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Topic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/madMax.jpg"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/madMethods.html">Mad Methods</a></td>
+				<td>Params and Returns</td>
+			</tr>
 
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/catchMeIfYouCan.png"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/catchMeIfYouCan.html">Catch Me If You Can</a></td>
-						<td>Instance Variables</td>
-						<td><a href="{{pathToRoot}}starter/Day5.zip">Day5.zip</a></td>
-					</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/target.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/target.html">Target</a></td>
+				<td>Parameters</td>
+			</tr>
 
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/illusion.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/illusion.html">Optical Illusion</a></td>
+				<td>For Loops</td>
+			</tr>
 
-					
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sunset.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/sunset.html">Short Film</a></td>
+				<td>Params and Returns</td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+</div>
 
-					<tr>
-						<th colspan = "6"><b>
-						<br>
-						[Day 4 - Methods and Advanced Java]</b></th>
-					</tr>
+<!-- Day 3 -->
+<div class="visible-after" data-visible-after="20190711">
+	<h4>Day 3: Graphics (<a href="{{pathToRoot}}starter/Day3.zip">Eclipse Project Here</a>)</h4>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Topic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/awesome.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/awesome.html">Programing is Awesome</a></td>
+				<td>Graphics</td>
+			</tr>
 
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/madMax.jpg"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/madMethods.html">Mad Methods</a></td>
-						<td>Params and Returns</td>
-						<td><a href="{{pathToRoot}}starter/Day4.zip">Day4.zip</a></td>
-					</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomCircles.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/randomCircles.html">Random Circles</a></td>
+				<td>Randomness</td>
+			</tr>
 
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/target.png"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/target.html">Target</a></td>
-						<td>Parameters</td>
-						<td><a href="{{pathToRoot}}starter/Day4.zip">Day4.zip</a></td>
-					</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/stringArt.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/stringArt.html">String Art</a></td>
+				<td>For Loops</td>
+			</tr>
 
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/illusion.png"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/illusion.html">Optical Illusion</a></td>
-						<td>For Loops</td>
-						<td><a href="{{pathToRoot}}starter/Day4.zip">Day4.zip</a></td>
-					</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mysterySquare.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/mysterySquare.html">Mystery Square</a></td>
+				<td>Randomness</td>
+			</tr>
 
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/sunset.png"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/sunset.html">Short Film</a></td>
-						<td>Params and Returns</td>
-						<td><a href="{{pathToRoot}}starter/Day4.zip">Day4.zip</a></td>
-					</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/bouncing.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/bouncingBall.html">Bouncing Ball</a></td>
+				<td>Animation</td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+</div>
 
+<!-- Day 2 -->
+<div class="visible-after" data-visible-after="20190710">
+	<h4>Day 2: Variables (<a href="{{pathToRoot}}starter/Day2.zip">Eclipse Project Here</a>)</h4>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Topic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sandcastle.jpg"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/sandcastles.html">Sandcastles</a></td>
+				<td>Variables</td>
+			</tr>
 
-					<tr>
-						<th colspan = "6"><b>
-						<br>
-						[Day 3 - Graphics]</b></th>
-					</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/guess.jpg"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/favoriteNumber.html">Favorite Number</a></td>
+				<td>Variables</td>
+			</tr>
 
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/awesome.png"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/awesome.html">Programing is Awesome</a></td>
-						<td>Graphics</td>
-						<td><a href="{{pathToRoot}}starter/Day3.zip">Day3.zip</a></td>
-					</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/medicine.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/medicine.html">Medicine Counterfiting</a></td>
+				<td>Concatenation</td>
+			</tr>
 
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomCircles.png"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/randomCircles.html">Random Circles</a></td>
-						<td>Randomness</td>
-						<td><a href="{{pathToRoot}}starter/Day3.zip">Day3.zip</a></td>
-					</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/someSum.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/someSum.html">That's Some Sum</a></td>
+				<td>Variables</td>
+			</tr>
 
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/stringArt.png"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/stringArt.html">String Art</a></td>
-						<td>For Loops</td>
-						<td><a href="{{pathToRoot}}starter/Day3.zip">Day3.zip</a></td>
-					</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/nim.jpg"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/gameOfStones.html">Game of Nimm</a></td>
+				<td>Variables</td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+</div>
 
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/mysterySquare.png"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/mysterySquare.html">Mystery Square</a></td>
-						<td>Randomness</td>
-						<td><a href="{{pathToRoot}}starter/Day3.zip">Day3.zip</a></td>
-					</tr>
+<!-- Day 1 -->
+<div class="visible-after" data-visible-after="20190709">
+	<h4>Day 1: Karel (<a href="{{pathToRoot}}starter/Day1.zip">Eclipse Project Here</a>)</h4>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Topic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="{{pathToRoot}}en/projects/collectNewspaper.html"><img class="projectImg" src="{{pathToRoot}}img/icons/newspaper.jpg"></img></a></td>
+				<td><a href="{{pathToRoot}}en/projects/collectNewspaper.html">Collect Newspaper</a></td>
+				<td>Methods</td>
+			</tr>
 
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/bouncing.png"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/bouncingBall.html">Bouncing Ball</a></td>
-						<td>Animation</td>
-						<td><a href="{{pathToRoot}}starter/Day3.zip">Day3.zip</a></td>
-					</tr>
-					
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/charles.jpg"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/efes.html">Build Charles Bridge</a></td>
+				<td>For Loops</td>
+			</tr>
 
-					<tr>
-						<th colspan = "6"><b>
-						<br>
-						[Day 2 - Variables]</b></th>
-					</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mountain.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/mountain.html">Mountain Karel</a></td>
+				<td>While Loops</td>
+			</tr>
 
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/sandcastle.jpg"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/sandcastles.html">Sandcastles</a></td>
-						<td>Variables</td>
-						<td><a href="{{pathToRoot}}starter/Day2.zip">Day2.zip</a></td>
-					</tr>
-
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/guess.jpg"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/favoriteNumber.html">Favorite Number</a></td>
-						<td>Variables</td>
-						<td><a href="{{pathToRoot}}starter/Day2.zip">Day2.zip</a></td>
-					</tr>
-
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/medicine.png"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/medicine.html">Medicine Counterfiting</a></td>
-						<td>Concatenation</td>
-						<td><a href="{{pathToRoot}}starter/Day2.zip">Day2.zip</a></td>
-					</tr>
-
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/someSum.png"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/someSum.html">That's Some Sum</a></td>
-						<td>Variables</td>
-						<td><a href="{{pathToRoot}}starter/Day2.zip">Day2.zip</a></td>
-					</tr>
-
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/nim.jpg"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/gameOfStones.html">Game of Nimm</a></td>
-						<td>Variables</td>
-						<td><a href="{{pathToRoot}}starter/Day2.zip">Day2.zip</a></td>
-					</tr>-->
-					
-					
-					<tr>
-						<th colspan = "6"><b>
-						<br/>
-						[Day 1 - Karel]</b></th>
-					</tr>
-
-
-					<tr class="table-bordered table-striped">
-						<td><a href="{{pathToRoot}}en/projects/collectNewspaper.html"><img class="projectImg" src="{{pathToRoot}}img/icons/newspaper.jpg"></img></a></td>
-						<td><a href="{{pathToRoot}}en/projects/collectNewspaper.html">Collect Newspaper</a></td>
-						<td>Methods</td>
-						<td><a href="{{pathToRoot}}starter/Day1.zip">Day1.zip</a> </td>
-					</tr>
-
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/charles.jpg"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/efes.html">Build Charles Bridge</a></td>
-						<td>For Loops</td>
-						<td><a href="{{pathToRoot}}starter/Day1.zip">Day1.zip</a> </td>
-					</tr>
-
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/mountain.png"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/mountain.html">Mountain Karel</a></td>
-						<td>While Loops</td>
-						<td><a href="{{pathToRoot}}starter/Day1.zip">Day1.zip</a> </td>
-					</tr>
-
-					<tr class="table-bordered table-striped">
-						<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomPainter2.png"></img></td>
-						<td><a href="{{pathToRoot}}en/projects/randomPainter.html">Random Painter</a></td>
-						<td>If Statements</td>
-						<td><a href="{{pathToRoot}}starter/Day1.zip">Day1.zip</a> </td>
-					</tr>
-
-
-				</tbody>
-			</table>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomPainter2.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/randomPainter.html">Random Painter</a></td>
+				<td>If Statements</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
