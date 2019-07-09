@@ -224,37 +224,30 @@
 			<div class="col-xs-12">
 
 <p>
-	This is one section problem for the day.  Here is information about the goals for the problem and what you should focus on during section:
-	<br />
-	<b>Learning Goal</b>: using variables with while and conditions
-	<br />
-	<b>Milestone</b>: play the game with no feedback - just guess until correct
-	<br />
-	<br />
-	Write code on the board. Try to not use pseudocode!  The hardest part is that guess must be reassigned...and in general this section is hard, but not many lines of code. Do your best to pace yourself. Try not to have students with experience give it away.
+	This is one section problem for the day.  The main learning goal is using variables and concatenating different variable types together.  Here is the main way to understand how to approach the problem:
+
+  <ul>
+    <li>Initially, we may think to just loop <code>NUM_PACKAGES</code> times and each time print out a random number, but we may print out the same random number more than once.  We need a way to print out numbers that have not been printed out before.</li>
+    <li>One way to do this is to make just <i>part</i> of the number completely random.  In other words, let's make the first five digits a fixed number that we increment each time we make a medicine number.  Then, let's make the last five digits a random number between 0 and 99999.</li>
+    <li>This will make a number up to 10 digits long in total, where no two numbers will be the same.  This is because the first 5 digits are always unique.  This also makes a number that is random, since the last 5 digits are always random.</li>
+  </ul>
 </p>
 
 <h3>Solution</h3>
-<pre id="editor" style="height:400px">public class FavoriteNumber extends ConsoleProgram {
+<pre id="editor" style="height:300px">public class Medicine extends ConsoleProgram {
+  
+    // The number of medicine numbers to generate
+    private static final int NUM_PACKAGES = 1000;
 
-	private static final int FAVORITE_NUMBER = 88;
-	
-	public void run() {
-	    println("Try and guess my favorite number (between 0 and 100)");
-	    
-        int guess = readInt("Guess: ");
-        while (guess != FAVORITE_NUMBER) {
-            if (guess < FAVORITE_NUMBER) {
-                println("Too low");
-            } else if (guess > FAVORITE_NUMBER) {
-                println("Too high");
-            } 
-            
-            guess = readInt("Guess: ");
+    private static RandomGenerator rg = new RandomGenerator();
+  
+    public void run() {
+        int firstFiveDigits = 10000;
+        for (int i = 0; i < NUM_PACKAGES; i++) {
+            println("" + firstFiveDigits + rg.nextInt(0, 99999));
+            firstFiveDigits++;
         }
-
-        println("Good job!");
-	}
+    }
 
 }</pre>
     
