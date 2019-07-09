@@ -1,0 +1,47 @@
+% rebase('templates/sls/soln/template.ptl', problemTitle="Favorite Number")
+
+<p>
+	This is the section problem for the day.  Here is information about the goals for the problem and what you should focus on during section:
+	<br />
+	<b>Learning Goal</b>: using variables with while and conditions
+	<br />
+	<b>Milestone</b>: play the game with no feedback - just guess until correct
+	<br />
+	<br />
+	Write code on the board. Try to not use pseudocode!  The hardest part is that guess must be reassigned...and in general this section is hard, but not many lines of code. Do your best to pace yourself. Try not to have students with experience give it away.
+</p>
+
+<h3>Solution</h3>
+<pre id="editor" style="height:400px">public class FavoriteNumber extends ConsoleProgram {
+
+	private static final int FAVORITE_NUMBER = 88;
+	
+	public void run() {
+	    println("Try and guess my favorite number (between 0 and 100)");
+	    
+        int guess = readInt("Guess: ");
+        while (guess != FAVORITE_NUMBER) {
+            if (guess < FAVORITE_NUMBER) {
+                println("Too low");
+            } else if (guess > FAVORITE_NUMBER) {
+                println("Too high");
+            } 
+            
+            guess = readInt("Guess: ");
+        }
+
+        println("Good job!");
+	}
+
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
