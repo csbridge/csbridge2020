@@ -9,7 +9,7 @@
 			// only show certain content if they should be released
 			$(".visible-after").each(function(i) {
 			    var dateStr = $(this).attr("data-visible-after");
-			    var releaseDate = moment(dateStr, "YYYYMMDD");
+			    var releaseDate = moment(dateStr, "YYYYMMDDHH");
 			    if (!releaseDate.isSameOrBefore(moment())) {
 			    	$(this).remove();
 			    }
@@ -19,7 +19,7 @@
 </script>
 
 <!-- Final Project -->
-<div class="visible-after" data-visible-after="20190717">
+<div class="visible-after" data-visible-after="2019071700">
 	<h4>Final Project (<a href="{{pathToRoot}}starter/BlankJavaProject.zip">Eclipse Project Here</a>)</h4>
 	<br />
 </div>
