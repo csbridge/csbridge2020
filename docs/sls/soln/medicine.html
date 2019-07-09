@@ -224,11 +224,15 @@
 			<div class="col-xs-12">
 
 <p>
-	This is one section problem for the day.  The main learning goal is using variables and concatenating different variable types together.  Here is the main way to understand how to approach the problem:
+	This is one section problem for the day.  The main learning goal is using variables and concatenating different variable types together.  When transitioning to this problem, take a minute to emphasize the societal impact of this solution!  It turned out to save countless lives, and is a great example of Computer Science being used as a tool to solve larger problems.
+
+
+  Here is the main way to understand how to approach the problem:
 
   <ul>
     <li>Initially, we may think to just loop <code>NUM_PACKAGES</code> times and each time print out a random number, but we may print out the same random number more than once.  We need a way to print out numbers that have not been printed out before.</li>
-    <li>One way to do this is to make just <i>part</i> of the number completely random.  In other words, let's make the first five digits a fixed number that we increment each time we make a medicine number.  Then, let's make the last five digits a random number between 0 and 99999.</li>
+    <li>One approach is to focus on the two requirements: being <u>unique</u> and being <u>random</u>.  Approach each one at a time and discuss how we might be able to satisfy it.</li>
+    <li>For example, one way to do this is to make just <i>part</i> of the number completely random.  In other words, let's make the first five digits a fixed number that we increment each time we make a medicine number.  Then, let's make the last five digits a random number between 0 and 99999.</li>
     <li>This will make a number up to 10 digits long in total, where no two numbers will be the same.  This is because the first 5 digits are always unique.  This also makes a number that is random, since the last 5 digits are always random.</li>
   </ul>
 </p>

@@ -257,6 +257,27 @@
 	}
 
 }</pre>
+
+<p>You may be guided towards a solution such as this:</p>
+<pre>
+public void run() {
+    println("Try and guess my favorite number (between 0 and 100)");
+
+    int guess = -1;
+    while(guess != FAVORITE_NUMBER) {
+        guess = readInt("Guess: ");
+        if(guess < FAVORITE_NUMBER) {
+            println("Too low");
+        } else if(guess > FAVORITE_NUMBER) {
+            println("Too high");
+        } else {
+            println("Good job!");
+        }
+    }
+}
+</pre>
+
+<p>This is another functional solution, but one that is not as elegant as the first.  The reason is that guess is initialized to a somewhat arbitrary value in the second solution in order to initialize it.  Additionally, it is not as clear that the program terminates when the guess is correct.  In the first solution, we can look at the code after the loop to know it terminates.  But in the second solution, we must look inside the loop to see that it will print "Good job!" and then exit the loop.  However, it is better than the first solution in that it only has to call <code>readInt</code> one time instead of two.</p>
     
 <script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
