@@ -14,10 +14,10 @@ this element would be visible only starting at 5PM on 7/9/19.
 <script type="text/javascript" src="{{pathToRoot}}js/moment.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-
 		const urlParams = new URLSearchParams(window.location.search);
 		const isTAMode = urlParams.get('ta');
-		console.log("It's equal to: " + isTAMode);
+
+		// If the URL param is included, it will be a string (maybe empty)
 		if (isTAMode == null) {
 			// only show certain content if they should be released
 			$(".visible-after").each(function(i) {
