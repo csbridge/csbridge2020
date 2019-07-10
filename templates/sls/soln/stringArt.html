@@ -1,0 +1,62 @@
+% rebase('templates/sls/soln/template.ptl', problemTitle="String Art")
+
+<p>
+  In progress: warmup exercise for this part regarding using the loop counter variable</p>
+</p>
+
+<hr />
+
+<p>
+  This is the second section problem for the morning, if there is enough time.  It gives students practice writing a graphics program using the variable within the loop.
+</p>
+<p>Teaching tips:
+  <ol>
+    <li>Learning goal: using loop counter variables
+    <li>Approach: think through drawing a single line, and what changes between drawing each line (the startX and endY).  Then try to find a pattern between these changes.  One way is to write out the coordinates for each line, like so:
+      <ul>
+        <li>line 0: (0, height) to (0, 0)</li>
+        <li>line 1: (spacing, height) to (0, spacing)</li>
+        <li>line 2: (2*spacing, height) to (0, 2*spacing)</li>
+        <li>...</li>
+      </ul>
+      Then we try to figure out a way to get the coordinates for a line given its number.  We see that we are multiplying the line number by spacing to get the startX and endY!  We can use the loop variable as the line number.
+  </ol>
+</p>
+
+<h3>Solution</h3>
+<pre id="editor" style="height:450px">public class StringArt extends GraphicsProgram {
+
+    /** The size of the screen **/
+    public static final int APPLICATION_WIDTH = 400;
+    public static final int APPLICATION_HEIGHT = 400;
+
+    /** The number of pixels between end points of the line **/
+    private static final int LINE_SPACING = 20;
+
+    /** The number of lines we will have to draw **/
+    private static final int NUM_LINES = APPLICATION_WIDTH / LINE_SPACING;
+
+    public void run() {
+        for (int i = 0; i < NUM_LINES; i++) {
+            int offset = i * LINE_SPACING;
+            int startX = offset;
+            int startY = getHeight();
+            int endX = 0;
+            int endY = offset;
+            GLine line = new GLine(startX, startY, endX, endY);
+            add(line);
+        }
+    }
+    
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
