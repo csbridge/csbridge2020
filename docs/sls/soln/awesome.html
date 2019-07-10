@@ -212,7 +212,7 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-                TA Solution: Nimm
+                TA Solution: Programming is Awesome
 			</h1>
         </div>
 
@@ -222,139 +222,48 @@
 			<div class="col-xs-12">
 
 <p>
-	This is the main lab problem in the afternoon.  Students develop their own working "Nimm" game.  We recommend that students approach the program in 4 milestones.  Each milestone solution is provided below, along with notes about them.
+  This is the lab problem for the morning.  It gives students practice writing their first graphics programs, creating GObjects, and customizing them.  The problem suggests breaking the task into two milestones - first, drawing the colored rectangles, and second, drawing the centered label.  For all of the graphics, encourage students to be creative!  Centering the text is also a tricky challenge to work through.  Encourage students to draw pictures of where the label should be placed to be centered, and how we might calculate that given the dimensions of the screen and the dimensions of the text.
 </p>
 
-<h3>Milestone 1</h3>
-<p>The first milestone challenges students to design a structure with a variable to store the number of stones remaining that is updated across iterations of the loop that asks the user how many stones to remove.  They must figure out how to create and update this variable, and what the loop condition should be.</p>
-<pre id="editor1" style="height:300px">public class Nimm extends ConsoleProgram {
-    
-    private static final int STARTING_STONES = 20;
-
-    public void run() {
-        int numStones = STARTING_STONES;
-        while (numStones > 0) {
-            println("There are " + numStones + " stones left");
-            int numToRemove = readInt("Would you like to remove 1 or 2 stones? ");
-            numStones = numStones - numToRemove;
-            println();
-        }
-        
-        println("Game over");
-    }
-
-}</pre>
-
-<h3>Milestone 2</h3>
-<p>Next, students add another variable outside of the loop that they must also update and print each time in the loop to keep track of the current player.</p>
-<pre id="editor2" style="height:500px">public class Nimm extends ConsoleProgram {
-    
-    private static final int STARTING_STONES = 20;
-
-    public void run() {
-        int numStones = STARTING_STONES;
-        int player = 1;     // new
-        
-        while (numStones > 0) {
-            println("There are " + numStones + " stones left");
-
-            // updated printed text
-            int numToRemove = readInt("Player " + player + " would you like to remove 1 or 2 stones? ");
-
-            numStones = numStones - numToRemove;
-            
-            // new if/else
-            if (player == 1) {
-                player = 2;
-            } else {
-                player = 1;
-            }
-
-            println();
-        }
-        
-        println("Game over");
-    }
+<h3>Solution</h3>
+<pre id="editor" style="height:450px">public class ProgrammingIsAwesome extends GraphicsProgram {
+  
+  public void run() {
+      // Milestone 1
+      GRect redRect = new GRect(50, 50, 100, 150);
+      redRect.setFilled(true);
+      redRect.setColor(Color.RED);
+      add(redRect);
+      
+      GRect blueRect = new GRect(400, 100, 20, 200);
+      blueRect.setFilled(true);
+      blueRect.setColor(Color.BLUE);
+      add(blueRect);
+      
+      GRect yellowRect = new GRect(200, 300, 100, 50);
+      yellowRect.setFilled(true);
+      yellowRect.setColor(Color.YELLOW);
+      add(yellowRect);
+      
+      // Milestone 2
+      GLabel label = new GLabel("Programming is Awesome!");
+      label.setFont("Courier-50");
+      double x = getWidth() / 2 - label.getWidth() / 2;
+      double y = getHeight() / 2 - label.getHeight() / 2;
+      add(label, x, y);
+  }
 
 }</pre>
-
-<h3>Milestone 3</h3>
-<p>Next, students add a loop to reprompt the user if the input is invalid.  This is a common "reprompt until valid" pattern that students are challenged to develop, with a guide on the problem page for how a while loop can help.</p>
-<pre id="editor3" style="height:500px">public class Nimm extends ConsoleProgram {
-    
-    private static final int STARTING_STONES = 20;
-
-    public void run() {
-        int numStones = STARTING_STONES;
-        int player = 1;
-        
-        while (numStones > 0) {
-            println("There are " + numStones + " stones left");
-            int numToRemove = readInt("Player " + player + " would you like to remove 1 or 2 stones? ");
-
-            // New loop to handle invalid user input
-            while (numToRemove != 1 && numToRemove != 2) {
-                numToRemove = readInt("Please enter 1 or 2: ");
-            }
-            
-            numStones = numStones - numToRemove;
-            if (player == 1) {
-                player = 2;
-            } else {
-                player = 1;
-            }
-            println();
-        }
-        
-        println("Game over");
-    }
-
-}</pre>
-
-<h3>Milestone 4</h3>
-<p>Finally, when the loop terminates, students must detect which player won.  Since the last player to take a stone loses, the current player when the loop terminates is the winner, since they are the player that <i>would be</i> next.</p>
-<pre id="editor4" style="height:500px">public class Nimm extends ConsoleProgram {
-    
-    private static final int STARTING_STONES = 20;
-
-    public void run() {
-        int numStones = STARTING_STONES;
-        int player = 1;
-        
-        while (numStones > 0) {
-            println("There are " + numStones + " stones left");
-            int numToRemove = readInt("Player " + player + " would you like to remove 1 or 2 stones? ");
-            while (numToRemove != 1 && numToRemove != 2) {
-                numToRemove = readInt("Please enter 1 or 2: ");
-            }
-            
-            numStones = numStones - numToRemove;
-            if (player == 1) {
-                player = 2;
-            } else {
-                player = 1;
-            }
-            println();
-        }
-        
-        // updated print statement
-        println("Player " + player + " wins!");
-    }
-
-}</pre>
-
     
 <script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    for (var i = 1; i <= 4; i++) {
-        var editor = ace.edit("editor" + i);
-        editor.setTheme('ace/theme/eclipse');
-        editor.getSession().setMode("ace/mode/java");
-        editor.setReadOnly(true);
-        editor.renderer.setShowGutter(false); 
-        /*editor.setTheme("ace/theme/eclipse");
-        editor.getSession().setMode("ace/mode/java");*/
-    }
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
 </script>			</div>
 		</div>
 		
