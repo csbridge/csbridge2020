@@ -31,11 +31,11 @@
 <pre id="editor3" style="height:250px">public class RandomNumbers extends ConsoleProgram {
     
     // A random number generator
-    private RandomGenerator rg = new RandomGenerator();
+    private RandomGenerator rgen = new RandomGenerator();
 
     public void run() {
         for (int i = 0; i < 1000; i++) {   
-            int randomNumber = rg.nextInt(0, 100);
+            int randomNumber = rgen.nextInt(0, 100);
             println(randomNumber);   
         }
 
