@@ -248,7 +248,7 @@
 }</pre>
 
 <h3>Milestone 2</h3>
-<p>Students should animate the ball.  There are great example programs mentioned in the milestone instructions of other programs that animate.</p>
+<p>Students should animate the ball.  There are great example programs mentioned in the milestone instructions of other programs that animate.  The core idea they should understand about animation is that it is a loop that repeats: move the graphics, and then pause.  It needs to move by an amount in the x and y directions, which are the "velocities".</p>
 <pre id="editor2" style="height:500px">public class BouncingBall extends GraphicsProgram {
 
     /* Size (diameter) of the ball */
@@ -277,7 +277,7 @@
 }</pre>
 
 <h3>Milestone 3</h3>
-<p>Students need to add detection for colliding with walls.</p>
+<p>Students need to add detection for colliding with walls.  This is tricky because the check should be whether the ball has gone "past the wall".  The reason is that the ball may not touch the edge of the wall exactly (for instance, the ball could go from x coordinate 1 to x coordinate -1, meaning that the ball's x coordinate may not be exactly 0 at any time, but it is still colliding).  Also watch out for checking collisions with the right and bottom walls - the coordinates of the ball are its top-left corner, so you must check if its right or bottom sides are colliding with the walls.</p>
 <pre id="editor3" style="height:600px">public class BouncingBall extends GraphicsProgram {
 
     /* Size (diameter) of the ball */
