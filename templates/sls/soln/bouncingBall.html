@@ -1,0 +1,108 @@
+% rebase('templates/sls/soln/template.ptl', problemTitle="Bouncing Ball")
+
+<p>
+	This is the main lab problem in the afternoon.  Students develop a program that animates a ball bouncing around the screen forever.  We recommend that students approach the program in 3 milestones.  Each milestone solution is provided below, along with notes about them.
+</p>
+
+<h3>Milestone 1</h3>
+<p>Students should start by adding the ball to the screen.  Ideally they use a constant for the size of the ball (and maybe even where to add it!).</p>
+<pre id="editor1" style="height:300px">public class BouncingBall extends GraphicsProgram {
+
+    /* Size (diameter) of the ball */
+    private static final int DIAM_BALL = 30;
+    
+    /* Animation delay or pause time between ball moves */
+    private static final int DELAY = 10;
+
+    /* Starting velocities */
+    private static final double X_VEL = 7;
+    private static final double Y_VEL = 7;
+
+    public void run() {
+        GOval ball = new GOval(0, 0, DIAM_BALL, DIAM_BALL);
+        ball.setFilled(true);
+        add(ball);
+    }
+}</pre>
+
+<h3>Milestone 2</h3>
+<p>Students should animate the ball.  There are great example programs mentioned in the milestone instructions of other programs that animate.</p>
+<pre id="editor2" style="height:500px">public class BouncingBall extends GraphicsProgram {
+
+    /* Size (diameter) of the ball */
+    private static final int DIAM_BALL = 30;
+    
+    /* Animation delay or pause time between ball moves */
+    private static final int DELAY = 10;
+
+    /* Starting velocities */
+    private static final double X_VEL = 7;
+    private static final double Y_VEL = 7;
+
+    public void run() {
+        GOval ball = new GOval(0, 0, DIAM_BALL, DIAM_BALL);
+        ball.setFilled(true);
+        add(ball);
+        
+        double xVelocity = X_VEL;
+        double yVelocity = Y_VEL;
+
+        while (true) {
+            ball.move(xVelocity, yVelocity);
+            pause(DELAY);
+        }
+    }
+}</pre>
+
+<h3>Milestone 3</h3>
+<p>Students need to add detection for colliding with walls.</p>
+<pre id="editor3" style="height:500px">public class BouncingBall extends GraphicsProgram {
+
+    /* Size (diameter) of the ball */
+    private static final int DIAM_BALL = 30;
+    
+    /* Animation delay or pause time between ball moves */
+    private static final int DELAY = 10;
+
+    /* Starting velocities */
+    private static final double X_VEL = 7;
+    private static final double Y_VEL = 7;
+
+    public void run() {
+        GOval ball = new GOval(0, 0, DIAM_BALL, DIAM_BALL);
+        ball.setFilled(true);
+        add(ball);
+        
+        double xVelocity = X_VEL;
+        double yVelocity = Y_VEL;
+
+        while (true) {
+            // If it hits the top or bottom walls
+            if (ball.getY() < 0 || ball.getY() + ball.getHeight() > getHeight()) {
+                yVelocity = -yVelocity;
+            }
+            
+            // If it hits the left or right walls
+            if (ball.getX() < 0 || ball.getX() + ball.getWidth() > getWidth()) {
+                xVelocity = -xVelocity;
+            }
+
+            ball.move(xVelocity, yVelocity);
+            pause(DELAY);
+        }
+    }
+}</pre>
+
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    for (var i = 1; i <= 3; i++) {
+        var editor = ace.edit("editor" + i);
+        editor.setTheme('ace/theme/eclipse');
+        editor.getSession().setMode("ace/mode/java");
+        editor.setReadOnly(true);
+        editor.renderer.setShowGutter(false); 
+        /*editor.setTheme("ace/theme/eclipse");
+        editor.getSession().setMode("ace/mode/java");*/
+    }
+</script>
