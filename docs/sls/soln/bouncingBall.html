@@ -24,7 +24,6 @@
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
   </script>-->
 
-
 </head>
 <body>
 
@@ -214,87 +213,122 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Bouncing Ball
+                TA Solution: Bouncing Ball
 			</h1>
-			<p>
-				Based on an example by Mehran Sahami
-			</p>
-			<p>
-				Handouts:
-				<a href ="../../en/handouts/graphics.html">Graphics Reference</a>
-				<br/>
-				Worked Example: 
-				<a href="../../en/projects/mysterySquare.html">Mystery Square</a>,
-				<a href="../../en/projects/gravityBall.html">Gravity Ball</a>,
-				<a href="../../en/projects/goCenter.html">Go Center</a>
-        <br/>
-        Day3:<code>BouncingBall.java</code>
-			</p>
+        </div>
 
-		</div>
 		<hr/>
 
 		<div class="row">
-			<div class="col-md-12">
-				<p>
-					Write a GraphicsProgram that creates a ball (an instance of GOval) and makes it bounce around the screen. Ignore gravity and have a collision with the right or left wall reflect the x direction of the ball, and have a collision with the top or bottom wall change the y direction of the ball.
-				</p>
-				<p>The figure below shows a ball moving through a bounce with the bottom wall.</p>
-				<p>
-					<center>
-						<img style="width:500px" src="../../img/projects/bouncingBall/demo.png">	
-					</center>
-				</p>
-			</div>
+			<div class="col-xs-12">
+
+<p>
+	This is the main lab problem in the afternoon.  Students develop a program that animates a ball bouncing around the screen forever.  We recommend that students approach the program in 3 milestones.  Each milestone solution is provided below, along with notes about them.
+</p>
+
+<h3>Milestone 1</h3>
+<p>Students should start by adding the ball to the screen.  Ideally they use a constant for the size of the ball (and maybe even where to add it!).</p>
+<pre id="editor1" style="height:300px">public class BouncingBall extends GraphicsProgram {
+
+    /* Size (diameter) of the ball */
+    private static final int DIAM_BALL = 30;
+    
+    /* Animation delay or pause time between ball moves */
+    private static final int DELAY = 10;
+
+    /* Starting velocities */
+    private static final double X_VEL = 7;
+    private static final double Y_VEL = 7;
+
+    public void run() {
+        GOval ball = new GOval(0, 0, DIAM_BALL, DIAM_BALL);
+        ball.setFilled(true);
+        add(ball);
+    }
+}</pre>
+
+<h3>Milestone 2</h3>
+<p>Students should animate the ball.  There are great example programs mentioned in the milestone instructions of other programs that animate.</p>
+<pre id="editor2" style="height:500px">public class BouncingBall extends GraphicsProgram {
+
+    /* Size (diameter) of the ball */
+    private static final int DIAM_BALL = 30;
+    
+    /* Animation delay or pause time between ball moves */
+    private static final int DELAY = 10;
+
+    /* Starting velocities */
+    private static final double X_VEL = 7;
+    private static final double Y_VEL = 7;
+
+    public void run() {
+        GOval ball = new GOval(0, 0, DIAM_BALL, DIAM_BALL);
+        ball.setFilled(true);
+        add(ball);
+        
+        double xVelocity = X_VEL;
+        double yVelocity = Y_VEL;
+
+        while (true) {
+            ball.move(xVelocity, yVelocity);
+            pause(DELAY);
+        }
+    }
+}</pre>
+
+<h3>Milestone 3</h3>
+<p>Students need to add detection for colliding with walls.</p>
+<pre id="editor3" style="height:500px">public class BouncingBall extends GraphicsProgram {
+
+    /* Size (diameter) of the ball */
+    private static final int DIAM_BALL = 30;
+    
+    /* Animation delay or pause time between ball moves */
+    private static final int DELAY = 10;
+
+    /* Starting velocities */
+    private static final double X_VEL = 7;
+    private static final double Y_VEL = 7;
+
+    public void run() {
+        GOval ball = new GOval(0, 0, DIAM_BALL, DIAM_BALL);
+        ball.setFilled(true);
+        add(ball);
+        
+        double xVelocity = X_VEL;
+        double yVelocity = Y_VEL;
+
+        while (true) {
+            // If it hits the top or bottom walls
+            if (ball.getY() < 0 || ball.getY() + ball.getHeight() > getHeight()) {
+                yVelocity = -yVelocity;
+            }
+            
+            // If it hits the left or right walls
+            if (ball.getX() < 0 || ball.getX() + ball.getWidth() > getWidth()) {
+                xVelocity = -xVelocity;
+            }
+
+            ball.move(xVelocity, yVelocity);
+            pause(DELAY);
+        }
+    }
+}</pre>
+
+    
+<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    for (var i = 1; i <= 3; i++) {
+        var editor = ace.edit("editor" + i);
+        editor.setTheme('ace/theme/eclipse');
+        editor.getSession().setMode("ace/mode/java");
+        editor.setReadOnly(true);
+        editor.renderer.setShowGutter(false); 
+        /*editor.setTheme("ace/theme/eclipse");
+        editor.getSession().setMode("ace/mode/java");*/
+    }
+</script>			</div>
 		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Milestone 1: Create a Ball</h2>
-				<p>
-					It can be any size.
-				</p>
-				
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Milestone 2: Make it move</h2>
-				<p>
-					Loop forever and in the loop update the ball and pause. You can pause using the command:
-					<div class="well"><code>pause(<i>milliseconds</i>);</code></div>
-					If you don't pause the computer will animate faster that the human eye can see the movement!
-				</p>
-
-				<p>
-					There is also a method to move a GOval (or a GRect):
-					<div class="well"><code><i>object</i>.move(<i>dx</i>, <i>dy</i>);</code></div>
-					<i>dx</i> is the number of pixels the object will move in the x direction.
-					<br/> <i>dy</i> is the number of pixels the object will move in the y direction.
-				</p>
-
-				<p>Make sure to check out the demos: <a href="../../en/projects/gravityBall.html">Gravity Ball</a> and <a href="../../en/projects/goCenter.html">Go Center</a>.</p>
-				
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Milestone 3: Bounce</h2>
-				<p>
-					Now, before you update the position of the ball, you should check if the ball has collided with the wall and if so you should update the direction it is moving.
-				</p>
-				<p>Reflections should follow the rule the angle of incidence equals the angle of reflection. This turns out to be simple to implement. You simply flip the x direction if you hit a left or right wall and flip the y direction if you hit a bottom or top wall</p>
-
-				<p>How do you figure out the position of the ball? You can use the methods:</p>
-				<div class="well"><code><i>object</i>.getX();<br/><i>object</i>.getY();</code></div>
-
-				<p>Make sure to check out the demos: <a href="../../en/projects/gravityBall.html">Gravity Ball</a> and <a href="../../en/projects/goCenter.html">Go Center</a>.</p>
-				
-			</div>
-		</div>
-
 		
 <hr>
 
