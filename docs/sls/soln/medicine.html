@@ -247,7 +247,7 @@
         int firstFiveDigits = 10000;
         for (int i = 0; i < NUM_PACKAGES; i++) {
             println("" + firstFiveDigits + rgen.nextInt(10000, 99999));
-            firstFiveDigits++;
+            firstFiveDigits = firstFiveDigits + 1;
         }
     }
 
