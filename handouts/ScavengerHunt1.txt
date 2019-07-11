@@ -1,4 +1,4 @@
-public class Scavenger2 extends GraphicsProgram {
+public class Scavenger1 extends GraphicsProgram {
 
     public void run() {
         String location = "";
