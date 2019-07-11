@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/head.html
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+% rebase('templates/en/template.ptl', title="Illusion")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -105,10 +96,3 @@
 				<p>If you are stuck, try drawing each row with the first black square always starting at x = 0. Then try to figure out how to create the offset pattern.</p>
 			</div>
 		</div>
-
-
-		
-		%include templates/parts/footer.html
-
-	</div>
-</body>
