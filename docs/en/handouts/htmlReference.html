@@ -27,6 +27,42 @@
 <body>
 
 	<!-- Navigation Bar -->
+<!-- 
+These scripts allow for hiding content until a specified time has passed.
+To do this, simply add the class "visible-after" to the element, and add
+the custom "data-visible-after" attribute to the element as well which
+should be equal to the timestamp on or after which that element should be
+visible.  For example:
+
+<div class="visible-after" data-visible-after="2019070917">
+	...
+</div>
+
+this element would be visible only starting at 5PM on 7/9/19.
+
+In TA mode (if the ta query param is present in the URL), all elements,
+even ones which are not supposed to be visible until later, are visible.
+-->
+<script type="text/javascript" src="../../js/moment.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		const urlParams = new URLSearchParams(window.location.search);
+		const isTAMode = urlParams.get('ta');
+
+		// If the URL param is included, it will be a string (maybe empty)
+		if (isTAMode == null) {
+			// only show certain content if they should be released
+			$(".visible-after").each(function(i) {
+			    var dateStr = $(this).attr("data-visible-after");
+			    var releaseDate = moment(dateStr, "YYYYMMDDHH");
+			    if (!releaseDate.isSameOrBefore(moment())) {
+			    	$(this).remove();
+			    }
+			});
+		}
+	});
+</script>
+
 <nav class="navbar-inverse navbar-default" role="navigation">
   <div class="container-fluid">
   	<div class="container">
@@ -50,17 +86,12 @@
 	          <ul class="dropdown-menu">
 	          	<!--<li><a href="../../en/handouts/sections.html">Sections</a></li>-->
 	          	<li><a href="http://karel.csbridge.org/en/intro.html">Karel Reader</a></li>
-	          	<li><a href="../../en/handouts/karel.html">Karel Reference</a></li>
-							<!--<li><a href="../../en/handouts/submission.html">How to Submit Your Work</a></li>-->
-	          	
-	          	<!--<li><a href="../../en/handouts/console.html">Console Reference</a></li>
+	          	<li><a href="../../en/handouts/karel.html">Karel Reference</a></li>	          	
+	          	<li><a href="../../en/handouts/console.html">Console Reference</a></li>
 	          	<li><a href="../../en/handouts/random.html">Random Generator Reference</a></li>
-	          	<li><a href="../../en/handouts/graphics.html">Graphics Reference</a></li>
-	          	<li><a href="../../en/handouts/events.html">Events Reference</a></li>
-
-	          	
-	            <li><a href="../../en/handouts/arrayLists.html">Array Lists</a></li>-->
-	            
+	          	<li class="visible-after" data-visible-after="2019071109"><a href="../../en/handouts/graphics.html">Graphics Reference</a></li>
+	          	<li class="visible-after" data-visible-after="2019071509"><a href="../../en/handouts/events.html">Events Reference</a></li>
+	            <li class="visible-after" data-visible-after="2019071709"><a href="../../en/handouts/arrayLists.html">Array Lists</a></li>
 	          </ul>
 	        </li>
 
@@ -73,13 +104,14 @@
 	          	<li><a href="../../en/projects/mountain.html">Mountain Karel</a></li>
 	          	<li><a href="../../en/projects/randomPainter.html">Random Painter</a></li>
 	          	
-	          	<!--<li class="divider"></li>
+	          	<li class="divider"></li>
 	          	<li><a href="../../en/projects/sandcastles.html">Sandcastles</a></li>
 	          	<li><a href="../../en/projects/favoriteNumber.html">Favorite Number</a></li>
 	          	<li><a href="../../en/projects/medicine.html">Medicine</a></li>
 	          	<li><a href="../../en/projects/someSum.html">Some Sum</a></li>
 	          	<li><a href="../../en/projects/gameOfStones.html">Nimm</a></li>
 	          	
+	          	<!--
 	          	<li class="divider"></li>
 	          	<li><a href="../../en/projects/awesome.html">Programming is Awesome</a></li>
 	          	<li><a href="../../en/projects/randomCircles.html">Random Circles</a></li>
@@ -116,21 +148,21 @@
 	          	<li><a href="../../en/projects/banishWinter.html">Banish Winter</a></li>
 
 
-	          <!--<li class="divider"></li>
+	          <li class="divider"></li>
 	            <li><a href="../../en/projects/emc2.html">E=MC2</a></li>
 	            <li><a href="../../en/projects/fibb.html">Fibonacci</a></li>
 	            <li><a href="../../en/projects/findPi.html">Find Pi</a></li>
 	            <li><a href="../../en/projects/8Ball.html">8-Ball</a></li>
 	          	<li><a href="../../en/projects/averageMethod.html">Average Method</a></li>	
-	           
             <li class="divider"></li>
 	            <li><a href="../../en/projects/robotFace.html">Robot Face</a></li>
-	          	<li><a href="../../en/projects/drawPeople.html">Draw People</a></li>	
-	          	<li><a href="../../en/projects/halfGreen.html">Half Green</a></li>
+	          	
 	            
 	            <li><a href="../../en/projects/goCenter.html">Go To Center</a></li>
 	            <li><a href="../../en/projects/gravityBall.html">Gravity Ball</a></li>
-
+<!--
+				<li><a href="../../en/projects/drawPeople.html">Draw People</a></li>	
+	          	<li><a href="../../en/projects/halfGreen.html">Half Green</a></li>
 	          <li class="divider"></li>
 	             <li><a href="../../en/projects/stampTool.html">Stamp Tool</a></li>
            
@@ -147,10 +179,11 @@
 	          <ul class="dropdown-menu">
 	          	<li><a href="../../slides/Welcome.pdf">Karel</a></li>
 	          	<li><a href="../../slides/ControlFlow.pdf">Control Flow</a></li>
-	          	<!--
 	          	<li><a href="../../slides/Variables.pdf">Variables</a></li>
-	          	<li><a href="../../slides/Variables2.pdf">Variables 2</a></li>
+			<li><a href="../../slides/Variables2.pdf">Variables 2</a></li>
+	          	
 	          	<li><a href="../../slides/Graphics.pdf">Graphics</a></li>
+	          	<!--
 	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
 	          	<li><a href="../../slides/Methods.pdf">Methods</a></li>
 	          	<li><a href="../../slides/Events.pdf">Events</a></li>

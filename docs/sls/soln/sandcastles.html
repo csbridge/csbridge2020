@@ -1,0 +1,343 @@
+<head>
+
+<title>Intro to CS</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../style.css">
+
+<!-- Java Script -->
+<script src="../../plugins/jquery.min.js"></script>
+<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+
+<script src="../../karel/ace/ace.js" type="text/javascript"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+  </script>-->
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+<!-- 
+These scripts allow for hiding content until a specified time has passed.
+To do this, simply add the class "visible-after" to the element, and add
+the custom "data-visible-after" attribute to the element as well which
+should be equal to the timestamp on or after which that element should be
+visible.  For example:
+
+<div class="visible-after" data-visible-after="2019070917">
+	...
+</div>
+
+this element would be visible only starting at 5PM on 7/9/19.
+
+In TA mode (if the ta query param is present in the URL), all elements,
+even ones which are not supposed to be visible until later, are visible.
+-->
+<script type="text/javascript" src="../../js/moment.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		const urlParams = new URLSearchParams(window.location.search);
+		const isTAMode = urlParams.get('ta');
+
+		// If the URL param is included, it will be a string (maybe empty)
+		if (isTAMode == null) {
+			// only show certain content if they should be released
+			$(".visible-after").each(function(i) {
+			    var dateStr = $(this).attr("data-visible-after");
+			    var releaseDate = moment(dateStr, "YYYYMMDDHH");
+			    if (!releaseDate.isSameOrBefore(moment())) {
+			    	$(this).remove();
+			    }
+			});
+		}
+	});
+</script>
+
+<nav class="navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/">CS Bridge</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <!--<li ><a href="#">Link</a></li>-->
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<!--<li><a href="../../en/handouts/sections.html">Sections</a></li>-->
+	          	<li><a href="http://karel.csbridge.org/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="../../en/handouts/karel.html">Karel Reference</a></li>	          	
+	          	<li><a href="../../en/handouts/console.html">Console Reference</a></li>
+	          	<li><a href="../../en/handouts/random.html">Random Generator Reference</a></li>
+	          	<li class="visible-after" data-visible-after="2019071109"><a href="../../en/handouts/graphics.html">Graphics Reference</a></li>
+	          	<li class="visible-after" data-visible-after="2019071509"><a href="../../en/handouts/events.html">Events Reference</a></li>
+	            <li class="visible-after" data-visible-after="2019071709"><a href="../../en/handouts/arrayLists.html">Array Lists</a></li>
+	          </ul>
+	        </li>
+
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a></li>
+	          	<li><a href="../../en/projects/efes.html">Charles Bridge</a></li>
+	          	<li><a href="../../en/projects/mountain.html">Mountain Karel</a></li>
+	          	<li><a href="../../en/projects/randomPainter.html">Random Painter</a></li>
+	          	
+	          	<li class="divider"></li>
+	          	<li><a href="../../en/projects/sandcastles.html">Sandcastles</a></li>
+	          	<li><a href="../../en/projects/favoriteNumber.html">Favorite Number</a></li>
+	          	<li><a href="../../en/projects/medicine.html">Medicine</a></li>
+	          	<li><a href="../../en/projects/someSum.html">Some Sum</a></li>
+	          	<li><a href="../../en/projects/gameOfStones.html">Nimm</a></li>
+	          	
+	          	<!--
+	          	<li class="divider"></li>
+	          	<li><a href="../../en/projects/awesome.html">Programming is Awesome</a></li>
+	          	<li><a href="../../en/projects/randomCircles.html">Random Circles</a></li>
+	          	<li><a href="../../en/projects/stringArt.html">String Art</a></li>
+              <li><a href="../../tr/projects/mysterySquare.html">Mystery Square</a></li>
+	            <li><a href="../../en/projects/bouncingBall.html">Bouncing Ball</a></li>
+
+	            <li class="divider"></li>
+	          	<li><a href="../../en/projects/madMethods.html">Mad Methods</a></li>
+	          	<li><a href="../../en/projects/target.html">Target</a></li>
+	          	<li><a href="../../en/projects/illusion.html">Optical Illusion</a></li>
+	          	<li><a href="../../en/projects/sunset.html">Short Film</a></li>
+
+	          	<li class="divider"></li>
+	          	<li><a href="../../en/projects/makingTracks.html">Making Tracks</a></li>
+	          	<li><a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a></li>
+	          	<li class="divider"></li>
+	          	<li><a href="../../en/projects/breakout.html">Breakout</a></li>
+        -->
+	            
+              
+	            
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../en/projects/stepUp.html">Step Up</a></li>
+	          	<li><a href="../../en/projects/place100.html">Place 100</a></li>
+	          	<li><a href="../../en/projects/beeperLine.html">Beeper Line</a></li>
+	          	<li><a href="../../en/projects/invert.html">Invert</a></li>
+	          	<li><a href="../../en/projects/unKarel.html">UN Karel</a></li>
+	          	<li><a href="../../en/projects/banishWinter.html">Banish Winter</a></li>
+
+
+	          <li class="divider"></li>
+	            <li><a href="../../en/projects/emc2.html">E=MC2</a></li>
+	            <li><a href="../../en/projects/fibb.html">Fibonacci</a></li>
+	            <li><a href="../../en/projects/findPi.html">Find Pi</a></li>
+	            <li><a href="../../en/projects/8Ball.html">8-Ball</a></li>
+	          	<li><a href="../../en/projects/averageMethod.html">Average Method</a></li>	
+            <li class="divider"></li>
+	            <li><a href="../../en/projects/robotFace.html">Robot Face</a></li>
+	          	
+	            
+	            <li><a href="../../en/projects/goCenter.html">Go To Center</a></li>
+	            <li><a href="../../en/projects/gravityBall.html">Gravity Ball</a></li>
+<!--
+				<li><a href="../../en/projects/drawPeople.html">Draw People</a></li>	
+	          	<li><a href="../../en/projects/halfGreen.html">Half Green</a></li>
+	          <li class="divider"></li>
+	             <li><a href="../../en/projects/stampTool.html">Stamp Tool</a></li>
+           
+	          	<li><a href="../../en/projects/holePuncher.html">Hole Puncher</a></li>	
+	          	<li><a href="../../en/projects/debrisSweeper.html">Debris Sweeper</a></li>	
+	          	<li><a href="../../en/projects/suchADrag.html">Such a Drag</a></li>
+	          	<li><a href="../../en/projects/keyboardKarel.html">Keyboard Karel</a></li>
+            -->
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../slides/Welcome.pdf">Karel</a></li>
+	          	<li><a href="../../slides/ControlFlow.pdf">Control Flow</a></li>
+	          	<li><a href="../../slides/Variables.pdf">Variables</a></li>
+			<li><a href="../../slides/Variables2.pdf">Variables 2</a></li>
+	          	
+	          	<li><a href="../../slides/Graphics.pdf">Graphics</a></li>
+	          	<!--
+	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
+	          	<li><a href="../../slides/Methods.pdf">Methods</a></li>
+	          	<li><a href="../../slides/Events.pdf">Events</a></li>
+							-->
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bonus <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+                <li><a href="../../en/bonus-index.html">Bonus projects</a></li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forms <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Survey</a></li>
+                <li><a href="https://forms.gle/eVsMyZb8HCSUETeV6">Sign in To Lab</a></li>
+	          </ul>
+	        </li>
+
+
+
+	      </ul>
+
+	      
+	      <!--<ul class="nav navbar-nav navbar-right">
+	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/english_flag.png"></img></a></li>
+	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
+	        
+	      </ul>-->
+	    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+
+</script>
+
+
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                TA Solution: Sandcastles
+			</h1>
+        </div>
+
+		<hr/>
+
+		<div class="row">
+			<div class="col-xs-12">
+
+<p>
+	This is the first set of lab problems for the day.  It gives students practice writing their first short console programs, using variables, and printing out to the screen.
+</p>
+
+<h3>Hello World Solution</h3>
+<p>This program is a warmup to get students going with console programs.</p>
+<pre id="editor1" style="height:150px">public class HelloWorld extends ConsoleProgram {
+	
+	public void run() {
+	    println("Ahoj svět");
+	}
+
+}</pre>
+
+<h3>Moon Weight Solution</h3>
+<p>This program gives students practice with variables, user input and printing out to the screen.</p>
+<pre id="editor2" style="height:200px">public class Moon extends ConsoleProgram {
+    
+    public void run() {
+        double earthWeight = readDouble("Enter a weight on earth: ");
+        double moonWeight = earthWeight * 0.165;
+        println("Your weight on the moon is " + moonWeight);
+    }
+
+}</pre>
+
+<h3>Random Numbers Solution</h3>
+<p>This program gives students practice with using control flow in Java, as well as generating random numbers.</p>
+<pre id="editor3" style="height:250px">public class RandomNumbers extends ConsoleProgram {
+    
+    // A random number generator
+    private RandomGenerator rgen = new RandomGenerator();
+
+    public void run() {
+        for (int i = 0; i < 1000; i++) {   
+            int randomNumber = rgen.nextInt(0, 100);
+            println(randomNumber);   
+        }
+
+    }
+}</pre>
+
+    
+<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    for (var i = 1; i <= 3; i++) {
+        var editor = ace.edit("editor" + i);
+        editor.setTheme('ace/theme/eclipse');
+        editor.getSession().setMode("ace/mode/java");
+        editor.setReadOnly(true);
+        editor.renderer.setShowGutter(false); 
+        /*editor.setTheme("ace/theme/eclipse");
+        editor.getSession().setMode("ace/mode/java");*/
+    }
+</script>			</div>
+		</div>
+		
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+		&#169; Stanford 2019 &#124; Created by 
+		<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
+		Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
+	</p>
+	<!--<p class="pull-right">
+		<a href="../../fall12">Fall 2012</a>
+	</p>-->
+</div>
+<!--<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>-->
+
+	</div>
+</body>

@@ -1,0 +1,32 @@
+<head>
+
+	%include templates/parts/head.html
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.html
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                TA Solution: {{problemTitle}}
+			</h1>
+        </div>
+
+		<hr/>
+
+		<div class="row">
+			<div class="col-xs-12">
+                %include	
+			</div>
+		</div>
+		
+		%include templates/parts/footer.html
+
+	</div>
+</body>
