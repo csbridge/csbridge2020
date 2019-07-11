@@ -1,0 +1,3 @@
+Scavenger1: the x coordinate is 100 and the width and height are equal
+Scavenger2: the location is set to the second location blank (25 / 3 > 5 and 25 is odd), and the spot is set to the second spot blank (num <= 24)
+Scavenger3: the program prints "Go to Room " + (25 + K) + D
