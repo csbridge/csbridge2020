@@ -1,0 +1,48 @@
+% rebase('templates/sls/soln/template.ptl', problemTitle="Target")
+
+<p>
+  This is the section problem for the morning.  It gives students practice writing a program with methods and parameters.  You should emphasize making methods to reuse code and design "top-down", meaning you design your program by breaking it into smaller pieces until you can implement each piece with a little code.
+</p>
+
+<p>Teaching tips:
+  <ol>
+    <li>Learning goal: methods, parameters and decomposition
+    <li>Milestone: draw one of the pieces - a single centered circle
+    <li>The key idea of this solution is making one method that can draw a circle, and then reusing this method.  Encourage students to consider what is in common and different across all operations in this problem - we are drawing three circles with the same center point and fill (true), but with different radii and colors.  Therefore, the things that differ each time should be the parameters.</li>
+  </ol>
+</p>
+
+<h3>Solution</h3>
+<pre id="editor" style="height:400px">public class Target extends GraphicsProgram {
+
+    private static final int BIG_CIRCLE_RADIUS = 150;
+    private static final int MEDIUM_CIRCLE_RADIUS = 100;
+    private static final int SMALL_CIRCLE_RADIUS = 50;
+
+    public void run() {
+        drawCenteredCircle(BIG_CIRCLE_RADIUS, Color.RED);
+        drawCenteredCircle(MEDIUM_CIRCLE_RADIUS, Color.WHITE);
+        drawCenteredCircle(SMALL_CIRCLE_RADIUS, Color.RED);
+    }
+
+    private void drawCenteredCircle(int radius, Color color) {
+        GOval oval = new GOval(radius * 2, radius * 2);
+        double x = (getWidth() - oval.getWidth()) / 2;
+        double y = (getHeight() - oval.getHeight()) / 2;
+        oval.setFilled(true);
+        oval.setColor(color);
+        add(oval, x, y);
+    }
+
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
