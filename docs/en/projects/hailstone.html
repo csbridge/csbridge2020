@@ -56,7 +56,7 @@ even ones which are not supposed to be visible until later, are visible.
 			// only show certain content if they should be released
 			$(".visible-after").each(function(i) {
 			    var dateStr = $(this).attr("data-visible-after");
-			    var releaseDate = moment(dateStr, "YYYYMMDDHHMM");
+			    var releaseDate = moment(dateStr, "YYYYMMDDHH");
 			    if (!releaseDate.isSameOrBefore(moment())) {
 			    	$(this).remove();
 			    }
@@ -91,9 +91,9 @@ even ones which are not supposed to be visible until later, are visible.
 	          	<li><a href="../../en/handouts/karel.html">Karel Reference</a></li>	          	
 	          	<li><a href="../../en/handouts/console.html">Console Reference</a></li>
 	          	<li><a href="../../en/handouts/random.html">Random Generator Reference</a></li>
-	          	<li class="visible-after" data-visible-after="201907110930"><a href="../../en/handouts/graphics.html">Graphics Reference</a></li>
-	          	<li class="visible-after" data-visible-after="201907150930"><a href="../../en/handouts/events.html">Events Reference</a></li>
-	            <li class="visible-after" data-visible-after="201907170930"><a href="../../en/handouts/arrayLists.html">Array Lists</a></li>
+	          	<li class="visible-after" data-visible-after="2019071109"><a href="../../en/handouts/graphics.html">Graphics Reference</a></li>
+	          	<li class="visible-after" data-visible-after="2019071509"><a href="../../en/handouts/events.html">Events Reference</a></li>
+	            <li class="visible-after" data-visible-after="2019071709"><a href="../../en/handouts/arrayLists.html">Array Lists</a></li>
 	          </ul>
 	        </li>
 
@@ -156,7 +156,6 @@ even ones which are not supposed to be visible until later, are visible.
 	            <li><a href="../../en/projects/findPi.html">Find Pi</a></li>
 	            <li><a href="../../en/projects/8Ball.html">8-Ball</a></li>
 	          	<li><a href="../../en/projects/averageMethod.html">Average Method</a></li>	
-	        <!--
             <li class="divider"></li>
 	            <li><a href="../../en/projects/robotFace.html">Robot Face</a></li>
 	          	<li><a href="../../en/projects/drawPeople.html">Draw People</a></li>	
@@ -164,7 +163,7 @@ even ones which are not supposed to be visible until later, are visible.
 	            
 	            <li><a href="../../en/projects/goCenter.html">Go To Center</a></li>
 	            <li><a href="../../en/projects/gravityBall.html">Gravity Ball</a></li>
-
+<!--
 	          <li class="divider"></li>
 	             <li><a href="../../en/projects/stampTool.html">Stamp Tool</a></li>
            
@@ -183,8 +182,9 @@ even ones which are not supposed to be visible until later, are visible.
 	          	<li><a href="../../slides/ControlFlow.pdf">Control Flow</a></li>
 	          	<li><a href="../../slides/Variables.pdf">Variables</a></li>
 			<li><a href="../../slides/Variables2.pdf">Variables 2</a></li>
-	          	<!--
+	          	
 	          	<li><a href="../../slides/Graphics.pdf">Graphics</a></li>
+	          	<!--
 	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
 	          	<li><a href="../../slides/Methods.pdf">Methods</a></li>
 	          	<li><a href="../../slides/Events.pdf">Events</a></li>
