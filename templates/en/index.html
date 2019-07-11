@@ -1,147 +1,62 @@
-<head>
-<head>
+% rebase('templates/en/template.ptl')
 
-	%include templates/parts/head.html
+<br />
 
-  <script src="../karel/js/html/websiteImports.js"></script>
-	<script>importCss();</script>
-	<script>importJs();</script>
-			
-</head>
-<body>
+<div class="alert alert-success">
+	<b>Who are you?</b> Fill in the <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">class survey</a>.
+</div>
 
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+<!--
+<div class="alert alert-info">
+	Add to the class playlist here: <a href="https://open.spotify.com/user/1251835474/playlist/2E1ccnzfMTqDv2D1JEoFF3">Spotify Playlist</a>
+</div>
+-->
 
-    <div class="page-header" style="backgroud-color:#cdbfe3">
-    	<div class="container">
-   			<div>
-	        	<div id="logo">
-					<img id="logoImg" src="{{pathToRoot}}img/logo.png"/>
-				</div>
-				<div id="headerText" style="padding-bottom:15px;">
-					<div class="h1" style="margin-top:0px;font-size:40px;">
-						Intro to Computer Science
-					</div>
-					<div>
-						Summer 2019
-					</div>
-					<div>
-						July 9th to July 19th at Czech Technical University, Prague
-					</div>
-				</div>
-	          
-	        </div>
-		</div>
+<div>
+	<h2>
+		The Idea of the Course
+	</h2>
+
+	<p>The point of this two week course is to teach you the fundamentals of computer programming to the point where you can go and learn on your own. It is taught by a collaboration of instructors from Stanford University and CTU. You will learn to program using material for Stanford's Introduction to Computer Science course.</p>
+</div>
+
+<hr/>
+
+<!-- Daily schedule / list of programs -->
+<div class="section" id="schedule">
+	<h2>Programs</h2>
+	<div class="alert alert-info">
+	  Here are instructions for how to work on the programs below during labs: <a href="{{pathToRoot}}en/handouts/eclipse.html">click here</a>.
 	</div>
+	%include templates/parts/programTable.html
+</div>
+
+<hr/>
+
+<!-- Course Staff -->
+<div class="section" id="staff">
+	<h2>Teachers</h2>
+	%include templates/parts/peeps.html
+</div>
+
+<hr/>
+
+<!-- Curriculum Overview -->
+<div class="section" id="playWithKarel">
+	<h2>Curriculum</h2>
+	<img src = "{{pathToRoot}}img/icons/curriculum.jpg" style="width:100%"></img>
+</div>
 
 
+<!--<div class="section" id="playWithKarel">
+	<h2>
+		Play With Karel
+	</h2>
 
-	<!-- Main Content -->
-	<div class="container">
+	<p>Meet Karel, The Java Robot that Stanford uses to introduce university students to programming. </p>
 
-		<div class="section" id="information">
-		<br/>
+	<p>Use Karel's commands to get her to move the beeper to the top of the ledge. Normally you will write your programs in an application called Eclipse, but to get you started we made a mini-eclipse for our website:
+	</p>
 
-		<div class="alert alert-success">
-			<b> Who are you?</b>. Fill in the <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">class survey</a>.
-		</div>
-
-
-		<!-- <div class="alert alert-success">
-      All necessary links (to sign into lab, to submit your work) can now be found under the 'Forms' tab in the top toolbar.
-		</div> -->
-
-		<!--
-		
-		<div class="alert alert-success">
-			<b> Submit your work</b>. Use the submission process: <a href="{{pathToRoot}}en/handouts/submission.html">submission handout</a>.
-		</div>
-
-		<div class="alert alert-info">
-			Sign in to lab <a href="https://docs.google.com/forms/d/e/1FAIpQLSffsKTNU3mu-21-ZjZFJ3d-fPdvw6uQcvhAjbpXhux43_3gpg/viewform?usp=sf_link">here</a>.
-		</div>
-
-    <div class="alert alert-info">
-      Fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtHJpQ4Ksu3pWmPuCT5sC8m2WAvlOcr453P9UtsFFC-HCBdw/viewform">this survey</a> during the first lab.
-    </div>
-
-
-		<div class="alert alert-info">
-			Add to the class playlist here: <a href="https://open.spotify.com/user/1251835474/playlist/2E1ccnzfMTqDv2D1JEoFF3">Spotify Playlist</a>
-		</div>
-		-->
-
-
-
-		
-		
-
-		<div>
-			<h2>
-				The Idea of the Course
-			</h2>
-
-			<p>The point of this two week course is to teach you the fundamentals of computer programming to the point where you can go and learn on your own. It is taught by a collaboration of instructors from Stanford University and CTU. You will learn to program using material for Stanford's Introduction to Computer Science course. </p>
-
-			<hr/>
-		</div>
-
-
-		
-
-		<div>
-
-		<div class="section" id="schedule">
-			<h2>
-				Programs
-			</h2>
-			<div class="alert alert-info">
-			  Here are instructions for how to work on the programs below during labs: <a href="{{pathToRoot}}en/handouts/eclipse.html">click here</a>.
-			</div>
-			%include templates/parts/programTable.html
-			<hr/>
-
-		</div>
-
-		<div class="section" id="staff">
-			<h2>
-				Teachers
-			</h2>
-
-			%include templates/parts/peeps.html
-			<hr/>
-		</div>
-
-		
-
-			
-		<div class="section" id="playWithKarel">
-			<h2>
-				Curriculum
-			</h2>
-			<img src = "{{pathToRoot}}img/icons/curriculum.jpg" style="width:100%"></img>
-			<hr/>
-		</div>
-
-	
-		<!--<div class="section" id="playWithKarel">
-			<h2>
-				Play With Karel
-			</h2>
-
-			<p>Meet Karel, The Java Robot that Stanford uses to introduce university students to programming. </p>
-
-			<p>Use Karel's commands to get her to move the beeper to the top of the ledge. Normally you will write your programs in an application called Eclipse, but to get you started we made a mini-eclipse for our website:
-			</p>
-
-			%include templates/parts/playWithKarel.html
-		</div>-->
-
-
-		
-
-		%include templates/parts/footer.html
-
-	</div>
-</body>
+	%include templates/parts/playWithKarel.html
+</div>-->
