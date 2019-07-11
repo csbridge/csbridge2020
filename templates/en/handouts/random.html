@@ -1,14 +1,5 @@
-<head>
-	%include templates/parts/head.html
+% rebase('templates/en/template.ptl', title="RandomGenerator")
 
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
-
-	<!-- Main Content -->
-	<div class="container">
 
 		<!-- Header -->
 		<div id="pageHeader">
@@ -62,7 +53,4 @@ boolean randomBoolean = rgen.nextBoolean(); //Returns a random boolean
                 bool unequalProb = rgen.nextBoolean(0.75); // returns true 3/4ths of the time<br>
 		</code></div>		
 
-		%include templates/parts/footer.html
-
-	</div>
-</body>
+	
