@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-		<title>CS Bridge  | Mad Methods</title>
+		<title>CS Bridge  | Mad Methods (TA)</title>
 
 		<!-- Fonts -->
 		<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -263,87 +263,69 @@
 		<div class="container">
 			
 
-	<!-- Main Content -->
-	<div class="container">
+<!-- Main Content -->
+<div class="container">
 
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-				Mad Methods
-			</h1>
-			<p>
-				Written by Chris and Bryce
-			</p>
-			<p>
-				Example:
-				<a href ="../../en/projects/averageMethod.html">Average Method</a>
-        <br/>
-        Day4: <code>MadMax.java</code>
-			</p>
+	<!-- Header -->
+	<div id="pageHeader">
+		<h1>
+            TA Solution: Mad Methods
+		</h1>
+    </div>
 
-		</div>
-		<hr/>
+	<hr/>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h2>1. Mad Max</h2>
-				<p>
-					Complete the <code>MadMax</code> program by filling in the <code>max</code> method that returns the larger of its two parameters:
-				</p>
-				<div class="well"><code>private int max(int i, int j)</code></div>
-				<p>
-					The run method has already been written:
-					<pre>public void run() {
-    println("The max of 4 and 5 is: " + max(4, 5));
-    println("The max of -4 and 4 is: " + max(-4, 4));
-    println("The max of 1 and 2 is: " + max(1, 2));
-    println("The max of 0 and 0 is: " + max(0, 0));
+	<div class="row">
+		<div class="col-xs-12">
+
+<p>
+  This is the first set of lab problems for the day.  It gives students practice writing methods with parameters and return values.
+</p>
+
+<h3>Max Solution</h3>
+<p>This program is a short method that takes in two parameters and returns a value.  You can emphasize that even though this is a short method, it is helpful because from now on we can calculate the max of two numbers with just one method call instead of copy/pasting the code everywhere.</p>
+<pre id="editor1" style="height:150px">private int max(int i, int j) {
+    if (i > j) {
+        return i;
+    }
+    
+    return j;
 }</pre>
-				</p>
-				<p>
-					Your output should look like this:
-					<center>
-						<img style="width:500px" src="../../img/projects/madMax/madMax.png">	
-					</center>
-				</p>
 
-				<h2>2. Draw Trees</h2>
-			<p>
-				Example:
-				<a href ="../../en/projects/drawPeople.html">Draw People</a>,
-				<a href ="../../en/projects/halfGreen.html">Half Green</a>
-        <br/>
-        Day4: <code>DrawTrees.java</code>
-			</p>
-				<p>
-					Fill in the <code>drawTree</code> method that draws a tree with the <b>base</b> of its trunk centered at the provided (x, y) position:
-				</p>
-				<div class="well"><code>private void drawTree(int x, int y)</code></div>
-				<p>
-					The <code>run</code> method has already been written, which adds a dark-green background and draws some trees:
-					<pre>public void run() {
-	setBackground(new Color(2, 110, 70));						
-    drawTree(50, 150);
-    drawTree(100, 300);
-    drawTree(500, 200);
-    drawTree(300, 250);
-    drawTree(700, 310);
+<h3>Draw Trees</h3>
+<p>This program gives students practice with methods in graphics programs.  It does not return any value, but has to perform drawing based on the parameter values.</p>
+<pre id="editor2" style="height:300px"> private void drawTree(int x, int y) {
+    // Draw the trunk with the bottom-center of its base at (x, y)
+    int trunkX = x - TRUNK_WIDTH / 2;
+    int trunkY = y - TRUNK_HEIGHT;
+    GRect trunk = new GRect(trunkX, trunkY, TRUNK_WIDTH, TRUNK_HEIGHT);
+    trunk.setFilled(true);
+    trunk.setColor(Color.ORANGE);
+    add(trunk);
+    
+    // Draw the leaves with the center at the top-center of the trunk
+    GOval leaves = new GOval(trunkX + TRUNK_WIDTH / 2 - LEAVES_RADIUS, trunkY - LEAVES_RADIUS, 
+                             2 * LEAVES_RADIUS, 2 * LEAVES_RADIUS);
+    leaves.setFilled(true);
+    leaves.setColor(Color.GREEN);
+    add(leaves);
 }</pre>
-				</p>
-				<p>
-					Each tree should have a truck with a width of 20 pixels and a height of 80 pixels. The leaves should have a radius of 30 pixels.  The center of the leaves should be at the top center of the trunk. Your output should look like this:
-					<center>
-						<img style="width:500px" src="../../img/projects/madMax/drawTree.png">	
-					</center>
-				</p>
 
-				<p>
-					If you finish early, see how beautiful a tree you can create. Email us a screenshot!
-				</p>
-			</div>
-
-		</div>
-			
+    
+<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    for (var i = 1; i <= 2; i++) {
+        var editor = ace.edit("editor" + i);
+        editor.setTheme('ace/theme/eclipse');
+        editor.getSession().setMode("ace/mode/java");
+        editor.setReadOnly(true);
+        editor.renderer.setShowGutter(false); 
+        /*editor.setTheme("ace/theme/eclipse");
+        editor.getSession().setMode("ace/mode/java");*/
+    }
+</script>		</div>
+	</div>
+</div>			
 			<!-- Footer -->
 			<hr>
 
