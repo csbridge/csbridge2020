@@ -1,0 +1,19 @@
+public class Scavenger3 extends ConsoleProgram {
+
+    private static final int K = __________;
+
+    private static final String D = "____________";
+
+    public void run() {
+
+        int num = 100;
+        while(num > 30) {
+           num = num / 2;
+        }
+        num = num + K;
+
+        String location = "Room " + num + D;
+        println("Go to " + location);
+    }
+}
+
