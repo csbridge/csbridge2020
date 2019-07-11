@@ -1,24 +1,17 @@
-<head>
-
-	%include templates/parts/head.html
-
-	<style type="text/css" media="screen">
-  #console {
-    overflow: hide;
-    border: solid 1px black;
-    background-color: white;
-    width: 500px;
-    height: 300px;
-  }
-</style>
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+% rebase('templates/en/template.ptl', title="Nimm")
 
 	<!-- Main Content -->
 	<div class="container">
+
+		<style type="text/css" media="screen">
+		  #console {
+		    overflow: hide;
+		    border: solid 1px black;
+		    background-color: white;
+		    width: 500px;
+		    height: 300px;
+		  }
+		</style>
 
 		<!-- Header -->
 		<div id="pageHeader">
@@ -180,10 +173,5 @@ public class CarbonDating extends ConsoleProgram {
 </script>
 	</div>
 	</div>-->
-		
-		%include templates/parts/footer.html
+		<script data-main="gameOfStones.js" src="js/requirejs/require.js"></script>
 
-	</div>
-
-	<script data-main="gameOfStones.js" src="js/requirejs/require.js"></script>
-</body>
