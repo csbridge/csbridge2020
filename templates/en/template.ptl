@@ -43,7 +43,7 @@
 
 		<div class="container">
 			
-			%include
+			{{!base}}
 			
 			<!-- Footer -->
 			<hr>
