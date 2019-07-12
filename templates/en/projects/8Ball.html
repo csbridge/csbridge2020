@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/head.html
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+% rebase('templates/en/template.ptl', title="8-Ball")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,7 +6,7 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				8Ball (with solution)
+				8-Ball (with solution)
 			</h1>
 			<p>
 				Problem written by Chris Piech.
@@ -123,8 +114,3 @@ public class EightBall extends ConsoleProgram {
 </script>
 	</div>
 	</div>
-		
-		%include templates/parts/footer.html
-
-	</div>
-</body>

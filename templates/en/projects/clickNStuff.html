@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/head.html
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+% rebase('templates/en/template.ptl', title="Click 'N Stuff")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,7 +6,7 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-                Click N' Stuff
+                Click 'N Stuff
 			</h1>
 			<p>
                 Written by Lisa Yan
@@ -139,9 +130,3 @@ public void mouseMoved(MouseEvent e) {
 			</div>
 
 		</div>
-
-		
-		%include templates/parts/footer.html
-
-	</div>
-</body>

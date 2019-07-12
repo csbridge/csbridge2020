@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/head.html
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+% rebase('templates/en/template.ptl', title="Creative String Art")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -49,9 +40,3 @@
 						<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/creativeStringArt/customfancy.png">	
 					</center>
 		</div>
-
-		
-		%include templates/parts/footer.html
-
-	</div>
-</body>

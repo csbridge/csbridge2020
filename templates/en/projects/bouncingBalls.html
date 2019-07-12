@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/head.html
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+% rebase('templates/en/template.ptl', title="Bouncing Balls")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -139,7 +130,3 @@ public class BouncingBalls extends GraphicsProgram {
 	
 	</div>
 	</div>
-		%include templates/parts/footer.html
-
-	</div>
-</body>

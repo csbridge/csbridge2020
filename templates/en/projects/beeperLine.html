@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/head.html
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+% rebase('templates/en/template.ptl', title="Beeper Line")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -88,9 +79,4 @@ public class BeeperLine extends SuperKarel {
 
 			</div>
 		</div>
-
 		
-		%include templates/parts/footer.html
-
-	</div>
-</body>
