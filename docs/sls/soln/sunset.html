@@ -1,34 +1,43 @@
-<head>
+<!--
+	A template used for every page - contains the header, nav bar, a container div, and the footer.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
+		<title>CS Bridge  | Short Film (TA)</title>
 
-<title>Intro to CS</title>
+		<!-- Fonts -->
+		<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Styles -->
 
-<meta http-equiv="content-type" content="text/html; charset=UTF8">
+		<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../../style.css">
 
-<!-- Fonts -->
-<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+		<!-- Java Script -->
+		<script src="../../plugins/jquery.min.js"></script>
+		<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
 
-<!-- Styles -->
+		<script src="../../karel/ace/ace.js" type="text/javascript"></script>
+		<script type="text/javascript" src="../../js/moment.min.js"></script>
+		<script type="text/javascript" src="../../js/index.js"></script>
 
-<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../../style.css">
+		<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+		  </script>-->
 
-<!-- Java Script -->
-<script src="../../plugins/jquery.min.js"></script>
-<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+		<script src="../karel/js/html/websiteImports.js"></script>
+		<script>importCss();</script>
+		<script>importJs();</script>
+	</head>
 
-<script src="../../karel/ace/ace.js" type="text/javascript"></script>
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
-  </script>-->
+	<body>
 
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
+		<!-- Navigation Bar -->
 <nav class="navbar-inverse navbar-default" role="navigation">
   <div class="container-fluid">
   	<div class="container">
@@ -162,16 +171,17 @@
 	            <li><a href="../../en/projects/fibb.html">Fibonacci</a></li>
 	            <li><a href="../../en/projects/findPi.html">Find Pi</a></li>
 	            <li><a href="../../en/projects/8Ball.html">8-Ball</a></li>
-	          	<li><a href="../../en/projects/averageMethod.html">Average Method</a></li>	
             <li class="divider"></li>
 	            <li><a href="../../en/projects/robotFace.html">Robot Face</a></li>
-	          	
-	            
 	            <li><a href="../../en/projects/goCenter.html">Go To Center</a></li>
 	            <li><a href="../../en/projects/gravityBall.html">Gravity Ball</a></li>
-<!--
+
+			<li class="divider"></li>
+				<li><a href="../../en/projects/averageMethod.html">Average Method</a></li>	
 				<li><a href="../../en/projects/drawPeople.html">Draw People</a></li>	
 	          	<li><a href="../../en/projects/halfGreen.html">Half Green</a></li>
+
+	          	<!--
 	          <li class="divider"></li>
 	             <li><a href="../../en/projects/stampTool.html">Stamp Tool</a></li>
            
@@ -251,167 +261,169 @@
 
 
 
-	<!-- Main Content -->
-	<div class="container">
+		<div class="container">
+			
 
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-				Variable Scope
-			</h1>
-			<p>
-				Written by Chris Piech and Mehran Sahami
-			</p>
+<!-- Main Content -->
+<div class="container">
 
-		</div>
-		<hr/>
+	<!-- Header -->
+	<div id="pageHeader">
+		<h1>
+            TA Solution: Short Film
+		</h1>
+    </div>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h3>Local Variables</h3>
-				<p>
-					Local variables are created local to the method (or the block...see "Block Scope" section below) in which they are defined. They are destroyed when execution of the method has been completed. Local variables can only be accessed from within the method in which they are declared.  Because of their transient nature, local variables cannot store persistent information about an object between method calls.
-				</p>
-			</div>
-		</div>
+	<hr/>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h3>Local Variables Example</h3>
-				<p>
-					Consider, for example, the following snippet of code.
-				</p>
-				<pre id="editor" style="height:200px">public class AnExample extends ConsoleProgram {
+	<div class="row">
+		<div class="col-xs-12">
 
-	public void methodOne {
-		int a = readInt("Enter a: ");
-		println("a = " + a);
- 	}
+<p>
+	This is the main lab problem in the afternoon.  Students develop a program that animates a short film.  We provide some initial milestones, and then students are free to use their creativity to create anything they'd like!
+</p>
 
-	public void methodTwo {
-		int b = a;  // BUG!: cannot refer to variable a in methodOne
-		println("b = " + b);
-	}
+<h3>Milestone 1</h3>
+<p>Students should start by implementing a <code>displayMessage</code> method that displays a white label with specified text on a black background.  It may look something like this:</p>
+<pre id="editor1" style="height:300px">private void displayMessage(String message) {
+    // Add a black "background"
+    GRect background = new GRect(getWidth(), getHeight());
+    background.setFilled(true);
+    add(background);
+
+    // Create the centered white message
+    GLabel label = new GLabel(message);
+    label.setColor(Color.WHITE);
+    label.setFont("Papyrus-40");
+    double xLocation = getWidth() / 2 - label.getWidth() / 2;
+    double yLocation = getHeight() / 2 + label.getAscent() / 2;
+    add(label, xLocation, yLocation);
+
+    pause(2000);
+    remove(label);
+    remove(background);
 }</pre>
-				<p>
-					The variables a and b are local variables declared within different methods in the class AnExample. Because these variables are local variables, a can only be referred to within methodOne and variable b can only be accessed within methodTwo. Our attempt to initialize b using the value of a is illegal, as code in methodTwo cannot access local variables from methodOne or any other method.
-				</p>
-				<p>
-				Because local variable values do not persist after their containing method has completed, the variable a will be destroyed when methodOne has completed execution. The next time methodOne is called, a new variable a will be created.
-			</p>
-			</div>
-		</div>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h3>Block Scope</h3>
-				<p>
-					While we typically think of local variables as local to a particular method, in Java local variables are actually local to a block of code. While a method defines a block of code (since the opening and closing braces of the method define a block), for and while loops, if-statements, and other constructs are also considered blocks of code. If we declare a local variable inside one of these constructs, the local variable will be created when it is declared in the block and destroyed when the block ends execution.</p>
-				<p>Consider the following example:</p>
-				<pre id="editor2" style="height:400px">public class AnExample extends ConsoleProgram {
-	
-	public void methodThree {
-		int a = 4;
-
- 	 	for (int i = 0; i &lt; 5; i++) {
-			int b = a; // this is okay
-
-			if (a > b) { // okay to access a and b here
-				int c = 3;
-
-				println(i); // okay to access i here
-				println(b); // okay to access b here
-				println(c); // okay to access c here
-			}
-
-			println(c); // illegal: c is no longer in scope here
-		}
-
-		println(a); // okay to access a here
-		println(b); // illegal: b is only in scope in body of for loop
-		println(i); // illegal: i is only in scope in body of for loop
-	}
+<h3>Milestone 2</h3>
+<p>Students should add a scene to show a sun setting.  It should have the sky and earth, and then animate the sun moving down the screen until it goes below the horizon (behind the earth rectangle).  A good two-step process is to first display the static graphics, and then animate the sun.  Here's what this might look like:</p>
+<pre id="editor2" style="height:500px">public void run() {
+    // Add the sky
+    GRect sky = new GRect(getWidth(), getHeight() / 2);
+    sky.setFilled(true);
+    sky.setColor(Color.BLUE);
+    add(sky);
+    
+    // Add the sun
+    GOval sun = new GOval(SUN_DIAMETER, SUN_DIAMETER);
+    sun.setFilled(true);
+    sun.setColor(Color.YELLOW);
+    double sunX = getWidth() / 2 - sun.getWidth() / 2;
+    double sunY = getHeight() / 4 - sun.getHeight() / 2;
+    add(sun, sunX, sunY);
+    
+    // Add the earth
+    GRect earth = new GRect(0, getHeight() / 2, getWidth(), getHeight() / 2);
+    earth.setFilled(true);
+    earth.setColor(Color.GREEN);
+    add(earth);
+    
+    // Animate the sun
+    while (sun.getY() < earth.getY()) {
+        sun.move(0, 5);
+        pause(50);
+    }
 }</pre>
-				<p>
-					The variable a is local to methodThree, so accessing a within the for loop, or in the println is fine.  The variables i and b are only in scope (i.e., "alive") within the confines of the for loop in which they are declared.  They are no longer available by the time the last two printlns try to access them.  The variable c is only in scope within the confines of the if statement body in which it is declared.  Note that a new copy of c will get created each time the if statement body is executed, therefore it cannot be used to store values across iterations of the for loop.
-				</p>
-			</div>
-		</div>
-		<!--<div class="row">
-			<div class="col-md-12">
-				<h3>Instance Variables</h3>
-				<p>More coming...</p>
-			</div>
-		</div>-->
-		<div class="row">
-			<div class="col-md-12">
-				<h3>Constants</h3>
-				<p>
-					we will sometimes find it useful to define a "variable" whose value does not change during the entire program. Such a variable is called a constant. In this case, the constant does not fulfill the traditional purpose of a variable (i.e., storing a temporary program value).  To declare a variable as a constant, use the keyword final when declaring the variable. Virtually all constants are declared outside all method calls so that their scope is the entire program. 
-				</p>
-				<p> Constants are usually written in all upper case letters to show that they do not change. The key-words private static final, which we include for good practice, are important when you write larger programs.
-				<p>
-					Consider this example:
-				</p>
-				<pre id="editor3" style="height:180px">public class AnExample extends ConsoleProgram {
-	
-	private static final GRAVITY_ACCELERATION = 9.8;
 
-	public void run() {
-		double initialVelocity = 0;
-		double newVelocity = intialVelocity + GRAVITY_ACCELERATION;
-		println("velocity after 1 s: " + newVelocity);
-	}
+<h3>Milestone 3</h3>
+<p>Next, students should write a method <code>getSunColor</code> that returns the color the sun should be given some parameter about the animation.  This could be something like the position of the sun, or the frame number in the animation, or so on.  It is up to them how to determine the sun's color with this information.  Here are two examples.</p>
+<pre id="editor3" style="height:400px"> // Use the y position of the sun
+public void run() {
+    ...
+    // Animate the sun
+    while (sun.getY() < earth.getY()) {
+        sun.setColor(getSunColor(sun.getY()));
+        sun.move(0, 2);
+        pause(DELAY);
+    }
+}
+
+private Color getSunColor(double sunY) {
+    if (sunY <= MAX_Y_YELLOW) {
+        return Color.yellow;
+    } else if (sunY <= MAX_Y_ORANGE) {
+        return Color.orange;
+    }
+    
+    return Color.RED;
 }</pre>
-			</div>
-		</div>
+
+<pre id="editor4" style="height:400px">// Use the frame number in the sun animation
+public void run() {
+    ...
+    // Animate the sun
+    int frame = 0;
+    while (sun.getY() < earth.getY()) {
+        sun.setColor(getSunColor(frame));
+        sun.move(0, 2);
+        pause(DELAY);
+        frame++;
+    }
+}
+
+private Color getSunColor(int frame) {
+    if (frame <= MAX_FRAME_YELLOW) {
+        return Color.yellow;
+    } else if (frame <= MAX_FRAME_ORANGE) {
+        return Color.orange;
+    }
+    
+    return Color.RED;
+}</pre>
+
+<p>After this, students are free to do whatever they'd like to make their film better!</p>
+
     
 <script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    var editor = ace.edit("editor");
-   editor.setTheme('ace/theme/eclipse');
-   editor.getSession().setMode("ace/mode/java");
-   editor.setReadOnly(true);
-   editor.renderer.setShowGutter(false); 
-
-   var editor2 = ace.edit("editor2");
-   editor2.setTheme('ace/theme/eclipse');
-   editor2.getSession().setMode("ace/mode/java");
-   editor2.setReadOnly(true);
-   editor2.renderer.setShowGutter(false);
-
-   var editor3 = ace.edit("editor3");
-   editor3.setTheme('ace/theme/eclipse');
-   editor3.getSession().setMode("ace/mode/java");
-   editor3.setReadOnly(true);
-   editor3.renderer.setShowGutter(false);
-</script>
-		
-<hr>
-
-<div class="footer">
-	<p class="pull-left">
-		&#169; Stanford 2019 &#124; Created by 
-		<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
-		Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
-	</p>
-	<!--<p class="pull-right">
-		<a href="../../fall12">Fall 2012</a>
-	</p>-->
-</div>
-<!--<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-35433298-1']);
-	_gaq.push(['_trackPageview']);
-	(function() {
-		var ga = document.createElement('script');
-		ga.type = 'text/javascript';
-		ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(ga, s);
-	})();
-</script>-->
-
+    for (var i = 1; i <= 4; i++) {
+        var editor = ace.edit("editor" + i);
+        editor.setTheme('ace/theme/eclipse');
+        editor.getSession().setMode("ace/mode/java");
+        editor.setReadOnly(true);
+        editor.renderer.setShowGutter(false); 
+        /*editor.setTheme("ace/theme/eclipse");
+        editor.getSession().setMode("ace/mode/java");*/
+    }
+</script>		</div>
 	</div>
-</body>
+</div>			
+			<!-- Footer -->
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2019 &#124; Created by 
+					<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
+					Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
+				</p>
+				<!--<p class="pull-right">
+					<a href="../../fall12">Fall 2012</a>
+				</p>-->
+			</div>
+			<!--<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-35433298-1']);
+				_gaq.push(['_trackPageview']);
+				(function() {
+					var ga = document.createElement('script');
+					ga.type = 'text/javascript';
+					ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(ga, s);
+				})();
+			</script>-->
+
+		</div>
+	</body>
+</html>

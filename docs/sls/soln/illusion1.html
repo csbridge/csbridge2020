@@ -1,34 +1,43 @@
-<head>
+<!--
+	A template used for every page - contains the header, nav bar, a container div, and the footer.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
+		<title>CS Bridge  | Illusion (TA)</title>
 
-<title>Intro to CS</title>
+		<!-- Fonts -->
+		<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Styles -->
 
-<meta http-equiv="content-type" content="text/html; charset=UTF8">
+		<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../../style.css">
 
-<!-- Fonts -->
-<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+		<!-- Java Script -->
+		<script src="../../plugins/jquery.min.js"></script>
+		<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
 
-<!-- Styles -->
+		<script src="../../karel/ace/ace.js" type="text/javascript"></script>
+		<script type="text/javascript" src="../../js/moment.min.js"></script>
+		<script type="text/javascript" src="../../js/index.js"></script>
 
-<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../../style.css">
+		<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+		  </script>-->
 
-<!-- Java Script -->
-<script src="../../plugins/jquery.min.js"></script>
-<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+		<script src="../karel/js/html/websiteImports.js"></script>
+		<script>importCss();</script>
+		<script>importJs();</script>
+	</head>
 
-<script src="../../karel/ace/ace.js" type="text/javascript"></script>
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
-  </script>-->
+	<body>
 
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
+		<!-- Navigation Bar -->
 <nav class="navbar-inverse navbar-default" role="navigation">
   <div class="container-fluid">
   	<div class="container">
@@ -252,84 +261,93 @@
 
 
 
-	<!-- Main Content -->
-	<div class="container">
+		<div class="container">
+			
 
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-                Multiple Balls
-			</h1>
-			<p>
-                Written by Tyler Conklin
-								</br>
-			</p>
-			<p>
-				Handouts:
-                <a href ="../../en/handouts/random.html">Random Generator Reference</a><br/>
-                <a href ="../../en/handouts/graphics.html">Graphics Reference</a><br/>
-        BonusGraphics: <code>MultipleBalls.java</code>
-			</p>
+<!-- Main Content -->
+<div class="container">
 
-		</div>
-		<hr/>
+	<!-- Header -->
+	<div id="pageHeader">
+		<h1>
+            TA Solution: Illusion
+		</h1>
+    </div>
 
-		<div class="row">
-			<div class="col-md-12">
-				<p>
-						This is a bonus program! It's meant to be challenging.
-				</p>
-				<p>
-					Write a program that animates two different balls bouncing around the canvas. If a ball hits off of a wall, it should bounce back in the opposite direciton. The two balls can also bounce off of each other. An example is shown in the below gif.
-					<center>
-						<img style="width:300px;border:2px solid grey" src="../../img/projects/multipleBalls/multipleBalls.gif">	
-					</center>
-					In this run, the width of each ball is 50 pixels, but feel free to use whichever numbers you would like. Note that when creating the balls it is important to give the balls different, random velocities and starting X,Y positions. Refer to the random generator reference linked above for help generating random values.
-        </p>
-				<p>
-					When computer scientists tackle a large problem, it helps to break it down into smaller steps. One way to break this problem down would be:
-					<ul>
-						<li>To start, add two balls to the screen with different, random positions.</li>
-						<li>Get the balls to move with random velocities.</li>
-						<li>Get the balls to start bouncing off the walls correctly. Remember that you can get the X position of a GOval ball by calling ball.getX() (same thing goes for the Y position). </li>
-						<li>Have the balls bounce off of each other. For this part, the getElementAt method, shown below, will be useful.</li>
-					</ul>
-				</p>
-				<center> 
-					<img style="width:600px;border:2px solid grey" src="../../img/projects/duplicatingShapes/getElementAt.png"> 
-				</center> 
+	<hr/>
 
-				</br>
-			</div>
+	<div class="row">
+		<div class="col-xs-12">
 
-		</div>
+<p>
+  This is the first lab problem of the afternoon.  It focuses on nested loops and combining those with graphics.  Students must draw a grid of squares with certain spacing.  Try recommending that they break it down into pieces, for example, first draw one square, then one row of squares, and finally all 4 rows of squares.  You might also suggest that they calculate out what the x and y coordinates are of each block (since this is what changes between the blocks) and encourage them to see what pattern they can find.
+</p>
 
-		
-<hr>
+<h3>Solution</h3>
+<pre id="editor" style="height:400px">public class Illusion1 extends GraphicsProgram {
+    
+    /* These constants tell the graphics program how big to be.
+     * You can ignore them. */
+    public static final int APPLICATION_WIDTH = 540;
+    public static final int APPLICATION_HEIGHT = 560;
+    
+    /* The size of each dimension of the square. Use this!*/
+    private static final int SIZE = 100;
+    
+    /* The space between two squares. Use this!*/
+    private static final int GAP = 10;
+    
+    public void run() {
+        for (int row = 0; row < 4; row++) {
+            for (int col = 0; col < 5; col++) {
+                GRect rect = new GRect(col * (SIZE + GAP), row * (SIZE + GAP), SIZE, SIZE);
+                rect.setFilled(true);
+                add(rect);
+            }
+        }
+    }
 
-<div class="footer">
-	<p class="pull-left">
-		&#169; Stanford 2019 &#124; Created by 
-		<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
-		Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
-	</p>
-	<!--<p class="pull-right">
-		<a href="../../fall12">Fall 2012</a>
-	</p>-->
-</div>
-<!--<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-35433298-1']);
-	_gaq.push(['_trackPageview']);
-	(function() {
-		var ga = document.createElement('script');
-		ga.type = 'text/javascript';
-		ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(ga, s);
-	})();
-</script>-->
-
+}</pre>
+    
+<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>		</div>
 	</div>
-</body>
+</div>			
+			<!-- Footer -->
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2019 &#124; Created by 
+					<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
+					Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
+				</p>
+				<!--<p class="pull-right">
+					<a href="../../fall12">Fall 2012</a>
+				</p>-->
+			</div>
+			<!--<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-35433298-1']);
+				_gaq.push(['_trackPageview']);
+				(function() {
+					var ga = document.createElement('script');
+					ga.type = 'text/javascript';
+					ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(ga, s);
+				})();
+			</script>-->
+
+		</div>
+	</body>
+</html>

@@ -171,16 +171,17 @@
 	            <li><a href="../../en/projects/fibb.html">Fibonacci</a></li>
 	            <li><a href="../../en/projects/findPi.html">Find Pi</a></li>
 	            <li><a href="../../en/projects/8Ball.html">8-Ball</a></li>
-	          	<li><a href="../../en/projects/averageMethod.html">Average Method</a></li>	
             <li class="divider"></li>
 	            <li><a href="../../en/projects/robotFace.html">Robot Face</a></li>
-	          	
-	            
 	            <li><a href="../../en/projects/goCenter.html">Go To Center</a></li>
 	            <li><a href="../../en/projects/gravityBall.html">Gravity Ball</a></li>
-<!--
+
+			<li class="divider"></li>
+				<li><a href="../../en/projects/averageMethod.html">Average Method</a></li>	
 				<li><a href="../../en/projects/drawPeople.html">Draw People</a></li>	
 	          	<li><a href="../../en/projects/halfGreen.html">Half Green</a></li>
+
+	          	<!--
 	          <li class="divider"></li>
 	             <li><a href="../../en/projects/stampTool.html">Stamp Tool</a></li>
            
@@ -279,7 +280,23 @@
 		<div class="col-xs-12">
 
 <p>
-  This is the section problem for the morning.  It gives students practice writing a program with methods and parameters.  You should emphasize making methods to reuse code and design "top-down", meaning you design your program by breaking it into smaller pieces until you can implement each piece with a little code.
+  Before starting this section problem, try approaching the following problem: write a method <code>isSquare</code> that takes in a <code>GRect</code> as a parameter and returns whether or not it is a square.  This is an example with 1 parameter and 1 return value.  It may help to trace through some example calls to the method to show what values the parameter takes on.  Here is the solution to this warmup:
+</p>
+
+<code><pre>private boolean isSquare(GRect rect) {
+    if (rect.getWidth() == rect.getHeight()) {
+        return true;
+    }
+
+    return false;
+}</code></pre>
+
+<p>You can also take this opportunity to emphasize how, because of the behavior of <code>return</code>, we do not need an <code>else</code>.</p>
+
+<hr />
+
+<p>
+  Next, you can turn to the full section problem for this morning.  It gives students practice writing a program with methods and parameters.  You should emphasize making methods to reuse code and design "top-down", meaning you design your program by breaking it into smaller pieces until you can implement each piece with a little code.
 </p>
 
 <p>Teaching tips:

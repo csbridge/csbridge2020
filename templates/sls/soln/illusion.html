@@ -1,0 +1,44 @@
+% rebase('templates/sls/soln/template.ptl', problemTitle="Illusion")
+
+<p>
+  This is the first lab problem of the afternoon.  It focuses on nested loops and combining those with graphics.  Students must draw a grid of squares with certain spacing.  Try recommending that they break it down into pieces, for example, first draw one square, then one row of squares, and finally all 4 rows of squares.  You might also suggest that they calculate out what the x and y coordinates are of each block (since this is what changes between the blocks) and encourage them to see what pattern they can find.
+
+  Make sure students also work through the section problem to get their own working implementation!
+</p>
+
+<h3>Solution</h3>
+<pre id="editor" style="height:400px">public class Illusion1 extends GraphicsProgram {
+    
+    /* These constants tell the graphics program how big to be.
+     * You can ignore them. */
+    public static final int APPLICATION_WIDTH = 540;
+    public static final int APPLICATION_HEIGHT = 560;
+    
+    /* The size of each dimension of the square. Use this!*/
+    private static final int SIZE = 100;
+    
+    /* The space between two squares. Use this!*/
+    private static final int GAP = 10;
+    
+    public void run() {
+        for (int row = 0; row < 4; row++) {
+            for (int col = 0; col < 5; col++) {
+                GRect rect = new GRect(col * (SIZE + GAP), row * (SIZE + GAP), SIZE, SIZE);
+                rect.setFilled(true);
+                add(rect);
+            }
+        }
+    }
+
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>

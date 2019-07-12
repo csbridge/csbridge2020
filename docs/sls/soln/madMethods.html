@@ -1,34 +1,43 @@
-<head>
+<!--
+	A template used for every page - contains the header, nav bar, a container div, and the footer.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
+		<title>CS Bridge  | Mad Methods (TA)</title>
 
-<title>Intro to CS</title>
+		<!-- Fonts -->
+		<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Styles -->
 
-<meta http-equiv="content-type" content="text/html; charset=UTF8">
+		<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../../style.css">
 
-<!-- Fonts -->
-<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+		<!-- Java Script -->
+		<script src="../../plugins/jquery.min.js"></script>
+		<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
 
-<!-- Styles -->
+		<script src="../../karel/ace/ace.js" type="text/javascript"></script>
+		<script type="text/javascript" src="../../js/moment.min.js"></script>
+		<script type="text/javascript" src="../../js/index.js"></script>
 
-<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../../style.css">
+		<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+		  </script>-->
 
-<!-- Java Script -->
-<script src="../../plugins/jquery.min.js"></script>
-<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+		<script src="../karel/js/html/websiteImports.js"></script>
+		<script>importCss();</script>
+		<script>importJs();</script>
+	</head>
 
-<script src="../../karel/ace/ace.js" type="text/javascript"></script>
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
-  </script>-->
+	<body>
 
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
+		<!-- Navigation Bar -->
 <nav class="navbar-inverse navbar-default" role="navigation">
   <div class="container-fluid">
   	<div class="container">
@@ -162,16 +171,17 @@
 	            <li><a href="../../en/projects/fibb.html">Fibonacci</a></li>
 	            <li><a href="../../en/projects/findPi.html">Find Pi</a></li>
 	            <li><a href="../../en/projects/8Ball.html">8-Ball</a></li>
-	          	<li><a href="../../en/projects/averageMethod.html">Average Method</a></li>	
             <li class="divider"></li>
 	            <li><a href="../../en/projects/robotFace.html">Robot Face</a></li>
-	          	
-	            
 	            <li><a href="../../en/projects/goCenter.html">Go To Center</a></li>
 	            <li><a href="../../en/projects/gravityBall.html">Gravity Ball</a></li>
-<!--
+
+			<li class="divider"></li>
+				<li><a href="../../en/projects/averageMethod.html">Average Method</a></li>	
 				<li><a href="../../en/projects/drawPeople.html">Draw People</a></li>	
 	          	<li><a href="../../en/projects/halfGreen.html">Half Green</a></li>
+
+	          	<!--
 	          <li class="divider"></li>
 	             <li><a href="../../en/projects/stampTool.html">Stamp Tool</a></li>
            
@@ -251,107 +261,99 @@
 
 
 
-	<!-- Main Content -->
-	<div class="container">
+		<div class="container">
+			
 
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-				Submitting Assignments
-			</h1>
+<!-- Main Content -->
+<div class="container">
 
-		</div>
-		<hr/>
+	<!-- Header -->
+	<div id="pageHeader">
+		<h1>
+            TA Solution: Mad Methods
+		</h1>
+    </div>
 
-		<div class="row">
-			<div class="col-md-12">
-        At the end of <b>every</b> day before you go home, submit your work!
-			</div>
-		</div>
+	<hr/>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h2>How to Submit</h2>
-				<p>To submit follow these two steps:</p>
-				<ol>
-          <li><p>To zip the folder containing your project, run <b>zipper.jar</b> from your project folder.</p>
-            <p>Find the folder with your project in it <b>outside of Eclipse</b>. If you don't know where your project is located in your computer, start from Eclipse and right-click (Mac OS X: Ctrl-Click) on your project name (the blue folder in the left sidebar). Then click on 'Properties', and navigate to/click on the 'Location' path to your project.</p>
-            <ol>
-              <li><p>Double-click on <b>zipper.jar</b>. You should see the following 'CS Bridge Assignment Submission' window:</p>
-				          <p>
-				          	<center>
-                      <img style="width:400px;border:1px solid #000000" src="../../img/handouts/submission/zipper.png">
-				          	</center>
-				          </p>
-              </li>
-              <li>If you are on Windows, you may see a prompt to select an application to run 'zipper.jar. Try following the below instructions:</li>
-              <ol>
-                <li>Start "Control Panel" and click "Default Programs")</li>
-                <li>Click "Default Programs"</li>
-                <li>Click "Associate a file type or protocol with a specific program"</li>
-                <li>Double click .jar</li>
-                <li>Browse to find the <code>javaw.exe</code> file. It should be in a location like: <code>C:\Program Files\Java\jre7\bin\javaw.exe</code></li>
-                <li>Click the button 'Open', then click 'OK'</li>
-              </ol>
-              <li>If you are on Mac OS X, you may see an error saying "zipper.jar cannot be opened because it is from an unidentified developer." You should right-click (or Ctrl-Click) on zipper.jar and select "Open". Then verify that you want to open the file.</li>
-				      <p>
-				      	<center>
-                  <img style="width:700px;border:1px solid #000000" src="../../img/handouts/submission/zipperdebug.png">
-				      	</center>
-				      </p>
-              <li>If you are on Mac OS X, you may not be able to run the zipper.jar file at all. Instead, please do the following:</li>
-              <ol>
-                <li>Right-click on your project folder, e.g., 'Day1', and click 'Compress "Day1"'</li>
-                <p>
-                <center>
-                  <img style="width:500px;border:1px solid #000000" src="../../img/handouts/submission/manual1.png">
-                  <img style="width:500px;border:1px solid #000000" src="../../img/handouts/submission/manual2.png">
-                </center>
-                </p>
-                <li>Rename the resulting zip to your <b>Student ID</b>_Day1.zip, like shown in the following pictures:</li>
-				      <p>
-				      	<center>
-                  <img style="width:500px;border:1px solid #000000" src="../../img/handouts/submission/manual3.png">
-				      	</center>
-				      </p>
-              </ol>
+	<div class="row">
+		<div class="col-xs-12">
 
-              <li>In the 'CS Bridge Assignment Submission' window that pops up, fill in your information: your <b>full name</b> and your <b>Student ID</b>. Your Student ID should be a letter followed by 4 numbers (e.g., K0012) and can be found on your student nametag.</li>
-              <li>If you do not remember your Student ID and have lost your nametag, contact your Section Leader.</li>
-              <li>Press 'Submit'. The zipped folder will be located at the location you specified.</li>
-              <li>Close the 'CS Bridge Assignment Submission' window.</li>
-        </ol>
-					<li>Upload the zip file using the link provided by your section leaders in lab.</li>
-				</ol>
-			</div>
-		</div>
-		
-		
-<hr>
+<p>
+  This is the first set of lab problems for the day.  It gives students practice writing methods with parameters and return values.
+</p>
 
-<div class="footer">
-	<p class="pull-left">
-		&#169; Stanford 2019 &#124; Created by 
-		<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
-		Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
-	</p>
-	<!--<p class="pull-right">
-		<a href="../../fall12">Fall 2012</a>
-	</p>-->
-</div>
-<!--<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-35433298-1']);
-	_gaq.push(['_trackPageview']);
-	(function() {
-		var ga = document.createElement('script');
-		ga.type = 'text/javascript';
-		ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(ga, s);
-	})();
-</script>-->
+<h3>Max Solution</h3>
+<p>This program is a short method that takes in two parameters and returns a value.  You can emphasize that even though this is a short method, it is helpful because from now on we can calculate the max of two numbers with just one method call instead of copy/pasting the code everywhere.</p>
+<pre id="editor1" style="height:150px">private int max(int i, int j) {
+    if (i > j) {
+        return i;
+    }
+    
+    return j;
+}</pre>
 
+<h3>Draw Trees</h3>
+<p>This program gives students practice with methods in graphics programs.  It does not return any value, but has to perform drawing based on the parameter values.</p>
+<pre id="editor2" style="height:300px"> private void drawTree(int x, int y) {
+    // Draw the trunk with the bottom-center of its base at (x, y)
+    int trunkX = x - TRUNK_WIDTH / 2;
+    int trunkY = y - TRUNK_HEIGHT;
+    GRect trunk = new GRect(trunkX, trunkY, TRUNK_WIDTH, TRUNK_HEIGHT);
+    trunk.setFilled(true);
+    trunk.setColor(Color.ORANGE);
+    add(trunk);
+    
+    // Draw the leaves with the center at the top-center of the trunk
+    GOval leaves = new GOval(trunkX + TRUNK_WIDTH / 2 - LEAVES_RADIUS, trunkY - LEAVES_RADIUS, 
+                             2 * LEAVES_RADIUS, 2 * LEAVES_RADIUS);
+    leaves.setFilled(true);
+    leaves.setColor(Color.GREEN);
+    add(leaves);
+}</pre>
+
+    
+<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    for (var i = 1; i <= 2; i++) {
+        var editor = ace.edit("editor" + i);
+        editor.setTheme('ace/theme/eclipse');
+        editor.getSession().setMode("ace/mode/java");
+        editor.setReadOnly(true);
+        editor.renderer.setShowGutter(false); 
+        /*editor.setTheme("ace/theme/eclipse");
+        editor.getSession().setMode("ace/mode/java");*/
+    }
+</script>		</div>
 	</div>
-</body>
+</div>			
+			<!-- Footer -->
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2019 &#124; Created by 
+					<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
+					Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
+				</p>
+				<!--<p class="pull-right">
+					<a href="../../fall12">Fall 2012</a>
+				</p>-->
+			</div>
+			<!--<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-35433298-1']);
+				_gaq.push(['_trackPageview']);
+				(function() {
+					var ga = document.createElement('script');
+					ga.type = 'text/javascript';
+					ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(ga, s);
+				})();
+			</script>-->
+
+		</div>
+	</body>
+</html>
