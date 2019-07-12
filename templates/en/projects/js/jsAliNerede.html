@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/head.html
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+% rebase('templates/en/template.ptl', title="Ali Nerede?")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -70,8 +61,3 @@
 <p>To display a message to the user:</p>
 <pre><code>alert("Merhaba!");</code></pre>
 
-		
-		%include templates/parts/footer.html
-
-	</div>
-</body>

@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/head.html
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+% rebase('templates/en/template.ptl', title="Music Cannon")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -22,7 +13,7 @@
 			</p>
             <p>
 				Handouts:
-				<a href ="{{pathToRoot}}en/projects/jsJSSyntax.html">JavaScript Syntax Handout</a>
+				<a href ="{{pathToRoot}}en/handouts/js/jsJSSyntax.html">JavaScript Syntax Handout</a>
 			</p>
 			
 
@@ -35,7 +26,7 @@
         user enters the name of a note in the text box and presses the 'Enter' key, that note
         is sent to our server and the server plays it!</p>
         
-        <p><img src="../img/icons/jsCannon.jpg" alt="Random Circles"></p>
+        <p><img src="{{pathToRoot}}img/icons/jsCannon.jpg" alt="Random Circles"></p>
 
 <h3 id="toc_2">First thing to do!</h3>
 
@@ -66,9 +57,3 @@
     <p>Make sure to put the right function name into the above code</p>
     
     <p>Now test your code! Try putting a lowercase note that is in the A blues scale into the text box, and listen carefully...</p>
-
-		
-		%include templates/parts/footer.html
-
-	</div>
-</body>

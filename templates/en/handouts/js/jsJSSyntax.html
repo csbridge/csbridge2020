@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/head.html
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+% rebase('templates/en/template.ptl', title="JS Syntax")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -94,11 +85,3 @@ a !== b; // a does not equal b</code></pre>
 <li>onkeydown</li>
 <li>onkeyup</li>
 </ul>
-
-
-
-		
-		%include templates/parts/footer.html
-
-	</div>
-</body>

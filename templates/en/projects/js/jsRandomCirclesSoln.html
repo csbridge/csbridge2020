@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/head.html
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+% rebase('templates/en/template.ptl', title="Random Circles")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -22,12 +13,37 @@
 			</p>
             <p>
 				Handouts:
-				<a href ="{{pathToRoot}}en/projects/jsJSSyntax.html">JavaScript Syntax Handout</a>
+				<a href ="{{pathToRoot}}en/handouts/js/jsJSSyntax.html">JavaScript Syntax Handout</a>
 			</p>
 			
 
 		</div>
 		<hr/>
+		<pre><code>// FILE: randomCircles.js
+
+const MIN_BALL_DIAMETER = 20;
+const MAX_BALL_DIAMETER = 150;
+
+// Adds a single random circle to the canvas
+function addRandomCircle() {
+    var ball = new GOval();
+    var diameter = randomInt(MIN_BALL_DIAMETER, MAX_BALL_DIAMETER);
+    ball.setColor(randomColor());
+    ball.setFilled(true);
+    ball.setSize(diameter, diameter);
+    var randomX = randomInt(0, canvas.offsetWidth-diameter);
+    var randomY =  randomInt(0, canvas.offsetHeight-diameter);
+    ball.setLocation(randomX, randomY);
+    canvas.add(ball);
+}
+
+// FILE: main.js
+function run() {
+    for (var i = 0; i &lt; 10; i++) {
+        addRandomCircle();
+    }
+}</code></pre>
+
 
 <p>I like random circles, so let’s make some!</p>
 
@@ -39,19 +55,15 @@
 
 <p>When the page opens, have it display 20 random circles.</p>
 
+
+
 <h3 id="toc_3">Day 2 Milestone</h3>
 
 <p>Have a random circle appear when the user (you) clicks on the page. </p>
 
 <p>Note: to draw circles on the screen, you will need the functions in the GOval reference at the bottom of this document. Check them out!</p>
 
-<h3 id="toc_4">Extension 1</h3>
-
-<p>Have the random circle center on where the user clicked.</p>
-
-<h3 id="toc_5">Extension 2: Extreme Catch Me If You Can</h3>
-
-<p>Have the ball move to a new random location when the mouse touches it</p>
+<p>Extension: Have the random circle center on where the user clicked.</p>
 
 <h1 id="toc_4">Debugging</h1>
 
@@ -59,7 +71,7 @@
 
 <p>If something doesn’t seem to be working right, remember that the Javascript Console can sometimes have useful error messages explaining how to fix your code. Make a habit of opening it!</p>
 
-<p><img src="{{pathToRoot}}img/projects/jawascript/developer-console.png"></img></p>
+<p><img src="{{pathtoRoot}}img/developer-console.png" alt="Random Circles"></p>
 
 <h1 id="toc_6">GOval Reference</h1>
 
@@ -102,9 +114,3 @@ randomInt(min, max);
 // return a random color
 randomColor();</code></pre>
 
-
-		
-		%include templates/parts/footer.html
-
-	</div>
-</body>
