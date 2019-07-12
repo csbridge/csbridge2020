@@ -1,0 +1,49 @@
+<nav class="navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="{{pathToRoot}}">CS Bridge</a>
+	    </div>
+
+	        <!-- TA Link -->
+	        <ul class="nav navbar-nav navbar-right ta-only">
+	            <li><a href="{{pathToRoot}}sls">TA Page</a></li>
+	        </ul>
+
+	      </ul>
+
+	      
+	      <!--<ul class="nav navbar-nav navbar-right">
+	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="{{pathToRoot}}img/english_flag.png"></img></a></li>
+	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="{{pathToRoot}}img/turkish_flag.png"></img></a></li>
+	        
+	      </ul>-->
+	    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+
+</script>
+
+

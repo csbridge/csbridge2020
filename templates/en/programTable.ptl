@@ -1,6 +1,6 @@
 <!-- Final Project -->
 <div class="visible-after" data-visible-after="2019071700">
-	<h4>Days 7/8: Final Project (<a href="{{pathToRoot}}starter/BlankJavaProject.zip">Eclipse Project Here</a>)</h4>
+	<h4>Days 7-8: Final Project (<a href="{{pathToRoot}}starter/BlankJavaProject.zip">Eclipse Project Here</a>)</h4>
 	<table class="table table-bordered table-striped">
 		<thead>
 			<tr>
@@ -58,9 +58,9 @@
 	<br />
 </div>
 
-<!-- Days 5/6: Breakout -->
+<!-- Days 5-6: Breakout -->
 <div class="visible-after" data-visible-after="2019071513">
-	<h4>Days 5/6: Breakout (<a href="{{pathToRoot}}starter/Breakout.zip">Eclipse Project Here</a>)</h4>
+	<h4>Days 5-6: Breakout (<a href="{{pathToRoot}}starter/Breakout.zip">Eclipse Project Here</a>)</h4>
 	<table class="table table-bordered table-striped">
 		<thead>
 			<tr>

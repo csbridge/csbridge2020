@@ -135,6 +135,13 @@
 	          	<li class="visible-after" data-visible-after="2019071712">
 	          		<a href="{{pathToRoot}}en/projects/music.html">[Optional] Waves of Sound</a>
 	          	</li>
+
+	          	<!-- Days 7/8 -->
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071713">Days 7-8</li>
+	          	<li class="visible-after" data-visible-after="2019071713">
+	          		<a href="{{pathToRoot}}en/projects/project.html">Make Your Own</a>
+	          	</li>
 	          </ul>
 	        </li>
 
@@ -206,6 +213,12 @@
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="{{pathToRoot}}en/projects/keyboardKarel.html">Keyboard Karel</a>
 	          	</li>
+
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="{{pathToRoot}}en/projects/rocketPaddle.html">Rocket Ship</a>
+	            </li>
 	        </ul>
 	        </li>
 
