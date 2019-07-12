@@ -1,43 +1,12 @@
-<!--
-	A template used for every page - contains the header, nav bar, a container div, and the footer.
--->
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Mystery Square</title>
+<head>
 
-<!-- Fonts -->
-<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
 
-<!-- Styles -->
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
 
-<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../../style.css">
+</head>
+<body>
 
-<!-- Java Script -->
-<script src="../../plugins/jquery.min.js"></script>
-<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
-
-<script src="../../karel/ace/ace.js" type="text/javascript"></script>
-<script type="text/javascript" src="../../js/moment.min.js"></script>
-<script type="text/javascript" src="../../js/index.js"></script>
-<script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
-
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
-  </script>-->
-
-<script src="../karel/js/html/websiteImports.js"></script>
-<script>importCss();</script>
-<script>importJs();</script>	</head>
-
-	<body>
-
-		<!-- Navigation Bar -->
+	<!-- Navigation Bar -->
 <nav class="navbar-inverse navbar-default" role="navigation">
   <div class="container-fluid">
   	<div class="container">
@@ -49,7 +18,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="../../">CS Bridge</a>
+	      <a class="navbar-brand" href="../">CS Bridge</a>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -59,14 +28,14 @@
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
-	          	<!--<li><a href="../../en/handouts/sections.html">Sections</a></li>-->
+	          	<!--<li><a href="../en/handouts/sections.html">Sections</a></li>-->
 	          	<li><a href="http://karel.csbridge.org/en/intro.html">Karel Reader</a></li>
-	          	<li><a href="../../en/handouts/karel.html">Karel Reference</a></li>	          	
-          		<li class="visible-after" data-visible-after="2019071009"><a href="../../en/handouts/console.html">Console Reference</a></li>
-          		<li class="visible-after" data-visible-after="2019071009"><a href="../../en/handouts/random.html">Random Generator Reference</a></li>
-	          	<li class="visible-after" data-visible-after="2019071109"><a href="../../en/handouts/graphics.html">Graphics Reference</a></li>
-				<li class="visible-after" data-visible-after="2019071509"><a href="../../en/handouts/events.html">Events Reference</a></li>
-				<li class="visible-after" data-visible-after="2019071709"><a href="../../en/handouts/arrayLists.html">Array Lists</a></li>
+	          	<li><a href="../en/handouts/karel.html">Karel Reference</a></li>	          	
+          		<li class="visible-after" data-visible-after="2019071009"><a href="../en/handouts/console.html">Console Reference</a></li>
+          		<li class="visible-after" data-visible-after="2019071009"><a href="../en/handouts/random.html">Random Generator Reference</a></li>
+	          	<li class="visible-after" data-visible-after="2019071109"><a href="../en/handouts/graphics.html">Graphics Reference</a></li>
+				<li class="visible-after" data-visible-after="2019071509"><a href="../en/handouts/events.html">Events Reference</a></li>
+				<li class="visible-after" data-visible-after="2019071709"><a href="../en/handouts/arrayLists.html">Array Lists</a></li>
 	          </ul>
 	        </li>
 
@@ -77,93 +46,93 @@
 
 	          	<!-- Day 1 -->
 	            <li>
-	            	<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
+	            	<a href="../en/projects/collectNewspaper.html">Collect Newspaper</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019070912">
-	          		<a href="../../en/projects/efes.html">Charles Bridge</a>
+	          		<a href="../en/projects/efes.html">Charles Bridge</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019070913">
-	          		<a href="../../en/projects/mountain.html">Mountain Karel</a>
+	          		<a href="../en/projects/mountain.html">Mountain Karel</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019070913">
-	          		<a href="../../en/projects/randomPainter.html">Random Painter</a>
+	          		<a href="../en/projects/randomPainter.html">Random Painter</a>
 	          	</li>
 	          	
 	          	<!-- Day 2 -->
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
           		<li class="visible-after" data-visible-after="2019071009">
-          			<a href="../../en/projects/sandcastles.html">Sandcastles</a>
+          			<a href="../en/projects/sandcastles.html">Sandcastles</a>
           		</li>
 	          	<li class="visible-after" data-visible-after="2019071012">
-	          		<a href="../../en/projects/favoriteNumber.html">Favorite Number</a>
+	          		<a href="../en/projects/favoriteNumber.html">Favorite Number</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071012">
-	          		<a href="../../en/projects/medicine.html">Medicine</a>
+	          		<a href="../en/projects/medicine.html">Medicine</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071013">
-	          		<a href="../../en/projects/someSum.html">Some Sum</a>
+	          		<a href="../en/projects/someSum.html">Some Sum</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071013">
-	          		<a href="../../en/projects/gameOfStones.html">Nimm</a>
+	          		<a href="../en/projects/gameOfStones.html">Nimm</a>
 	          	</li>
 	          	
 	          	<!-- Day 3 -->
 	          	<li class="divider visible-after" data-visible-after="2019071109" />
           		<li class="visible-after" data-visible-after="2019071109">
-          			<a href="../../en/projects/awesome.html">Programming is Awesome</a>
+          			<a href="../en/projects/awesome.html">Programming is Awesome</a>
           		</li>
 	          	<li class="visible-after" data-visible-after="2019071112">
-	          		<a href="../../en/projects/mysterySquare.html">Mystery Square</a>
+	          		<a href="../en/projects/mysterySquare.html">Mystery Square</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071112">
-	          		<a href="../../en/projects/stringArt.html">String Art</a>
+	          		<a href="../en/projects/stringArt.html">String Art</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
-	          		<a href="../../en/projects/randomCircles.html">Random Circles</a>
+	          		<a href="../en/projects/randomCircles.html">Random Circles</a>
 	          	</li>
 	            <li class="visible-after" data-visible-after="2019071113">
-	            	<a href="../../en/projects/bouncingBall.html">Bouncing Ball</a>
+	            	<a href="../en/projects/bouncingBall.html">Bouncing Ball</a>
 	            </li>
 
 				<!-- Day 4 -->
             	<li class="divider visible-after" data-visible-after="2019071209" />
           		<li class="visible-after" data-visible-after="2019071209">
-          			<a href="../../en/projects/madMethods.html">Mad Methods</a>
+          			<a href="../en/projects/madMethods.html">Mad Methods</a>
           		</li>
 	          	<li class="visible-after" data-visible-after="2019071212">
-	          		<a href="../../en/projects/target.html">Target</a>
+	          		<a href="../en/projects/target.html">Target</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../en/projects/illusion.html">Optical Illusion</a>
+	          		<a href="../en/projects/illusion.html">Optical Illusion</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../en/projects/sunset.html">Short Film</a>
+	          		<a href="../en/projects/sunset.html">Short Film</a>
 	          	</li>
 
 				<!-- Day 5 / 6 -->
           		<li class="divider visible-after" data-visible-after="2019071509" />
           		<li class="visible-after" data-visible-after="2019071509">
-          			<a href="../../en/projects/makingTracks.html">Making Tracks</a>
+          			<a href="../en/projects/makingTracks.html">Making Tracks</a>
           		</li>
 	          	<li class="visible-after" data-visible-after="2019071512">
-	          		<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+	          		<a href="../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
 	          	</li>
           		<li class="divider visible-after" data-visible-after="2019071513" />
           		<li class="visible-after" data-visible-after="2019071513">
-          			<a href="../../en/projects/breakout.html">Breakout</a>
+          			<a href="../en/projects/breakout.html">Breakout</a>
           		</li>
 
           		<!-- Day 7 -->
           		<li class="divider visible-after" data-visible-after="2019071709" />
           		<li class="visible-after" data-visible-after="2019071709">
-          			<a href="../../en/projects/makingTracks.html">Making Tracks</a>
+          			<a href="../en/projects/makingTracks.html">Making Tracks</a>
           		</li>
 	          	<li class="visible-after" data-visible-after="2019071712">
-	          		<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+	          		<a href="../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
 	          	</li>
           		<li class="divider visible-after" data-visible-after="2019071513" />
           		<li class="visible-after" data-visible-after="2019071713">
-          			<a href="../../en/projects/breakout.html">Breakout</a>
+          			<a href="../en/projects/breakout.html">Breakout</a>
           		</li>
 	          </ul>
 	        </li>
@@ -171,65 +140,65 @@
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
-	          	<li><a href="../../en/projects/stepUp.html">Step Up</a></li>
-	          	<li><a href="../../en/projects/place100.html">Place 100</a></li>
-	          	<li><a href="../../en/projects/beeperLine.html">Beeper Line</a></li>
-	          	<li><a href="../../en/projects/invert.html">Invert</a></li>
-	          	<li><a href="../../en/projects/unKarel.html">UN Karel</a></li>
-	          	<li><a href="../../en/projects/banishWinter.html">Banish Winter</a></li>
+	          	<li><a href="../en/projects/stepUp.html">Step Up</a></li>
+	          	<li><a href="../en/projects/place100.html">Place 100</a></li>
+	          	<li><a href="../en/projects/beeperLine.html">Beeper Line</a></li>
+	          	<li><a href="../en/projects/invert.html">Invert</a></li>
+	          	<li><a href="../en/projects/unKarel.html">UN Karel</a></li>
+	          	<li><a href="../en/projects/banishWinter.html">Banish Winter</a></li>
 
 
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
 	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="../../en/projects/emc2.html">E=MC2</a>
+	            	<a href="../en/projects/emc2.html">E=MC2</a>
 	            </li>
 	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="../../en/projects/fibb.html">Fibonacci</a>
+	            	<a href="../en/projects/fibb.html">Fibonacci</a>
 	            </li>
 	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="../../en/projects/findPi.html">Find Pi</a>
+	            	<a href="../en/projects/findPi.html">Find Pi</a>
 	            </li>
 	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="../../en/projects/8Ball.html">8-Ball</a>
+	            	<a href="../en/projects/8Ball.html">8-Ball</a>
 	            </li>
             	
             	<li class="divider visible-after" data-visible-after="2019071109" />
 	            <li class="visible-after" data-visible-after="2019071109">
-	            	<a href="../../en/projects/robotFace.html">Robot Face</a>
+	            	<a href="../en/projects/robotFace.html">Robot Face</a>
 	            </li>
 	            <li class="visible-after" data-visible-after="2019071109">
-	            	<a href="../../en/projects/goCenter.html">Go To Center</a>
+	            	<a href="../en/projects/goCenter.html">Go To Center</a>
 	            </li>
 	            <li class="visible-after" data-visible-after="2019071109">
-	            	<a href="../../en/projects/gravityBall.html">Gravity Ball</a>
+	            	<a href="../en/projects/gravityBall.html">Gravity Ball</a>
 	            </li>
 
 				<li class="divider visible-after" data-visible-after="2019071209" />
 				<li class="visible-after" data-visible-after="2019071209">
-					<a href="../../en/projects/averageMethod.html">Average Method</a>
+					<a href="../en/projects/averageMethod.html">Average Method</a>
 				</li>	
 				<li class="visible-after" data-visible-after="2019071209">
-					<a href="../../en/projects/drawPeople.html">Draw People</a>
+					<a href="../en/projects/drawPeople.html">Draw People</a>
 				</li>	
 	          	<li class="visible-after" data-visible-after="2019071209">
-	          		<a href="../../en/projects/halfGreen.html">Half Green</a>
+	          		<a href="../en/projects/halfGreen.html">Half Green</a>
 	          	</li>
 
 	        	<li class="divider visible-after" data-visible-after="2019071509" />
 	            <li class="visible-after" data-visible-after="2019071509">
-	            	<a href="../../en/projects/stampTool.html">Stamp Tool</a>
+	            	<a href="../en/projects/stampTool.html">Stamp Tool</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071509">
-	          		<a href="../../en/projects/holePuncher.html">Hole Puncher</a>
+	          		<a href="../en/projects/holePuncher.html">Hole Puncher</a>
 	          	</li>	
 	          	<li class="visible-after" data-visible-after="2019071509">
-	          		<a href="../../en/projects/debrisSweeper.html">Debris Sweeper</a>
+	          		<a href="../en/projects/debrisSweeper.html">Debris Sweeper</a>
 	          	</li>	
 	          	<li class="visible-after" data-visible-after="2019071509">
-	          		<a href="../../en/projects/suchADrag.html">Such a Drag</a>
+	          		<a href="../en/projects/suchADrag.html">Such a Drag</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071509">
-	          		<a href="../../en/projects/keyboardKarel.html">Keyboard Karel</a>
+	          		<a href="../en/projects/keyboardKarel.html">Keyboard Karel</a>
 	          	</li>
 	        </ul>
 	        </li>
@@ -237,16 +206,16 @@
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
-	          	<li><a href="../../slides/Welcome.pdf">Karel</a></li>
-	          	<li><a href="../../slides/ControlFlow.pdf">Control Flow</a></li>
-	          	<li><a href="../../slides/Variables.pdf">Variables</a></li>
-			<li><a href="../../slides/Variables2.pdf">Variables 2</a></li>
+	          	<li><a href="../slides/Welcome.pdf">Karel</a></li>
+	          	<li><a href="../slides/ControlFlow.pdf">Control Flow</a></li>
+	          	<li><a href="../slides/Variables.pdf">Variables</a></li>
+			<li><a href="../slides/Variables2.pdf">Variables 2</a></li>
 	          	
-	          	<li><a href="../../slides/Graphics.pdf">Graphics</a></li>
-	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
-	          	<li><a href="../../slides/Methods.pdf">Methods</a></li>
+	          	<li><a href="../slides/Graphics.pdf">Graphics</a></li>
+	          	<li><a href="../slides/Animation.pdf">Animation</a></li>
+	          	<li><a href="../slides/Methods.pdf">Methods</a></li>
 	          	<!--
-	          	<li><a href="../../slides/Events.pdf">Events</a></li>
+	          	<li><a href="../slides/Events.pdf">Events</a></li>
 							-->
 	          </ul>
 	        </li>
@@ -263,20 +232,20 @@
 			
 	        <!-- Bonus button -->
 	        <ul class="nav navbar-nav">
-	            <li><a href="../../en/bonus-index.html">Bonus</a></li>
+	            <li><a href="../en/bonus-index.html">Bonus</a></li>
 	        </ul>
 
 	        <!-- TA Link -->
 	        <ul class="nav navbar-nav navbar-right ta-only">
-	            <li><a href="../../sls">TA Page</a></li>
+	            <li><a href="../sls">TA Page</a></li>
 	        </ul>
 
 	      </ul>
 
 	      
 	      <!--<ul class="nav navbar-nav navbar-right">
-	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/english_flag.png"></img></a></li>
-	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
+	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../img/english_flag.png"></img></a></li>
+	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../img/turkish_flag.png"></img></a></li>
 	        
 	      </ul>-->
 	    </div><!-- /.navbar-collapse -->
@@ -302,43 +271,52 @@
 
 
 
-		<div class="container">
-			
-			
-
 	<!-- Main Content -->
 	<div class="container">
 
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Mystery Square
+				Pubnub test
 			</h1>
 			<p>
-				Problem written by a mystery CS106A professor.
+				Written by Chris Piech
 			</p>
-      <p>
-        Day3: <code>MysterySquare.java</code>
-      </p>
 
 		</div>
 		<hr/>
 
-		
-
 		<div class="row">
 			<div class="col-md-12">
-				Draw a square (100 pixels by 100 pixels) in the center of the screen and change its color every second.
-				<p>
-					<center>
-						<img style="width:500px;border:1px solid #000000" src="../../img/projects/mysterySquare/mysterySquare.gif">	
-					</center>
-				</p>
+				
+				Test
 
 			</div>
 		</div>
-			
-			<!-- Footer -->
+
+
+		<!-- Instantiate PubNub -->
+		<script type="text/javascript">
+
+			console.log('start pubnub')
+		    var pubnubDemo = new PubNub({
+		        publishKey: 'pub-c-2f6eb094-e393-4add-bf74-add9c1802cbd',
+		        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+		    });
+
+				pubnubDemo.publish({
+				    message: {
+				    	"swal" : {
+					    	"title": "Warning",
+					      "text" : "hello world"
+					     }
+				    },
+				    channel: 'csbridge_alert'
+				});
+
+		</script>
+		
+		
 <hr>
 
 <div class="footer">
@@ -348,7 +326,7 @@
 		Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
 	</p>
 	<!--<p class="pull-right">
-		<a href="../../fall12">Fall 2012</a>
+		<a href="../fall12">Fall 2012</a>
 	</p>-->
 </div>
 <script type="text/javascript">
@@ -364,6 +342,5 @@
 		s.parentNode.insertBefore(ga, s);
 	})();
 </script>
-		</div>
-	</body>
-</html>
+	</div>
+</body>

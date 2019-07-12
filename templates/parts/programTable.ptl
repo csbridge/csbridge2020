@@ -1,7 +1,7 @@
 <!-- Final Project -->
 <div class="visible-after" data-visible-after="2019071700">
 	<h4>Days 7/8: Final Project (<a href="{{pathToRoot}}starter/BlankJavaProject.zip">Eclipse Project Here</a>)</h4>
-	<table class="table table-bordered table-striped">
+	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th colspan="2">Name</th>
@@ -22,7 +22,7 @@
 <!-- Day 7: ArrayLists -->
 <div class="visible-after" data-visible-after="2019071709">
 	<h4>Day 7: ArrayLists + HashMaps (<a href="{{pathToRoot}}starter/Day7.zip">Eclipse Project Here</a>)</h4>
-	<table class="table table-bordered table-striped">
+	<table class="table  table-striped">
 		<thead>
 			<tr>
 				<th colspan="2">Name</th>
@@ -63,7 +63,7 @@
 <!--
 <div class="visible-after" data-visible-after="2019071609">
 	<h4>Day 6: Arrays (<a href="{{pathToRoot}}starter/Day6.zip">Eclipse Project Here</a>)</h4>
-	<table class="table table-bordered table-striped">
+	<table class="table  table-striped">
 		<thead>
 			<tr>
 				<th colspan="2">Name</th>
@@ -85,7 +85,7 @@
 <!-- Days 5/6: Breakout -->
 <div class="visible-after" data-visible-after="2019071513">
 	<h4>Days 5/6: Breakout (<a href="{{pathToRoot}}starter/Breakout.zip">Eclipse Project Here</a>)</h4>
-	<table class="table table-bordered table-striped">
+	<table class="table  table-striped">
 		<thead>
 			<tr>
 				<th colspan="2">Name</th>
@@ -106,7 +106,7 @@
 <!-- Day 5 -->
 <div class="visible-after" data-visible-after="2019071500">
 	<h4>Day 5: Events (<a href="{{pathToRoot}}starter/Day5.zip">Eclipse Project Here</a>)</h4>
-	<table class="table table-bordered table-striped">
+	<table class="table  table-striped">
 		<thead>
 			<tr>
 				<th colspan="2">Name</th>
@@ -133,7 +133,7 @@
 <!-- Day 4 -->
 <div class="visible-after" data-visible-after="2019071200">
 	<h4>Day 4: Methods and Advanced Java (<a href="{{pathToRoot}}starter/Day4.zip">Eclipse Project Here</a>)</h4>
-	<table class="table table-bordered table-striped">
+	<table class="table  table-striped">
 		<thead>
 			<tr>
 				<th colspan="2">Name</th>
@@ -188,7 +188,7 @@
 <!-- Day 3 -->
 <div class="visible-after" data-visible-after="2019071100">
 	<h4>Day 3: Graphics (<a href="{{pathToRoot}}starter/Day3.zip">Eclipse Project Here</a>)</h4>
-	<table class="table table-bordered table-striped">
+	<table class="table  table-striped">
 		<thead>
 			<tr>
 				<th colspan="2">Name</th>
@@ -253,7 +253,7 @@
 <!-- Day 2 -->
 <div class="visible-after" data-visible-after="2019071000">
 	<h4>Day 2: Variables (<a href="{{pathToRoot}}starter/Day2.zip">Eclipse Project Here</a>)</h4>
-	<table class="table table-bordered table-striped">
+	<table class="table  table-striped">
 		<thead>
 			<tr>
 				<th colspan="2">Name</th>
@@ -318,7 +318,7 @@
 <!-- Day 1 -->
 <div class="visible-after" data-visible-after="2019070900">
 	<h4>Day 1: Karel (<a href="{{pathToRoot}}starter/Day1.zip">Eclipse Project Here</a>)</h4>
-	<table class="table table-bordered table-striped">
+	<table class="table  table-striped">
 		<thead>
 			<tr>
 				<th colspan="2">Name</th>

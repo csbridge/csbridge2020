@@ -1,0 +1,70 @@
+<head>
+
+		%include templates/en/header.ptl
+
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/parts/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Pubnub test
+			</h1>
+			<p>
+				Written by Chris Piech
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				
+				Test
+
+			</div>
+		</div>
+
+
+		<!-- Instantiate PubNub -->
+		<script type="text/javascript">
+
+		    var pubnubDemo = new PubNub({
+		        publishKey: 'pub-c-2f6eb094-e393-4add-bf74-add9c1802cbd',
+		        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+		    });
+
+				// Subscribe to the demo_tutorial channel
+				pubnubDemo.addListener({
+				    message: function(request) {
+				    	let msg = request['message'];
+				    	let swalData = msg['swal'];
+			        Swal.fire(swalData)
+				    }
+				})
+
+				pubnubDemo.subscribe({
+				    channels: ['csbridge_alert']
+				});
+
+				
+
+		</script>
+		
+		
+		%include templates/en/footer.ptl
+
+	</div>
+</body>
