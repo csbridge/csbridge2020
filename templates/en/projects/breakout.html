@@ -1,15 +1,13 @@
-<head>
+% rebase('templates/en/template.ptl', title="Breakout Online")
 
-	%include templates/parts/head.html
-
-	<script src="{{pathToRoot}}plugins/acmjs/pixi.js"></script>
-    <script src="{{pathToRoot}}plugins/acmjs/pixidust.js"></script>
-    <script src="{{pathToRoot}}plugins/acmjs/graphicsapp.js"></script>
-</head>
-<body onload="run();">
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+<script type="text/javascript">
+	$(document).ready(function() {
+		run();
+	});
+</script>
+<script src="{{pathToRoot}}plugins/acmjs/pixi.js"></script>
+<script src="{{pathToRoot}}plugins/acmjs/pixidust.js"></script>
+<script src="{{pathToRoot}}plugins/acmjs/graphicsapp.js"></script>
 
 	<!-- Main Content -->
 	<div class="container">
@@ -250,11 +248,3 @@ which might generate a ball going more or less straight down.  That would make l
 
 			</div>
 		</div>
-
-		<br/>
-
-		
-		%include templates/parts/footer.html
-
-	</div>
-</body>
