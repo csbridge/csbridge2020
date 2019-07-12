@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-		<title>CS Bridge  | Short Film</title>
+		<title>CS Bridge  | Short Film (TA)</title>
 
 		<!-- Fonts -->
 		<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -264,145 +264,139 @@
 		<div class="container">
 			
 
-	<!-- Main Content -->
-	<div class="container">
+<!-- Main Content -->
+<div class="container">
 
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-				Short Film
-			</h1>
-			<p>
-				Written by Chris Piech and Keith Schwarz
-			</p>
-			<p>
-				Example:
-				<a href ="../../en/projects/halfGreen.html">Half Green</a>,
-				<a href ="../../en/projects/target.html">Target</a>
-				<br/>
-			Handouts:
-				<a href ="../../en/handouts/graphics.html">Graphics Reference</a>
-        <br/>
-        Day4: <code>ShortFilm.java</code>
-			</p>
+	<!-- Header -->
+	<div id="pageHeader">
+		<h1>
+            TA Solution: Short Film
+		</h1>
+    </div>
 
-		</div>
-		<hr/>	
+	<hr/>
 
-		<div class="row">
-			<div class="col-md-12">
+	<div class="row">
+		<div class="col-xs-12">
 
-				<p>
-					Did you know that animated movies like Toy Story, Up, and Frozen are made using computer programs? In this assignment you are going to use a program to create a short film.
-					</p>
-
-			<h2>Display Message Method</h2>
-			<p>
-				Every movie has a beginning and an end. Sometimes it will start "Once Upon a Time...", sometimes it will start with a title, sometimes it will start with something sillier. At the end of the movie it sometimes says "The end."
-
-				<p>Add a method to your program that will draw a message on the screen (on a black background) and leave the message for two seconds.</p>
-
-				<div class="well"><code><b>private</b> void displayMessage(String message)</code></div>
-
-				After two seconds you should remove the GRect that is the background and the GLabel that is the text. To do so you can use the remove method (it does the opposite of the add method. It takes a GObject that was on the canvas and removes it). 
-
-				<div class="well"><code>remove(<i>yourObject</i>);</code></div>
-
-
-				The start message should look like the screen on the left. The end message should look like the screen on the right:
-				<div>
-						<div class="col-md-6 col-xs-6">
-                            <img style="width:100%" src="../../img/projects/sunset/onceUpon.png"></img>
-					</div>
-					<div class="col-md-6 col-xs-6">
-                        <img style="width:100%" src="../../img/projects/sunset/theEnd.png"></img>
-					</div>
-				</div>
-
-				The font that we used was:
-				<div class="well"><i>label</i>.setFont("Papyrus-40");</code></div>
-
-
-
-
-
-				Of course you can reuse this method as much as you want to tell your story!
-			</p>
-
-
-		</div>
-	</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Setting Sun</h2>
-				<p>
-						Your movie must have one scene to start: A setting sun. draw the sky, the earth and a sun. Then,
-						slowly animate the sun descending. The sky should take up the top half of the canvas, and the earth should take up the second half. The sun should start in the center of the sky.  Considering the following images from the start of the program, and the program after a few seconds.
-					</p>
-				
-<center>
-    <img style="width:100%" src="../../img/projects/sunset/animation.png"></img>
-
-</center>
-
-				<!--<div class="col-md-4 col-xs-3">
-					<img style="width:100%" src="/img/projects/sunset/sunsetSimple.png"></img>
-				</div>
-				<div class="col-md-4 col-xs-3">
-					<img style="width:100%" src="/img/projects/sunset/sunsetSimpleT1.png"></img>
-				</div>
-				
-				<div class="col-md-4 col-xs-3">
-					<img style="width:100%" src="/img/projects/sunset/sunsetSimpleT2.png"></img>
-				</div>-->
-				
-			</div>
-			
-
-		</div>
-
-
-		<div class="row">
-			<div class="col-md-12">
-			<h2>Get Sun Color Method</h3>
-			<p>Write a method that takes some parameter, and returns the color of the sun. You should specify the parameter of this method: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.</p>
-
-			<div class="well"><code><b>private</b> Color getSunColor(...)</code></div>
-
-			<p>
-      Have the method return <code>Color.YELLOW</code>, <code>Color.ORANGE</code>, or <code>Color.RED</code> based on how many iterations have passed.  Use this method in your short film to change the color of the sun in your animation as time passes!
-			</p>
-		</div>
-	</div>
-	
-
-		<div class="row">
-			<div class="col-md-12">
-			<h2>Make it Better</h3>
-
-			<p>Do anything you want to make your story more captivating than just a setting sun. Can you tell a tale of love or action? Don't forget to use methods to make your life easier.</p>
 <p>
-			<center style="padding:10px;">
-                <img style="width:500px" src="../../img/projects/sunset/poster.jpg"></img>
-			</center>
-			</p>
+	This is the main lab problem in the afternoon.  Students develop a program that animates a short film.  We provide some initial milestones, and then students are free to use their creativity to create anything they'd like!
+</p>
 
-			<p>You can also add more objects to make your scene more captivating. How about a rainbow (or a double rainbow)? Do you have an idea about what sunsets have always been missing? How about the Charles bridge?</p>
+<h3>Milestone 1</h3>
+<p>Students should start by implementing a <code>displayMessage</code> method that displays a white label with specified text on a black background.  It may look something like this:</p>
+<pre id="editor1" style="height:300px">private void displayMessage(String message) {
+    // Add a black "background"
+    GRect background = new GRect(getWidth(), getHeight());
+    background.setFilled(true);
+    add(background);
 
-<div class="col-md-6 col-xs-6">
-    <img style="width:100%" src="../../img/projects/sunset/sunsetTrees.png"></img>
-			</div>
-			<div class="col-md-6 col-xs-6">
-                <img style="width:100%" src="../../img/projects/sunset/sunsetT2.png"></img>
-			</div>
-			
+    // Create the centered white message
+    GLabel label = new GLabel(message);
+    label.setColor(Color.WHITE);
+    label.setFont("Papyrus-40");
+    double xLocation = getWidth() / 2 - label.getWidth() / 2;
+    double yLocation = getHeight() / 2 + label.getAscent() / 2;
+    add(label, xLocation, yLocation);
 
-			
+    pause(2000);
+    remove(label);
+    remove(background);
+}</pre>
 
+<h3>Milestone 2</h3>
+<p>Students should add a scene to show a sun setting.  It should have the sky and earth, and then animate the sun moving down the screen until it goes below the horizon (behind the earth rectangle).  A good two-step process is to first display the static graphics, and then animate the sun.  Here's what this might look like:</p>
+<pre id="editor2" style="height:500px">public void run() {
+    // Add the sky
+    GRect sky = new GRect(getWidth(), getHeight() / 2);
+    sky.setFilled(true);
+    sky.setColor(Color.BLUE);
+    add(sky);
+    
+    // Add the sun
+    GOval sun = new GOval(SUN_DIAMETER, SUN_DIAMETER);
+    sun.setFilled(true);
+    sun.setColor(Color.YELLOW);
+    double sunX = getWidth() / 2 - sun.getWidth() / 2;
+    double sunY = getHeight() / 4 - sun.getHeight() / 2;
+    add(sun, sunX, sunY);
+    
+    // Add the earth
+    GRect earth = new GRect(0, getHeight() / 2, getWidth(), getHeight() / 2);
+    earth.setFilled(true);
+    earth.setColor(Color.GREEN);
+    add(earth);
+    
+    // Animate the sun
+    while (sun.getY() < earth.getY()) {
+        sun.move(0, 5);
+        pause(50);
+    }
+}</pre>
 
-		</div>
-			
+<h3>Milestone 3</h3>
+<p>Next, students should write a method <code>getSunColor</code> that returns the color the sun should be given some parameter about the animation.  This could be something like the position of the sun, or the frame number in the animation, or so on.  It is up to them how to determine the sun's color with this information.  Here are two examples.</p>
+<pre id="editor3" style="height:400px"> // Use the y position of the sun
+public void run() {
+    ...
+    // Animate the sun
+    while (sun.getY() < earth.getY()) {
+        sun.setColor(getSunColor(sun.getY()));
+        sun.move(0, 2);
+        pause(DELAY);
+    }
+}
+
+private Color getSunColor(double sunY) {
+    if (sunY <= MAX_Y_YELLOW) {
+        return Color.yellow;
+    } else if (sunY <= MAX_Y_ORANGE) {
+        return Color.orange;
+    }
+    
+    return Color.RED;
+}</pre>
+
+<pre id="editor4" style="height:400px">// Use the frame number in the sun animation
+public void run() {
+    ...
+    // Animate the sun
+    int frame = 0;
+    while (sun.getY() < earth.getY()) {
+        sun.setColor(getSunColor(frame));
+        sun.move(0, 2);
+        pause(DELAY);
+        frame++;
+    }
+}
+
+private Color getSunColor(int frame) {
+    if (frame <= MAX_FRAME_YELLOW) {
+        return Color.yellow;
+    } else if (frame <= MAX_FRAME_ORANGE) {
+        return Color.orange;
+    }
+    
+    return Color.RED;
+}</pre>
+
+<p>After this, students are free to do whatever they'd like to make their film better!</p>
+
+    
+<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    for (var i = 1; i <= 4; i++) {
+        var editor = ace.edit("editor" + i);
+        editor.setTheme('ace/theme/eclipse');
+        editor.getSession().setMode("ace/mode/java");
+        editor.setReadOnly(true);
+        editor.renderer.setShowGutter(false); 
+        /*editor.setTheme("ace/theme/eclipse");
+        editor.getSession().setMode("ace/mode/java");*/
+    }
+</script>		</div>
+	</div>
+</div>			
 			<!-- Footer -->
 			<hr>
 
