@@ -1,0 +1,12 @@
+<!--
+	A template used for every page - contains the header.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		%include templates/parts/header.ptl
+	</head>
+	<body>
+		{{!base}}
+	</body>
+</html>

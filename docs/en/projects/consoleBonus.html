@@ -1,5 +1,5 @@
 <!--
-	A template used for every page - contains the header, nav bar, a container div, and the footer.
+	A template used for every page - contains the header.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -27,17 +27,28 @@
 <script type="text/javascript" src="../../js/index.js"></script>
 <script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
 
+
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
   </script>-->
 
 <script src="../karel/js/html/websiteImports.js"></script>
 <script>importCss();</script>
-<script>importJs();</script>	</head>
+<script>importJs();</script>
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>	</head>
 	<body>
+		<!--
+	A template used for every English page - contains the nav bar, a container div, and the footer.
+-->
 
-		<!-- Navigation Bar -->
+<!-- Navigation Bar -->
 <nav class="navbar-inverse navbar-default" role="navigation">
   <div class="container-fluid">
   	<div class="container">
@@ -76,6 +87,7 @@
 	          <ul class="dropdown-menu">
 
 	          	<!-- Day 1 -->
+	          	<li class="dropdown-header">Day 1</li>
 	            <li>
 	            	<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
 	            </li>
@@ -91,6 +103,7 @@
 	          	
 	          	<!-- Day 2 -->
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
           		<li class="visible-after" data-visible-after="2019071009">
           			<a href="../../en/projects/sandcastles.html">Sandcastles</a>
           		</li>
@@ -109,6 +122,7 @@
 	          	
 	          	<!-- Day 3 -->
 	          	<li class="divider visible-after" data-visible-after="2019071109" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
           		<li class="visible-after" data-visible-after="2019071109">
           			<a href="../../en/projects/awesome.html">Programming is Awesome</a>
           		</li>
@@ -126,7 +140,8 @@
 	            </li>
 
 				<!-- Day 4 -->
-            	<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
           		<li class="visible-after" data-visible-after="2019071209">
           			<a href="../../en/projects/madMethods.html">Mad Methods</a>
           		</li>
@@ -142,35 +157,49 @@
 
 				<!-- Day 5 / 6 -->
           		<li class="divider visible-after" data-visible-after="2019071509" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
           		<li class="visible-after" data-visible-after="2019071509">
           			<a href="../../en/projects/makingTracks.html">Making Tracks</a>
           		</li>
 	          	<li class="visible-after" data-visible-after="2019071512">
 	          		<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
 	          	</li>
-          		<li class="divider visible-after" data-visible-after="2019071513" />
+
+	          	<li class="divider visible-after" data-visible-after="2019071513" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071513">Days 5-6</li>
           		<li class="visible-after" data-visible-after="2019071513">
           			<a href="../../en/projects/breakout.html">Breakout</a>
           		</li>
 
           		<!-- Day 7 -->
           		<li class="divider visible-after" data-visible-after="2019071709" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
           		<li class="visible-after" data-visible-after="2019071709">
-          			<a href="../../en/projects/makingTracks.html">Making Tracks</a>
+          			<a href="../../en/projects/sortedNumbers.html">Sorted Numbers</a>
           		</li>
 	          	<li class="visible-after" data-visible-after="2019071712">
-	          		<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+	          		<a href="../../en/projects/snow.html">Snow</a>
 	          	</li>
-          		<li class="divider visible-after" data-visible-after="2019071513" />
-          		<li class="visible-after" data-visible-after="2019071713">
-          			<a href="../../en/projects/breakout.html">Breakout</a>
-          		</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/mouseGame.html">[Optional] The Line</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/music.html">[Optional] Waves of Sound</a>
+	          	</li>
+
+	          	<!-- Days 7/8 -->
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071713">Days 7-8</li>
+	          	<li class="visible-after" data-visible-after="2019071713">
+	          		<a href="../../en/projects/project.html">Make Your Own</a>
+	          	</li>
 	          </ul>
 	        </li>
 
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
+	          	<li class="dropdown-header">Day 1</li>
 	          	<li><a href="../../en/projects/stepUp.html">Step Up</a></li>
 	          	<li><a href="../../en/projects/place100.html">Place 100</a></li>
 	          	<li><a href="../../en/projects/beeperLine.html">Beeper Line</a></li>
@@ -180,6 +209,7 @@
 
 
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
 	            <li class="visible-after" data-visible-after="2019071009">
 	            	<a href="../../en/projects/emc2.html">E=MC2</a>
 	            </li>
@@ -194,6 +224,7 @@
 	            </li>
             	
             	<li class="divider visible-after" data-visible-after="2019071109" />
+            	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
 	            <li class="visible-after" data-visible-after="2019071109">
 	            	<a href="../../en/projects/robotFace.html">Robot Face</a>
 	            </li>
@@ -205,6 +236,7 @@
 	            </li>
 
 				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
 				<li class="visible-after" data-visible-after="2019071209">
 					<a href="../../en/projects/averageMethod.html">Average Method</a>
 				</li>	
@@ -216,6 +248,7 @@
 	          	</li>
 
 	        	<li class="divider visible-after" data-visible-after="2019071509" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
 	            <li class="visible-after" data-visible-after="2019071509">
 	            	<a href="../../en/projects/stampTool.html">Stamp Tool</a>
 	            </li>
@@ -231,6 +264,12 @@
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../en/projects/keyboardKarel.html">Keyboard Karel</a>
 	          	</li>
+
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../en/projects/rocketPaddle.html">Rocket Ship</a>
+	            </li>
 	        </ul>
 	        </li>
 
@@ -301,6 +340,117 @@
 </script>
 
 
+
+<div class="container">
+	
+	
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Console Bonus Programs
+			</h1>
+			<p>
+                Written by Tyler Conklin
+								</br>
+								Based on past problems as created by Mehran Sahami, Keith Schwarz, Eric Roberts, Marty Stepp, and others.
+			</p>
+			<p>
+				Handouts:
+                <a href ="../../en/handouts/console.html">Console Reference</a><br/>
+                <a href ="../../en/handouts/random.html">Random Generator Reference</a><br/>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+						These are bonus programs! They are meant to be challenging. They are not listed in order of difficulty, so choose whichever programs sound interesting!
+				</p>
+				<h2>
+					Piglet
+				</h2>
+        <p>BonusConsole: <code>Piglet.java</code>
+				<p>
+					Write a console program for a 1-player dice game called "Piglet", based on the game "Pig". The player's goal is to get as many points as possible without rolling a 1. Each turn, the player rolls the die; if they roll a 1, the game ends and the player gets a score of 0. If the player rolls any number besides a 1, that number is added to their score. The player then chooses whether to roll again or end the game with his or her current score. Two sample game outputs are shown below.
+					<center>
+						Welcome to Piglet!</br>
+						You rolled a 5!</br>
+						Roll again? yes</br>
+						You rolled a 4!</br>
+						Roll again? yes</br>
+						You rolled a 1!</br>
+						You got 0 points.</br>
+					</center>
+					</br>
+ 					<center>
+						Welcome to Piglet!</br>
+						You rolled a 6!</br>
+						Roll again? yes</br>
+						You rolled a 2!</br>
+						Roll again? yes</br>
+						You rolled a 2!</br>
+						Roll again? no</br>
+						You got 10 points.</br>
+					</center>
+        </p>
+				</br>
+				<h2>
+					Conversion
+				</h2>
+        <p>BonusConsole: <code>Conversion.java</code>
+				<p>
+					America uses a confusing measurement system where units of length are measured in inches, feet, yards, and miles. There are twelve inches in a foot, and three feet in a yard. However when doing scientific measurements it is important to use centimeters, meters, and kilometers since these units of measurement are used worldwide and actually make sense. Write a program that converts from centimeters to inches given that there are 2.54 centimeters = 1 inch. Below is some sample output from the program. 
+					<center>
+						This program can convert centimeters to inches</br>
+						Enter cm: 2.54</br>
+						2.54 centimeters equals 1.0 inches</br>
+						Enter cm: 68</br>
+						68.0 centimeters equals 26.771653543307085 inches</br>
+						Enter cm: 100</br>
+						100.0 centimeters equals 39.37007874015748 inches</br>
+					</center>
+					</br>
+					You can now write a program to convert any kind of units that you want!
+        </p>
+				</br>
+				<h2>
+					Fizzbuzz
+				</h2>
+        <p>BonusConsole: <code>Fizzbuzz.java</code>
+				<p>
+					Fizzbuzz is a classic coding problem. Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers that are multiples of both three and five print “FizzBuzz”. Below is some sample output for the first 16 numbers.
+					<center>
+						1</br>
+						2</br>
+						Fizz</br>
+						4</br>
+						Buzz</br>
+						Fizz</br>
+						7</br>
+						8</br>
+						Fizz</br>
+						Buzz</br>
+						11</br>
+						Fizz</br>
+						13</br>
+						14</br>
+						FizzBuzz</br>
+						16</br>
+					</center>
+        </p>
+				</br>
+
+			</div>
+		</div>
+
+	
+	<!-- Footer -->
+	<hr>
 
 		<div class="container">
 			
@@ -436,6 +586,32 @@
 		s.parentNode.insertBefore(ga, s);
 	})();
 </script>
+
+<script type="text/javascript">
+		console.log('got pubnub')
+    var pubnubDemo = new PubNub({
+        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+    });
+
+		// Subscribe to the demo_tutorial channel
+		pubnubDemo.addListener({
+		    message: function(request) {
+		    	let msg = request['message'];
+		    	let swalData = msg['swal'];
+	        Swal.fire(swalData)
+		    }
+		})
+
+		pubnubDemo.subscribe({
+		    channels: ['csbridge_alert']
+		});
+		console.log('success')
+		
+
+</script>
 		</div>
+	</body>
+</html>
+
 	</body>
 </html>

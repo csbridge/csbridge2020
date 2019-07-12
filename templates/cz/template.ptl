@@ -1,0 +1,38 @@
+<!--
+	A template used for every English page - contains the nav bar, a container div, and the footer.
+-->
+% rebase('templates/template.ptl', title=title)
+
+<!-- Navigation Bar -->
+%include templates/cz/navBar.ptl
+
+<div class="container">
+	
+	{{!base}}
+	
+	<!-- Footer -->
+	<hr>
+
+	<div class="footer">
+		<p class="pull-left">
+			&#169; Stanford 2019 &#124; in Czech</a>.
+		</p>
+		<!--<p class="pull-right">
+			<a href="{{pathToRoot}}fall12">Fall 2012</a>
+		</p>-->
+	</div>
+	<!--<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-35433298-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script');
+			ga.type = 'text/javascript';
+			ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		})();
+	</script>-->
+
+</div>

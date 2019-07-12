@@ -1,7 +1,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="{{pathToRoot}}images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge {{' | ' + get('title', 'Home')}}</title>
+<title>CS Bridge {{' | ' + get('title', '')}}</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -21,6 +21,7 @@
 <script type="text/javascript" src="{{pathToRoot}}js/index.js"></script>
 <script type="text/javascript" src="{{pathToRoot}}plugins/d3.v3/d3.v3.min.js"></script>
 
+
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
   </script>-->
@@ -28,3 +29,11 @@
 <script src="../karel/js/html/websiteImports.js"></script>
 <script>importCss();</script>
 <script>importJs();</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>

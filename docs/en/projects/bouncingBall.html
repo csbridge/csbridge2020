@@ -1,5 +1,5 @@
 <!--
-	A template used for every page - contains the header, nav bar, a container div, and the footer.
+	A template used for every page - contains the header.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -27,17 +27,28 @@
 <script type="text/javascript" src="../../js/index.js"></script>
 <script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
 
+
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
   </script>-->
 
 <script src="../karel/js/html/websiteImports.js"></script>
 <script>importCss();</script>
-<script>importJs();</script>	</head>
+<script>importJs();</script>
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>	</head>
 	<body>
+		<!--
+	A template used for every English page - contains the nav bar, a container div, and the footer.
+-->
 
-		<!-- Navigation Bar -->
+<!-- Navigation Bar -->
 <nav class="navbar-inverse navbar-default" role="navigation">
   <div class="container-fluid">
   	<div class="container">
@@ -76,6 +87,7 @@
 	          <ul class="dropdown-menu">
 
 	          	<!-- Day 1 -->
+	          	<li class="dropdown-header">Day 1</li>
 	            <li>
 	            	<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
 	            </li>
@@ -91,6 +103,7 @@
 	          	
 	          	<!-- Day 2 -->
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
           		<li class="visible-after" data-visible-after="2019071009">
           			<a href="../../en/projects/sandcastles.html">Sandcastles</a>
           		</li>
@@ -109,6 +122,7 @@
 	          	
 	          	<!-- Day 3 -->
 	          	<li class="divider visible-after" data-visible-after="2019071109" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
           		<li class="visible-after" data-visible-after="2019071109">
           			<a href="../../en/projects/awesome.html">Programming is Awesome</a>
           		</li>
@@ -126,7 +140,8 @@
 	            </li>
 
 				<!-- Day 4 -->
-            	<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
           		<li class="visible-after" data-visible-after="2019071209">
           			<a href="../../en/projects/madMethods.html">Mad Methods</a>
           		</li>
@@ -142,35 +157,49 @@
 
 				<!-- Day 5 / 6 -->
           		<li class="divider visible-after" data-visible-after="2019071509" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
           		<li class="visible-after" data-visible-after="2019071509">
           			<a href="../../en/projects/makingTracks.html">Making Tracks</a>
           		</li>
 	          	<li class="visible-after" data-visible-after="2019071512">
 	          		<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
 	          	</li>
-          		<li class="divider visible-after" data-visible-after="2019071513" />
+
+	          	<li class="divider visible-after" data-visible-after="2019071513" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071513">Days 5-6</li>
           		<li class="visible-after" data-visible-after="2019071513">
           			<a href="../../en/projects/breakout.html">Breakout</a>
           		</li>
 
           		<!-- Day 7 -->
           		<li class="divider visible-after" data-visible-after="2019071709" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
           		<li class="visible-after" data-visible-after="2019071709">
-          			<a href="../../en/projects/makingTracks.html">Making Tracks</a>
+          			<a href="../../en/projects/sortedNumbers.html">Sorted Numbers</a>
           		</li>
 	          	<li class="visible-after" data-visible-after="2019071712">
-	          		<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+	          		<a href="../../en/projects/snow.html">Snow</a>
 	          	</li>
-          		<li class="divider visible-after" data-visible-after="2019071513" />
-          		<li class="visible-after" data-visible-after="2019071713">
-          			<a href="../../en/projects/breakout.html">Breakout</a>
-          		</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/mouseGame.html">[Optional] The Line</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/music.html">[Optional] Waves of Sound</a>
+	          	</li>
+
+	          	<!-- Days 7/8 -->
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071713">Days 7-8</li>
+	          	<li class="visible-after" data-visible-after="2019071713">
+	          		<a href="../../en/projects/project.html">Make Your Own</a>
+	          	</li>
 	          </ul>
 	        </li>
 
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
+	          	<li class="dropdown-header">Day 1</li>
 	          	<li><a href="../../en/projects/stepUp.html">Step Up</a></li>
 	          	<li><a href="../../en/projects/place100.html">Place 100</a></li>
 	          	<li><a href="../../en/projects/beeperLine.html">Beeper Line</a></li>
@@ -180,6 +209,7 @@
 
 
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
 	            <li class="visible-after" data-visible-after="2019071009">
 	            	<a href="../../en/projects/emc2.html">E=MC2</a>
 	            </li>
@@ -194,6 +224,7 @@
 	            </li>
             	
             	<li class="divider visible-after" data-visible-after="2019071109" />
+            	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
 	            <li class="visible-after" data-visible-after="2019071109">
 	            	<a href="../../en/projects/robotFace.html">Robot Face</a>
 	            </li>
@@ -205,6 +236,7 @@
 	            </li>
 
 				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
 				<li class="visible-after" data-visible-after="2019071209">
 					<a href="../../en/projects/averageMethod.html">Average Method</a>
 				</li>	
@@ -216,6 +248,7 @@
 	          	</li>
 
 	        	<li class="divider visible-after" data-visible-after="2019071509" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
 	            <li class="visible-after" data-visible-after="2019071509">
 	            	<a href="../../en/projects/stampTool.html">Stamp Tool</a>
 	            </li>
@@ -231,6 +264,12 @@
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../en/projects/keyboardKarel.html">Keyboard Karel</a>
 	          	</li>
+
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../en/projects/rocketPaddle.html">Rocket Ship</a>
+	            </li>
 	        </ul>
 	        </li>
 
@@ -301,6 +340,100 @@
 </script>
 
 
+
+<div class="container">
+	
+	
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Bouncing Ball
+			</h1>
+			<p>
+				Based on an example by Mehran Sahami
+			</p>
+			<p>
+				Handouts:
+				<a href ="../../en/handouts/graphics.html">Graphics Reference</a>
+				<br/>
+				Worked Example: 
+				<a href="../../en/projects/mysterySquare.html">Mystery Square</a>,
+				<a href="../../en/projects/gravityBall.html">Gravity Ball</a>,
+				<a href="../../en/projects/goCenter.html">Go Center</a>
+        <br/>
+        Day3:<code>BouncingBall.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Write a GraphicsProgram that creates a ball (an instance of GOval) and makes it bounce around the screen. Ignore gravity and have a collision with the right or left wall reflect the x direction of the ball, and have a collision with the top or bottom wall change the y direction of the ball.
+				</p>
+				<p>The figure below shows a ball moving through a bounce with the bottom wall.</p>
+				<p>
+					<center>
+						<img style="width:500px" src="../../img/projects/bouncingBall/demo.png">	
+					</center>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 1: Create a Ball</h2>
+				<p>
+					It can be any size.
+				</p>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 2: Make it move</h2>
+				<p>
+					Loop forever and in the loop update the ball and pause. You can pause using the command:
+					<div class="well"><code>pause(<i>milliseconds</i>);</code></div>
+					If you don't pause the computer will animate faster that the human eye can see the movement!
+				</p>
+
+				<p>
+					There is also a method to move a GOval (or a GRect):
+					<div class="well"><code><i>object</i>.move(<i>dx</i>, <i>dy</i>);</code></div>
+					<i>dx</i> is the number of pixels the object will move in the x direction.
+					<br/> <i>dy</i> is the number of pixels the object will move in the y direction.
+				</p>
+
+				<p>Make sure to check out the demos: <a href="../../en/projects/gravityBall.html">Gravity Ball</a> and <a href="../../en/projects/goCenter.html">Go Center</a>.</p>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Milestone 3: Bounce</h2>
+				<p>
+					Now, before you update the position of the ball, you should check if the ball has collided with the wall and if so you should update the direction it is moving.
+				</p>
+				<p>Reflections should follow the rule the angle of incidence equals the angle of reflection. This turns out to be simple to implement. You simply flip the x direction if you hit a left or right wall and flip the y direction if you hit a bottom or top wall</p>
+
+				<p>How do you figure out the position of the ball? You can use the methods:</p>
+				<div class="well"><code><i>object</i>.getX();<br/><i>object</i>.getY();</code></div>
+
+				<p>Make sure to check out the demos: <a href="../../en/projects/gravityBall.html">Gravity Ball</a> and <a href="../../en/projects/goCenter.html">Go Center</a>.</p>
+				
+			</div>
+		</div>
+
+	
+	<!-- Footer -->
+	<hr>
 
 		<div class="container">
 			
@@ -419,6 +552,32 @@
 		s.parentNode.insertBefore(ga, s);
 	})();
 </script>
+
+<script type="text/javascript">
+		console.log('got pubnub')
+    var pubnubDemo = new PubNub({
+        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+    });
+
+		// Subscribe to the demo_tutorial channel
+		pubnubDemo.addListener({
+		    message: function(request) {
+		    	let msg = request['message'];
+		    	let swalData = msg['swal'];
+	        Swal.fire(swalData)
+		    }
+		})
+
+		pubnubDemo.subscribe({
+		    channels: ['csbridge_alert']
+		});
+		console.log('success')
+		
+
+</script>
 		</div>
+	</body>
+</html>
+
 	</body>
 </html>

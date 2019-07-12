@@ -23,3 +23,26 @@
 		s.parentNode.insertBefore(ga, s);
 	})();
 </script>
+
+<script type="text/javascript">
+		console.log('got pubnub')
+    var pubnubDemo = new PubNub({
+        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+    });
+
+		// Subscribe to the demo_tutorial channel
+		pubnubDemo.addListener({
+		    message: function(request) {
+		    	let msg = request['message'];
+		    	let swalData = msg['swal'];
+	        Swal.fire(swalData)
+		    }
+		})
+
+		pubnubDemo.subscribe({
+		    channels: ['csbridge_alert']
+		});
+		console.log('success')
+		
+
+</script>

@@ -1,7 +1,9 @@
 <!-- Final Project -->
 <div class="visible-after" data-visible-after="2019071700">
-	<h4>Days 7/8: Final Project (<a href="{{pathToRoot}}starter/BlankJavaProject.zip">Eclipse Project Here</a>)</h4>
-	<table class="table table-striped">
+
+	<h4>Days 7-8: Final Project (<a href="{{pathToRoot}}starter/BlankJavaProject.zip">Eclipse Project Here</a>)</h4>
+	<table class="tabletable-striped">
+
 		<thead>
 			<tr>
 				<th colspan="2">Name</th>
@@ -57,35 +59,10 @@
 	</table>
 	<br />
 </div>
-
-
-<!-- Day 6: Arrays -->
-<!--
-<div class="visible-after" data-visible-after="2019071609">
-	<h4>Day 6: Arrays (<a href="{{pathToRoot}}starter/Day6.zip">Eclipse Project Here</a>)</h4>
-	<table class="table  table-striped">
-		<thead>
-			<tr>
-				<th colspan="2">Name</th>
-				<th>Topic</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/racingCars.jpg"></img></td>
-				<td>Array Exercises!</td>
-				<td>Arrays</td>
-			</tr>
-		</tbody>
-	</table>
-	<br />
-</div>
--->
-
-<!-- Days 5/6: Breakout -->
+<!-- Days 5-6: Breakout -->
 <div class="visible-after" data-visible-after="2019071513">
-	<h4>Days 5/6: Breakout (<a href="{{pathToRoot}}starter/Breakout.zip">Eclipse Project Here</a>)</h4>
-	<table class="table  table-striped">
+	<h4>Days 5-6: Breakout (<a href="{{pathToRoot}}starter/Breakout.zip">Eclipse Project Here</a>)</h4>
+	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th colspan="2">Name</th>

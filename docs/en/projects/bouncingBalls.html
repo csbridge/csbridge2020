@@ -1,5 +1,5 @@
 <!--
-	A template used for every page - contains the header, nav bar, a container div, and the footer.
+	A template used for every page - contains the header.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -27,17 +27,28 @@
 <script type="text/javascript" src="../../js/index.js"></script>
 <script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
 
+
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
   </script>-->
 
 <script src="../karel/js/html/websiteImports.js"></script>
 <script>importCss();</script>
-<script>importJs();</script>	</head>
+<script>importJs();</script>
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>	</head>
 	<body>
+		<!--
+	A template used for every English page - contains the nav bar, a container div, and the footer.
+-->
 
-		<!-- Navigation Bar -->
+<!-- Navigation Bar -->
 <nav class="navbar-inverse navbar-default" role="navigation">
   <div class="container-fluid">
   	<div class="container">
@@ -76,6 +87,7 @@
 	          <ul class="dropdown-menu">
 
 	          	<!-- Day 1 -->
+	          	<li class="dropdown-header">Day 1</li>
 	            <li>
 	            	<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
 	            </li>
@@ -91,6 +103,7 @@
 	          	
 	          	<!-- Day 2 -->
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
           		<li class="visible-after" data-visible-after="2019071009">
           			<a href="../../en/projects/sandcastles.html">Sandcastles</a>
           		</li>
@@ -109,6 +122,7 @@
 	          	
 	          	<!-- Day 3 -->
 	          	<li class="divider visible-after" data-visible-after="2019071109" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
           		<li class="visible-after" data-visible-after="2019071109">
           			<a href="../../en/projects/awesome.html">Programming is Awesome</a>
           		</li>
@@ -126,7 +140,8 @@
 	            </li>
 
 				<!-- Day 4 -->
-            	<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
           		<li class="visible-after" data-visible-after="2019071209">
           			<a href="../../en/projects/madMethods.html">Mad Methods</a>
           		</li>
@@ -142,35 +157,49 @@
 
 				<!-- Day 5 / 6 -->
           		<li class="divider visible-after" data-visible-after="2019071509" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
           		<li class="visible-after" data-visible-after="2019071509">
           			<a href="../../en/projects/makingTracks.html">Making Tracks</a>
           		</li>
 	          	<li class="visible-after" data-visible-after="2019071512">
 	          		<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
 	          	</li>
-          		<li class="divider visible-after" data-visible-after="2019071513" />
+
+	          	<li class="divider visible-after" data-visible-after="2019071513" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071513">Days 5-6</li>
           		<li class="visible-after" data-visible-after="2019071513">
           			<a href="../../en/projects/breakout.html">Breakout</a>
           		</li>
 
           		<!-- Day 7 -->
           		<li class="divider visible-after" data-visible-after="2019071709" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
           		<li class="visible-after" data-visible-after="2019071709">
-          			<a href="../../en/projects/makingTracks.html">Making Tracks</a>
+          			<a href="../../en/projects/sortedNumbers.html">Sorted Numbers</a>
           		</li>
 	          	<li class="visible-after" data-visible-after="2019071712">
-	          		<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+	          		<a href="../../en/projects/snow.html">Snow</a>
 	          	</li>
-          		<li class="divider visible-after" data-visible-after="2019071513" />
-          		<li class="visible-after" data-visible-after="2019071713">
-          			<a href="../../en/projects/breakout.html">Breakout</a>
-          		</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/mouseGame.html">[Optional] The Line</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/music.html">[Optional] Waves of Sound</a>
+	          	</li>
+
+	          	<!-- Days 7/8 -->
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071713">Days 7-8</li>
+	          	<li class="visible-after" data-visible-after="2019071713">
+	          		<a href="../../en/projects/project.html">Make Your Own</a>
+	          	</li>
 	          </ul>
 	        </li>
 
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
+	          	<li class="dropdown-header">Day 1</li>
 	          	<li><a href="../../en/projects/stepUp.html">Step Up</a></li>
 	          	<li><a href="../../en/projects/place100.html">Place 100</a></li>
 	          	<li><a href="../../en/projects/beeperLine.html">Beeper Line</a></li>
@@ -180,6 +209,7 @@
 
 
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
 	            <li class="visible-after" data-visible-after="2019071009">
 	            	<a href="../../en/projects/emc2.html">E=MC2</a>
 	            </li>
@@ -194,6 +224,7 @@
 	            </li>
             	
             	<li class="divider visible-after" data-visible-after="2019071109" />
+            	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
 	            <li class="visible-after" data-visible-after="2019071109">
 	            	<a href="../../en/projects/robotFace.html">Robot Face</a>
 	            </li>
@@ -205,6 +236,7 @@
 	            </li>
 
 				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
 				<li class="visible-after" data-visible-after="2019071209">
 					<a href="../../en/projects/averageMethod.html">Average Method</a>
 				</li>	
@@ -216,6 +248,7 @@
 	          	</li>
 
 	        	<li class="divider visible-after" data-visible-after="2019071509" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
 	            <li class="visible-after" data-visible-after="2019071509">
 	            	<a href="../../en/projects/stampTool.html">Stamp Tool</a>
 	            </li>
@@ -231,6 +264,12 @@
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../en/projects/keyboardKarel.html">Keyboard Karel</a>
 	          	</li>
+
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../en/projects/rocketPaddle.html">Rocket Ship</a>
+	            </li>
 	        </ul>
 	        </li>
 
@@ -301,6 +340,144 @@
 </script>
 
 
+
+<div class="container">
+	
+	
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Bouncing Balls (with Solution)
+			</h1>
+			<p>
+        Problem written by Chris Piech.
+        <br/>
+        Day7: <code>BouncingBalls.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+        <p>
+        This program creates a beautiful animation of colorful bouncing balls. The finished
+        product could definitely make a solid screen saver.
+        </p>
+        <p>
+
+        We'll have to generate 50 circles and place them randomly about the canvas. 
+        Note that in addition to creating the balls, we'll also need to generate initial 
+        x and y velocities for each ball. 
+        These velocities should be random. Importantly, we will store the balls and 
+        velocities in three ArrayLists. 
+        We can decompose all of this into a method.
+        </p>
+
+					<center>
+						<img style="width:500px;border:1px solid #000000" src="../../img/projects/bouncingBalls/demo.png">	
+					</center>
+        <p>
+        On each iteration of the animation while loop, we'll also need to check for bounces on all of the 
+        balls using an inner for loop. 
+        </p>
+				
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:1050px">
+/**
+ * Class: BouncingBalls
+ * -----------------
+ * A program that bounces many balls simultaneously around the screen.
+ */
+public class BouncingBalls extends GraphicsProgram {
+    private static final double BALL_SIZE = 20;
+    private static final double N_BALLS = 50;
+
+    private ArrayList<GOval> balls;
+    private ArrayList<Double> ballVx;
+    private ArrayList<Double> ballVy;
+    private RandomGenerator rg = new RandomGenerator();
+
+    public void run() {
+        createBalls();
+        while(true) {
+            animateBalls();
+            pause(10);
+        }
+    }
+
+    private void animateBalls() {
+        for(int i = 0; i < N_BALLS; i++) {
+            GOval ball = balls.get(i);
+            if(ball.getX() > getWidth() || ball.getX() < 0) {
+                reflectX(i);
+            }
+            if(ball.getY() > getHeight() || ball.getY() < 0) {
+                reflectY(i);
+            }
+            ball.move(ballVx.get(i), ballVy.get(i));
+        }
+    }
+
+    private void reflectY(int i) {
+        ballVy.set(i, -ballVy.get(i));
+    }
+
+    private void reflectX(int i) {
+        ballVx.set(i, -ballVx.get(i));
+    }
+
+    private void createBalls() {
+        balls = new ArrayList<GOval>();
+        ballVx = new ArrayList<Double>();
+        ballVy = new ArrayList<Double>();
+        for(int i = 0; i < N_BALLS; i++) {
+            double x = rg.nextDouble(0, getWidth() - BALL_SIZE);
+            double y = rg.nextDouble(0, getHeight()- BALL_SIZE);
+
+            double vx = rg.nextDouble(1, 3);
+            double vy = rg.nextDouble(1, 3);
+
+            GOval ball = new GOval(x, y, BALL_SIZE, BALL_SIZE);
+            ball.setFilled(true);
+            ball.setColor(rg.nextColor());
+            add(ball);
+            balls.add(ball);
+            ballVx.add(vx);
+            ballVy.add(vy);
+        }
+    }
+}
+</pre>
+    
+<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	
+	</div>
+	</div>
+
+	
+	<!-- Footer -->
+	<hr>
 
 		<div class="container">
 			
@@ -463,6 +640,32 @@ public class BouncingBalls extends GraphicsProgram {
 		s.parentNode.insertBefore(ga, s);
 	})();
 </script>
+
+<script type="text/javascript">
+		console.log('got pubnub')
+    var pubnubDemo = new PubNub({
+        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+    });
+
+		// Subscribe to the demo_tutorial channel
+		pubnubDemo.addListener({
+		    message: function(request) {
+		    	let msg = request['message'];
+		    	let swalData = msg['swal'];
+	        Swal.fire(swalData)
+		    }
+		})
+
+		pubnubDemo.subscribe({
+		    channels: ['csbridge_alert']
+		});
+		console.log('success')
+		
+
+</script>
 		</div>
+	</body>
+</html>
+
 	</body>
 </html>

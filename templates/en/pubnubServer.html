@@ -7,7 +7,7 @@
 <body>
 
 	<!-- Navigation Bar -->
-	%include templates/parts/navBar.ptl
+	%include templates/en/navBar.ptl
 
 	<!-- Main Content -->
 	<div class="container">
@@ -37,12 +37,12 @@
 		<script type="text/javascript">
 
 			console.log('start pubnub')
-		    var pubnubDemo = new PubNub({
+		    var pub = new PubNub({
 		        publishKey: 'pub-c-2f6eb094-e393-4add-bf74-add9c1802cbd',
 		        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
 		    });
 
-				pubnubDemo.publish({
+				pub.publish({
 				    message: {
 				    	"swal" : {
 					    	"title": "Warning",
@@ -53,9 +53,6 @@
 				});
 
 		</script>
-		
-		
-		%include templates/en/footer.ptl
 
 	</div>
 </body>

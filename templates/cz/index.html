@@ -1,0 +1,116 @@
+% rebase('templates/cz/template.ptl', title="Home")
+
+<div class="page-header" style="backgroud-color:#cdbfe3">
+	<div class="container">
+			<div>
+        	<div id="logo">
+				<img id="logoImg" src="{{pathToRoot}}img/logo.png"/>
+			</div>
+			<div id="headerText" style="padding-bottom:15px;">
+				<div class="h1" style="margin-top:0px;font-size:40px;">
+					Úvod do Informatiky
+				</div>
+				<div>
+					Letní 2019
+				</div>
+				<div>
+					9. Července do 19. Července na CTU, Praha
+				</div>
+			</div>
+          
+        </div>
+	</div>
+</div>
+	
+<br />
+
+<!-- <div class="alert alert-success">
+	<b>Who are you?</b> Fill in the <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">class survey</a>.
+</div> -->
+
+<!--
+<div class="alert alert-info">
+	Add to the class playlist here: <a href="https://open.spotify.com/user/1251835474/playlist/2E1ccnzfMTqDv2D1JEoFF3">Spotify Playlist</a>
+</div>
+-->
+
+<div>
+	<h2>
+		Idea kurzu
+	</h2>
+
+	<p>Smyslem tohoto dvoutýdenního kurzu je naučit vás základům počítačového programování do té míry, že můžete jít a učit se sami. Je vyučován ve spolupráci instruktorů ze Stanfordské univerzity a ČVUT. Naučíte se program používat materiál pro Stanfordův Úvod do informatiky.</p>
+</div>
+
+<hr/>
+
+<!-- Course Staff -->
+<div class="section" id="staff">
+	<h2>Učitelé</h2>
+	<%
+	# A list of the rows of staff members.
+	# Each row is a list of the staff members to display photos for,
+	# with each staff member being a (name, image file) tuple.  The
+	# image files are assumed to live in img/peeps/.
+	courseStaff = [
+		[
+		  ("Nick T.", "nickt.jpg"),
+		  ("Eliška", "eliška.jpg"),
+		  ("Ondra", "ondra.jpg"),
+		  ("Chris", "chris.jpg"),
+		  ("Julia", "juliaD.jpg"),
+		  ("Matyáš", "matyáš.jpg")
+		],
+		[
+		  ("Emily", "emily.jpg"),
+		  ("Jaroslav", "jaroslav.jpg"),
+		  ("Radek", "radek.jpg"),
+		  ("Glenn", "glenn.jpg"),
+		  ("Zach", "zach.jpg"),
+		  ("Honza", "honza.jpg")
+		],
+		[
+		  ("Marek", "marek.jpg"),
+		  ("Nick M.", "nickm.jpg"),
+		  ("Asena", "asena.jpg")
+		]
+	]
+	%>
+
+	% for i in range(len(courseStaff)):
+	  	<div class="row">
+			% for staffMember in courseStaff[i]:
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="{{pathToRoot}}img/peeps/{{staffMember[1]}}" alt="profile picture">
+				  		<div class="caption">
+							<b>{{staffMember[0]}}</b>
+				  		</div>
+					</div>
+		  		</div>
+			% end
+	  	</div>
+	% end
+</div>
+
+<hr/>
+
+<!-- Curriculum Overview -->
+<div class="section" id="playWithKarel">
+	<h2>Učební Plán</h2>
+	<img src = "{{pathToRoot}}img/icons/curriculum.jpg" style="width:100%"></img>
+</div>
+
+
+<!--<div class="section" id="playWithKarel">
+	<h2>
+		Play With Karel
+	</h2>
+
+	<p>Meet Karel, The Java Robot that Stanford uses to introduce university students to programming. </p>
+
+	<p>Use Karel's commands to get her to move the beeper to the top of the ledge. Normally you will write your programs in an application called Eclipse, but to get you started we made a mini-eclipse for our website:
+	</p>
+
+	%include templates/parts/playWithKarel.ptl
+</div>-->

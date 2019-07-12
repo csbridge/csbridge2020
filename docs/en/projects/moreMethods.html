@@ -1,5 +1,5 @@
 <!--
-	A template used for every page - contains the header, nav bar, a container div, and the footer.
+	A template used for every page - contains the header.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -27,17 +27,28 @@
 <script type="text/javascript" src="../../js/index.js"></script>
 <script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
 
+
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
   </script>-->
 
 <script src="../karel/js/html/websiteImports.js"></script>
 <script>importCss();</script>
-<script>importJs();</script>	</head>
+<script>importJs();</script>
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>	</head>
 	<body>
+		<!--
+	A template used for every English page - contains the nav bar, a container div, and the footer.
+-->
 
-		<!-- Navigation Bar -->
+<!-- Navigation Bar -->
 <nav class="navbar-inverse navbar-default" role="navigation">
   <div class="container-fluid">
   	<div class="container">
@@ -76,6 +87,7 @@
 	          <ul class="dropdown-menu">
 
 	          	<!-- Day 1 -->
+	          	<li class="dropdown-header">Day 1</li>
 	            <li>
 	            	<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
 	            </li>
@@ -91,6 +103,7 @@
 	          	
 	          	<!-- Day 2 -->
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
           		<li class="visible-after" data-visible-after="2019071009">
           			<a href="../../en/projects/sandcastles.html">Sandcastles</a>
           		</li>
@@ -109,6 +122,7 @@
 	          	
 	          	<!-- Day 3 -->
 	          	<li class="divider visible-after" data-visible-after="2019071109" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
           		<li class="visible-after" data-visible-after="2019071109">
           			<a href="../../en/projects/awesome.html">Programming is Awesome</a>
           		</li>
@@ -126,7 +140,8 @@
 	            </li>
 
 				<!-- Day 4 -->
-            	<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
           		<li class="visible-after" data-visible-after="2019071209">
           			<a href="../../en/projects/madMethods.html">Mad Methods</a>
           		</li>
@@ -142,35 +157,49 @@
 
 				<!-- Day 5 / 6 -->
           		<li class="divider visible-after" data-visible-after="2019071509" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
           		<li class="visible-after" data-visible-after="2019071509">
           			<a href="../../en/projects/makingTracks.html">Making Tracks</a>
           		</li>
 	          	<li class="visible-after" data-visible-after="2019071512">
 	          		<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
 	          	</li>
-          		<li class="divider visible-after" data-visible-after="2019071513" />
+
+	          	<li class="divider visible-after" data-visible-after="2019071513" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071513">Days 5-6</li>
           		<li class="visible-after" data-visible-after="2019071513">
           			<a href="../../en/projects/breakout.html">Breakout</a>
           		</li>
 
           		<!-- Day 7 -->
           		<li class="divider visible-after" data-visible-after="2019071709" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
           		<li class="visible-after" data-visible-after="2019071709">
-          			<a href="../../en/projects/makingTracks.html">Making Tracks</a>
+          			<a href="../../en/projects/sortedNumbers.html">Sorted Numbers</a>
           		</li>
 	          	<li class="visible-after" data-visible-after="2019071712">
-	          		<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+	          		<a href="../../en/projects/snow.html">Snow</a>
 	          	</li>
-          		<li class="divider visible-after" data-visible-after="2019071513" />
-          		<li class="visible-after" data-visible-after="2019071713">
-          			<a href="../../en/projects/breakout.html">Breakout</a>
-          		</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/mouseGame.html">[Optional] The Line</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/music.html">[Optional] Waves of Sound</a>
+	          	</li>
+
+	          	<!-- Days 7/8 -->
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071713">Days 7-8</li>
+	          	<li class="visible-after" data-visible-after="2019071713">
+	          		<a href="../../en/projects/project.html">Make Your Own</a>
+	          	</li>
 	          </ul>
 	        </li>
 
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
+	          	<li class="dropdown-header">Day 1</li>
 	          	<li><a href="../../en/projects/stepUp.html">Step Up</a></li>
 	          	<li><a href="../../en/projects/place100.html">Place 100</a></li>
 	          	<li><a href="../../en/projects/beeperLine.html">Beeper Line</a></li>
@@ -180,6 +209,7 @@
 
 
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
 	            <li class="visible-after" data-visible-after="2019071009">
 	            	<a href="../../en/projects/emc2.html">E=MC2</a>
 	            </li>
@@ -194,6 +224,7 @@
 	            </li>
             	
             	<li class="divider visible-after" data-visible-after="2019071109" />
+            	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
 	            <li class="visible-after" data-visible-after="2019071109">
 	            	<a href="../../en/projects/robotFace.html">Robot Face</a>
 	            </li>
@@ -205,6 +236,7 @@
 	            </li>
 
 				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
 				<li class="visible-after" data-visible-after="2019071209">
 					<a href="../../en/projects/averageMethod.html">Average Method</a>
 				</li>	
@@ -216,6 +248,7 @@
 	          	</li>
 
 	        	<li class="divider visible-after" data-visible-after="2019071509" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
 	            <li class="visible-after" data-visible-after="2019071509">
 	            	<a href="../../en/projects/stampTool.html">Stamp Tool</a>
 	            </li>
@@ -231,6 +264,12 @@
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../en/projects/keyboardKarel.html">Keyboard Karel</a>
 	          	</li>
+
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../en/projects/rocketPaddle.html">Rocket Ship</a>
+	            </li>
 	        </ul>
 	        </li>
 
@@ -301,6 +340,119 @@
 </script>
 
 
+
+<div class="container">
+	
+	
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                More Method Programs
+			</h1>
+			<p>
+                Written by Tyler Conklin
+								</br>
+								Based on past problems as created by Mehran Sahami, Keith Schwarz, Eric Roberts and others.
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+						These are bonus programs! They are meant to be challenging. They are not listed in order of difficulty, so choose whichever programs sound interesting!
+				</p>
+
+				<p>
+					Methods provide a service to other, higher-level parts of the program and therefore act as tools.  The run method can call subsidiary methods to accomplish parts of the overall task.  Those methods in turn call other methods that perform simpler operations, and so on.  The caller views the method in terms of the effect it accomplishes.  The method supplies all the details about how that operation is done.  By hiding the details of complex operations, methods simplify the conceptual structure of a program considerably and allow you as a programmer to view it at varying levels of detail.
+				</p>
+				<p>
+					The fundamental difference between methods in Karel and their counterparts in Java is that Java makes it possible for data to pass back and forth between the caller and the method.  Callers supply information to the method by supplying arguments; methods give information back to their callers by returning results.  The entire process of passing this data between the two levels is in many respects the most important issue for you to understand.
+				</p>
+				<p>
+					Arguments in the calling method are assigned to the corresponding formal parameters in the callee according to their position in the argument list.  Thus, the first argument is assigned to the first parameter name, the second to the second, and so on.  The names of the variables are completely irrelevant to this process.
+				</p>
+				<p>
+					Arguments are copied rather than shared.  If you change the value of a formal parameter, the corresponding actual argument—even if it is a variable with the same name—is unaffected.
+				</p>
+				<p>
+					The return statement causes a method to return immediately to its caller and also indicates the value to be returned as a result.
+				</p>
+				<p>
+					Methods can return values of any of the types you have encountered so far.  Most of you will have little trouble with methods that return numeric data because you are familiar with this concept.  For some reason, methods that return objects or Boolean data seem harder, although the basic idea is precisely the same.
+				</p>
+
+				<h2>
+					Fibonacci
+				</h2>
+        <p>BonusMethods: <code>Fibonacci.java</code></p>
+				<p>
+					In the 13th century, the Italian mathematician Leonardo Fibonacci—as a way to explain the geometric growth of a population of rabbits—devised a mathematical sequence that now bears his name.  The first two terms in this sequence, Fib(0) and Fib(1), are 0 and 1, and every subsequent term is the sum of the preceding two.  Thus, the first several terms in the Fibonacci sequence look like this:
+					<center>
+						Fib(0)	=	0</br>
+						Fib(1)	=	1</br>
+						Fib(2)	=	1	(0 + 1)</br>
+						Fib(3)	=	2	(1 + 1)</br>
+						Fib(4)	=	3	(1 + 2)</br>
+						Fib(5)	=	5	(2 + 3)</br>
+					</center>
+					</br>
+        </p>
+				<p>
+					Write a program that displays the terms in the Fibonacci sequence. This will require writing a method that takes as a parameter, the value of the max term that should be printed. The run method has already been written:
+					<center>
+						<img style="width:300px" src="../../img/projects/moreMethods/fibonacciRun.png">
+					</center>
+					</br>
+					This would produce an output of:
+					<center>
+						<img style="height:400px" src="../../img/projects/moreMethods/fibonacciOutput.png">
+					</center>
+				</p>
+				</br>
+				<h2>
+					Centered Label
+				</h2>
+        <p>BonusMethods: <code>CenteredLabel.java</code></p>
+				<p>
+					Write a program that draws and centers a label. This label should be a parameter to a method. The Run method is already written for you:
+					<center>
+						<img style="width:500px" src="../../img/projects/moreMethods/centeredLabelRun.png">
+					</center>
+					</br>
+					This would produce an output like below:
+ 					<center>
+						<img style="width:500px" src="../../img/projects/moreMethods/centeredLabelOutput.png">
+					</center>
+       </p>
+				</br>
+				<h2>
+					Speedy Shopper
+				</h2>
+        <p>BonusMethods: <code>SpeedyShopper.java</code></p>
+				<p>
+					Items on sale at a store are listed with the percent off for that item. For example, an item that originally costs 100 Turkish Lira at 25% off would cost 75 Turkish Lira. Write a program that calculates the cost of an on-sale item. Specifically, write a method that takes in a price, and the percent off for that item. This method should return the new price for that item. The Run method is already written for you:
+ 					<center>
+						<img style="width:500px" src="../../img/projects/moreMethods/speedyShopperRun.png">
+					</center>
+					</br>
+					This would produce an output like below:
+ 					<center>
+						<img style="height:50px" src="../../img/projects/moreMethods/speedyShopperOutput.png">
+					</center>
+        </p>
+				</br>
+
+			</div>
+		</div>
+
+	
+	<!-- Footer -->
+	<hr>
 
 		<div class="container">
 			
@@ -438,6 +590,32 @@
 		s.parentNode.insertBefore(ga, s);
 	})();
 </script>
+
+<script type="text/javascript">
+		console.log('got pubnub')
+    var pubnubDemo = new PubNub({
+        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+    });
+
+		// Subscribe to the demo_tutorial channel
+		pubnubDemo.addListener({
+		    message: function(request) {
+		    	let msg = request['message'];
+		    	let swalData = msg['swal'];
+	        Swal.fire(swalData)
+		    }
+		})
+
+		pubnubDemo.subscribe({
+		    channels: ['csbridge_alert']
+		});
+		console.log('success')
+		
+
+</script>
 		</div>
+	</body>
+</html>
+
 	</body>
 </html>
