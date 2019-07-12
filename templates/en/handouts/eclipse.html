@@ -1,166 +1,152 @@
-<head>
+% rebase('templates/en/template.ptl', title="Eclipse")
 
-	%include templates/parts/head.html
+<!-- Main Content -->
+<div class="container">
 
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
-
-	<!-- Main Content -->
-	<div class="container">
-
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-				Working On Projects
-			</h1>
-
-		</div>
-		<hr/>
-
-		<p>
-		    For each day, we will provide a starter project containing programs we will work on that day - for example, "Day1.zip", on the main page of the course website. Therefore, at the start of each day, your first task will be to download the starter project from the CSBridge website and then import it into Eclipse. Once you do that, you can work on your programs.
-		</p>
-
-		<h2>Contents</h2>
-
-		<a href="#import">Importing Projects</a> |
-		<a href="#run">Running Programs</a> |
-		<a href="#submit">Submitting at the end of each day</a> |
-		<a href="#help">I need help!</a>
-
-		<h3 id="import">Importing Projects</h3>
-		<ol>
-		    <li>
-		        The starter project will download as a zip file (e.g. <strong>Day1.zip</strong>). You must convert the ZIP file to a folder to open in Eclipse.  To do this, right-click on the zip file and select "Extract All".  Then, in the window that pops up, click "Extract".  Now you will have a folder appear, such as "Day1", in the same place on your computer as the ZIP file.  Next we will import this folder into Eclipse.
-		    </li>
-		    <li>
-		        Launch Eclipse, and from the Stanford Menu at the top select "Import Project" (or look for an icon like the one below in the Eclipse toolbar).  <strong>Note:</strong> if you do not see the Stanford Menu in Eclipse, see the "I need help" section at the bottom of the page.
-		        <br/>
-		        <img style="width:25rem" src="{{pathToRoot}}img/eclipse/stanfordMenu.png" alt="Stanford Menu Import" />
-		    </li>
-		    <li>
-		        Select the project you would like to import by clicking the topmost <strong>Browse...</strong> button and navigating to the folder we created from the earlier steps. Then click <strong>OK</strong>.
-		        <br/>
-		        <img style="width:50rem" src="{{pathToRoot}}img/eclipse/importStep1.png" alt="Import Project Find Project Folder" />
-		    </li>
-		    <li>
-		        Now, make sure that the check box labeled "Copy projects into workspace" is <strong>unchecked</strong>, and then click the <strong>Finish</strong> button to import the project.
-		        <br/>
-		        <img style="width:50rem" src="{{pathToRoot}}img/eclipse/importStep2.png" alt="Import Project Find Project Folder" />
-		        <br />
-		    </li>
-		    <li>
-		        You should now see the project in the left "Package Explorer" sidebar, like in the image below. Double-click on the project folder to expand its contents.
-		        <br/>
-		        <img style="width:50rem" src="{{pathToRoot}}img/eclipse/importStep3.png" alt="Package Explorer" />
-		        <br /> The <strong>src</strong> folder contains the <strong>.java</strong> code files you will be working on. Karel projects have a <strong>worlds</strong> folder containing the Karel worlds for the project.  Double-click on <strong>src</strong>, and within that double-click on the <strong>default package</strong>, to show the code files for the day. Then double-click on any code file to open it in the main editor window.
-		        <br/>
-		        <img style="width:50rem" src="{{pathToRoot}}img/eclipse/importStep4.png" alt="Open code file" />
-		        <br /> 
-		        Now, see the next section for how to run a program.
-		    </li>
-		</ol>
-
-		<hr />
-
-		<h3 id="run">Running Programs</h3>
-		<ol>
-			<li>
-			    A project can contain multiple programs.  To run a program in your project, look for the "running person" icons in the top toolbar.
-			    <br/>
-			    <img style="width:25rem" src="{{pathToRoot}}img/eclipse/runIcons.png" alt="Run Icons" />
-			</li>
-			<li>
-				The "fast" running person immediately runs the most recently-run program (convenient when focusing on a single program), and the "slow" running person displays a list of all programs imported into Eclipse, like the following:
-				<br/>
-				<img style="width:75rem" src="{{pathToRoot}}img/eclipse/runProgram.png" alt="Run Program" />
-				<br/>
-				Select the program you would like to run, and it will launch!
-			</li>
-		    <li>
-		        If you make changes to your code, you must <strong>re-run your program</strong> in order for the changes to take effect.
-		    </li>
-		</ol>
-
-		<hr/>
-
-		<h3 id="submit">Submitting Your Work</h3>
-		<p>
-		    At the end of each day, before you leave you should submit your work.  This allows us to see all of the awesome programs you have been working on.  To submit a project in Eclipse, we will first export the entire project from Eclipse as a single ZIP file.  Then we will upload it to the course staff.  Follow these steps:
-		</p>
-		<ol>
-		    <li>
-		        <strong>Save your work!</strong>  Always remember to save all your work in Eclipse before submitting so you submit your most recent changes.
-		    </li>
-		    <li>
-		        From the <strong>Stanford Menu</strong> dropdown at the top, select <strong>Submit Project</strong> (or look for an icon like the one below in the Eclipse toolbar).
-		        <br/>
-		        <img style="width:25rem" src="{{pathToRoot}}img/eclipse/stanfordMenu.png" alt="Stanford Menu" />
-		    </li>
-		    <li>
-		        Select the project you would like to submit, and click "OK".
-		    </li>
-		    <li>
-		        On the next screen, it will ask you where you would like to save the ZIP file to submit.  It suggests a name to use to save the file.  Keep this name, but add "CTU" followed by the student ID on your name badge to the beginning of the filename in the text field, like in the picture below.  Your student ID is on the back of your name badge - it is the number in the username after "intern2019". (for example, if your username is "intern2019204", your student ID is 204).  Also save it to a location that is easy to find, such as the Desktop, and then click "Save" to save it.
-		        <br/>
-		        <img style="width:75rem" src="{{pathToRoot}}img/eclipse/submit.png" alt="Export project to submit" />
-		    </li>
-		    <li>The submit tool may automatically open a webpage asking for a Stanford login - you can ignore this webpage and close it.</li>
-		    <li>
-		        Find this file on your computer and upload it to <a href="https://sendtomycloud.com/csbridge2019">this webpage</a>.
-		    </li>		    
-		</ol>
-
-		<hr/>
-
-		<h3 id="help">I Need Help!</h3>
-		<p>Here are answers to some common issues with Eclipse.  Feel free to also ask your Section Leader if you have any questions.</p>
-		<dl>
-		    <dt id="plugin">
-		        Q: Help!  I don't see the "running person", submit, import, etc. icons or the "Stanford Menu" in my Eclipse.
-		    </dt>
-		    <dd>
-		        A: This means the Stanford Plugin is not installed; please ask a Section Leader to help you follow the instructions listed <a href="https://web.stanford.edu/dept/cs_edu/eclipse/#configure">here</a> for installing the Stanford Plugin.
-		    </dd>
-		    <dt id="eclipsebroken">
-		        Q: My Eclipse window doesn't look like the ones in the screenshots or in lecture.  I'm missing some of the panels (e.g. the sidebar showing all my projects).  Help!
-		    </dt>
-		    <dd>
-		        A: Click the "Reset" button in the Stanford Menu to reset to the default view.
-		        <br />
-		        <img style="width:25rem;" src="{{pathToRoot}}img/eclipse/stanfordMenu.png" alt="Stanford Menu" />
-		        <br />
-		        You may also be in Debugger mode instead of Editor mode; use the Stanford Menu to go back to Editor mode.
-		        <br />
-		        <img style="width:25rem;" src="{{pathToRoot}}img/eclipse/stanfordMenu.png" alt="View Toggle" />
-		        <br />
-		    </dd>
-		    <dt id="importError">
-		        Q: Help!  Eclipse is not letting me import a project.  It gives me a warning at the top that "Some projects cannot be imported".
-		        <br />
-		        <img style="width:25rem;" src="{{pathToRoot}}img/eclipse/importError.png" alt="Import Error" />
-		        <br />
-		    </dt>
-		    <dd>
-		        A: This is because a project with that name is already imported into Eclipse. If you would like to import this project, you must first delete the existing project by right-clicking the project in the sidebar and selecting "Delete".  You can then choose whether to delete the project from your computer as well, or just delete the project from Eclipse.
-		        <br />
-		        <img style="width:25rem;" src="{{pathToRoot}}img/eclipse/deleteProject.png" alt="Delete project" />
-		        <br />
-		    </dd>
-		    <dt id="eclipseown">
-		        Q: How do I install Eclipse on another computer?
-		    </dt>
-		    <dd>
-		        A: Follow the instructions listed <a href="https://web.stanford.edu/dept/cs_edu/eclipse">here</a> for installing the version of Eclipse used here, including the Stanford Plugin.
-		    </dd>
-		</dl>
-		
-		
-		%include templates/parts/footer.html
+	<!-- Header -->
+	<div id="pageHeader">
+		<h1>
+			Working On Projects
+		</h1>
 
 	</div>
-</body>
+	<hr/>
+
+	<p>
+	    For each day, we will provide a starter project containing programs we will work on that day - for example, "Day1.zip", on the main page of the course website. Therefore, at the start of each day, your first task will be to download the starter project from the CSBridge website and then import it into Eclipse. Once you do that, you can work on your programs.
+	</p>
+
+	<h2>Contents</h2>
+
+	<a href="#import">Importing Projects</a> |
+	<a href="#run">Running Programs</a> |
+	<a href="#submit">Submitting at the end of each day</a> |
+	<a href="#help">I need help!</a>
+
+	<h3 id="import">Importing Projects</h3>
+	<ol>
+	    <li>
+	        The starter project will download as a zip file (e.g. <strong>Day1.zip</strong>). You must convert the ZIP file to a folder to open in Eclipse.  To do this, right-click on the zip file and select "Extract All".  Then, in the window that pops up, click "Extract".  Now you will have a folder appear, such as "Day1", in the same place on your computer as the ZIP file.  Next we will import this folder into Eclipse.
+	    </li>
+	    <li>
+	        Launch Eclipse, and from the Stanford Menu at the top select "Import Project" (or look for an icon like the one below in the Eclipse toolbar).  <strong>Note:</strong> if you do not see the Stanford Menu in Eclipse, see the "I need help" section at the bottom of the page.
+	        <br/>
+	        <img style="width:25rem" src="{{pathToRoot}}img/eclipse/stanfordMenu.png" alt="Stanford Menu Import" />
+	    </li>
+	    <li>
+	        Select the project you would like to import by clicking the topmost <strong>Browse...</strong> button and navigating to the folder we created from the earlier steps. Then click <strong>OK</strong>.
+	        <br/>
+	        <img style="width:50rem" src="{{pathToRoot}}img/eclipse/importStep1.png" alt="Import Project Find Project Folder" />
+	    </li>
+	    <li>
+	        Now, make sure that the check box labeled "Copy projects into workspace" is <strong>unchecked</strong>, and then click the <strong>Finish</strong> button to import the project.
+	        <br/>
+	        <img style="width:50rem" src="{{pathToRoot}}img/eclipse/importStep2.png" alt="Import Project Find Project Folder" />
+	        <br />
+	    </li>
+	    <li>
+	        You should now see the project in the left "Package Explorer" sidebar, like in the image below. Double-click on the project folder to expand its contents.
+	        <br/>
+	        <img style="width:50rem" src="{{pathToRoot}}img/eclipse/importStep3.png" alt="Package Explorer" />
+	        <br /> The <strong>src</strong> folder contains the <strong>.java</strong> code files you will be working on. Karel projects have a <strong>worlds</strong> folder containing the Karel worlds for the project.  Double-click on <strong>src</strong>, and within that double-click on the <strong>default package</strong>, to show the code files for the day. Then double-click on any code file to open it in the main editor window.
+	        <br/>
+	        <img style="width:50rem" src="{{pathToRoot}}img/eclipse/importStep4.png" alt="Open code file" />
+	        <br /> 
+	        Now, see the next section for how to run a program.
+	    </li>
+	</ol>
+
+	<hr />
+
+	<h3 id="run">Running Programs</h3>
+	<ol>
+		<li>
+		    A project can contain multiple programs.  To run a program in your project, look for the "running person" icons in the top toolbar.
+		    <br/>
+		    <img style="width:25rem" src="{{pathToRoot}}img/eclipse/runIcons.png" alt="Run Icons" />
+		</li>
+		<li>
+			The "fast" running person immediately runs the most recently-run program (convenient when focusing on a single program), and the "slow" running person displays a list of all programs imported into Eclipse, like the following:
+			<br/>
+			<img style="width:75rem" src="{{pathToRoot}}img/eclipse/runProgram.png" alt="Run Program" />
+			<br/>
+			Select the program you would like to run, and it will launch!
+		</li>
+	    <li>
+	        If you make changes to your code, you must <strong>re-run your program</strong> in order for the changes to take effect.
+	    </li>
+	</ol>
+
+	<hr/>
+
+	<h3 id="submit">Submitting Your Work</h3>
+	<p>
+	    At the end of each day, before you leave you should submit your work.  This allows us to see all of the awesome programs you have been working on.  To submit a project in Eclipse, we will first export the entire project from Eclipse as a single ZIP file.  Then we will upload it to the course staff.  Follow these steps:
+	</p>
+	<ol>
+	    <li>
+	        <strong>Save your work!</strong>  Always remember to save all your work in Eclipse before submitting so you submit your most recent changes.
+	    </li>
+	    <li>
+	        From the <strong>Stanford Menu</strong> dropdown at the top, select <strong>Submit Project</strong> (or look for an icon like the one below in the Eclipse toolbar).
+	        <br/>
+	        <img style="width:25rem" src="{{pathToRoot}}img/eclipse/stanfordMenu.png" alt="Stanford Menu" />
+	    </li>
+	    <li>
+	        Select the project you would like to submit, and click "OK".
+	    </li>
+	    <li>
+	        On the next screen, it will ask you where you would like to save the ZIP file to submit.  It suggests a name to use to save the file.  Keep this name, but add "CTU" followed by the student ID on your name badge to the beginning of the filename in the text field, like in the picture below.  Your student ID is on the back of your name badge - it is the number in the username after "intern2019". (for example, if your username is "intern2019204", your student ID is 204).  Also save it to a location that is easy to find, such as the Desktop, and then click "Save" to save it.
+	        <br/>
+	        <img style="width:75rem" src="{{pathToRoot}}img/eclipse/submit.png" alt="Export project to submit" />
+	    </li>
+	    <li>The submit tool may automatically open a webpage asking for a Stanford login - you can ignore this webpage and close it.</li>
+	    <li>
+	        Find this file on your computer and upload it to <a href="https://sendtomycloud.com/csbridge2019">this webpage</a>.
+	    </li>		    
+	</ol>
+
+	<hr/>
+
+	<h3 id="help">I Need Help!</h3>
+	<p>Here are answers to some common issues with Eclipse.  Feel free to also ask your Section Leader if you have any questions.</p>
+	<dl>
+	    <dt id="plugin">
+	        Q: Help!  I don't see the "running person", submit, import, etc. icons or the "Stanford Menu" in my Eclipse.
+	    </dt>
+	    <dd>
+	        A: This means the Stanford Plugin is not installed; please ask a Section Leader to help you follow the instructions listed <a href="https://web.stanford.edu/dept/cs_edu/eclipse/#configure">here</a> for installing the Stanford Plugin.
+	    </dd>
+	    <dt id="eclipsebroken">
+	        Q: My Eclipse window doesn't look like the ones in the screenshots or in lecture.  I'm missing some of the panels (e.g. the sidebar showing all my projects).  Help!
+	    </dt>
+	    <dd>
+	        A: Click the "Reset" button in the Stanford Menu to reset to the default view.
+	        <br />
+	        <img style="width:25rem;" src="{{pathToRoot}}img/eclipse/stanfordMenu.png" alt="Stanford Menu" />
+	        <br />
+	        You may also be in Debugger mode instead of Editor mode; use the Stanford Menu to go back to Editor mode.
+	        <br />
+	        <img style="width:25rem;" src="{{pathToRoot}}img/eclipse/stanfordMenu.png" alt="View Toggle" />
+	        <br />
+	    </dd>
+	    <dt id="importError">
+	        Q: Help!  Eclipse is not letting me import a project.  It gives me a warning at the top that "Some projects cannot be imported".
+	        <br />
+	        <img style="width:25rem;" src="{{pathToRoot}}img/eclipse/importError.png" alt="Import Error" />
+	        <br />
+	    </dt>
+	    <dd>
+	        A: This is because a project with that name is already imported into Eclipse. If you would like to import this project, you must first delete the existing project by right-clicking the project in the sidebar and selecting "Delete".  You can then choose whether to delete the project from your computer as well, or just delete the project from Eclipse.
+	        <br />
+	        <img style="width:25rem;" src="{{pathToRoot}}img/eclipse/deleteProject.png" alt="Delete project" />
+	        <br />
+	    </dd>
+	    <dt id="eclipseown">
+	        Q: How do I install Eclipse on another computer?
+	    </dt>
+	    <dd>
+	        A: Follow the instructions listed <a href="https://web.stanford.edu/dept/cs_edu/eclipse">here</a> for installing the version of Eclipse used here, including the Stanford Plugin.
+	    </dd>
+	</dl>
+</div>
