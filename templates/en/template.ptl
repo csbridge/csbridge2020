@@ -11,7 +11,6 @@
 	{{!base}}
 			
 	<!-- Footer -->
-	<hr />
 	%include templates/en/footer.ptl
 
 </div>
