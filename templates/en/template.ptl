@@ -9,17 +9,9 @@
 <div class="container">
 	
 	{{!base}}
-	
+			
 	<!-- Footer -->
-	<hr>
+	<hr />
+	%include templates/en/footer.ptl
 
-		<div class="container">
-			
-			{{!base}}
-			
-			<!-- Footer -->
-			%include templates/en/footer.ptl
-
-		</div>
-	</body>
-</html>
+</div>

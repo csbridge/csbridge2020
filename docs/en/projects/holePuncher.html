@@ -439,110 +439,9 @@ public class HolePuncher extends GraphicsProgram {
 	</div>
 	</div>
 
-	
+			
 	<!-- Footer -->
-	<hr>
-
-		<div class="container">
-			
-			
-	<!-- Main Content -->
-	<div class="container">
-
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-				Hole Puncher (with Solution)
-			</h1>
-			<p>
-				Problem written by Chris Piech.
-        <br/>
-
-        Handouts: 
-		<a href ="../../en/handouts/graphics.html">GraphicsReference</a>
-		<a href ="../../en/handouts/events.html">EventsReference</a>
-
-		<br/>
-
-        Day5: <code>HolePuncher.java</code>
-			</p>
-
-		</div>
-		<hr/>
-
-		<div class="row">
-			<div class="col-md-12">
-
-				<p>
-					This example lets you treat your computer like a piece of paper and your mouse like a hole puncher. The user should be able to click anywhere on the window and create holes (GOvals).
-				</p>
-
-				<p>
-					<center>
-            <img style="width:500px;border:1px solid #000000" src="../../img/projects/holePuncher/demo.gif">
-					</center>
-				</p>
-
-				<p>
-        Make a constant that describes the radius of the holes you will punch. 10 is a good size for this. Remember that <code>GOval</code>s want to see a <code>double</code> for this variable (not an <code>int</code>). Then add a mouse listener and create a <code>draw</code> method to react with every time the user punches a new hole.
-				</p>
-				
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Solution</h2>
-
-
-<pre id="editor" style="height:480px">
-/**
- * Class: HolePuncher
- * -----------------
- * A program that draws filled black circles on the screen whenever
- * the mouse
- * is pressed.
- */
-public class HolePuncher extends GraphicsProgram {
-  /* The radius of each hole that we punch. */
-  private static final double HOLE_RADIUS = 10;
-
-  public void run() {
-    addMouseListeners();
-  }
-
-  /**
-   * Draws a black circle centered at the mouse location whenever the mouse
-   * is pressed.
-   */
-  public void mousePressed(MouseEvent e) {
-    double x = e.getX() - HOLE_RADIUS;
-    double y = e.getY() - HOLE_RADIUS;
-
-    GOval hole = new GOval(x, y, 2 * HOLE_RADIUS, 2 * HOLE_RADIUS);
-    hole.setFilled(true);
-    add(hole);
-  }
-}
-</pre>
-    
-<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-   editor.setTheme('ace/theme/eclipse');
-   editor.getSession().setMode("ace/mode/java");
-   editor.setReadOnly(true);
-   editor.setShowPrintMargin(false);
-   editor.renderer.setShowGutter(false); 
-    /*editor.setTheme("ace/theme/eclipse");
-    editor.getSession().setMode("ace/mode/java");*/
-</script>
-	
-	</div>
-	</div>
-
-			
-			<!-- Footer -->
+	<hr />
 <hr>
 
 <div class="footer">
@@ -591,9 +490,6 @@ public class HolePuncher extends GraphicsProgram {
 		
 
 </script>
-		</div>
-	</body>
-</html>
-
+</div>
 	</body>
 </html>

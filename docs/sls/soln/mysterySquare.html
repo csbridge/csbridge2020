@@ -408,79 +408,9 @@
 		</div>
 	</div>
 </div>
-	
+			
 	<!-- Footer -->
-	<hr>
-
-		<div class="container">
-			
-			
-<!-- Main Content -->
-<div class="container">
-
-	<!-- Header -->
-	<div id="pageHeader">
-		<h1>
-            TA Solution: Mystery Square
-		</h1>
-    </div>
-
-	<hr/>
-
-	<div class="row">
-		<div class="col-xs-12">
-            
-<p>
-  This is the first section problem for the morning.  It gives students practice writing their first graphics programs.  There is a little animation mixed in, but that will be covered in more detail in the afternoon.
-</p>
-<p>Teaching tips:
-  <ol>
-    <li>Learning goal: graphics and animation
-    <li>Milestone: drawing a centered square
-    <li>You should briefly introduce the <code>pause()</code> function, which delays the program by a specified amount of time.</li>
-    <li>The hardest part is implementing animation using loops and delays, and connecting this with the graphics programs they have already written.
-  </ol>
-</p>
-
-<h3>Solution</h3>
-<pre id="editor" style="height:400px">public class MysterySquare extends GraphicsProgram {
-
-    private static final int SIZE = 400;
-    private static final int DELAY = 1000;
-
-    private RandomGenerator rgen = new RandomGenerator();
-
-    public void run() {
-        // Draw a square in the center of the screen.
-        GRect rect = new GRect(SIZE, SIZE);
-        double x = (getWidth() - rect.getWidth()) / 2;
-        double y = (getHeight() - rect.getHeight()) / 2;
-        rect.setFilled(true);
-        add(rect, x, y);
-
-        // Change its color every second.
-        while(true) {
-            rect.setColor(rgen.nextColor()); 
-            pause(DELAY);
-        }
-    }
-}</pre>
-    
-<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-   editor.setTheme('ace/theme/eclipse');
-   editor.getSession().setMode("ace/mode/java");
-   editor.setReadOnly(true);
-   editor.renderer.setShowGutter(false); 
-    /*editor.setTheme("ace/theme/eclipse");
-    editor.getSession().setMode("ace/mode/java");*/
-</script>	
-		</div>
-	</div>
-</div>
-			
-			<!-- Footer -->
+	<hr />
 <hr>
 
 <div class="footer">
@@ -529,9 +459,6 @@
 		
 
 </script>
-		</div>
-	</body>
-</html>
-
+</div>
 	</body>
 </html>

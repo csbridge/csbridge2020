@@ -2,7 +2,7 @@
 <div class="visible-after" data-visible-after="2019071700">
 
 	<h4>Days 7-8: Final Project (<a href="{{pathToRoot}}starter/BlankJavaProject.zip">Eclipse Project Here</a>)</h4>
-	<table class="tabletable-striped">
+	<table class="table table-striped">
 
 		<thead>
 			<tr>
@@ -94,6 +94,12 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/makingTracks.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/makingTracks.html">Making Tracks</a></td>
+				<td>Events</td>
+			</tr>
+
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mouseLocation.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/mouseLocation.html">Mouse Location</a></td>
 				<td>Events</td>
 			</tr>
 
