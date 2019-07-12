@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/head.html
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+% rebase('templates/en/template.ptl', title="Pi")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -106,8 +97,3 @@ public class FindPi extends ConsoleProgram {
 </script>
 	</div>
 	</div>
-		
-		%include templates/parts/footer.html
-
-	</div>
-</body>

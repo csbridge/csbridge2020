@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-		<title>CS Bridge  | Hole Puncher</title>
+		<title>CS Bridge  | Repair Efes</title>
 
 		<!-- Fonts -->
 		<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -271,19 +271,10 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Hole Puncher (with Solution)
+				Repair Efes
 			</h1>
 			<p>
-				Problem written by Chris Piech.
-        <br/>
-
-        Handouts: 
-		<a href ="../../en/handouts/graphics.html">GraphicsReference</a>
-		<a href ="../../en/handouts/events.html">EventsReference</a>
-
-		<br/>
-
-        Day5: <code>HolePuncher.java</code>
+				Based on a handout by Eric Roberts
 			</p>
 
 		</div>
@@ -291,74 +282,36 @@
 
 		<div class="row">
 			<div class="col-md-12">
-
 				<p>
-					This example lets you treat your computer like a piece of paper and your mouse like a hole puncher. The user should be able to click anywhere on the window and create holes (GOvals).
+					Karel has been hired to repair parts of the columns in the Temple of Artemis in Efes that have fallen down. In particular, Karel is to repair a set of arches where some of the stones (represented by beepers, of course) are missing from the columns supporting the arches, as follows:
 				</p>
-
 				<p>
 					<center>
-            <img style="width:500px;border:1px solid #000000" src="../../img/projects/holePuncher/demo.gif">
+						<img class="psetImg" src="../../projects/img/efes/efesBroken.png">	
 					</center>
 				</p>
-
 				<p>
-        Make a constant that describes the radius of the holes you will punch. 10 is a good size for this. Remember that <code>GOval</code>s want to see a <code>double</code> for this variable (not an <code>int</code>). Then add a mouse listener and create a <code>draw</code> method to react with every time the user punches a new hole.
+					As shown above the arches are separated by three avenues and are all five rows high. When Karel is done, the missing columns should be replaced by beepers, so the final picture would look like this:
 				</p>
-				
+				<p>
+					<center>
+						<img class="psetImg" src="../../projects/img/efes/efesRepaired.png">	
+					</center>
+				</p>
+				<p>
+					Karel's final location and the final direction he is facing at end of the run do not matter. Karel may count on the following facts about the world, listed below:
+				<ul>
+					<li>Karel starts at 1st Avenue and 1st Street, facing east.
+					<li>The columns are exactly four units apart, on 1st, 5th, 9th and 13th Avenue.
+					<li>Karel can assume that columns are always five units high.
+				</ul>
+				</p>
+				<p>
+					Even though the program is only a few lines, it is still worth getting at least a little practice in decomposition.  In your solution, include a private method for each of the steps shown in the outline.
+				</p>
 			</div>
+
 		</div>
-		
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Solution</h2>
-
-
-<pre id="editor" style="height:480px">
-/**
- * Class: HolePuncher
- * -----------------
- * A program that draws filled black circles on the screen whenever
- * the mouse
- * is pressed.
- */
-public class HolePuncher extends GraphicsProgram {
-  /* The radius of each hole that we punch. */
-  private static final double HOLE_RADIUS = 10;
-
-  public void run() {
-    addMouseListeners();
-  }
-
-  /**
-   * Draws a black circle centered at the mouse location whenever the mouse
-   * is pressed.
-   */
-  public void mousePressed(MouseEvent e) {
-    double x = e.getX() - HOLE_RADIUS;
-    double y = e.getY() - HOLE_RADIUS;
-
-    GOval hole = new GOval(x, y, 2 * HOLE_RADIUS, 2 * HOLE_RADIUS);
-    hole.setFilled(true);
-    add(hole);
-  }
-}
-</pre>
-    
-<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-   editor.setTheme('ace/theme/eclipse');
-   editor.getSession().setMode("ace/mode/java");
-   editor.setReadOnly(true);
-   editor.setShowPrintMargin(false);
-   editor.renderer.setShowGutter(false); 
-    /*editor.setTheme("ace/theme/eclipse");
-    editor.getSession().setMode("ace/mode/java");*/
-</script>
-	
-	</div>
-	</div>
 			
 			<!-- Footer -->
 			<hr>
