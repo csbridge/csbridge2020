@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/head.html
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/parts/navBar.html
+% rebase('templates/en/template.ptl', title="Place 100")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -77,8 +68,3 @@ public class Place100 extends SuperKarel {
     /*editor.setTheme("ace/theme/eclipse");
     editor.getSession().setMode("ace/mode/java");*/
 </script>
-		
-		%include templates/parts/footer.html
-
-	</div>
-</body>

@@ -1,0 +1,355 @@
+<!--
+	A template used for every page - contains the header, nav bar, a container div, and the footer.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="../../../images/stanford-favicon.png" type="image/x-icon">
+		<title>CS Bridge  | Music Cannon</title>
+
+		<!-- Fonts -->
+		<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+		<!-- Styles -->
+
+		<link href="../../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../../../style.css">
+
+		<!-- Java Script -->
+		<script src="../../../plugins/jquery.min.js"></script>
+		<script src="../../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+
+		<script src="../../../karel/ace/ace.js" type="text/javascript"></script>
+		<script type="text/javascript" src="../../../js/moment.min.js"></script>
+		<script type="text/javascript" src="../../../js/index.js"></script>
+		<script type="text/javascript" src="../../../plugins/d3.v3/d3.v3.min.js"></script>
+
+		<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+		  </script>-->
+
+		<script src="../karel/js/html/websiteImports.js"></script>
+		<script>importCss();</script>
+		<script>importJs();</script>
+	</head>
+
+	<body>
+
+		<!-- Navigation Bar -->
+<nav class="navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="../../../">CS Bridge</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <!--<li ><a href="#">Link</a></li>-->
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<!--<li><a href="../../../en/handouts/sections.html">Sections</a></li>-->
+	          	<li><a href="http://karel.csbridge.org/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="../../../en/handouts/karel.html">Karel Reference</a></li>	          	
+          		<li class="visible-after" data-visible-after="2019071009"><a href="../../../en/handouts/console.html">Console Reference</a></li>
+          		<li class="visible-after" data-visible-after="2019071009"><a href="../../../en/handouts/random.html">Random Generator Reference</a></li>
+	          	<li class="visible-after" data-visible-after="2019071109"><a href="../../../en/handouts/graphics.html">Graphics Reference</a></li>
+				<li class="visible-after" data-visible-after="2019071509"><a href="../../../en/handouts/events.html">Events Reference</a></li>
+				<li class="visible-after" data-visible-after="2019071709"><a href="../../../en/handouts/arrayLists.html">Array Lists</a></li>
+	          </ul>
+	        </li>
+
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+
+	          	<!-- Day 1 -->
+	            <li>
+	            	<a href="../../../en/projects/collectNewspaper.html">Collect Newspaper</a>
+	            </li>
+	          	<li class="visible-after" data-visible-after="2019070912">
+	          		<a href="../../../en/projects/efes.html">Charles Bridge</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../../en/projects/mountain.html">Mountain Karel</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../../en/projects/randomPainter.html">Random Painter</a>
+	          	</li>
+	          	
+	          	<!-- Day 2 -->
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+          		<li class="visible-after" data-visible-after="2019071009">
+          			<a href="../../../en/projects/sandcastles.html">Sandcastles</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071012">
+	          		<a href="../../../en/projects/favoriteNumber.html">Favorite Number</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071012">
+	          		<a href="../../../en/projects/medicine.html">Medicine</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../../en/projects/someSum.html">Some Sum</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../../en/projects/gameOfStones.html">Nimm</a>
+	          	</li>
+	          	
+	          	<!-- Day 3 -->
+	          	<li class="divider visible-after" data-visible-after="2019071109" />
+          		<li class="visible-after" data-visible-after="2019071109">
+          			<a href="../../../en/projects/awesome.html">Programming is Awesome</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../../en/projects/mysterySquare.html">Mystery Square</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../../en/projects/stringArt.html">String Art</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071113">
+	          		<a href="../../../en/projects/randomCircles.html">Random Circles</a>
+	          	</li>
+	            <li class="visible-after" data-visible-after="2019071113">
+	            	<a href="../../../en/projects/bouncingBall.html">Bouncing Ball</a>
+	            </li>
+
+				<!-- Day 4 -->
+            	<li class="divider visible-after" data-visible-after="2019071209" />
+          		<li class="visible-after" data-visible-after="2019071209">
+          			<a href="../../../en/projects/madMethods.html">Mad Methods</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071212">
+	          		<a href="../../../en/projects/target.html">Target</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071213">
+	          		<a href="../../../en/projects/illusion.html">Optical Illusion</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071213">
+	          		<a href="../../../en/projects/sunset.html">Short Film</a>
+	          	</li>
+
+				<!-- Day 5 -->
+          		<li class="divider visible-after" data-visible-after="2019071509" />
+          		<li class="visible-after" data-visible-after="2019071509">
+          			<a href="../../../en/projects/makingTracks.html">Making Tracks</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071512">
+	          		<a href="../../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+	          	</li>
+          		<li class="divider visible-after" data-visible-after="2019071513" />
+          		<li class="visible-after" data-visible-after="2019071513">
+          			<a href="../../../en/projects/breakout.html">Breakout</a>
+          		</li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../../en/projects/stepUp.html">Step Up</a></li>
+	          	<li><a href="../../../en/projects/place100.html">Place 100</a></li>
+	          	<li><a href="../../../en/projects/beeperLine.html">Beeper Line</a></li>
+	          	<li><a href="../../../en/projects/invert.html">Invert</a></li>
+	          	<li><a href="../../../en/projects/unKarel.html">UN Karel</a></li>
+	          	<li><a href="../../../en/projects/banishWinter.html">Banish Winter</a></li>
+
+
+	          <li class="divider"></li>
+	            <li><a href="../../../en/projects/emc2.html">E=MC2</a></li>
+	            <li><a href="../../../en/projects/fibb.html">Fibonacci</a></li>
+	            <li><a href="../../../en/projects/findPi.html">Find Pi</a></li>
+	            <li><a href="../../../en/projects/8Ball.html">8-Ball</a></li>
+            <li class="divider"></li>
+	            <li><a href="../../../en/projects/robotFace.html">Robot Face</a></li>
+	            <li><a href="../../../en/projects/goCenter.html">Go To Center</a></li>
+	            <li><a href="../../../en/projects/gravityBall.html">Gravity Ball</a></li>
+
+			<li class="divider"></li>
+				<li><a href="../../../en/projects/averageMethod.html">Average Method</a></li>	
+				<li><a href="../../../en/projects/drawPeople.html">Draw People</a></li>	
+	          	<li><a href="../../../en/projects/halfGreen.html">Half Green</a></li>
+
+	          	<!--
+	          <li class="divider"></li>
+	             <li><a href="../../../en/projects/stampTool.html">Stamp Tool</a></li>
+           
+	          	<li><a href="../../../en/projects/holePuncher.html">Hole Puncher</a></li>	
+	          	<li><a href="../../../en/projects/debrisSweeper.html">Debris Sweeper</a></li>	
+	          	<li><a href="../../../en/projects/suchADrag.html">Such a Drag</a></li>
+	          	<li><a href="../../../en/projects/keyboardKarel.html">Keyboard Karel</a></li>
+            -->
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../../slides/Welcome.pdf">Karel</a></li>
+	          	<li><a href="../../../slides/ControlFlow.pdf">Control Flow</a></li>
+	          	<li><a href="../../../slides/Variables.pdf">Variables</a></li>
+			<li><a href="../../../slides/Variables2.pdf">Variables 2</a></li>
+	          	
+	          	<li><a href="../../../slides/Graphics.pdf">Graphics</a></li>
+	          	<li><a href="../../../slides/Animation.pdf">Animation</a></li>
+	          	<li><a href="../../../slides/Methods.pdf">Methods</a></li>
+	          	<!--
+	          	<li><a href="../../../slides/Events.pdf">Events</a></li>
+							-->
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forms <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Survey</a></li>
+                <li><a href="https://forms.gle/eVsMyZb8HCSUETeV6">Sign in To Lab</a></li>
+	          </ul>
+	        </li>
+
+			
+	        <!-- Bonus button -->
+	        <ul class="nav navbar-nav">
+	            <li><a href="../../../en/bonus-index.html">Bonus</a></li>
+	        </ul>
+
+	        <!-- TA Link -->
+	        <ul class="nav navbar-nav navbar-right ta-only">
+	            <li><a href="../../../en/secret43.html">TA Page</a></li>
+	        </ul>
+
+	      </ul>
+
+	      
+	      <!--<ul class="nav navbar-nav navbar-right">
+	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../../img/english_flag.png"></img></a></li>
+	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../../img/turkish_flag.png"></img></a></li>
+	        
+	      </ul>-->
+	    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+
+</script>
+
+
+
+		<div class="container">
+			
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Music Cannon
+			</h1>
+			<p>
+				Created by Bryce Cronkite-Ratcliff
+			</p>
+            <p>
+				Handouts:
+				<a href ="../../../en/handouts/js/jsJSSyntax.html">JavaScript Syntax Handout</a>
+			</p>
+			
+
+		</div>
+		<hr/>
+
+<p>Clients! Servers! Music! Three great tastes that taste great together!</p>
+
+<p>Your mission is to write a client program that presents the user with a text box. When the
+        user enters the name of a note in the text box and presses the 'Enter' key, that note
+        is sent to our server and the server plays it!</p>
+        
+        <p><img src="../../../img/icons/jsCannon.jpg" alt="Random Circles"></p>
+
+<h3 id="toc_2">First thing to do!</h3>
+
+<p>Navigate to your Desktop, open the jsday3 folder, open the folder called musicCannon. Open <strong>index.html</strong> and <strong>musicCannon.js</strong> in Notepad++. Also open <strong>index.html</strong> in Google chrome</p>
+
+<h3 id="toc_3">Now create a text box</h3>
+
+<p>Create a text input box on the client's web page. You will add this in <strong>index.html</strong></p>
+        <p>To create an input box in HTML, use input tag: an example follows. The placeholder attribute sets the text that appears inside the box before the user enters anything; it is optional.</p>
+<pre><code>&lt;input type=&quot;text&quot; placeholder=&quot;Enter some text in this box!&quot;&gt;</code></pre>
+        
+        <h3 id="toc_4">Now write a callback</h3>
+        
+        <p>Now, in the <strong>musicCannon.js</strong> file, write a function that takes one parameter. Inside that function, let's do a push to our server using the parameter passed into
+        this function.</p>
+        
+        <p>The code to do a push has the following format:</p>
+        <pre><code>$.post( "http://A COOL URL", { A KEY: VALUE TO USE } );</code></pre>
+        <p>A COOL URL, A KEY, and VALUE TO USE are not real program values; they represent what we have to replace to make this code work in our specific program. <p>Now, in this program, our url is</p>
+    <pre>http://music-cannon.meteor.com/music</pre>
+    , our key is <strong>note</strong>, and our value is passed into the function as a parameter.
+    
+            <h3 id="toc_4">Now hook up the callback to your text box!</h3>
+    
+    <p>Now that we can push to the server, we need to hook up our text box to the function we just created so that when the text box entry changes, the function we wrote is called so that the data is passed to the server! We can do this with an event listener, much like we did with random circles. We just need to add the following to our input tag, where this.value is used to retrieve the current text inside the text box and pass it to the function</p>
+    <pre><code>&lt;input type=&quot;text&quot; onchange=&quot;NAME_OF_FUNCTION_THAT_PUSHES(this.value)&quot;&gt;</code></pre>
+    
+    <p>Make sure to put the right function name into the above code</p>
+    
+    <p>Now test your code! Try putting a lowercase note that is in the A blues scale into the text box, and listen carefully...</p>
+			
+			<!-- Footer -->
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2019 &#124; Created by 
+					<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
+					Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
+				</p>
+				<!--<p class="pull-right">
+					<a href="../../../fall12">Fall 2012</a>
+				</p>-->
+			</div>
+			<!--<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-35433298-1']);
+				_gaq.push(['_trackPageview']);
+				(function() {
+					var ga = document.createElement('script');
+					ga.type = 'text/javascript';
+					ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(ga, s);
+				})();
+			</script>-->
+
+		</div>
+	</body>
+</html>

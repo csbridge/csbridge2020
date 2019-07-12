@@ -1,13 +1,4 @@
-<head>
-
-  %include templates/parts/head.html
-
-
-</head>
-<body>
-
-  <!-- Navigation Bar -->
-  %include templates/parts/navBar.html
+% rebase('templates/en/template.ptl', title="MadLibs")
 
   <!-- Main Content -->
   <div class="container">
@@ -21,7 +12,7 @@
         Problem by Julia Lee and Bryce Cronkite-Ratcliff
       </p>
       <p>
-        Example: <a href="{{pathToRoot}}en/projects/madMax.html">MadMax</a>
+        Example: <a href="{{pathToRoot}}en/projects/madMethods.html">Mad Methods</a>
       </p>
 
     </div>
@@ -74,8 +65,3 @@
       </p>
       </div>
     </div>
-    
-    %include templates/parts/footer.html
-
-  </div>
-</body>
