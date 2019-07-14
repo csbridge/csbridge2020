@@ -20,7 +20,7 @@
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
 	          	<!--<li><a href="{{pathToRoot}}en/handouts/sections.html">Sections</a></li>-->
-	          	<li><a href="http://karel.csbridge.org/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="http://karel.csbridge.org/java/en/intro.html">Karel Reader</a></li>
 	          	<li><a href="{{pathToRoot}}en/handouts/karel.html">Karel Reference</a></li>	          	
           		<li class="visible-after" data-visible-after="2019071009"><a href="{{pathToRoot}}en/handouts/console.html">Console Reference</a></li>
           		<li class="visible-after" data-visible-after="2019071009"><a href="{{pathToRoot}}en/handouts/random.html">Random Generator Reference</a></li>
