@@ -93,19 +93,19 @@
 		<tbody>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/makingTracks.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/makingTracks.html">Making Tracks</a></td>
+				<td><a href="{{pathToRoot}}en/projects/makingTracks.html">Making Tracks (Lab)</a></td>
 				<td>Events</td>
 			</tr>
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mouseLocation.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/mouseLocation.html">Mouse Location</a></td>
+				<td><a href="{{pathToRoot}}en/projects/mouseLocation.html">Mouse Location (Lab)</a></td>
 				<td>Events</td>
 			</tr>
 
 			<tr class="visible-after" data-visible-after="2019071512">
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/catchMeIfYouCan.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/catchMeIfYouCan.html">Catch Me If You Can</a></td>
+				<td><a href="{{pathToRoot}}en/projects/catchMeIfYouCan.html">Catch Me If You Can (Section)</a></td>
 				<td>Instance Variables</td>
 			</tr>
 		</tbody>
