@@ -285,6 +285,8 @@
 	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
 	          	<li><a href="../../slides/Methods.pdf">Methods</a></li>
 	          	<li><a href="../../slides/Events.pdf">Events</a></li>
+	          	<li><a href="../../slides/Breakout.pdf">Breakout</a></li>
+	         
 	          </ul>
 	        </li>
 
@@ -561,8 +563,10 @@
 		// Subscribe to the demo_tutorial channel
 		pubnubDemo.addListener({
 		    message: function(request) {
-		    	let msg = request['message'];
+		    	let msg = request['message']
+		    	console.log(msg)
 		    	let swalData = msg['swal'];
+		    	console.log(swalData)
 	        Swal.fire(swalData)
 		    }
 		})
