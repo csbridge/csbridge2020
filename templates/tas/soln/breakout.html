@@ -65,8 +65,9 @@ Next, students should make the paddle and have it move with the mouse.  Students
 </p>
 
 <pre id="editor2" style="height:400px">
-// Creates the paddle and adds it at the bottom of the screen.  
-// Listens for mouse events
+/* Creates the paddle and adds it at the bottom of the screen.  
+ * Listens for mouse events.
+ */
 private void drawPaddle() {
     double x = getWidth() / 2 - PADDLE_WIDTH / 2; 
     double y = getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT;
@@ -76,8 +77,9 @@ private void drawPaddle() {
     addMouseListeners();
 }
 
-// The mouse should track the paddle (this implementation keeps 
-// the paddle center where the mouse is)
+/* The mouse should track the paddle (this implementation keeps 
+ * the paddle center where the mouse is).
+ */
 public void mouseMoved(MouseEvent e) {
     // If the mouse would not put the paddle offscreen, update the paddle location
     if ((e.getX() < getWidth() - PADDLE_WIDTH / 2) && (e.getX() > PADDLE_WIDTH / 2)) {
@@ -87,7 +89,40 @@ public void mouseMoved(MouseEvent e) {
 }</pre>
 
 <h3>Make The Ball Move</h3>
-<p>In progress</p>
+<p>This part is extremely similar to the bouncing ball example students previously worked on!  Students should add the ball at the center of the screen using the graphics skills they have already been practicing.  Then, they can store the vx and vy using instance variables (but do not have to), and initialize the velocity randomly.  Finally, they should animate the ball around the screen, bouncing off of all 4 walls (for now).  Here's what this implementation might look like:</p>
+
+<pre id="editor3" style="height:550px">
+private void addBall() {
+    ball = new GOval(2*BALL_RADIUS, 2*BALL_RADIUS);
+    ball.setFilled(true);
+    double x = getWidth() / 2 - BALL_RADIUS;
+    double y = getHeight() / 2 - BALL_RADIUS;
+
+    vy = 4.0;
+    vx = rgen.nextDouble(1.0, 3.0);
+    if (rgen.nextBoolean(0.5)) {
+        vx = -vx; 
+    }
+
+    add(ball, x, y);
+}
+
+// Loop the following in a while(true) loop
+private void moveBall() {
+    ball.move(vx, vy);
+
+    // Check if the ball has collided with the left/right walls and is going into them
+    if ((ball.getX() <= 0 && vx < 0) || (ball.getX() >= (getWidth() - BALL_RADIUS*2) && vx > 0)) {
+        vx = -vx;
+    }
+
+    // Check if the ball has collided with the top/bottom walls and is going into them
+    if ((ball.getY() <= 0 && vy < 0) || (ball.getY() >= (getHeight() - BALL_RADIUS*2) && vy > 0)) {
+        vy = -vy;
+    }
+
+    pause(DELAY);
+}</pre>
 
 <h3>Collisions</h3>
 <p>In progress</p>
