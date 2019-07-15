@@ -628,8 +628,10 @@ which might generate a ball going more or less straight down.  That would make l
 		// Subscribe to the demo_tutorial channel
 		pubnubDemo.addListener({
 		    message: function(request) {
-		    	let msg = request['message'];
+		    	let msg = request['message']
+		    	console.log(msg)
 		    	let swalData = msg['swal'];
+		    	console.log(swalData)
 	        Swal.fire(swalData)
 		    }
 		})

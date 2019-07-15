@@ -3,6 +3,17 @@
 
 	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+
+	<style>
+		#swalBox {
+			margin-bottom:20px;
+		}
+	</style>
+
 </head>
 <body>
 
@@ -12,7 +23,7 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Pubnub test
+				Published Alert Controller
 			</h1>
 			<p>
 				Written by Chris Piech
@@ -23,8 +34,28 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				
-				Test
+
+				<h3>About</h3>
+				<p>Each CSBridge page is listening to a channel which hosts alerts. This page lets you generate those alerts which will be rendered on every csbridge page which is open when you hit "send". The message you sent will be rendered using the SweetAlert2 javascript package.</p>
+				<p>If a student opens the page <i>after</i> you send the alert they will not see it (feature coming soon?)</p>
+
+				<h3>Swal Data</h3>
+
+				<textarea class="form-control" id="swalBox" rows="10">{
+"title": "Meet outside for break!",
+"html" : "<span style='font-size:24px'>Breaks help you recharge :-)</span><br/><br/><img style='max-width:100%' src='https://media.makeameme.org/created/break-time.jpg'></img>",
+"type": "success",
+"width":"400px",
+"confirmButtonText":"Ok, if I must...",
+"allowOutsideClick":false,
+"customClass": {
+    "confirmButton": "btn btn-success btn-lg"
+  },
+  "buttonsStyling": false
+}</textarea>
+<button class="btn btn-success btn-lg" onclick = "test()">Test</button>
+<button class="btn btn-success btn-lg" onclick = "send()">Send</button>
+
 
 			</div>
 		</div>
@@ -33,21 +64,27 @@
 		<!-- Instantiate PubNub -->
 		<script type="text/javascript">
 
-			console.log('start pubnub')
-		    var pub = new PubNub({
-		        publishKey: 'pub-c-2f6eb094-e393-4add-bf74-add9c1802cbd',
-		        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
-		    });
+			var pub = new PubNub({
+      	publishKey: 'pub-c-2f6eb094-e393-4add-bf74-add9c1802cbd',
+        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+		  });
 
+			function test() {
+				let dataStr = document.getElementById("swalBox").value;
+				let data = JSON.parse(dataStr);
+				Swal.fire(data)
+			}
+
+			function send() {
+		   	let dataStr = document.getElementById("swalBox").value;
+				let data = JSON.parse(dataStr);
 				pub.publish({
 				    message: {
-				    	"swal" : {
-					    	"title": "WARNING",
-					      "text" : "This computer will self destruct"
-					     }
+				    	"swal" : data
 				    },
 				    channel: 'csbridge_alert'
 				});
+			}
 
 		</script>
 

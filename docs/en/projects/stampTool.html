@@ -469,8 +469,10 @@ public class StampTool extends GraphicsProgram {
 		// Subscribe to the demo_tutorial channel
 		pubnubDemo.addListener({
 		    message: function(request) {
-		    	let msg = request['message'];
+		    	let msg = request['message']
+		    	console.log(msg)
 		    	let swalData = msg['swal'];
+		    	console.log(swalData)
 	        Swal.fire(swalData)
 		    }
 		})
