@@ -253,9 +253,11 @@
 	        </ul>
 
 	        <!-- TA Link -->
-	        <ul class="nav navbar-nav navbar-right ta-only">
-	            <li><a href="{{pathToRoot}}sls">TA Page</a></li>
-	        </ul>
+	        % if get('taMode', False):
+		        <ul class="nav navbar-nav navbar-right">
+		            <li><a href="{{pathToRoot}}sls">TA Page</a></li>
+		        </ul>
+		    % end
 
 	      </ul>
 
