@@ -34,7 +34,7 @@ div class="ta-only">
 </div>
 ```
 
-The script that handles this functionality is in `docs/js/index.js`.
+The script that handles this functionality is in `docs/js/index.js`.  However, this is the _obfuscated version_.  The normal version can be found in `js/index.js`.  If you change this file, you can re-obfuscate it and copy the obfuscated version into `docs/js/index.js` by running `npm run obfuscate`.
 
 
 ## Handling Student Submissions
