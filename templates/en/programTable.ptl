@@ -105,7 +105,11 @@
 
 			<tr class="visible-after" data-visible-after="2019071512">
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/catchMeIfYouCan.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/catchMeIfYouCan.html">Catch Me If You Can (Section)</a></td>
+				<td><a href="{{pathToRoot}}en/projects/catchMeIfYouCan.html">Catch Me If You Can (Section)</a>
+					<div class="ta-only">
+						<br><a href="{{pathToRoot}}sls/soln/catchMeIfYouCan.html">TA Solution</a>
+					</div>
+				</td>
 				<td>Instance Variables</td>
 			</tr>
 		</tbody>
