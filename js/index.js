@@ -25,7 +25,7 @@ until later, are visible.
 */
 $(document).ready(function(){
 	var urlParams = new URLSearchParams(window.location.search);
-	var isTAMode = urlParams.get('ta');
+	var isTAMode = urlParams.get('ta') == "csbridgectu";
 
 	// If the URL param is included, it will be a string (maybe empty)
 	if (isTAMode == null) {
