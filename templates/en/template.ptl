@@ -1,16 +1,16 @@
 <!--
 	A template used for every English page - contains the nav bar, a container div, and the footer.
 -->
-% rebase('templates/template.ptl', title=title)
+% rebase('templates/template.ptl', title=title, taMode=get('taMode', False))
 
 <!-- Navigation Bar -->
-%include templates/en/navBar.ptl
+% include('templates/en/navBar.ptl', taMode=get('taMode', False))
 
 <div class="container">
 	
 	{{!base}}
 			
 	<!-- Footer -->
-	%include templates/en/footer.ptl
+	% include('templates/en/footer.ptl', taMode=get('taMode', False))
 
 </div>

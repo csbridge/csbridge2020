@@ -304,9 +304,9 @@
 	        </ul>
 
 	        <!-- TA Link -->
-	        <ul class="nav navbar-nav navbar-right ta-only">
-	            <li><a href="../sls">TA Page</a></li>
-	        </ul>
+		        <ul class="nav navbar-nav navbar-right">
+		            <li><a href="../sls">TA Page</a></li>
+		        </ul>
 
 	      </ul>
 
@@ -350,10 +350,10 @@
 	<div class="row">
 		<div class="col-md-12">
 
-			<h3>Links</h3>
-      <p>
+			<h2>Links</h2>
+      <!-- <p>
         Student final projects <a href="https://docs.google.com/spreadsheets/d/1cr7OHhBe3bSmdZA4BY1KneayTXUs0EAe6qQ36SaqRiM/edit?usp=sharing">spreadsheet</a>
-      </p>
+      </p> -->
 			<p>
 				Link with <a href="https://docs.google.com/spreadsheets/d/1Xn85dTuDvvPShgjOFxpdMO7RgXnZdNUG5-8OvyNEHcc/edit?usp=drive_web&ouid=110737593555713128053">schedule</a>
 			</p>
@@ -362,841 +362,372 @@
 				Link with <a href="https://docs.google.com/document/d/1L4cZhvFkKIgsjtRundc5Ad7JntTiAR94vTiyEDPL15c/edit?usp=sharing">best practices</a>
 			</p>
 
-          <div class="row">
-            <div class="col-md-12">
-              <h2>Section Leader Training Document</h2>
-              <p><a href="https://docs.google.com/presentation/d/1aw54GKBcYWBFVoApj0nFoGQ9vh8bZN4g7odTV3nPbqI/edit?usp=sharing">Google Slides</a></p>
+      <p>Section leader training document: <a href="https://docs.google.com/presentation/d/1aw54GKBcYWBFVoApj0nFoGQ9vh8bZN4g7odTV3nPbqI/edit?usp=sharing">Google Slides</a></p>
 
-              <h2>Section Handouts and Solutions</h2>
-              <p><a href="https://drive.google.com/drive/folders/0B5i66vtCb-ENcTNqS2p4aVBJVW8">Handouts Directory</a></p>
+      <p>Section handouts and solutions: <a href="https://drive.google.com/drive/folders/0B5i66vtCb-ENcTNqS2p4aVBJVW8">Handouts Directory</a></p>
 
-              <!--<h2>Pre-survey for Lab 1, Day 1:</h2>
-              <p>tiny dot cc slash csbridge2019koc</a></p>
-              -->
+      <!--<h2>Pre-survey for Lab 1, Day 1:</h2>
+      <p>tiny dot cc slash csbridge2019koc</a></p>
+      -->
 
-              <h2>Daily reflections (during Team Meeting)</h2>
-              <p><a href="http://tiny.cc/dailyreflectionform">tiny.cc/dailyreflectionform</a></p>
-              <h2>Awesome SL document you should add to!</h2>
-              <p><a href="https://docs.google.com/document/d/1L4cZhvFkKIgsjtRundc5Ad7JntTiAR94vTiyEDPL15c/edit?usp=sharing">Best Practices and Good Ideas for Section Leading</a></p>
-            </div>
-          </div>
+      <!-- <h2>Daily reflections (during Team Meeting)</h2>
+      <p><a href="http://tiny.cc/dailyreflectionform">tiny.cc/dailyreflectionform</a></p> -->
+      <p>Awesome SL document you should add to! <a href="https://docs.google.com/document/d/1L4cZhvFkKIgsjtRundc5Ad7JntTiAR94vTiyEDPL15c/edit?usp=sharing">Best Practices and Good Ideas for Section Leading</a></p>
 
       <div class="alert alert-success">
-        <b>Remember</b>: At the start of each lab have students sign in. Furmularios > Ingresar. You will have to make up a special password each time (tiger, malaysia, tamales etc) and count the number of students.
+        <b>Remember</b>: At the start of each lab have students sign in via the Forms dropdown. You will have to make up a special password each time (tiger, malaysia, tamales etc) and count the number of students.
       </div>
-
-      <h2>Tuesday (July 9th)</h2>
-
-      <h3>Section </h3>
-      <p>Problem: <a href="../en/projects/efes.html">Charles Bridge</a></p>
-      <p>Teaching tips:
-        <ol>
-          <li>Learning goal: For loops and decomposition
-          <li>Milestone: build a single column.
-          <li>Write code on the board. Start with pseudocode, turn to real code
-          <li>Encourage students to work in pairs to program out the milestones.
-          <li>The hardest part is the fence-post bug when building a col.
-        </ol>
-      </p>
-      <p>Solution:
-        <pre>
-/* BuildCharlesBridge
- * Author: CSBridge Prague
- * Implements a program where Karel fills columns with beepers in order to
- * repair the Charles Bridge. Columns are 4 steps apart and each have a
- * height of 5.
- */
-
-import stanford.karel.*;
-
-public class BuildCharlesBridge extends SuperKarel {
-  
-  public void run() {
-        for (int i = 0; i < 3; i++) {
-            buildColumn();
-            moveToNextColumn();
-        }
-        // need to build the last column without moving further east
-        buildColumn();
-  }
-
-    /* Method: buildColumn
-     * -------------------
-     * Fills a column (of height 5) with beepers.
-     * Precondition: Karel is facing east at the bottom of an empty column.
-     * Postcondition: Karel is facing east at the bottom of the column, which
-     * is now filled with beepers. 
-     */
-    private void buildColumn() {
-        turnLeft();
-        placeBeepersUp();
-        comeBackDown();
-        turnLeft();
-    }
-
-    /* Method: placeBeepersUp
-     * ----------------------
-     * Puts 5 beepers vertically in a column (of height 5).
-     * Precondition: Karel is facing north at the bottom of the column.
-     * Postcondition: Karel is facing north at the top of the column, which
-     * is now filled with beepers.
-     */
-    private void placeBeepersUp() {
-        for (int i = 0; i < 4; i++) {
-            putBeeper();
-            move();
-        }
-        // need to put the last beeper without moving further north
-        putBeeper();
-    }
-
-    /* Method: comeBackDown
-     * --------------------
-     * Returns Karel to the bottom of a column of height 5.
-     * Precondition: Karel is facing north at the top of the column.
-     * Postcondition: Karel is facing south at the bottom of the column.
-     */
-    private void comeBackDown() {
-        turnLeft();
-        turnLeft();
-        for (int i = 0; i < 4; i++) {
-            move();
-        }
-    }
-
-    /* Method: moveToNextColumn
-     * ------------------------
-     * Moves Karel from the bottom of one column to the bottom of the next one,
-     * which is 4 spaces to the east.
-     * Precondition: Karel is facing east at the bottom of one column.
-     * Postcondition: Karel is facing east at the bottom of the next column.
-     */
-    private void moveToNextColumn() {
-        for (int i = 0; i < 4; i++) {
-            move();
-        }
-    }
-}
-        </pre>
-      </p>
-
-      <h3>Lab </h3>
-      <p>Problem: <a href="../en/projects/mountain.html">Mountain Karel</a></p>
-      <p>Teaching tips:
-        <ol>
-          <li>Learning goal: while loops and decomposition
-          <li>Milestone: Ascend the mountain
-          <li>Encourage students to think about what high level commands might be useful for Karel to know to solve the problem.  Then implement those using lower-level Karel commands.
-          <li>The hardest part is looping to ascend and descend the mountain, knowing the condition to use and what step to take each time.
-        </ol>
-      </p>
-      <p>Solution:
-        <pre>import stanford.karel.*;
-
-/* This program has Karel ascend a mountain,
- * place a beeper at the top, and then descend
- * a mountain.  The mountain consists of 1 or more
- * 1-level steps.
- */
-public class Mountain extends SuperKarel {
-  
-  public void run() {
-    while (frontIsBlocked()) {
-        stepUpMountain();
-    }
-    putBeeper();
-    while (frontIsClear()) {
-        stepDownMountain();
-    }
-  }
-  
-  /* Karel makes one step up a level of the mountain.
-   * At the start of the method, Karel is assumed to be
-   * facing east towards a wall of the mountain with room
-   * above to go to the next level of the mountain.  At the
-   * end of the method, Karel is facing east towards a wall
-   * of the mountain one level above where Karel started.
-   */
-  private void stepUpMountain() {
-      turnLeft();
-      move();
-      turnRight();
-      move();
-  }
-  
-  /* Karel makes one step down a level of the mountain.
-     * At the start of the method, Karel is assumed to be
-     * facing east towards the direction where the mountain descends,
-     * with room below to go to the previous level of the mountain.
-     * At the end of the method, Karel is facing east towards the direction
-     * where the mountain descends, one level below where Karel started.
-     */
-  private void stepDownMountain() {
-      move();
-      turnRight();
-      move();
-      turnLeft();
-  }
-}
-</pre></p>
-
-    <p>Problem: <a href="../en/projects/randomPainter.html">Random Painter</a></p>
-    <p>Teaching tips:
-      <ol>
-        <li>Learning goal: if statements, loops and decomposition
-        <li>Milestone: Paint one row
-        <li>Encourage students to think about what high level commands might be useful for Karel to know to solve the problem.  Then implement those using lower-level Karel commands.
-        <li>The hardest part is looping between rows, and approaching a larger program.
-      </ol>
-    </p>
-    <p>Solution:
-      <pre>import stanford.karel.*;
-
-/* Karel paints the entire world randomly, with each
- * corner being randomly either green or blue.  This
- * program works for a world of any size.
- */
-public class RandomPainter extends SuperKarel {
-  
-  public void run() {
-      /* Every world has at least 1 row.  Paint this,
-       * then paint any additional rows.
-       */
-    paintRow();
-    while (frontIsClear()) {
-        moveToNextRow();
-        paintRow();
-    }
-  }
-
-  /* Karel paints a single row in the world, with each
-   * square being painted randomly blue or green.
-   * At the start of the method, Karel is assumed to be
-   * at the leftmost corner of the row facing East.
-   * After the method finishes, Karel will be at the
-   * leftmost corner of the row facing North, and the
-   * row will be randomly colored.
-   */
-  private void paintRow() {
-      paintCornerRandomly();
-      while (frontIsClear()) {
-          move();
-          paintCornerRandomly();
-      }
-      
-      goBackToStart();
-      turnRight();
-  }
-  
-  /* Karel randomly paints the corner she is on to be
-   * either green or blue.
-   */
-  private void paintCornerRandomly() {
-      if (random()) {
-          paintCorner(BLUE);
-      } else {
-          paintCorner(GREEN);
-      }
-  }
-  
-  /* Karel returns to the leftmost corner of the
-   * current row.  Before the method starts, Karel
-   * is assumed to be at the rightmost corner of a row
-   * facing East.  After the method finishes, Karel
-   * will be at the leftmost corner of the same row 
-   * facing West.
-   */
-  private void goBackToStart() {
-      turnLeft();
-      turnLeft();
-      while (frontIsClear()) {
-          move();
-      }
-  }
-  
-  /* Karel moves up one row in the world.  Before the
-   * method starts, Karel is assumed to be at the leftmost
-   * corner of a row facing North.  After the method finishes,
-   * Karel will be in the square above the starting corner,
-   * facing East.
-   */
-  private void moveToNextRow() {
-      move();
-      turnRight();
-  }
-}</pre>
-
-      <!--<hr/>
-
-      <h2>Wednesday (3rd July)</h2>
-
-      <p>Soln:
-        <pre>public class Lluvia extends EsGraphics {
-
-  private static final int TAMANO = 20;
-  private ArrayList<SOvalo> listaLluvia = new ArrayList<SOvalo>();
-
-  public void run() {
-    while(true) {
-      // update world
-      crearNuevo();
-      moverLluvia();
-      // pause
-      pausa(10);
-    }
-  }
-
-  private void moverLluvia() {
-    for(int i = 0; i < listaLluvia.size(); i++) {
-      SOvalo proximo = listaLluvia.get(i);
-      if(proximo.darY() + TAMANO < darAlto()) {
-        proximo.moverse(0, 1);
-      }
-    }
-  }
-
-  private void crearNuevo() {
-    // make a new snowflake with 10% probability
-    if(booleanAleatorio(0.10)) {
-      int x = intAleatorio(0, getWidth() - TAMANO);
-      SOvalo nuevo = new SOvalo(TAMANO, TAMANO);
-      nuevo.cambiarFilled(true);
-      // agregar al la pantalla
-      agregar(nuevo, x, -TAMANO);
-      // agregar al la lista
-      listaLluvia.add(nuevo);
-    }
-  }
-}</pre>
-
-      <h2>Tuesday (2nd July)</h2>
-      <p> Code for client-server demos. NOT intended for students to see :-) </p>
-      <a href="../starter/Internet.zip">Internet.zip</a>
-
-      <h2>Monday (1st July)</h2>
-
-      <p>Section pro tips
-        <ol>
-          <li>Learning goal: Atributes + darObjectoEn
-          <li>Milestone 1: Draw the scene without any extras (just the furtivo). 
-          <li>Milestone 2: add mouse listeners
-          <li>Milestone 3: detect when the mouse touches the "furtivo"
-          <li>Milestone 4: rehide the "furtivo". 
-          <li>Milestone 5: add the extras. 
-          <li>Write code on the board. Try to not use pseudocode!
-          <li>Encourage students to work in pairs to program out the milestones.
-          <li>The hardest part is detecting if you have touched the "futivo"
-          <li>Tip: There is a lot of code here. If you can give the students 2 mins to chat while you set up the code on the board, you can start with some code and organize the board.
-        </ol>
-      </p>
-
-      <p>Question: <a href="..//es/projects/catchMeIfYouCan.html">link</a>.
-
-      <p>Solution:<br/>
-        <pre>public class AtrapameSiPuedes extends EsGraphics {
-  private static final double TAMANO_FURTIVO = 70;
-  private static final double TAMANO_EXTRAS = 50;
-  private static final double N_EXTRAS = 20;
-  
-  private SRect furtivo;
-  
-  public void run() {
-    agregarFurtivo();
-    agregarExtras();
-    agregarMouseListeners();
-  }
-  
-  public void mouseMovido(MouseEvento e) {
-    int mouseX = e.darX();
-    int mouseY = e.darY();
-    SObjeto objecto = darObjetoEn(mouseX, mouseY);
-    if(objecto == furtivo) {
-      furtivoAleatorio();
-    }
-  }
-  
-  private void agregarFurtivo() {
-    furtivo = new SRect(TAMANO_FURTIVO,TAMANO_FURTIVO);
-    agregar(furtivo);
-    furtivo.cambiarRelleno(true);
-    furtivo.cambiarColor(Color.BLUE);
-    furtivoAleatorio();
-  }
-
-  private void furtivoAleatorio() {
-    double x = doubleAleatorio(0, getWidth() - TAMANO_FURTIVO);
-    double y = doubleAleatorio(0, getHeight() - TAMANO_FURTIVO);
-    furtivo.cambiarUbicacion(x, y);
-  }
-
-  private void agregarExtras() {
-    for (int i = 0; i < N_EXTRAS; i++) {
-      agregarExtra();
-    }
-  }
-  
-  /* Crea una sola pieza de escombros y la agrega a 
-   * la pantalla. */
-  private void agregarExtra() {
-    double x = doubleAleatorio(0, getWidth() - TAMANO_EXTRAS);
-    double y = doubleAleatorio(0, getHeight() - TAMANO_EXTRAS);
-    
-    SRect r = new SRect(x, y, TAMANO_EXTRAS, TAMANO_EXTRAS);
-    r.cambiarRelleno(true);
-    add(r);
-  }
-
-}</pre>
-</p>
-
-<p><b>Breakout soln</b></p>
-<pre>import java.awt.Color;
-import espl.*;
-
-public class EscaparseSoln extends EsGraphics {
-
-  /* variables */ 
-  private double vx = 0;
-  private double vy = 0;
-  private int contadorLadrillos = NFILAS * NLADRILLOS_POR_FILA;
-  private SOvalo pelota = null;
-  private SRect pala = null;
-
-  public void run() {
-    iniciarJuego();
-    for(int i=0; i < NTURNOS; i++) {
-      hacerJuego();
-      if(contadorLadrillos == 0) {
-        break;
-      }
-    }
-    mostrarFin();
-  }
-
-  private void mostrarFin() {
-    quitarTodo();
-    pelota.cambiarVisible(false);
-    if(contadorLadrillos > 0) {
-      imprimirPerdida();
-    } else {
-      imprimirGana();
-    }
-  }
-
-  private void iniciarJuego() {
-    pelota = new SOvalo(PELOTA_RADIO, PELOTA_RADIO);
-    pelota.cambiarRelleno(true);
-    dibujarLadrillos();
-    dibujarPala();
-  }
-
-  private void dibujarLadrillos() { 
-    double cx = darAncho() / 2;
-    double cy = LADRILLO_Y_OFFSET;
-    for(int fila = 0; fila < NFILAS; fila++ ) {
-      for(int columna = 0; columna < NLADRILLOS_POR_FILA; columna++) {
-        double x = cx - (NLADRILLOS_POR_FILA*LADRILLO_ANCHO)/2 - ((NLADRILLOS_POR_FILA-1)*LADRILLO_SEP)/2 + columna*LADRILLO_ANCHO + columna*LADRILLO_SEP;
-        double y = cy + fila * LADRILLO_ALTURA + fila*LADRILLO_SEP;
-        SRect ladrillo = new SRect(x, y, LADRILLO_ANCHO, LADRILLO_ALTURA);
-        ladrillo.cambiarRelleno(true);
-        ladrillo.cambiarColor(darLadrilloColor(fila));
-        agregar(ladrillo);
-      }
-    }
-  }
-
-  private Color darLadrilloColor(int fila) {
-    if (fila < 2) {
-      return Color.RED;
-    }
-    if (fila == 2 || fila == 3) {
-      return Color.ORANGE;
-    }
-    if (fila == 4 || fila == 5) {
-      return Color.YELLOW;
-    }
-    if (fila == 6 || fila == 7) {
-      return Color.GREEN;
-    }
-    if (fila == 8 || fila == 9) {
-      return Color.CYAN;
-    }
-    return Color.BLACK;
-  }
-
-  //paddle set-up
-  private void dibujarPala() {
-    double x = darAncho()/2 - PALETA_ANCHO/2; 
-    double y = darAlto() - PALETA_Y_OFFSET - PALETA_ALTURA;
-    pala = new SRect (x, y, PALETA_ANCHO, PALETA_ALTURA);
-    pala.cambiarRelleno(true);
-    agregar(pala);
-    agregarMouseListeners();
-  }
-
-  //making the mouse track the paddle
-  public void mouseMovido(MouseEvento e) {
-    if ((e.darX() < darAncho() - PALETA_ANCHO/2) && (e.darX() > PALETA_ANCHO/2)) {
-      double newX = e.darX() - PALETA_ANCHO/2;
-      double newY = darAlto() - PALETA_Y_OFFSET - PALETA_ALTURA;
-      pala.cambiarUbicacion(newX, newY);
-    }
-  }
-
-  //ball set-up
-  private void agregarPelota() {
-    double x = darAncho()/2 - PELOTA_RADIO;
-    double y = darAlto()/2 - PELOTA_RADIO;
-    agregar(pelota, x, y);
-  }
-
-  private void hacerJuego() {
-    agregarPelota();
-    darPelotaVelocidad();
-    esperarClic();
-    while (true) {
-      moverPelota();
-      if (pelota.darY() >= darAlto()) {
-        break;
-      }
-      if(contadorLadrillos == 0) {
-        break;
-      }
-    }
-  }
-
-  private void darPelotaVelocidad() {
-    vy = 4.0;
-    vx = doubleAleatorio(1.0, 3.0);
-    if (booleanAleatorio(0.5)) {
-      vx = -vx; 
-    }
-
-  }
-
-  private void moverPelota() {
-    pelota.moverse(vx, vy);
-    //check for walls
-    //need to get vx and vy at the point closest to 0 or the other edge
-    if ((pelota.darX() - vx <= 0 && vx < 0 )|| (pelota.darX() + vx >= (darAncho() - PELOTA_RADIO*2) && vx>0)) {
-      vx = -vx;
-    }
-    //We don't need to check for the bottom wall, since the ball can fall through the wall at that point
-    if ((pelota.darY() - vy <= 0 && vy < 0 )) {
-      vy = -vy;
-    }
-
-    //check for other objects
-    SObjeto objetoChocando = darObjetoChocando();
-    if (objetoChocando == pala) {
-      vy = -Math.abs(vy);
-    }
-    else if (objetoChocando != null) {
-      quitar(objetoChocando); 
-      contadorLadrillos--;
-      vy = -vy;
-    }
-    pausa (RETRASO);
-  }
-
-
-  private SObjeto darObjetoChocando() {
-
-    if((darObjetoEn(pelota.darX(), pelota.darY())) != null) {
-      return darObjetoEn(pelota.darX(), pelota.darY());
-    }
-    else if (darObjetoEn( (pelota.darX() + PELOTA_RADIO*2), pelota.darY()) != null ){
-      return darObjetoEn(pelota.darX() + PELOTA_RADIO*2, pelota.darY());
-    }
-    else if(darObjetoEn(pelota.darX(), (pelota.darY() + PELOTA_RADIO*2)) != null ){
-      return darObjetoEn(pelota.darX(), pelota.darY() + PELOTA_RADIO*2);
-    }
-    else if(darObjetoEn((pelota.darX() + PELOTA_RADIO*2), (pelota.darY() + PELOTA_RADIO*2)) != null ){
-      return darObjetoEn(pelota.darX() + PELOTA_RADIO*2, pelota.darY() + PELOTA_RADIO*2);
-    }
-    //need to return null if there are no objects present
-    else{
-      return null;
-    }
-
-  }
-
-  private void imprimirPerdida() {
-    SLabel finPartido = new SLabel ("FIN", darAncho()/2, darAlto()/2);
-    finPartido.moverse(-finPartido.darAncho()/2, -finPartido.darAlto());
-    finPartido.cambiarColor(Color.RED);
-    add (finPartido);
-  }
-
-
-  private void imprimirGana() {
-    SLabel ganador = new SLabel ("Ganador!!", darAncho()/2, darAlto()/2);
-    ganador.moverse(-ganador.darAncho()/2, -ganador.darAlto());
-    ganador.cambiarColor(Color.RED);
-    add (ganador);
-  }
-
-  /** Width and height of application window in pixels */
-  public static final int APPLICATION_WIDTH = 400;
-  public static final int APPLICATION_HEIGHT = 600;
-
-  /** Constantes para la paleta */
-  private static final int PALETA_ANCHO = 60;
-  private static final int PALETA_ALTURA = 10;
-  private static final int PALETA_Y_OFFSET = 30;
-
-  /** Constantes para las filas */
-  private static final int NLADRILLOS_POR_FILA = 10;
-  private static final int NFILAS = 10;
-
-  /** Constantes para las ladrillos */
-  private static final int LADRILLO_SEP = 4;
-  private static final int LADRILLO_ANCHO =
-      (APPLICATION_WIDTH - (NLADRILLOS_POR_FILA - 1) * LADRILLO_SEP) / NLADRILLOS_POR_FILA;
-  private static final int LADRILLO_ALTURA = 8;
-  private static final int LADRILLO_Y_OFFSET = 70;
-
-  /** Constantes para la pelota */
-  private static final int PELOTA_RADIO = 10;
-
-  /** Numero de turnos */
-  private static final int NTURNOS = 3;
-
-  /** Retraso de la animación o tiempo de pausa entre movimientos de la pelota. */  
-  private static final int RETRASO = 10;
-
-
-}</pre>
-
-<hr/>
-<div style="height:200px"></div>
-
-      <h2>Friday (28th June)</h2>
-
-      <h3>Target section</h3>
-
-      <p>Problem: <a href="..//es/projects/target.html">/es/projects/target.html</a></p>
-      <p>Solution:<br/>
-        <pre>public class Target extends EsGraphics {
-
-  public void run() {
-    dibujarCirculoCentrado(150, Color.RED);
-    dibujarCirculoCentrado(100, Color.WHITE);
-    dibujarCirculoCentrado(50, Color.RED);
-  }
-
-  private void dibujarCirculoCentrado(int radius, Color color) {
-    SOvalo circulo = new SOvalo(radius * 2, radius * 2);
-    double x = (darAncho() - circulo.darAncho()) / 2;
-    double y = (darAlto() - circulo.darAlto()) / 2;
-    circulo.cambiarRelleno(true);
-    circulo.darColor(color);
-    agregar(circulo, x, y);
-  }
-
-}</pre>
-      </p>
-
-      <hr/>
-
--->
-		</div>
-	</div>
-
-
-   <!-- Main Content -->
-   <div class="container">
-
-      <!-- Header -->
-      <div id="pageHeader">
-         <h1>
-            Day 1 Solutions
-         </h1>
-            
-
-      </div>
-      <hr/>
-      <div class="row">
-         <div class="col-md-12">
-            <h2>Collect Newspaper</h2>
-
-            <p>Strongly encourage students to define useful methods</p>
-
-<pre class="well" style="background:white">public CollectNewspaperKarel extends Karel {
-   public void run() {
-      moveToNewspaper();
-      pickUpNewspaper();
-      returnToHouse();
-   }
-
-   private void moveToNewspaper() {
-      move();
-      move();
-      turnRight();
-      move();
-      turnLeft();
-      move();
-   }
-
-   private void pickUpNewspaper() {
-      pickBeeper();
-   }
-
-   private void returnToHouse() {
-      turnAround();
-      move();
-      move();
-      move();
-      turnRight();
-      move();
-      turnRight();
-   }
-
-   private void turnAround() {
-      turnLeft();
-      turnLeft();
-   }
-
-   private void turnRight() {
-      turnLeft();
-      turnLeft();
-      turnLeft();
-   }
-}</pre>
-         </div>
-      </div>
-
-      <div class="row">
-         <div class="col-md-12">
-            <h2>Build Effes</h2>
-
-            <p>Make sure students use for loops</p>
-
-<pre class="well" style="background:white">public class BuildEfes extends SuperKarel {
-   
-   public void run() {
-      for(int i = 0; i < 3; i++) {
-         buildColumn();
-         moveToNextColumn();
-      }
-      buildColumn();
-   }
-   
-   private void buildColumn() {
-      turnLeft();
-      for (int i = 0; i < 4; i++) {
-         putBeeper();
-         move();
-      }
-      putBeeper();
-      
-      // Karel Descends the Column
-      turnAround();
-      for (int i = 0; i < 4; i++) {
-         move();
-      }
-      turnLeft();
-   }
-   
-   private void moveToNextColumn() {
-      for (int i = 0; i < 4; i++) {
-         move();
-      }
-   }
-}</pre>
-         </div>
-      </div>
-
-      <div class="row">
-         <div class="col-md-12">
-            <h2>Mountain Karel</h2>
-
-            <p>Make sure students use for loops</p>
-
-<pre class="well" style="background:white">public class MountainKarel extends SuperKarel {
-   public void run() {
-      while (frontIsBlocked()) {
-         stepUp();
-      }
-      putBeeper();
-      move();
-      while (rightIsClear()) {
-         dropDown();
-      }
-   }
-
-   private void dropDown() {
-      turnRight();
-      move();
-      turnLeft();
-      if (frontIsClear()) {
-         move();
-      }
-   }
-
-   private void stepUp() {
-      turnLeft();
-      move();
-      turnRight();
-      move();
-   }
-
-   private void stepDown() {
-      move();
-      turnRight();
-      move();
-      turnLeft();
-   }
-}</pre>
-         </div>
-      </div>
-
-      <div class="row">
-         <div class="col-md-12">
-            <h2>Random Painter</h2>
-
-            <p>Make sure students use for loops</p>
-
-<pre class="well" style="background:white">public class RandomPainter extends SuperKarel {
-   
-   public void run() {
-      paintRow();
-      returnToWest();
-      while(leftIsClear()) {
-         turnLeft();
-         move();
-         turnRight();
-         paintRow();
-         returnToWest();
-      }
-   }
-
-   private void paintRow() {
-      while(frontIsClear()) {
-         paintSquare();
-         move();
-      }
-      paintSquare();
-   }
-
-   private void paintSquare() {
-      if(random()) {
-         paintCorner(GREEN);
-      } else {
-         paintCorner(BLUE);
-      }
-   }
-
-   private void returnToWest() {
-      turnAround();
-      while(frontIsClear()) {
-         move();
-      }
-      turnAround();
-   }
-}</pre>
-         </div>
-      </div>
+    </div>
+  </div>
+
+  <h2> Full Schedule With Solutions</h2>
+<!-- Final Project -->
+<div 
+>
+
+	<h4>Days 7-8: Final Project (<a href="../starter/BlankJavaProject.zip">Eclipse Project Here</a>)</h4>
+	<table class="table table-striped">
+
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Topic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img class="projectImg" src="../img/icons/project.png"></img></td>
+				<td><a href="../en/projects/project.html">Make Your Own</a></td>
+				<td>All</td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+</div>
+
+<!-- Day 7: ArrayLists -->
+<div 
+>
+	<h4>Day 7: ArrayLists + HashMaps (<a href="../starter/Day7.zip">Eclipse Project Here</a>)</h4>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Topic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img class="projectImg" src="../img/icons/numbers.jpg"></img></td>
+				<td><a href="../en/projects/sortedNumbers.html">Sorted Numbers</a></td>
+				<td>ArrayLists</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/snow.png"></img></td>
+				<td><a href="../en/projects/snow.html">Snow</a></td>
+				<td>ArrayLists</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/mouseGame.png"></img></td>
+				<td><a href="../en/projects/mouseGame.html">[Optional] The Line</a></td>
+				<td>ArrayLists</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/music3.jpg"></img></td>
+				<td><a href="../en/projects/music.html">[Optional] Waves of Sound</a></td>
+				<td>ArrayLists</td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+</div>
+<!-- Days 5-6: Breakout -->
+<div 
+>
+	<h4>Days 5-6: Breakout (<a href="../starter/Breakout.zip">Eclipse Project Here</a>)</h4>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Topic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img class="projectImg" src="../img/icons/breakout.jpg"></img></td>
+				<td><a href="../en/projects/breakout.html">Breakout!</a></td>
+				<td>Interactors</td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+</div>
+
+<!-- Day 5 -->
+<div 
+>
+	<h4>Day 5: Events (<a href="../starter/Day5.zip">Eclipse Project Here</a>)</h4>
+	<table class="table  table-striped">
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Topic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img class="projectImg" src="../img/icons/makingTracks.png"></img></td>
+				<td><a href="../en/projects/makingTracks.html">Making Tracks (Lab)</a>
+						<br><a href="../sls/soln/makingTracks.html">TA Solution</a>
+				</td>
+				<td>Events</td>
+			</tr>
+
+			<tr>
+				<td><img class="projectImg" src="../img/icons/mouseLocation.png"></img></td>
+				<td><a href="../en/projects/mouseLocation.html">Mouse Location (Lab)</a>
+						<br><a href="../sls/soln/mouseLocation.html">TA Solution</a>
+				</td>
+				<td>Events</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/catchMeIfYouCan.png"></img></td>
+				<td><a href="../en/projects/catchMeIfYouCan.html">Catch Me If You Can (Section)</a>
+						<br><a href="../sls/soln/catchMeIfYouCan.html">TA Solution</a>
+				</td>
+				<td>Instance Variables</td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+</div>
+
+<!-- Day 4 -->
+<div 
+>
+	<h4>Day 4: Methods and Advanced Java (<a href="../starter/Day4.zip">Eclipse Project Here</a>)</h4>
+	<table class="table  table-striped">
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Topic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img class="projectImg" src="../img/icons/madMax.jpg"></img></td>
+				<td><a href="../en/projects/madMethods.html">Mad Methods</a>
+						<br><a href="../sls/soln/madMethods.html">TA Solution</a>
+				</td>
+				<td>Params and Returns</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/target.png"></img></td>
+				<td><a href="../en/projects/target.html">Target</a>
+						<br><a href="../sls/soln/target.html">TA Solution</a>
+				</td>
+				<td>Parameters</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/illusion.png"></img></td>
+				<td><a href="../en/projects/illusion.html">Optical Illusion</a>
+						<br><a href="../sls/soln/illusion.html">TA Solution</a>
+				</td>
+				<td>For Loops</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/sunset.png"></img></td>
+				<td><a href="../en/projects/sunset.html">Short Film</a>
+						<br><a href="../sls/soln/sunset.html">TA Solution</a>
+				</td>
+				<td>Params and Returns</td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+</div>
+
+<!-- Day 3 -->
+<div 
+>
+	<h4>Day 3: Graphics (<a href="../starter/Day3.zip">Eclipse Project Here</a>)</h4>
+	<table class="table  table-striped">
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Topic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img class="projectImg" src="../img/icons/awesome.png"></img></td>
+				<td><a href="../en/projects/awesome.html">Programing is Awesome</a>
+						<br><a href="../sls/soln/awesome.html">TA Solution</a>
+				</td>
+				<td>Graphics</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/mysterySquare.png"></img></td>
+				<td><a href="../en/projects/mysterySquare.html">Mystery Square</a>
+						<br><a href="../sls/soln/mysterySquare.html">TA Solution</a>
+				</td>
+				<td>Randomness</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/stringArt.png"></img></td>
+				<td><a href="../en/projects/stringArt.html">String Art</a>
+						<br><a href="../sls/soln/stringArt.html">TA Solution</a>
+				</td>
+				<td>For Loops</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/randomCircles.png"></img></td>
+				<td><a href="../en/projects/randomCircles.html">Random Circles</a>
+						<br><a href="../sls/soln/randomCircles.html">TA Solution</a>
+				</td>
+				<td>Randomness</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/bouncing.png"></img></td>
+				<td><a href="../en/projects/bouncingBall.html">Bouncing Ball</a>
+						<br><a href="../sls/soln/bouncingBall.html">TA Solution</a>
+				</td>
+				<td>Animation</td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+</div>
+
+<!-- Day 2 -->
+<div 
+>
+	<h4>Day 2: Variables (<a href="../starter/Day2.zip">Eclipse Project Here</a>)</h4>
+	<table class="table  table-striped">
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Topic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img class="projectImg" src="../img/icons/sandcastle.jpg"></img></td>
+				<td><a href="../en/projects/sandcastles.html">Sandcastles</a>
+						<br><a href="../sls/soln/sandcastles.html">TA Solution</a>
+				</td>
+				<td>Variables</td>
+			</tr>
+
+			<tr>
+				<td><img class="projectImg" src="../img/icons/guess.jpg"></img></td>
+				<td><a href="../en/projects/favoriteNumber.html">Favorite Number</a>
+						<br><a href="../sls/soln/favoriteNumber.html">TA Solution</a>
+				</td>
+				<td>Variables</td>
+			</tr>
+
+			<tr>
+				<td><img class="projectImg" src="../img/icons/medicine.png"></img></td>
+				<td><a href="../en/projects/medicine.html">Medicine Counterfeiting</a>
+						<br><a href="../sls/soln/medicine.html">TA Solution</a>
+				</td>
+				<td>Concatenation</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/someSum.png"></img></td>
+				<td><a href="../en/projects/someSum.html">That's Some Sum</a>
+						<br><a href="../sls/soln/someSum.html">TA Solution</a>
+				</td>
+				<td>Variables</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/nim.jpg"></img></td>
+				<td><a href="../en/projects/gameOfStones.html">Game of Nimm</a>
+						<br><a href="../sls/soln/gameOfStones.html">TA Solution</a>
+				</td>
+				<td>Variables</td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+</div>
+
+<!-- Day 1 -->
+<div 
+>
+	<h4>Day 1: Karel (<a href="../starter/Day1.zip">Eclipse Project Here</a>)</h4>
+	<table class="table  table-striped">
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Topic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="../en/projects/collectNewspaper.html"><img class="projectImg" src="../img/icons/newspaper.jpg"></img></a></td>
+				<td><a href="../en/projects/collectNewspaper.html">Collect Newspaper</a>
+						<!-- <br><a href="../sls/soln/collectNewspaper.html">TA Solution</a> -->
+				</td>
+				<td>Methods</td>
+			</tr>
+
+			<tr>
+				<td><img class="projectImg" src="../img/icons/charles.jpg"></img></td>
+				<td><a href="../en/projects/efes.html">Build Charles Bridge</a>
+						<!-- <br><a href="../sls/soln/charles.html">TA Solution</a> -->
+				</td>
+				<td>For Loops</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/mountain.png"></img></td>
+				<td><a href="../en/projects/mountain.html">Mountain Karel</a>
+						<!-- <br><a href="../sls/soln/mountain.html">TA Solution</a> -->
+				</td>
+				<td>While Loops</td>
+			</tr>
+
+			<tr 
+			>
+				<td><img class="projectImg" src="../img/icons/randomPainter2.png"></img></td>
+				<td><a href="../en/projects/randomPainter.html">Random Painter</a>
+						<!-- <br><a href="../sls/soln/randomPainter.html">TA Solution</a> -->
+				</td>
+				<td>If Statements</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>
 			
 	<!-- Footer -->
 <hr>

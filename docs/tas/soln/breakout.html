@@ -1,0 +1,522 @@
+<!--
+	A template used for every page - contains the header.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
+<title>CS Bridge  | Breakout (TA)</title>
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../style.css">
+
+<!-- Java Script -->
+<script src="../../plugins/jquery.min.js"></script>
+<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+
+<script src="../../karel/ace/ace.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/moment.min.js"></script>
+<script type="text/javascript" src="../../js/index.js"></script>
+<script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
+
+
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+  </script>-->
+
+<script src="../karel/js/html/websiteImports.js"></script>
+<script>importCss();</script>
+<script>importJs();</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>	</head>
+	<body>
+		<!--
+	A template used for every English page - contains the nav bar, a container div, and the footer.
+-->
+
+<!-- Navigation Bar -->
+<nav class="navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="../../">CS Bridge</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <!--<li ><a href="#">Link</a></li>-->
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<!--<li><a href="../../en/handouts/sections.html">Sections</a></li>-->
+	          	<li><a href="http://karel.csbridge.org/java/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="../../en/handouts/karel.html">Karel Reference</a></li>	          	
+          		<li class="visible-after" data-visible-after="2019071009"><a href="../../en/handouts/console.html">Console Reference</a></li>
+          		<li class="visible-after" data-visible-after="2019071009"><a href="../../en/handouts/random.html">Random Generator Reference</a></li>
+	          	<li class="visible-after" data-visible-after="2019071109"><a href="../../en/handouts/graphics.html">Graphics Reference</a></li>
+				<li class="visible-after" data-visible-after="2019071509"><a href="../../en/handouts/events.html">Events Reference</a></li>
+				<li class="visible-after" data-visible-after="2019071709"><a href="../../en/handouts/arrayLists.html">Array Lists</a></li>
+	          </ul>
+	        </li>
+
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+
+	          	<!-- Day 1 -->
+	          	<li class="dropdown-header">Day 1</li>
+	            <li>
+	            	<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
+	            </li>
+	          	<li class="visible-after" data-visible-after="2019070912">
+	          		<a href="../../en/projects/efes.html">Charles Bridge</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../en/projects/mountain.html">Mountain Karel</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../en/projects/randomPainter.html">Random Painter</a>
+	          	</li>
+	          	
+	          	<!-- Day 2 -->
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
+          		<li class="visible-after" data-visible-after="2019071009">
+          			<a href="../../en/projects/sandcastles.html">Sandcastles</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071012">
+	          		<a href="../../en/projects/favoriteNumber.html">Favorite Number</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071012">
+	          		<a href="../../en/projects/medicine.html">Medicine</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../en/projects/someSum.html">Some Sum</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../en/projects/gameOfStones.html">Nimm</a>
+	          	</li>
+	          	
+	          	<!-- Day 3 -->
+	          	<li class="divider visible-after" data-visible-after="2019071109" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
+          		<li class="visible-after" data-visible-after="2019071109">
+          			<a href="../../en/projects/awesome.html">Programming is Awesome</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../en/projects/mysterySquare.html">Mystery Square</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../en/projects/stringArt.html">String Art</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071113">
+	          		<a href="../../en/projects/randomCircles.html">Random Circles</a>
+	          	</li>
+	            <li class="visible-after" data-visible-after="2019071113">
+	            	<a href="../../en/projects/bouncingBall.html">Bouncing Ball</a>
+	            </li>
+
+				<!-- Day 4 -->
+				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
+          		<li class="visible-after" data-visible-after="2019071209">
+          			<a href="../../en/projects/madMethods.html">Mad Methods</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071212">
+	          		<a href="../../en/projects/target.html">Target</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071213">
+	          		<a href="../../en/projects/illusion.html">Optical Illusion</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071213">
+	          		<a href="../../en/projects/sunset.html">Short Film</a>
+	          	</li>
+
+				<!-- Day 5 / 6 -->
+          		<li class="divider visible-after" data-visible-after="2019071509" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
+          		<li class="visible-after" data-visible-after="2019071509">
+          			<a href="../../en/projects/makingTracks.html">Making Tracks</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071512">
+	          		<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+	          	</li>
+
+	          	<li class="divider visible-after" data-visible-after="2019071513" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071513">Days 5-6</li>
+          		<li class="visible-after" data-visible-after="2019071513">
+          			<a href="../../en/projects/breakout.html">Breakout</a>
+          		</li>
+
+          		<!-- Day 7 -->
+          		<li class="divider visible-after" data-visible-after="2019071709" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
+          		<li class="visible-after" data-visible-after="2019071709">
+          			<a href="../../en/projects/sortedNumbers.html">Sorted Numbers</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/snow.html">Snow</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/mouseGame.html">[Optional] The Line</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/music.html">[Optional] Waves of Sound</a>
+	          	</li>
+
+	          	<!-- Days 7/8 -->
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071713">Days 7-8</li>
+	          	<li class="visible-after" data-visible-after="2019071713">
+	          		<a href="../../en/projects/project.html">Make Your Own</a>
+	          	</li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li class="dropdown-header">Day 1</li>
+	          	<li><a href="../../en/projects/stepUp.html">Step Up</a></li>
+	          	<li><a href="../../en/projects/place100.html">Place 100</a></li>
+	          	<li><a href="../../en/projects/beeperLine.html">Beeper Line</a></li>
+	          	<li><a href="../../en/projects/invert.html">Invert</a></li>
+	          	<li><a href="../../en/projects/unKarel.html">UN Karel</a></li>
+	          	<li><a href="../../en/projects/banishWinter.html">Banish Winter</a></li>
+
+
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/emc2.html">E=MC2</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/fibb.html">Fibonacci</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/findPi.html">Find Pi</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/8Ball.html">8-Ball</a>
+	            </li>
+            	
+            	<li class="divider visible-after" data-visible-after="2019071109" />
+            	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../en/projects/robotFace.html">Robot Face</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../en/projects/goCenter.html">Go To Center</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../en/projects/gravityBall.html">Gravity Ball</a>
+	            </li>
+
+				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
+				<li class="visible-after" data-visible-after="2019071209">
+					<a href="../../en/projects/averageMethod.html">Average Method</a>
+				</li>	
+				<li class="visible-after" data-visible-after="2019071209">
+					<a href="../../en/projects/drawPeople.html">Draw People</a>
+				</li>	
+	          	<li class="visible-after" data-visible-after="2019071209">
+	          		<a href="../../en/projects/halfGreen.html">Half Green</a>
+	          	</li>
+
+	        	<li class="divider visible-after" data-visible-after="2019071509" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
+	            <li class="visible-after" data-visible-after="2019071509">
+	            	<a href="../../en/projects/stampTool.html">Stamp Tool</a>
+	            </li>
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../en/projects/holePuncher.html">Hole Puncher</a>
+	          	</li>	
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../en/projects/debrisSweeper.html">Debris Sweeper</a>
+	          	</li>	
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../en/projects/suchADrag.html">Such a Drag</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../en/projects/keyboardKarel.html">Keyboard Karel</a>
+	          	</li>
+
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../en/projects/rocketPaddle.html">Rocket Ship</a>
+	            </li>
+	        </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../slides/Welcome.pdf">Karel</a></li>
+	          	<li><a href="../../slides/ControlFlow.pdf">Control Flow</a></li>
+	          	<li><a href="../../slides/Variables.pdf">Variables</a></li>
+			<li><a href="../../slides/Variables2.pdf">Variables 2</a></li>
+	          	
+	          	<li><a href="../../slides/Graphics.pdf">Graphics</a></li>
+	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
+	          	<li><a href="../../slides/Methods.pdf">Methods</a></li>
+	          	<li><a href="../../slides/Events.pdf">Events</a></li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forms <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Survey</a></li>
+                <li><a href="https://forms.gle/eVsMyZb8HCSUETeV6">Sign in To Lab</a></li>
+	          </ul>
+	        </li>
+
+			
+	        <!-- Bonus button -->
+	        <ul class="nav navbar-nav">
+	            <li><a href="../../en/bonus-index.html">Bonus</a></li>
+	        </ul>
+
+	        <!-- TA Link -->
+		        <ul class="nav navbar-nav navbar-right">
+		            <li><a href="../../sls">TA Page</a></li>
+		        </ul>
+
+	      </ul>
+
+	      
+	      <!--<ul class="nav navbar-nav navbar-right">
+	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/english_flag.png"></img></a></li>
+	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
+	        
+	      </ul>-->
+	    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+
+</script>
+
+
+
+<div class="container">
+	
+	
+<!-- Main Content -->
+<div class="container">
+
+	<!-- Header -->
+	<div id="pageHeader">
+		<h1>
+            TA Solution: Breakout
+		</h1>
+    </div>
+
+	<hr/>
+
+	<div class="row">
+		<div class="col-xs-12">
+            
+<p>
+  Breakout is a graphics game, and the first major program that students make. It's awesome to play around with a working version, and is a substantial accomplishment.
+</p>
+
+<h2>Overall Comments</h2>
+<p>
+  One thing to watch out for is use of instance variables. Students have just learned about them, and they seem like magic, so students will overuse them. Really emphasize that they should only use instance variables when they are absolutely necessary. They technically only need the paddle, because they only need instance variables for stuff within the <code>mouseMoved</code> method. However, it is also okay if they have vx/vy, since otherwise they need to return vy/vx whenever they change them in a decomposed method (since they are primitives). 
+  <br/>
+  <br/>
+  Breakout can be confusing because there are two pieces of code working in parallel. There is the main part of the program, which is a loop that drives the game -- moving the ball, handling collisions, watching for end game. The second part are the mouse listeners which only handles paddle movement. Look out for students who try to handle game mechanics in the wrong piece, as it will cause a lot of problems for them later.
+</p>
+
+<h2>Milestones</h2>
+<p>Students should approach the problem using the milestones below.</p>
+
+<h3>Create The Bricks</h3>
+<p>
+  First thing students do is make the bricks. The most elegant way to do this is to have a helper method to make a row that takes a color.  Try to have them break it down to draw one row of bricks, and then multiple rows.  The checkerboard pattern in optical illusion may be a good starting point.  Here's what a method that draws the bricks might look like:
+</p>
+
+<pre id="editor1" style="height:600px">
+private void drawBricks() {
+    double totalBrickWidth = NBRICKS_PER_ROW * BRICK_WIDTH + (NBRICKS_PER_ROW - 1) * BRICK_SEP;
+    // Draw each row
+    for (int row = 0; row < NBRICK_ROWS; row++) {
+        double brickY = BRICK_Y_OFFSET + row * (BRICK_HEIGHT + BRICK_SEP);
+
+        // For a single row, draw each brick
+        for (int column = 0; column < NBRICKS_PER_ROW; column++) {
+            // The row of bricks should be centered horizontally
+            double brickX = getWidth() / 2 - totalBrickWidth / 2 + column * (BRICK_WIDTH + BRICK_SEP);
+            GRect brick = new GRect(brickX, brickY, BRICK_WIDTH, BRICK_HEIGHT);
+            brick.setFilled(true);
+            brick.setColor(getBrickColor(row));
+            add(brick);
+        }
+    }
+}
+
+// Returns the color the bricks in the given row should be
+private Color getBrickColor(int row) {
+    if (row < 2) {
+        return Color.RED;
+    }
+    if (row == 2 || row == 3) {
+        return Color.ORANGE;
+    }
+    if (row == 4 || row == 5) {
+        return Color.YELLOW;
+    }
+    if (row == 6 || row == 7) {
+        return Color.GREEN;
+    }
+    if (row == 8 || row == 9) {
+        return Color.CYAN;
+    }
+    return Color.BLACK;
+}</pre>
+
+<h3>Create The Paddle</h3>
+<p>
+Next, students should make the paddle and have it move with the mouse.  Students use mouseMoved to move the paddle.  Here's what an implementation of <code>mouseMoved</code> might look like, along with code to initialize the paddle, which needs to be an instance variable.  Some students may try to store the previous position of the paddle and move the paddle by the amount the mouse changed since the last <code>mouseMoved</code>, but it's easiest to use <code>setLocation</code>.
+</p>
+
+<pre id="editor2" style="height:400px">
+// Creates the paddle and adds it at the bottom of the screen.  
+// Listens for mouse events
+private void drawPaddle() {
+    double x = getWidth() / 2 - PADDLE_WIDTH / 2; 
+    double y = getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT;
+    paddle = new GRect(x, y, PADDLE_WIDTH, PADDLE_HEIGHT);
+    paddle.setFilled(true);
+    add(paddle);
+    addMouseListeners();
+}
+
+// The mouse should track the paddle (this implementation keeps 
+// the paddle center where the mouse is)
+public void mouseMoved(MouseEvent e) {
+    // If the mouse would not put the paddle offscreen, update the paddle location
+    if ((e.getX() < getWidth() - PADDLE_WIDTH / 2) && (e.getX() > PADDLE_WIDTH / 2)) {
+        double newX = e.getX() - PADDLE_WIDTH / 2;
+        paddle.setLocation(newX, paddle.getY());
+    }
+}</pre>
+
+<h3>Make The Ball Move</h3>
+<p>In progress</p>
+
+<h3>Collisions</h3>
+<p>In progress</p>
+
+<h3>Extra Touches</h3>
+<p>In progress</p>
+    
+<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    for (var i = 1; i <= 4; i++) {
+        var editor = ace.edit("editor" + i);
+        editor.setTheme('ace/theme/eclipse');
+        editor.getSession().setMode("ace/mode/java");
+        editor.setReadOnly(true);
+        editor.renderer.setShowGutter(false); 
+        /*editor.setTheme("ace/theme/eclipse");
+        editor.getSession().setMode("ace/mode/java");*/
+    }
+</script>	
+		</div>
+	</div>
+</div>
+			
+	<!-- Footer -->
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+		&#169; Stanford 2019 &#124; Created by 
+		<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
+		Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
+	</p>
+	<!--<p class="pull-right">
+		<a href="../../fall12">Fall 2012</a>
+	</p>-->
+</div>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<script type="text/javascript">
+		console.log('got pubnub')
+    var pubnubDemo = new PubNub({
+        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+    });
+
+		// Subscribe to the demo_tutorial channel
+		pubnubDemo.addListener({
+		    message: function(request) {
+		    	let msg = request['message'];
+		    	let swalData = msg['swal'];
+	        Swal.fire(swalData)
+		    }
+		})
+
+		pubnubDemo.subscribe({
+		    channels: ['csbridge_alert']
+		});
+		console.log('success')
+		
+
+</script>
+</div>
+	</body>
+</html>
