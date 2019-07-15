@@ -1,0 +1,39 @@
+% rebase('templates/sls/soln/template.ptl', problemTitle="Mouse Location")
+
+<p>
+	The problem below is the second lab problem for the day.  It is very similar to the lecture examples and meant as a warmup with mouse events.  They will need to use instance variables to create a label whose contents change as the mouse moves around the screen.
+</p>
+
+<h3>Solution</h3>
+<pre id="editor" style="height:400px">public class MouseLocation extends GraphicsProgram {
+    
+    // The label displaying the mouse coordinates in the top-left corner
+    private GLabel locationLabel;
+
+	public void run() {	
+	    // Add the label - initially empty
+	    locationLabel = new GLabel("");
+	    locationLabel.setFont("Courier-35");
+	    add(locationLabel, 0, locationLabel.getAscent());
+	    addMouseListeners();
+	}
+	
+	public void mouseMoved(MouseEvent e) {
+	    // Update the contents of the label
+	    int mouseX = e.getX();
+	    int mouseY = e.getY();
+	    locationLabel.setLabel(mouseX + ", " + mouseY);
+	}
+
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
