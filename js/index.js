@@ -28,7 +28,7 @@ $(document).ready(function(){
 	var isTAMode = urlParams.get('ta') == "csbridgectu";
 
 	// If the URL param is included, it will be a string (maybe empty)
-	if (isTAMode == null) {
+	if (!isTAMode) {
 		// only show certain content if they should be released
 		$(".visible-after").each(function(i) {
 		    var dateStr = $(this).attr("data-visible-after");
@@ -41,7 +41,7 @@ $(document).ready(function(){
 
 	// Remove any ta-only elements
 	$(".ta-only").each(function(i) {
-	    if (isTAMode == null) {
+	    if (!isTAMode) {
 	    	$(this).remove();
 	    }
 	});
