@@ -89,8 +89,8 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th colspan="2">Name</th>
-				<th>Topic</th>
+				<th colspan="2"></th>
+				<th></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -104,22 +104,12 @@
 				<td>Interactors</td>
 			</tr>
 		</tbody>
-	</table>
-	<br />
-</div>
 
-<!-- Day 5 -->
-<div 
-% if not get('taMode', False):
-	class="visible-after" data-visible-after="2019071500"
-% end
->
-	<h4>Day 5: Events (<a href="{{pathToRoot}}starter/Day5.zip">Eclipse Project Here</a>)</h4>
-	<table class="table  table-striped">
 		<thead>
 			<tr>
-				<th colspan="2">Name</th>
-				<th>Topic</th>
+				<th colspan = "6"><b>
+					<br/>
+						<h4>Day 5: Events (<a href="{{pathToRoot}}starter/Day5.zip">Eclipse Project Here</a>)</h4></b></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -157,22 +147,11 @@
 				<td>Instance Variables</td>
 			</tr>
 		</tbody>
-	</table>
-	<br />
-</div>
-
-<!-- Day 4 -->
-<div 
-% if not get('taMode', False):
-	class="visible-after" data-visible-after="2019071200"
-% end
->
-	<h4>Day 4: Methods and Advanced Java (<a href="{{pathToRoot}}starter/Day4.zip">Eclipse Project Here</a>)</h4>
-	<table class="table  table-striped">
 		<thead>
 			<tr>
-				<th colspan="2">Name</th>
-				<th>Topic</th>
+				<th colspan = "6"><b>
+					<br/>
+						<h4>Day 4: Methods and Advanced Java (<a href="{{pathToRoot}}starter/Day4.zip">Eclipse Project Here</a>)</h4></b></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -228,22 +207,11 @@
 				<td>Params and Returns</td>
 			</tr>
 		</tbody>
-	</table>
-	<br />
-</div>
-
-<!-- Day 3 -->
-<div 
-% if not get('taMode', False):
-	class="visible-after" data-visible-after="2019071100"
-% end
->
-	<h4>Day 3: Graphics (<a href="{{pathToRoot}}starter/Day3.zip">Eclipse Project Here</a>)</h4>
-	<table class="table  table-striped">
 		<thead>
 			<tr>
-				<th colspan="2">Name</th>
-				<th>Topic</th>
+				<th colspan = "6"><b>
+					<br/>
+						<h4>Day 3: Graphics (<a href="{{pathToRoot}}starter/Day3.zip">Eclipse Project Here</a>)</h4></b></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -313,22 +281,12 @@
 				<td>Animation</td>
 			</tr>
 		</tbody>
-	</table>
-	<br />
-</div>
 
-<!-- Day 2 -->
-<div 
-% if not get('taMode', False):
-	class="visible-after" data-visible-after="2019071000"
-% end
->
-	<h4>Day 2: Variables (<a href="{{pathToRoot}}starter/Day2.zip">Eclipse Project Here</a>)</h4>
-	<table class="table  table-striped">
 		<thead>
 			<tr>
-				<th colspan="2">Name</th>
-				<th>Topic</th>
+				<th colspan = "6"><b>
+					<br/>
+						<h4>Day 2: Variables (<a href="{{pathToRoot}}starter/Day2.zip">Eclipse Project Here</a>)</h4></b></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -390,22 +348,12 @@
 				<td>Variables</td>
 			</tr>
 		</tbody>
-	</table>
-	<br />
-</div>
-
-<!-- Day 1 -->
-<div 
-% if not get('taMode', False):
-	class="visible-after" data-visible-after="2019070900"
-% end
->
-	<h4>Day 1: Karel (<a href="{{pathToRoot}}starter/Day1.zip">Eclipse Project Here</a>)</h4>
-	<table class="table  table-striped">
 		<thead>
+
 			<tr>
-				<th colspan="2">Name</th>
-				<th>Topic</th>
+				<th colspan = "6"><b>
+					<br/>
+						<h4>Day 1: Karel (<a href="{{pathToRoot}}starter/Day1.zip">Eclipse Project Here</a>)</h4></b></th>
 			</tr>
 		</thead>
 		<tbody>
