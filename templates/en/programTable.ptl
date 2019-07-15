@@ -1,45 +1,49 @@
 <!-- Final Project -->
-<div 
-% if not get('taMode', False):
-	class="visible-after" data-visible-after="2019071700"
-% end
->
+<table class="table table-striped">
 
-	<h4>Days 7-8: Final Project (<a href="{{pathToRoot}}starter/BlankJavaProject.zip">Eclipse Project Here</a>)</h4>
-	<table class="table table-striped">
+		<!-- Day 7 -->
+		<thead
+		% if not get('taMode', False):
+			class="visible-after" data-visible-after="2019071700"
+		% end
 
-		<thead>
+		>
 			<tr>
-				<th colspan="2">Name</th>
-				<th>Topic</th>
+				<th colspan = "6"><b>
+					<br/>
+						<h4>Days 7-8: Final Project (<a href="{{pathToRoot}}starter/BlankJavaProject.zip">Eclipse Project Here</a>)</h4>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody
+		% if not get('taMode', False):
+			class="visible-after" data-visible-after="2019071700"
+		% end
+		>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/project.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/project.html">Make Your Own</a></td>
 				<td>All</td>
 			</tr>
 		</tbody>
-	</table>
-	<br />
-</div>
 
-<!-- Day 7: ArrayLists -->
-<div 
-% if not get('taMode', False):
-	class="visible-after" data-visible-after="2019071709"
-% end
->
-	<h4>Day 7: ArrayLists + HashMaps (<a href="{{pathToRoot}}starter/Day7.zip">Eclipse Project Here</a>)</h4>
-	<table class="table table-striped">
-		<thead>
+		<!-- Day 7 -->
+		<thead
+		% if not get('taMode', False):
+			class="visible-after" data-visible-after="2019071709"
+		% end
+
+		>
 			<tr>
-				<th colspan="2">Name</th>
-				<th>Topic</th>
+				<th colspan = "6"><b>
+					<br/>
+						<h4>Day 7: ArrayLists + HashMaps (<a href="{{pathToRoot}}starter/Day7.zip">Eclipse Project Here</a>)</h4>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody
+		% if not get('taMode', False):
+			class="visible-after" data-visible-after="2019071709"
+		% end
+		>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/numbers.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/sortedNumbers.html">Sorted Numbers</a></td>
@@ -76,24 +80,26 @@
 				<td>ArrayLists</td>
 			</tr>
 		</tbody>
-	</table>
-	<br />
-</div>
+
+
 <!-- Days 5-6: Breakout -->
-<div 
-% if not get('taMode', False):
-	class="visible-after" data-visible-after="2019071513"
-% end
->
-	<h4>Days 5-6: Breakout (<a href="{{pathToRoot}}starter/Breakout.zip">Eclipse Project Here</a>)</h4>
-	<table class="table table-striped">
-		<thead>
+		<thead
+		% if not get('taMode', False):
+			class="visible-after" data-visible-after="2019071213"
+		% end
+
+		>
 			<tr>
-				<th colspan="2"></th>
-				<th></th>
+				<th colspan = "6"><b>
+					<br/>
+						<h4>Days 5-6: Breakout (<a href="{{pathToRoot}}starter/Breakout.zip">Eclipse Project Here</a>)</h4>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody
+		  % if not get('taMode', False):
+				class="visible-after" data-visible-after="2019071213"
+			% end
+		>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/breakout.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/breakout.html">Breakout!</a>
@@ -405,5 +411,4 @@
 				<td>If Statements</td>
 			</tr>
 		</tbody>
-	</table>
-</div>
+</table>
