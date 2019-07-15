@@ -1,0 +1,109 @@
+% rebase('templates/tas/soln/template.ptl', problemTitle="Breakout")
+
+<p>
+  Breakout is a graphics game, and the first major program that students make. It's awesome to play around with a working version, and is a substantial accomplishment.
+</p>
+
+<h2>Overall Comments</h2>
+<p>
+  One thing to watch out for is use of instance variables. Students have just learned about them, and they seem like magic, so students will overuse them. Really emphasize that they should only use instance variables when they are absolutely necessary. They technically only need the paddle, because they only need instance variables for stuff within the <code>mouseMoved</code> method. However, it is also okay if they have vx/vy, since otherwise they need to return vy/vx whenever they change them in a decomposed method (since they are primitives). 
+  <br/>
+  <br/>
+  Breakout can be confusing because there are two pieces of code working in parallel. There is the main part of the program, which is a loop that drives the game -- moving the ball, handling collisions, watching for end game. The second part are the mouse listeners which only handles paddle movement. Look out for students who try to handle game mechanics in the wrong piece, as it will cause a lot of problems for them later.
+</p>
+
+<h2>Milestones</h2>
+<p>Students should approach the problem using the milestones below.</p>
+
+<h3>Create The Bricks</h3>
+<p>
+  First thing students do is make the bricks. The most elegant way to do this is to have a helper method to make a row that takes a color.  Try to have them break it down to draw one row of bricks, and then multiple rows.  The checkerboard pattern in optical illusion may be a good starting point.  Here's what a method that draws the bricks might look like:
+</p>
+
+<pre id="editor1" style="height:600px">
+private void drawBricks() {
+    double totalBrickWidth = NBRICKS_PER_ROW * BRICK_WIDTH + (NBRICKS_PER_ROW - 1) * BRICK_SEP;
+    // Draw each row
+    for (int row = 0; row < NBRICK_ROWS; row++) {
+        double brickY = BRICK_Y_OFFSET + row * (BRICK_HEIGHT + BRICK_SEP);
+
+        // For a single row, draw each brick
+        for (int column = 0; column < NBRICKS_PER_ROW; column++) {
+            // The row of bricks should be centered horizontally
+            double brickX = getWidth() / 2 - totalBrickWidth / 2 + column * (BRICK_WIDTH + BRICK_SEP);
+            GRect brick = new GRect(brickX, brickY, BRICK_WIDTH, BRICK_HEIGHT);
+            brick.setFilled(true);
+            brick.setColor(getBrickColor(row));
+            add(brick);
+        }
+    }
+}
+
+// Returns the color the bricks in the given row should be
+private Color getBrickColor(int row) {
+    if (row < 2) {
+        return Color.RED;
+    }
+    if (row == 2 || row == 3) {
+        return Color.ORANGE;
+    }
+    if (row == 4 || row == 5) {
+        return Color.YELLOW;
+    }
+    if (row == 6 || row == 7) {
+        return Color.GREEN;
+    }
+    if (row == 8 || row == 9) {
+        return Color.CYAN;
+    }
+    return Color.BLACK;
+}</pre>
+
+<h3>Create The Paddle</h3>
+<p>
+Next, students should make the paddle and have it move with the mouse.  Students use mouseMoved to move the paddle.  Here's what an implementation of <code>mouseMoved</code> might look like, along with code to initialize the paddle, which needs to be an instance variable.  Some students may try to store the previous position of the paddle and move the paddle by the amount the mouse changed since the last <code>mouseMoved</code>, but it's easiest to use <code>setLocation</code>.
+</p>
+
+<pre id="editor2" style="height:400px">
+// Creates the paddle and adds it at the bottom of the screen.  
+// Listens for mouse events
+private void drawPaddle() {
+    double x = getWidth() / 2 - PADDLE_WIDTH / 2; 
+    double y = getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT;
+    paddle = new GRect(x, y, PADDLE_WIDTH, PADDLE_HEIGHT);
+    paddle.setFilled(true);
+    add(paddle);
+    addMouseListeners();
+}
+
+// The mouse should track the paddle (this implementation keeps 
+// the paddle center where the mouse is)
+public void mouseMoved(MouseEvent e) {
+    // If the mouse would not put the paddle offscreen, update the paddle location
+    if ((e.getX() < getWidth() - PADDLE_WIDTH / 2) && (e.getX() > PADDLE_WIDTH / 2)) {
+        double newX = e.getX() - PADDLE_WIDTH / 2;
+        paddle.setLocation(newX, paddle.getY());
+    }
+}</pre>
+
+<h3>Make The Ball Move</h3>
+<p>In progress</p>
+
+<h3>Collisions</h3>
+<p>In progress</p>
+
+<h3>Extra Touches</h3>
+<p>In progress</p>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    for (var i = 1; i <= 4; i++) {
+        var editor = ace.edit("editor" + i);
+        editor.setTheme('ace/theme/eclipse');
+        editor.getSession().setMode("ace/mode/java");
+        editor.setReadOnly(true);
+        editor.renderer.setShowGutter(false); 
+        /*editor.setTheme("ace/theme/eclipse");
+        editor.getSession().setMode("ace/mode/java");*/
+    }
+</script>
