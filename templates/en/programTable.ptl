@@ -1,10 +1,34 @@
+<%
+  # Set these values to change when they appear on the website
+  # Times are formatted as YYYYMMDDHH
+  setdefault('finalProject', '2020071613')
+  setdefault('arrayListSection', '2019071612')
+  setdefault('arrayListStart', '2019071609')
+
+  setdefault('breakout', '2019071513')
+  setdefault('eventsSection', '2019071512')
+  setdefault('eventsStart', '2019071508')
+
+  setdefault('methodsSection', '2019071212')
+  setdefault('methodsStart', '2019071208')
+
+  setdefault('graphicsSection', '2019071112')
+  setdefault('graphicsStart', '2019071108')
+
+  setdefault('varsSection', '2019071012')
+  setdefault('varsStart', '2019071008')
+
+  setdefault('karelSection', '2019070913')
+  setdefault('karelStart', '2019070800')
+%>
+
 <!-- Final Project -->
 <table class="table table-striped">
 
 		<!-- Day 7 -->
 		<thead
 		% if not get('taMode', False):
-			class="visible-after" data-visible-after="2019071700"
+			class="visible-after" data-visible-after="{{finalProject}}"
 		% end
 
 		>
@@ -16,7 +40,7 @@
 		</thead>
 		<tbody
 		% if not get('taMode', False):
-			class="visible-after" data-visible-after="2019071700"
+			class="visible-after" data-visible-after="{{finalProject}}"
 		% end
 		>
 			<tr>
@@ -28,9 +52,9 @@
 
 		<!-- Day 7 -->
 		<thead
-		% if not get('taMode', False):
-			class="visible-after" data-visible-after="2019071709"
-		% end
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{arrayListStart}}"
+			% end
 
 		>
 			<tr>
@@ -40,9 +64,9 @@
 			</tr>
 		</thead>
 		<tbody
-		% if not get('taMode', False):
-			class="visible-after" data-visible-after="2019071709"
-		% end
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{arrayListStart}}"
+			% end
 		>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/numbers.jpg"></img></td>
@@ -52,7 +76,7 @@
 
 			<tr 
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019071712"
+				class="visible-after" data-visible-after="{{arrayListSection}}"
 			% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/snow.png"></img></td>
@@ -62,7 +86,7 @@
 
 			<tr 
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019071712"
+				class="visible-after" data-visible-after="{{arrayListSection}}"
 			% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mouseGame.png"></img></td>
@@ -72,7 +96,7 @@
 
 			<tr 
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019071712"
+				class="visible-after" data-visible-after="{{arrayListSection}}"
 			% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/music3.jpg"></img></td>
@@ -85,7 +109,7 @@
 <!-- Days 5-6: Breakout -->
 		<thead
 		% if not get('taMode', False):
-			class="visible-after" data-visible-after="2019071213"
+			class="visible-after" data-visible-after="{{breakout}}"
 		% end
 
 		>
@@ -97,7 +121,7 @@
 		</thead>
 		<tbody
 		  % if not get('taMode', False):
-				class="visible-after" data-visible-after="2019071213"
+				class="visible-after" data-visible-after="{{breakout}}"
 			% end
 		>
 			<tr>
@@ -111,14 +135,22 @@
 			</tr>
 		</tbody>
 
-		<thead>
+		<thead
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{eventsStart}}"
+			% end
+		>
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
 						<h4>Day 5: Events (<a href="{{pathToRoot}}starter/Day5.zip">Eclipse Project Here</a>)</h4></b></th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{eventsStart}}"
+			% end
+		>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/makingTracks.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/makingTracks.html">Making Tracks (Lab)</a>
@@ -141,7 +173,7 @@
 
 			<tr 
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019071512"
+				class="visible-after" data-visible-after="{{eventsSection}}"
 			% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/catchMeIfYouCan.png"></img></td>
@@ -153,14 +185,24 @@
 				<td>Instance Variables</td>
 			</tr>
 		</tbody>
-		<thead>
+		<thead
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{methodsStart}}"
+			% end
+
+		>
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
 						<h4>Day 4: Methods and Advanced Java (<a href="{{pathToRoot}}starter/Day4.zip">Eclipse Project Here</a>)</h4></b></th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{methodsStart}}"
+			% end
+
+		>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/madMax.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/madMethods.html">Mad Methods</a>
@@ -173,7 +215,7 @@
 
 			<tr 
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019071212"
+				class="visible-after" data-visible-after="{{methodsSection}}"
 			% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/target.png"></img></td>
@@ -187,7 +229,7 @@
 
 			<tr 
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019071213"
+				class="visible-after" data-visible-after="{{methodsSection}}"
 			% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/illusion.png"></img></td>
@@ -201,7 +243,7 @@
 
 			<tr 
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019071213"
+				class="visible-after" data-visible-after="{{methodsSection}}"
 			% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sunset.png"></img></td>
@@ -213,14 +255,22 @@
 				<td>Params and Returns</td>
 			</tr>
 		</tbody>
-		<thead>
+		<thead
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{graphicsStart}}"
+			% end
+		>
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
 						<h4>Day 3: Graphics (<a href="{{pathToRoot}}starter/Day3.zip">Eclipse Project Here</a>)</h4></b></th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{graphicsStart}}"
+			% end
+		>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/awesome.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/awesome.html">Programing is Awesome</a>
@@ -232,9 +282,9 @@
 			</tr>
 
 			<tr 
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019071112"
-			% end
+				% if not get('taMode', False):
+					class="visible-after" data-visible-after="{{graphicsSection}}"
+				% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mysterySquare.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/mysterySquare.html">Mystery Square</a>
@@ -247,8 +297,8 @@
 
 			<tr 
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019071112"
-			% end
+					class="visible-after" data-visible-after="{{graphicsSection}}"
+				% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/stringArt.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/stringArt.html">String Art</a>
@@ -261,8 +311,8 @@
 
 			<tr 
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019071113"
-			% end
+					class="visible-after" data-visible-after="{{graphicsSection}}"
+				% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomCircles.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/randomCircles.html">Random Circles</a>
@@ -275,8 +325,8 @@
 
 			<tr 
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019071113"
-			% end
+					class="visible-after" data-visible-after="{{graphicsSection}}"
+				% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/bouncing.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/bouncingBall.html">Bouncing Ball</a>
@@ -288,14 +338,22 @@
 			</tr>
 		</tbody>
 
-		<thead>
+		<thead
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{varsStart}}"
+			% end
+		>
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
 						<h4>Day 2: Variables (<a href="{{pathToRoot}}starter/Day2.zip">Eclipse Project Here</a>)</h4></b></th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{varsStart}}"
+			% end
+		>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sandcastle.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/sandcastles.html">Sandcastles</a>
@@ -306,7 +364,11 @@
 				<td>Variables</td>
 			</tr>
 
-			<tr>
+			<tr
+				% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{varsSection}}"
+			% end
+			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/guess.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/favoriteNumber.html">Favorite Number</a>
 					% if get('taMode', False):
@@ -316,7 +378,11 @@
 				<td>Variables</td>
 			</tr>
 
-			<tr>
+			<tr
+				% if not get('taMode', False):
+					class="visible-after" data-visible-after="{{varsSection}}"
+				% end
+			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/medicine.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/medicine.html">Medicine Counterfeiting</a>
 					% if get('taMode', False):
@@ -327,9 +393,9 @@
 			</tr>
 
 			<tr 
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019071013"
-			% end
+				% if not get('taMode', False):
+					class="visible-after" data-visible-after="{{varsSection}}"
+				% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/someSum.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/someSum.html">That's Some Sum</a>
@@ -341,9 +407,9 @@
 			</tr>
 
 			<tr 
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019071013"
-			% end
+				% if not get('taMode', False):
+					class="visible-after" data-visible-after="{{varsSection}}"
+				% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/nim.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/gameOfStones.html">Game of Nimm</a>
@@ -354,7 +420,11 @@
 				<td>Variables</td>
 			</tr>
 		</tbody>
-		<thead>
+		<thead
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{karelStart}}"
+			% end
+		>
 
 			<tr>
 				<th colspan = "6"><b>
@@ -362,7 +432,11 @@
 						<h4>Day 1: Karel (<a href="{{pathToRoot}}starter/Day1.zip">Eclipse Project Here</a>)</h4></b></th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{karelStart}}"
+			% end
+		>
 			<tr>
 				<td><a href="{{pathToRoot}}en/projects/collectNewspaper.html"><img class="projectImg" src="{{pathToRoot}}img/icons/newspaper.jpg"></img></a></td>
 				<td><a href="{{pathToRoot}}en/projects/collectNewspaper.html">Collect Newspaper</a>
@@ -373,7 +447,11 @@
 				<td>Methods</td>
 			</tr>
 
-			<tr>
+			<tr
+				% if not get('taMode', False):
+					class="visible-after" data-visible-after="{{karelSection}}"
+				% end
+			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/charles.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/efes.html">Build Charles Bridge</a>
 					% if get('taMode', False):
@@ -384,9 +462,9 @@
 			</tr>
 
 			<tr 
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019070913"
-			% end
+				% if not get('taMode', False):
+					class="visible-after" data-visible-after="{{karelSection}}"
+				% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mountain.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/mountain.html">Mountain Karel</a>
@@ -398,9 +476,9 @@
 			</tr>
 
 			<tr 
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="2019070913"
-			% end
+				% if not get('taMode', False):
+					class="visible-after" data-visible-after="{{karelSection}}"
+				% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomPainter2.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/randomPainter.html">Random Painter</a>
