@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Catch Me If You Can (TA)</title>
+<title>CS Bridge  | Star Wars Crawl</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -306,9 +306,6 @@
 	        </ul>
 
 	        <!-- TA Link -->
-		        <ul class="nav navbar-nav navbar-right">
-		            <li><a href="../../tas">TA Page</a></li>
-		        </ul>
 
 	      </ul>
 
@@ -344,98 +341,51 @@
 <div class="container">
 	
 	
-<!-- Main Content -->
-<div class="container">
+  <!-- Main Content -->
+  <div class="container">
 
-	<!-- Header -->
-	<div id="pageHeader">
-		<h1>
-            TA Solution: Catch Me If You Can
-		</h1>
+    <!-- Header -->
+    <div id="pageHeader">
+      <h1>
+        Star Wars Crawl
+      </h1>
+      <p>
+        Handouts:
+        <a href ="../../en/handouts/arrayLists.html">ArrayLists</a>
+        <br/>
+        Examples:
+        <a href ="../../en/projects/rocketPaddle.html">Rockets</a>
+        <br/>
+        Day7: <code>StarWars.java</code>
+      </p>
+
+    </div>
+    <hr/>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          Write a program that reads in a text file and animates the lines together from the bottom to the top of the screen, similar to the movie Star Wars.</p>
+        <p>
+          <center>
+            <img style="width:500px" src="../../img/projects/starwars/demo.png">  
+          </center>
+        </p>
+
+        <p>
+          This graphics program can be modeled by imagining each line of the text file as a single GLabel.  We want to put all of these GLabels on the screen, and then animate them up the screen all at the same time.  Try approaching the following steps to do this:
+        </p>
+        <ol>
+          <li>Add the background image</li>
+          <li>Read in the text file <code>TEXT_FILENAME</code> using <code>readFile</code>, which takes a filename as a parameter and returns an ArrayList of the lines in the file.  Like this:
+            <pre>ArrayList&lt;String&gt; lines = readFile("myfile.txt");</pre>
+          </li>
+          <li>Place the labels on the screen at the initial correct position.  The first label should initially be just offscreen at the bottom, and each label should be spaced with <code>LABEL_PADDING</code> pixels between them.</li>
+          <li>Animate the labels onscreen by moving all the labels up a small amount, then pausing, and then repeating.</li>
+        </ol>
+      </div>
     </div>
 
-	<hr/>
-
-	<div class="row">
-		<div class="col-xs-12">
-            
-<p>
-	The problem below is the section problem for the day.  Here is information about the goals for the problem and what you should focus on during section:
-	<br />
-	<b>Learning Goal</b>: responding to events, instance variables and <code>getElementAt</code>
-	<br />
-	<b>Milestone 1</b>: add the graphics to the screen in run
-    <b>Milestone 2</b>: detect when the mouse touches the special square
-	<br />
-	<br />
-    
-	The key concept is to think through what events the program wants to respond to - in this case, the program launching, and the user moving the mouse.  This helps decide what code to put where.  Then, we think about what variables we need access to in both methods - in this case, we need the GRect that is moving away from the mouse to be accessible everywhere, so we make it an instance variable.
-</p>
-
-<h3>Solution</h3>
-<pre id="editor" style="height:800px">public class CatchMeIfYouCan extends GraphicsProgram {
-
-    private static final double HIDDEN_SIZE = 60;
-    private static final double DISTRACTOR_SIZE = 50;
-    private static final double NUM_DISTRACTORS = 20;
-    
-    private GRect sneaky = null;
-    private RandomGenerator rgen = RandomGenerator.getInstance();
-    
-    public void run() {
-        createHiddenSquare();
-        createDistractors();
-        addMouseListeners();
-    }
-
-    public void mouseMoved(MouseEvent e) {
-        GObject hitObject = getElementAt(e.getX(), e.getY());
-        if (hitObject == sneaky) {
-            double x = rgen.nextDouble(0, getWidth() - HIDDEN_SIZE);
-            double y = rgen.nextDouble(0, getHeight() - HIDDEN_SIZE);
-            sneaky.setLocation(x, y);
-        }
-    }
-    
-    private void createHiddenSquare() {
-        sneaky = new GRect(HIDDEN_SIZE, HIDDEN_SIZE);
-        sneaky.setFilled(true);
-        sneaky.setColor(Color.BLUE);
-        add(sneaky);
-    }
-    
-    /* Creates debris and strews it randomly on the canvas. */
-    private void createDistractors() {
-        for (int i = 0; i < NUM_DISTRACTORS; i++) {
-            createSingleDistractor();
-        }
-    }
-
-    private void createSingleDistractor() {
-        double x = rgen.nextDouble(0, getWidth() - DISTRACTOR_SIZE);
-        double y = rgen.nextDouble(0, getHeight() - DISTRACTOR_SIZE);
-        
-        /* Add a square of that size and position to the screen. */
-        GRect rect = new GRect(x, y, DISTRACTOR_SIZE, DISTRACTOR_SIZE);
-        rect.setFilled(true);
-        rect.setColor(Color.BLACK);
-        add(rect);
-    }
-}</pre>
-    
-<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-   editor.setTheme('ace/theme/eclipse');
-   editor.getSession().setMode("ace/mode/java");
-   editor.setReadOnly(true);
-   editor.renderer.setShowGutter(false); 
-    /*editor.setTheme("ace/theme/eclipse");
-    editor.getSession().setMode("ace/mode/java");*/
-</script>	
-		</div>
-	</div>
-</div>
 			
 	<!-- Footer -->
 <hr>

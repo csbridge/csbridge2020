@@ -85,6 +85,16 @@
 				<td>ArrayLists</td>
 			</tr>
 
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/projects/starWars/demo.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/starWars.html">Star Wars Crawl</a>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/starWars.html">TA Solution</a>
+					% end
+				</td>
+				<td>ArrayLists</td>
+			</tr>
+
 			<tr 
 			% if not get('taMode', False):
 				class="visible-after" data-visible-after="{{arrayListSection}}"

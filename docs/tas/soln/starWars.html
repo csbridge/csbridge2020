@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Catch Me If You Can (TA)</title>
+<title>CS Bridge  | Star Wars Crawl (TA)</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -350,7 +350,7 @@
 	<!-- Header -->
 	<div id="pageHeader">
 		<h1>
-            TA Solution: Catch Me If You Can
+            TA Solution: Star Wars Crawl
 		</h1>
     </div>
 
@@ -360,66 +360,60 @@
 		<div class="col-xs-12">
             
 <p>
-	The problem below is the section problem for the day.  Here is information about the goals for the problem and what you should focus on during section:
-	<br />
-	<b>Learning Goal</b>: responding to events, instance variables and <code>getElementAt</code>
-	<br />
-	<b>Milestone 1</b>: add the graphics to the screen in run
-    <b>Milestone 2</b>: detect when the mouse touches the special square
-	<br />
-	<br />
-    
-	The key concept is to think through what events the program wants to respond to - in this case, the program launching, and the user moving the mouse.  This helps decide what code to put where.  Then, we think about what variables we need access to in both methods - in this case, we need the GRect that is moving away from the mouse to be accessible everywhere, so we make it an instance variable.
+  This is the second lab problem for the morning.  It gives students practice writing their first programs with ArrayLists and animation.  The key idea is to store the graphics they want to animate together in an ArrayList and update all of their positions each step of the animation loop.
 </p>
 
 <h3>Solution</h3>
-<pre id="editor" style="height:800px">public class CatchMeIfYouCan extends GraphicsProgram {
+<pre id="editor" style="height:900px">public class StarWars extends GraphicsProgram implements FileUtil {
 
-    private static final double HIDDEN_SIZE = 60;
-    private static final double DISTRACTOR_SIZE = 50;
-    private static final double NUM_DISTRACTORS = 20;
-    
-    private GRect sneaky = null;
-    private RandomGenerator rgen = RandomGenerator.getInstance();
-    
+    private static final String TEXT_FILENAME = "res/opening-crawl.txt";
+    private static final String BACKGROUND_IMAGE = "res/background.jpg";
+
+    private static final double LABEL_PADDING = 15; 
+    private static final double PAUSE_TIME = 20;
+
     public void run() {
-        createHiddenSquare();
-        createDistractors();
-        addMouseListeners();
-    }
+        // Add our background image
+        GImage bg = new GImage(BACKGROUND_IMAGE);
+        bg.setSize(getWidth(), getHeight());
+        add(bg);
 
-    public void mouseMoved(MouseEvent e) {
-        GObject hitObject = getElementAt(e.getX(), e.getY());
-        if (hitObject == sneaky) {
-            double x = rgen.nextDouble(0, getWidth() - HIDDEN_SIZE);
-            double y = rgen.nextDouble(0, getHeight() - HIDDEN_SIZE);
-            sneaky.setLocation(x, y);
-        }
-    }
-    
-    private void createHiddenSquare() {
-        sneaky = new GRect(HIDDEN_SIZE, HIDDEN_SIZE);
-        sneaky.setFilled(true);
-        sneaky.setColor(Color.BLUE);
-        add(sneaky);
-    }
-    
-    /* Creates debris and strews it randomly on the canvas. */
-    private void createDistractors() {
-        for (int i = 0; i < NUM_DISTRACTORS; i++) {
-            createSingleDistractor();
+        // Create GLabels from the text file positioned correctly
+        ArrayList&lt;GLabel&gt; labelsList = getLabelsForTextFile(TEXT_FILENAME);
+
+        // Animate labels forever
+        while (true) {
+            for (int i = 0; i < labelsList.size(); i++) {
+                labelsList.get(i).move(0, -1);
+            }
+            pause(PAUSE_TIME);
         }
     }
 
-    private void createSingleDistractor() {
-        double x = rgen.nextDouble(0, getWidth() - DISTRACTOR_SIZE);
-        double y = rgen.nextDouble(0, getHeight() - DISTRACTOR_SIZE);
+    /* This method returns an ArrayList containing a GLabel for each line in the
+     * given file.  The GLabels are in the same order as the lines in the text file
+     * and positioned correctly onscreen.
+     */
+    private ArrayList&lt;GLabel&gt; getLabelsForTextFile(String crawlFilename) {
+        ArrayList&lt;String&gt; lines = readFile(crawlFilename);
+        ArrayList&lt;GLabel&gt; labels = new ArrayList&lt;GLabel&gt;();
         
-        /* Add a square of that size and position to the screen. */
-        GRect rect = new GRect(x, y, DISTRACTOR_SIZE, DISTRACTOR_SIZE);
-        rect.setFilled(true);
-        rect.setColor(Color.BLACK);
-        add(rect);
+        double y = getHeight();
+        for (int i = 0; i < lines.size(); i++) {
+            String line = lines.get(i);
+            
+            // Make a GLabel out of this line and put it in our arraylist
+            GLabel label = new GLabel(line);
+            label.setFont("Courier New-bold-32");
+            label.setColor(Color.WHITE);
+            double x = getWidth() / 2.0 - label.getWidth() / 2.0;
+            add(labels.get(i), x, y);
+            labels.add(label);
+
+            y += label.getAscent() + LABEL_PADDING;
+        }
+
+        return labels;
     }
 }</pre>
     
