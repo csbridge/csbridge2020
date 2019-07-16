@@ -41,7 +41,7 @@
 
 				<h3>Swal Data</h3>
 
-				<textarea class="form-control" id="swalBox" rows="10">{
+				<textarea class="form-control" id="swalBox" rows="16">{
 "title": "Meet outside for break!",
 "html" : "<span style='font-size:24px'>Breaks help you recharge :-)</span><br/><br/><img style='max-width:100%' src='https://media.makeameme.org/created/break-time.jpg'></img>",
 "type": "success",
@@ -56,6 +56,45 @@
 <button class="btn btn-success btn-lg" onclick = "test()">Test</button>
 <button class="btn btn-success btn-lg" onclick = "send()">Send</button>
 
+<h3>Break</h3>
+<pre>{
+"title": "Meet outside for break!",
+"html" : "&lt;span style='font-size:24px'>Breaks help you recharge :-)&lt;/span>&lt;br/>&lt;br/>&lt;img style='max-width:100%' src='https://media.makeameme.org/created/break-time.jpg'>&lt;/img>",
+"type": "success",
+"width":"400px",
+"confirmButtonText":"Ok, if I must...",
+"allowOutsideClick":false,
+"customClass": {
+    "confirmButton": "btn btn-success btn-lg"
+  },
+  "buttonsStyling": false
+}</pre>
+
+<h3>Warning</h3>
+<pre>{
+"title": "Did you hear that??",
+"width":"400px",
+"confirmButtonText":"No, I didn't hear anything...",
+"customClass": {
+    "confirmButton": "btn btn-primary btn-lg"
+  },
+  "buttonsStyling": false
+}</pre>
+
+<h3>Nyan Cat</h3>
+<pre>{
+"title": "Nyan cat attack!!!",
+"html" : "&lt;span style='font-size:24px'>Run!!!!!&lt;/span>&lt;br/>&lt;br/>",
+"width":"400px",
+"confirmButtonText":"Make it stop",
+"allowOutsideClick":false,
+"customClass": {
+    "confirmButton": "btn btn-success btn-lg"
+  },
+  "buttonsStyling": false,
+  "backdrop": "url('https://sweetalert2.github.io/images/nyan-cat.gif')"
+}
+</pre>
 
 			</div>
 		</div>

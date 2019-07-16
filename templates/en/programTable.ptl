@@ -1,23 +1,30 @@
 <%
   # Set these values to change when they appear on the website
   # Times are formatted as YYYYMMDDHH
-  setdefault('finalProject', '2020071613')
+  
+  # day 6 + 7
+  setdefault('finalProject', '2019071613')
   setdefault('arrayListSection', '2019071612')
   setdefault('arrayListStart', '2019071609')
 
+  # day 5
   setdefault('breakout', '2019071513')
   setdefault('eventsSection', '2019071512')
   setdefault('eventsStart', '2019071508')
 
+  # day 4
   setdefault('methodsSection', '2019071212')
   setdefault('methodsStart', '2019071208')
 
+  # day 3
   setdefault('graphicsSection', '2019071112')
   setdefault('graphicsStart', '2019071108')
 
+  # day 2
   setdefault('varsSection', '2019071012')
   setdefault('varsStart', '2019071008')
 
+  # day 1
   setdefault('karelSection', '2019070913')
   setdefault('karelStart', '2019070800')
 %>
