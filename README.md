@@ -34,6 +34,22 @@ TA resources can be found at the `/tas` URL.  In particular, it includes a speci
 - Instructors should have received an invite to the Google Drive submission folder; within this folder, we can create subfolders to organize the project zips that students submit.
 - There are some instructions on the main page of the CSBridge site with information about Eclipse and how to submit.
 
+## Break Activity Ideas
+Break times in the afternoon are a great time to get students out of lab and do fun activities.  Here are some ideas for activities that have been successful in the past, both indoors and outdoors.
+- [Where The Wind Blows](https://youthgroupgames.com.au/games/111/where-the-wind-blows/) (using shoes as place markers)
+- Code trace scavenger hunt: clues are programs students have to trace, and they print out the name of the next destination.  Clues for a past scavenger hunt can be found in the `ScavengerHunt` folder.  This was previously done on the 3rd day of the class.
+- [Ninja](https://en.wikipedia.org/wiki/Ninja_(playground_game))
+- [Rock-paper-scissors](https://en.wikipedia.org/wiki/Rock–paper–scissors) tournament: each lab has students pair up and play a best-of-3 rock-paper-scissors.  The winner finds someone else to challenge, while the loser becomes a cheerleader for the winner and follows them to their next match.  Eventually, there should be just 1 winner per lab, with everyone else in that lab cheering them on.  This continues until their is just one student winner, and all students are cheerleaders for them.  This winner plays an instructor in a best-of-5 match.
+
+
+## Ideas For Future Improvement
+
+- More incoporation of code reviews and pair programming.  Maybe supplying checklists at the start and having students do a self check-in for every project.  Or working with another student to co-develop a program, or have multiple students each work on one part of a program and build on each others' code to see firsthand the value of good style.
+- More discussion of style/top-down design
+- Some way for teaching team to provide feedback (maybe once?) for some code they submit?
+- 2 sections per day?
+- theme sections based on TA area of interest?
+
 
 ## Todos
 - [ ] Write up Day 1 project TA solutions (code is currently in `templates/tas/soln/todo.html` but needs to be split into `.html` files for each problem and have writeups done for each)
