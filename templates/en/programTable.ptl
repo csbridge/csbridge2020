@@ -1,9 +1,9 @@
 <%
   # Set these values to change when they appear on the website
   # Times are formatted as YYYYMMDDHH
-  setdefault('finalProject', '2020071613')
-  setdefault('arrayListSection', '2019071612')
-  setdefault('arrayListStart', '2019071609')
+  setdefault('finalProject', '2020071713')
+  setdefault('arrayListSection', '2019071712')
+  setdefault('arrayListStart', '2019071709')
 
   setdefault('breakout', '2019071513')
   setdefault('eventsSection', '2019071512')
