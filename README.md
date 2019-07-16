@@ -33,3 +33,9 @@ TA resources can be found at the `/tas` URL.  In particular, it includes a speci
 - Once students zip up their assignment, they still need to manually upload it for the staff to access. The students should submit to this URL: https://sendtomycloud.com/csbridge2019.  This drops files off in a Google Drive on Lisa Yan's Stanford account.  For security, please have the Section Leaders write the URL on the board during lab.  Students should submit their assignments at the end of the day (not after every assignment).
 - Instructors should have received an invite to the Google Drive submission folder; within this folder, we can create subfolders to organize the project zips that students submit.
 - There are some instructions on the main page of the CSBridge site with information about Eclipse and how to submit.
+
+
+## Todos
+- [ ] Write up Day 1 project TA solutions (code is currently in `templates/tas/soln/todo.html` but needs to be split into `.html` files for each problem and have writeups done for each)
+- [ ] Refactor bonus problems table in `templates/en/bonus-index.html` to match the main table style in `programTable.ptl` in that it is a single table using date variables at the top, and only includes `visible-after` for non-TA mode.
+- [ ] Include a TA version of the bonus table on the `/tas` page so TAs can see all bonus problems.  This should be a shared version of the table across `/tas` and `/bonus-index` so changes once are propagated everywhere.
