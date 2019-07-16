@@ -77,7 +77,11 @@
 		>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/numbers.jpg"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/sortedNumbers.html">Sorted Numbers</a></td>
+				<td><a href="{{pathToRoot}}en/projects/sortedNumbers.html">Sorted Numbers</a>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/sortedNumbers.html">TA Solution</a>
+					% end
+				</td>
 				<td>ArrayLists</td>
 			</tr>
 
@@ -87,7 +91,11 @@
 			% end
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/snow.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/snow.html">Snow</a></td>
+				<td><a href="{{pathToRoot}}en/projects/snow.html">Snow</a>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/snow.html">TA Solution</a>
+					% end
+				</td>
 				<td>ArrayLists</td>
 			</tr>
 

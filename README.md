@@ -23,18 +23,8 @@ This website has the ability to make materials visible at specific dates/times w
 
 The timestamps support the format `YYYYMMDDHH`.  The script that handles this hide/show functionality is in `docs/js/index.js`.
 
-## TA Mode
-TA resources are hidden throughout the site and visible in "TA mode".  You can view a page in TA mode by adding the query param `ta` to the URL - for instance, `https://ctu.csbridge.org/en/index.html?ta` to view the main page in TA mode.  In TA mode, TAs can see problem solutions, the full materials for the entire course (even those that are hidden via timed release above), as well as a special link in the navigation bar for additional TA logistical information.
-
-To make an HTML element visible only to TAs, use the "ta-only" class, like the following:
-
-```
-div class="ta-only">
-...
-</div>
-```
-
-The script that handles this functionality is in `docs/js/index.js`.  However, this is the _obfuscated version_.  The normal version can be found in `js/index.js`.  If you change this file, you can re-obfuscate it and copy the obfuscated version into `docs/js/index.js` by running `npm run obfuscate`.
+## TA Resources
+TA resources can be found at the `/tas` URL.  In particular, it includes a special version of the navbar and programs table showing all projects and solutions.  It does this by passing an additional parameter to the template that says it is the TA page.
 
 
 ## Handling Student Submissions

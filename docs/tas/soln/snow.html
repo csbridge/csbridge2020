@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Favorite Number (TA)</title>
+<title>CS Bridge  | Snow (TA)</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -350,7 +350,7 @@
 	<!-- Header -->
 	<div id="pageHeader">
 		<h1>
-            TA Solution: Favorite Number
+            TA Solution: Snow
 		</h1>
     </div>
 
@@ -360,93 +360,59 @@
 		<div class="col-xs-12">
             
 <p>
-    Before starting this section problem, as a warmup exercise for students take a little time to walk through how loops and variables can work together, since that is a natural followup to the material shown in lecture.  Specifically, pose the following problem to students that you then walk through: how can we print out a rocket ship countdown? For example:
-
-<pre>10
-9
-8
-7
-6
-5
-4
-3
-2
-1
-0
-Blast off!
-</pre>
-
-The solution is something like this:
-
-<pre>public void run() {
-    int num = 10;
-    while (num >= 0) {
-        println(num);
-        num = num - 1;
-    }
-    println("Blast off!");
-}</pre>
-
-It's important to walk students through how we can make a variable outside the loop and then have the variable be continually used and updated inside the loop.  It's also important to talk through the condition to use in the loop - how long do we want to loop for?
-</p>
-
-<hr />
-
-<p>
-	After this warmup, the problem below is one section problem for the day.  Here is information about the goals for the problem and what you should focus on during section:
+	The problem below is the section problem for the day.  Here is information about the goals for the problem and what you should focus on during section:
 	<br />
-	<b>Learning Goal</b>: using variables with while and conditions
+	<b>Learning Goal</b>: Basic ArrayList concepts, including add, remove, and looping through the elements in an ArrayList using a for loop and the index variable. 
 	<br />
-	<b>Milestone</b>: play the game with no feedback - just guess until correct
+	<b>Milestone</b>: think through how to animate one snowflake - then how ArrayLists can help us animate multiple at the same time.  Then animate the snowflakes, but don't add new ones.  Finally, add the functionality to add new snowflakes 10% of the time.
 	<br />
 	<br />
-	Write code on the board. Try to not use pseudocode!  The hardest part is that guess must be reassigned...and in general this section is hard, but not many lines of code. Do your best to pace yourself. Try not to have students with experience give it away.
+	The key concept is to realize that we can store all the snowflakes together and animate them "at the same time" (even though we are technically animating them each one after the other).
 </p>
 
 <h3>Solution</h3>
-<pre id="editor" style="height:400px">public class FavoriteNumber extends ConsoleProgram {
+<pre id="editor" style="height:700px">public class Snow extends GraphicsProgram {
+    
+    // The diameter of each snowflake
+    private static final int SNOWFLAKE_SIZE = 10;
+    
+    // How long to pause in between each animation frame
+    private static final int DELAY = 10;
+    
+    // The percent chance of creating a new snowflake each frame
+    private static final double SNOWFLAKE_CHANCE = 0.1;
 
-	private static final int FAVORITE_NUMBER = 88;
-	
-	public void run() {
-	    println("Try and guess my favorite number (between 0 and 100)");
-	    
-        int guess = readInt("Guess: ");
-        while (guess != FAVORITE_NUMBER) {
-            if (guess < FAVORITE_NUMBER) {
-                println("Too low");
-            } else {
-                println("Too high");
-            } 
+    private RandomGenerator rgen = new RandomGenerator();
+
+    public void run() {
+        ArrayList<GOval> snowflakes = new ArrayList<GOval>();
+
+        while(true) {
             
-            guess = readInt("Guess: ");
-        }
+            // Move all snowflakes not at the bottom of the screen
+            for(int i = 0; i < snowflakes.size(); i++) {
+                GOval snowflake = snowflakes.get(i);
+                
+                // Move this snowflake if it is not at the bottom of the screen
+                if(snowflake.getY() < getHeight() - SNOWFLAKE_SIZE) {
+                    snowflake.move(0, 1);
+                }
+            }
 
-        println("Good job!");
-	}
+            // 10% chance of making a new snowflake at the top of the screen
+            if(rgen.nextBoolean(SNOWFLAKE_CHANCE)) {
+                GOval newSnowflake = new GOval(SNOWFLAKE_SIZE, SNOWFLAKE_SIZE);
+                newSnowflake.setFilled(true);
+                int snowflakeX = rgen.nextInt(getWidth() - SNOWFLAKE_SIZE);
+                add(newSnowflake, snowflakeX, -SNOWFLAKE_SIZE);
+                snowflakes.add(newSnowflake);
+            }
 
-}</pre>
-
-<p>You may be guided towards a solution such as this:</p>
-<pre>
-public void run() {
-    println("Try and guess my favorite number (between 0 and 100)");
-
-    int guess = -1;
-    while(guess != FAVORITE_NUMBER) {
-        guess = readInt("Guess: ");
-        if(guess < FAVORITE_NUMBER) {
-            println("Too low");
-        } else if(guess > FAVORITE_NUMBER) {
-            println("Too high");
-        } else {
-            println("Good job!");
+            pause(DELAY);
         }
     }
-}
-</pre>
 
-<p>This is another functional solution, but one that is not as elegant as the first.  The reason is that guess is initialized to a somewhat arbitrary value in the second solution in order to initialize it.  Additionally, it is not as clear that the program terminates when the guess is correct.  In the first solution, we can look at the code after the loop to know it terminates.  But in the second solution, we must look inside the loop to see that it will print "Good job!" and then exit the loop.  However, it is better than the first solution in that it only has to call <code>readInt</code> one time instead of two.</p>
+}</pre>
     
 <script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
