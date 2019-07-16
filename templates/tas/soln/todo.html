@@ -1,0 +1,595 @@
+<h2>Tuesday (July 9th)</h2>
+
+      <h3>Section </h3>
+      <p>Problem: <a href="{{pathToRoot}}en/projects/efes.html">Charles Bridge</a></p>
+      <p>Teaching tips:
+        <ol>
+          <li>Learning goal: For loops and decomposition
+          <li>Milestone: build a single column.
+          <li>Write code on the board. Start with pseudocode, turn to real code
+          <li>Encourage students to work in pairs to program out the milestones.
+          <li>The hardest part is the fence-post bug when building a col.
+        </ol>
+      </p>
+      <p>Solution:
+        <pre>
+/* BuildCharlesBridge
+ * Author: CSBridge Prague
+ * Implements a program where Karel fills columns with beepers in order to
+ * repair the Charles Bridge. Columns are 4 steps apart and each have a
+ * height of 5.
+ */
+
+import stanford.karel.*;
+
+public class BuildCharlesBridge extends SuperKarel {
+  
+  public void run() {
+        for (int i = 0; i < 3; i++) {
+            buildColumn();
+            moveToNextColumn();
+        }
+        // need to build the last column without moving further east
+        buildColumn();
+  }
+
+    /* Method: buildColumn
+     * -------------------
+     * Fills a column (of height 5) with beepers.
+     * Precondition: Karel is facing east at the bottom of an empty column.
+     * Postcondition: Karel is facing east at the bottom of the column, which
+     * is now filled with beepers. 
+     */
+    private void buildColumn() {
+        turnLeft();
+        placeBeepersUp();
+        comeBackDown();
+        turnLeft();
+    }
+
+    /* Method: placeBeepersUp
+     * ----------------------
+     * Puts 5 beepers vertically in a column (of height 5).
+     * Precondition: Karel is facing north at the bottom of the column.
+     * Postcondition: Karel is facing north at the top of the column, which
+     * is now filled with beepers.
+     */
+    private void placeBeepersUp() {
+        for (int i = 0; i < 4; i++) {
+            putBeeper();
+            move();
+        }
+        // need to put the last beeper without moving further north
+        putBeeper();
+    }
+
+    /* Method: comeBackDown
+     * --------------------
+     * Returns Karel to the bottom of a column of height 5.
+     * Precondition: Karel is facing north at the top of the column.
+     * Postcondition: Karel is facing south at the bottom of the column.
+     */
+    private void comeBackDown() {
+        turnLeft();
+        turnLeft();
+        for (int i = 0; i < 4; i++) {
+            move();
+        }
+    }
+
+    /* Method: moveToNextColumn
+     * ------------------------
+     * Moves Karel from the bottom of one column to the bottom of the next one,
+     * which is 4 spaces to the east.
+     * Precondition: Karel is facing east at the bottom of one column.
+     * Postcondition: Karel is facing east at the bottom of the next column.
+     */
+    private void moveToNextColumn() {
+        for (int i = 0; i < 4; i++) {
+            move();
+        }
+    }
+}
+        </pre>
+      </p>
+
+      <h3>Lab </h3>
+      <p>Problem: <a href="{{pathToRoot}}en/projects/mountain.html">Mountain Karel</a></p>
+      <p>Teaching tips:
+        <ol>
+          <li>Learning goal: while loops and decomposition
+          <li>Milestone: Ascend the mountain
+          <li>Encourage students to think about what high level commands might be useful for Karel to know to solve the problem.  Then implement those using lower-level Karel commands.
+          <li>The hardest part is looping to ascend and descend the mountain, knowing the condition to use and what step to take each time.
+        </ol>
+      </p>
+      <p>Solution:
+        <pre>import stanford.karel.*;
+
+/* This program has Karel ascend a mountain,
+ * place a beeper at the top, and then descend
+ * a mountain.  The mountain consists of 1 or more
+ * 1-level steps.
+ */
+public class Mountain extends SuperKarel {
+  
+  public void run() {
+    while (frontIsBlocked()) {
+        stepUpMountain();
+    }
+    putBeeper();
+    while (frontIsClear()) {
+        stepDownMountain();
+    }
+  }
+  
+  /* Karel makes one step up a level of the mountain.
+   * At the start of the method, Karel is assumed to be
+   * facing east towards a wall of the mountain with room
+   * above to go to the next level of the mountain.  At the
+   * end of the method, Karel is facing east towards a wall
+   * of the mountain one level above where Karel started.
+   */
+  private void stepUpMountain() {
+      turnLeft();
+      move();
+      turnRight();
+      move();
+  }
+  
+  /* Karel makes one step down a level of the mountain.
+     * At the start of the method, Karel is assumed to be
+     * facing east towards the direction where the mountain descends,
+     * with room below to go to the previous level of the mountain.
+     * At the end of the method, Karel is facing east towards the direction
+     * where the mountain descends, one level below where Karel started.
+     */
+  private void stepDownMountain() {
+      move();
+      turnRight();
+      move();
+      turnLeft();
+  }
+}
+</pre></p>
+
+    <p>Problem: <a href="{{pathToRoot}}en/projects/randomPainter.html">Random Painter</a></p>
+    <p>Teaching tips:
+      <ol>
+        <li>Learning goal: if statements, loops and decomposition
+        <li>Milestone: Paint one row
+        <li>Encourage students to think about what high level commands might be useful for Karel to know to solve the problem.  Then implement those using lower-level Karel commands.
+        <li>The hardest part is looping between rows, and approaching a larger program.
+      </ol>
+    </p>
+    <p>Solution:
+      <pre>import stanford.karel.*;
+
+/* Karel paints the entire world randomly, with each
+ * corner being randomly either green or blue.  This
+ * program works for a world of any size.
+ */
+public class RandomPainter extends SuperKarel {
+  
+  public void run() {
+      /* Every world has at least 1 row.  Paint this,
+       * then paint any additional rows.
+       */
+    paintRow();
+    while (frontIsClear()) {
+        moveToNextRow();
+        paintRow();
+    }
+  }
+
+  /* Karel paints a single row in the world, with each
+   * square being painted randomly blue or green.
+   * At the start of the method, Karel is assumed to be
+   * at the leftmost corner of the row facing East.
+   * After the method finishes, Karel will be at the
+   * leftmost corner of the row facing North, and the
+   * row will be randomly colored.
+   */
+  private void paintRow() {
+      paintCornerRandomly();
+      while (frontIsClear()) {
+          move();
+          paintCornerRandomly();
+      }
+      
+      goBackToStart();
+      turnRight();
+  }
+  
+  /* Karel randomly paints the corner she is on to be
+   * either green or blue.
+   */
+  private void paintCornerRandomly() {
+      if (random()) {
+          paintCorner(BLUE);
+      } else {
+          paintCorner(GREEN);
+      }
+  }
+  
+  /* Karel returns to the leftmost corner of the
+   * current row.  Before the method starts, Karel
+   * is assumed to be at the rightmost corner of a row
+   * facing East.  After the method finishes, Karel
+   * will be at the leftmost corner of the same row 
+   * facing West.
+   */
+  private void goBackToStart() {
+      turnLeft();
+      turnLeft();
+      while (frontIsClear()) {
+          move();
+      }
+  }
+  
+  /* Karel moves up one row in the world.  Before the
+   * method starts, Karel is assumed to be at the leftmost
+   * corner of a row facing North.  After the method finishes,
+   * Karel will be in the square above the starting corner,
+   * facing East.
+   */
+  private void moveToNextRow() {
+      move();
+      turnRight();
+  }
+}</pre>
+
+      <!--<hr/>
+
+      <h2>Wednesday (3rd July)</h2>
+
+      <p>Soln:
+        <pre>public class Lluvia extends EsGraphics {
+
+  private static final int TAMANO = 20;
+  private ArrayList<SOvalo> listaLluvia = new ArrayList<SOvalo>();
+
+  public void run() {
+    while(true) {
+      // update world
+      crearNuevo();
+      moverLluvia();
+      // pause
+      pausa(10);
+    }
+  }
+
+  private void moverLluvia() {
+    for(int i = 0; i < listaLluvia.size(); i++) {
+      SOvalo proximo = listaLluvia.get(i);
+      if(proximo.darY() + TAMANO < darAlto()) {
+        proximo.moverse(0, 1);
+      }
+    }
+  }
+
+  private void crearNuevo() {
+    // make a new snowflake with 10% probability
+    if(booleanAleatorio(0.10)) {
+      int x = intAleatorio(0, getWidth() - TAMANO);
+      SOvalo nuevo = new SOvalo(TAMANO, TAMANO);
+      nuevo.cambiarFilled(true);
+      // agregar al la pantalla
+      agregar(nuevo, x, -TAMANO);
+      // agregar al la lista
+      listaLluvia.add(nuevo);
+    }
+  }
+}</pre>
+
+      <h2>Tuesday (2nd July)</h2>
+      <p> Code for client-server demos. NOT intended for students to see :-) </p>
+      <a href="{{pathToRoot}}starter/Internet.zip">Internet.zip</a>
+
+      <h2>Monday (1st July)</h2>
+
+      <p>Section pro tips
+        <ol>
+          <li>Learning goal: Atributes + darObjectoEn
+          <li>Milestone 1: Draw the scene without any extras (just the furtivo). 
+          <li>Milestone 2: add mouse listeners
+          <li>Milestone 3: detect when the mouse touches the "furtivo"
+          <li>Milestone 4: rehide the "furtivo". 
+          <li>Milestone 5: add the extras. 
+          <li>Write code on the board. Try to not use pseudocode!
+          <li>Encourage students to work in pairs to program out the milestones.
+          <li>The hardest part is detecting if you have touched the "futivo"
+          <li>Tip: There is a lot of code here. If you can give the students 2 mins to chat while you set up the code on the board, you can start with some code and organize the board.
+        </ol>
+      </p>
+
+      <p>Question: <a href="{{pathToRoot}}/es/projects/catchMeIfYouCan.html">link</a>.
+
+      <p>Solution:<br/>
+        <pre>public class AtrapameSiPuedes extends EsGraphics {
+  private static final double TAMANO_FURTIVO = 70;
+  private static final double TAMANO_EXTRAS = 50;
+  private static final double N_EXTRAS = 20;
+  
+  private SRect furtivo;
+  
+  public void run() {
+    agregarFurtivo();
+    agregarExtras();
+    agregarMouseListeners();
+  }
+  
+  public void mouseMovido(MouseEvento e) {
+    int mouseX = e.darX();
+    int mouseY = e.darY();
+    SObjeto objecto = darObjetoEn(mouseX, mouseY);
+    if(objecto == furtivo) {
+      furtivoAleatorio();
+    }
+  }
+  
+  private void agregarFurtivo() {
+    furtivo = new SRect(TAMANO_FURTIVO,TAMANO_FURTIVO);
+    agregar(furtivo);
+    furtivo.cambiarRelleno(true);
+    furtivo.cambiarColor(Color.BLUE);
+    furtivoAleatorio();
+  }
+
+  private void furtivoAleatorio() {
+    double x = doubleAleatorio(0, getWidth() - TAMANO_FURTIVO);
+    double y = doubleAleatorio(0, getHeight() - TAMANO_FURTIVO);
+    furtivo.cambiarUbicacion(x, y);
+  }
+
+  private void agregarExtras() {
+    for (int i = 0; i < N_EXTRAS; i++) {
+      agregarExtra();
+    }
+  }
+  
+  /* Crea una sola pieza de escombros y la agrega a 
+   * la pantalla. */
+  private void agregarExtra() {
+    double x = doubleAleatorio(0, getWidth() - TAMANO_EXTRAS);
+    double y = doubleAleatorio(0, getHeight() - TAMANO_EXTRAS);
+    
+    SRect r = new SRect(x, y, TAMANO_EXTRAS, TAMANO_EXTRAS);
+    r.cambiarRelleno(true);
+    add(r);
+  }
+
+}</pre>
+</p>
+
+</pre>
+
+<hr/>
+<div style="height:200px"></div>
+
+      <h2>Friday (28th June)</h2>
+
+      <h3>Target section</h3>
+
+      <p>Problem: <a href="{{pathToRoot}}/es/projects/target.html">/es/projects/target.html</a></p>
+      <p>Solution:<br/>
+        <pre>public class Target extends EsGraphics {
+
+  public void run() {
+    dibujarCirculoCentrado(150, Color.RED);
+    dibujarCirculoCentrado(100, Color.WHITE);
+    dibujarCirculoCentrado(50, Color.RED);
+  }
+
+  private void dibujarCirculoCentrado(int radius, Color color) {
+    SOvalo circulo = new SOvalo(radius * 2, radius * 2);
+    double x = (darAncho() - circulo.darAncho()) / 2;
+    double y = (darAlto() - circulo.darAlto()) / 2;
+    circulo.cambiarRelleno(true);
+    circulo.darColor(color);
+    agregar(circulo, x, y);
+  }
+
+}</pre>
+      </p>
+
+      <hr/>
+
+-->
+		</div>
+	</div>
+
+
+   <!-- Main Content -->
+   <div class="container">
+
+      <!-- Header -->
+      <div id="pageHeader">
+         <h1>
+            Day 1 Solutions
+         </h1>
+            
+
+      </div>
+      <hr/>
+      <div class="row">
+         <div class="col-md-12">
+            <h2>Collect Newspaper</h2>
+
+            <p>Strongly encourage students to define useful methods</p>
+
+<pre class="well" style="background:white">public CollectNewspaperKarel extends Karel {
+   public void run() {
+      moveToNewspaper();
+      pickUpNewspaper();
+      returnToHouse();
+   }
+
+   private void moveToNewspaper() {
+      move();
+      move();
+      turnRight();
+      move();
+      turnLeft();
+      move();
+   }
+
+   private void pickUpNewspaper() {
+      pickBeeper();
+   }
+
+   private void returnToHouse() {
+      turnAround();
+      move();
+      move();
+      move();
+      turnRight();
+      move();
+      turnRight();
+   }
+
+   private void turnAround() {
+      turnLeft();
+      turnLeft();
+   }
+
+   private void turnRight() {
+      turnLeft();
+      turnLeft();
+      turnLeft();
+   }
+}</pre>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-md-12">
+            <h2>Build Effes</h2>
+
+            <p>Make sure students use for loops</p>
+
+<pre class="well" style="background:white">public class BuildEfes extends SuperKarel {
+   
+   public void run() {
+      for(int i = 0; i < 3; i++) {
+         buildColumn();
+         moveToNextColumn();
+      }
+      buildColumn();
+   }
+   
+   private void buildColumn() {
+      turnLeft();
+      for (int i = 0; i < 4; i++) {
+         putBeeper();
+         move();
+      }
+      putBeeper();
+      
+      // Karel Descends the Column
+      turnAround();
+      for (int i = 0; i < 4; i++) {
+         move();
+      }
+      turnLeft();
+   }
+   
+   private void moveToNextColumn() {
+      for (int i = 0; i < 4; i++) {
+         move();
+      }
+   }
+}</pre>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-md-12">
+            <h2>Mountain Karel</h2>
+
+            <p>Make sure students use for loops</p>
+
+<pre class="well" style="background:white">public class MountainKarel extends SuperKarel {
+   public void run() {
+      while (frontIsBlocked()) {
+         stepUp();
+      }
+      putBeeper();
+      move();
+      while (rightIsClear()) {
+         dropDown();
+      }
+   }
+
+   private void dropDown() {
+      turnRight();
+      move();
+      turnLeft();
+      if (frontIsClear()) {
+         move();
+      }
+   }
+
+   private void stepUp() {
+      turnLeft();
+      move();
+      turnRight();
+      move();
+   }
+
+   private void stepDown() {
+      move();
+      turnRight();
+      move();
+      turnLeft();
+   }
+}</pre>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-md-12">
+            <h2>Random Painter</h2>
+
+            <p>Make sure students use for loops</p>
+
+<pre class="well" style="background:white">public class RandomPainter extends SuperKarel {
+   
+   public void run() {
+      paintRow();
+      returnToWest();
+      while(leftIsClear()) {
+         turnLeft();
+         move();
+         turnRight();
+         paintRow();
+         returnToWest();
+      }
+   }
+
+   private void paintRow() {
+      while(frontIsClear()) {
+         paintSquare();
+         move();
+      }
+      paintSquare();
+   }
+
+   private void paintSquare() {
+      if(random()) {
+         paintCorner(GREEN);
+      } else {
+         paintCorner(BLUE);
+      }
+   }
+
+   private void returnToWest() {
+      turnAround();
+      while(frontIsClear()) {
+         move();
+      }
+      turnAround();
+   }
+}</pre>
+         </div>
+      </div>
