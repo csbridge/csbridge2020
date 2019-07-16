@@ -9,6 +9,9 @@
 	<br />
 	<br />
 	The key concept is to realize that we can store all the snowflakes together and animate them "at the same time" (even though we are technically animating them each one after the other).
+    <br />
+    <br />
+    <p>Note: one potential solution approach that may be suggested is, instead of keeping all snowflakes in the arraylist forever and animating only the ones still falling, to remove ones that are no longer falling.  The challenge with this approach is it is tricky to update an arraylist while iterating over it due to the number of elements changing.  For this reason, it is easier to keep all snowflakes in the arraylist and animate only the ones that are falling.</p>
 </p>
 
 <h3>Solution</h3>
