@@ -235,6 +235,7 @@
 	          	<li><a href="{{pathToRoot}}slides/Methods.pdf">Methods</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Events.pdf">Events</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Breakout.pdf">Breakout</a></li>
+	          	<li><a href="{{pathToRoot}}slides/ArrayLists.pdf">ArrayLists</a></li>
 	         
 	          </ul>
 	        </li>
