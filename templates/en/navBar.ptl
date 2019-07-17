@@ -233,6 +233,7 @@
 	          	<li><a href="{{pathToRoot}}slides/Graphics.pdf">Graphics</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Animation.pdf">Animation</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Methods.pdf">Methods</a></li>
+	          	<li><a href="{{pathToRoot}}slides/NestedLoops.pdf">Nested Loops</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Events.pdf">Events</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Breakout.pdf">Breakout</a></li>
 	          	<li><a href="{{pathToRoot}}slides/AI.pdf">AI</a></li>
