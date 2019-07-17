@@ -3,7 +3,7 @@
   # Times are formatted as YYYYMMDDHH
 
   # day 6 + 7
-  setdefault('finalProject', '2020071713')
+  setdefault('finalProject', '2019071713')
   setdefault('arrayListSection', '2019071712')
   setdefault('arrayListStart', '2019071709')
 
