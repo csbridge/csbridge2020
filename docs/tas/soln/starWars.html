@@ -386,7 +386,7 @@
 
         // Animate labels forever
         while (true) {
-            for (int i = 0; i < labelsList.size(); i++) {
+            for (int i = 0; i &lt; labelsList.size(); i++) {
                 labelsList.get(i).move(0, -1);
             }
             pause(PAUSE_TIME);
@@ -402,7 +402,7 @@
         ArrayList&lt;GLabel&gt; labels = new ArrayList&lt;GLabel&gt;();
         
         double y = getHeight();
-        for (int i = 0; i < lines.size(); i++) {
+        for (int i = 0; i &lt; lines.size(); i++) {
             String line = lines.get(i);
             
             // Make a GLabel out of this line and put it in our arraylist
@@ -410,14 +410,15 @@
             label.setFont("Courier New-bold-32");
             label.setColor(Color.WHITE);
             double x = getWidth() / 2.0 - label.getWidth() / 2.0;
-            add(labels.get(i), x, y);
             labels.add(label);
+            add(labels.get(i), x, y + label.getAscent());
 
             y += label.getAscent() + LABEL_PADDING;
         }
 
         return labels;
     }
+    
 }</pre>
     
 <script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
