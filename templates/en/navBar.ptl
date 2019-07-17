@@ -237,7 +237,7 @@
 	          	<li><a href="{{pathToRoot}}slides/Breakout.pdf">Breakout</a></li>
 	          	<li><a href="{{pathToRoot}}slides/AI.pdf">AI</a></li>
 	          	<li><a href="{{pathToRoot}}slides/ArrayLists.pdf">ArrayLists</a></li>
-	          	<li><a href="{{pathToRoot}}slides/HashMaps.pdf">ArrayLists</a></li>
+	          	<li><a href="{{pathToRoot}}slides/HashMaps.pdf">HashMaps</a></li>
 	         
 	          </ul>
 	        </li>
