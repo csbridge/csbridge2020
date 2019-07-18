@@ -466,7 +466,7 @@
 				<td><a href="{{pathToRoot}}en/projects/collectNewspaper.html"><img class="projectImg" src="{{pathToRoot}}img/icons/newspaper.jpg"></img></a></td>
 				<td><a href="{{pathToRoot}}en/projects/collectNewspaper.html">Collect Newspaper</a>
 					% if get('taMode', False):
-						<!-- <br><a href="{{pathToRoot}}tas/soln/collectNewspaper.html">TA Solution</a> -->
+						<br><a href="{{pathToRoot}}tas/soln/collectNewspaper.html">TA Solution</a>
 					% end
 				</td>
 				<td>Methods</td>
@@ -480,7 +480,7 @@
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/charles.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/efes.html">Build Charles Bridge</a>
 					% if get('taMode', False):
-						<!-- <br><a href="{{pathToRoot}}tas/soln/charles.html">TA Solution</a> -->
+						<br><a href="{{pathToRoot}}tas/soln/efes.html">TA Solution</a>
 					% end
 				</td>
 				<td>For Loops</td>
