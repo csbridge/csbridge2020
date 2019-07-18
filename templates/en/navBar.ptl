@@ -231,7 +231,8 @@
 	          	<li><a href="{{pathToRoot}}slides/Variables.pdf">Variables</a></li>
 			<li><a href="{{pathToRoot}}slides/Variables2.pdf">Variables 2</a></li>
 	          	
-	          	<li><a href="{{pathToRoot}}slides/Graphics.pdf">Graphics</a></li>
+	          	<li><a href="{{pathToRoot}}slides/Graphics.pdf">Graphics (Slides)</a></li>
+	          	<li><a href="{{pathToRoot}}starter/Graphics.zip">Graphics (Code)</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Animation.pdf">Animation</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Methods.pdf">Methods</a></li>
 	          	<li><a href="{{pathToRoot}}slides/NestedLoops.pdf">Nested Loops</a></li>
