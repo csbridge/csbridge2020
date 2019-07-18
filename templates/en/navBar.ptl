@@ -243,6 +243,7 @@
 	          	<li><a href="{{pathToRoot}}slides/HashMaps.pdf">HashMaps</a></li>
 	         	<li><a href="{{pathToRoot}}slides/Internet.pdf">The Internet (Slides)</a></li>
 	         	<li><a href="{{pathToRoot}}starter/Internet.zip">The Internet (Code)</a></li>
+	         	<li><a href="{{pathToRoot}}starter/Beyond-CSBridge.pdf">Beyond CSBridge</a></li>
 	          </ul>
 	        </li>
 
