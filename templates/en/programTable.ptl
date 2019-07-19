@@ -508,7 +508,7 @@
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomPainter2.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/randomPainter.html">Random Painter</a>
 					% if get('taMode', False):
-						<!-- <br><a href="{{pathToRoot}}tas/soln/randomPainter.html">TA Solution</a> -->
+						<br><a href="{{pathToRoot}}tas/soln/randomPainter.html">TA Solution</a>
 					% end
 				</td>
 				<td>If Statements</td>
