@@ -1,0 +1,28 @@
+% rebase('templates/en/template.ptl', title="JAR Files")
+
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Exporting Projects as JAR Files
+			</h1>
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>Now that you’ve written all these wonderful programs, wouldn’t it be great if you could package them up and send them to your friends and relatives so that they could see what you’ve done? Here’s a short guide to making an executable JAR file in Eclipse!</p>
+				<p>
+					<a href="https://web.stanford.edu/class/archive/cs/cs106a/cs106a.1192/handouts/44-jar-files.pdf">This handout</a> contains the core instructions for how to export your project so you can run it outside of Eclipse.  There are a few important notes specific to CSBridge:
+				</p>
+				<ul>
+					<li>When you create a JAR file, you create it for a project, but it will only run one program in that project when you double-click it.  So if you have a project with multiple programs in it that you would like to export, you must export multiple JAR files, one for each program.</li>
+					<li>The handout above mentions projects that rely on JAR files such as the ACM libraries.  In the handout this file is called "acm.jar".  However, this name may be different in the CSBridge projects.  You can find the name of the library file by looking in the <code>lib</code> folder.  For instance, in the Day2 project it is "spl.jar".</li>
+					<li>If you are trying to export a client or server program, you will also have to include the <code>simpleClient.jar</code> and <code>simpleServer.jar</code> files in the list of JAR files.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
