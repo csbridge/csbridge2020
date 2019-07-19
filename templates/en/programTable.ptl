@@ -494,7 +494,7 @@
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mountain.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/mountain.html">Mountain Karel</a>
 					% if get('taMode', False):
-						<!-- <br><a href="{{pathToRoot}}tas/soln/mountain.html">TA Solution</a> -->
+						<br><a href="{{pathToRoot}}tas/soln/mountain.html">TA Solution</a>
 					% end
 				</td>
 				<td>While Loops</td>

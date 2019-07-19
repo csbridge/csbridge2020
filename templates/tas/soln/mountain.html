@@ -1,0 +1,65 @@
+% rebase('templates/tas/soln/template.ptl', problemTitle="Mountain Karel")
+
+<p>
+  This is the first lab problem for the afternoon (after implementing the section problem).  It gives students practice with control flow, specifically while loops and if statements (decomposition is also important).  The challenge is the program should work in a variety of worlds.  Generalized programs are important, but hard, so you may need to walk students through these concepts.  The hardest part is looping to ascend and descend the mountain, knowing the condition to use and what step to take each time.
+  <br />
+  <br />
+  <b>Milestone:</b> ascend the mountain
+</p>
+
+<h3>Solution</h3>
+<pre id="editor1" style="height:700px">public class Mountain extends SuperKarel {
+  
+  public void run() {
+    while (frontIsBlocked()) {
+        stepUpMountain();
+    }
+    putBeeper();
+    while (frontIsClear()) {
+        stepDownMountain();
+    }
+  }
+  
+  /* Karel makes one step up a level of the mountain.
+   * At the start of the method, Karel is assumed to be
+   * facing east towards a wall of the mountain with room
+   * above to go to the next level of the mountain.  At the
+   * end of the method, Karel is facing east towards a wall
+   * of the mountain one level above where Karel started.
+   */
+  private void stepUpMountain() {
+      turnLeft();
+      move();
+      turnRight();
+      move();
+  }
+  
+  /* Karel makes one step down a level of the mountain.
+     * At the start of the method, Karel is assumed to be
+     * facing east towards the direction where the mountain descends,
+     * with room below to go to the previous level of the mountain.
+     * At the end of the method, Karel is facing east towards the direction
+     * where the mountain descends, one level below where Karel started.
+     */
+  private void stepDownMountain() {
+      move();
+      turnRight();
+      move();
+      turnLeft();
+  }
+  
+}</pre>
+
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    for (var i = 1; i <= 1; i++) {
+        var editor = ace.edit("editor" + i);
+        editor.setTheme('ace/theme/eclipse');
+        editor.getSession().setMode("ace/mode/java");
+        editor.setReadOnly(true);
+        editor.renderer.setShowGutter(false); 
+        /*editor.setTheme("ace/theme/eclipse");
+        editor.getSession().setMode("ace/mode/java");*/
+    }
+</script>
