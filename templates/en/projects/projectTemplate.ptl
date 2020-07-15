@@ -1,0 +1,23 @@
+% rebase('templates/en/template.ptl', title=metadata['title'][0])
+
+<div id="pageHeader">
+	<h1>
+		{{metadata['title'][0]}}
+	</h1>
+
+	% if 'credit' in metadata:
+		<p>
+			Credit: {{metadata['credit'][0]}}
+		</p>
+	% end
+
+	% if 'goof' in metadata:
+	<p>Goof</p>
+	% end
+</div>
+<hr/>
+<div class="row">
+	<div class="col-xs-12">
+		{{!base}}
+	</div>
+</div>

@@ -3,18 +3,20 @@
 '''
 FILE: compile.py
 ----------------
-Template compiler that compiles all .html template files in the TEMPLATE_DIR
-directory below (excluding .ptl files, which are partial templates), and outputs
-with the same filenames to the OUTPUT_DIR directory.
+Template compiler that compiles all .html and .mdown template files in the 
+TEMPLATE_DIR directory below (excluding .ptl files, which are partial templates), 
+and outputs with the same filenames to the OUTPUT_DIR directory, but ending in
+.html.
+
 Example usage:
 
-> python compile.py --output_dir docs
+> python3 compile.py --output_dir docs
 
 Compiles all template files using local paths, and outputs the compiled files to
 the docs directory.  The compiled files in docs/ have the same directory structure
 as in the TEMPLATE_DIR directory.
 
-> python compile.py
+> python3 compile.py
 
 Compiles all template files and outputs the compiled files to
 the OUTPUT_DIR below.
@@ -25,6 +27,7 @@ from util.bottle.bottle import SimpleTemplate
 import json
 import os.path
 import sys
+import markdown
 
 
 TEMPLATE_DIR = 'templates'
@@ -63,8 +66,8 @@ FUNCTION: getTemplateFilePaths
 Parameters:
     templateRoot - the folder within TEMPLATE_DIR to get file paths for
 
-Returns: a list of .html template file paths from within the given directory
-within TEMPLATE_DIR.  Ignores .ptl files, which are partial templates.
+Returns: a list of .html and .mdown template file paths from within the given 
+directory within TEMPLATE_DIR.  Ignores .ptl files, which are partial templates.
 ------------------------------
 '''
 def getTemplateFilePaths(templateRoot):
@@ -90,12 +93,13 @@ FUNCTION: isTemplateFile
 Parameters:
     fileName - the fileName to check is a template file
 
-Returns: whether or not the given filename is a template file (ends with .html)
+Returns: whether or not the given filename is a template file (ends with .html
+or .mdown)
 ------------------------
 '''
 def isTemplateFile(fileName):
     extension = os.path.splitext(fileName)[1]
-    return extension == '.html'
+    return extension == '.html' or extension == '.mdown'
 
 '''
 FUNCTION: compileTemplate
@@ -106,16 +110,47 @@ Parameters:
 Returns: the path of the saved, compiled template file.
 
 Compiles the given template file.  Saves the compiled template to relativePath 
-in the OUTPUT_DIR directory.
+in the OUTPUT_DIR directory.  Can compile both HTML and Markdown template files.
+If a Markdown file is provided, it is converted to HTML and then rendered within
+the template specified in the markdown's rebase field, if any, or otherwise
+just rendered on its own.
 -------------------------
 '''
 def compileTemplate(relativePath):
     pathToRoot = getPathToRootFrom(relativePath)
     filePath = os.path.join(TEMPLATE_DIR, relativePath)
-    templateText = open(filePath).read()
-    compiledHtml = SimpleTemplate(templateText).render(pathToRoot=pathToRoot)
-    compiledHtml = compiledHtml.encode('utf8')
+    fileContents = open(filePath).read()
 
+    compiledHtml = ''
+
+    if relativePath.endswith('html'):
+        # HTML
+
+        # Just render the HTML template
+        compiledHtml = SimpleTemplate(fileContents).render(pathToRoot=pathToRoot)
+        compiledHtml = compiledHtml.encode('utf8')
+    elif relativePath.endswith('mdown'):
+        # Markdown
+
+        # Convert Markdown -> HTML
+        fileContents = fileContents.replace("{{pathToRoot}}", pathToRoot)
+        md = markdown.Markdown(extensions=['fenced_code', 'meta', 'attr_list'])
+        html = md.convert(fileContents)
+
+        # If the markdown file specifies a template to be rendered within,
+        # use that.  Otherwise just use the compiled markdown file itself
+        if 'template' in md.Meta:
+            templateText = open(md.Meta['template'][0]).read()
+            compiledHtml = SimpleTemplate(templateText).render(pathToRoot=pathToRoot,
+            metadata=md.Meta, base=html)
+        else:
+            compiledHTML = html
+
+        # Encode the HTML and make its rendered path .html instead of .mdown
+        compiledHtml = compiledHtml.encode('utf8')
+        relativePath = relativePath[:len(relativePath) - len("mdown")] + "html"
+
+    # Save HTML to file
     relativePath = os.path.join(OUTPUT_DIR, relativePath)
     makePath(relativePath)
     open(relativePath, 'wb').write(compiledHtml)

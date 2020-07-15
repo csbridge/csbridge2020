@@ -1,3 +1,3 @@
-python compile.py 
+python3 compile.py 
 cd docs
-python -m SimpleHTTPServer 8000
+python3 -m http.server
