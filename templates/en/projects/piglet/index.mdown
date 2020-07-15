@@ -1,0 +1,32 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Piglet
+credit: Mehran Sahami, Keith Schwarz, Eric Roberts, Marty Stepp, and others.
+solution: soln.py
+
+Write a console program for a 1-player dice game called "Piglet", based on the game "Pig". The player's goal is to get as many points as possible without rolling a 1. Each turn, the player rolls the die; if they roll a 1, the game ends and the player gets a score of 0. If the player rolls any number besides a 1, that number is added to their score. The player then chooses whether to roll again or end the game with their current score. Two sample game outputs are shown below.
+
+```
+Welcome to Piglet!
+You rolled a 4!
+Roll again? yes
+You rolled a 5!
+Roll again? yes
+You rolled a 5!
+Roll again? yes
+You rolled a 4!
+Roll again? yes
+You rolled a 3!
+Roll again? no
+You got 21 points.
+```
+```
+Welcome to Piglet!
+You rolled a 5!
+Roll again? yes
+You rolled a 2!
+Roll again? yes
+You rolled a 4!
+Roll again? yes
+You rolled a 1!
+You got 0 points.
+```

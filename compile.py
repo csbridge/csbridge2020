@@ -142,7 +142,7 @@ def compileTemplate(relativePath):
         if 'template' in md.Meta:
             templateText = open(md.Meta['template'][0]).read()
             compiledHtml = SimpleTemplate(templateText).render(pathToRoot=pathToRoot,
-            metadata=md.Meta, base=html)
+            metadata=md.Meta, base=html, filePath=filePath)
         else:
             compiledHTML = html
 

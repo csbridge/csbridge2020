@@ -39,11 +39,15 @@ template: templates/en/projects/projectTemplate.ptl
 
 Attributes are key/value pairs you can include at the top of your file.  If you include attributes, you should leave a blank line between the last attribute line and the first line of your actual Markdown content.
 
-If you include the `template` attribute, your Markdown will be converted to HTML and embedded within the template you specify as via a `rebase` call - in other words, it will not be escaped, and it will be supplied via the `base` property.
+If you include the `template` attribute, your Markdown will be converted to HTML and embedded within the template you specify as via a `rebase` call - in other words, it will not be escaped, and it will be supplied via the `base` property.  The template path should start from `templates/....`.
 
-You can include other Markdown attributes as well, and these will also be sent to the template you specify via the `metadata` property.  `metadata` is a dictionary of your Markdown attributes, where the keys are the attribute names and the values are lists of lines for each attribute.
+You can include other Markdown attributes as well, and these will also be sent to the template you specify via the `metadata` property.  `metadata` is a dictionary of your Markdown attributes, where the keys are the attribute names and the values are lists of lines for each attribute.  Finally, the full path to the markdown file being rendered will also be passed to the template via the `filePath` property.
 
-For an example of a Markdown-written page, check out `templates/en/projects/collectNewspaper.mdown` and its associated published page at `en/projects/collectNewspaper.html`.
+For an example of a Markdown-written page, check out `templates/en/projects/piglet/`, which is a folder representing a problem.  It uses the template at `en/projects/projectTemplate.ptl` and is rendered at `en/projects/piglet/index.html`.  That template supports folders for each project where its writeup is in `index.mdown`, and that writeup should have the following attributes:
+
++ `title` - the title of the problem
++ `credits` (optional) - name of the author(s) of this problem.  If included, in the output it is rendered under the title
++ `solution` (optional) - relative path to the solution file for this problem.  If included, in the output it is rendered in a hidden code area at the bottom that the student can view.
 
 ## Timed Release
 This website has the ability to make materials visible at specific dates/times without having to push a new version to GitHub.  To make an HTML element visible at a certain date/time, use the "visible-after" class, and add the timestamp as the value for the "data-visible-after" attribute.  For instance, to hide a div until July 7, 2019 at 5PM, you would add:

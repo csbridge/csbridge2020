@@ -1,5 +1,18 @@
+<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
+
+metadata - the md.Meta object containing the following attributes:
+	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
+
 % rebase('templates/en/template.ptl', title=metadata['title'][0])
 
+<!-- Header -->
 <div id="pageHeader">
 	<h1>
 		{{metadata['title'][0]}}
@@ -10,14 +23,56 @@
 			Credit: {{metadata['credit'][0]}}
 		</p>
 	% end
-
-	% if 'goof' in metadata:
-	<p>Goof</p>
-	% end
 </div>
 <hr/>
+
+<!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
 		{{!base}}
 	</div>
 </div>
+
+<!-- Solution (if included) -->
+% if 'solution' in metadata:
+	<%
+		import os
+		lastSlash = filePath.rfind("/")
+		solutionPath = filePath[:lastSlash] + "/" + metadata['solution'][0]
+		soln = open(solutionPath).read()
+		nLines = len(soln.split('\n')) if len(soln) else 0
+  		editorHeight = 20.0 * nLines
+	%>
+	<h2>Solution</h2>
+    <p>
+    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
+    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
+    		aria-controls="Collapse">
+    		Show Solution
+    	</a>
+    </p>
+    <div class="collapse" id="soln-collapse">
+		<pre class="console" id="editor" style="height:{{editorHeight}}px">{{soln}}</pre>
+    </div>
+
+    <script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+       editor.setTheme('ace/theme/eclipse');
+       editor.getSession().setMode("ace/mode/python");
+       editor.setReadOnly(true);
+       editor.setShowPrintMargin(false);
+       editor.renderer.setShowGutter(false); 
+    </script>
+
+    <script>
+    	function toggleButtonText() {
+    		var elem = document.getElementById("soln-btn");
+    		if (elem.innerHTML.trim() === "Show Solution") {
+    			elem.innerHTML = "Hide Solution";
+    		} else {
+    			elem.innerHTML = "Show Solution";
+    		}
+    	}
+    </script>
+% end
