@@ -144,7 +144,7 @@ def compileTemplate(relativePath):
             compiledHtml = SimpleTemplate(templateText).render(pathToRoot=pathToRoot,
             metadata=md.Meta, base=html, filePath=filePath)
         else:
-            compiledHTML = html
+            compiledHtml = html
 
         # Encode the HTML and make its rendered path .html instead of .mdown
         compiledHtml = compiledHtml.encode('utf8')

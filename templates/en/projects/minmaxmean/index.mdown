@@ -1,0 +1,29 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Min Max Mean
+credit: Chris Piech and Mystery CS106A People
+
+Write a program that lets the user enter any number of integers and prints out the minimum, maximum, and mean (average) values of that set of numbers.
+
+```
+How many values would you like to input? 5
+Specify input for index 0: -5
+Specify input for index 1: 3.1415926535
+Specify input for index 2: 0
+Specify input for index 3: 88
+Specify input for index 4: 12.3
+Max: 88.0
+Min: -5.0
+Mean: 19.6883185307
+```
+
+Focus first on reading in the specified number of entries from the user and storing them in a list.  Once you have accomplished this, then work to calculate the max, min and mean.  As a hint, Python has `min`, `max`, `sum` and `len` functions that can be used with lists (e.g. `len(my_list)` or `sum(my_list)`).
+
+Bonus: It's a good practice to test your code on a variety of inputs to make sure it can work for every case. Test the following sets of numbers to see if your code holds up!
+
+```
+{4, 2, 3, 5, 10, 1} 
+{10, -10, 0} 
+{-5} 
+{0, 0, 0, 0} 
+{}
+```

@@ -1,0 +1,46 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Optical Illusion
+credit: Based on an idea by Steve Cooper. Written by Chris Piech.
+
+Handouts: Graphic Reference
+Examples: String Art Solution
+Day4: `illusion1.py`
+
+Sometimes repeating patterns can cause our eyes to see things that aren't there. Look at the picture below. Can you see little gray squares in the intersections of the white lines? Write a GraphicsProgram that create the optical illusion:
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="illusion1.png">
+</center>
+
+# Constants
+You may notice that the starter code for this project has the lines:
+
+```
+SIZE = 100
+GAP = 10
+```
+
+which are written outside the main() method. These lines define constants: variables whose values never change. Since they are defined outside all methods, you can read their values at any point in the program. Though you could write this optical illusion using the numbers 100 and 10 directly wherever you need them, using constants makes your program much easier to read.
+
+## Double for loop
+
+This problem requires using a for-loop inside a for-loop. Remember to use a different iterator variable for the inner loop. For example, if your outer loop is of the form:
+
+```
+for i in range(100):
+  ... inner loop here ...
+```
+
+The inner loop (the loop in the body) must iterate through a variable other than `i`.
+
+## Extension
+
+Day4: `illusion2.py`
+
+If you have time, try creating this optical illusion! Note that all the squares are the same size and all lines are horizontal! Think about how to decompose your solution.
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="illusion2.png">
+</center>
+
+If you are stuck, try drawing each row with the first black square always starting at x = 0. Then try to figure out how to create the offset pattern.

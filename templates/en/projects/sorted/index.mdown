@@ -1,0 +1,76 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Sorted Numbers
+credit: Chris Piech
+
+Ask the user to enter 10 numbers, then print thoses numbers in sorted order.  Here's example output:
+
+```
+> 9
+> 2
+> 12
+> 34
+> -5
+> 12
+> 0
+> 23
+> 4
+> 1
+-5
+0
+1
+2
+4
+9
+12
+12
+23
+34
+```
+
+Store the numbers that the user entered in a list. You can sort the content of a list using:
+
+```
+my_list.sort()
+```
+
+Calling sort re-orders the elements in the specified list. For example, calling sort on the following list has the given result:
+
+![Image of list of numbers before and after sorting - afterwards the list is in ascending order](sorting.png){: style="width: 400px"}
+
+## Hints
+To create a list of numbers use:
+
+```
+my_list = []
+```
+
+Recall that you can read an intenger from the user using:
+
+```
+number = int(input(prompt))
+```
+
+To add an element to a list:
+
+```
+my_list.append(newValue)
+```
+
+To get an element from a list:
+
+```
+my_list[index]
+```
+
+To loop over all elements in a list:
+
+```
+for i in range(len(my_list)):
+    # do something with my_list[i]
+}
+
+-- OR --
+
+for elem in my_list:
+	# do something with elem
+```
