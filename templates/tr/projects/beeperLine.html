@@ -1,0 +1,96 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Beeper Hattı
+			</h1>
+			<p>
+				Yazan: Chris Piech
+			</p>
+      <p>
+      Day1: <code>BeeperLine.java</code>
+      </p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Hedefiniz Karel'ın dünyasının ilk satırını beeper'larla doldurmak. Karel'ın yüzü doğuya dönük bir şekilde sol alt köşede başladığını varsayabilirsiniz.  Örneğin, programınızı soldaki dünyada çalıştırdığınızda, sağdaki dünyayı üretmeli.
+					<p>
+					<center>
+						<img style="width:600px"  src="{{pathToRoot}}img/projects/beeperLine/beeperLine1.png">	
+					</center>
+					</p>
+					Programınız farklı büyüklüklerdeki dünyalar için de çalışmalı. Örneğin, eğer BİREBİR aynı programı bu kısmen büyük dünyada çalıştırırsak, Karel bozulmadan yine bir satırın tamamını beeper'larla doldurabilmeli. Bu for döngüsü kullanamayacağımız anlamına geliyor. En baştan dünyanın ne kadar büyük olacağını bilmiyoruz!
+					<p>
+					<center>
+						<img style="width:700px"  src="{{pathToRoot}}img/projects/beeperLine/beeperLine2.png">	
+					</center>
+					</p>
+				</p>
+				
+				
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Çözüm</h2>
+
+
+<pre id="editor" style="height:320px">/**
+ * Program: BeeperLine
+ * -------------------
+ * Fill the first row with beepers. Assumes that Karel starts out in
+ * the bottom left corner of the screen, facing east.
+ */
+public class BeeperLine extends SuperKarel {
+	
+	public void run() {
+		while(frontIsClear()) {
+			putBeeper();
+			move();
+		}
+		// This line is necessary to place the final beeper. The number
+		// of times Karel moves is one less than the number of times karel
+		// places a beeper (if the world is five squares wide, we place
+		// 5 beepers but only move 4 times
+		putBeeper();
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+
+			</div>
+		</div>
+
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

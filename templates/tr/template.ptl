@@ -1,0 +1,18 @@
+<!--
+	A template used for every Turkish page - contains the nav bar, a container div, and the footer.
+-->
+% rebase('templates/template.ptl', title=title, taMode=get('taMode', False))
+
+  <!-- Navigation Bar -->
+  % include('templates/tr/navBar.ptl', taMode=get('taMode', False))
+  
+  <div class="container">
+  	
+  	{{!base}}
+  			
+  	<!-- Footer -->
+  	% include('templates/tr/footer.ptl', taMode=get('taMode', False))
+  
+  </div>
+	</body>
+</html>

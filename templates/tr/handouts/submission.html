@@ -1,0 +1,65 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Çalışmaları Teslim Etme
+			</h1>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+        		<b>Her gün</b> laboratuvardan çıkmadan önce muhakkak çalışmalarınızı teslim edin!
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Nasıl Teslim Edilir?</h2>
+				<p>Çalışmalarınızı teslime debilmek için aşağıdaki iki adımı takip edin:</p>
+				<ol>
+        	<li><p>Projenizi içeren klasörü zip'lemek için proje klasörünüzün içindeki <b>zipper.jar</b> programını çalıştırın.</p>
+            <p>Projenizin bulunduğu klasörü bulun (<b>Eclipse'in dışında</b>). Eğer projenizin bilgisayarınız içinde nerede saklandığını bilmiyorsanız Eclipse içinde projenizin üzerine gelip sağ-tık (Mac OS X: Ctrl-Click) yapın (Sol menüdeki mavi kutu). Daha sonra çıkan menüde 'Properties' (Özellikler) seçeneğini seçin ve 'Location' (konum) bilgisinin bulunduğu adrese tıklayın/gidin.</p>
+            <ol>
+              <li><p><b>zipper.jar</b> üzerinde çift-tık yapın ve programı çalıştırın. Aşağıdaki 'CS Bridge Assignment Submission' (CS Bridge Proje Teslim Etme) penceresini göreceksiniz:</p>
+				          <p>
+				          	<center>
+                      <img style="width:400px;border:1px solid #000000" src="{{pathToRoot}}img/handouts/submission/zipper.png">
+				          	</center>
+				          </p>
+              </li>
+              <li>Eğer Mac OS X kullanıyorsanız, "zipper.jar cannot be opened because it is from an unidentified developer" (zipper.jar açılamıyor. Bilinmeyen geliştirici) hatası alabilirsiniz. Bu durumda zipper.jar üzerinde sağ-tık yapıp (veya Ctrl-Click) "Open" (Aç) komutunu seçmelisiniz. Daha sonra bu programı çalıştırmak istediğinizi onaylayın.</li>
+				      <p>
+				      	<center>
+                  <img style="width:700px;border:1px solid #000000" src="{{pathToRoot}}img/handouts/submission/zipperdebug.png">
+				      	</center>
+				      </p>
+              <li>Açılan 'CS Bridge Assignment Submission' (CS Bridge Proje Teslim Etme) penceresi üzerinde ilgili bilgilerinizi girin: <b>İsim Soyisim</b> ve <b>Öğrenci Numarası</b>. Öğrenci numaranız bir harf ve 4 adet sayıdan oluşmaktadır (örneğin K0012). Numaranızı size verilen isimlik üzerinde bulabilirsiniz.</li>
+              <li>Eğer öğrenci numaranızı hatırlamıyorsanız ve/veya isimliğinizi kaybettiyseniz Grup Liderinizle iletişime geçin.</li>
+              <li>'Submit' (Teslim Et) seçeneğine tıklayın. Sıkıştırılmış (.zip) klasörünüz belirttiğiniz konumda oluşturulacaktır.</li>
+              <li>'CS Bridge Assignment Submission' (CS Bridge Proje Teslim Etme) penceresini kapatın.
+        </ol>
+					<li>Oluşturulan zip dosyasını Lab saatinde grup liderleri tarafından belirtilen adrese yükleyin.</li>
+				</ol>
+			</div>
+		</div>
+		
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

@@ -1,0 +1,68 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Birkaç Top
+			</h1>
+			<p>
+				<br>
+					Yazan Tyler Conklin
+				</br>
+			</p>
+			<p>
+				Ders Notları:
+				<a href ="{{pathToRoot}}tr/handouts/random.html">Rasgele Sayı Üreticisi Referansı</a><br/>
+				<a href ="{{pathToRoot}}tr/handouts/graphics.html">Grafik Referansı</a><br/>
+        BonusGraphics: <code>MultipleBalls.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır, ancak bu egzersizi tamamlamak kesinlikle Final Projenize yardımcı olacaktır.
+				</p>
+				<p> Ekran üzerinde seken iki topun olduğu bir program yazın. Eğer bir top herhangi bir duvara çarparsa ters yöne doğru sekmelidir.Toplar ayrıca birbirlerine çarparak da sekebilmelidir. Aşağıdaki "gif" örnek bir animasyonu göstermektedir.
+					<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/multipleBalls/multipleBalls.gif">	
+					</center>
+					Bizim örneğimizde topların genişliği 50 pikseldi fakat siz istediğiniz bir genişlik kullanabilirsiniz. Topları yaratırken başlangıç konum, yön ve hızlarının rastgele seçilmesini sağlayın. Rastgele sayılar üretmek için yukarıdaki ders notları linklerinden faydalanabilirsiniz.
+        </p>
+				<p>
+					Bilgisayar bilimciler büyük bir problemle karşı karşıya kaldıklarında, bu problemi küçük parçalara ayırmak işe yarar. Bu egzersizi de küçük aşamalara ayırmak için aşağıdaki emsal aşamalara bir göz gezdirin:
+					<ul>
+						<li>Başlangıç olarak ekrana rastgele konumlarda iki top ekleyin.</li>
+						<li>Topları rastgele hızlarda hareket ettirmeye başlayın.</li>
+						<li>Topların duvarlardan sekmesini sağlayın. Dikkat: Bir GOval objesinin X koordinatını öğrenmek için ball.getX() metodunu kullanabilirsiniz (aynı yöntemle Y koordinatını da bulabilirsiniz). </li>
+						<li>Topların birbirlerinden de sekmelerini sağlayın. Bunun için getElementAt metodu, aşağıda gösterilmektedir, kullanışlı olacaktır.</li>
+					</ul>
+				</p>
+				<center> 
+					<img style="width:600px;border:2px solid grey" src="{{pathToRoot}}img/projects/duplicatingShapes/getElementAt.png"> 
+				</center> 
+
+				</br>
+			</div>
+
+		</div>
+
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

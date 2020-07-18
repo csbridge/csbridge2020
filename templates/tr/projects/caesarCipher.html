@@ -1,0 +1,117 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Caesar Cipher (with Solution)
+			</h1>
+			<p>
+				Problem written by Mehran Sahami and Lisa Yan.
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+        Write a program that computes a Caesar cipher of user input. Your program should take in a cipher key (<code>int</code>) and a string and output the Caesar cipher-encrypter string.
+        </p>
+
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/caesarCipher/demo1.png">	
+					</center>
+				</p>
+        <p>The Caesar cipher uses the English alphabet and shifts all of the characters by <code>key</code> letters. In this case, <code>char</code> types can easily be converted to <code>int</code> types, so Java can shift back and forth between integer addition and character conversion. For reference, you can look at any ASCII lookup table to see the conversion that Java uses between <code>char</code> and <code>int</code>.</p>
+        <p>Your program should be able to decrypt encrypted strings by entering a negative key, as below:</p>
+
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/caesarCipher/demo2.png">	
+					</center>
+				</p>
+        <p>Make sure your program works with lowercase letters and symbols, too!</p>
+
+				<p>
+					<center>
+						<img style="width:500px;border:1px solid #000000" src="{{pathToRoot}}img/projects/caesarCipher/demo3.png">	
+					</center>
+				</p>
+				
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:580px">
+/**
+ * Class: CaesarCipher
+ * -----------------
+ * Computes a Caesar cipher over user input.
+ * Allows for encrypting AND decrypting.
+ */
+public class CaesarCipher extends ConsoleProgram {
+
+	public void run() {
+		println("This program uses a Caesar cipher for encryption.");
+		int key = readInt("Enter encryption key: ");
+		String plain = readLine("Plaintext:  ");
+		String cipher = encrypt(plain, key);
+		println("Ciphertext: " + cipher);
+	}
+
+	private String encrypt(String plain, int key) {
+		String cipher = "";
+
+	    // traverse text
+	    for (int i = 0; i < plain.length(); i++) {
+	        // apply transformation to each character
+	    	Character ch = plain.charAt(i);
+	    	int chInt = (int) ch;
+	    	if (Character.isUpperCase(ch)) {
+				 ch = (char) ('A' + (ch - 'A' + key) % 26);
+	    	} else if (Character.isLowerCase(ch)){
+				 ch = (char) ('a' + (ch - 'a' + key) % 26);
+	    	} else {
+	    		// do nothing
+	    	}
+	    	cipher += ch;
+	    }
+	    return cipher;
+	}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	
+	</div>
+	</div>
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

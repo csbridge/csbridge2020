@@ -1,0 +1,57 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Yaratıcı Grafik
+			</h1>
+			<p>
+				Yazan: Lisa Yan
+			</p>
+			<p>
+				Ders Notları:
+				<a href ="{{pathToRoot}}tr/handouts/graphics.html">Grafik Referansı</a>
+				<br/>
+        Day3: <code>CreativeGraphics.java</code> veya BonusGraphics: <code>CreativeGraphics.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır, ancak bu egzersizi tamamlamak kesinlikle Final Projenize yardımcı olacaktır.
+				</p>
+				<p>
+					Dilediğiniz gibi çalışan bir GraphicsProgram yazın!!! Tercih edebileceğiniz programlara örnek olarak aşağıdaki görsele bakabilirsiniz:
+				</p>
+				<p>
+					<center>
+						<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/creativeGraphics/example.gif">	
+					</center>
+				</p>
+            <p>İsterseniz Karel'den yardım da alabilirsiniz.</p>
+			<center>
+						<img style="width:80px" src="{{pathToRoot}}img/projects/creativeGraphics/karel.png">	
+            </center>
+
+		</div>
+
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

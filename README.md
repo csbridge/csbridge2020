@@ -25,7 +25,7 @@ Note: there is a special `{{pathToRoot}}` placeholder that you can use in all te
 + `cz`: for Czech translations
 + `tr`: for Turkish translations
 + `en`: for English translations
-`parts`: partials (partial HTML files included in other files, but not rendered on their own)
++ `parts`: partials (partial HTML files included in other files, but not rendered on their own)
 + `tas`: the TA sub-section of the site with TA-specific resources
 
 #### Markdown Support

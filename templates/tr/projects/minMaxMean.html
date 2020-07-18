@@ -1,0 +1,88 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+        <div id="pageHeader">
+            <h1>
+                Min Max Mean
+            </h1>
+            <p>
+        Written by Chris Piech and Mystery CS106A people.
+        <br/>
+ 
+        Handouts: 
+        <a href ="{{pathToRoot}}tr/handouts/console.html">ConsoleReference</a>
+ 
+        <br/>
+        Day6: <code>MinMaxMean.java</code>
+            </p>
+
+        </div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Write a program that lets the user enter any number of integers and prints out the minimum, maximum, and mean (average) values of that set of numbers. We start you out with a mechanism to ask the user how many numbers they want and prompt them to enter the numbers. These numbers get stored in the array values, which is then passed to the three helper methods. Your job is to implement these methods.
+				</p>
+
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/minMaxMean/demo.png">	
+					</center>
+				</p>
+
+				<p>
+					As you go through the array, store the biggest or smallest value you've found so far. Make comparisons against this value to see if you need to update it. For the mean, rather than making comparisons, you can add each number to a running total. Make sure to store the mean as the correct type (in the right box) so you can get the exact value. Finally, we print out the three values we want: the min, max, and mean.
+				</p>
+
+				<p>
+					<b> Bonus: </b> It's a good practice to test your code on a variety of inputs to make sure it can work for every case. Test the following sets of numbers to see if your code holds up!
+				</p>
+
+				<div class="well">
+					<code style = "font-size:12px">
+            {4, 2, 3, 5, 10, 1}
+            <br/>{10, -10, 0}
+            <br/>{-5}
+            <br/>{0, 0, 0, 0}
+            <br/>{}
+					</code>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	
+	</div>
+	</div>
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

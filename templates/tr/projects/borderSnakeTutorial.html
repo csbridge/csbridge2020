@@ -1,0 +1,95 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Sınırdaki Yılan
+			</h1>
+			<p>
+                Yazan Lisa Yan
+			</p>
+			<p>
+				Ders Notları:
+                <a href ="{{pathToRoot}}tr/handouts/graphics.html">Grafik Referansı</a><br/>
+				<a href ="{{pathToRoot}}tr/handouts/arrayLists.html">Dizi Listeleri (ArrayLists)</a>
+        <br/>
+        BonusArrays:<code>BorderSnake.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+                    Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır, ancak bu egzersizi tamamlamak kesinlikle Final Projesnize yardımcı olacaktır.
+                </p>
+                <p>
+                    Yazacağınız Grafik Programı ile ekranın sınırlarında, saat yönünün tersine, dönen bir yılan yaratın.
+                </p>
+					<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/borderSnake/borderSnake.gif">	
+					</center>
+                </p>
+            <h2>Sınırdaki Kutu</h2>
+            <p>Bu egzersiz üzerinde çalışmadan önce Sınırdaki Kutu egzersizini tamamlayın. Zira büyük ölçüde aynı mantıkta çalışacağız. (Küçük bir farklılıkla elbette) Dolayısıyla genel problem düzenini anlamak için Sınırdaki Kutu egzersizini çözmüş olmak size yardımcı olacaktır.</p>
+
+            <h2>Yılanı Oluşturma</h2>
+            <p>BorderSnake.java dosyasını açın. main() metodunun Sınırdaki Kutu egzersizi ile birebir aynı olduğunu göreceksiniz. Ancak bazı class değişkenleri farklı. Tek bir GRect yerine, GRect içeren bir ArrayList kullanacağız. Elbette yılanımız için hala tek bir yönümüz olacak.</p>
+			<div class="well"><code>
+                private ArrayList&lt;GRect&gt; snake;<br>
+                private int snakeDirection = EAST; // starting direction
+			</code></div>
+
+            <p>makeSnake() metodunu doldurun. İleride işinizi kolaylaştımak için, ilk olarak yılanın başını ekleyin. (Böylece snake.get(0) ile başı temsil eden GRect objesini elde edebilirsiniz) Yılanın doğuya bakarak başladığını unutmayın. Dolayısıyla en sağdaki GRect, yılanın başı olacaktır.Yılanımız SNAKE_LENGTH = 5 blok uzunluğunda olacaktır.</p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/borderSnake/borderSnake.png">	
+					</center>
+
+            <h2>Doğuya ilerlemek</h2>
+            <p>Şimdilik frontIsClear() metodunu her zaman true dönecek şekilde düzenleyin. Böylece yılanımızın tek bir yönde (doğu) ilerleyebildiğini test edebileceğiz. moveSnake() metodunu doldurarak yılanı bir kutu sağa hareket ettirin. Unutmayın, parçalarının bir arada kalması için yılanımız SQUARE_LENGTH + SQUARE_GAP kadar ilerlemelidir!</p>
+            <p>Buraya dikkat; yılan üzerindeki her bir bloğu hareket ettirmenize gerek yok. Aslına bakarsanız sadece tek bir parçayı hareket ettirmeniz yeterli olacaktır! Yılanın hareket ediyormuş gibi görünmesi için hangi bloğun tek başına hareket etmesinin yeterli olacağını düşünün.</p>
+            <p>Seçtiğiniz blok bir sonraki adımda yılanın başı olacak. Dolayısıyla bu bloğun sadece ekrandaki yerini değiştirmekle kalmayıp ArrayList içindeki yerini de güncellemeliyiz. Bloğu kaldırıp başa ekleyin. (önceki bölümde, baş bloğunun ArrayList içinde sıfırıncı pozisyonda olduğunu tanımlamıştık).</p>
+			<div class="well"><code>
+                snake.remove(block); // the GRect you moved<br>
+                snake.add(0, block); // becomes the new head
+			</code></div>
+            <p>Sonraki adımda ekranın en sağına gelip gelmediğimizi kontrol etmek için frontIsClear() metodunu doldurun. Burada yine önemli bir nokta var: tek bir bloğu kontrol ederek yılanın önünün dolu olup olmadığını anlayabilir miyiz? (İpucu: Baş kısmı)</p>
+            <p>Bu noktada yılanınızın adım adım sağa ilerlediğini görüyor olmalısınız!</p>
+
+            <h2>Sınır boyunca ilerleme</h2>
+            <p>Bitiş çizgisine çok yakınsınız!! turnLeft() metodunu doldurun. Bu ÇOK kolay olacak; Sınırdaki Kutu egzersizinde neler yaptığımızı hatırlayın.</p>
+            <p>Geriye birden fazla yöne gidebilmek için moveSnake() ve frontIsClear() metotlarını halletmek kaldı. Son bir adım atacağız. Diyelim ki yılanımız aşağıdaki pozisyonda (snakeDirection = NORTH):
+            </p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/borderSnake/snakeTurn.png">	
+					</center>
+            <p>Yılanı hareket ettirebilmek için (dikkat: yılanın hareket ettiği izlenimini verin), yılanın hangi kısmının hala dönüş yapmakta olduğu bizim için nemli mi? (İpucu: Hayır değil.) Buna göre, önceki bölümde seçtiğimiz bloğun yerini nasıl değiştrimeliyiz ki yılanımız kuzeye (yüzünün dönük olduğu yöne) hareket etmiş olsun?</p>
+            <br>
+            <p>Tebrikler, artık hareket eden bir yılanınız var! :)</p>
+
+
+
+
+
+			</div>
+
+		</div>
+
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

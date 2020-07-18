@@ -1,0 +1,60 @@
+<!-- Translated -->
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Grafik Referansı
+			</h1>
+			<p>
+				Yazan Eric Roberts
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>En çok kullanılan grafik komutları aşağıdaki gibidir:</p>
+				<center><img style="width:700px;" src="{{pathToRoot}}img/handouts/graphics/graphicsHandout.png"></img></center>
+				<br/>
+
+				<p>
+					Diğer kullanışlı komutlar ise:
+				</p>
+
+					<div class="well"><code>
+						getWidth(); // ekranın genişliğini verir. <br>
+						getHeight(); // ekranın yğksekliğini verir.<br>
+						add(<i>object</i>); // ekrana bir obje ekler.<br>
+						remove(<i>object</i>); // ekrandan bir objeyi kaldırır.<br>
+						getElementAt(<i>x</i>, <i>y</i>); // x, y koordinatlarındaki objeyi verir
+					</code></div>
+				</p>
+
+				<p>
+					Belgenin tamamı için: <br/>
+					<a href="http://cs.stanford.edu/people/eroberts/jtf/javadoc/student/index.html">http://cs.stanford.edu/people/eroberts/jtf/javadoc/student/index.html</a>
+				</p>
+			</div>
+		</div>
+
+		
+		
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

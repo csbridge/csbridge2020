@@ -274,11 +274,11 @@
 	      </ul>
 
 	      
-	      <!--<ul class="nav navbar-nav navbar-right">
+	      <ul class="nav navbar-nav navbar-right">
 	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="{{pathToRoot}}img/english_flag.png"></img></a></li>
 	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="{{pathToRoot}}img/turkish_flag.png"></img></a></li>
 	        
-	      </ul>-->
+	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	</div>
   </div><!-- /.container-fluid -->
@@ -299,5 +299,3 @@
 	}
 
 </script>
-
-

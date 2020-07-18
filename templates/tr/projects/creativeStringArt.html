@@ -1,0 +1,57 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Yaratıcı String Sanatı
+			</h1>
+			<p>
+				Yazan: Lisa Yan
+			</p>
+			<p>
+				Ders Notları:
+				<a href ="{{pathToRoot}}tr/handouts/graphics.html">Grafik Referansı</a>
+				<br/>
+        BonusGraphics: <code>CreativeStringArt.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır, ancak bu egzersizi tamamlamak kesinlikle Final Projenize yardımcı olacaktır.
+				</p>
+				<p>
+					Daha önce yazdığınız <a href="{{pathToRoot}}tr/projects/stringArt.html">String Sanatı</a> programının bir uzantısı olacak bir GraphicsProgram yazım. Bu sefer ekrana 4 eğri ekleyin.
+				</p>
+				<p>
+					<center>
+						<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/creativeStringArt/corners.png">	
+					</center>
+				</p>
+            <h2>Uzantılar</h2>
+            <p>Kendi havalı String Sanatınızı gerçekleştirin!!!</p>
+					<center>
+						<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/creativeStringArt/customFancy.png">	
+					</center>
+		</div>
+
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

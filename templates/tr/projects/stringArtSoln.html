@@ -1,0 +1,91 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				String Sanatı
+			</h1>
+			<p>
+				Eric Roberts'ın bir gösterimi temel alınmıştır.
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Tekrar tekrar çizgiler çizerek, kavisli görünen bir şekil yaratabiliriz. Kanvasın (canvas) altı ve solu boyunca eşit aralıklarla ayrılmış noktaları hayal ettiğimiz aşağıdaki örneğe bakalım. Eğer sol kenarda en üstteki nokta ile alt kenarda en soldaki noktayı birleştirirsek, soldaki resimdeki doğru oluşur. Eğer sıradaki 10 noktayı da aynı şekilde birleştirirsek ortadaki resmi ve bütün noktaları birleştirirsek sağdaki resmi elde ederiz.
+				</p>
+				
+				<p>
+					<center>
+						<img style="width:700px" src="{{pathToRoot}}img/projects/stringArt/startToEnd.png">	
+					</center>
+				</p>
+				<p>Doğruları kullanarak üstte sağdaki resimdeki "eğriyi" yaratan bir program yazın..</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Başlangıç Kodu</h2>
+
+
+<pre id="editor" style="height:270px">public class StringArt extends GraphicsProgram {
+
+	/** The size of the screen **/
+	public static final int APPLICATION_WIDTH = 400;
+	public static final int APPLICATION_HEIGHT = 400;
+	
+	/** The number of pixels between end points of the line **/
+	public static final int LINE_SPACING = 20;
+	
+	/** The number of lines we will have to draw **/
+	public static final int NUM_LINES = APPLICATION_WIDTH / LINE_SPACING;
+
+	public void run() {
+		for(int i = 0; i < NUM_LINES; i++) {
+			int offset = i * LINE_SPACING;
+			int startX = offset;
+			int startY = getHeight();
+			int endX = 0;
+			int endY = offset;
+			GLine line = new GLine(startX, startY, endX, endY);
+			add(line);
+		}
+	}
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+
+			</div>
+		</div>
+
+
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

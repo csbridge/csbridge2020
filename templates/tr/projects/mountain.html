@@ -1,0 +1,82 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Dağcı Karel
+			</h1>
+			<p>
+				Eric Roberts'ın bir ders notu temel alınmıştır.
+			</p>
+
+			<p>
+				Ders Notları: 
+				<a href ="{{pathToRoot}}tr/handouts/karel.html">Karel Referansı</a>
+				<br/>
+				Çalışılan Örnek: 
+				<a href="{{pathToRoot}}tr/projects/beeperLine.html">Beeper Hattı</a>
+        <br/>
+        Day1: <code>Mountain.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Karel dağlara tırmanmanın hayalini kuruyor. Ona herhangi bir yükseklikteki bir dağın zirvesine çıkmayı öğretin. Mesela, aşağıdaki dağın:
+				</p>
+				<p>
+					<center>
+						<img class="psetImg" style="width:400px" src="{{pathToRoot}}img/projects/mountain/mountain0.png">	
+					</center>
+				</p>
+				<p>
+					Karel zirveye tırmanmalı ve aşağıda gösterildiği gibi bir bayrağı (bir çağrı cihazını) zirvede bırakmalı:
+				</p>
+				<p>
+					<center>
+						<img class="psetImg" style="width:400px"  src="{{pathToRoot}}img/projects/mountain/mountain1.png">	
+					</center>
+				</p>
+				<p>
+					Önceki problemlerin aksine, dağın yüksekliği önceden verilmiş <b>değil</b>. Yazdığınız program Karel'ın herhangi bir boyuttaki dağa tırmanmasına izin vermeli. Örneğin aşağıdaki üçüne:
+				</p>
+				<p>
+					<center>
+						<img class="psetImg" style="width:100%"  src="{{pathToRoot}}img/projects/mountain/mountains.png">	
+					</center>
+				</p>
+				<p>
+				 	Şunları varsayabilirsiniz:
+					<ul>
+						<li>Karel dünyanın sol altında yüzü doğuya dönük bir şekilde başlıyor.
+						<li>Dağ ile dünya sınırları arasında (solda ve sağda) bir birim boşluk var. 
+						<li>Dağ en az bir kare yükseklikte.
+					</ul>
+				</p>
+				<p>
+					while döngüleri kullanın.
+				</p>
+			</div>
+
+		</div>
+
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

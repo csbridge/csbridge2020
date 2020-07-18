@@ -1,0 +1,141 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+        <div id="pageHeader">
+            <h1>
+                Racing Cars (with Solution)
+            </h1>
+            <p>
+        Written by Chris Piech and Mystery CS106A people.
+        <br/>
+ 
+        Handouts: 
+        <a href ="{{pathToRoot}}tr/handouts/graphics.html">GraphicsReference</a>, 
+ 
+        <br/>
+        Day6: <code>RacingCars.java</code>
+            </p>
+
+        </div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Write a program that creates several racing cars and drives them across the screen. Each car should be the same size, have the same max speed, and start at the same x coordinate. It might be useful to create constants for these values. Create an array of GRects that you will use as the bodies of the cars. Because you're going to create a lot of cars, it's a good idea to do all of this in a loop. As you go through this loop, calculate the starting y coordinate for each car to make sure that we can see them.
+				</p>
+
+				<p>
+					<center>
+						<img style="width:500px;border:1px solid #000000" src="{{pathToRoot}}img/projects/racingCars/demo.gif">	
+					</center>
+				</p>
+
+				<p>
+					Now you need to animate the cars! Create a loop that moves each car across the screen. As cars go along they have to speed up and slow down according to the track. To mimic this, generate a random integer less than the max speed and move the car only in the x direction. When the winning car has crossed the finish line (reached the edge of the screen), leave the loop.
+				</p>
+
+				<p>
+					Remember to use constants that you define up top rather than manually writing ("hard coding") the number every time. That way, if you want to make more cars, all you have to do is change one number!
+				</p>
+				
+				<div class="well">
+					<code style = "font-size:12px">
+						/*The width of a car:*/
+						<br/>private final int CAR_WIDTH=75;
+						<br/>
+						<br/>/*The top speed of a car:*/
+						<br/>private final int MAX_VELOCITY=5;
+						<br/>
+						<br/>/*The amount of time the program should pause on each loop:*/
+						<br/>private final int PAUSE_TIME=20;
+						<br/>
+						<br/>/*Where the cars start driving from:*/
+						<br/>private final int X_OFFSET=50;
+					</code>
+				</div>
+
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:720px">
+/**
+ * Class: RacingCars
+ * -----------------
+ * Move cars across the screen
+ */
+
+public class RacingCars extends GraphicsProgram {
+	private final int CAR_WIDTH = 75;
+	private final int MAX_VELOCITY = 5;
+	private final int PAUSE_TIME = 30;
+	private final int X_OFFSET = 50;
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+
+	public void run(){
+		/* Creation and placement of the cars */
+		int numCars = 10;
+		double carHeight = getHeight()/(2*numCars);
+		double yOffset = carHeight/2.0;
+		GRect[] cars = new GRect[numCars];
+		for(int i = 0; i < numCars; i++){
+			cars[i] = new GRect(CAR_WIDTH, carHeight);
+			cars[i].setColor(rgen.nextColor());
+			cars[i].setFilled(true);
+			double carYOffset = yOffset + 2*i*carHeight;
+			add(cars[i], X_OFFSET, carYOffset);
+		}
+		pause(1000);
+		
+		/* Animation */
+		boolean finished = false;
+		while(!finished) {
+			// move each car one by one
+			for(int i = 0; i < cars.length; i++) {
+				cars[i].move(rgen.nextInt(MAX_VELOCITY), 0);
+				if(cars[i].getX() + CAR_WIDTH >= getWidth()) {
+					// let everyone move to the next animation frame.
+					finished = true;
+				}
+			}
+			pause(PAUSE_TIME);
+		}
+	}
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	
+	</div>
+	</div>
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

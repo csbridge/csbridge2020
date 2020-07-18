@@ -1,0 +1,48 @@
+<!-- Course Staff -->
+<div class="section" id="staff">
+	<h2>{{teachers}}</h2>
+	<%
+	# A list of the rows of staff members.
+	# Each row is a list of the staff members to display photos for,
+	# with each staff member being a (name, image file) tuple.  The
+	# image files are assumed to live in img/peeps/.
+	courseStaff = [
+		[
+		  ("Nick T.", "nickt.jpg"),
+		  ("Eliška", "eliska.jpg"),
+		  ("Ondra", "ondra.jpg"),
+		  ("Chris", "chris.jpg"),
+		  ("Julia", "juliaD.jpg"),
+		  ("Matyáš", "matyas.jpg")
+		],
+		[
+		  ("Emily", "emily.jpg"),
+		  ("Jaroslav", "jaroslav.jpg"),
+		  ("Radek", "radek.jpg"),
+		  ("Glenn", "glenn.jpg"),
+		  ("Zach", "zach.jpg"),
+		  ("Honza", "honza.jpg")
+		],
+		[
+		  ("Marek", "marek.jpg"),
+		  ("Nick M.", "nickm.jpg"),
+		  ("Asena", "asena.jpg")
+		]
+	]
+	%>
+
+	% for i in range(len(courseStaff)):
+	  	<div class="row">
+			% for staffMember in courseStaff[i]:
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="{{pathToRoot}}img/peeps/{{staffMember[1]}}" alt="profile picture">
+				  		<div class="caption">
+							<b>{{staffMember[0]}}</b>
+				  		</div>
+					</div>
+		  		</div>
+			% end
+	  	</div>
+	% end
+</div>

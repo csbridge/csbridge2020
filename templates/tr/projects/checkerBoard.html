@@ -1,0 +1,70 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Dama Oynayan Karel
+			</h1>
+			<p>
+				Yazan Tyler Conklin
+				</br>
+				Mehran Sahami, Keith Schwarz, Eric Roberts, ve diğerleri tarafından yazılan önceki versiyonlardan esinlenilmiştir.
+			</p>
+			<p>
+				Ders Notları:
+                <a href ="{{pathToRoot}}tr/handouts/karel.html">Karel Referansı</a><br/>
+        BonusKarel: <code>CheckerBoard.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır, ancak bu egzersizi tamamlamak kesinlikle Final Projesnize yardımcı olacaktır.
+				<p>
+					<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/checkerboardKarel/checkerboardKarelStart.png">	
+					</center>
+                    </p>
+                    <p>...programın sonunda dünyamız şu şekilde görünmelidir:</p>
+                    <p>
+ 					<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/checkerboardKarel/checkerboardKarelFinish.png">	
+					</center>
+                    </p>
+                    <p>
+						Karel'in bitişte nerede olduğu ve ne tarafa baktığı önemli değildir.
+					</p>
+
+				<p>
+					Çözümünüzün farklı boyutlardaki dünnyalarda da çalışabileceğinden emin olun. Örneğin, çözümünüz tek satır veya tek sütundan oluşan dünyalarda ya da kısacası kare olmayan dünyalarda da çalışabilmelidir.
+				</p>
+				</br>
+				<p>
+					Egzersiz sırasında sadece Karel komutlarını kullanabilirsiniz. Java değişkenleri kullanmamaya özen gösterin. Programınızı yazarken farklı boyutlardaki dünyaları da hesaba kattığınızdan emin olun. Çalışan bir program elde ettikten sonra programınızı farklı boyutlardaki dünyalarda test edebilirsiniz!
+				</p>
+
+
+			</div>
+
+		</div>
+
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

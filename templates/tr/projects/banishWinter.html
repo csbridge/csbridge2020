@@ -1,0 +1,69 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+        		Kışa Veda (bir hata ayıklama (debugging) programı)
+			</h1>
+			<p>
+				Yazanlar: Eric Roberts ve Lisa Yan
+			</p>
+			<p>
+				Ders Notları: 
+				<a href ="{{pathToRoot}}tr/handouts/karel.html">Karel Referansı</a>
+        <br/>
+        1. Gün: <code>BanishWinter.java</code>
+			</p>	
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+        <p>
+			Bu bir bonus programdır! Zorlayıcı olması için tasarlanmıştır. Bu program ile <b>hata ayıklama (debugging)</b> egzersizi yapmış olacaksınız. Size <i>hatalı</i> bir başlangıç kodu verilmektedir. Program bu haliyle doğru olarak çalışmamaktadır. Bunu düzeltmek sizin elinizde.
+        </p>
+
+				<p>
+					Karel'in ilk büyük görevi Koç kampüsü etrafında gezmek ve bahçe düzenlemesi yapmak. Bahar geldi ama kampüsteki bazı ağaçlar hala çiçek açmadı. Karel'in kampüsü batıdan doğuya doğru yürümesi ve boş dallara yaprak yerleştirmesi gerekiyor. İşin sonunda kampüs şu şekilde gözükmelidir:
+				</p>
+
+				<p>
+					<center>
+            <img style="width:800px" src="{{pathToRoot}}img/projects/banishWinter/banishWinter1.png">
+					</center>
+				</p>
+
+        <p>
+			Görev biraz zorlu çünkü Karel ağaçların ne kadar uzun olduğunu ya da ağaçlar arasındaki mesafeyi bilmiyor. Fakat, neyseki, çantasındaki Beeper sayısının tam da gerektiği kadar olduğunu biliyor. Programın gerektirdiklerini yukarıdaki ekran görüntülerinden anlayabilirsiniz. (Dünyanın adı <code>BanishWinter1.w</code>. Ancak sizin programınız aynı zamanda <code>BanishWinter2.w</code> isimli dünya için de çalışabilmelidir.):
+        </p>
+
+				<p>
+					<center>
+            <img style="width:500px" src="{{pathToRoot}}img/projects/banishWinter/banishWinter2.png">
+					</center>
+				</p>
+        <p>
+			<code>Day1/BanishWinter.java</code> isimli dosyada bir miktar başlangız kodu bulunmaktadır. Ancak bu kod <b><i>hatalar içermektedir</i></b>. Program içindeki hataları bulup düzeltmeye çalışın.
+        </p>
+				
+			</div>
+
+		</div>
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

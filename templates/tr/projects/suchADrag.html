@@ -1,0 +1,151 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Ne Kaydırma Ama (ve Çözümü)
+			</h1>
+			<p>
+				Yazan: Chris Piech
+        <br/>
+        5. Gün: <code>SuchADrag.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+        <p>
+            Bu program kullanıcıların şekilleri ekran üzerinde kaydırmasını sağlar.
+            Haydi şimdi bu programın nasıl oluşturulduğuna bakalım.
+        </p>
+        <p>
+            Öncelikle, 10 adet GOval yaratıyoruz ve bunları ekran üzerinde rastgele konumlandırıyoruz.
+            Bu işlem addRandomObjects( ) metodu içerisinde gerçekleşiyor. Objeleri oluştururken 10 ve 50
+            gibi gizemli sayılar kullanmak yerine NUM_RANDOM_OBJECTS ve OBJECT_SIZE isimli sabitleri
+            nasıl kullandığımıza dikkat edin.
+        <p>
+					<center>
+						<img style="width:500px;border:1px solid #000000" src="{{pathToRoot}}img/projects/suchADrag/demo.gif">	
+					</center>
+				</p>
+
+		<p>
+            Rastgele objeleri ekledikten sonra programımıza addMouseListeners( ) metodunu kullanarak
+            tıklama ve kaydırma gibi fare olaylarını dinlemesini söylüyoruz. Ayrıca programımıza tıklama ve kaydırma 
+            olaylarında ne yapması gerektiğini de mousePressed ve mouseDragged metotlarının ,içini doldurarak söylemiş 
+            oluyoruz. MousePressed ve mouseDragged metotlarına kendi değişkenlerimizi sokamayacağımız için hangi GOval 
+            objesinin tıklandığını takip edeblmek için bir 'instance variable' kullanmamız gerekecektir.
+            Instance Variable konusunda kafanızda soru işaretleri oluştuysa tam da bu noktada grup liderlerinize 
+            sorabilirsiniz.
+        </p>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Çözüm</h2>
+
+
+<pre id="editor" style="height:1150px">
+/**
+ * Class: SuchADrag
+ * -----------------
+ * A program that creates a collection of objects on the screen, then lets
+ * the user click and drag them around.
+ */
+public class SuchADrag extends GraphicsProgram {
+    public void run() {
+        addRandomObjects();
+        addMouseListeners();
+    }
+
+    /* The object which has been selected for dragging. */
+    private GObject selectedObject;
+
+    /**
+     * Selects the object under the mouse cursor when the mouse is pressed.
+     * If nothing is found, that's okay - we'll set selectedObject to null.
+     */
+    public void mousePressed(MouseEvent e) {
+        selectedObject = getElementAt(e.getX(), e.getY());
+    }
+
+    /**
+     * Repositions the dragged object to the mouse's location when the mouse
+     * is moved.
+     */
+    public void mouseDragged(MouseEvent e) {
+        /* If there is something to drag at all, go move it. */
+        if (selectedObject != null) {
+            double newX = e.getX() - selectedObject.getWidth() / 2.0;
+            double newY = e.getY() - selectedObject.getHeight() / 2.0;
+            selectedObject.setLocation(newX, newY);
+        }
+    }
+
+    /* * * * * Code for adding random objects below this point. * * * * */
+
+    /* The number of objects to add. */
+    private static final int NUM_RANDOM_OBJECTS = 10;
+
+    /* The size of each random object. */
+    private static final double OBJECT_SIZE = 50;
+
+    /**
+     * Adds a bunch of random objects to the screen.
+     */
+    private void addRandomObjects() {
+        for (int i = 0; i < NUM_RANDOM_OBJECTS; i++) {
+            addRandomObject();
+        }
+    }
+
+    /**
+     * Adds a single random object to the screen.
+     */
+    private void addRandomObject() {
+        RandomGenerator rgen = RandomGenerator.getInstance();
+
+        GOval object = new GOval(rgen.nextDouble(0, getWidth() - OBJECT_SIZE),
+                             rgen.nextDouble(0, getHeight() - OBJECT_SIZE),
+                             OBJECT_SIZE, OBJECT_SIZE);
+        object.setFilled(true);
+        object.setColor(Color.BLUE);
+        add(object);
+    }
+}
+
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	
+	</div>
+	</div>
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

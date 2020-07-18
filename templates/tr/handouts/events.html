@@ -1,0 +1,69 @@
+<!-- Translated -->
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Olaylar (Events) Referansı
+			</h1>
+			<p>
+				Yazanlar Danielle Kain ve Kevin Miller
+			</p>
+		</div>
+		<hr/>
+		Öncelikle ne zaman MouseEvent kullanırsanız aşağıdaki satırı run metodunuza eklemeyi unutmayın:
+		<div class="well"><code>
+addMouseListeners();
+		</code></div>
+		Böylece programa MouseEvent'lere dikkat etmesi gerektiğini söylersiniz. KeyListeners kullanıyorsanız da benzeri şekilde aşağıdaki satırı run metodunuza ekleyin:
+		<div class="well"><code>
+addKeyListeners();
+		</code></div>
+
+		Bu şekilde listener'larınızı kurduktan sonra, sıra onları kodda kullanmaya geliyor. Aşağıda Breakout için işinize yarayabilecek dört olayı listeledik. Tam bir liste isterseniz KeyEvent'ler için <a href="http://docs.oracle.com/javase/7/docs/api/java/awt/event/MouseListener.html">bu linke, </a> MouseEvent'ler içinse <a href="http://docs.oracle.com/javase/7/docs/api/java/awt/event/KeyListener.html">bu linke</a> bakabilirsiniz.<br><br>
+
+		<div class="well"><code><pre>
+public void mouseClicked(MouseEvent e) {
+	//Mouse her tıklandığında bu metod çağrılır.
+}
+
+public void mouseMoved(MouseEvent e) {
+	//Mouse her hareket ettiğinde bu metod çağrılır.
+}
+			
+public void keyPressed(KeyEvent e) {
+	//Mouse'a her basıldığında bu metod çağrılır.
+}
+
+waitForClick(); //Bu satır kullanıcı mouse'a tıklayana kadar programı durdurur.
+		</pre></code></div>
+
+		<p>Aşağıda bazı olay kullanım örneklerini görebilirsiniz:
+		<div class="well"><code><pre>
+public void mouseClicked(MouseEvent e) {
+	System.out.println("x: " + e.getX() + " y: " + e.getY());
+	//Bu metod tıkladığınız noktanın koordinatlarını konsola yazar.
+}
+
+public void keyPressed(KeyEvent e) {
+	System.out.println("key pressed: " + e.getKey());
+	//Bu metod klavyede bastığınız tuşu konsola yazar.
+}
+		</pre></code></div>
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

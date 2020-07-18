@@ -1,0 +1,221 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Laboratuvar bilgisayarları kullanımı
+			</h1>
+      <ul>
+        <li><a href="#getProject">Güne başlarken: web sitesinden ilgili dosyalarını indirin</a></li>
+        <li><a href="#unzipProject">Sıkıştrılmış dosyaları çıkarın (unzip)</a></li>
+        <li><a href="#importProject">Projeyi Eclipse içine alma (import)</a></li>
+        <li><a href="#viewProject">Eclipse kod görüntüleyicisini açma</a></li>
+        <li><a href="#runProject">Eclipse üzerinde proje koşturma</a></li>
+        <li><a href="#submitProject">Laboratuvar saatleri arasında: Projenizi kaydedin ve Google Drive'a ekleyin</a>
+          <ul>
+            <li>Grup liderleri tahtaya, sıkıştırılmış proje dosyalarınızı ekleyeceğiniz, bir URL yazacaktır.</li>
+          </ul>
+          </ul>
+        </li>
+      </ul>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+        <a id="getProject"><h2>Güne başlarken: web sitesinden ilgili dosyalarını indirin</h2></a>
+				      <p>
+				      	<center>
+                  <img style="width:350px" src="{{pathToRoot}}img/handouts/labwork/getproject1.png">
+                  <img style="width:350px" src="{{pathToRoot}}img/handouts/labwork/getproject2.png">
+				      	</center>
+				      </p>
+        <a id="unzipProject"><h2>Sıkıştrılmış dosyaları çıkarma (unzip)</h2></a>
+        <ol>
+        <li>Web sitesinden ya da Google Drive üzerinden indirdiğiniz <code>Day1.zip</code> dosyası Eclipse tarafından doğrudan okunamamaktadır. Bu dosyayı klasöre dönüştürmelisiniz.</li>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/getproject3.png">
+				      	</center>
+				      </p>
+        <li>Dosyayı çıkartın (unzip). Dosya konumunu gösteridiği şekilde tutmak en kolayı olacaktır.</li>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/getproject4.png">
+				      	</center>
+				      </p>
+        <li>Çıkarma işleminin sonunda bir klasör oluşacaktır. Eclipse bu klasörü okuyabilir.</li>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/getproject5.png">
+				      	</center>
+				      </p>
+        </ol>
+        <a id="importProject"><h2>Projeyi Eclipse içine alma (import)</h2></a>
+        <ol>
+          <li>Eclipse içinde, 'File' -> 'Import...'. Daha sonrasında 'General' menüsünü genişletin (ya da çift-tık) ve 'Existing Projects into Workspace' seçeneğine tıklayın. Son olarak 'Next &gt;' seçeneğine tıklayın.</li>
+				      <p>
+				      	<center>
+                  <img style="width:300px" src="{{pathToRoot}}img/handouts/labwork/importproject1.png">
+                  <img style="width:400px" src="{{pathToRoot}}img/handouts/labwork/importproject2.png">
+				      	</center>
+				      </p>
+              <li>Klasörünüzü bulun, örneğin 'Day1'. Eğer sıkıştırılmış zip dosyanızı klasöre ÇIKARMADIYSANIZ ('Extract'), klasörünüzü göremeyeceksiniz! Klasörünüzü seçtikten sonra 'OK' seçeneğine tıklayın. Sonrasından başka hiçbir ayarı değiştirmeden 'Finish' seçeneğine tıklayın.</li>
+				      <p>
+				      	<center>
+                  <img style="width:350px" src="{{pathToRoot}}img/handouts/labwork/importproject3.png">
+                  <img style="width:350px" src="{{pathToRoot}}img/handouts/labwork/importproject4.png">
+				      	</center>
+				      </p>
+        </ol>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+        <a id="viewProject"><h2>Eclipse kod görüntüleyicisini açma</h2></a>
+        <ol>
+          <li>'Package Explorer' ikonunun üzerine tıklayarak kod görüntüleyicisini açın. Otomatik olarak kod görüntüleyicisinin açılması için 'Welcome' penceresini de kapatın.</li>
+              <p>
+				      	<center>
+                  <img style="width:350px" src="{{pathToRoot}}img/handouts/labwork/viewproject1.png">
+                  <img style="width:350px" src="{{pathToRoot}}img/handouts/labwork/viewproject1b.png">
+				      	</center>
+				      </p>
+              <li>Day1 klasörünü genişletin (çift-tık ya da artı işaretine tıklayın). Daha sonra sırasıyla 'src' ve '(deafault package)' seçeneklerini genişletin.</li>
+				      <p>
+				      	<center>
+                  <img style="width:200px;border:1px solid #000000" src="{{pathToRoot}}img/handouts/labwork/viewproject2.png">--&gt;
+                  <img style="width:500px" src="{{pathToRoot}}img/handouts/labwork/viewproject3.png">
+				      	</center>
+				      </p>
+        </ol>
+
+        <a id="runProject"><h2>Eclipse üzerinde proje koşturma</h2></a>
+        <ol>
+          <li>'Package Explorer' (sol kenar menüsü) içinde 'Day1' projesi üzerine sağ-tıklayın. 'Run As' seçeneğini seçip 'Java Application' üzerine tıklayın.</li>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/runproject1.png">
+				      	</center>
+				      </p>
+              <li>Koşturmak istediğiniz programı bulun, örneğin <code>Gazete Alma</code>.</li>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/runproject2.png">
+				      	</center>
+				      </p>
+              <li>Woooo! Şimdi de 'Start Program' seçeneğine tıklayın.</li>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/runproject3.png">
+				      	</center>
+				      </p>
+        </ol>
+
+        <a id="submitProject"><h2>Laboratuvar saatleri arasında: Projenizi kaydedin ve Google Drive'a ekleyin</h2></a>
+        <ol>
+          <li>Placeholder text</li>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/submitproject1.png">
+				      	</center>
+				      </p>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/submitproject2.png">
+				      	</center>
+				      </p>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/submitproject3.png">
+				      	</center>
+				      </p>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/submitproject4.png">
+				      	</center>
+				      </p>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/submitproject5.png">
+				      	</center>
+				      </p>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/submitproject6.png">
+				      	</center>
+				      </p>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/submitproject7.png">
+				      	</center>
+				      </p>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/submitproject8.png">
+				      	</center>
+				      </p>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/submitproject9.png">
+				      	</center>
+				      </p>
+				      <p>
+				      	<center>
+                  <img style="width:700px" src="{{pathToRoot}}img/handouts/labwork/submitproject10.png">
+				      	</center>
+				      </p>
+        </ol>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Çalışamaları teslim etme</h2>
+				<p>Projelerinizi teslim edebilmeniz için aşağıdaki iki adımı takip edin:</p>
+				<ol>
+          <li><p>Projenizin olduğu klasörü sıkıştırabilmek için (zip), proje klasörünüzün içinden <b>zipper.jar</b> programını çalıştırın.</p>
+            <p>Programın içindeki menüden, <b>Eclipse dışında</b>, projenizin olduğu klasörü bulun. Eğer proje klasörünüzün nerede olduğunu bilmiyorsanız, Eclipse'e gidin ve proje isminizin üzerine sağ-tıklayın (Mac OS X: Ctrl-Tık) (sol kenar menüzündeki mavi klasör). Sonrasında 'Properties' seçeneğine tıklayın ve 'Location' adresinin bulunduğu kısmı seçin.</p>
+            <ol>
+              <li><p><b>zipper.jar</b> programını çift-tık ile açın. Aşağıdaki 'CS Bridge Assignment Submission' penceresi ile karşılaşmalısınız:</p>
+				          <p>
+				          	<center>
+                      <img style="width:400px;border:1px solid #000000" src="{{pathToRoot}}img/handouts/submission/zipper.png">
+				          	</center>
+				          </p>
+              </li>
+              <li>Eğer Mac OS X kullanıyorsanız, "zipper.jar cannot be opened because it is from an unidentified developer" (zipper.jar açılamıyor. Bilinmeyen geliştirici) hatası alabilirsiniz. Bu durumda zipper.jar üzerinde sağ-tık yapıp (veya Ctrl-Click) "Open" (Aç) komutunu seçmelisiniz. Daha sonra bu programı çalıştırmak istediğinizi onaylayın.</li>
+				      <p>
+				      	<center>
+                  <img style="width:700px;border:1px solid #000000" src="{{pathToRoot}}img/handouts/submission/zipperdebug.png">
+				      	</center>
+				      </p>
+              <li>Açılan 'CS Bridge Assignment Submission' (CS Bridge Proje Teslim Etme) penceresi üzerinde ilgili bilgilerinizi girin: <b>İsim Soyisim</b> ve <b>Öğrenci Numarası</b>. Öğrenci numaranız bir harf ve 4 adet sayıdan oluşmaktadır (örneğin K0012). Numaranızı size verilen isimlik üzerinde bulabilirsiniz.</li>
+              <li>Eğer öğrenci numaranızı hatırlamıyorsanız ve/veya isimliğinizi kaybettiyseniz Grup Liderinizle iletişime geçin.</li>
+              <li>'Submit' (Teslim Et) seçeneğine tıklayın. Sıkıştırılmış (.zip) klasörünüz belirttiğiniz konumda oluşturulacaktır.</li>
+              <li>'CS Bridge Assignment Submission' (CS Bridge Proje Teslim Etme) penceresini kapatın.
+        </ol>
+					<li>Oluşturulan zip dosyasını Lab saatinde grup liderleri tarafından belirtilen adrese yükleyin.</li>
+				</ol>
+			</div>
+		</div>
+		
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

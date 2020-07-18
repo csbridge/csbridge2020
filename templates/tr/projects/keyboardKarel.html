@@ -1,0 +1,115 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+        		Karel Klavyede (ve Çözümü)
+			</h1>
+			<p>
+				Yazanlar: Barış Bozkurt ve Lisa Yan.
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Kullanıcının Karel'i yön tuşlarını kullanarak hareket ettirebildiği bir program yazın.
+					Karel saol-üst köşede başlamalıdır ve belirtilen yönde 100 piksel kadar ilerlemelidir.
+        </p>
+        <p>Karel'i ekran içinde kalmaya sınırlandırmadığınız zaman kendisinin ekran dışına da çıkma özgürlüğünün bulunduğunu unutmayın.</p>
+
+				<p>
+					<center>
+            <img style="width:500px;border:1px solid #000000" src="{{pathToRoot}}img/projects/keyboardKarel/demo.gif">
+					</center>
+				</p>
+
+        <p>Kullanmanız için işte size bir Karel. Bu görseli Eclipse proje klasörünüz içine <code>karel.png</code> olarak kaydetmelisiniz.</p>
+			<center>
+						<img style="width:80px" src="{{pathToRoot}}img/projects/creativeGraphics/karel.png">	
+            </center>
+
+				
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Çözüm</h2>
+
+
+<pre id="editor" style="height:680px">
+/**
+ * Class: KeyboardKarel
+ * -----------------
+ * Karel moves around an infinite world.
+ */
+public class KeyboardKarel extends GraphicsProgram {
+
+	/**
+	 * Width and height of application window, in pixels.
+	 * These should be used when setting up the initial size of the game,
+	 * but in later calculations you should use getWidth() and getHeight()
+	 * rather than these constants for accurate size information.
+	 */
+	public static final int APPLICATION_WIDTH = 500;
+	public static final int APPLICATION_HEIGHT = 500;
+
+	GImage karel = null;
+	private static final int STEP = 100;
+
+	public void run() {
+		karel = new GImage("karel.png");
+		add(karel, 0, 0);
+		addKeyListeners();
+	}
+
+	/* When a key is pressed, move Karel.
+	 */
+	public void keyPressed(KeyEvent k) {
+		int code = k.getKeyCode();
+		if(code == KeyEvent.VK_UP) {
+			karel.move(0, -STEP);
+		} else if(code == KeyEvent.VK_DOWN){
+			karel.move(0, STEP);
+		} else if(code == KeyEvent.VK_LEFT){
+			karel.move(-STEP, 0);
+		} else if(code == KeyEvent.VK_RIGHT){
+			karel.move(STEP, 0);
+		}
+	}
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	
+	</div>
+	</div>
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

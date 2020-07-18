@@ -1,0 +1,60 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				İz Çıkartmaca
+			</h1>
+			<p>
+				Gizemli bir CS106A öğretmeni tarafından yazılmıştır.
+			</p>
+
+			<p>
+				Ders Notları:
+				<a href ="{{pathToRoot}}tr/handouts/events.html">Olaylar (Events)</a>
+			<br/>
+				Çalışılan Örnekler: 	
+				<a href="{{pathToRoot}}tr/projects/stampTool.html">Damga Makinası</a>
+      <br/>
+        Day5: <code>MakingTracks.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>Kullanıcının tıkladığı yerlerde ayak izi çıkartan bir program yazın.</p>
+
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/icons/makingTracks.png">	
+					</center>
+				</p>
+
+				<p>Verilen <code>drawBearTrack</code> metodu girdi olarak kullanılan (x,y) koordinatlarında bir adet ayak izi oluşturmaktadır:</p>
+
+				<pre>private void drawBearTrack(double x, double y)</pre>
+
+				
+			</div>
+		</div>
+		
+		
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

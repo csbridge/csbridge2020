@@ -1,0 +1,101 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Zıp Zıp Top
+			</h1>
+			<p>
+				Mehran Sahami'nin bir örneği temel alınmıştır.
+			</p>
+			<p>
+				Ders Notları:
+				<a href ="{{pathToRoot}}tr/handouts/graphics.html">Grafik Referansı</a>
+				<br/>
+				Çalışan Örnek: 
+				<a href="{{pathToRoot}}tr/projects/mysterySquare.html">Gizemli Kare</a>,
+				<a href="{{pathToRoot}}tr/projects/gravityBall.html">Seken Top</a>,
+				<a href="{{pathToRoot}}tr/projects/goCenter.html">Merkeze Git</a>
+      <br/>
+        Day3: <code>RandomCircles.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Bir top (GOval'in bir örneği) oluşturan ve ekranın etrafında onu zıplatan bir GraphicsProgram yazın. Yerçekimini boşverin. Top sol ve sağ duvara çarptığında x eksenindeki yönünü, üst ya da alt duvara çarptığında ise y eksenindeki yönünü değiştirin.
+				</p>
+				<p>Aşağıdaki şekil alt duvardan sekerek hareket eden bir topu gösteriyor.</p>
+				<p>
+					<center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/bouncingBall/demo.png">	
+					</center>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Aşama 1: Bir Top Yarat</h2>
+				<p>
+					Herhangi bir boyutta olabilir.
+				</p>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Aşama 2: Topu Hareket Ettir</h2>
+				<p>
+					Sonsuza kadar çalışan bir döngü yaz ve döngünün içinde topun konumunu güncelle ve durdur. Şu metodu kullanarak durabilirsiniz:
+					<div class="well"><code>pause(<i>milliseconds</i>);</code></div>
+					Eğer durdurmazsanız bilgisayar insan gözünün hareketi görebileceğinden çok hızlı olarak animasyonu oynatır!
+				</p>
+
+				<p>
+					Bir GOval'i (veya GRect'i) oynatmak için de bir metot var :
+					<div class="well"><code><i>object</i>.move(<i>dx</i>, <i>dy</i>);</code></div>
+					<i>dx</i> nesnenin x yönünde hareket edeceği pixel sayısı.
+					<br/> <i>dy</i> nesnenin y yönünde hareket edeceği pixel sayısı.
+				</p>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Aşama 3: Sektir</h2>
+				<p>
+					Şimdi, topun konumunu güncellemeden önce, top duvara çarpmış mı diye kontrol etmeli ve çarptıysa, hareket ettiği yönü güncellemelisiniz.
+				</p>
+				<p>Yansımalar gelen açı yansıyan açıya eşittir kuralına uymalı. Ve bunu kod olarak yazması gayet kolay. Sol ya da sağ duvara çarparsa x doğrultusundaki yönünü değiştiriyorsunuz, alt ya da üst duvara çarparsa y doğrultusundaki yönünü değiştiriyorsunuz.</p>
+
+				<p>Topun konumunu nasıl bulacaksınız? Şu metotları kullanabilirsiniz:</p>
+				<div class="well"><code><i>object</i>.getX();<br/><i>object</i>.getY();</code></div>
+
+				<p>Bizim demomuza da göz gezdirmeyi ihmal etmeyin: <a href="{{pathToRoot}}tr/projects/gravityBall.html">Seken Top</a> ve <a href="{{pathToRoot}}tr/projects/goCenter.html">Merkeze Git</a></p>.
+				
+			</div>
+		</div>
+
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

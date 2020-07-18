@@ -1,0 +1,109 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Delgeç (ve Çözümü)
+			</h1>
+			<p>
+				Yazan: Chris Piech.
+        <br/>
+
+        Ders Notları: 
+		<a href ="{{pathToRoot}}en/handouts/graphics.html">Grafik Referansı</a>
+		<a href ="{{pathToRoot}}en/handouts/events.html">Olaylar (Events) Referansı</a>
+
+		<br/>
+
+        5. Gün: <code>HolePuncher.java</code>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+
+				<p>
+					Bu örnek bilgisayarınıza bir kağıt parçası ve farenize de bir deleç gibi davranır. Kullanıcı istediği bir yere tıklar ve tıkladığı yerde delikler (GOval) açılır.
+				</p>
+
+				<p>
+					<center>
+            <img style="width:500px;border:1px solid #000000" src="{{pathToRoot}}img/projects/holePuncher/demo.gif">
+					</center>
+				</p>
+
+				<p>
+					Açacağınız deliklerin yarıçapını belirten sabit değerler tanımlayın. Bu iş için 10 iyi bir değerdir. <code>GOval</code> objelerinin bu değer için <code>double</code> (<code>int</code> değil) türünde değişkenler istediğini unutmayın. Sonrasında bir fare dinleyicisi (mouseListener) yaratın ve her tıklama olayında çalışan <code>draw</code> isimli bir metot oluşturun.
+				</p>
+				
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Çözüm</h2>
+
+
+<pre id="editor" style="height:480px">
+/**
+ * Class: HolePuncher
+ * -----------------
+ * A program that draws filled black circles on the screen whenever
+ * the mouse
+ * is pressed.
+ */
+public class HolePuncher extends GraphicsProgram {
+  /* The radius of each hole that we punch. */
+  private static final double HOLE_RADIUS = 10;
+
+  public void run() {
+    addMouseListeners();
+  }
+
+  /**
+   * Draws a black circle centered at the mouse location whenever the mouse
+   * is pressed.
+   */
+  public void mousePressed(MouseEvent e) {
+    double x = e.getX() - HOLE_RADIUS;
+    double y = e.getY() - HOLE_RADIUS;
+
+    GOval hole = new GOval(x, y, 2 * HOLE_RADIUS, 2 * HOLE_RADIUS);
+    hole.setFilled(true);
+    add(hole);
+  }
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	
+	</div>
+	</div>
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>
