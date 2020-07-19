@@ -1,0 +1,48 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Random Painter
+credit: Chris Piech
+
+Handouts: [KarelReference]({{pathToRoot}}en/handouts/karel.html)<br/>
+Worked Examples: [Invert]({{pathToRoot}}en/projects/invert.html), [UN Karel]({{pathToRoot}}en/projects/unkarel/index.html)<br/>
+Day1: `random_painter.py`
+
+## Problem
+Karel is starting to find her world too black and white. Help her fill it with color.
+<p>
+<center>
+	<img style="width:100%"  src="{{pathToRoot}}img/projects/randomPainter/long.png">	
+</center>
+</p>
+## Paint and Random
+Karel has a few commands up her sleeve. She can paint the corner on which she is standing using the instruction
+```
+paint_corner(color)
+```
+The value enclosed in the parentheses is called an argument in the terminology of programming languages, and it may be any one of 
+<code><span style="color:red;">"red"</span></code>, 
+<code><span style="color:orange;">"orange"</span></code>, 
+<code><span style="color:green;">"green"</span></code>, 
+<code><span style="color:cyan;">"cyan"</span></code>, 
+<code><span style="color:blue;">"blue"</span></code>, 
+<code><span style="color:magenta;">"magenta"</span></code>,
+and so on. So you can call `paint_corner("red")` to paint the square that Karel is standing on into a red square.
+
+Karel also defines a new condition random, which is true half the time, but in an unpredictable way. Like flipping a coin, sometimes it is true and sometimes it is false. For example the code 
+```
+if random.random()
+    put_beeper()
+```
+will place a beeper (or will not) with equal probability.
+
+## Painter
+Use these new abilities to have karel randomly paint each corner of a world one of two colors. You can chose any two colors you would like; we chose green and blue.
+
+Below are three executions of the same program that randomly paints any sized world green and blue executed on a 10x10 world. Note that because of the random condition, the pattern of green and blue is different on each run!
+
+<p>
+	<center>
+		<img style="width:100%"  src="{{pathToRoot}}img/projects/randomPainter/randoms.png">	
+	</center>
+</p>
+
+As always, remember to decompose your solution! Your program should work on a world of any size.

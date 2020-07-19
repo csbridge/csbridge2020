@@ -252,7 +252,7 @@
 	        	<li class="divider visible-after" data-visible-after="2019071509" />
 	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
 	            <li class="visible-after" data-visible-after="2019071509">
-	            	<a href="../../en/projects/stampTool.html">Stamp Tool</a>
+	            	<a href="../../en/projects/stamptool/index.html">Stamp Tool</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../en/projects/holePuncher.html">Hole Puncher</a>
@@ -349,83 +349,78 @@
 
 <div class="container">
 	
-	
-	<!-- Main Content -->
-	<div class="container">
+	<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
 
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-				Random Painter
-			</h1>
-			<p>
-				Writen by Chris Piech
-			</p>
+metadata - the md.Meta object containing the following attributes:
+	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
 
-			<p>
-				Handouts: 
-				<a href ="../../en/handouts/karel.html">KarelReference</a>
-				<br/>Worked Examples: 
-				<a href="../../en/projects/invert.html">Invert</a>,
-				<a href="../../en/projects/unKarel.html">UN Karel</a>
-        <br/>
-        Day1: <code>RandomPainter.java</code>
-			</p>
 
-		</div>
-		<hr/>
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		Random Painter
+	</h1>
 
-		<div class="row">
-			<div class="col-md-12">
-				<p>
-					Karel is starting to find her world too black and white. Help her fill it with color.
-					<p>
-					<center>
-						<img style="width:100%"  src="../../img/projects/randomPainter/long.png">	
-					</center>
-					</p>
-				</p>
-				<h2>Paint and Random</h2>
-				<p>
-					Karel has a few commands up her sleeve. She can paint the corner on which she is standing using the instruction
-<div class="well"><code>paintCorner(color);</code></div>
-The value enclosed in the parentheses, which is called an argument in the terminology
-of programming languages, may be any of the following:
-                 <span style="color:red;">RED</span>&nbsp;&nbsp;  
-                 <span style="color:orange;">ORANGE</span>&nbsp;&nbsp;
-                 <span style="color:green;">GREEN</span>&nbsp;&nbsp;
-                 <span style="color:cyan;">CYAN</span>&nbsp;&nbsp;
-                 <span style="color:blue;">BLUE</span>&nbsp;&nbsp;
-                 <span style="color:magenta;">MAGENTA</span>
-                 and more...             
-				</p>
-				<p>
-					Karel also defines a new condition random, which is true half the time, but in an unpredictable way. Like flipping a coin, sometimes it is true and sometimes it is false. For example the code 
-					<div class="well"><code>if(random()) {<br/>
-						&nbsp;&nbsp;&nbsp;&nbsp;putBeeper();<br/>
-					}</code></div>
-					Will place a beeper, or will not, with equal probability.
+		<p>
+			Credit: Chris Piech
+		</p>
+</div>
+<hr/>
 
-				</p>
-				<h2>Painter</h2>
-				<p>
-					Use these new abilities to have karel randomly paint each corner of a world one of two colors. You can chose any two colors you would like; we chose green and blue.
-				</p>
-				<p>
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Handouts: <a href="../../en/handouts/karel.html">KarelReference</a><br/>
+Worked Examples: <a href="../../en/projects/invert.html">Invert</a>, <a href="../../en/projects/unkarel/index.html">UN Karel</a><br/>
+Day1: <code>random_painter.py</code></p>
+<h2>Problem</h2>
+<p>Karel is starting to find her world too black and white. Help her fill it with color.
+<p>
+<center>
+    <img style="width:100%"  src="../../img/projects/randomPainter/long.png"> <br />
+</center>
+</p></p>
+<h2>Paint and Random</h2>
+<p>Karel has a few commands up her sleeve. She can paint the corner on which she is standing using the instruction</p>
+<pre><code>paint_corner(color)
+</code></pre>
 
-					 Below are three executions of the same program that randomly paints any sized world green and blue executed on a 10x10 world. Note that because of the random condition, the pattern of green and blue is different on each run!
-				</p>
-				<p>
-					<center>
-						<img style="width:100%"  src="../../img/projects/randomPainter/randoms.png">	
-					</center>
-				</p>
-				<p>
-					As always, remember to decompose your solution! Your program should work on a world of any size.
-				</p>
-			</div>
+<p>The value enclosed in the parentheses is called an argument in the terminology of programming languages, and it may be any one of 
+<code><span style="color:red;">"red"</span></code>, 
+<code><span style="color:orange;">"orange"</span></code>, 
+<code><span style="color:green;">"green"</span></code>, 
+<code><span style="color:cyan;">"cyan"</span></code>, 
+<code><span style="color:blue;">"blue"</span></code>, 
+<code><span style="color:magenta;">"magenta"</span></code>,
+and so on. So you can call <code>paint_corner("red")</code> to paint the square that Karel is standing on into a red square.</p>
+<p>Karel also defines a new condition random, which is true half the time, but in an unpredictable way. Like flipping a coin, sometimes it is true and sometimes it is false. For example the code </p>
+<pre><code>if random.random()
+    put_beeper()
+</code></pre>
 
-		</div>
+<p>will place a beeper (or will not) with equal probability.</p>
+<h2>Painter</h2>
+<p>Use these new abilities to have karel randomly paint each corner of a world one of two colors. You can chose any two colors you would like; we chose green and blue.</p>
+<p>Below are three executions of the same program that randomly paints any sized world green and blue executed on a 10x10 world. Note that because of the random condition, the pattern of green and blue is different on each run!</p>
+<p>
+    <center>
+        <img style="width:100%"  src="../../img/projects/randomPainter/randoms.png">    
+    </center>
+</p>
+
+<p>As always, remember to decompose your solution! Your program should work on a world of any size.</p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
+
 			
 	<!-- Footer -->
 <hr>

@@ -1,0 +1,26 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Target
+credit: Written by Eric Roberts and Mehran Sahami
+
+Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
+Worked Example: [Draw People]({{pathToRoot}}en/projects/drawpeople.html)<br/>
+File: `target.py`
+
+Suppose that you've been hired to produce a program that draws an image of an archery target that looks like this:
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/target/target.png">
+</center>
+
+This figure is simply three ovals, two red and one white, drawn in the correct order. The outer circle should have a radius of 150 pixels, the white circle has a radius of 100 pixels, and the inner red circle has a radius of 50 pixels. The figure should be centered in the canvas.
+
+# Constants
+You may notice that the starter code for this project has the lines:
+
+```
+BIG_CIRCLE_RADIUS = 150
+MEDIUM_CIRCLE_RADIUS = 100
+SMALL_CIRCLE_RADIUS = 50
+```
+
+which are written outside the main() method. These lines define constants: variables whose values never change. Since they are defined outside all methods, you can read their values at any point in the program. Though you could write this program using the numbers 150, 100, and 10 directly wherever you need them, using constants makes your program much easier to read.

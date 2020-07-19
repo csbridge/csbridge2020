@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Illusion</title>
+<title>CS Bridge  | Optical Illusion</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -252,7 +252,7 @@
 	        	<li class="divider visible-after" data-visible-after="2019071509" />
 	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
 	            <li class="visible-after" data-visible-after="2019071509">
-	            	<a href="../../en/projects/stampTool.html">Stamp Tool</a>
+	            	<a href="../../en/projects/stamptool/index.html">Stamp Tool</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../en/projects/holePuncher.html">Hole Puncher</a>
@@ -349,103 +349,65 @@
 
 <div class="container">
 	
-	
-	<!-- Main Content -->
-	<div class="container">
+	<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
 
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-				Optical Illusion
-			</h1>
-			<p>
-				Based on an idea by Steve Cooper. Written by Chris Piech.
-			</p>
-			<p>
-				Handouts:
-				<a href ="../../en/handouts/graphics.html">Graphics Reference</a>
-				<br/>
-				Worked Example: 
-				<a href="../../en/projects/stringArtSoln.html">String Art Solution</a>
-        <br/>
-        Day4: <code>Illusion</code>
-			</p>
-
-		</div>
-		<hr/>
-
-		<div class="row">
-			<div class="col-md-12">
-				<p>
-					Sometimes repeating patterns can cause our eyes to see things that aren't there. Look at the picture below. Can you see little grey squares in the intersections of the white lines? Write a <code>GraphicsProgram</code> that creates the optical illusion:
-				</p>
-				
-				<p>
-					<center>
-						<img style="width:500px" src="../../img/projects/illusion/illusion1.png">	
-					</center>
-				</p>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Constants</h2>
-				<p>
-					You may notice that the starter code for this project has the lines:
-					<div class="well"><code>private static final int SIZE = 100; <br/>private static final int GAP = 10;</code></div>
-					which are written outside the <code>run</code> method (much like the random number generator). These lines define constants: variables whose values never change, and since they are defined outside a method you can read their value from any point in the program. Though you <i>could</i> write this optical illusion using the numbers 100 and 10 directly in your code, using constants makes your program much easier to read.
-					<!--<div class="well"><code>private drawSquare(int row, int col) {
-						<br/>&nbsp;&nbsp;&nbsp;//code for drawing a square at the position row, col
-						<br/>}</code></div>-->
-				</p>
-			</div>
-		</div>
+metadata - the md.Meta object containing the following attributes:
+	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
 
 
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Double For Loop</h2>
-				<p>
-					This problem requires using a for loop inside a for loop. Remember to use a different iterator variable for the inner loop. For example if your outer loop is of the form
-					<div class="well"><code>for(int i = 0; i &lt; 100; i++)</code></div>
-					The loop in the body must iterate through a variable other than i.
-					<!--<div class="well"><code>private drawSquare(int row, int col) {
-						<br/>&nbsp;&nbsp;&nbsp;//code for drawing a square at the position row, col
-						<br/>}</code></div>-->
-				</p>
-			</div>
-		</div>
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		Optical Illusion
+	</h1>
 
-		<!--<div class="row">
-			<div class="col-md-12">
-				<h2>Decomposition</h2>
-				<p>
-					This problem has a logical group of commands that draws a square that should be decomposed into its own method. The challenge is, that the method needs extra information, the row and column where it should be drawn. This problem can be addressed by using parameter passing. In your program, implement and use a method with the following prototype:
-					<div class="well"><code>private drawSquare(int row, int col) {
-						<br/>&nbsp;&nbsp;&nbsp;//code for drawing a square at the position row, col
-						<br/>}</code></div>
-				</p>
-			</div>
-		</div>-->
+		<p>
+			Credit: Based on an idea by Steve Cooper. Written by Chris Piech.
+		</p>
+</div>
+<hr/>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Extension</h2>
-        <p>Day4: <code>Illusion2.java</code>
-				<p>
-					If you have time, try creating this optical illusion! Note that all the squares are the same size and all lines are horizontal! Think about how to decompose your solution.
-				</p>
-				
-				<p>
-					<center>
-						<img style="width:500px" src="../../img/projects/illusion/illusion2.png">	
-					</center>
-				</p>
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Handouts: <a href="../../en/handouts/graphics.html">Graphics Reference</a><br/>
+File: <code>illusion1.py</code></p>
+<p>Sometimes repeating patterns can cause our eyes to see things that aren't there. Look at the picture below. Can you see little gray squares in the intersections of the white lines? Write a GraphicsProgram that create the optical illusion:</p>
+<p><center>
+  <img style="width:500px;border: 1px solid #000000" src="../../img/projects/illusion/illusion1.png">
+</center></p>
+<h1>Constants</h1>
+<p>You may notice that the starter code for this project has the lines:</p>
+<pre><code>SIZE = 100
+GAP = 10
+</code></pre>
 
-				<p>If you are stuck, try drawing each row with the first black square always starting at x = 0. Then try to figure out how to create the offset pattern.</p>
-			</div>
-		</div>
+<p>which are written outside the main() method. These lines define constants: variables whose values never change. Since they are defined outside all methods, you can read their values at any point in the program. Though you could write this optical illusion using the numbers 100 and 10 directly wherever you need them, using constants makes your program much easier to read.</p>
+<h2>Double for loop</h2>
+<p>This problem requires using a for-loop inside a for-loop. Remember to use a different iterator variable for the inner loop. For example, if your outer loop is of the form:</p>
+<pre><code>for i in range(100):
+  ... inner loop here ...
+</code></pre>
+
+<p>The inner loop (the loop in the body) must iterate through a variable other than <code>i</code>.</p>
+<h2>Extension</h2>
+<p>File: <code>illusion2.py</code></p>
+<p>If you have time, try creating this optical illusion! Note that all the squares are the same size and all lines are horizontal! Think about how to decompose your solution.</p>
+<p><center>
+  <img style="width:500px;border: 1px solid #000000" src="../../img/projects/illusion/illusion2.png">
+</center></p>
+<p>If you are stuck, try drawing each row with the first black square always starting at x = 0. Then try to figure out how to create the offset pattern.</p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

@@ -252,7 +252,7 @@
 	        	<li class="divider visible-after" data-visible-after="2019071509" />
 	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
 	            <li class="visible-after" data-visible-after="2019071509">
-	            	<a href="../../en/projects/stampTool.html">Stamp Tool</a>
+	            	<a href="../../en/projects/stamptool/index.html">Stamp Tool</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../en/projects/holePuncher.html">Hole Puncher</a>
@@ -349,73 +349,67 @@
 
 <div class="container">
 	
-	
-	<!-- Main Content -->
-	<div class="container">
+	<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
 
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-				Mountain Karel
-			</h1>
-			<p>
-				Based on a handout by Eric Roberts
-			</p>
+metadata - the md.Meta object containing the following attributes:
+	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
 
-			<p>
-				Handouts: 
-				<a href ="../../en/handouts/karel.html">KarelReference</a>
-				<br/>
-				Worked Example: 
-				<a href="../../en/projects/beeperLine.html">Beeper Line</a>
-        <br/>
-        Day1: <code>Mountain.java</code>
-			</p>
 
-		</div>
-		<hr/>
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		Mountain Karel
+	</h1>
 
-		<div class="row">
-			<div class="col-md-12">
-				<p>
-					Karel dreams of climbing mountains. Teach her to get to the top of a mountain of any height. For example, for the following mountain:
-				</p>
-				<p>
-					<center>
-						<img class="psetImg" style="width:400px" src="../../img/projects/mountain/mountain0.png">	
-					</center>
-				</p>
-				<p>
-					Karel should climb to the top and leave a flag (a beeper) at the summit as shown bellow:
-				</p>
-				<p>
-					<center>
-						<img class="psetImg" style="width:400px"  src="../../img/projects/mountain/mountain1.png">	
-					</center>
-				</p>
-				<p>
-					Unlike the previous problems, you are <b>not</b> garunteed the height of the mountain before hand. The program you write should allow Karel to climb mountains of any size. For example the following three:
-				</p>
-				<p>
-					<center>
-						<img class="psetImg" style="width:100%"  src="../../img/projects/mountain/mountains.png">	
-					</center>
-				</p>
-				<p>
-				 	You can assume:
-					<ul>
-						<li>Karel starts on the bottom left of the world, facing east.</li>
-						<li>There is one space (on the left and the right) between the mountain and the world boundry. </li>
-						<li>The mountain is at least one square high.</li>
-						<li>The mountain consists of steps that are 1 space big up/down and left/right.</li>
-					</ul>
-				</p>
-				<p>
-					Use while loops.
-				</p>
-			</div>
+		<p>
+			Credit: Chris Piech
+		</p>
+</div>
+<hr/>
 
-		</div>
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Handouts: <a href="../../en/handouts/karel.html">KarelReference</a><br/>
+Worked Examples: <a href="../../en/projects/beeperLine.html">Beeper Line</a><br/>
+Day1: <code>mountain.py</code></p>
+<p>Karel dreams of climbing mountains. Teach her to get to the top of a mountain of any height. For example, for the following mountain:</p>
+<p>
+<center>
+        <img class="psetImg" style="width:400px" src="../../img/projects/mountain/mountain0.png">   
+</center>
+</p>
+
+<p>Karel should climb to the top and leave a flag (a beeper) at the summit as shown bellow:</p>
+<p>
+<center>
+        <img class="psetImg" style="width:400px" src="../../img/projects/mountain/mountain1.png">   
+</center>
+</p>
+
+<p>Unlike the previous problems, you are <b>not</b> guaranteed the height of the mountain before hand. The program you write should allow Karel to climb mountains of any size. For example the following three:
+<p>
+<center>
+    <img class="psetImg" style="width:100%"  src="../../img/projects/mountain/mountains.png"> <br />
+</center>
+</p></p>
+<p>You can assume:
+* Karel starts on the bottom left of the world, facing east.</li>
+* There is one space (on the left and the right) between the mountain and the world boundry. </li>
+* The mountain is at least one square high.</li>
+* The mountain consists of steps that are 1 space big up/down and left/right.</li></p>
+<p>Use while loops.</p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

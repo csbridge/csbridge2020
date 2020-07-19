@@ -42,7 +42,8 @@
 		<script src="sweetalert2.all.min.js"></script>
 <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
-	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>	</head>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+	</head>
 	<body>
 		<!--
 	A template used for every English page - contains the nav bar, a container div, and the footer.
@@ -251,7 +252,7 @@
 	        	<li class="divider visible-after" data-visible-after="2019071509" />
 	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
 	            <li class="visible-after" data-visible-after="2019071509">
-	            	<a href="../../en/projects/stampTool.html">Stamp Tool</a>
+	            	<a href="../../en/projects/stamptool/index.html">Stamp Tool</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../en/projects/holePuncher.html">Hole Puncher</a>
@@ -348,51 +349,49 @@
 
 <div class="container">
 	
-	
-	<!-- Main Content -->
-	<div class="container">
+	<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
 
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-				Snow
-			</h1>
-			<p>
-				Written by Chris Piech
-			</p>
-			<p>
-				Handouts:
-				<a href ="../../en/handouts/arrayLists.html">ArrayLists</a>
-				<br/>
-				Examples:
-				<a href ="../../en/projects/rocketPaddle.html">Rockets</a>
-        <br/>
-        Day7: <code>Snow.java</code>
-			</p>
+metadata - the md.Meta object containing the following attributes:
+	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
 
-		</div>
-		<hr/>
 
-		<div class="row">
-			<div class="col-md-12">
-				<p>
-					Animate GOvals (snow) falling down from the sky and pilling up on the ground.</p>
-				<p>
-					<center>
-						<img style="width:100%" src="../../img/projects/snow/snow.png">	
-					</center>
-				</p>
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		Snow
+	</h1>
 
-				<p>
-					Use an animation loop. Each time through the loop:
-					<ol>
-						<li>Animate all snow flakes not on the ground</li>
-						<li>Generate a new snow flake at the top of the screen with 10% probability</li>
-						<li>Pause for 10 milliseconds </p>
-					</ol>
-				</p>
-			</div>
-		</div>
+		<p>
+			Credit: Chris Piech
+		</p>
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Examples: <a href="../../en/projects/rocketShip.html">Rockets</a><br/>
+File: snow.py</p>
+<p>Animate circles (snow) falling down from the sky and piling up on the ground.</p>
+<p><img src="../../img/projects/snow/snow.png" alt="a screenshot of the snow program with snow falling and stopping at the bottom of the screen" class="center" style="width: 90%" /></p>
+<p>Use an animation loop. Each time through the loop:</p>
+<ol>
+<li>Animate all snow flakes not on the ground</li>
+<li>Generate a new snow flake at the top of the screen with 10% probability, at a random horizontal location</li>
+<li>call <code>update()</code> on the canvas</li>
+<li>Pause for 10 milliseconds</li>
+</ol>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

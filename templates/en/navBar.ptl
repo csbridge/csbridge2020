@@ -200,7 +200,7 @@
 	        	<li class="divider visible-after" data-visible-after="2019071509" />
 	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
 	            <li class="visible-after" data-visible-after="2019071509">
-	            	<a href="{{pathToRoot}}en/projects/stampTool.html">Stamp Tool</a>
+	            	<a href="{{pathToRoot}}en/projects/stamptool/index.html">Stamp Tool</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="{{pathToRoot}}en/projects/holePuncher.html">Hole Puncher</a>

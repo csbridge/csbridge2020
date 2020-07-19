@@ -252,7 +252,7 @@
 	        	<li class="divider visible-after" data-visible-after="2019071509" />
 	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
 	            <li class="visible-after" data-visible-after="2019071509">
-	            	<a href="../../en/projects/stampTool.html">Stamp Tool</a>
+	            	<a href="../../en/projects/stamptool/index.html">Stamp Tool</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../en/projects/holePuncher.html">Hole Puncher</a>
@@ -349,121 +349,96 @@
 
 <div class="container">
 	
-	
-	<!-- Main Content -->
-	<div class="container">
+	<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
 
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-				8-Ball (with solution)
-			</h1>
-			<p>
-				Problem written by Chris Piech.
-			</p>
-
-		</div>
-		<hr/>
-
-		<div class="row">
-			<div class="col-md-12">
-				<p>
-					The idea behind an 8-Ball is very simple. You ask the eight ball a yes or no question, and it tells you the answer.
-				</p>
-
-				<p>Except, that the answer it choses is randomly selected from a set of prefabricated responses.</p>
-				<p>
-					<center>
-						<img style="width:300px" src="../../img/projects/8Ball/real.gif">	
-						<p style="text-align:center"><i>A real life 8-Ball</i></p>
-					</center>
-				</p>
-
-				<p>Write a program that continuously prompts the user for a yes or no question, and then randomly selects from 5 canned answers:</p>
-				<ul>
-					<li>Without a doubt.</li>
-					<li>Yes.</li>
-					<li>Ask again later.</li>
-					<li>No.</li>
-					<li>Karel thinks so.</li>
-				</ul>
-				<p>Here is an example run of the program.</p>
-
-				<p>
-					<center>
-						<img style="width:700px" src="../../img/projects/8Ball/sampleRun.png">	
-						
-					</center>
-				</p>
-				
-				<p>To generate random numbers create a RandomGenerator instance variable (a variable declared outside all methods) like so:
-					<div class="well"><code>private RandomGenerator rgen = new RandomGenerator();</code></div>
-				</p>
-				<p>You can then use the variable to generate random numbers.
-					<div class="well"><code>
-						rgen.nextInt(<i>max</i>)  //generates a random int in the range [0, max)
-					</code></div>
-				</p>
-</p>
-				
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Solution</h2>
+metadata - the md.Meta object containing the following attributes:
+	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
 
 
-<pre id="editor" style="height:580px">/**
- * Class: Eight Ball
- * -----------------
- * Simulates an eight ball and gives sage answers to yes or
- * no questions.
- */
-public class EightBall extends ConsoleProgram {
-	
-	private static RandomGenerator rg = new RandomGenerator();
-	
-	public void run() {
-		while(true) {
-			readLine("Ask a yes or no question: ");
-			
-			int choice = rg.nextInt(5);
-			println(choice);
-			if(choice == 0) {
-				println("Without a doubt");
-			}
-			if(choice == 1) {
-				println("Yes");
-			}
-			if(choice == 2) {
-				println("Ask again later.");
-			}
-			if(choice == 3) {
-				println("No");
-			}
-			if(choice == 4) {
-				println("Karel thinks so.");
-			}
-			println("");
-		}
-	}
-}
-</pre>
-    
-<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-   editor.setTheme('ace/theme/eclipse');
-   editor.getSession().setMode("ace/mode/java");
-   editor.setReadOnly(true);
-   editor.setShowPrintMargin(false);
-   editor.renderer.setShowGutter(false); 
-    /*editor.setTheme("ace/theme/eclipse");
-    editor.getSession().setMode("ace/mode/java");*/
-</script>
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		8-Ball
+	</h1>
+
+		<p>
+			Credit: Chris Piech, with modifications by Lisa Yan
+		</p>
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>File: <code>8ball.py</code></p>
+<p>The idea behind an 8-Ball is very simple. You ask the eight ball a yes or no question, and it tells you the answer.</p>
+<p>Except, that the answer it choses is randomly selected from a set of prefabricated responses.</p></p>
+<p><center>
+    <img style="width:300px" src="../../img/projects/8Ball/real.gif"> <br />
+    <p style="text-align:center"><i>A real life 8-Ball</i></p>
+</center></p>
+<p>Write a program that continuously prompts the user for a yes or no question, and then randomly selects from 5 canned answers:
+* Without a doubt.
+* Yes.
+* Ask again later.
+* No.
+* Karel thinks so.</p>
+<p>Here is an example run of the program.
+<center>
+      <img style="width:700px" src="../../img/projects/8Ball/sampleRun.png">  <br />
+</center></p>
+<h2>Infinite loop</h2>
+<p>We've implemented part of this program for you---specifically, the <strong>infinite loop</strong> part which continuously asks for user input). We've left you the job of getting the program to answer with the 5 canned answers above.</p>
+<p>Take a look at what we've implemented below. If you run this code as-is, <strong>what does this program do?</strong> Try it out in PyCharm by running the file <code>8ball.py</code>!
+Remember that you can run your program in Pycharm's Terminal by typing <code>python3 8ball.py</code> (if you are on Mac)
+or <code>py 8ball.py</code> (if you are on PC).</p>
+<pre><code>def main():
+    while True:
+        input(&quot;Ask a yes or no question: &quot;)
+
+        # remember, this is a comment
+        # BEGIN YOUR CODE
+
+
+        # END YOUR CODE
+</code></pre>
+
+<h2>Quitting an infinite loop</h2>
+<p>This program runs forever!
+To exit a program that runs forever, hit <code>Ctrl-C</code> on your keyboard while in the Terminal. You should then be able
+to run your program via the <code>python3 runningsum.py</code> or <code>py runningsum.py</code> again.</p>
+<h2>Choices and random numbers</h2>
+<p>One way to choose randomly between 5 answers is to associate each answer with a number and make use of Python's ability to randomly pick numbers.
+Then, depending on which number is picked, you can use <strong>conditional statements</strong> (<code>if</code>, <code>else</code>) to print out the selected answer.</p>
+<p>To generate a random integer, you can do the following:</p>
+<pre><code>num = random.randint(min, max)
+</code></pre>
+
+<p><code>min</code> and <code>max</code> are the minimum and maximum integers, respectively that the variable <code>num</code> can take on. For example:</p>
+<pre><code>num = random.randint(10, 20)
+</code></pre>
+
+<p>will store a random number between 10 and 20, inclusive, in the variable <code>num</code>.</p>
+<h2>Bonus: extension</h2>
+<p>Your current program runs forever. How would you change the while loop conditional (currently <code>True</code>) to exit when the user types nothing (just presses Enter)?</p>
+<p>Hint: Here's a program that outputs "nothing entered" when the user types in nothing (just presses Enter). Otherwise the program prints the user input. How can you use a similar idea and apply it to the while loop?</p>
+<pre><code>statement = input(&quot;Type in something: &quot;)
+if statement == &quot;&quot;:
+    print(&quot;nothing entered&quot;)
+else:
+    print(statement)
+</code></pre>
 	</div>
-	</div>
+</div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

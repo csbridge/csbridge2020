@@ -1,0 +1,11 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Place Square
+credit: Lisa Yan
+
+Handouts: [KarelReference]({{pathToRoot}}en/handouts/karel.html)<br/>
+Worked Examples: [Invert]({{pathToRoot}}en/projects/invert.html), [UN Karel]({{pathToRoot}}en/projects/unkarel/index.html)<br/>
+Day1: `place_square.py`
+
+What is this supposed to be?????
+
+Place five items....but where....

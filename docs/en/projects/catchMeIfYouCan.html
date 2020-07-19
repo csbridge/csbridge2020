@@ -252,7 +252,7 @@
 	        	<li class="divider visible-after" data-visible-after="2019071509" />
 	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
 	            <li class="visible-after" data-visible-after="2019071509">
-	            	<a href="../../en/projects/stampTool.html">Stamp Tool</a>
+	            	<a href="../../en/projects/stamptool/index.html">Stamp Tool</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../en/projects/holePuncher.html">Hole Puncher</a>
@@ -349,53 +349,58 @@
 
 <div class="container">
 	
-	
-  <!-- Main Content -->
-  <div class="container">
+	<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
 
-    <!-- Header -->
-    <div id="pageHeader">
-      <h1>
-        Catch Me If You Can
-      </h1>
-      <p>
-        Problem by Julia Lee, Kerem Goksel, and Chris Piech
-      </p>
-      <p>
-        Handouts:
-        <a href ="../../en/handouts/graphics.html">Graphics Reference</a>, <a href ="../../en/handouts/events.html">Events</a>
-        <br/>
-        Day5: <code>CatchMeIfYouCan.java</code>
-      </p>
+metadata - the md.Meta object containing the following attributes:
+	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
 
-    </div>
-    <hr/>
 
-    <div class="row">
-      <div class="col-md-12">
-        <p>
-          <ol>
-            <li>Add a blue "sneaky" square to the canvas.</li>
-            <li>Add 20 black squares to the canvas.</li>
-            <li>Add a mouse event listener that moves the "sneaky" square to a random position whenever the mouse touches it.</li>
-          </ol>
-        </p>
-        <p>
-          <center>
-            <img style="width:500px" src="../../img/projects/catchMeIfYouCan/demo1.png">  
-          </center>
-        </p>
-        <p>
-          
-          <center>
-            When the mouse touches the "sneaky" square, it moves
-            <img style="width:500px" src="../../img/projects/catchMeIfYouCan/demo2.png">  
-          </center>
-        </p>
-      </div>
-    </div>
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		Catch Me If You Can
+	</h1>
 
-    <br/>
+		<p>
+			Credit: Problem by Julia Lee, Kerem Goksel, and Chris Piech
+		</p>
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Handouts: <a href="../../en/handouts/graphics.html">Graphics Reference</a>
+File: <code>catchmeifyoucan.py</code></p>
+<ol>
+<li>
+<p>Add a blue "sneaky" square to the canvas.</p>
+</li>
+<li>
+<p>Add 20 black squares to the canvas.</p>
+</li>
+<li>
+<p>Add a mouse event listener that moves the "sneaky" square to a random position whenever the mouse touches it.</p>
+</li>
+</ol>
+<p><center>
+  <img style="width:500px;border: 1px solid #000000" src="../../img/projects/catchMeIfYouCan/demo1.png">
+</center></p>
+<p>When the mouse touches the "sneaky" square, it moves.</p>
+<p><center>
+  <img style="width:500px;border: 1px solid #000000" src="../../img/projects/catchMeIfYouCan/demo2.png">
+</center></p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

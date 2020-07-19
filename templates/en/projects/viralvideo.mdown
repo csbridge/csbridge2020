@@ -1,0 +1,31 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Viral Video
+credit: Lisa Yan
+
+File: `viral_video.py`
+
+You are looking to get TikTok viral on Planet Earth! Write a program that takes two things as input: (1) a target view count, and (2) a growth rate. Your program will then compute the number of days it takes you to reach your target viewer count, like below (user input highlighted in blue):
+
+<center>
+	<img style="width:500px" src="{{pathToRoot}}img/projects/viralvideo/output.png">
+	<p style="text-align:center"><i>An example with (1) view count as 100 and (2) growth rate as 3.</i></p>
+</center>
+
+## Growth Rate
+
+Every day, your total view count multiples by the above growth rate. In the above example, your exponential growth rate is 3, meaning:
+
+* On Day 1, you start with 1 view (yourself).
+* On Day 2, this grows to 3 views.
+* On Day 3, this grows to 9 views.
+
+... and so on.
+
+Try out your program in `viral_video.py`!
+
+## Exponential growth rate
+This pattern of growth is called an **exponential growth rate** and is a mathematical function used to describe viral video viewcounts, money investments, spread of diseases, and more. Some examples:
+
+* The exponential growth rate of a good savings acocunt is around 1.01 per year.
+* The exponential growth rate of the annual flu (i.e., influenza) is about 1.3 per person.
+* COVID-19 has an exponential growth rate of between 3.28 to 9 per person.
