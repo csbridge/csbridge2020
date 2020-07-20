@@ -70,6 +70,29 @@
 	        <!--<li ><a href="#">Link</a></li>-->
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+          		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
+	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../en/handouts/animation.html">Animation Reference</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/general-info.html">General Info</a></li>
+              <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
+              <li><a href="../../en/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
+              <li><a href="../../en/resources/section-info.html">Section Info</a></li>
+              <li><a href="../../en/resources/zoom-info.pdf">Zoom Guide</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
+              <li><a href="../../en/resources/karelInPycharm.pdf">Karel in PyCharm</a></li>
+
+              <!-- Not used nor visible -->
+				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/handouts/jar.html">Exporting Projects as JARs</a>-->
+	          	<!--<a class="visible-after" href="../../en/handouts/sections.html">Sections</a>-->
+	          </ul>
+	        </li>
 	          <ul class="dropdown-menu">
 	          	<!--<li><a href="../../en/handouts/sections.html">Sections</a></li>-->
 	          	<li><a href="http://karel.csbridge.org/java/en/intro.html">Karel Reader</a></li>
@@ -393,7 +416,7 @@ And so on...
 </code></pre>
 
 <p>When an organism is alive, it keeps replenishing its supply of c14 to the natural level. But when it dies (moment of silence), the amount of c14 starts to decrease. By testing how much c14 is left, scientists know how how long a dead thing has been dead for. Good times.</p>
-<h2>Lookup Table</h2>
+<h2 id="lookup-table">Lookup Table</h2>
 <p>To get started, let's make a lookup table that maps the percent of c14 remaining to the number of years the sample has been dead for. Print out the percent c14 remaining, and the number of years passed for the first 20 half lives. Your table should look like the following:</p>
 <pre><code>Carbon Dating Lookup Table
 Percent C-14 Remaining: years passed
@@ -420,7 +443,7 @@ Percent C-14 Remaining: years passed
 0.00019073486328125%: 108300 years
 </code></pre>
 
-<h2>Extension</h2>
+<h2 id="extension">Extension</h2>
 <p>If you finish early and have extra time, try this extension.</p>
 <p>For scientists it will be much more useful for them to input the percent of natural c14 that they measured, and have the program tell them the age. Repeatedly ask the user to enter a percent of natural c14 remaining and then output the age of their sample.</p>
 <pre><code>What percent of natural carbon-14 does your sample have? 99
@@ -545,5 +568,6 @@ What percent of natural carbon-14 does your sample have? -1
 
 </script>
 </div>
+
 	</body>
 </html>

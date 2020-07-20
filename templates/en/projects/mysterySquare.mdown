@@ -1,0 +1,9 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Mystery Square
+credit: Problem written by a mystery CS106A professor
+
+Draw a square (100 pixels by 100 pixels) in the center of the screen and change its color every second.
+
+<center>
+  <img style="width:600px; border: 1px solid black;" src="{{pathToRoot}}img/projects/mysterySquare/mysterySquare.gif">
+</center>

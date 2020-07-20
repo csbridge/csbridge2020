@@ -70,6 +70,29 @@
 	        <!--<li ><a href="#">Link</a></li>-->
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+          		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
+	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../en/handouts/animation.html">Animation Reference</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/general-info.html">General Info</a></li>
+              <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
+              <li><a href="../../en/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
+              <li><a href="../../en/resources/section-info.html">Section Info</a></li>
+              <li><a href="../../en/resources/zoom-info.pdf">Zoom Guide</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
+              <li><a href="../../en/resources/karelInPycharm.pdf">Karel in PyCharm</a></li>
+
+              <!-- Not used nor visible -->
+				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/handouts/jar.html">Exporting Projects as JARs</a>-->
+	          	<!--<a class="visible-after" href="../../en/handouts/sections.html">Sections</a>-->
+	          </ul>
+	        </li>
 	          <ul class="dropdown-menu">
 	          	<!--<li><a href="../../en/handouts/sections.html">Sections</a></li>-->
 	          	<li><a href="http://karel.csbridge.org/java/en/intro.html">Karel Reader</a></li>
@@ -383,7 +406,7 @@ filePath - the total path to the markdown file being rendered in this template
     <img style="width:500px" src="../../img/projects/viralvideo/output.png">
     <p style="text-align:center"><i>An example with (1) view count as 100 and (2) growth rate as 3.</i></p>
 </center></p>
-<h2>Growth Rate</h2>
+<h2 id="growth-rate">Growth Rate</h2>
 <p>Every day, your total view count multiples by the above growth rate. In the above example, your exponential growth rate is 3, meaning:</p>
 <ul>
 <li>On Day 1, you start with 1 view (yourself).</li>
@@ -392,7 +415,7 @@ filePath - the total path to the markdown file being rendered in this template
 </ul>
 <p>... and so on.</p>
 <p>Try out your program in <code>viral_video.py</code>!</p>
-<h2>Exponential growth rate</h2>
+<h2 id="exponential-growth-rate">Exponential growth rate</h2>
 <p>This pattern of growth is called an <strong>exponential growth rate</strong> and is a mathematical function used to describe viral video viewcounts, money investments, spread of diseases, and more. Some examples:</p>
 <ul>
 <li>The exponential growth rate of a good savings acocunt is around 1.01 per year.</li>
@@ -457,5 +480,6 @@ filePath - the total path to the markdown file being rendered in this template
 
 </script>
 </div>
+
 	</body>
 </html>

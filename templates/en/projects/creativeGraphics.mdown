@@ -1,0 +1,17 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Creative Graphics
+credit: Lisa Yan
+
+This is a bonus program!
+
+Write a graphics program that does anything you want!!! Here is an example of something you can make.
+
+<center>
+  <img style="width:400px; border: 1px solid black;" src="{{pathToRoot}}img/projects/creativeGraphics/example.gif">
+</center>
+
+Here is a Karel to help you out.
+
+<center>
+  <img src="{{pathToRoot}}img/projects/creativeGraphics/karel.png">
+</center>

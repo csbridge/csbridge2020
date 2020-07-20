@@ -1,0 +1,47 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Programming is Awesome
+credit: Chris Piech and Eric Roberts
+
+Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
+
+The point of this program is to get you to create your first graphics program. You should draw three rectangles (one red, one blue and one yellow) and in the center of the screen write "Programming is Awesome." You can make your rectangles of any size and put them in any position--as long as they are visible. Here is what our program looked like.
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/programmingIsAwesome/demo.png">
+</center>
+
+## Milestone 1: Draw Rectangles
+
+Very simple geometric art sometimes sells for huge amounts of money. For example, this painting, Composition II by Piet Mondrian, sold for $40 million:
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/programmingIsAwesome//mondrian.jpg">
+</center>
+
+Your first task is to add three rectangles, one red, one blue, one yellow. You don't have to create the image above. You can put your rectangles anywhere on the screen that you want. If you sell your picture for millions of dollars... remember your teachers :). If you feel like adding more rectangles, thats cool. Just make sure to finish milestone #2 first.
+
+
+## Milestone 2: Centered Text
+
+Create and add some text in the center of the screen. You can get the width and height of the screen with the following commands using your `canvas` variable:
+
+```
+canvas.get_canvas_width()
+canvas.get_canvas_height()
+```
+
+You can create some text on the screen using `create_text`:
+
+```
+label = canvas.create_text(x, y, text)
+```
+
+The x and y coordinates you provide will be set to be the _center_ of the drawn text.
+
+If you want your text to look more snazzy, you can change its font using your `canvas` variable:
+
+```
+canvas.set_font(label, "Courier" 50)
+```
+
+That's all! If you finish early, feel free to add to your picture. If you like ovals... you can add ovals too.

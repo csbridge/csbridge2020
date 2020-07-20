@@ -70,6 +70,29 @@
 	        <!--<li ><a href="#">Link</a></li>-->
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+          		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
+	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../en/handouts/animation.html">Animation Reference</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/general-info.html">General Info</a></li>
+              <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
+              <li><a href="../../en/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
+              <li><a href="../../en/resources/section-info.html">Section Info</a></li>
+              <li><a href="../../en/resources/zoom-info.pdf">Zoom Guide</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
+              <li><a href="../../en/resources/karelInPycharm.pdf">Karel in PyCharm</a></li>
+
+              <!-- Not used nor visible -->
+				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/handouts/jar.html">Exporting Projects as JARs</a>-->
+	          	<!--<a class="visible-after" href="../../en/handouts/sections.html">Sections</a>-->
+	          </ul>
+	        </li>
 	          <ul class="dropdown-menu">
 	          	<!--<li><a href="../../en/handouts/sections.html">Sections</a></li>-->
 	          	<li><a href="http://karel.csbridge.org/java/en/intro.html">Karel Reader</a></li>
@@ -431,7 +454,7 @@ Player 1 wins!
 </code></pre>
 
 <p>Write a program to play Nimm. To make your life easier we have broken the problem down into smaller milestones. You have a lot of time for this program. Take it slowly, piece by piece.</p>
-<h2>Milestone 1</h2>
+<h2 id="milestone-1">Milestone 1</h2>
 <p>Start with 20 stones. Repeat the process of removing stones and printing out how many stones are left until there are zero. Don't worry about whose turn it is. Don't worry about making sure only one or two stones are removed. Use the function <code>input(msg)</code> which prints <code>msg</code> and waits for the user to enter something.</p>
 <pre><code>There are 20 stones left
 Would you like to remove 1 or 2 stones? 2
@@ -445,7 +468,7 @@ Would you like to remove 1 or 2 stones? 3
 Game over
 </code></pre>
 
-<h2>Milestone 2</h2>
+<h2 id="milestone-2">Milestone 2</h2>
 <p>Create an integer variable to keep track of whose turn it is (remember there are two players). Tell the user whose turn it is. Each time someone picks up stones, change the player number.</p>
 <pre><code>There are 20 stones left
 Player 1 would you like to remove 1 or 2 stones? 1
@@ -462,15 +485,15 @@ Player 2 would you like to remove 1 or 2 stones? 1
 Game over
 </code></pre>
 
-<h2>Milestone 3</h2>
+<h2 id="milestone-3">Milestone 3</h2>
 <p>Make sure that each turn only one or two stones are removed. After you read a number of stones to remove from a user (their input), you can use the following pattern to check if it was valid and keep asking until it is valid.</p>
 <pre><code>while input is invalid:
    input = int(input(&quot;Please enter 1 or 2: &quot;))
 </code></pre>
 
-<h2>Milestone 4</h2>
+<h2 id="milestone-4">Milestone 4</h2>
 <p>Announce the winner.</p>
-<h2>Extensions</h2>
+<h2 id="extensions">Extensions</h2>
 <p>Can you write an AI opponent? You can start with a dummy AI that always plays a random number. Then try to make one that plays intelligently...</p>
 <p>Some other extension ideas:</p>
 <ul>
@@ -539,5 +562,6 @@ Game over
 
 </script>
 </div>
+
 	</body>
 </html>

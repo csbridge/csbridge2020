@@ -70,6 +70,29 @@
 	        <!--<li ><a href="#">Link</a></li>-->
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+          		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
+	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../en/handouts/animation.html">Animation Reference</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/general-info.html">General Info</a></li>
+              <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
+              <li><a href="../../en/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
+              <li><a href="../../en/resources/section-info.html">Section Info</a></li>
+              <li><a href="../../en/resources/zoom-info.pdf">Zoom Guide</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
+              <li><a href="../../en/resources/karelInPycharm.pdf">Karel in PyCharm</a></li>
+
+              <!-- Not used nor visible -->
+				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/handouts/jar.html">Exporting Projects as JARs</a>-->
+	          	<!--<a class="visible-after" href="../../en/handouts/sections.html">Sections</a>-->
+	          </ul>
+	        </li>
 	          <ul class="dropdown-menu">
 	          	<!--<li><a href="../../en/handouts/sections.html">Sections</a></li>-->
 	          	<li><a href="http://karel.csbridge.org/java/en/intro.html">Karel Reader</a></li>
@@ -378,7 +401,7 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<p>These are practice programs to help you get familiar with loops in Python. They are ordered from easiest to hardest.</p>
-<h2>Loop Refresher</h2>
+<h2 id="loop-refresher">Loop Refresher</h2>
 <p>Recall the general structure of a <code>for</code> loop:</p>
 <pre><code>for i in range(15):
     # some code...
@@ -405,7 +428,7 @@ filePath - the total path to the markdown file being rendered in this template
 
 <p>The following exercises are all about using the <code>for</code> loop counter <code>i</code>.</p>
 <p class="alert alert-info"><strong>Tip:</strong> when approaching looping problems, think about how a value of the loop counter can tell you what to do.  For instance, in problem 1 below, we might consider, "when <code>i</code> is 0, I want to print 1; when <code>i</code> is 1, I want to print 3, when <code>i</code> is 2, I want to print 5, etc.".</p>
-<h2>Looping Fun 1</h2>
+<h2 id="looping-fun-1">Looping Fun 1</h2>
 <p>Try to produce the following output with a <code>for</code> loop. Print the first ten odd numbers, starting from 1.</p>
 <pre><code>Print the first ten odd numbers, starting from 1.
 1
@@ -421,7 +444,7 @@ filePath - the total path to the markdown file being rendered in this template
 </code></pre>
 
 <p>Extension: Now try to print the first ten even numbers, starting from 0.</p>
-<h2>Looping Fun 2</h2>
+<h2 id="looping-fun-2">Looping Fun 2</h2>
 <p>Try to produce the following output with a <code>for</code> loop. Print the first ten even numbers in decreasing order.</p>
 <pre><code>Print the first ten numbers in decreasing order, starting from 20 and ending with 2.
 20
@@ -446,7 +469,7 @@ filePath - the total path to the markdown file being rendered in this template
     # some code...
 </code></pre>
 
-<h2>Looping Fun 3</h2>
+<h2 id="looping-fun-3">Looping Fun 3</h2>
 <p>Use a <code>for</code> loop, but print out everything on a single line. Using <code>print()</code> automatically adds a line break/new line after what is printed.  To tell it not to do this, add <code>end=''</code> right before the closing parentheses.  For instance, <code>print("some text or variables")</code> adds a line break/new line, whereas <code>print("some text or variables", end='')</code> does not.</p>
 <p>Print out the squares, starting from 1.</p>
 <pre><code>Print the first ten square numbers on a single line, starting from 1.
@@ -454,7 +477,7 @@ filePath - the total path to the markdown file being rendered in this template
 </code></pre>
 
 <p>Try avoiding a comma at the end of the last square!</p>
-<h2>Looping Fun 4</h2>
+<h2 id="looping-fun-4">Looping Fun 4</h2>
 <p>Time for nested <code>for</code> loops!  Print out the coordinates of a 5x5 grid.</p>
 <pre><code>Print the coordinates of a 5x5 grid, row by row.
 (0,0), (1,0), (2,0), (3,0), (4,0)
@@ -470,7 +493,7 @@ filePath - the total path to the markdown file being rendered in this template
         # some code...
 </code></pre>
 
-<h2>Additional Practice: <code>while</code> Loops</h2>
+<h2 id="additional-practice-while-loops">Additional Practice: <code>while</code> Loops</h2>
 <p>Want more practice with <code>while</code> loops? Do all the above exercises with a <code>while</code> loop instead of a <code>for</code> loop. Good luck!</p>
 	</div>
 </div>
@@ -530,5 +553,6 @@ filePath - the total path to the markdown file being rendered in this template
 
 </script>
 </div>
+
 	</body>
 </html>

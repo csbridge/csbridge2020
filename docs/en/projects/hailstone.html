@@ -70,6 +70,29 @@
 	        <!--<li ><a href="#">Link</a></li>-->
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+          		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
+	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../en/handouts/animation.html">Animation Reference</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/general-info.html">General Info</a></li>
+              <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
+              <li><a href="../../en/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
+              <li><a href="../../en/resources/section-info.html">Section Info</a></li>
+              <li><a href="../../en/resources/zoom-info.pdf">Zoom Guide</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
+              <li><a href="../../en/resources/karelInPycharm.pdf">Karel in PyCharm</a></li>
+
+              <!-- Not used nor visible -->
+				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/handouts/jar.html">Exporting Projects as JARs</a>-->
+	          	<!--<a class="visible-after" href="../../en/handouts/sections.html">Sections</a>-->
+	          </ul>
+	        </li>
 	          <ul class="dropdown-menu">
 	          	<!--<li><a href="../../en/handouts/sections.html">Sections</a></li>-->
 	          	<li><a href="http://karel.csbridge.org/java/en/intro.html">Karel Reader</a></li>
@@ -424,7 +447,7 @@ Continue this process until n is equal to one.</p>
 
 <p>The fascinating thing about this problem is that no one has yet been able to prove that it always stops. The number of steps in the process can certainly get very large. How many steps, for example, does your program take when n is 27?</p>
 <p class="alert alert-info"><strong>Tip:</strong> when performing division with <code>/</code> in Python, the result will always be represented as a real number, even if the number is an integer.  For hailstone, this means that calculated numbers may print out with a <code>.0</code> at the end.  To avoid this, try converting the divided value to be an <code>int</code>, like this: <code>int(num / 2)</code>.  Then you can print that value out, or store it into a variable, e.g. <code>num = int(num / 2)</code>.</p>
-<h2>Checking Even or Odd</h2>
+<h2 id="checking-even-or-odd">Checking Even or Odd</h2>
 <p>In order to solve the hailstone problem, we are going to need as way to determine if an integer is even or odd. In addition to the regular operators that you know and love (like +, -, *, and /) programming languages provide a remainder operator: %.  </p>
 <pre><code>a % b
 </code></pre>
@@ -492,5 +515,6 @@ Continue this process until n is equal to one.</p>
 
 </script>
 </div>
+
 	</body>
 </html>

@@ -134,7 +134,7 @@ def compileTemplate(relativePath):
 
         # Convert Markdown -> HTML
         fileContents = fileContents.replace("{{pathToRoot}}", pathToRoot)
-        md = markdown.Markdown(extensions=['fenced_code', 'meta', 'attr_list'])
+        md = markdown.Markdown(extensions=['fenced_code', 'meta', 'attr_list', 'toc'])
         html = md.convert(fileContents)
 
         # If the markdown file specifies a template to be rendered within,

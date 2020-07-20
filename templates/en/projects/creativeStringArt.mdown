@@ -1,0 +1,18 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Creative String Art
+credit: Lisa Yan
+
+This is a bonus program!
+
+Write a graphics program that extends the String Art you wrote in String Art. This time, add four curves to the canvas.
+
+<center>
+  <img style="width:400px; border: 1px solid black;" src="{{pathToRoot}}img/projects/creativeStringArt/corners.png">
+</center>
+
+## Extension
+Make your own cool string art!!!
+
+<center>
+  <img style="width:400px; border: 1px solid black" src="{{pathToRoot}}img/projects/creativeStringArt/customfancy.png">
+</center>

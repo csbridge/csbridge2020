@@ -35,7 +35,7 @@ my_list.sort()
 
 Calling sort re-orders the elements in the specified list. For example, calling sort on the following list has the given result:
 
-![Image of list of numbers before and after sorting - afterwards the list is in ascending order](sorting.png){: style="width: 400px"}
+![Image of list of numbers before and after sorting - afterwards the list is in ascending order]({{pathToRoot}}img/projects/sorted/sorting.png){: style="width: 400px"}
 
 ## Hints
 To create a list of numbers use:

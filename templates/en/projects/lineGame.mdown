@@ -1,0 +1,31 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Line Game
+credit: Chris Piech
+
+Write a game where the user can use the mouse to move a ball. A path animates coming down the screen and if the ball hits a barrier the game ends.
+
+<img src="{{pathToRoot}}img/projects/lineGame/screenshot.png" alt="a screenshot of the line game with a white path on a black background and the user's dot showing in blue that they must keep within the white path." class="center" style="width: 400px" />
+
+The general approach we recommend you follow is:
+
++ make the background black,
++ add white rectangles (the path)
++ make sure that all corners of the user's ball are always colliding with something :)
+
+You can either generate all the rectangles before the user starts playing (meaning the path will eventually end), or you can add them just when they need to become visible (meaning the path can continue forever).  In both cases, you should store the rectangles you need to animate in a list, and then every frame move those rectangles down, and then make sure that list is still up to date.
+
+You can also experiment with different variations.  For instance, in the screenshot above, all the path blocks are the same size.  You could experiment with them having random widths (left / first image), or have more than one block added at a time (right / second image), or other variations.  Design up whatever you'd like!
+
+<div class="row">
+	<div class="col-md-12 col-lg-6">
+		<img src="{{pathToRoot}}img/projects/lineGame/refined.png" alt="a screenshot of the line game with a white path on a black background and the user's dot showing in blue that they must keep within the white path.  This implementation has random width blocks." class="center" style="width: 400px" />
+	</div>
+	<div class="col-md-12 col-lg-6">
+		<img src="{{pathToRoot}}img/projects/lineGame/refined-2.png" alt="a screenshot of the line game with a white path on a black background and the user's dot showing in blue that they must keep within the white path.  This implementation may add more than one block at a time." class="center" style="width: 400px" />
+	</div>
+</div>
+
+
+You could also implement an alternative game where the user must dodge randomly created dropping blocks.
+
+<img src="{{pathToRoot}}img/projects/lineGame/alt.png" alt="a screenshot of a game where a user must move the mouse to move a dot to dodge random falling blocks." class="center" style="width: 400px" />

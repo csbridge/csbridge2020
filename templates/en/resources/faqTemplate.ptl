@@ -1,0 +1,27 @@
+<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
+
+metadata - the md.Meta object containing the following attributes:
+	metadata['title'][0] - problem title
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
+
+% rebase('templates/en/template.ptl', title=metadata['title'][0])
+
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		{{metadata['title'][0]}}
+	</h1>
+
+</div>
+<hr/>
+
+<!-- Text description -->
+<div class="row">
+	<div class="col-xs-12">
+		{{!base}}
+	</div>
+</div>

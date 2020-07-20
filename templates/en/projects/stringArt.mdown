@@ -1,0 +1,13 @@
+template: templates/en/projects/projectTemplate.ptl
+title: String Art
+credit: Based on a demonstration by Eric Roberts
+
+Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
+
+By repeatedly drawing lines, we can make a curved looking shape. Consider the example below where we imagine dots evenly space along the bottom and the left of a canvas. If we connect the topmost dot on the left edge to the left most dot on the right edge, we would be a line like the picture of the far left. If we then connect the next 10 dots we get a picture in the middle and if we connect all dots we get the picture on the right.
+
+<center>
+  <img style="width:600px;" src="{{pathToRoot}}img/projects/stringArt/startToEnd.png">
+</center>
+
+Write a program that creates the "curve" in the above right image using straight lines.

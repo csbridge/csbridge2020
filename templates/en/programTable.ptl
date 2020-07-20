@@ -112,13 +112,13 @@
 			</tr>
 
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/theLine.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/linegame/index.html">[old, Optional] The Line</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/lineGame.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/lineGame.html">[old, Optional] The Line</a>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/theLine.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/lineGame.html">TA Solution</a>
 					% end
-          </td>
           <br/><span class="label label-success">Activity</span>
+          </td>
 				<td>ArrayLists</td>
 			</tr>
 
@@ -233,11 +233,10 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/makingTracks.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/makingTracks.html">Making Tracks (Lab)</a>
-        <br/><span class="label label-success">Activity</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/makingTracks.html">TA Solution</a>
 					% end
-          <br/><span class="label label-primary">Section</span>
+        <br/><span class="label label-success">Activity</span>
 				</td>
 				<td>Events</td>
 			</tr>
@@ -252,11 +251,11 @@
       </tr>
       </tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/isascending.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/isascending/index.html">Is Ascending</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/isAscending.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/isAscending.html">Is Ascending</a>
           <br/><span class="label label-default">Try it out</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/isascending.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/isAscending.html">TA Solution</a>
 					% end
 				</td>
 				<td>Lists</td>
@@ -273,10 +272,10 @@
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/catchMeIfYouCan.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/catchmeifyoucan.html">Catch Me If You Can (Section)</a>
+				<td><a href="{{pathToRoot}}en/projects/catchMeIfYouCan.html">Catch Me If You Can (Section)</a>
           <br/><span class="label label-success">Activity</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/catchmeifyoucan.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/catchMeIfYouCan.html">TA Solution</a>
 					% end
 				</td>
 				<td>Mouse and Lists</td>
@@ -305,11 +304,11 @@
       <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day3.zip">here</a>]</h4></center></td>
       </tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/indexcounter.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/indexcounter/index.html">Index counter</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/indexCounter.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/indexCounter.html">Index counter</a>
           <br/><span class="label label-default">Try it out</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/indexcounter.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/indexCounter.html">TA Solution</a>
 					% end
 				</td>
 				<td>For Loops</td>
@@ -334,17 +333,17 @@
       <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day3.zip">here</a>]</h4></center></td>
       </tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/movetocenter.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/movetocenter/index.html">Move to center</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/moveToCenter.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/moveToCenter.html">Move to center</a>
           <br/><span class="label label-default">Try it out</span>
 				</td>
 				<td>Animation</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/bouncing.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/bouncingball.html">Bouncing Ball</a>
+				<td><a href="{{pathToRoot}}en/projects/bouncingBall.html">Bouncing Ball</a>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/bouncingball.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/bouncingBall.html">TA Solution</a>
 					% end
           <br/><span class="label label-primary">Section</span>
 				</td>
@@ -353,10 +352,10 @@
 			<tr 
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sunset.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/shortfilm.html">Short Film</a>
+				<td><a href="{{pathToRoot}}en/projects/shortFilm.html">Short Film</a>
           <br/><span class="label label-success">Activity</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/shortfilm.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/shortFilm.html">TA Solution</a>
 					% end
 				</td>
 				<td>Params and Returns</td>
@@ -385,10 +384,10 @@
       </tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/awesome.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/programmingisawesome/index.html">Programing is Awesome</a>
+				<td><a href="{{pathToRoot}}en/projects/programmingIsAwesome.html">Programing is Awesome</a>
           <br/><span class="label label-default">Try it out</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/awesome.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/programmingIsAwesome.html">TA Solution</a>
 					% end
 				</td>
 				<td>Graphics</td>
@@ -396,7 +395,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mysterySquare.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/mysterySquare.html">Mystery Square</a>
-          <br/><span class="label label-primary">Activity</span>
+          <br/><span class="label label-success">Activity</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/mysterySquare.html">TA Solution</a>
 					% end
@@ -414,7 +413,7 @@
       </tr>
 	    <tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/stringArt.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/stringart/index.html">(old) String Art</a>
+				<td><a href="{{pathToRoot}}en/projects/stringArt.html">(old) String Art</a>
           <br/><span class="label label-success">Activity</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/stringArt.html">TA Solution</a>
@@ -424,21 +423,21 @@
 			</tr>
 
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/dogyears.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/dogyears.html">Dog Years</a>
-          <br/><span class="label label-success">Try it out</span>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/dogYears.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/dogYears.html">Dog Years</a>
+          <br/><span class="label label-default">Try it out</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/dogyears.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/dogYears.html">TA Solution</a>
 					% end
 				</td>
 				<td>Randomness</td>
 			</tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/fizzbuzz.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/fizzbuzz.html">Fizz Buzz</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/fizzBuzz.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/fizzBuzz.html">Fizz Buzz</a>
           <br/><span class="label label-primary">Section</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/fizzbuzz.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/fizzBuzz.html">TA Solution</a>
 					% end
 				</td>
 				<td>Randomness</td>
@@ -455,11 +454,11 @@
 			</tr>
 
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mysterymover.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/mysterymover.html">Mystery mover</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomCircles.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/randomCircles.html">Random Circles</a>
           <br/><span class="label label-success">Activity</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/mysterymover.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/randomCircles.html">TA Solution</a>
 					% end
 				</td>
 				<td>Randomness and animation</td>
@@ -467,10 +466,10 @@
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/madMax.jpg"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/madmethods.html">(old) Mad Methods</a>
+				<td><a href="{{pathToRoot}}en/projects/madMethods.html">(old) Mad Methods</a>
           <br/><span class="label label-success">Activity</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/madmethods/index.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/madMethods.html">TA Solution</a>
 					% end
 				</td>
 				<td>Params and Returns</td>
@@ -501,10 +500,10 @@
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/someSum.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/somesum.html">(old) That's Some Sum</a>
+				<td><a href="{{pathToRoot}}en/projects/someSum.html">(old) That's Some Sum</a>
           <br/><span class="label label-default">Try it out</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/somesum.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/someSum.html">TA Solution</a>
 					% end
 				</td>
 				<td>Variables</td>
@@ -555,11 +554,11 @@
 				<td>Variables</td>
 			</tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/subtractnum.jpg"></img></td>
-        <td><a href="{{pathToRoot}}en/projects/subtractnum/index.html">Subtract Numbers</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/subtractNum.jpg"></img></td>
+        <td><a href="{{pathToRoot}}en/projects/subtractNum.html">Subtract Numbers</a>
           <br/><span class="label label-success">Activity</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/sandcastles.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/subtractNum.html">TA Solution</a>
 					% end
 				</td>
 				<td>Variables</td>
@@ -585,22 +584,22 @@
 				<td>Concatenation</td>
 			</tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/runningsum.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/runningsum.html">Run, Sum, Run</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/runningSum.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/runningSum.html">Run, Sum, Run</a>
           <br/><span class="label label-primary">Section</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/runningsum.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/runningSum.html">TA Solution</a>
 					% end
 				</td>
 				<td>Concatenation</td>
 			</tr>
 
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/viralvideo.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/viralvideo.html">Viral Video</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/viralVideo.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/viralVideo.html">Viral Video</a>
           <br/><span class="label label-primary">Section</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/viralvideo.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/viralVideo.html">TA Solution</a>
 					% end
 				</td>
 				<td>Concatenation</td>
@@ -608,10 +607,10 @@
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/khansole.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/khansole/index.html">Khansole Academy</a>
+				<td><a href="{{pathToRoot}}en/projects/khansole.html">Khansole Academy</a>
           <br/><span class="label label-success">Activity</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/khansole/index.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/khansole.html">TA Solution</a>
 					% end
 				</td>
 				<td>Concatenation</td>
@@ -620,19 +619,19 @@
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/guess.jpg"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/favoritenumber/index.html">(lecture) Favorite Number</a>
+				<td><a href="{{pathToRoot}}en/projects/favoriteNumber.html">(lecture) Favorite Number</a>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/favoritenumber/index.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/favoriteNumber.html">TA Solution</a>
 					% end
 				</td>
 				<td>Variables</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/medicine.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/medicine/index.html">(old) Medicine Counterfeiting</a>
+				<td><a href="{{pathToRoot}}en/projects/medicine.html">(old) Medicine Counterfeiting</a>
           <br/><span class="label label-success">Activity</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/medicine/index.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/medicine.html">TA Solution</a>
 					% end
 				</td>
 				<td>Concatenation</td>
@@ -664,11 +663,11 @@
       </tr>
 
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/fillrow.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/fillrow.html">Fill Row</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/fillRow.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/fillRow.html">Fill Row</a>
           <br/><span class="label label-default">Try it out</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/fillrow.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/fillRow.html">TA Solution</a>
 					% end
 				</td>
 				<td>While Loops</td>
@@ -695,21 +694,21 @@
       </tr>
 
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/placesquare.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/placesquare.html">Place Square</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/placeSquare.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/placeSquare.html">Place Square</a>
           <br/><span class="label label-default">Try it out</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/placesquare.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/placeSquare.html">TA Solution</a>
 					% end
 				</td>
 				<td>Nested loops</td>
 			</tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/hospitalkarel.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/hospitalkarel.html">Hospital Karel</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/hospitalKarel.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/hospitalKarel.html">Hospital Karel</a>
           <br/><span class="label label-primary">Section</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/hospitalkarel.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/hospitalKarel.html">TA Solution</a>
 					% end
 				</td>
 				<td>Nested loops</td>
@@ -743,7 +742,7 @@
       </tr>
 			<tr>
         <td><img class="projectImg" src="{{pathToRoot}}img/icons/newspaper.jpg"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/collectnewspaper.html">Collect Newspaper</a>
+				<td><a href="{{pathToRoot}}en/projects/collectNewspaper.html">Collect Newspaper</a>
           <br/><span class="label label-default">Try it out</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/collectNewspaper.html">TA Solution</a>

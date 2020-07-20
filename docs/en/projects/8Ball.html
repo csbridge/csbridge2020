@@ -70,6 +70,29 @@
 	        <!--<li ><a href="#">Link</a></li>-->
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+          		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
+	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../en/handouts/animation.html">Animation Reference</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/general-info.html">General Info</a></li>
+              <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
+              <li><a href="../../en/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
+              <li><a href="../../en/resources/section-info.html">Section Info</a></li>
+              <li><a href="../../en/resources/zoom-info.pdf">Zoom Guide</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
+              <li><a href="../../en/resources/karelInPycharm.pdf">Karel in PyCharm</a></li>
+
+              <!-- Not used nor visible -->
+				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/handouts/jar.html">Exporting Projects as JARs</a>-->
+	          	<!--<a class="visible-after" href="../../en/handouts/sections.html">Sections</a>-->
+	          </ul>
+	        </li>
 	          <ul class="dropdown-menu">
 	          	<!--<li><a href="../../en/handouts/sections.html">Sections</a></li>-->
 	          	<li><a href="http://karel.csbridge.org/java/en/intro.html">Karel Reader</a></li>
@@ -394,7 +417,7 @@ filePath - the total path to the markdown file being rendered in this template
 <center>
       <img style="width:700px" src="../../img/projects/8Ball/sampleRun.png">  <br />
 </center></p>
-<h2>Infinite loop</h2>
+<h2 id="infinite-loop">Infinite loop</h2>
 <p>We've implemented part of this program for you---specifically, the <strong>infinite loop</strong> part which continuously asks for user input). We've left you the job of getting the program to answer with the 5 canned answers above.</p>
 <p>Take a look at what we've implemented below. If you run this code as-is, <strong>what does this program do?</strong> Try it out in PyCharm by running the file <code>8ball.py</code>!
 Remember that you can run your program in Pycharm's Terminal by typing <code>python3 8ball.py</code> (if you are on Mac)
@@ -410,11 +433,11 @@ or <code>py 8ball.py</code> (if you are on PC).</p>
         # END YOUR CODE
 </code></pre>
 
-<h2>Quitting an infinite loop</h2>
+<h2 id="quitting-an-infinite-loop">Quitting an infinite loop</h2>
 <p>This program runs forever!
 To exit a program that runs forever, hit <code>Ctrl-C</code> on your keyboard while in the Terminal. You should then be able
 to run your program via the <code>python3 runningsum.py</code> or <code>py runningsum.py</code> again.</p>
-<h2>Choices and random numbers</h2>
+<h2 id="choices-and-random-numbers">Choices and random numbers</h2>
 <p>One way to choose randomly between 5 answers is to associate each answer with a number and make use of Python's ability to randomly pick numbers.
 Then, depending on which number is picked, you can use <strong>conditional statements</strong> (<code>if</code>, <code>else</code>) to print out the selected answer.</p>
 <p>To generate a random integer, you can do the following:</p>
@@ -426,7 +449,7 @@ Then, depending on which number is picked, you can use <strong>conditional state
 </code></pre>
 
 <p>will store a random number between 10 and 20, inclusive, in the variable <code>num</code>.</p>
-<h2>Bonus: extension</h2>
+<h2 id="bonus-extension">Bonus: extension</h2>
 <p>Your current program runs forever. How would you change the while loop conditional (currently <code>True</code>) to exit when the user types nothing (just presses Enter)?</p>
 <p>Hint: Here's a program that outputs "nothing entered" when the user types in nothing (just presses Enter). Otherwise the program prints the user input. How can you use a similar idea and apply it to the while loop?</p>
 <pre><code>statement = input(&quot;Type in something: &quot;)
@@ -493,5 +516,6 @@ else:
 
 </script>
 </div>
+
 	</body>
 </html>

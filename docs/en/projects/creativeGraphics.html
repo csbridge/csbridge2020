@@ -70,6 +70,29 @@
 	        <!--<li ><a href="#">Link</a></li>-->
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+          		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
+	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../en/handouts/animation.html">Animation Reference</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/general-info.html">General Info</a></li>
+              <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
+              <li><a href="../../en/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
+              <li><a href="../../en/resources/section-info.html">Section Info</a></li>
+              <li><a href="../../en/resources/zoom-info.pdf">Zoom Guide</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
+              <li><a href="../../en/resources/karelInPycharm.pdf">Karel in PyCharm</a></li>
+
+              <!-- Not used nor visible -->
+				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/handouts/jar.html">Exporting Projects as JARs</a>-->
+	          	<!--<a class="visible-after" href="../../en/handouts/sections.html">Sections</a>-->
+	          </ul>
+	        </li>
 	          <ul class="dropdown-menu">
 	          	<!--<li><a href="../../en/handouts/sections.html">Sections</a></li>-->
 	          	<li><a href="http://karel.csbridge.org/java/en/intro.html">Karel Reader</a></li>
@@ -349,47 +372,48 @@
 
 <div class="container">
 	
-	
-	<!-- Main Content -->
-	<div class="container">
+	<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
 
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-			Creative Graphics
-			</h1>
-			<p>
-            Written by Lisa Yan
-			</p>
-			<p>
-				Handouts:
-				<a href ="../../en/handouts/graphics.html">Graphics Reference</a>
-				<br/>
-        Day3: <code>CreativeGraphics.java</code> or BonusGraphics: <code>CreativeGraphics.java</code>
-			</p>
+metadata - the md.Meta object containing the following attributes:
+	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
 
-		</div>
-		<hr/>
 
-		<div class="row">
-			<div class="col-md-12">
-				<p>
-                This is a bonus program!
-                </p>
-                <p>
-                Write a GraphicsProgram that does anything you want!!! Here is an example of something you can make.
-				</p>
-				<p>
-					<center>
-						<img style="width:400px;border:2px solid grey" src="../../img/projects/creativeGraphics/example.gif">	
-					</center>
-				</p>
-            <p>Here is a Karel to help you out.</p>
-			<center>
-						<img style="width:80px" src="../../img/projects/creativeGraphics/karel.png">	
-            </center>
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		Creative Graphics
+	</h1>
 
-		</div>
+		<p>
+			Credit: Lisa Yan
+		</p>
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>This is a bonus program!</p>
+<p>Write a graphics program that does anything you want!!! Here is an example of something you can make.</p>
+<p><center>
+  <img style="width:400px; border: 1px solid black;" src="../../img/projects/creativeGraphics/example.gif">
+</center></p>
+<p>Here is a Karel to help you out.</p>
+<p><center>
+  <img src="../../img/projects/creativeGraphics/karel.png">
+</center></p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
+
 			
 	<!-- Footer -->
 <hr>
@@ -443,5 +467,6 @@
 
 </script>
 </div>
+
 	</body>
 </html>

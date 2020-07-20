@@ -1,42 +1,50 @@
 template: templates/en/projects/projectTemplate.ptl
-title: Short Film
-credit: Written by Chris Piech and Keith Schwarz.
+title: Bouncing Ball
+credit: Based on an example by Mehran Sahami
 
-Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
-Worked Examples: [Mystery Square]({{pathToRoot}}en/projects/mysterysquare.html),
-[Gravity Ball]({{pathToRoot}}en/projects/gravityball.html),
-[Move to Center]({{pathToRoot}}en/projects/gocenter.html)<br/>
-File: `bouncing_ball.py`
+File: `bouncingball.py`
 
-Write a graphics program that creates a ball (an oval) and makes it bounce around the screen. Ignore gravity and have a collision with the right or left wall reflect the x direction of the ball, and have a collision with the top or bottom wall change the y direction of the ball.
+Write a graphics program that creates a ball and makes it bounce around the screen. Ignore gravity and have a collision with the right or left wall reflect the x direction of the ball, and have a collision with the top or bottom wall change the y direction of the ball.
 
 The figure below shows a ball moving through a bounce with the bottom wall.
 
 <center>
-	<img style="width:500px" src="{{pathToRoot}}img/projects/bouncingBall/demo.png">	
+  <img style="width:600px;" src="{{pathToRoot}}img/projects/bouncingBall/demo.png">
 </center>
 
 ## Milestone 1: Create a Ball
 It can be any size.
 
 ## Milestone 2: Make it move
+Loop forever and in the loop update the ball and pause.  You can pause by adding `import time` to the top of your program and doing the following:
 
-Loop forever and in the loop update the ball and pause. You can pause using the command `time.sleep(seconds)`. `seconds` can be a decimal (for example, `time.sleep(0.1)` will sleep 100 milliseconds.
+```
+time.sleep(seconds)
+```
 
-There are two methods to move an oval (or a rectangle, or anything on the canvas):
+If you don't pause, the computer will animate faster than the human eye can see the movement!
 
-* `canvas.move(object, x, y)` moves the object to the `(x, y)` coordinate.
-* `canvas.moveto(object, dx, dy)` moves the object by `dx` pixels in the x direction and `dy` pixels in the y direction.
+There is also a method to move a graphical shape on the canvas:
 
-Make sure to check out the demos linked at the top of the page!
+```
+canvas.move(object, dx, dy)
+```
 
-## Milestone 3:
+_dx_ is the number of pixels the object will move in the x direction.<BR>
+_dy_ is the number of pixels the object will move in the y direction.
+
+## Milestone 3: Bounce
+
 Now, before you update the position of the ball, you should check if the ball has collided with the wall and if so you should update the direction it is moving.
 
-Reflections should follow the rule the angle of incidence equals the angle of reflection. This turns out to be simple to implement. You simply flip the x direction if you hit a left or right wall and flip the y direction if you hit a bottom or top wall.
+Reflections should follow the rule "the angle of incidence equals the angle of reflection". This turns out to be simple to implement. You simply flip the x direction if you hit a left or right wall and flip the y direction if you hit a bottom or top wall.ß
 
-How do you figure out the position of the ball? You can use the following methods:
-* `canvas.get_left_x(object)` returns x-location of leftmost pixel of the object
-* `canvas.get_top_y(object)` returns y-location topmost pixel of the object
+How do you figure out the position of the ball? You can use the methods:
 
-Check out the Graphics Reference for more information!
+```
+canvas.get_left_x(obj)
+canvas.get_top_y(obj)
+```
+
+A python function that may come in handy is `abs(val)` - it returns the absolute value of a number.
+

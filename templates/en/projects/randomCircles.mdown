@@ -1,0 +1,27 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Random Circles
+credit: Based on a handout by Eric Roberts
+
+Write a graphics program that draws a set of ten circles with different sizes, positions, and colors. Each circle should have a randomly chosen color, a randomly chosen radius between 70 and 200 pixels, and a randomly chosen position on the canvas, subject to the condition that the entire circle must fit inside the canvas without extending past the edge. The following sample run shows one possible outcome:
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/randomCircles/demo1.png">
+</center>
+
+On some runs of this program you might not see ten circles. Why?
+
+To generate random numbers, `import random` at the top of your program.  You can then use it to generate random numbers like this:
+
+```
+# generates a random int in the range (min, max) 
+random.randint(min, max)
+```
+
+You can generate random colors using the canvas:
+
+```
+# generates a random color name
+canvas.get_random_color()
+```
+
+If you finish early, consider making random doughnuts.
