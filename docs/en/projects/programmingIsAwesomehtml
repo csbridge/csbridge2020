@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | CS Bridge FAQs</title>
+<title>CS Bridge  | Programming is Awesome</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -378,6 +378,8 @@ the following properties passed in:
 
 metadata - the md.Meta object containing the following attributes:
 	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
@@ -386,44 +388,49 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		CS Bridge FAQs
+		Programming is Awesome
 	</h1>
 
+		<p>
+			Credit: Chris Piech and Eric Roberts
+		</p>
 </div>
 <hr/>
 
-<!-- Text description -->
+<!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p><em>Do you have a question about Code in Place? It might be answered here.</em></p>
-<!-- Table of Contents -->
+		<p>Handouts: <a href="../../en/handouts/graphics.html">Graphics Reference</a><br/></p>
+<p>The point of this program is to get you to create your first graphics program. You should draw three rectangles (one red, one blue and one yellow) and in the center of the screen write "Programming is Awesome." You can make your rectangles of any size and put them in any position--as long as they are visible. Here is what our program looked like.</p>
+<p><center>
+  <img style="width:500px;border: 1px solid #000000" src="../../img/projects/programmingIsAwesome/demo.png">
+</center></p>
+<h2 id="milestone-1-draw-rectangles">Milestone 1: Draw Rectangles</h2>
+<p>Very simple geometric art sometimes sells for huge amounts of money. For example, this painting, Composition II by Piet Mondrian, sold for $40 million:</p>
+<p><center>
+  <img style="width:500px;border: 1px solid #000000" src="../../img/projects/programmingIsAwesome//mondrian.jpg">
+</center></p>
+<p>Your first task is to add three rectangles, one red, one blue, one yellow. You don't have to create the image above. You can put your rectangles anywhere on the screen that you want. If you sell your picture for millions of dollars... remember your teachers :). If you feel like adding more rectangles, thats cool. Just make sure to finish milestone #2 first.</p>
+<h2 id="milestone-2-centered-text">Milestone 2: Centered Text</h2>
+<p>Create and add some text in the center of the screen. You can get the width and height of the screen with the following commands using your <code>canvas</code> variable:</p>
+<pre><code>canvas.get_canvas_width()
+canvas.get_canvas_height()
+</code></pre>
 
-<div class="toc">
-<ul>
-<li><a href="#general">General</a></li>
-<li><a href="#student-faq-test">Student FAQ test</a><ul>
-<li><a href="#is-this-course-graded">Is this course graded?</a></li>
-<li><a href="#will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</a></li>
-<li><a href="#how-can-i-make-the-most-of-this-course">How can I make the most of this course?</a></li>
-<li><a href="#i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<h2 id="general">General</h2>
-<h1 id="student-faq-test">Student FAQ test</h1>
-<h3 id="is-this-course-graded">Is this course graded?</h3>
-<p>No, this is purely for the joy of learning!</p>
-<h3 id="will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</h3>
-<p>We don’t promise a certificate of completion. This class is purely for the joy of learning! We are talking to folks to see what is possible and it seems very reasonable that we could help you share that you participated in this experience :-)</p>
-<h3 id="how-can-i-make-the-most-of-this-course">How can I make the most of this course?</h3>
-<p>Have fun with it. Do the readings. Come to section. Download PyCharm and do the assignments. Learn from your community on Ed.</p>
-<h3 id="i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</h3>
-<p>Wonderful. Please fill out <a href='https://docs.google.com/forms/d/e/1FAIpQLSdINcYsz1JN8eekMJntExxNyz7m5fa6JKztT_pkeYqfUMIRwg/viewform'>this form</a>. We want to improve this course and love suggestions! We might not be able to make all suggestions happen this term, but you could still be helping future students.</p>
-<p><br/>
-<em>Have a question which wasn't covered here? Please post on <a href="https://us.edstem.org/courses/490">Ed</a>.</em></p>
+<p>You can create some text on the screen using <code>create_text</code>:</p>
+<pre><code>label = canvas.create_text(x, y, text)
+</code></pre>
+
+<p>The x and y coordinates you provide will be set to be the <em>center</em> of the drawn text.</p>
+<p>If you want your text to look more snazzy, you can change its font using your <code>canvas</code> variable:</p>
+<pre><code>canvas.set_font(label, &quot;Courier&quot; 50)
+</code></pre>
+
+<p>That's all! If you finish early, feel free to add to your picture. If you like ovals... you can add ovals too.</p>
 	</div>
 </div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

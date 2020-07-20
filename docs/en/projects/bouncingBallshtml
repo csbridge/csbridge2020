@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | CS Bridge FAQs</title>
+<title>CS Bridge  | Bouncing Balls</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -378,6 +378,8 @@ the following properties passed in:
 
 metadata - the md.Meta object containing the following attributes:
 	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
@@ -386,44 +388,50 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		CS Bridge FAQs
+		Bouncing Balls
 	</h1>
 
+		<p>
+			Credit: Tyler Conklin
+		</p>
 </div>
 <hr/>
 
-<!-- Text description -->
+<!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p><em>Do you have a question about Code in Place? It might be answered here.</em></p>
-<!-- Table of Contents -->
+		<p>This is a bonus program! It's meant to be challenging.</p>
+<p>Write a program that animates two different balls bouncing around the canvas. If a ball hits off of a wall, it should bounce back in the opposite direction. The two balls can also bounce off of each other. An example is shown in the below gif.</p>
+<p><center>
+  <img style="width:500px;border:1px solid #000000" src="../../img/projects/bouncingBalls/multipleBalls.gif">
+</center></p>
+<p>In this run, the width of each ball is 50 pixels, but feel free to use whichever numbers you would like. Note that when creating the balls it is important to give the balls different, random velocities and starting X,Y positions.</p>
+<p>When computer scientists tackle a large problem, it helps to break it down into smaller steps. One way to break this problem down would be:</p>
+<ol>
+<li>To start, add two balls to the screen with different, random positions.</li>
+<li>Get the balls to move with random velocities.</li>
+<li>Get the balls to start bouncing off the walls correctly. Remember that you can get the X position of a graphical object by calling <code>canvas.get_left_x(ball)</code> (same thing goes for the Y position).</li>
+<li>Have the balls bounce off of each other. How can we do this?  We can use <code>canvas.find_overlapping(obj)</code> which returns a list of the objects (if any) that are colliding with <code>obj</code>.  You can check what it is using <code>==</code> and <code>!=</code>, for instance:</li>
+</ol>
+<pre><code># Get the coordinates of the ball
+ball_coords = canvas.coords(ball)
 
-<div class="toc">
-<ul>
-<li><a href="#general">General</a></li>
-<li><a href="#student-faq-test">Student FAQ test</a><ul>
-<li><a href="#is-this-course-graded">Is this course graded?</a></li>
-<li><a href="#will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</a></li>
-<li><a href="#how-can-i-make-the-most-of-this-course">How can I make the most of this course?</a></li>
-<li><a href="#i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<h2 id="general">General</h2>
-<h1 id="student-faq-test">Student FAQ test</h1>
-<h3 id="is-this-course-graded">Is this course graded?</h3>
-<p>No, this is purely for the joy of learning!</p>
-<h3 id="will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</h3>
-<p>We don’t promise a certificate of completion. This class is purely for the joy of learning! We are talking to folks to see what is possible and it seems very reasonable that we could help you share that you participated in this experience :-)</p>
-<h3 id="how-can-i-make-the-most-of-this-course">How can I make the most of this course?</h3>
-<p>Have fun with it. Do the readings. Come to section. Download PyCharm and do the assignments. Learn from your community on Ed.</p>
-<h3 id="i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</h3>
-<p>Wonderful. Please fill out <a href='https://docs.google.com/forms/d/e/1FAIpQLSdINcYsz1JN8eekMJntExxNyz7m5fa6JKztT_pkeYqfUMIRwg/viewform'>this form</a>. We want to improve this course and love suggestions! We might not be able to make all suggestions happen this term, but you could still be helping future students.</p>
-<p><br/>
-<em>Have a question which wasn't covered here? Please post on <a href="https://us.edstem.org/courses/490">Ed</a>.</em></p>
+# Find all objects overlapping with these coordinates
+colliders = canvas.find_overlapping(ball_coords[0], ball_coords[1],
+    ball_coords[2], ball_coords[3])
+
+# Loop over each element in the colliders list and see if it is something 
+# other than this ball itself (an object always &quot;overlaps with itself&quot;)
+for collider in colliders:
+    if collider != ball:
+        ...
+</code></pre>
+
+<p>Bonus: try using lists to animate any number of balls around the screen!  Try also to play with what happens when the balls collide with each other to make the bounce physics more natural.</p>
 	</div>
 </div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

@@ -101,7 +101,7 @@ or .mdown)
 '''
 def isTemplateFile(fileName):
     extension = os.path.splitext(fileName)[1]
-    return extension == '.html' or extension == '.mdown'
+    return extension == '.html' or extension == '.mdown' or extension == '.md'
 
 '''
 FUNCTION: compileTemplate
@@ -131,7 +131,8 @@ def compileTemplate(relativePath):
         # Just render the HTML template
         compiledHtml = SimpleTemplate(fileContents).render(pathToRoot=pathToRoot)
         compiledHtml = compiledHtml.encode('utf8')
-    elif relativePath.endswith('mdown'):
+    elif relativePath.endswith('mdown') or relativePath.endswith('md'):
+        suffix = relativePath.split('.')[-1]
         # Markdown
 
         # Convert Markdown -> HTML
@@ -150,7 +151,8 @@ def compileTemplate(relativePath):
 
         # Encode the HTML and make its rendered path .html instead of .mdown
         compiledHtml = compiledHtml.encode('utf8')
-        relativePath = relativePath[:len(relativePath) - len("mdown")] + "html"
+        relativePath = relativePath[:len(relativePath) - len(suffix)] + "html"
+        print(relativePath)
 
     # Save HTML to file
     relativePath = os.path.join(OUTPUT_DIR, relativePath)

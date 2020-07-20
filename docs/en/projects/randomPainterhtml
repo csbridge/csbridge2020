@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | CS Bridge FAQs</title>
+<title>CS Bridge  | Random Painter</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -378,6 +378,8 @@ the following properties passed in:
 
 metadata - the md.Meta object containing the following attributes:
 	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
@@ -386,44 +388,61 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		CS Bridge FAQs
+		Random Painter
 	</h1>
 
+		<p>
+			Credit: Chris Piech
+		</p>
 </div>
 <hr/>
 
-<!-- Text description -->
+<!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p><em>Do you have a question about Code in Place? It might be answered here.</em></p>
-<!-- Table of Contents -->
+		<p>Handouts: <a href="../../en/handouts/karel.html">KarelReference</a><br/>
+Worked Examples: <a href="../../en/projects/invert.html">Invert</a>, <a href="../../en/projects/unkarel/index.html">UN Karel</a><br/>
+Day1: <code>random_painter.py</code></p>
+<h2 id="problem">Problem</h2>
+<p>Karel is starting to find her world too black and white. Help her fill it with color.
+<p>
+<center>
+    <img style="width:100%"  src="../../img/projects/randomPainter/long.png"> <br />
+</center>
+</p></p>
+<h2 id="paint-and-random">Paint and Random</h2>
+<p>Karel has a few commands up her sleeve. She can paint the corner on which she is standing using the instruction</p>
+<pre><code>paint_corner(color)
+</code></pre>
 
-<div class="toc">
-<ul>
-<li><a href="#general">General</a></li>
-<li><a href="#student-faq-test">Student FAQ test</a><ul>
-<li><a href="#is-this-course-graded">Is this course graded?</a></li>
-<li><a href="#will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</a></li>
-<li><a href="#how-can-i-make-the-most-of-this-course">How can I make the most of this course?</a></li>
-<li><a href="#i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<h2 id="general">General</h2>
-<h1 id="student-faq-test">Student FAQ test</h1>
-<h3 id="is-this-course-graded">Is this course graded?</h3>
-<p>No, this is purely for the joy of learning!</p>
-<h3 id="will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</h3>
-<p>We don’t promise a certificate of completion. This class is purely for the joy of learning! We are talking to folks to see what is possible and it seems very reasonable that we could help you share that you participated in this experience :-)</p>
-<h3 id="how-can-i-make-the-most-of-this-course">How can I make the most of this course?</h3>
-<p>Have fun with it. Do the readings. Come to section. Download PyCharm and do the assignments. Learn from your community on Ed.</p>
-<h3 id="i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</h3>
-<p>Wonderful. Please fill out <a href='https://docs.google.com/forms/d/e/1FAIpQLSdINcYsz1JN8eekMJntExxNyz7m5fa6JKztT_pkeYqfUMIRwg/viewform'>this form</a>. We want to improve this course and love suggestions! We might not be able to make all suggestions happen this term, but you could still be helping future students.</p>
-<p><br/>
-<em>Have a question which wasn't covered here? Please post on <a href="https://us.edstem.org/courses/490">Ed</a>.</em></p>
+<p>The value enclosed in the parentheses is called an argument in the terminology of programming languages, and it may be any one of 
+<code><span style="color:red;">"red"</span></code>, 
+<code><span style="color:orange;">"orange"</span></code>, 
+<code><span style="color:green;">"green"</span></code>, 
+<code><span style="color:cyan;">"cyan"</span></code>, 
+<code><span style="color:blue;">"blue"</span></code>, 
+<code><span style="color:magenta;">"magenta"</span></code>,
+and so on. So you can call <code>paint_corner("red")</code> to paint the square that Karel is standing on into a red square.</p>
+<p>Karel also defines a new condition random, which is true half the time, but in an unpredictable way. Like flipping a coin, sometimes it is true and sometimes it is false. For example the code </p>
+<pre><code>if random.random()
+    put_beeper()
+</code></pre>
+
+<p>will place a beeper (or will not) with equal probability.</p>
+<h2 id="painter">Painter</h2>
+<p>Use these new abilities to have karel randomly paint each corner of a world one of two colors. You can chose any two colors you would like; we chose green and blue.</p>
+<p>Below are three executions of the same program that randomly paints any sized world green and blue executed on a 10x10 world. Note that because of the random condition, the pattern of green and blue is different on each run!</p>
+<p>
+    <center>
+        <img style="width:100%"  src="../../img/projects/randomPainter/randoms.png">    
+    </center>
+</p>
+
+<p>As always, remember to decompose your solution! Your program should work on a world of any size.</p>
 	</div>
 </div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

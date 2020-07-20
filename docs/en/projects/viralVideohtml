@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | CS Bridge FAQs</title>
+<title>CS Bridge  | Viral Video</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -378,6 +378,8 @@ the following properties passed in:
 
 metadata - the md.Meta object containing the following attributes:
 	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
@@ -386,44 +388,44 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		CS Bridge FAQs
+		Viral Video
 	</h1>
 
+		<p>
+			Credit: Lisa Yan
+		</p>
 </div>
 <hr/>
 
-<!-- Text description -->
+<!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p><em>Do you have a question about Code in Place? It might be answered here.</em></p>
-<!-- Table of Contents -->
-
-<div class="toc">
+		<p>File: <code>viral_video.py</code></p>
+<p>You are looking to get TikTok viral on Planet Earth! Write a program that takes two things as input: (1) a target view count, and (2) a growth rate. Your program will then compute the number of days it takes you to reach your target viewer count, like below (user input highlighted in blue):</p>
+<p><center>
+    <img style="width:500px" src="../../img/projects/viralvideo/output.png">
+    <p style="text-align:center"><i>An example with (1) view count as 100 and (2) growth rate as 3.</i></p>
+</center></p>
+<h2 id="growth-rate">Growth Rate</h2>
+<p>Every day, your total view count multiples by the above growth rate. In the above example, your exponential growth rate is 3, meaning:</p>
 <ul>
-<li><a href="#general">General</a></li>
-<li><a href="#student-faq-test">Student FAQ test</a><ul>
-<li><a href="#is-this-course-graded">Is this course graded?</a></li>
-<li><a href="#will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</a></li>
-<li><a href="#how-can-i-make-the-most-of-this-course">How can I make the most of this course?</a></li>
-<li><a href="#i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</a></li>
+<li>On Day 1, you start with 1 view (yourself).</li>
+<li>On Day 2, this grows to 3 views.</li>
+<li>On Day 3, this grows to 9 views.</li>
 </ul>
-</li>
+<p>... and so on.</p>
+<p>Try out your program in <code>viral_video.py</code>!</p>
+<h2 id="exponential-growth-rate">Exponential growth rate</h2>
+<p>This pattern of growth is called an <strong>exponential growth rate</strong> and is a mathematical function used to describe viral video viewcounts, money investments, spread of diseases, and more. Some examples:</p>
+<ul>
+<li>The exponential growth rate of a good savings acocunt is around 1.01 per year.</li>
+<li>The exponential growth rate of the annual flu (i.e., influenza) is about 1.3 per person.</li>
+<li>COVID-19 has an exponential growth rate of between 3.28 to 9 per person.</li>
 </ul>
-</div>
-<h2 id="general">General</h2>
-<h1 id="student-faq-test">Student FAQ test</h1>
-<h3 id="is-this-course-graded">Is this course graded?</h3>
-<p>No, this is purely for the joy of learning!</p>
-<h3 id="will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</h3>
-<p>We don’t promise a certificate of completion. This class is purely for the joy of learning! We are talking to folks to see what is possible and it seems very reasonable that we could help you share that you participated in this experience :-)</p>
-<h3 id="how-can-i-make-the-most-of-this-course">How can I make the most of this course?</h3>
-<p>Have fun with it. Do the readings. Come to section. Download PyCharm and do the assignments. Learn from your community on Ed.</p>
-<h3 id="i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</h3>
-<p>Wonderful. Please fill out <a href='https://docs.google.com/forms/d/e/1FAIpQLSdINcYsz1JN8eekMJntExxNyz7m5fa6JKztT_pkeYqfUMIRwg/viewform'>this form</a>. We want to improve this course and love suggestions! We might not be able to make all suggestions happen this term, but you could still be helping future students.</p>
-<p><br/>
-<em>Have a question which wasn't covered here? Please post on <a href="https://us.edstem.org/courses/490">Ed</a>.</em></p>
 	</div>
 </div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

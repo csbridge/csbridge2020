@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | CS Bridge FAQs</title>
+<title>CS Bridge  | Sorted Numbers</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -378,6 +378,8 @@ the following properties passed in:
 
 metadata - the md.Meta object containing the following attributes:
 	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
@@ -386,44 +388,78 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		CS Bridge FAQs
+		Sorted Numbers
 	</h1>
 
+		<p>
+			Credit: Chris Piech
+		</p>
 </div>
 <hr/>
 
-<!-- Text description -->
+<!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p><em>Do you have a question about Code in Place? It might be answered here.</em></p>
-<!-- Table of Contents -->
+		<p>Ask the user to enter 10 numbers, then print thoses numbers in sorted order.  Here's example output:</p>
+<pre><code>&gt; 9
+&gt; 2
+&gt; 12
+&gt; 34
+&gt; -5
+&gt; 12
+&gt; 0
+&gt; 23
+&gt; 4
+&gt; 1
+-5
+0
+1
+2
+4
+9
+12
+12
+23
+34
+</code></pre>
 
-<div class="toc">
-<ul>
-<li><a href="#general">General</a></li>
-<li><a href="#student-faq-test">Student FAQ test</a><ul>
-<li><a href="#is-this-course-graded">Is this course graded?</a></li>
-<li><a href="#will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</a></li>
-<li><a href="#how-can-i-make-the-most-of-this-course">How can I make the most of this course?</a></li>
-<li><a href="#i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<h2 id="general">General</h2>
-<h1 id="student-faq-test">Student FAQ test</h1>
-<h3 id="is-this-course-graded">Is this course graded?</h3>
-<p>No, this is purely for the joy of learning!</p>
-<h3 id="will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</h3>
-<p>We don’t promise a certificate of completion. This class is purely for the joy of learning! We are talking to folks to see what is possible and it seems very reasonable that we could help you share that you participated in this experience :-)</p>
-<h3 id="how-can-i-make-the-most-of-this-course">How can I make the most of this course?</h3>
-<p>Have fun with it. Do the readings. Come to section. Download PyCharm and do the assignments. Learn from your community on Ed.</p>
-<h3 id="i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</h3>
-<p>Wonderful. Please fill out <a href='https://docs.google.com/forms/d/e/1FAIpQLSdINcYsz1JN8eekMJntExxNyz7m5fa6JKztT_pkeYqfUMIRwg/viewform'>this form</a>. We want to improve this course and love suggestions! We might not be able to make all suggestions happen this term, but you could still be helping future students.</p>
-<p><br/>
-<em>Have a question which wasn't covered here? Please post on <a href="https://us.edstem.org/courses/490">Ed</a>.</em></p>
+<p>Store the numbers that the user entered in a list. You can sort the content of a list using:</p>
+<pre><code>my_list.sort()
+</code></pre>
+
+<p>Calling sort re-orders the elements in the specified list. For example, calling sort on the following list has the given result:</p>
+<p><img alt="Image of list of numbers before and after sorting - afterwards the list is in ascending order" src="../../img/projects/sorted/sorting.png" style="width: 400px" /></p>
+<h2 id="hints">Hints</h2>
+<p>To create a list of numbers use:</p>
+<pre><code>my_list = []
+</code></pre>
+
+<p>Recall that you can read an intenger from the user using:</p>
+<pre><code>number = int(input(prompt))
+</code></pre>
+
+<p>To add an element to a list:</p>
+<pre><code>my_list.append(newValue)
+</code></pre>
+
+<p>To get an element from a list:</p>
+<pre><code>my_list[index]
+</code></pre>
+
+<p>To loop over all elements in a list:</p>
+<pre><code>for i in range(len(my_list)):
+    # do something with my_list[i]
+}
+
+-- OR --
+
+for elem in my_list:
+    # do something with elem
+</code></pre>
 	</div>
 </div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

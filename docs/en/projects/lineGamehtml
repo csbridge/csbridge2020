@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | CS Bridge FAQs</title>
+<title>CS Bridge  | Line Game</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -378,6 +378,8 @@ the following properties passed in:
 
 metadata - the md.Meta object containing the following attributes:
 	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
@@ -386,44 +388,43 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		CS Bridge FAQs
+		Line Game
 	</h1>
 
+		<p>
+			Credit: Chris Piech
+		</p>
 </div>
 <hr/>
 
-<!-- Text description -->
+<!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p><em>Do you have a question about Code in Place? It might be answered here.</em></p>
-<!-- Table of Contents -->
-
-<div class="toc">
+		<p>Write a game where the user can use the mouse to move a ball. A path animates coming down the screen and if the ball hits a barrier the game ends.</p>
+<p><img src="../../img/projects/lineGame/screenshot.png" alt="a screenshot of the line game with a white path on a black background and the user's dot showing in blue that they must keep within the white path." class="center" style="width: 400px" /></p>
+<p>The general approach we recommend you follow is:</p>
 <ul>
-<li><a href="#general">General</a></li>
-<li><a href="#student-faq-test">Student FAQ test</a><ul>
-<li><a href="#is-this-course-graded">Is this course graded?</a></li>
-<li><a href="#will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</a></li>
-<li><a href="#how-can-i-make-the-most-of-this-course">How can I make the most of this course?</a></li>
-<li><a href="#i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</a></li>
+<li>make the background black,</li>
+<li>add white rectangles (the path)</li>
+<li>make sure that all corners of the user's ball are always colliding with something :)</li>
 </ul>
-</li>
-</ul>
+<p>You can either generate all the rectangles before the user starts playing (meaning the path will eventually end), or you can add them just when they need to become visible (meaning the path can continue forever).  In both cases, you should store the rectangles you need to animate in a list, and then every frame move those rectangles down, and then make sure that list is still up to date.</p>
+<p>You can also experiment with different variations.  For instance, in the screenshot above, all the path blocks are the same size.  You could experiment with them having random widths (left / first image), or have more than one block added at a time (right / second image), or other variations.  Design up whatever you'd like!</p>
+<div class="row">
+    <div class="col-md-12 col-lg-6">
+        <img src="../../img/projects/lineGame/refined.png" alt="a screenshot of the line game with a white path on a black background and the user's dot showing in blue that they must keep within the white path.  This implementation has random width blocks." class="center" style="width: 400px" />
+    </div>
+    <div class="col-md-12 col-lg-6">
+        <img src="../../img/projects/lineGame/refined-2.png" alt="a screenshot of the line game with a white path on a black background and the user's dot showing in blue that they must keep within the white path.  This implementation may add more than one block at a time." class="center" style="width: 400px" />
+    </div>
 </div>
-<h2 id="general">General</h2>
-<h1 id="student-faq-test">Student FAQ test</h1>
-<h3 id="is-this-course-graded">Is this course graded?</h3>
-<p>No, this is purely for the joy of learning!</p>
-<h3 id="will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</h3>
-<p>We don’t promise a certificate of completion. This class is purely for the joy of learning! We are talking to folks to see what is possible and it seems very reasonable that we could help you share that you participated in this experience :-)</p>
-<h3 id="how-can-i-make-the-most-of-this-course">How can I make the most of this course?</h3>
-<p>Have fun with it. Do the readings. Come to section. Download PyCharm and do the assignments. Learn from your community on Ed.</p>
-<h3 id="i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</h3>
-<p>Wonderful. Please fill out <a href='https://docs.google.com/forms/d/e/1FAIpQLSdINcYsz1JN8eekMJntExxNyz7m5fa6JKztT_pkeYqfUMIRwg/viewform'>this form</a>. We want to improve this course and love suggestions! We might not be able to make all suggestions happen this term, but you could still be helping future students.</p>
-<p><br/>
-<em>Have a question which wasn't covered here? Please post on <a href="https://us.edstem.org/courses/490">Ed</a>.</em></p>
+
+<p>You could also implement an alternative game where the user must dodge randomly created dropping blocks.</p>
+<p><img src="../../img/projects/lineGame/alt.png" alt="a screenshot of a game where a user must move the mouse to move a dot to dodge random falling blocks." class="center" style="width: 400px" /></p>
 	</div>
 </div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

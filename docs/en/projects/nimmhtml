@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | CS Bridge FAQs</title>
+<title>CS Bridge  | Ancient Game of Nimm</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -378,6 +378,8 @@ the following properties passed in:
 
 metadata - the md.Meta object containing the following attributes:
 	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
@@ -386,44 +388,126 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		CS Bridge FAQs
+		Ancient Game of Nimm
 	</h1>
 
+		<p>
+			Credit: Danielle Kain and Chris Piech
+		</p>
 </div>
 <hr/>
 
-<!-- Text description -->
+<!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p><em>Do you have a question about Code in Place? It might be answered here.</em></p>
-<!-- Table of Contents -->
+		<p>Worked Examples: 
+<a href="../../en/projects/emc2.html">E=MC2</a>,
+<a href="../../en/projects/fibb.html">Fibbonacci</a>
+<br/>
+File: <code>nimm.py</code></p>
+<p>Nimm is an ancient game of strategy that is named after the old German word for "take." It is also called Tiouk Tiouk in West Africa and Tsynshidzi in China. Players alternate taking stones until there are zero left. The game of Nimm goes as follows:</p>
+<ol>
+<li>The game starts with a pile of 20 stones between the players</li>
+<li>The two players alternate turns</li>
+<li>On a given turn, a player may take either 1 or 2 stone from the center pile</li>
+<li>The two players continue until the center pile has run out of stones.</li>
+</ol>
+<p>The last player to take a stone loses. Here is sample output from an example execution:</p>
+<pre><code>There are 20 stones left
+Player 1 would you like to remove 1 or 2 stones? 2
 
-<div class="toc">
+There are 18 stones left
+Player 2 would you like to remove 1 or 2 stones? 2
+
+There are 16 stones left
+Player 1 would you like to remove 1 or 2 stones? 1
+
+There are 15 stones left
+Player 2 would you like to remove 1 or 2 stones? 2
+
+There are 13 stones left
+Player 1 would you like to remove 1 or 2 stones? 2
+
+There are 11 stones left
+Player 2 would you like to remove 1 or 2 stones? 1
+
+There are 10 stones left
+Player 1 would you like to remove 1 or 2 stones? 2
+
+There are 8 stones left
+Player 2 would you like to remove 1 or 2 stones? -1
+Please enter 1 or 2: 2
+
+There are 6 stones left
+Player 1 would you like to remove 1 or 2 stones? 2
+
+There are 4 stones left
+Player 2 would you like to remove 1 or 2 stones? 2
+
+There are 2 stones left
+Player 1 would you like to remove 1 or 2 stones? 1
+
+There are 1 stones left
+Player 2 would you like to remove 1 or 2 stones? 1
+
+Player 1 wins!
+</code></pre>
+
+<p>Write a program to play Nimm. To make your life easier we have broken the problem down into smaller milestones. You have a lot of time for this program. Take it slowly, piece by piece.</p>
+<h2 id="milestone-1">Milestone 1</h2>
+<p>Start with 20 stones. Repeat the process of removing stones and printing out how many stones are left until there are zero. Don't worry about whose turn it is. Don't worry about making sure only one or two stones are removed. Use the function <code>input(msg)</code> which prints <code>msg</code> and waits for the user to enter something.</p>
+<pre><code>There are 20 stones left
+Would you like to remove 1 or 2 stones? 2
+
+There are 18 stones left
+Would you like to remove 1 or 2 stones? 17
+
+There are 1 stones left
+Would you like to remove 1 or 2 stones? 3
+
+Game over
+</code></pre>
+
+<h2 id="milestone-2">Milestone 2</h2>
+<p>Create an integer variable to keep track of whose turn it is (remember there are two players). Tell the user whose turn it is. Each time someone picks up stones, change the player number.</p>
+<pre><code>There are 20 stones left
+Player 1 would you like to remove 1 or 2 stones? 1
+
+There are 19 stones left
+Player 2 would you like to remove 1 or 2 stones? 1
+
+There are 18 stones left
+Player 1 would you like to remove 1 or 2 stones? 17
+
+There are 1 stones left
+Player 2 would you like to remove 1 or 2 stones? 1
+
+Game over
+</code></pre>
+
+<h2 id="milestone-3">Milestone 3</h2>
+<p>Make sure that each turn only one or two stones are removed. After you read a number of stones to remove from a user (their input), you can use the following pattern to check if it was valid and keep asking until it is valid.</p>
+<pre><code>while input is invalid:
+   input = int(input(&quot;Please enter 1 or 2: &quot;))
+</code></pre>
+
+<h2 id="milestone-4">Milestone 4</h2>
+<p>Announce the winner.</p>
+<h2 id="extensions">Extensions</h2>
+<p>Can you write an AI opponent? You can start with a dummy AI that always plays a random number. Then try to make one that plays intelligently...</p>
+<p>Some other extension ideas:</p>
 <ul>
-<li><a href="#general">General</a></li>
-<li><a href="#student-faq-test">Student FAQ test</a><ul>
-<li><a href="#is-this-course-graded">Is this course graded?</a></li>
-<li><a href="#will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</a></li>
-<li><a href="#how-can-i-make-the-most-of-this-course">How can I make the most of this course?</a></li>
-<li><a href="#i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</a></li>
+<li>Make sure that if there is only one stone left, the last player may only remove one stone</li>
+<li>Give the user the option for the winner to be the player that doesn’t take the last stone, or the player that does take the last stone.</li>
+<li>Expand the game to let players take 1, 2, or 3, stones per turn.</li>
+<li>Divisible by 3 rule: if the number of stones remaining at the end of a player’s turn is divisible by 3, they must go again.</li>
+<li>Give the user the option to play against the computer and design a process for the computer to choose how many stone to remove.</li>
+<li>Come up with your own extension!</li>
 </ul>
-</li>
-</ul>
-</div>
-<h2 id="general">General</h2>
-<h1 id="student-faq-test">Student FAQ test</h1>
-<h3 id="is-this-course-graded">Is this course graded?</h3>
-<p>No, this is purely for the joy of learning!</p>
-<h3 id="will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</h3>
-<p>We don’t promise a certificate of completion. This class is purely for the joy of learning! We are talking to folks to see what is possible and it seems very reasonable that we could help you share that you participated in this experience :-)</p>
-<h3 id="how-can-i-make-the-most-of-this-course">How can I make the most of this course?</h3>
-<p>Have fun with it. Do the readings. Come to section. Download PyCharm and do the assignments. Learn from your community on Ed.</p>
-<h3 id="i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</h3>
-<p>Wonderful. Please fill out <a href='https://docs.google.com/forms/d/e/1FAIpQLSdINcYsz1JN8eekMJntExxNyz7m5fa6JKztT_pkeYqfUMIRwg/viewform'>this form</a>. We want to improve this course and love suggestions! We might not be able to make all suggestions happen this term, but you could still be helping future students.</p>
-<p><br/>
-<em>Have a question which wasn't covered here? Please post on <a href="https://us.edstem.org/courses/490">Ed</a>.</em></p>
 	</div>
 </div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

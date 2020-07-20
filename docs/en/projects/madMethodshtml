@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | CS Bridge FAQs</title>
+<title>CS Bridge  | Mad Methods</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -378,6 +378,8 @@ the following properties passed in:
 
 metadata - the md.Meta object containing the following attributes:
 	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
@@ -386,44 +388,65 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		CS Bridge FAQs
+		Mad Methods
 	</h1>
 
+		<p>
+			Credit: Written by Chris, Bryce, and Lisa
+		</p>
 </div>
 <hr/>
 
-<!-- Text description -->
+<!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p><em>Do you have a question about Code in Place? It might be answered here.</em></p>
-<!-- Table of Contents -->
+		<h2 id="1-mad-max">1. Mad Max</h2>
+<p>Example: <a href="../../en/projects/averageMethod.html}}">Average Method</a> <br/>
+File: <code>mad_max.py</code></p>
+<p>Complete the program by filling in the <code>mad_max</code> method that returns the largest of three numbers:</p>
+<pre><code>def mad_max(x, y, z):
+    # your code here
+</code></pre>
 
-<div class="toc">
-<ul>
-<li><a href="#general">General</a></li>
-<li><a href="#student-faq-test">Student FAQ test</a><ul>
-<li><a href="#is-this-course-graded">Is this course graded?</a></li>
-<li><a href="#will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</a></li>
-<li><a href="#how-can-i-make-the-most-of-this-course">How can I make the most of this course?</a></li>
-<li><a href="#i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<h2 id="general">General</h2>
-<h1 id="student-faq-test">Student FAQ test</h1>
-<h3 id="is-this-course-graded">Is this course graded?</h3>
-<p>No, this is purely for the joy of learning!</p>
-<h3 id="will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</h3>
-<p>We don’t promise a certificate of completion. This class is purely for the joy of learning! We are talking to folks to see what is possible and it seems very reasonable that we could help you share that you participated in this experience :-)</p>
-<h3 id="how-can-i-make-the-most-of-this-course">How can I make the most of this course?</h3>
-<p>Have fun with it. Do the readings. Come to section. Download PyCharm and do the assignments. Learn from your community on Ed.</p>
-<h3 id="i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</h3>
-<p>Wonderful. Please fill out <a href='https://docs.google.com/forms/d/e/1FAIpQLSdINcYsz1JN8eekMJntExxNyz7m5fa6JKztT_pkeYqfUMIRwg/viewform'>this form</a>. We want to improve this course and love suggestions! We might not be able to make all suggestions happen this term, but you could still be helping future students.</p>
-<p><br/>
-<em>Have a question which wasn't covered here? Please post on <a href="https://us.edstem.org/courses/490">Ed</a>.</em></p>
+<p>The <code>main</code> method has already been written for you:</p>
+<pre><code>def main():
+    print(&quot;The max of 4, 5, and 6 is:&quot;, mad_max(4, 5, 6))
+    print(&quot;The max of -4, 4, and 0 is:&quot;, mad_max(-4, 4, 0))
+    print(&quot;The max of 3, 2, and 1 is:&quot;, mad_max(3, 2, 1))
+    print(&quot;The max of 0, 0, and 0 is:&quot;, mad_max(0, 0, 0))
+</code></pre>
+
+<p>Your output should look like this:</p>
+<pre><code>The max of 4, 5, and 6 is: 6
+The max of -4, 4, and 0 is: 4
+The max of 3, 2, and 1 is: 3
+The max of 0, 0, and 0 is: 0
+</code></pre>
+
+<h2 id="2-draw-trees">2. Draw Trees</h2>
+<p>Handouts: <a href="../../en/handouts/graphics.html">Graphics Reference</a><br/>
+Example: <a href="../../en/projects/drawpeople.html}}">Draw People</a>,
+<a href="../../en/projects/halfgreen.html}}">Half Green</a><br/>
+File: <code>draw_trees.py</code></p>
+<p>Fill in the <code>draw_tree</code> method that draws a tree with the <em><em>base</em></em> of its trunk centered at the provided <code>(x, y)</code> position.</p>
+<p>The <code>main</code> method has already been written for you:</p>
+<pre><code>def main():
+    draw_tree(50, 150)
+    draw_tree(100, 300)
+    draw_tree(500, 200)
+    draw_tree(300, 250)
+    draw_tree(700, 310)
+
+</code></pre>
+
+<p>Each tree should have a trunk with a width of 20 pixels (<code>TRUNK_WIDTH</code>) and a height of 80 pixels (<code>TRUNK_HEIGHT</code>). The leaves should have a radius of 30 pixels (<code>LEAVES_RADIUS</code>). Your output should look like this:</p>
+<p><center>
+  <img style="width:500px;border: 1px solid #000000" src="../../img/projects/madmethods/demo.png">
+</center></p>
 	</div>
 </div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

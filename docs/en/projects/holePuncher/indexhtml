@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | What to Expect for Section</title>
+<title>CS Bridge  | Hole Puncher</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -378,6 +378,8 @@ the following properties passed in:
 
 metadata - the md.Meta object containing the following attributes:
 	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
@@ -386,226 +388,99 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		What to Expect for Section
+		Hole Puncher
 	</h1>
 
+		<p>
+			Credit: Problem written by Chris Piech.
+		</p>
 </div>
 <hr/>
 
-<!-- Text description -->
+<!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<div align="right"><i>All times listed on this handout are in Pacific Time.</i></div>
-
-<div class="toc">
-<ul>
-<li><a href="#what-is-section">What is Section?</a></li>
-<li><a href="#when-and-where-is-section">When and Where is Section?</a></li>
-<li><a href="#section-structure">Section Structure</a></li>
-<li><a href="#getting-the-most-out-of-section">Getting the most out of section</a></li>
-<li><a href="#section-communications">Section Communications</a></li>
-<li><a href="#attending-section">Attending Section</a></li>
-<li><a href="#section-scheduling">Section Scheduling</a><ul>
-<li><a href="#where-do-i-find-my-section-time">Where do I find my section time?</a></li>
-<li><a href="#when-do-sections-start">When do sections start?</a></li>
-</ul>
-</li>
-<li><a href="#what-to-do-if-you-cant-make-it-to-section">What to do if you can't make it to section</a><ul>
-<li><a href="#i-cant-make-it-to-my-section-for-one-week">I can't make it to my section for one week</a></li>
-<li><a href="#i-need-to-permanently-change-my-section-time">I need to permanently change my section time</a></li>
-</ul>
-</li>
-<li><a href="#i-havent-gotten-my-section-time">I haven't gotten my section time</a></li>
-<li><a href="#personal-privacy-and-safety-in-section">Personal Privacy and Safety in Section</a></li>
-<li><a href="#additional-questions">Additional Questions</a><ul>
-<li><a href="#my-section-leader-didnt-show-up-to-section-what-should-i-do">My section leader didn’t show up to section, what should I do?</a></li>
-<li><a href="#other-questions">Other Questions</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<!-- Section Description -->
-
-<h3 id="what-is-section">What is Section?</h3>
-<p><p>
-    You will be attending a weekly 40-minute discussion section in small groups with a member of our teaching team. For short, we just call this part of the class “section.”
-</p>
-<ul>
-    <li>Your section is when you’ll <b>get practice with the new concepts you learned in lecture.</b></li>
-    <li>In section, we’ll <b>answer questions, go over common errors or misconceptions, and discuss sample problems</b> in more detail than we can in lecture.</li>
-</ul>
-<p>
-    We have a large team of wonderful volunteer section leaders, whose jobs are to facilitate each of these sections. One of them will specifically be your section leader for the entire course. You and a group of about 10 other students will attend their section every week. We hope you will all get to know each other throughout the course.
-</p></p>
-<hr />
-
-<h3 id="when-and-where-is-section">When and Where is Section?</h3>
-<pre><code>&lt;p&gt;&lt;b&gt;When:&lt;/b&gt; You can find your section time on the course home page. Get ready at least 10 minutes before:&lt;br/&gt;
-    &lt;p&gt;&lt;img src="img/yoursection.png" width="250px"/&gt;
-&lt;p&gt;&lt;b&gt;I don't have a section: &lt;/b&gt; Some people signed up late, or didn't get section time preferences in on time. That is fine. See the section on "&lt;a href='#Swap'&gt;permanently changing my section time&lt;/a&gt;" below. That applies to you.
-&lt;p&gt;&lt;b&gt;Where: &lt;/b&gt;The link for the section video conference will be posted by your section leader in the section "Ed".
-</code></pre>
-<hr/>
-
-<!-- Section Structure -->
-
-<h3 id="section-structure">Section Structure</h3>
-<p><p>
-    Here’s how a standard section might work:
-</p>
-<ol>
-    <li>Your section leader gives a <b>recap of the important concepts</b> from that week’s lectures.</li>
-    <li>Your section leader <b>introduces the sample problems</b> you’ll be working on in section.</li>
-    <li>You and your fellow students <b>collaboratively come up with solutions to the problems</b>, one step at a time, with the guidance of your section leader.</li>
-    <li>You all help <b>turn these solutions into actual Python code</b>, which your section leader will type on their computer while showing you what’s on their screen.</li>
-    <li>During your entire section, you and your classmates should <b>ask any questions you have</b> so you can all understand everything better.</li>
-</ol>
-<p>
-    <b>Section works best when everybody participates and interacts with each other.</b> If you have an idea for how to solve part of a problem or have a question about anything, please share it during your section. Our goal with section is to make sure you understand everything as well as you can.
-</p></p>
-<hr />
-
-<!-- Getting the most out of section -->
-
-<h3 id="getting-the-most-out-of-section">Getting the most out of section</h3>
-<p><p>
-    <b>Staying up to date on the course material</b> will help you get the most out of your discussion sections. That way, you’ll all be able to spend more time working on sample problems. Section will cover material from the previous three lectures. Please refer to the <a href='https://compedu.stanford.edu/codeinplace/v1/#/course/schedule'>course schedule</a> to visualize this. Before attending your section each week, please do your best to:
-</p>
-<ul>
-    <li>Watch that week’s lectures (including that week’s Wednesday lecture)</li>
-    <li>Do the reading for that week</li>
-    <li>Be excited and prepared to participate in section :-)</li>
-</ul>
-<p>
-    And of course, please be respectful and considerate throughout this course, including (and especially) during your section. Code in Place is a diverse and wonderful community.
-</p>
-<p>
-    These are just our general guidelines. During your first section, your section leader will describe their own specific section norms and goals that they’d like to focus on with all of you.
-</p></p>
-<hr />
-
-<!-- Section Communications -->
-
-<h3 id="section-communications">Section Communications</h3>
-<p><p>
-    You will be added to <b>an Ed group specifically for your section</b>. This group will include you, your section leader, and about 10 of your classmates. You’ll all meet each other in your first section.
-</p>
-<ul>
-    <li>Your section leader will use your section’s Ed group to <b>post announcements related to section.</b></li>
-    <li>Feel free to post in this Ed group to <b>connect more with the other students in your section.</b></li>
-    <li>For posts not directly related to section, use the main Code in Place Ed group.</li>
-</ul>
-<p>
-    If you need to get in touch specifically with your section leader, make a private post (to staff only) in this group. Your section leader is a volunteer and as such might take a while to answer your question. Please be patient with them. Do not expect your section leader to debug your assignment code, for example.
-</p></p>
-<hr />
-
-<!-- Attending Section -->
-
-<h3 id="attending-section">Attending Section</h3>
-<p><p>
-    Most sections will be held as a group video call over Zoom. Download the <b>"Zoom Client for Meetings" version 4.6.10</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a>
-</p>
-<p>
-    See your section’s Ed page for the specifics about how to attend your section from your computer (e.g. a Zoom link to your section’s video call). <b>You should get an announcement from your section leader on Ed with these details.</b> If your section is not using Zoom, their announcement will include this information, too.
-</p></p>
-<hr />
-
-<!-- Section Scheduling -->
-
-<h3 id="section-scheduling">Section Scheduling</h3>
-<p><p>
-    You will attend the same section at the same time every week. Section time assignments will be released by 11:59pm Monday, April 13 PDT. All sections take place between the second and third lectures of each week (Wednesday-Friday).
-</p>
-<!-- Where do I find my section time? --></p>
-<h4 id="where-do-i-find-my-section-time">Where do I find my section time?</h4>
-<p><p>
-    We will post it on the website before 11:59 PDT.
-</p></p>
-<!-- When do sections start? -->
-
-<h4 id="when-do-sections-start">When do sections start?</h4>
-<p><p>
-    <b>Sections start the first week of the course (this week!).</b> Your first section will be between Wednesday, April 15 and Friday April, 17, depending on your assigned section time.
-</p></p>
-<hr />
-
-<!-- What to do if you can’t make it to section -->
-
-<h3 id="what-to-do-if-you-cant-make-it-to-section">What to do if you can't make it to section</h3>
-<!-- I can’t make it to my section for one week -->
-
-<h4 id="i-cant-make-it-to-my-section-for-one-week">I can't make it to my section for one week</h4>
-<p><p>
-    If for some reason you miss your section, everything is going to be alright: there is a recorded section. For more details see <a href='https://codeinplace2020.github.io/faqs/coursefaqs.html#section'>https://codeinplace2020.github.io/faqs/coursefaqs.html#section</a>
-</p></p>
-<!-- I need to permanently change my section time -->
-
-<h4 id="i-need-to-permanently-change-my-section-time">I need to permanently change my section time</h4>
-<p><p>
-    If you were assigned to a section time that doesn’t work for you, please let us know by filling out <a href='https://docs.google.com/forms/d/e/1FAIpQLScCWxU7zOxkqABUi8pcbsB9e-BBldZ24tAzKKI-xl12oH-6eQ/viewform'> this form</a>.
-</p>
-<p>
-    Changing section times is hard. We only process section changes one time in the week. We will process all section swaps submitted during the first week of the course around 11:59pm on Sunday April 19, PDT. We will accept section swap requests through the first two weeks of the course.
-</p>
-<p>
-    While waiting try attending your section (if you have one) and or watch the recorded section which will be released on Friday 10pm PDT!
-</p></p>
-<hr />
-
-<!-- I haven't gotten a section time -->
-
-<h3 id="i-havent-gotten-my-section-time">I haven't gotten my section time</h3>
-<p><p>
-    We have posted section times for everybody who is currently assigned to a section. Once we post it, you can find it on the course website and on Ed. For the course website:
-</p>
-<ul>
-    <li>Go to the course website and refresh the page.</li>
-    <li>Try a hard refresh (Control+F5 on Windows, Cmd+Shift+R on Mac).</li>
-</ul>
-<p>
-    For Ed:
-</p>
-<ul>
-    <li>Go to Ed and click on the home button on the top-right of the screen. Refresh the page.</li>
-</ul>
-<p>
-    You should then see your section time listed on the left side of the course website, and you should be a part of an Ed group called “Section ### - Code in Place”.
-</p>
-<p>
-    <b>If you still do not see a section time anywhere,</b> then you are not assigned to a section yet. Some people signed up late, or didn't get section time preferences in on time. That is fine. See the section on "<a href='#Swap'>permanently changing my section time</a>" above. That applies to you.
-</p>
-<hr /></p>
-<!-- Personal Privacy in Section -->
-
-<h3 id="personal-privacy-and-safety-in-section">Personal Privacy and Safety in Section</h3>
-<p><p>
-    We want to make sure that everybody in Code in Place is in an environment that they feel comfortable in. This includes during section. To protect your privacy, you are not required to disclose any personal information in section that you don't want to share. If you feel comfortable sharing more about yourself during section, we leave that choice up to you.
-</p>
-<p>
-    Finally, while we hope this will not be the case for anyone at any point during this course, if you encounter any misconduct during section or otherwise, please refer to the "process for reporting misconduct" outlined at the bottom of the <a href='https://compedu.stanford.edu/codeinplace/v1/#/handout/info.html'>general course information handout</a>. Creating and maintaining a safe and open community is of utmost importance to us.
-</p></p>
-<hr />
-
-<!-- FAQs -->
-
-<h3 id="additional-questions">Additional Questions</h3>
-<!-- My section leader didn’t show up to section -->
-
-<h4 id="my-section-leader-didnt-show-up-to-section-what-should-i-do"><u>My section leader didn’t show up to section, what should I do?</u></h4>
-<p><p>
-    This is going to be a very rare occurrence, but recall that we have already had a few section leaders get sick! If you can't find your section leader, please fill out this form: <a href='https://forms.gle/RBd7avY165cm9WQ7A'>https://forms.gle/RBd7avY165cm9WQ7A</a>
-</p>
-<p>
-    We’ll help you find a solution here. Or, you may watch the recorded section, if you prefer.
-</p></p>
-<h4 id="other-questions"><u>Other Questions</u></h4>
-<p><p>
-    We will answer your questions as they come up. <br />
-    Please see: <a href='https://codeinplace2020.github.io/faqs/coursefaqs.html#section'>https://codeinplace2020.github.io/faqs/coursefaqs.html#section</a>
-</p></p>
+		<p>This example lets you treat your computer like a piece of paper and your mouse like a hole puncher. The user should be able to click anywhere on the window and create holes (ovals). </p>
+<p><center>
+  <!--<img style="width:500px;border:1px solid #000000"
+          alt = "Hole puncher demo"
+          src="../../../img/projects/hole_puncher/demo.gif">
+  -->
+  <img style="width:500px;border:1px solid #000000" src="demo.gif">
+</center></p>
+<p>The constant <code>HOLE_RADIUS</code> describes the radius of each hole you will punch. 10 is a good size for this.</p>
 	</div>
 </div>
+
+<!-- Solution (if included) -->
+	<h2>Solution</h2>
+    <p>
+    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
+    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
+    		aria-controls="Collapse">
+    		Show Solution
+    	</a>
+    </p>
+    <div class="collapse" id="soln-collapse">
+		<pre class="console" id="editor" style="height:740.0px">&quot;&quot;&quot;
+File: hole_puncher.py
+---------------------
+This program lets you click anywhere on the canvas to
+&quot;punch a hole&quot; (e.g. draw a black circle there).
+&quot;&quot;&quot;
+
+from graphics import Canvas
+
+HOLE_RADIUS = 10
+
+
+def main():
+    canvas = Canvas()
+    canvas.set_canvas_title(&quot;Hole Puncher&quot;)
+
+    # animation loop
+    while True:
+        clicks = canvas.get_new_mouse_clicks()
+        for click in clicks:
+            draw_hole(canvas, click.x, click.y)
+        canvas.update()
+
+    canvas.mainloop()
+
+
+def draw_hole(canvas, x, y):
+    &quot;&quot;&quot;
+    Draws a circle on the canvas centered at the given location.
+    &quot;&quot;&quot;
+    oval = canvas.create_oval(x - HOLE_RADIUS, y - HOLE_RADIUS, x + HOLE_RADIUS, y + HOLE_RADIUS)
+    canvas.set_fill_color(oval, &#039;black&#039;)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</pre>
+    </div>
+
+    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+       editor.setTheme('ace/theme/eclipse');
+       editor.getSession().setMode("ace/mode/python");
+       editor.setReadOnly(true);
+       editor.setShowPrintMargin(false);
+       editor.renderer.setShowGutter(false); 
+    </script>
+
+    <script>
+    	function toggleButtonText() {
+    		var elem = document.getElementById("soln-btn");
+    		if (elem.innerHTML.trim() === "Show Solution") {
+    			elem.innerHTML = "Hide Solution";
+    		} else {
+    			elem.innerHTML = "Show Solution";
+    		}
+    	}
+    </script>
 
 			
 	<!-- Footer -->

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | CS Bridge FAQs</title>
+<title>CS Bridge  | Run, Sum, Run!</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -378,6 +378,8 @@ the following properties passed in:
 
 metadata - the md.Meta object containing the following attributes:
 	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
@@ -386,44 +388,60 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		CS Bridge FAQs
+		Run, Sum, Run!
 	</h1>
 
+		<p>
+			Credit: Lisa Yan
+		</p>
 </div>
 <hr/>
 
-<!-- Text description -->
+<!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p><em>Do you have a question about Code in Place? It might be answered here.</em></p>
-<!-- Table of Contents -->
+		<p>File: <code>runningsum.py</code></p>
+<p>Write a program that reads in integers from the user and then outputs the current
+sum of the entered values. Here's what the output of the program should look like:</p>
+<pre><code>Enter integers, one at a time. I will show you the sum!
+Please enter an integer: 3
+The sum is: 3
+Please enter an integer: 4
+The sum is: 7
+Please enter an integer: 5
+The sum is: 12
+Please enter an integer: 10
+The sum is: 22
+Please enter an integer: 3
+The sum is: 25
+Please enter an integer: 4
+The sum is: 29
+Please enter an integer: 1
+The sum is: 30
+Please enter an integer: ...
+</code></pre>
 
-<div class="toc">
-<ul>
-<li><a href="#general">General</a></li>
-<li><a href="#student-faq-test">Student FAQ test</a><ul>
-<li><a href="#is-this-course-graded">Is this course graded?</a></li>
-<li><a href="#will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</a></li>
-<li><a href="#how-can-i-make-the-most-of-this-course">How can I make the most of this course?</a></li>
-<li><a href="#i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<h2 id="general">General</h2>
-<h1 id="student-faq-test">Student FAQ test</h1>
-<h3 id="is-this-course-graded">Is this course graded?</h3>
-<p>No, this is purely for the joy of learning!</p>
-<h3 id="will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</h3>
-<p>We don’t promise a certificate of completion. This class is purely for the joy of learning! We are talking to folks to see what is possible and it seems very reasonable that we could help you share that you participated in this experience :-)</p>
-<h3 id="how-can-i-make-the-most-of-this-course">How can I make the most of this course?</h3>
-<p>Have fun with it. Do the readings. Come to section. Download PyCharm and do the assignments. Learn from your community on Ed.</p>
-<h3 id="i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</h3>
-<p>Wonderful. Please fill out <a href='https://docs.google.com/forms/d/e/1FAIpQLSdINcYsz1JN8eekMJntExxNyz7m5fa6JKztT_pkeYqfUMIRwg/viewform'>this form</a>. We want to improve this course and love suggestions! We might not be able to make all suggestions happen this term, but you could still be helping future students.</p>
-<p><br/>
-<em>Have a question which wasn't covered here? Please post on <a href="https://us.edstem.org/courses/490">Ed</a>.</em></p>
+<h2 id="quitting-your-program">Quitting your program</h2>
+<p>Remember that you can run your program in Pycharm's Terminal by typing <code>python3 runningsum.py</code> (if you are on Mac)
+or <code>py runningsum.py</code> (if you are on PC). However, this program runs forever!</p>
+<p>To exit a program that runs forever, hit <code>Ctrl-C</code> on your keyboard while in the Terminal. You should then be able
+to run your program via the <code>python3 runningsum.py</code> or <code>py runningsum.py</code> again.</p>
+<h2 id="printing-variables">Printing variables</h2>
+<p>Often in console programs it is necessary to print out values to the user in a string. The example above is: </p>
+<pre><code>The sum is: 55
+</code></pre>
+
+<p>If you run your program with the above input, 55 will be the value stored in the variable that tracks the sum. If that variable is named <code>sum</code>, then in order to output its value you would write:</p>
+<pre><code>print(&quot;The sum is: &quot; + str(sum))
+</code></pre>
+
+<p>A more general form is:</p>
+<pre><code>&quot;String message&quot; + str(variable_name) + &quot;more string message&quot;
+</code></pre>
 	</div>
 </div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

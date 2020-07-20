@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | CS Bridge FAQs</title>
+<title>CS Bridge  | Hospital Karel</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -378,6 +378,8 @@ the following properties passed in:
 
 metadata - the md.Meta object containing the following attributes:
 	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
@@ -386,44 +388,63 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		CS Bridge FAQs
+		Hospital Karel
 	</h1>
 
+		<p>
+			Credit: Chris Piech
+		</p>
 </div>
 <hr/>
 
-<!-- Text description -->
+<!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p><em>Do you have a question about Code in Place? It might be answered here.</em></p>
-<!-- Table of Contents -->
+		<p>Handouts: <a href="../../en/handouts/karel.html">KarelReference</a><br/>
+Worked Examples: <a href="../../en/projects/invert.html">Invert</a>, <a href="../../en/projects/unkarel/index.html">UN Karel</a><br/>
+Day1: <code>hospital_karel.py</code></p>
+<p>Countries around the world are dispatching hospital-building robots to make sure anyone who
+gets sick can be treated. They have decided to enlist Karel robots. Your job is to program those
+robots.</p>
+<p>Karel begins at the left end of a row that might look like this:</p>
+<p>
+<center>
+    <img style="width:100%"  src="../../img/projects/hospitalkarel/hospitalstart.png">
+</center>
+</p>
 
-<div class="toc">
+<p>Each beeper in the figure represents a pile of supplies. Karel’s job is to walk along
+the row and build a new hospital in the places marked by each beeper. Each hospital
+should look exactly like the picture below (two columns of three beepers):</p>
+<p>
+<center>
+    <img style="width:50px"  src="../../img/projects/hospitalkarel/supplies.png">
+</center>
+</p>
+
+<p>The new hospital should have their corner at the point at which the pile of supplies was left. At
+the end of the run, Karel should be at the end of the row having created a set of hospitals. For the
+initial conditions shown, the result would look like this:</p>
+<p>
+<center>
+    <img style="width:100%"  src="../../img/projects/hospitalkarel/hospitalend.png">
+</center>
+</p>
+
+<p>Keep in mind the following information about the world:</p>
 <ul>
-<li><a href="#general">General</a></li>
-<li><a href="#student-faq-test">Student FAQ test</a><ul>
-<li><a href="#is-this-course-graded">Is this course graded?</a></li>
-<li><a href="#will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</a></li>
-<li><a href="#how-can-i-make-the-most-of-this-course">How can I make the most of this course?</a></li>
-<li><a href="#i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</a></li>
+<li>Karel starts facing east at (1, 1) with an infinite number of beepers in its beeper bag.</li>
+<li>The beepers indicating the positions at which hospitals should be built will be spaced so
+that there is room to build the hospitals without overlapping or hitting walls.</li>
+<li>There will be no supplies left on the last column.</li>
+<li>Karel should not run into a wall if it builds a hospital that extends into that final corner.</li>
 </ul>
-</li>
-</ul>
-</div>
-<h2 id="general">General</h2>
-<h1 id="student-faq-test">Student FAQ test</h1>
-<h3 id="is-this-course-graded">Is this course graded?</h3>
-<p>No, this is purely for the joy of learning!</p>
-<h3 id="will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</h3>
-<p>We don’t promise a certificate of completion. This class is purely for the joy of learning! We are talking to folks to see what is possible and it seems very reasonable that we could help you share that you participated in this experience :-)</p>
-<h3 id="how-can-i-make-the-most-of-this-course">How can I make the most of this course?</h3>
-<p>Have fun with it. Do the readings. Come to section. Download PyCharm and do the assignments. Learn from your community on Ed.</p>
-<h3 id="i-have-a-suggestion-for-improving-the-course-how-can-i-tell-you">I have a suggestion for improving the course. How can I tell you?</h3>
-<p>Wonderful. Please fill out <a href='https://docs.google.com/forms/d/e/1FAIpQLSdINcYsz1JN8eekMJntExxNyz7m5fa6JKztT_pkeYqfUMIRwg/viewform'>this form</a>. We want to improve this course and love suggestions! We might not be able to make all suggestions happen this term, but you could still be helping future students.</p>
-<p><br/>
-<em>Have a question which wasn't covered here? Please post on <a href="https://us.edstem.org/courses/490">Ed</a>.</em></p>
+<p>Write a program to implement the Hospital Building Karel project. Remember that your program
+should work for any world that meets the above conditions.</p>
 	</div>
 </div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

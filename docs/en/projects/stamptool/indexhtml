@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | General Information</title>
+<title>CS Bridge  | Stamp Tool</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -378,6 +378,8 @@ the following properties passed in:
 
 metadata - the md.Meta object containing the following attributes:
 	metadata['title'][0] - problem title
+	metadata['credit'][0] - problem credit (optional)
+	metadata['solution'][0] - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
@@ -386,193 +388,111 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		General Information
+		Stamp Tool
 	</h1>
 
+		<p>
+			Credit: Problem written by a mystery CS106A Lecturer.
+		</p>
 </div>
 <hr/>
 
-<!-- Text description -->
+<!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<div align="right"><i>All times listed on this handout are in Pacific Time.</i></div>
-
-<div class="toc">
-<ul>
-<li><a href="#description">Description</a></li>
-<li><a href="#this-is-a-free-course-run-by-volunteers">This is a Free Course run by Volunteers</a></li>
-<li><a href="#requirements-for-the-course">Requirements for the Course</a></li>
-<li><a href="#elements-of-the-course">Elements of the Course</a><ul>
-<li><a href="#a-lectures">A. Lectures</a></li>
-<li><a href="#b-ed-forum">B. Ed Forum</a></li>
-<li><a href="#c-sections">C. Sections</a></li>
-<li><a href="#d-readings">D. Readings</a></li>
-<li><a href="#e-assignments">E. Assignments</a></li>
-</ul>
-</li>
-<li><a href="#course-communications">Course Communications</a><ul>
-<li><a href="#a-course-website">A. Course Website</a></li>
-<li><a href="#b-class-discussion-forum">B. Class Discussion Forum</a></li>
-</ul>
-</li>
-<li><a href="#whom-to-contact-about-what">Whom to Contact about What</a></li>
-<li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
-<li><a href="#learning-with-honor">Learning With Honor</a></li>
-<li><a href="#additional-resources">Additional Resources</a><ul>
-<li><a href="#accessibility">Accessibility</a></li>
-<li><a href="#process-for-reporting-misconduct">Process for reporting misconduct</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<h3 id="description">Description</h3>
-<p>CS106A - Code in Place is a free introductory programming course using the Python language, based on material from the first half of Stanford University's established intro course, CS106A.</p>
-<ul>
-<li>It assumes <strong>no prior programming experience.</strong></li>
-<li>You should expect to be working <strong>15 to 20 hours a week.</strong></li>
-</ul>
-<p>This experience is different from typical free online courses for a few reasons. We hope these help you have a great Code in Place experience:</p>
-<ul>
-<li>You will meet (via videoconferencing) <b>in a small group</b>, once a week, with someone on the teaching team.</li>
-<li>The course is centered around <b>engaging assignments</b> and an optional final project.</li>
-<li>You won't receive a grade in the course, and completing it doesn't earn university credit.</li>
-<li>Instead, the main outcome is that you will have acquired <strong>a new and wonderful skill: how to program.</strong></li>
-</ul>
-<hr />
-
-<!-- Free course notice -->
-
-<h3 id="this-is-a-free-course-run-by-volunteers">This is a Free Course run by Volunteers</h3>
-<p>We want to do something good for the world. You don’t have to pay anything for it. That is a big deal for how much work we are putting in. In exchange we ask for your patience. Please do keep in mind a few things:</p>
-<ol>
-<li>We are all doing this out of the goodness of our hearts, as volunteer work.</li>
-<li>You are a large class. We wanted to support as many free students as possible. This community only works well if you <b>help each other.</b> Teaching is a great way to learn.</li>
-<li>This is truly new for us. Everything about coronavirus time is new. We are used to teaching in a physical classroom to Stanford students. We are so excited to go on this adventure.</li>
-<li>We have never worked so hard. We are putting in a lot of heart and soul into this course. If something doesn’t go as you hoped, we are truly sorry. And know that we are just trying to do something nice for folks.</li>
-</ol>
-<p>All that is to say: <b>please be patient and please be kind to your course staff.</b> We have a lot of heart, and we are going to do our best.</p>
-<p>Similarly, you might find this course hard. You might not feel like doing all of the work. You might get sick or have personal circumstances come up. And in turn we will be understanding. We know that you are working your hardest, too.</p>
-<hr />
-
-<!-- Requirements for the Course -->
-
-<h3 id="requirements-for-the-course">Requirements for the Course</h3>
-<ol>
-<li>An internet connection strong enough to stream video.</li></li>
-<li><b>Video conferencing software</b> to participate in lecture and section. We have recommended that the section leaders use Zoom, though it is at their discretion to use a similar service. You can download the <b>"Zoom Client for Meetings" version 4.6.10</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a></li></li>
-<li>The <b>PyCharm development environment</b> to complete assignments. Installation instructions here: <a href="https://codeinplace2020.github.io/faqs/installingPyCharm.html">https://codeinplace2020.github.io/faqs/installingPyCharm.html</a></li></li>
-<li>A love of learning!</li></li>
-</ol>
-<p>What if I don’t have some of these things? The community can help with some of them (like for PyCharm, see if someone on Ed can help you). If you don't have the capacity for video chat, you should watch each week's recorded section and should be active on the Ed group to get your questions answered.</p>
-<p><hr />
-<!-- Elements of the Course --></p>
-<h3 id="elements-of-the-course">Elements of the Course</h3>
-<!-- A. Lectures -->
-
-<h4 id="a-lectures">A. <u>Lectures</u></h4>
-<p>Lectures are held virtually on Mondays, Wednesdays, and Fridays. This is where you’ll learn the core concepts of the class.</p>
-<pre><code>Video lecture recordings will be posted on the course website. These videos are largely the same as what Stanford students in CS106A would see. If you have any questions about lecture, we will have a thread in Ed. Speaking of Ed:
-</code></pre>
-<!-- B. Ed Forum -->
-
-<h4 id="b-ed-forum">B. <u>Ed Forum</u></h4>
-<p>We have a class discussion forum that is hosted on Ed here: <a href='https://us.edstem.org/'>https://us.edstem.org/</a><br>
-See the Communications section <a href='#Communications'>below</a> for more details on how to get your questions answered.</p>
-<!-- C. Section -->
-
-<h4 id="c-sections">C. <u>Sections</u></h4>
-<p>In addition to lectures, <b>you will also be attending a weekly 40-minute discussion section in small groups with a member of our teaching team.</b> This is where you’ll get practice with the new concepts you learned in lecture. You each have a given section leader and a given section time. If for some reason you miss your section, everything is going to be alright: there is a recorded section. For more details see <a href='https://codeinplace2020.github.io/faqs/coursefaqs.html#section'>https://codeinplace2020.github.io/faqs/coursefaqs.html#section</a></p>
-<p>We will give you more details on how to join your live section on Tuesday, April 14th.</p>
-<!-- D. Readings -->
-
-<h4 id="d-readings">D. <u>Readings</u></h4>
-<p>For some people, readings are a better way of learning than lectures! We will have readings to go along with the course. We will try to keep them simple and straight to the point. If there was something in lecture you found confusing, please check out the reading. To get started, your first reading is to finish the rest of the “Karel Reader”.</p>
-<!-- E. Assignments -->
-
-<h4 id="e-assignments">E. <u>Assignments</u></h4>
-<pre><code>There will be four programming assignments in this course: three core assignments and a final project. The core assignment questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away” (see the &lt;a href='#Honor'&gt;learning with honor section&lt;/a&gt;). Instructions for completing and submitting assignments will be posted on the course website April 19th.
-</code></pre>
-<hr />
-
-<!-- Course Communications -->
-
-<h3 id="course-communications">Course Communications</h3>
-<!-- A. Course Website -->
-
-<h4 id="a-course-website">A. <u>Course Website</u></h4>
-<p><p>
-    The class web page is: <a href='https://compedu.stanford.edu/codeinplace/v1/#/course'>https://compedu.stanford.edu/codeinplace/v1/#/course</a><br>
-    You should regularly check the class website for handouts, announcements and other information, including the most up-to-date information on assignments.
-</p>
-<!-- B. Class Discussion Forum --></p>
-<h4 id="b-class-discussion-forum">B. <u>Class Discussion Forum</u></h4>
-<p><p>
-    Our class discussion forum is hosted on Ed here: <a href='https://us.edstem.org/'>https://us.edstem.org/</a><br>
-    You will be enrolled in two Ed groups:
-</p>
-<ol>
-    <li><b>“Code in Place”: the main discussion group.</b></li>
-    <!-- TODO Fix alignment to be all the way left aligned -->
-    This is where you should post questions you have (conceptual, technical, etc.) and where we’ll post announcements about the course. Please answer your classmates’ questions, too! Before posting a question, check if it has been asked already (and if so, read the answer to <i>that</i> post!). We may not answer duplicate questions.
-    <li><b>Your discussion section’s Ed group.</b></li>
-    <!-- TODO Fix alignment to be all the way left aligned -->
-    This is specifically for your section. If you need to get in touch specifically with your section leader, make a private post (to staff only) in this group. For more general questions, use the main Ed instead. Your section leader is a volunteer and as such might take a while to answer your question. Please be patient with them.
-</ol></p>
-<p><hr />
-<!-- Whom to Contact about What --></p>
-<h3 id="whom-to-contact-about-what">Whom to Contact about What</h3>
-<p><p>
-    This class is a massive community service project. We are supporting ten thousand learners from around the world. As such, emailing us personally won’t work. Instead, please use the Ed system (<a href='#Communications'>described above</a>) where the section leaders and other students can help you. Some guidelines:
-</p>
-<ul>
-    <li>For <b>logistical questions, conceptual and technical questions, or general course conversation</b>, please post a public question on our Code in Place Ed forum.</li>
-    <li>For <b>personal concerns or issues</b>, please make a private post in the Code in Place Ed.</li>
-    <li>To <b>send a message to your section leader</b>, make a private post in your section’s Ed. Recall that your section leader is a volunteer so this is a slow option.</li>
-    <li>For <b>major personal issues or concerns</b>, please email codeinplacestaff@gmail.com. We will need several days to get back to you -- so this is a very slow option.</li>
-</ul></p>
-<p><hr />
-<!-- FAQs --></p>
-<h3 id="frequently-asked-questions">Frequently Asked Questions</h3>
-<p><p>
-    <b>We will answer your questions as they come up.</b><br>
-    Please see: <a href='https://codeinplace2020.github.io/faqs/coursefaqs.html'>https://codeinplace2020.github.io/faqs/coursefaqs.html</a>
-</p></p>
-<p><hr />
-<!-- Learning with Honor --></p>
-<h3 id="learning-with-honor">Learning With Honor</h3>
-<p><p>
-    Value your own personal integrity -- it is of more importance than anything we learn in this class. We expect every student to abide by the letter and spirit of the honor code, which everybody signed before joining this course. Some guidelines:
-</p>
-<ul>
-    <li>We value humanity, intellectual joy, social connection, new skills, and gratitude.</li>
-    <li>Teach each other! We are all in this for one another.</li>
-    <li>Avoid publicly posting your solution code to assignments on the Ed forums. We want everybody to get a chance to discover their own solution.</li>
-    <li>Be welcoming. We are a diverse and wonderful community.</li>
-</ul>
-<p>
-    Lastly, please be considerate. These are tough times for many, so please help your classmates and teachers out. We’re all here to learn about the joys of programming and are very excited to have all of you be a part of this. Code in Place is a learning experience free of unacceptable behavior. If you are having trouble with the course, please let us know about it so we can help. Remember, your personal integrity is more important than running a program!
-</p>
-<p>
-    Note: we reserve the right to dismiss participants from the course if issues arise.
-</p></p>
-<p><hr />
-<!-- Additional Resources --></p>
-<h3 id="additional-resources">Additional Resources</h3>
-<!-- Accessibility -->
-
-<h4 id="accessibility">Accessibility</h4>
-<p><ul>
-    <li>We know that our community will have a variety of learning differences and will include many differently abled individuals. If you have a suggestion for how to make learning more accessible for you, feel free to post on Ed or submit recommendations <a href='https://docs.google.com/forms/d/e/1FAIpQLScbGAQjWZhJRKVpsV4SX1XmFHD3Mi_E69M7sNALLApwyw16Eg/viewform'>here</a>.</li>
-    <li>If you have an accommodation request that you are not comfortable submitting over a Google form, please email us at codeinplacestaff@gmail.com.</li>
-</ul>
-<!-- Process for reporting misconduct --></p>
-<h4 id="process-for-reporting-misconduct">Process for reporting misconduct</h4>
-<p><ul>
-    <li>While we hope that it will not come into use during the class, we have created a <a href='https://docs.google.com/forms/d/e/1FAIpQLSfFRPFZ45gROMWZcvUP5e-sbFCNTc2nMkQFINIejeJkPCULAg/viewform'>form</a> through which you can submit anonymous reports of any misconduct you encounter while participating in Code in Place. If you would be more comfortable sharing your situation non-anonymously, you can also email us at codeinplacestaff@gmail.com.</li>
-    <li>Creating and maintaining a safe and open community is of utmost importance to us, and if the actions or behavior of others (students or staff) make you feel unsafe or unwelcome, we want you to let us know.</li>
-</ul></p>
+		<p>Write a program where a blue rectangle (which represents a stamp) follows a user's mouse around. Your program should draw a rectangle on the screen centered around the mouse when the user clicks.</p>
+<p><center>
+  <img style="width:500px"
+          alt = "Stamp tool demo"
+          src="../../../img/projects/stamptool/demo.png">
+</center></p>
 	</div>
 </div>
+
+<!-- Solution (if included) -->
+	<h2>Solution</h2>
+    <p>
+    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
+    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
+    		aria-controls="Collapse">
+    		Show Solution
+    	</a>
+    </p>
+    <div class="collapse" id="soln-collapse">
+		<pre class="console" id="editor" style="height:1040.0px">&quot;&quot;&quot;
+File: stamp_tool.py
+-------------------
+This program lets you move the mouse to move a &quot;stamp&quot; around the screen,
+and wherever you click it &quot;stamps&quot; (adds a copy of the stamp shape) to that
+location.
+&quot;&quot;&quot;
+
+from graphics import Canvas
+
+STAMP_SIZE = 50
+
+
+def main():
+    canvas = Canvas()
+    canvas.set_canvas_title(&quot;Stamp Tool&quot;)
+
+    stamp_tool = draw_stamp(canvas, canvas.get_mouse_x(), canvas.get_mouse_y(), &#039;blue&#039;)
+    while True:
+        clicks = canvas.get_new_mouse_clicks()
+        for click in clicks:
+            draw_stamp(canvas, click.x, click.y, &#039;black&#039;)
+
+        canvas.raise_to_front(stamp_tool)  # stamp tool should be topmost
+        center_stamp(canvas, stamp_tool, canvas.get_mouse_x(), canvas.get_mouse_y())
+        canvas.update()
+
+    canvas.mainloop()
+
+
+def draw_stamp(canvas, x, y, color):
+    &quot;&quot;&quot;
+    Draws a stamp (rect) of the given color centered around the given location.
+    Returns the rectangle drawn.
+    &quot;&quot;&quot;
+    x -= STAMP_SIZE / 2
+    y -= STAMP_SIZE / 2
+    rect = canvas.create_rectangle(x, y, x + STAMP_SIZE, y + STAMP_SIZE)
+    canvas.set_fill_color(rect, color)
+    return rect
+
+
+def center_stamp(canvas, stamp, x, y):
+    &quot;&quot;&quot;
+    Repositions the given stamp (rect) to be centered around the given location.
+    &quot;&quot;&quot;
+    canvas.move_to(stamp, x - STAMP_SIZE / 2, y - STAMP_SIZE / 2)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</pre>
+    </div>
+
+    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+       editor.setTheme('ace/theme/eclipse');
+       editor.getSession().setMode("ace/mode/python");
+       editor.setReadOnly(true);
+       editor.setShowPrintMargin(false);
+       editor.renderer.setShowGutter(false); 
+    </script>
+
+    <script>
+    	function toggleButtonText() {
+    		var elem = document.getElementById("soln-btn");
+    		if (elem.innerHTML.trim() === "Show Solution") {
+    			elem.innerHTML = "Hide Solution";
+    		} else {
+    			elem.innerHTML = "Show Solution";
+    		}
+    	}
+    </script>
 
 			
 	<!-- Footer -->
