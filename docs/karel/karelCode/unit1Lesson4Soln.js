@@ -1,3 +1,0 @@
-move
-putBeeper
-move

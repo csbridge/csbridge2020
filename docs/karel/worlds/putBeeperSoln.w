@@ -1,6 +1,0 @@
-Dimension: (2,4)
-Beeper: (1, 1)
-Beeper: (1, 2)
-Beeper: (1, 3)
-Beeper: (1, 4)
-Karel: (1, 4)
