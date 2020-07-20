@@ -1,0 +1,292 @@
+
+body {
+	/*font-family: 'Source Sans Pro', sans-serif;*/
+    font-size:medium;
+    position:relative;
+    margin: 0 auto;
+}
+
+code {
+    color:black;
+    font-size:15px;
+    padding:0px;
+    border:0px;
+    background-color:white;
+}
+
+pre {
+    color:black;
+    font-size:15px;
+}
+
+.col-xs-2 {
+   width: 16.6% !important;
+   padding-left: 7px !important;
+   padding-right: 7px !important; 
+}
+
+.caption {
+  padding:4px !important;
+  height:25px;
+  text-align: center;
+}
+
+.buttonBar {
+  clear:left;
+  padding-top: 5px;
+  height:50px;
+}
+
+.languageIcon {
+  height:20px;
+}
+
+ol li{margin-bottom:10px;}
+
+h2 {
+  padding-top: 0.5em;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+.projectImg {
+  width:150px;
+  height:100px;
+}
+
+#splashHeader{
+  /*background-image:url('img/bg_ist2.jpg');*/
+  width:100%;
+  height:300px;
+  background-size: 100% auto; 
+}
+
+.container { max-width: 870px; } 
+
+.well {
+  background-color: white !important;
+}
+
+body > .navbar-inverse .navbar-brand{
+padding-left:0px !important;
+}
+
+p {
+	text-align:justify;
+}
+
+.psetImg {
+   padding-top:15px;
+}
+
+
+.psetImgCaption {
+   margin-top:8px;
+   padding-bottom:15px;
+   text-align:center;
+   font-style:italic;
+   width:80%;
+}
+
+.taGetter {
+	margin-left: 7px;
+margin-top: 3px;
+padding-bottom: 12px;
+height: 30px;
+padding-top: 5px;
+}
+
+#splashBackground {
+  width:100%;
+  max-height: 300px;
+}
+
+#taLookupFail {
+		color: red;
+padding-left: 10px;
+float: left;
+font-weight:bold;
+margin-top: 3px;
+}
+
+#taLookupResult {
+	color: green;
+padding-left: 10px;
+float: left;
+font-weight:bold;
+margin-top: 3px;
+}
+
+.faq {
+    background-color:#f6f3e5 !important;
+    border-color: #2e2d29 !important;
+    margin-bottom:15px;
+}
+
+.newsfeedWell {
+    min-height:20px;
+}
+
+.alice {
+   background-color:aliceblue;
+}
+
+.newsfeedLink {
+    color:darkblue !important;
+}
+
+.thumbnail {
+  margin-bottom:5px;
+}
+
+.thumbnailTitle {
+    text-align:center;
+    color:black;
+}
+
+#logoImg {
+  width: 180px;
+}
+
+#logo {
+	float: left;
+    
+    margin-top: -5px;
+}
+
+#headerText {
+    margin-left:10px;
+    float:left;
+    margin-bottom:10px;
+}
+
+#header {
+    margin-top:20px;
+    width:100%;
+}
+
+#pageHeader {
+    width:100%;
+    padding-top:30px;
+}
+
+.page-header {
+  padding-bottom:0px !important;
+  margin-bottom:0px !important;
+}
+
+#pageTitle {
+    color:#f8f6ea;
+    text-shadow:none;
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+.navLink {
+    text-shadow:none !important;
+    color:#f8f6ea !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size:18px;
+    background-color:transparent !important;
+}
+
+.announcement {
+		margin-bottom:0px !important;
+		background-color:#f8f6ea !important;
+}
+
+
+
+.navCaret {
+border-top-color: #f8f6ea !important;
+border-bottom-color: #f8f6ea !important;
+}
+
+
+
+.navbar-inner {
+  background-color: #8C1515; /* fallback color, place your own */
+
+  /* Gradients for modern browsers, replace as you see fit */
+  background-image: -moz-linear-gradient(top, #8C1515, #8C1515);
+  background-image: -ms-linear-gradient(top, #8C1515, #8C1515);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#8C1515), to(#8C1515));
+  background-image: -webkit-linear-gradient(top, #8C1515, #8C1515);
+  background-image: -o-linear-gradient(top, #8C1515, #8C1515);
+  background-image: linear-gradient(top, #8C1515, #8C1515);
+  background-repeat: repeat-x;
+
+  /* IE8-9 gradient filter */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C1515', endColorstr='#8C1515', GradientType=0);
+}
+
+
+a:link {text-decoration:none; }
+a:visited {text-decoration:none;}
+a:active {text-decoration:none;}
+a:hover {text-decoration:none; }
+
+#title {
+	font-size:28px;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+#handoutTitle {
+	font-size:28px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.whyImg {
+    height:120px;
+    width:100%;
+}
+
+.subheading {
+    margin-top:0px;
+}
+
+.subsection {
+    margin-bottom:15px;
+}
+
+.subquestion {
+}
+
+.table-noborder th, .table-noborder td { 
+     border-top: none; 
+ }
+
+.active {font-weight:bold}
+.inactive {color:gray}
+
+.header {
+    font-weight:bold; 
+    /*color:#990000;*/
+    color:#4D4F53;
+    font-size:24px;
+}
+
+.blueLink {
+    color:blue;
+}
+
+.section {
+    margin-bottom:40px;
+    width:100%;
+}
+
+.centerImg {
+	margin-left: auto;
+    margin-right: auto;
+}
+
+
+ul {list-style:square;}
+
+/*** Application***/
+.appMedia {
+	margin-bottom:15px;
+}

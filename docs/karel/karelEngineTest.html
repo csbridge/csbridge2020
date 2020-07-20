@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html> 
+   <head> 
+      <title>Karel Engine Test</title> 
+
+		<!-- CSS Imports -->
+		<link rel="stylesheet" href="css/engineTest.css" type="text/css" />
+
+		<!-- Standard Imports -->
+		<script src="./lib/jquery.js"></script> 
+		<script src="./lib/util.js"></script>
+
+		<!-- Ace Imports -->
+		<script src="./ace/ace.js"></script>
+		<script src="./ace/theme-jeremys.js"></script>
+		<script src="./ace/mode-javascript.js"></script>
+
+		<!-- Karel Imports -->
+		<script src="./js/ide/karelConstants.js"></script>
+		<script src="./js/ide/karelImages.js"></script>
+
+		<script src="./js/ide/action.js"></script>
+		<script src="./js/ide/beepers.js"></script>
+		<script src="./js/ide/walls.js"></script>
+		<script src="./js/ide/squareColors.js"></script>
+		<script src="./js/ide/canvasModel.js"></script>
+		<script src="./js/ide/karelModel.js"></script>
+
+		<script src="./js/ide/karelView.js"></script>
+
+		<script src="./js/ide/karel.js"></script>
+		<script src="./js/ide/karelCompiledEngine.js"></script>
+		<script src="./js/ide/karelEvalEngine.js"></script>
+		<script src="./js/ide/karelIde.js"></script>
+		<script src="./js/ide/importKarelIde.js"></script>
+   </head> 
+
+   <body> 
+      <script>
+         var ideSettings = {};
+         ideSettings.initialWorld = '15x15.w';
+         ideSettings.worldSelector = true;
+         ideSettings.editor = true;
+         ideSettings.debugButtons = false;
+         ImportKarelIde(ideSettings);
+      </script>
+  	</body> 
+</html>

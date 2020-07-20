@@ -1,0 +1,568 @@
+<!--
+	A template used for every page - contains the header.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
+<title>CS Bridge  | Scope</title>
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../style.css">
+
+<!-- Java Script -->
+<script src="../../plugins/jquery.min.js"></script>
+<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+
+<script src="../../karel/ace/ace.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/moment.min.js"></script>
+<script type="text/javascript" src="../../js/index.js"></script>
+<script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
+
+
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+  </script>-->
+
+<script src="../karel/js/html/websiteImports.js"></script>
+<script>importCss();</script>
+<script>importJs();</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+	</head>
+	<body>
+		<!--
+	A template used for every English page - contains the nav bar, a container div, and the footer.
+-->
+
+<!-- Navigation Bar -->
+<nav class="navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="../../">CS Bridge</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <!--<li ><a href="#">Link</a></li>-->
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+          		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
+	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../en/handouts/animation.html">Animation Reference</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/general-info.html">General Info</a></li>
+              <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
+              <li><a href="../../en/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
+              <li><a href="../../en/resources/section-info.html">Section Info</a></li>
+              <li><a href="../../en/resources/zoom-info.pdf">Zoom Guide</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
+              <li><a href="../../en/resources/karelInPycharm.pdf">Karel in PyCharm</a></li>
+
+              <!-- Not used nor visible -->
+				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/handouts/jar.html">Exporting Projects as JARs</a>-->
+	          	<!--<a class="visible-after" href="../../en/handouts/sections.html">Sections</a>-->
+	          </ul>
+	        </li>
+	          <ul class="dropdown-menu">
+	          	<!--<li><a href="../../en/handouts/sections.html">Sections</a></li>-->
+	          	<li><a href="http://karel.csbridge.org/java/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="../../en/handouts/karel.html">Karel Reference</a></li>	          	
+          		<li class="visible-after" data-visible-after="2019071009"><a href="../../en/handouts/console.html">Console Reference</a></li>
+          		<li class="visible-after" data-visible-after="2019071009"><a href="../../en/handouts/random.html">Random Generator Reference</a></li>
+	          	<li class="visible-after" data-visible-after="2019071109"><a href="../../en/handouts/graphics.html">Graphics Reference</a></li>
+				<li class="visible-after" data-visible-after="2019071509"><a href="../../en/handouts/events.html">Events Reference</a></li>
+				<li class="visible-after" data-visible-after="2019071709"><a href="../../en/handouts/arrayLists.html">Array Lists</a></li>
+				<li class="visible-after" data-visible-after="2019071909"><a href="../../en/handouts/jar.html">Exporting Projects as JARs</a></li>
+	          </ul>
+	        </li>
+
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+
+	          	<!-- Day 1 -->
+	          	<li class="dropdown-header">Day 1</li>
+	            <li>
+	            	<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
+	            </li>
+	          	<li class="visible-after" data-visible-after="2019070912">
+	          		<a href="../../en/projects/efes.html">Charles Bridge</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../en/projects/mountain.html">Mountain Karel</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../en/projects/randomPainter.html">Random Painter</a>
+	          	</li>
+	          	
+	          	<!-- Day 2 -->
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
+          		<li class="visible-after" data-visible-after="2019071009">
+          			<a href="../../en/projects/sandcastles.html">Sandcastles</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071012">
+	          		<a href="../../en/projects/favoriteNumber.html">Favorite Number</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071012">
+	          		<a href="../../en/projects/medicine.html">Medicine</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../en/projects/someSum.html">Some Sum</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../en/projects/gameOfStones.html">Nimm</a>
+	          	</li>
+	          	
+	          	<!-- Day 3 -->
+	          	<li class="divider visible-after" data-visible-after="2019071109" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
+          		<li class="visible-after" data-visible-after="2019071109">
+          			<a href="../../en/projects/awesome.html">Programming is Awesome</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../en/projects/mysterySquare.html">Mystery Square</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../en/projects/stringArt.html">String Art</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071113">
+	          		<a href="../../en/projects/randomCircles.html">Random Circles</a>
+	          	</li>
+	            <li class="visible-after" data-visible-after="2019071113">
+	            	<a href="../../en/projects/bouncingBall.html">Bouncing Ball</a>
+	            </li>
+
+				<!-- Day 4 -->
+				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
+          		<li class="visible-after" data-visible-after="2019071209">
+          			<a href="../../en/projects/madMethods.html">Mad Methods</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071212">
+	          		<a href="../../en/projects/target.html">Target</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071213">
+	          		<a href="../../en/projects/illusion.html">Optical Illusion</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071213">
+	          		<a href="../../en/projects/sunset.html">Short Film</a>
+	          	</li>
+
+				<!-- Day 5 / 6 -->
+          		<li class="divider visible-after" data-visible-after="2019071509" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
+          		<li class="visible-after" data-visible-after="2019071509">
+          			<a href="../../en/projects/makingTracks.html">Making Tracks</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071512">
+	          		<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+	          	</li>
+
+	          	<li class="divider visible-after" data-visible-after="2019071513" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071513">Days 5-6</li>
+          		<li class="visible-after" data-visible-after="2019071513">
+          			<a href="../../en/projects/breakout.html">Breakout</a>
+          		</li>
+
+          		<!-- Day 7 -->
+          		<li class="divider visible-after" data-visible-after="2019071709" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
+          		<li class="visible-after" data-visible-after="2019071709">
+          			<a href="../../en/projects/sortedNumbers.html">Sorted Numbers</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/snow.html">Snow</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/mouseGame.html">[Optional] The Line</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/music.html">[Optional] Waves of Sound</a>
+	          	</li>
+
+	          	<!-- Days 7/8 -->
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071713">Days 7-8</li>
+	          	<li class="visible-after" data-visible-after="2019071713">
+	          		<a href="../../en/projects/project.html">Make Your Own</a>
+	          	</li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li class="dropdown-header">Day 1</li>
+	          	<li><a href="../../en/projects/stepUp.html">Step Up</a></li>
+	          	<li><a href="../../en/projects/place100.html">Place 100</a></li>
+	          	<li><a href="../../en/projects/beeperLine.html">Beeper Line</a></li>
+	          	<li><a href="../../en/projects/invert.html">Invert</a></li>
+	          	<li><a href="../../en/projects/unKarel.html">UN Karel</a></li>
+	          	<li><a href="../../en/projects/banishWinter.html">Banish Winter</a></li>
+
+
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/emc2.html">E=MC2</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/fibb.html">Fibonacci</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/findPi.html">Find Pi</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/8Ball.html">8-Ball</a>
+	            </li>
+            	
+            	<li class="divider visible-after" data-visible-after="2019071109" />
+            	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../en/projects/robotFace.html">Robot Face</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../en/projects/goCenter.html">Go To Center</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../en/projects/gravityBall.html">Gravity Ball</a>
+	            </li>
+
+				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
+				<li class="visible-after" data-visible-after="2019071209">
+					<a href="../../en/projects/averageMethod.html">Average Method</a>
+				</li>	
+				<li class="visible-after" data-visible-after="2019071209">
+					<a href="../../en/projects/drawPeople.html">Draw People</a>
+				</li>	
+	          	<li class="visible-after" data-visible-after="2019071209">
+	          		<a href="../../en/projects/halfGreen.html">Half Green</a>
+	          	</li>
+
+	        	<li class="divider visible-after" data-visible-after="2019071509" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
+	            <li class="visible-after" data-visible-after="2019071509">
+	            	<a href="../../en/projects/stamptool/index.html">Stamp Tool</a>
+	            </li>
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../en/projects/holePuncher.html">Hole Puncher</a>
+	          	</li>	
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../en/projects/debrisSweeper.html">Debris Sweeper</a>
+	          	</li>	
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../en/projects/suchADrag.html">Such a Drag</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../en/projects/keyboardKarel.html">Keyboard Karel</a>
+	          	</li>
+
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../en/projects/rocketPaddle.html">Rocket Ship</a>
+	            </li>
+	        </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../slides/Welcome.pdf">Karel</a></li>
+	          	<li><a href="../../slides/ControlFlow.pdf">Control Flow Slides)</a></li>
+	          	<li><a href="../../starter/ControlFlow.zip">Control Flow (Code)</a></li>
+	          	<li><a href="../../slides/Variables.pdf">Variables</a></li>
+			<li><a href="../../slides/Variables2.pdf">Variables 2</a></li>
+	          	
+	          	<li><a href="../../slides/Graphics.pdf">Graphics (Slides)</a></li>
+	          	<li><a href="../../starter/Graphics.zip">Graphics (Code)</a></li>
+	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
+	          	<li><a href="../../slides/Methods.pdf">Methods</a></li>
+	          	<li><a href="../../slides/NestedLoops.pdf">Nested Loops</a></li>
+	          	<li><a href="../../slides/Events.pdf">Events (Slides)</a></li>
+	          	<li><a href="../../starter/Events.zip">Events (Code)</a></li>
+	          	<li><a href="../../slides/Breakout.pdf">Breakout</a></li>
+	          	<li><a href="../../slides/AI.pdf">AI</a></li>
+	          	<li><a href="../../slides/ArrayLists.pdf">ArrayLists</a></li>
+	          	<li><a href="../../slides/HashMaps.pdf">HashMaps</a></li>
+	         	<li><a href="../../slides/Internet.pdf">The Internet (Slides)</a></li>
+	         	<li><a href="../../starter/Internet.zip">The Internet (Code)</a></li>
+	         	<li><a href="../../slides/Beyond-CSBridge.pdf">Beyond CSBridge</a></li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forms <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Survey</a></li>
+                <li><a href="https://forms.gle/eVsMyZb8HCSUETeV6">Sign in To Lab</a></li>
+	          </ul>
+	        </li>
+
+			
+	        <!-- Bonus button -->
+	        <ul class="nav navbar-nav">
+	            <li><a href="../../en/bonus-index.html">Bonus</a></li>
+	        </ul>
+
+	        <!-- TA Link -->
+
+	      </ul>
+
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/english_flag.png"></img></a></li>
+	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
+	        
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+
+</script>
+
+<div class="container">
+	
+	
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Variable Scope
+			</h1>
+			<p>
+				Written by Chris Piech and Mehran Sahami
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Local Variables</h2>
+				<p>
+					Local variables are created local to the method (or the block...see "Block Scope" section below) in which they are defined. They are destroyed when execution of the method has been completed. Local variables can only be accessed from within the method in which they are declared.  Because of their transient nature, local variables cannot store persistent information about an object between method calls.
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Local Variables Example</h2>
+				<p>
+					Consider, for example, the following snippet of code.
+				</p>
+				<pre id="editor" style="height:200px">public class AnExample extends ConsoleProgram {
+
+	public void methodOne {
+		int a = readInt("Enter a: ");
+		println("a = " + a);
+ 	}
+
+	public void methodTwo {
+		int b = a;  // BUG!: cannot refer to variable a in methodOne
+		println("b = " + b);
+	}
+}</pre>
+				<p>
+					The variables a and b are local variables declared within different methods in the class AnExample. Because these variables are local variables, a can only be referred to within methodOne and variable b can only be accessed within methodTwo. Our attempt to initialize b using the value of a is illegal, as code in methodTwo cannot access local variables from methodOne or any other method.
+				</p>
+				<p>
+				Because local variable values do not persist after their containing method has completed, the variable a will be destroyed when methodOne has completed execution. The next time methodOne is called, a new variable a will be created.
+			</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Block Scope</h2>
+				<p>
+					While we typically think of local variables as local to a particular method, in Java local variables are actually local to a block of code. While a method defines a block of code (since the opening and closing braces of the method define a block), for and while loops, if-statements, and other constructs are also considered blocks of code. If we declare a local variable inside one of these constructs, the local variable will be created when it is declared in the block and destroyed when the block ends execution.</p>
+				<p>Consider the following example:</p>
+				<pre id="editor2" style="height:400px">public class AnExample extends ConsoleProgram {
+	
+	public void methodThree {
+		int a = 4;
+
+ 	 	for (int i = 0; i &lt; 5; i++) {
+			int b = a; // this is okay
+
+			if (a > b) { // okay to access a and b here
+				int c = 3;
+
+				println(i); // okay to access i here
+				println(b); // okay to access b here
+				println(c); // okay to access c here
+			}
+
+			println(c); // illegal: c is no longer in scope here
+		}
+
+		println(a); // okay to access a here
+		println(b); // illegal: b is only in scope in body of for loop
+		println(i); // illegal: i is only in scope in body of for loop
+	}
+}</pre>
+				<p>
+					The variable a is local to methodThree, so accessing a within the for loop, or in the println is fine.  The variables i and b are only in scope (i.e., "alive") within the confines of the for loop in which they are declared.  They are no longer available by the time the last two printlns try to access them.  The variable c is only in scope within the confines of the if statement body in which it is declared.  Note that a new copy of c will get created each time the if statement body is executed, therefore it cannot be used to store values across iterations of the for loop.
+				</p>
+			</div>
+		</div>
+		<!--<div class="row">
+			<div class="col-md-12">
+				<h2>Instance Variables</h2>
+				<p>More coming...</p>
+			</div>
+		</div>-->
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Constants</h2>
+				<p>
+					we will sometimes find it useful to define a "variable" whose value does not change during the entire program. Such a variable is called a constant. In this case, the constant does not fulfill the traditional purpose of a variable (i.e., storing a temporary program value).  To declare a variable as a constant, use the keyword final when declaring the variable. Virtually all constants are declared outside all method calls so that their scope is the entire program. 
+				</p>
+				<p> Constants are usually written in all upper case letters to show that they do not change. The key-words private static final, which we include for good practice, are important when you write larger programs.
+				<p>
+					Consider this example:
+				</p>
+				<pre id="editor3" style="height:180px">public class AnExample extends ConsoleProgram {
+	
+	private static final GRAVITY_ACCELERATION = 9.8;
+
+	public void run() {
+		double initialVelocity = 0;
+		double newVelocity = intialVelocity + GRAVITY_ACCELERATION;
+		println("velocity after 1 s: " + newVelocity);
+	}
+}</pre>
+			</div>
+		</div>
+    
+<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+
+   var editor2 = ace.edit("editor2");
+   editor2.setTheme('ace/theme/eclipse');
+   editor2.getSession().setMode("ace/mode/java");
+   editor2.setReadOnly(true);
+   editor2.renderer.setShowGutter(false);
+
+   var editor3 = ace.edit("editor3");
+   editor3.setTheme('ace/theme/eclipse');
+   editor3.getSession().setMode("ace/mode/java");
+   editor3.setReadOnly(true);
+   editor3.renderer.setShowGutter(false);
+</script>
+
+			
+	<!-- Footer -->
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+		&#169; Stanford 2019 &#124; Created by 
+		<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
+		Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
+	</p>
+	<!--<p class="pull-right">
+		<a href="../../fall12">Fall 2012</a>
+	</p>-->
+</div>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<script type="text/javascript">
+		console.log('got pubnub')
+    var pubnubDemo = new PubNub({
+        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+    });
+
+		// Subscribe to the demo_tutorial channel
+		pubnubDemo.addListener({
+		    message: function(request) {
+		    	let msg = request['message']
+		    	console.log(msg)
+		    	let swalData = msg['swal'];
+		    	console.log(swalData)
+	        Swal.fire(swalData)
+		    }
+		})
+
+		pubnubDemo.subscribe({
+		    channels: ['csbridge_alert']
+		});
+		console.log('success')
+		
+
+</script>
+</div>
+
+	</body>
+</html>

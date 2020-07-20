@@ -1,0 +1,15 @@
+{
+  "Id": "Policy1466376114204",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1466376105478",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::www.csbridge.org/*",
+      "Principal": "*"
+    }
+  ]
+}
