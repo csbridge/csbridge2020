@@ -28,10 +28,9 @@ def lookup_table():
 	print("Percent C-14 Remaining: years passed")
 	print("--------------------------")
 
-	percent = 100.0
 	for i in range(20):
+		percent = 100 / (2 ** i)
 		print(str(percent) + "%: " + str(i * C14_HALF_LIFE) + " years")
-		percent /= 2
 
 def calculate_ages():
 	'''
