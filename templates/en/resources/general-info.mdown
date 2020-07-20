@@ -5,6 +5,8 @@ title: General Information
 
 [TOC]
 
+# Big Header
+
 ### Description
 CS106A - Code in Place is a free introductory programming course using the Python language, based on material from the first half of Stanford University's established intro course, CS106A.
 
@@ -48,6 +50,7 @@ What if I don’t have some of these things? The community can help with some of
 
 <hr />
 <!-- Elements of the Course -->
+
 ### Elements of the Course
 <!-- A. Lectures -->
 #### A. <u>Lectures</u>
