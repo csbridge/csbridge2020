@@ -4,8 +4,6 @@ This site uses GitHub pages with a custom domain.  You can find these settings o
 
 Hello world asdfasdfasdfasdfasd
 
-Hi world!!!
-
 ## Website Updates
 
 1. Change any file templates in ```templates/```
