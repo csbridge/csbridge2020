@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+# hello world
+
+
+asdfasdfasdfs
+
 '''
 FILE: compile.py
 ----------------
