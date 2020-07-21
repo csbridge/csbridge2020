@@ -3,7 +3,7 @@ title: Mountain Karel
 credit: Chris Piech
 
 Handouts: [KarelReference]({{pathToRoot}}en/handouts/karel.html)<br/>
-Day2: `mountain_karel.py`
+File: `mountain_karel.py`
 
 
 Karel dreams of climbing mountains. Teach her to get to the top of a mountain of any height. For example, for the following mountain:

@@ -37,7 +37,7 @@ If not, try it out! It will help you organize your code better. We promise :-)
 
 ## Bonus extension
 
-Great job so far! If you have extra time, first make sure that your program works on 1x1 squares as well.
+Great job so far! If you have extra time, first make sure that your program works on 1x1 worlds as well.
 
 Then, try to modify your program to make Karel draw the following square, where all beeper in the square outline do not border any walls. This means that 1x1 and 2x2 worlds will not have any beepers in them.
 
