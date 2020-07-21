@@ -1,13 +1,13 @@
 from karel.stanfordkarel import *
 
 """
-File: newspaper.py
-------------------------------
-At present, this file does nothing.
-Your job in the assignment is to add the necessary code to
-instruct Karel to walk to the door of its house, pick up the
-newspaper (represented by a beeper, of course), and then return
-to its initial position in the upper left corner of the house.
+File: TripleKarel.py
+--------------------
+When you finish writing this file, TripleKarel should be
+able to paint the exterior of three buildings in a given
+world, as described in the Assignment 1 handout. You
+should make sure that your program works for all of the 
+Triple sample worlds supplied in the starter folder.
 """
 
 
