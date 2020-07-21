@@ -144,8 +144,9 @@ def compileTemplate(relativePath):
         # use that.  Otherwise just use the compiled markdown file itself
         if 'template' in md.Meta:
             templateText = open(md.Meta['template'][0]).read()
+            attributes = {key:"\n".join(md.Meta[key]) for key in md.Meta}
             compiledHtml = SimpleTemplate(templateText).render(pathToRoot=pathToRoot,
-            metadata=md.Meta, base=html, filePath=filePath)
+            base=html, filePath=filePath, **attributes)
         else:
             compiledHtml = html
 

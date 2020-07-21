@@ -2,25 +2,24 @@
 Template for rendering a project page, for use with Markdown specs.  Expects
 the following properties passed in:
 
-metadata - the md.Meta object containing the following attributes:
-	metadata['title'][0] - problem title
-	metadata['credit'][0] - problem credit (optional)
-	metadata['solution'][0] - problem solution python filename (optional)
+title - problem title
+credit - problem credit (optional)
+solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
 
-% rebase('templates/en/template.ptl', title=metadata['title'][0])
+% rebase('templates/en/template.ptl', title=title)
 
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		{{metadata['title'][0]}}
+		{{title}}
 	</h1>
 
-	% if 'credit' in metadata:
+	% if defined('credit'):
 		<p>
-			Credit: {{metadata['credit'][0]}}
+			Credit: {{credit}}
 		</p>
 	% end
 </div>
@@ -34,11 +33,11 @@ filePath - the total path to the markdown file being rendered in this template
 </div>
 
 <!-- Solution (if included) -->
-% if 'solution' in metadata:
+% if defined('solution'):
 	<%
 		import os
 		lastSlash = filePath.rfind("/")
-		solutionPath = filePath[:lastSlash] + "/" + metadata['solution'][0]
+		solutionPath = filePath[:lastSlash] + "/" + solution
 		soln = open(solutionPath).read()
 		nLines = len(soln.split('\n')) if len(soln) else 0
   		editorHeight = 20.0 * nLines

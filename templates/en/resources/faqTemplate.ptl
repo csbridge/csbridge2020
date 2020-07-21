@@ -1,19 +1,18 @@
 <!--
-Template for rendering a project page, for use with Markdown specs.  Expects
+Template for rendering an FAQ page, for use with Markdown specs.  Expects
 the following properties passed in:
 
-metadata - the md.Meta object containing the following attributes:
-	metadata['title'][0] - problem title
+title - problem title
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
 
-% rebase('templates/en/template.ptl', title=metadata['title'][0])
+% rebase('templates/en/template.ptl', title=title)
 
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		{{metadata['title'][0]}}
+		{{title}}
 	</h1>
 
 </div>
