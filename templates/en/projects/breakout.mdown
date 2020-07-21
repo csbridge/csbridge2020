@@ -4,7 +4,7 @@ credit: Written by Eric Roberts
 
 Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
 Worked Example: [Stamp Tool]({{pathToRoot}}en/projects/stampTool.html)<br/>
-File: `target.py`
+File: `breakout.py`
 
 Your job in this assignment is to write the classic arcade game of Breakout, which was invented by Steve Wozniak before he founded Apple with Steve Jobs (moment of silence).  It is a large assignment, but entirely manageable as long as you break the problem up into pieces.  
 
