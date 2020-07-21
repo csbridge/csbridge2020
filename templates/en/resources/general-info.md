@@ -5,7 +5,7 @@ title: General Information
 
 [TOC]
 
-# Big Header
+# CS Bridge
 
 ### Description
 CS Bridge is a collaboration between Stanford University in the United States, Czech Technical University in the Czech Republic, and Koç University in Turkey. Lecturers and students from all three universities have come together to teach high school students in Czech Republic and Turkey how to code.
@@ -15,13 +15,13 @@ CS Bridge is a collaboration between Stanford University in the United States, C
 * We've designed the course so that outside of the schedule, you do not need to be on your computer working on the course material. If you want to spend extra time because you're excited about the material, that's okay but it is not necessary.  
 * You will have weekends **off**.
 
-We hope these help you have a great CS Bridge experience:
+We hope these course components will help you have a great CS Bridge experience:
 
 * You will meet (via videoconferencing) <b>in a small group</b>, daily, with someone on the teaching team.
-* The course is centered around <b>engaging assignments</b> and opportunities to get to know other students and the teaching team.
-* You won't receive a grade in the course, so ust enjoy learning and have fun!
+* The course is centered around <b>engaging assignments and projects</b> and other activities to help you meet other students and get to know the teaching team.
+* You won't receive a grade in the course, so just enjoy learning and have fun!
 * The main outcome is that you will have had A LOT of FUN and have acquired **a new and wonderful skill: how to program.**
-* After you've finished the course, you will receive a certificate. 
+* After you've finished the course, you will receive a certificate of completion. 
 
 <hr />
 
@@ -43,7 +43,7 @@ Our goal is to create one community of enthusiastic teachers and students who su
 
 1. An internet connection strong enough to stream video.</li>
 1. <b>Video conferencing software</b> to participate in lecture, office hours, section, and social activities. We will be using Zoom for all program-related activities where we are online together. You can download the <b>"Zoom Client for Meetings" version 5.1.2</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a></li>
-1. The <b>PyCharm development environment</b> to complete assignments. Installation instructions here: <a href="https://codeinplace2020.github.io/faqs/installingPyCharm.html">https://codeinplace2020.github.io/faqs/installingPyCharm.html</a></li>
+1. The <b>PyCharm development environment</b> to complete assignments. Installation instructions here: <span style="color:red;">add link once it's linked on the course webpage</span>
 1. A love of learning and an interest in getting to know other high school students in Turkey and Czech Republic!</li>
 
 What if I don’t have some of these things or don't understand what I'm being asked to do? The best place to ask for questions is on Ed. See below for more information about Ed!
@@ -85,18 +85,18 @@ This is when you'll be able to ask for individual help on your code.
 * You may have to wait in the Zoom until a Section Leader is free to help you. 
 * If you don't have questions, this is the time that you'll spend working on your assignments.
 
-<!-- E. Assignments -->
-#### E. <u>Assignments</u>
+<!-- E. Projects -->
+#### E. <u>Projects</u>
 
-There will be two programming assignments that you will work on each day. The core assignment questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away” (see the <a href='#Honor'>learning with honor section</a>). 
+There will be two programming projects that you will work on each day. The core assignment questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away” (see the <a href='#Honor'>learning with honor section</a>). 
 
-* You will be expected to submit the first assignment by 13:00 (Czech Republic), 14:00 (Turkey) each day and the second assignment by the end of the Office Hours/Work session in the evening. 
+* You will be expected to submit the first project by 13:00 (Czech Republic), 14:00 (Turkey) each day and the second project by the end of the Office Hours/Work session in the evening. 
 * <span style="color:red;">Instructions for completing and submitting assignments will be posted ON ED?? EDIT once know.</span> 
 
 <!-- F. Social Activities -->
 #### E. <u>Social Activities</u>
 
-We want you to learn a lot in this course but we also really want you to have **FUN** and to get to know students from different areas! We also want you to get to know the Section Leaders, not just your own Section Leader!
+We want you to learn a lot in this course but we also really want you to have **FUN** and to get to know students from different schools and areas! We also want you to get to know the Section Leaders, not just your own Section Leader!
 
 * Each week there will be one large social activity for everyone involved in the course, we will host them at different times so check the schedule. 
 * These activities are part of the program so please plan to attend!
@@ -129,10 +129,10 @@ We want you to learn a lot in this course but we also really want you to have **
 </ol>
 
 <hr />
-<!-- Whom to Contact about What -->
-### Whom to Contact about What
+<!-- Whom to Contact About What -->
+### Whom to Contact About What
 <p>
-    This class is taking place across three time zones so it is important that you know who to contact for what and how so that you can get help in a timely manner. Please use the Ed system (<a href='#Communications'>described above</a>) where the section leaders and other students can help you. Some guidelines:
+    This class is taking place across three time zones so it is important that you know who to contact for what and how so that you can get help in a timely manner. Please use the Ed platform (<a href='#Communications'>described above</a>) where the Section Leaders and other students can help you. Some guidelines:
 </p>
 <ul>
     <li>For <b>logistical questions, conceptual and technical questions, or general course conversation</b>, please post a public question on our CS Bridge Ed forum.</li>
@@ -164,7 +164,7 @@ We want you to learn a lot in this course but we also really want you to have **
     <li>If you are having trouble with the course or do not understand something that is communicated, please let us know about it so we can help.</li>
 </ul>
 <p>
-    Lastly, please be considerate. These are tough times for many, so please help your classmates and teachers out. CS Bridge is a learning experience free of unacceptable behavior. Bullying and other activities that have the potential to harm other participants is not allowed and will not be tolerated. Remember, your personal integrity is more important than running a program!
+    Lastly, please be considerate. These are tough times for many, so please help your classmates and teachers out. CS Bridge is a learning experience free of unacceptable behavior. Bullying and other activities that have the potential to harm other participants is not allowed and will not be tolerated. CS Bridge and the community we create is a place all students should feel welcome in.
 </p>
 <p>
 </p>
@@ -173,13 +173,13 @@ We want you to learn a lot in this course but we also really want you to have **
 <!-- Additional Resources -->
 ### Additional Resources
 <!-- Accessibility -->
-#### Accessibility
+#### <span style="color:red;">Accessibility</span>
 <ul>
     <li>We know that our community will have a variety of learning differences and will include many differently abled individuals. If you have a suggestion for how to make learning more accessible for you, feel free to post on Ed or submit recommendations <a href='https://docs.google.com/forms/d/e/1FAIpQLScbGAQjWZhJRKVpsV4SX1XmFHD3Mi_E69M7sNALLApwyw16Eg/viewform'>here</a>.</li>
     <li>If you have an accommodation request that you are not comfortable submitting over a Google form, please email us at codeinplacestaff@gmail.com.</li>
 </ul>
 <!-- Process for reporting misconduct -->
-#### Process for reporting misconduct
+#### <span style="color:red;">Process for reporting misconduct</span>
 <ul>
     <li>While we hope that it will not come into use during the class, we have created a <a href='https://docs.google.com/forms/d/e/1FAIpQLSfFRPFZ45gROMWZcvUP5e-sbFCNTc2nMkQFINIejeJkPCULAg/viewform'>form</a> through which you can submit anonymous reports of any misconduct you encounter while participating in Code in Place. If you would be more comfortable sharing your situation non-anonymously, you can also email us at codeinplacestaff@gmail.com.</li>
     <li>Creating and maintaining a safe and open community is of utmost importance to us, and if the actions or behavior of others (students or staff) make you feel unsafe or unwelcome, we want you to let us know.</li>
