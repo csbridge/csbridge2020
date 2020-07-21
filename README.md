@@ -43,7 +43,7 @@ Attributes are key/value pairs you can include at the top of your file.  If you 
 
 If you include the `template` attribute, your Markdown will be converted to HTML and embedded within the template you specify as via a `rebase` call - in other words, it will not be escaped, and it will be supplied via the `base` property.  The template path should start from `templates/....`.
 
-You can include other Markdown attributes as well, and these will also be sent to the template you specify via the `metadata` property.  `metadata` is a dictionary of your Markdown attributes, where the keys are the attribute names and the values are lists of lines for each attribute.  Finally, the full path to the markdown file being rendered will also be passed to the template via the `filePath` property.
+You can include other Markdown attributes as well, and these will also be sent to the template you specify and accessible in that template.  Finally, the full path to the markdown file being rendered will also be passed to the template via the `filePath` property.
 
 For an example of a Markdown-written page, check out `templates/en/projects/piglet/`, which is a folder representing a problem.  It uses the template at `en/projects/projectTemplate.ptl` and is rendered at `en/projects/piglet/index.html`.  That template supports folders for each project where its writeup is in `index.mdown`, and that writeup should have the following attributes:
 
