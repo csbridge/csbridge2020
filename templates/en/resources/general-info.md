@@ -8,33 +8,33 @@ title: General Information
 # Big Header
 
 ### Description
-CS106A - Code in Place is a free introductory programming course using the Python language, based on material from the first half of Stanford University's established intro course, CS106A.
+CS Bridge is a collaboration between Stanford University in the United States, Czech Technical University in the Czech Republic, and Koç University in Turkey. Lecturers and students from all three universities have come together to teach high school students in Czech Republic and Turkey how to code.
 
 * It assumes **no prior programming experience.**
-* You should expect to be working **15 to 20 hours a week.**
+* This course will follow the **same schedule** each day. 
+* We've designed the course so that outside of the schedule, you do not need to be on your computer working on the course material. If you want to spend extra time because you're excited about the material, that's okay but it is not necessary.  
+* You will have weekends **off**.
 
-This experience is different from typical free online courses for a few reasons. We hope these help you have a great Code in Place experience:
+We hope these help you have a great CS Bridge experience:
 
-* You will meet (via videoconferencing) <b>in a small group</b>, once a week, with someone on the teaching team.
-* The course is centered around <b>engaging assignments</b> and an optional final project.
-* You won't receive a grade in the course, and completing it doesn't earn university credit.
-* Instead, the main outcome is that you will have acquired **a new and wonderful skill: how to program.**
-
+* You will meet (via videoconferencing) <b>in a small group</b>, daily, with someone on the teaching team.
+* The course is centered around <b>engaging assignments</b> and opportunities to get to know other students and the teaching team.
+* You won't receive a grade in the course, so ust enjoy learning and have fun!
+* The main outcome is that you will have had A LOT of FUN and have acquired **a new and wonderful skill: how to program.**
+* After you've finished the course, you will receive a certificate. 
 
 <hr />
 
-<!-- Free course notice -->
-### This is a Free Course run by Volunteers
-We want to do something good for the world. You don’t have to pay anything for it. That is a big deal for how much work we are putting in. In exchange we ask for your patience. Please do keep in mind a few things:
+<!-- CS Bridge Team -->
+### The CS Bridge Team
+The CS Bridge Team is made up of a group of wonderful teachers in **three countries** - Czech Republic, Turkey, and the United States.
 
-1. We are all doing this out of the goodness of our hearts, as volunteer work.
-1. You are a large class. We wanted to support as many free students as possible. This community only works well if you <b>help each other.</b> Teaching is a great way to learn.
-1. This is truly new for us. Everything about coronavirus time is new. We are used to teaching in a physical classroom to Stanford students. We are so excited to go on this adventure.
-1. We have never worked so hard. We are putting in a lot of heart and soul into this course. If something doesn’t go as you hoped, we are truly sorry. And know that we are just trying to do something nice for folks.
+1. Lecturers - These people are current lecturers at all three universities. You will hear from all of them as they take turns delivering lectures each day. 
+1. Section Leaders - These fun people are students from all three universities who are passionate about computer science and serve as great role models. You will be assigned to a small group led by a Section Leader. You'll get to know this person really well throughout the course! 
+1. Program Administrators - There is one person from each university who manages the enrollment process and is the main point of contact between your families and the program. The CS Bridge Program Manager from Stanford will be managing administrative components of the course. 
 
-All that is to say: <b>please be patient and please be kind to your course staff.</b> We have a lot of heart, and we are going to do our best.
-
-Similarly, you might find this course hard. You might not feel like doing all of the work. You might get sick or have personal circumstances come up. And in turn we will be understanding. We know that you are working your hardest, too.
+This is the first time that we are offering CS Bridge online and not in-person. Due to the nature of an online platform, we were able to combine the Turkey and Czech Republic programs which means in addition to meeting students from within your home country, you'll also get to know high school students from another country! 
+Our goal is to create one community of enthusiastic teachers and students who support each other as you all learn a new and exciting skill! 
 
 <hr />
 
@@ -42,45 +42,65 @@ Similarly, you might find this course hard. You might not feel like doing all of
 ### Requirements for the Course
 
 1. An internet connection strong enough to stream video.</li>
-1. <b>Video conferencing software</b> to participate in lecture and section. We have recommended that the section leaders use Zoom, though it is at their discretion to use a similar service. You can download the <b>"Zoom Client for Meetings" version 4.6.10</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a></li>
+1. <b>Video conferencing software</b> to participate in lecture, office hours, section, and social activities. We will be using Zoom for all program-related activities where we are online together. You can download the <b>"Zoom Client for Meetings" version 5.1.2</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a></li>
 1. The <b>PyCharm development environment</b> to complete assignments. Installation instructions here: <a href="https://codeinplace2020.github.io/faqs/installingPyCharm.html">https://codeinplace2020.github.io/faqs/installingPyCharm.html</a></li>
-1. A love of learning!</li>
+1. A love of learning and an interest in getting to know other high school students in Turkey and Czech Republic!</li>
 
-What if I don’t have some of these things? The community can help with some of them (like for PyCharm, see if someone on Ed can help you). If you don't have the capacity for video chat, you should watch each week's recorded section and should be active on the Ed group to get your questions answered.
+What if I don’t have some of these things or don't understand what I'm being asked to do? The best place to ask for questions is on Ed. See below for more information about Ed!
 
 <hr />
 <!-- Elements of the Course -->
 
 ### Elements of the Course
+It is expected that you participate **fully** in the course. You must attend every activity on the schedule.
+ 
 <!-- A. Lectures -->
 #### A. <u>Lectures</u>
-Lectures are held virtually on Mondays, Wednesdays, and Fridays. This is where you’ll learn the core concepts of the class.
+Lectures will be held **twice a day** - there will be one 30 minute lecture at the start of the day and one 30 minute lecture in the evening. The morning lectures will be taught by a lecturer from either Koç University or Czech Technical University and the evening lecture will be taught by a lecturer from Stanford University. This is where you’ll learn the core concepts of the class.
 
-    Video lecture recordings will be posted on the course website. These videos are largely the same as what Stanford students in CS106A would see. If you have any questions about lecture, we will have a thread in Ed. Speaking of Ed:
+* Lectures will be delivered **LIVE** through Zoom and will be recorded and posted on Ed so you can refer back to them later if you need to. What is Ed??? See the Course Communications section below!
 
-<!-- B. Ed Forum -->
-#### B. <u>Ed Forum</u>
+<!-- B. Tea Time -->
+#### B. <u>Tea Time</u>
 
-We have a class discussion forum that is hosted on Ed here: <a href='https://us.edstem.org/'>https://us.edstem.org/</a><br>
-See the Communications section <a href='#Communications'>below</a> for more details on how to get your questions answered.
+This will follow the morning lecture each day. 
+
+* You will be assigned to a small group led by a Section Leader and will have the chance to get to know each other, play games, and talk about course and non-course related things. 
+* Picture yourself drinking tea and sitting around a circle in a room getting to know each other!
 
 <!-- C. Section -->
-#### C. <u>Sections</u>
+#### C. <u>Section</u>
 
-In addition to lectures, <b>you will also be attending a weekly 40-minute discussion section in small groups with a member of our teaching team.</b> This is where you’ll get practice with the new concepts you learned in lecture. You each have a given section leader and a given section time. If for some reason you miss your section, everything is going to be alright: there is a recorded section. For more details see <a href='https://codeinplace2020.github.io/faqs/coursefaqs.html#section'>https://codeinplace2020.github.io/faqs/coursefaqs.html#section</a>
+In addition to two lectures per day, <b>you will also be attending a daily discussion section in small groups with a Section Leader.</b> 
 
-We will give you more details on how to join your live section on Tuesday, April 14th.
+* This is where you’ll get to practice with the new concepts you learned in lecture. 
+* You will meet with the same group of students and will have the same Section Leader each day.
 
+<!-- D. Office Hours/Work -->
+#### D. <u>Office Hours/Work</u>
 
-<!-- D. Readings -->
-#### D. <u>Readings</u>
+This is when you'll be able to ask for individual help on your code. 
 
-For some people, readings are a better way of learning than lectures! We will have readings to go along with the course. We will try to keep them simple and straight to the point. If there was something in lecture you found confusing, please check out the reading. To get started, your first reading is to finish the rest of the “Karel Reader”.
-
+* If you need help, you'll join the Office Hours Zoom call and Section Leaders will be there to answer your questions. 
+* You may have to wait in the Zoom until a Section Leader is free to help you. 
+* If you don't have questions, this is the time that you'll spend working on your assignments.
 
 <!-- E. Assignments -->
 #### E. <u>Assignments</u>
-    There will be four programming assignments in this course: three core assignments and a final project. The core assignment questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away” (see the <a href='#Honor'>learning with honor section</a>). Instructions for completing and submitting assignments will be posted on the course website April 19th.
+
+There will be two programming assignments that you will work on each day. The core assignment questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away” (see the <a href='#Honor'>learning with honor section</a>). 
+
+* You will be expected to submit the first assignment by 13:00 (Czech Republic), 14:00 (Turkey) each day and the second assignment by the end of the Office Hours/Work session in the evening. 
+* <span style="color:red;">Instructions for completing and submitting assignments will be posted ON ED?? EDIT once know.</span> 
+
+<!-- F. Social Activities -->
+#### E. <u>Social Activities</u>
+
+We want you to learn a lot in this course but we also really want you to have **FUN** and to get to know students from different areas! We also want you to get to know the Section Leaders, not just your own Section Leader!
+
+* Each week there will be one large social activity for everyone involved in the course, we will host them at different times so check the schedule. 
+* These activities are part of the program so please plan to attend!
+* We are going to try really hard to make this program memorable and a lot of fun and hopefully you'll turn off your computer on the last day knowing that you have a lot of new friends in different places! 
 
 <hr />
 
@@ -89,35 +109,36 @@ For some people, readings are a better way of learning than lectures! We will ha
 <!-- A. Course Website -->
 #### A. <u>Course Website</u>
 <p>
-    The class web page is: <a href='https://compedu.stanford.edu/codeinplace/v1/#/course'>https://compedu.stanford.edu/codeinplace/v1/#/course</a><br>
+    The class web page is: <a href='http://online.csbridge.org/'>http://online.csbridge.org/</a><br>
     You should regularly check the class website for handouts, announcements and other information, including the most up-to-date information on assignments.
 </p>
 <!-- B. Class Discussion Forum -->
 #### B. <u>Class Discussion Forum</u>
 <p>
     Our class discussion forum is hosted on Ed here: <a href='https://us.edstem.org/'>https://us.edstem.org/</a><br>
-    You will be enrolled in two Ed groups:
+    All communication with the teaching team and students will take place in Ed. **Do not share personal contact information with anyone in the course.**
+    <p>You will be enrolled in two Ed groups:</p>
 </p>
 <ol>
-    <li><b>“Code in Place”: the main discussion group.</b></li>
+    <li><b>“CS Bridge”: the main discussion group.</b></li>
     <!-- TODO Fix alignment to be all the way left aligned -->
     This is where you should post questions you have (conceptual, technical, etc.) and where we’ll post announcements about the course. Please answer your classmates’ questions, too! Before posting a question, check if it has been asked already (and if so, read the answer to <i>that</i> post!). We may not answer duplicate questions.
     <li><b>Your discussion section’s Ed group.</b></li>
     <!-- TODO Fix alignment to be all the way left aligned -->
-    This is specifically for your section. If you need to get in touch specifically with your section leader, make a private post (to staff only) in this group. For more general questions, use the main Ed instead. Your section leader is a volunteer and as such might take a while to answer your question. Please be patient with them.
+    This is specifically for your section. If you need to get in touch with your Section Leader, make a private post (to staff only) in this group. You can also post to the whole section if you want the other students in your section to see. For more general questions not related to your section, use the main CS Bridge Ed group instead.
 </ol>
 
 <hr />
 <!-- Whom to Contact about What -->
 ### Whom to Contact about What
 <p>
-    This class is a massive community service project. We are supporting ten thousand learners from around the world. As such, emailing us personally won’t work. Instead, please use the Ed system (<a href='#Communications'>described above</a>) where the section leaders and other students can help you. Some guidelines:
+    This class is taking place across three time zones so it is important that you know who to contact for what and how so that you can get help in a timely manner. Please use the Ed system (<a href='#Communications'>described above</a>) where the section leaders and other students can help you. Some guidelines:
 </p>
 <ul>
-    <li>For <b>logistical questions, conceptual and technical questions, or general course conversation</b>, please post a public question on our Code in Place Ed forum.</li>
-    <li>For <b>personal concerns or issues</b>, please make a private post in the Code in Place Ed.</li>
-    <li>To <b>send a message to your section leader</b>, make a private post in your section’s Ed. Recall that your section leader is a volunteer so this is a slow option.</li>
-    <li>For <b>major personal issues or concerns</b>, please email codeinplacestaff@gmail.com. We will need several days to get back to you -- so this is a very slow option.</li>
+    <li>For <b>logistical questions, conceptual and technical questions, or general course conversation</b>, please post a public question on our CS Bridge Ed forum.</li>
+    <li>For <b>personal concerns or issues</b>, please make a private post in the CS Bridge Ed.</li>
+    <li>To <b>send a message to your Section Leader</b>, make a private post in your section’s Ed.</li>
+    <li> <span style="color:red;">For <b>major personal issues or concerns</b>, please email EDIT THIS ONCE HAVE THE ANSWER. We will need several days to get back to you -- so this is a very slow option.</span> </li>
 </ul>
 
 
@@ -126,26 +147,26 @@ For some people, readings are a better way of learning than lectures! We will ha
 ### Frequently Asked Questions
 <p>
     <b>We will answer your questions as they come up.</b><br>
-    Please see: <a href='https://codeinplace2020.github.io/faqs/coursefaqs.html'>https://codeinplace2020.github.io/faqs/coursefaqs.html</a>
+    Please see: <a href='http://online.csbridge.org/en/resources/student-faq.html'>http://online.csbridge.org/en/resources/student-faq.html</a>
 </p>
 
 <hr />
 <!-- Learning with Honor -->
 ### Learning With Honor
 <p>
-    Value your own personal integrity -- it is of more importance than anything we learn in this class. We expect every student to abide by the letter and spirit of the honor code, which everybody signed before joining this course. Some guidelines:
+    Value your own personal integrity -- it is of more importance than anything we learn in this class. We expect every student to engage honestly and fully in the course. Some guidelines:
 </p>
 <ul>
     <li>We value humanity, intellectual joy, social connection, new skills, and gratitude.</li>
     <li>Teach each other! We are all in this for one another.</li>
     <li>Avoid publicly posting your solution code to assignments on the Ed forums. We want everybody to get a chance to discover their own solution.</li>
     <li>Be welcoming. We are a diverse and wonderful community.</li>
+    <li>If you are having trouble with the course or do not understand something that is communicated, please let us know about it so we can help.</li>
 </ul>
 <p>
-    Lastly, please be considerate. These are tough times for many, so please help your classmates and teachers out. We’re all here to learn about the joys of programming and are very excited to have all of you be a part of this. Code in Place is a learning experience free of unacceptable behavior. If you are having trouble with the course, please let us know about it so we can help. Remember, your personal integrity is more important than running a program!
+    Lastly, please be considerate. These are tough times for many, so please help your classmates and teachers out. CS Bridge is a learning experience free of unacceptable behavior. Bullying and other activities that have the potential to harm other participants is not allowed and will not be tolerated. Remember, your personal integrity is more important than running a program!
 </p>
 <p>
-    Note: we reserve the right to dismiss participants from the course if issues arise.
 </p>
 
 <hr />
