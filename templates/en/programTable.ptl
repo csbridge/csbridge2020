@@ -62,7 +62,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/project.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/project.html">Make Your Own</a>
-            <br/><span class="label label-success">Activity</span>
+            <br/><span class="label label-success">Project</span>
         </td>
 				<td>All</td>
 			</tr>
@@ -103,7 +103,7 @@
       <tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/snow.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/snow.html">(old) Snow</a>
-        <br/><span class="label label-success">Activity</span>
+        <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/snow.html">TA Solution</a>
 					% end
@@ -117,7 +117,7 @@
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/lineGame.html">TA Solution</a>
 					% end
-          <br/><span class="label label-success">Activity</span>
+          <br/><span class="label label-success">Project</span>
           </td>
 				<td>ArrayLists</td>
 			</tr>
@@ -158,7 +158,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/phonebook.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/phonebook.html">Phone Book</a>
-        <br/><span class="label label-success">Activity</span>
+        <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/phonebook.html">TA Solution</a>
 					% end
@@ -192,7 +192,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/breakout.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/breakout.html">Breakout!</a>
-        <br/><span class="label label-success">Activity</span>
+        <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/breakout.html">TA Solution</a>
 					% end
@@ -224,7 +224,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mouseLocation.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/mouseLocation.html">Mouse Location (Lab)</a>
-          <br/><span class="label label-default">Try it out</span>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/mouseLocation.html">TA Solution</a>
 					% end
@@ -237,7 +237,7 @@
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/makingTracks.html">TA Solution</a>
 					% end
-        <br/><span class="label label-success">Activity</span>
+        <br/><span class="label label-success">Project</span>
 				</td>
 				<td>Events</td>
 			</tr>
@@ -254,7 +254,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/isAscending.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/isAscending.html">Is Ascending</a>
-          <br/><span class="label label-default">Try it out</span>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/isAscending.html">TA Solution</a>
 					% end
@@ -264,7 +264,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sorted.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/sorted.html">Sorted Numbers</a>
-          <br/><span class="label label-default">Try it out</span>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/sorted.html">TA Solution</a>
 					% end
@@ -274,7 +274,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/catchMeIfYouCan.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/catchMeIfYouCan.html">Catch Me If You Can (Section)</a>
-          <br/><span class="label label-success">Activity</span>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/catchMeIfYouCan.html">TA Solution</a>
 					% end
@@ -307,7 +307,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/indexCounter.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/indexCounter.html">Index counter</a>
-          <br/><span class="label label-default">Try it out</span>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/indexCounter.html">TA Solution</a>
 					% end
@@ -317,7 +317,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/illusion.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/illusion.html">Optical Illusion</a>
-          <br/><span class="label label-success">Activity</span>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/illusion.html">TA Solution</a>
 					% end
@@ -336,7 +336,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/moveToCenter.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/moveToCenter.html">Move to center</a>
-          <br/><span class="label label-default">Try it out</span>
+          <br/><span class="label label-default">Quickstart</span>
 				</td>
 				<td>Animation</td>
 			</tr>
@@ -354,7 +354,7 @@
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sunset.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/shortFilm.html">Short Film</a>
-          <br/><span class="label label-success">Activity</span>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/shortFilm.html">TA Solution</a>
 					% end
@@ -386,7 +386,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/awesome.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/programmingIsAwesome.html">Programing is Awesome</a>
-          <br/><span class="label label-default">Try it out</span>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/programmingIsAwesome.html">TA Solution</a>
 					% end
@@ -396,7 +396,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mysterySquare.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/mysterySquare.html">Mystery Square</a>
-          <br/><span class="label label-success">Activity</span>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/mysterySquare.html">TA Solution</a>
 					% end
@@ -415,7 +415,7 @@
 	    <tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/stringArt.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/stringArt.html">(old) String Art</a>
-          <br/><span class="label label-success">Activity</span>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/stringArt.html">TA Solution</a>
 					% end
@@ -426,7 +426,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/dogYears.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/dogYears.html">Dog Years</a>
-          <br/><span class="label label-default">Try it out</span>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/dogYears.html">TA Solution</a>
 					% end
@@ -457,7 +457,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomCircles.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/randomCircles.html">Random Circles</a>
-          <br/><span class="label label-success">Activity</span>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/randomCircles.html">TA Solution</a>
 					% end
@@ -468,7 +468,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/madMax.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/madMethods.html">(old) Mad Methods</a>
-          <br/><span class="label label-success">Activity</span>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/madMethods.html">TA Solution</a>
 					% end
@@ -502,7 +502,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/someSum.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/someSum.html">(old) That's Some Sum</a>
-          <br/><span class="label label-default">Try it out</span>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/someSum.html">TA Solution</a>
 					% end
@@ -513,7 +513,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/nim.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/nimm.html">Game of Nimm</a>
-          <br/><span class="label label-success">Activity</span>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/nimm.html">TA Solution</a>
 					% end
@@ -547,7 +547,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sandcastle.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/sandcastles.html">Sandcastles</a>
-          <br/><span class="label label-default">Try it out</span>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/sandcastles.html">TA Solution</a>
 					% end
@@ -557,7 +557,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/subtractNum.jpg"></img></td>
         <td><a href="{{pathToRoot}}en/projects/subtractNum.html">Subtract Numbers</a>
-          <br/><span class="label label-success">Activity</span>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/subtractNum.html">TA Solution</a>
 					% end
@@ -577,7 +577,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/8ball.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/8ball.html">8 Ball</a>
-          <br/><span class="label label-default">Try it out<span>
+          <br/><span class="label label-default">Quickstart<span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/8ball.html">TA Solution</a>
 					% end
@@ -609,7 +609,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/khansole.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/khansole.html">Khansole Academy</a>
-          <br/><span class="label label-success">Activity</span>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/khansole.html">TA Solution</a>
 					% end
@@ -630,7 +630,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/medicine.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/medicine.html">(old) Medicine Counterfeiting</a>
-          <br/><span class="label label-success">Activity</span>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/medicine.html">TA Solution</a>
 					% end
@@ -666,7 +666,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/fillRow.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/fillRow.html">Fill Row</a>
-          <br/><span class="label label-default">Try it out</span>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/fillRow.html">TA Solution</a>
 					% end
@@ -677,7 +677,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mountain.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/mountain.html">Mountain Karel</a>
-          <br/><span class="label label-success">Activity</span>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/mountain.html">TA Solution</a>
 					% end
@@ -697,7 +697,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/placeSquare.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/placeSquare.html">Place Square</a>
-          <br/><span class="label label-default">Try it out</span>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/placeSquare.html">TA Solution</a>
 					% end
@@ -716,8 +716,9 @@
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomPainter2.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/randompainter.html">Random Painter</a>
-          <br/><span class="label label-success">Activity</span>
+				<td><a href="{{pathToRoot}}en/projects/randomPainter.html">Random Painter</a>
+          <br/><span class="label label-success">Project</span>
+
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/randomPainter.html">TA Solution</a>
 					% end
@@ -744,7 +745,7 @@
 			<tr>
         <td><img class="projectImg" src="{{pathToRoot}}img/icons/newspaper.jpg"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/collectNewspaper.html">Collect Newspaper</a>
-          <br/><span class="label label-default">Try it out</span>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/collectNewspaper.html">TA Solution</a>
 					% end
