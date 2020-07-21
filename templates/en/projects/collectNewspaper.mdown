@@ -4,7 +4,7 @@ credit: Based on a handout by Eric Roberts
 
 Handouts: [Karel Reference]({{pathToRoot}}en/handouts/karel.html)<br/>
 Worked Example: [StepUp]({{pathToRoot}}en/projects/stepUp.html)<br/>
-File: `collect_newspaper.py`
+File: `newspaper.py`
 
 Your first task is to solve a simple story-problem in Karel's world.  Suppose that Karel has settled into its house, which is the square area in the center of the following diagram:
 
@@ -22,3 +22,4 @@ You can assume that every part of the world looks just as it does in the diagram
 
 
 Even though the program is only a few lines, it is still worth getting at least a little practice in decomposition.  In your solution, include a private method for each of the steps shown in the outline.
+
