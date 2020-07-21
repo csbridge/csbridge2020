@@ -582,7 +582,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/8ball.html">TA Solution</a>
 					% end
 				</td>
-				<td>Concatenation</td>
+				<td>Control flow</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/runningSum.png"></img></td>
@@ -592,7 +592,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/runningSum.html">TA Solution</a>
 					% end
 				</td>
-				<td>Concatenation</td>
+				<td>Variables</td>
 			</tr>
 
 			<tr>
@@ -603,7 +603,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/viralVideo.html">TA Solution</a>
 					% end
 				</td>
-				<td>Concatenation</td>
+				<td>Variables</td>
 			</tr>
 
 			<tr>
@@ -614,7 +614,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/khansole.html">TA Solution</a>
 					% end
 				</td>
-				<td>Concatenation</td>
+				<td>Variables</td>
 			</tr>
 
 
@@ -635,7 +635,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/medicine.html">TA Solution</a>
 					% end
 				</td>
-				<td>Concatenation</td>
+				<td>Variables</td>
 			</tr>
 
 		</tbody>
@@ -664,14 +664,14 @@
       </tr>
 
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/fillRow.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/fillRow.html">Fill Row</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/placeSquare.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/placeSquare.html">Place Square</a>
           <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/fillRow.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/placeSquare.html">TA Solution</a>
 					% end
 				</td>
-				<td>While Loops</td>
+				<td>While loops</td>
 			</tr>
 
 			<tr>
@@ -695,14 +695,14 @@
       </tr>
 
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/placeSquare.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/placeSquare.html">Place Square</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/stripeKarel.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/stripeKarel.html">Stripe Karel</a>
           <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/placeSquare.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/stripeKarel.html">TA Solution</a>
 					% end
 				</td>
-				<td>Nested loops</td>
+				<td>Nested Loops</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/hospitalKarel.png"></img></td>

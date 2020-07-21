@@ -227,7 +227,7 @@
 	          	<li class="dropdown-header">Day 1</li>
 	          	<li><a href="../../en/projects/stepUp.html">Step Up</a></li>
 	          	<li><a href="../../en/projects/place100.html">Place 100</a></li>
-	          	<li><a href="../../en/projects/beeperLine.html">Beeper Line</a></li>
+	          	<li><a href="../../en/projects/beeperLine/index.html">Beeper Line</a></li>
 	          	<li><a href="../../en/projects/invert.html">Invert</a></li>
 	          	<li><a href="../../en/projects/unKarel.html">UN Karel</a></li>
 	          	<li><a href="../../en/projects/banishWinter.html">Banish Winter</a></li>
@@ -392,7 +392,7 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Lisa Yan
+			Credit: Written by Chris Piech
 		</p>
 </div>
 <hr/>
@@ -400,11 +400,36 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../en/handouts/karel.html">KarelReference</a><br/>
-Worked Examples: <a href="../../en/projects/invert.html">Invert</a>, <a href="../../en/projects/unkarel/index.html">UN Karel</a><br/>
-Day1: <code>place_square.py</code></p>
-<p>What is this supposed to be?????</p>
-<p>Place five items....but where....</p>
+		<p>Handouts: <a href="../../en/handouts/karel.html">Karel Reference</a><br/>
+File: <code>square_karel.py</code></p>
+<p>Your goal is to place an outline of beepers in Karel's world, like below.</p>
+<p><center>
+    <img style="width:600px"  src="../../img/projects/placeSquare/world1.png"><br />
+</center></p>
+<p>You can assume:</p>
+<ul>
+<li>Karel starts on the bottom left of the world, facing east.</li>
+<li>Karel's world is rectangular or square.</li>
+</ul>
+<p>Your program should also work for worlds of different sizes, like below:</p>
+<p><center>
+    <img style="width:600px"  src="../../img/projects/placeSquare/world2.png"><br />
+</center></p>
+<h2 id="writing-code-for-humans">Writing code for humans</h2>
+<p><strong>Decomposition</strong>. Remember, you can define functions with meaningful names and call those. Try looking at the <a href="../../en/projects/beeperLine/index.html">Beeper Line</a> worked example as a starting point when writing a helper function, and see what needs to be modified.</p>
+<p><strong>Using loops</strong>. Does your program use a <code>for</code> loop, like below?</p>
+<pre><code>for i in range(4):
+    # your code here
+</code></pre>
+
+<p>If not, try it out! It will help you organize your code better. We promise :-)</p>
+<h2 id="bonus-extension">Bonus extension</h2>
+<p>Great job so far! If you have extra time, first make sure that your program works on 1x1 squares as well.</p>
+<p>Then, try to modify your program to make Karel draw the following square, where all beeper in the square outline do not border any walls. This means that 1x1 and 2x2 worlds will not have any beepers in them.</p>
+<p>This part is purely optional.</p>
+<p><center>
+    <img style="width:600px"  src="../../img/projects/placeSquare/bonus.png"> <br />
+</center></p>
 	</div>
 </div>
 

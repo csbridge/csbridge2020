@@ -1,11 +1,11 @@
 from karel.stanfordkarel import *
 
 """
-File: build_arches.py
-------------------------
-When you finish writing code in this file, Karel should 
-solve the "repair the quad" problem. You
-should make sure that your program works for all of the 
+File: CheckerboardKarel.py
+----------------------------
+When you finish writing it, CheckerboardKarel should draw
+a checkerboard using beepers, as described in Assignment 1. 
+You should make sure that your program works for all of the 
 sample worlds supplied in the starter folder.
 """
 

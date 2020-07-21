@@ -1,0 +1,33 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Stripe Karel
+credit: Written by Chris Piech
+
+Handouts: [Karel Reference]({{pathToRoot}}en/handouts/karel.html)<br/>
+File: `stripe_karel.py`
+
+Your goal is to fill every odd row of Karel's world with beepers.
+For example, if you ran your program on the world on the left, it should produce the world on the right.
+
+<center>
+	<img style="width:600px"  src="{{pathToRoot}}img/projects/stripeKarel/world1.png">	
+</center>
+
+You can assume:
+
+* Karel starts on the bottom left of the world, facing east.
+* There are an odd-number of rows (so Karel places beepers on rows 1, 3, 5, and so on).
+
+Your program should also work for worlds of different sizes. For example if we run the EXACT same program on this slightly larger world, Karel should still be able to place stripes of beepers without crashing. This means we can't use a for loop. We don't know before hand how big the world is going to be!
+
+<center>
+	<img style="width:600px"  src="{{pathToRoot}}img/projects/stripeKarel/world2.png">	
+</center>
+
+Note that Karel should still work on the below world as well:
+
+<center>
+	<img style="width:600px"  src="{{pathToRoot}}img/projects/stripeKarel/world3.png">	
+</center>
+
+
+

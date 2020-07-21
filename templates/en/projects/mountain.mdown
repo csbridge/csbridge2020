@@ -3,8 +3,7 @@ title: Mountain Karel
 credit: Chris Piech
 
 Handouts: [KarelReference]({{pathToRoot}}en/handouts/karel.html)<br/>
-Worked Examples: [Beeper Line]({{pathToRoot}}en/projects/beeperLine.html)<br/>
-Day1: `mountain.py`
+Day2: `mountain_karel.py`
 
 
 Karel dreams of climbing mountains. Teach her to get to the top of a mountain of any height. For example, for the following mountain:
@@ -31,9 +30,10 @@ Unlike the previous problems, you are <b>not</b> guaranteed the height of the mo
 </p>
 
 You can assume:
-* Karel starts on the bottom left of the world, facing east.</li>
-* There is one space (on the left and the right) between the mountain and the world boundry. </li>
-* The mountain is at least one square high.</li>
-* The mountain consists of steps that are 1 space big up/down and left/right.</li>
+
+* Karel starts on the bottom left of the world, facing east.
+* There is one space (on the left and the right) between the mountain and the world boundry.
+* The mountain is at least one square high.
+* The mountain consists of steps that are 1 space big up/down and left/right.<
 
 Use while loops.

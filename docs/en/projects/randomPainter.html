@@ -227,7 +227,7 @@
 	          	<li class="dropdown-header">Day 1</li>
 	          	<li><a href="../../en/projects/stepUp.html">Step Up</a></li>
 	          	<li><a href="../../en/projects/place100.html">Place 100</a></li>
-	          	<li><a href="../../en/projects/beeperLine.html">Beeper Line</a></li>
+	          	<li><a href="../../en/projects/beeperLine/index.html">Beeper Line</a></li>
 	          	<li><a href="../../en/projects/invert.html">Invert</a></li>
 	          	<li><a href="../../en/projects/unKarel.html">UN Karel</a></li>
 	          	<li><a href="../../en/projects/banishWinter.html">Banish Winter</a></li>
@@ -401,8 +401,8 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<p>Handouts: <a href="../../en/handouts/karel.html">KarelReference</a><br/>
-Worked Examples: <a href="../../en/projects/invert.html">Invert</a>, <a href="../../en/projects/unkarel/index.html">UN Karel</a><br/>
-Day1: <code>random_painter.py</code></p>
+Worked Examples: <a href="../../en/projects/invert/index.html">Invert</a>, <a href="../../en/projects/unkarel/index.html">UN Karel</a><br/>
+Day1: <code>random_painter_karel.py</code></p>
 <h2 id="problem">Problem</h2>
 <p>Karel is starting to find her world too black and white. Help her fill it with color.
 <p>
@@ -423,8 +423,8 @@ Day1: <code>random_painter.py</code></p>
 <code><span style="color:blue;">"blue"</span></code>, 
 <code><span style="color:magenta;">"magenta"</span></code>,
 and so on. So you can call <code>paint_corner("red")</code> to paint the square that Karel is standing on into a red square.</p>
-<p>Karel also defines a new condition random, which is true half the time, but in an unpredictable way. Like flipping a coin, sometimes it is true and sometimes it is false. For example the code </p>
-<pre><code>if random.random()
+<p>We'll talk about randomness later, but for now know that we want to draw one of two colors, and we need to do so randomly in Karel. The new condition <code>random.randint(0, 1)</code> is a condition that is True half of the time, but in an unpredictable (random) way. Like flipping a coin, sometimes this condition is <code>True</code> and sometimes it is `False. For example, the code</p>
+<pre><code>if random.randint(0, 1):
     put_beeper()
 </code></pre>
 

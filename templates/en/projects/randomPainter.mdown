@@ -3,8 +3,8 @@ title: Random Painter
 credit: Chris Piech
 
 Handouts: [KarelReference]({{pathToRoot}}en/handouts/karel.html)<br/>
-Worked Examples: [Invert]({{pathToRoot}}en/projects/invert.html), [UN Karel]({{pathToRoot}}en/projects/unkarel/index.html)<br/>
-Day1: `random_painter.py`
+Worked Examples: [Invert]({{pathToRoot}}en/projects/invert/index.html), [UN Karel]({{pathToRoot}}en/projects/unkarel/index.html)<br/>
+Day1: `random_painter_karel.py`
 
 ## Problem
 Karel is starting to find her world too black and white. Help her fill it with color.
@@ -27,9 +27,10 @@ The value enclosed in the parentheses is called an argument in the terminology o
 <code><span style="color:magenta;">"magenta"</span></code>,
 and so on. So you can call `paint_corner("red")` to paint the square that Karel is standing on into a red square.
 
-Karel also defines a new condition random, which is true half the time, but in an unpredictable way. Like flipping a coin, sometimes it is true and sometimes it is false. For example the code 
+We'll talk about randomness later, but for now know that we want to draw one of two colors, and we need to do so randomly in Karel. The new condition `random.randint(0, 1)` is a condition that is True half of the time, but in an unpredictable (random) way. Like flipping a coin, sometimes this condition is `True` and sometimes it is `False. For example, the code
+
 ```
-if random.random()
+if random.randint(0, 1):
     put_beeper()
 ```
 will place a beeper (or will not) with equal probability.

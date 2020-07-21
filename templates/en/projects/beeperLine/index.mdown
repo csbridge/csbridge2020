@@ -1,0 +1,19 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Beeper Line
+credit: Written by Chris Piech
+solution: soln.py
+
+Handouts: [Karel Reference]({{pathToRoot}}en/handouts/karel.html)<br/>
+File: `beeper_line_karel.py`
+
+Your goal is to fill the first row of Karel's world with beepers. You can assume that Karel starts in the bottom left corner, facing east. For example, if you ran your program on the world on the left, it should produce the world on the right.
+
+<center>
+	<img style="width:600px"  src="{{pathToRoot}}img/projects/beeperLine/beeperLine1.png">	
+</center>
+
+Your program should also work for worlds of different sizes. For example if we run the EXACT same program on this slightly larger world, Karel should still be able to place a full line of beepers without crashing. This means we can't use a for loop. We don't know before hand how big the world is going to be!
+
+<center>
+	<img style="width:700px"  src="{{pathToRoot}}img/projects/beeperLine/beeperLine2.png">	
+</center>
