@@ -20,6 +20,7 @@ import os
 import traceback as tb
 import inspect
 import importlib.util
+import random
 import sys
 
 
@@ -228,6 +229,7 @@ class KarelApplication(tk.Frame):
 		self.mod.right_is_blocked = self.karel.right_is_blocked
 		self.mod.paint_corner = self.corner_action_decorator(self.karel.paint_corner)
 		self.mod.corner_color_is = self.karel.corner_color_is
+		self.mod.random = KarelApplication.random
 
 	def disable_buttons(self):
 		self.program_control_button.configure(state="disabled")
@@ -296,4 +298,7 @@ class KarelApplication(tk.Frame):
 
 		# Make sure program control button is set to 'run' mode
 		self.program_control_button["text"] = "Run Program"
-		self.program_control_button["command"] = self.run_program 
+		self.program_control_button["command"] = self.run_program
+
+	def random(p):
+		return random.random() < p

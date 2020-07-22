@@ -85,9 +85,6 @@
 	          	<li class="visible-after" data-visible-after="2019071012">
 	          		<a href="{{pathToRoot}}en/projects/favoriteNumber.html">Favorite Number</a>
 	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071012">
-	          		<a href="{{pathToRoot}}en/projects/medicine.html">Medicine</a>
-	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071013">
 	          		<a href="{{pathToRoot}}en/projects/someSum.html">Some Sum</a>
 	          	</li>
@@ -194,8 +191,13 @@
 	            <li class="visible-after" data-visible-after="2019071009">
 	            	<a href="{{pathToRoot}}en/projects/findPi.html">Find Pi</a>
 	            </li>
+              <!-- Used to be a main course component -->
 	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="{{pathToRoot}}en/projects/8Ball.html">8-Ball</a>
+	            	<a href="{{pathToRoot}}en/projects/favoriteNumber/index.html">Favorite Number</a>
+	            </li>
+              <!-- Used to be a main course component -->
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="{{pathToRoot}}en/projects/medicine/index.html">Counterfeit Medicine</a>
 	            </li>
             	
             	<li class="divider visible-after" data-visible-after="2019071109" />
@@ -203,8 +205,13 @@
 	            <li class="visible-after" data-visible-after="2019071109">
 	            	<a href="{{pathToRoot}}en/projects/robotFace.html">Robot Face</a>
 	            </li>
+              <!-- Used to be a main course component -->
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="{{pathToRoot}}en/projects/medicine/index.html">Counterfeit Medicine</a>
+	            </li>
+            	<li class="divider visible-after" data-visible-after="2019071109" />
 	            <li class="visible-after" data-visible-after="2019071109">
-	            	<a href="{{pathToRoot}}en/projects/goCenter.html">Go To Center</a>
+	            	<a href="{{pathToRoot}}en/projects/moveToCenter.html">Move To Center</a>
 	            </li>
 	            <li class="visible-after" data-visible-after="2019071109">
 	            	<a href="{{pathToRoot}}en/projects/gravityBall.html">Gravity Ball</a>

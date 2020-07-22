@@ -135,9 +135,6 @@
 	          	<li class="visible-after" data-visible-after="2019071012">
 	          		<a href="../../en/projects/favoriteNumber.html">Favorite Number</a>
 	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071012">
-	          		<a href="../../en/projects/medicine.html">Medicine</a>
-	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071013">
 	          		<a href="../../en/projects/someSum.html">Some Sum</a>
 	          	</li>
@@ -244,8 +241,13 @@
 	            <li class="visible-after" data-visible-after="2019071009">
 	            	<a href="../../en/projects/findPi.html">Find Pi</a>
 	            </li>
+              <!-- Used to be a main course component -->
 	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="../../en/projects/8Ball.html">8-Ball</a>
+	            	<a href="../../en/projects/favoriteNumber/index.html">Favorite Number</a>
+	            </li>
+              <!-- Used to be a main course component -->
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a>
 	            </li>
             	
             	<li class="divider visible-after" data-visible-after="2019071109" />
@@ -253,8 +255,13 @@
 	            <li class="visible-after" data-visible-after="2019071109">
 	            	<a href="../../en/projects/robotFace.html">Robot Face</a>
 	            </li>
+              <!-- Used to be a main course component -->
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a>
+	            </li>
+            	<li class="divider visible-after" data-visible-after="2019071109" />
 	            <li class="visible-after" data-visible-after="2019071109">
-	            	<a href="../../en/projects/goCenter.html">Go To Center</a>
+	            	<a href="../../en/projects/moveToCenter.html">Move To Center</a>
 	            </li>
 	            <li class="visible-after" data-visible-after="2019071109">
 	            	<a href="../../en/projects/gravityBall.html">Gravity Ball</a>
@@ -469,7 +476,10 @@ colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 </code></pre>
 
 <p>If you get all overlapping objects in this rectangle, you will be returned a list. In that list will be the <code>ball</code>, as well as any object that the ball is currently colliding with. To test if a colliding object is the ball, you can simply check if the element is <code>==</code> to your ball variable.</p>
-<p>If the ball collides with the paddle, you need to bounce the ball so that it starts traveling up.  If it isn't the paddle, the only other thing it might be is a brick, since those are the only other objects in the world.  Once again, you need to cause a bounce in the vertical direction (flip the direction of the <code>change_y</code> variable), but you also need to take the brick away.  To do so, all you need to do is remove it from the screen by calling the remove method.</p>
+<p>If the ball collides with the paddle, you need to bounce the ball so that it starts traveling up.  If it isn't the paddle, the only other thing it might be is a brick, since those are the only other objects in the world.  Once again, you need to cause a bounce in the vertical direction (flip the direction of the <code>change_y</code> variable), but you also need to take the brick away.  To do so, all you need to do is remove it from the screen by calling the <code>delete</code> method:</p>
+<pre><code>canvas.delete(square) # deletes the object called square
+</code></pre>
+
 <h2 id="extra-touches"><span style="color:blue">Extra Touches</span></h2>
 <p>If you've gotten to here, you've done all the hard parts.  There are, however, a few more details you could take into account if you have time.</p></p>
 <ol>

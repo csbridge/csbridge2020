@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Go to Center</title>
+<title>CS Bridge  | Making Tracks</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -135,9 +135,6 @@
 	          	<li class="visible-after" data-visible-after="2019071012">
 	          		<a href="../../en/projects/favoriteNumber.html">Favorite Number</a>
 	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071012">
-	          		<a href="../../en/projects/medicine.html">Medicine</a>
-	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071013">
 	          		<a href="../../en/projects/someSum.html">Some Sum</a>
 	          	</li>
@@ -244,8 +241,13 @@
 	            <li class="visible-after" data-visible-after="2019071009">
 	            	<a href="../../en/projects/findPi.html">Find Pi</a>
 	            </li>
+              <!-- Used to be a main course component -->
 	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="../../en/projects/8Ball.html">8-Ball</a>
+	            	<a href="../../en/projects/favoriteNumber/index.html">Favorite Number</a>
+	            </li>
+              <!-- Used to be a main course component -->
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a>
 	            </li>
             	
             	<li class="divider visible-after" data-visible-after="2019071109" />
@@ -253,8 +255,13 @@
 	            <li class="visible-after" data-visible-after="2019071109">
 	            	<a href="../../en/projects/robotFace.html">Robot Face</a>
 	            </li>
+              <!-- Used to be a main course component -->
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a>
+	            </li>
+            	<li class="divider visible-after" data-visible-after="2019071109" />
 	            <li class="visible-after" data-visible-after="2019071109">
-	            	<a href="../../en/projects/goCenter.html">Go To Center</a>
+	            	<a href="../../en/projects/moveToCenter.html">Move To Center</a>
 	            </li>
 	            <li class="visible-after" data-visible-after="2019071109">
 	            	<a href="../../en/projects/gravityBall.html">Gravity Ball</a>
@@ -372,79 +379,60 @@
 
 <div class="container">
 	
-	
-	<!-- Main Content -->
-	<div class="container">
+	<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
 
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-				Go to Center
-			</h1>
-			<p>
-				Problem written by Chris and Julia.
-			</p>
-
-		</div>
-		<hr/>
-
-		
-
-		<div class="row">
-			<div class="col-md-12">
-				<p>
-				This program animates a square that moves until it is in the center of the screen. It starts on the left side.
-			</p>
-			<p>
-				<center>
-						<img style="width:500px" src="../../img/projects/goCenter/demo.png">	
-					</center>
-				</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Solution</h2>
+title - problem title
+credit - problem credit (optional)
+solution - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
 
 
-<pre id="editor" style="height:400px">public class GoCenter extends GraphicsProgram {
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		Making Tracks
+	</h1>
 
-    private static final int SIZE = 20;
-    private static final int DELAY = 100;
-	
-	public void run() {
-		// Draw a square on the left of the screen.
-		GRect rect = new GRect(SIZE, SIZE);
-		double x = 0;
-		double y = (getHeight() - rect.getHeight()) / 2;
-		rect.setFilled(true);
-		add(rect, x, y);
-		
-		// Move until the center
-		// rect.getX() returns the x coordinate of the rectangle
-		double maxX = (getWidth() - rect.getWidth()) /2;
-		while(rect.getX() < maxX) {
-		    // move one pixel to the right
-			rect.move(1, 0);
-			// animation pause.
-			pause(DELAY);
-		}
-	}
-}</pre>
-    
-<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-   editor.setTheme('ace/theme/eclipse');
-   editor.getSession().setMode("ace/mode/java");
-   editor.setReadOnly(true);
-   editor.setShowPrintMargin(false);
-   editor.renderer.setShowGutter(false); 
-    /*editor.setTheme("ace/theme/eclipse");
-    editor.getSession().setMode("ace/mode/java");*/
-</script>
+		<p>
+			Credit: Written by Eric Roberts and Mehran Sahami
+		</p>
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Handouts: <a href="../../en/resources/graphics.html">Graphics Reference</a><br/>
+Worked Example: <a href="../../en/projects/stampTool.html">Stamp Tool</a><br/>
+File: <code>making_tracks.py</code></p>
+<p>Write a program that draws an image anywhere the user clicks.</p>
+<p><center>
+  <!--<img style="width:500px;border: 1px solid #000000" src="../../img/icons/makingTracks.png">-->
+  <img style="width:500px;border: 1px solid #000000" src="../../img/projects/makingTracks/demo.png">
+</center></p>
+<h2 id="images">Images</h2>
+<p>This is our first example involving images!</p>
+<p>You may have to first install Pillow, a tool that has code for manipulating images and drawing them onto the Canvas. To install Pillow, open a terminal window (the "Terminal" tab within Pycharm), and type the following (note that Pillow has an uppercase P). On Windows, type <code>py</code> instead of <code>python3</code>:</p>
+<pre><code>&gt; python3 -m pip install Pillow
+... prints stuff ...
+Successfully installed Pillow-7.1.1
+</code></pre>
+
+<p>You may see a different version number than the one we have above. That's perfectly okay.</p>
+<p>To load an image into Graphics, you can do something like the following:</p>
+<pre><code>stamp = canvas.create_image(x, y, &quot;images/simba-sm.jpg&quot;)
+</code></pre>
+
+<p>This code loads the image <code>simba-sm.jpg</code> saved in the <code>images</code> folder in your Pycharm project and draws it at the location <code>(x, y)</code>. You can then use canvas functions like <code>canvas.moveto(stamp, new_x, new_y)</code> to modify the image and move it around, just like any graphics object.</p>
+<p>Check out the <a href="../../en/resources/graphics.html">Graphics Reference</a> for more information on images.</p>
 	</div>
-	</div>
+</div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

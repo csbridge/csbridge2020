@@ -1,0 +1,37 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Making Tracks
+credit: Written by Eric Roberts and Mehran Sahami
+
+Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
+Worked Example: [Stamp Tool]({{pathToRoot}}en/projects/stampTool.html)<br/>
+File: `making_tracks.py`
+
+Write a program that draws an image anywhere the user clicks.
+
+<center>
+  <!--<img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/icons/makingTracks.png">-->
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/makingTracks/demo.png">
+</center>
+
+## Images
+
+This is our first example involving images!
+
+You may have to first install Pillow, a tool that has code for manipulating images and drawing them onto the Canvas. To install Pillow, open a terminal window (the "Terminal" tab within Pycharm), and type the following (note that Pillow has an uppercase P). On Windows, type `py` instead of `python3`:
+
+```
+> python3 -m pip install Pillow
+... prints stuff ...
+Successfully installed Pillow-7.1.1
+```
+
+You may see a different version number than the one we have above. That's perfectly okay.
+
+To load an image into Graphics, you can do something like the following:
+```
+stamp = canvas.create_image(x, y, "images/simba-sm.jpg")
+```
+
+This code loads the image `simba-sm.jpg` saved in the `images` folder in your Pycharm project and draws it at the location `(x, y)`. You can then use canvas functions like `canvas.moveto(stamp, new_x, new_y)` to modify the image and move it around, just like any graphics object.
+
+Check out the [Graphics Reference]({{pathToRoot}}en/resources/graphics.html) for more information on images.
