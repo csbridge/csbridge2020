@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Target
 credit: Written by Eric Roberts and Mehran Sahami
 
-Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
+Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 Worked Example: [Draw People]({{pathToRoot}}en/projects/drawpeople.html)<br/>
 File: `target.py`
 

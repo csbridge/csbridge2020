@@ -55,7 +55,7 @@
 	            	<a href="{{pathToRoot}}en/projects/collectNewspaper.html">Collect Newspaper</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019070912">
-	          		<a href="{{pathToRoot}}en/projects/efes.html">Charles Bridge</a>
+	          		<a href="{{pathToRoot}}en/projects/arches.html">Stone Mason Karel</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019070913">
 	          		<a href="{{pathToRoot}}en/projects/mountain.html">Mountain Karel</a>
@@ -160,12 +160,12 @@
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
 	          	<li class="dropdown-header">Day 1</li>
-	          	<li><a href="{{pathToRoot}}en/projects/stepUp.html">Step Up</a></li>
-	          	<li><a href="{{pathToRoot}}en/projects/place100.html">Place 100</a></li>
+	          	<li><a href="{{pathToRoot}}en/projects/stepUp/index.html">Step Up</a></li>
+	          	<li><a href="{{pathToRoot}}en/projects/place100/index.html">Place 100</a></li>
 	          	<li><a href="{{pathToRoot}}en/projects/beeperLine/index.html">Beeper Line</a></li>
-	          	<li><a href="{{pathToRoot}}en/projects/invert.html">Invert</a></li>
-	          	<li><a href="{{pathToRoot}}en/projects/unKarel.html">UN Karel</a></li>
-	          	<li><a href="{{pathToRoot}}en/projects/banishWinter.html">Banish Winter</a></li>
+	          	<li><a href="{{pathToRoot}}en/projects/invertBeeper/index.html">Invert Beeper</a></li>
+	          	<li><a href="{{pathToRoot}}en/projects/unKarel/index.html">UN Karel</a></li>
+	          	<li><a href="{{pathToRoot}}en/projects/banishWinter/index.html">Banish Winter</a></li>
 
 
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
@@ -187,7 +187,7 @@
             	<li class="divider visible-after" data-visible-after="2019071109" />
             	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
 	            <li class="visible-after" data-visible-after="2019071109">
-	            	<a href="{{pathToRoot}}en/projects/robotFace.html">Robot Face</a>
+	            	<a href="{{pathToRoot}}en/projects/robotFace/index.html">Robot Face</a>
 	            </li>
               <!-- Used to be a main course component -->
 	            <li class="visible-after" data-visible-after="2019071009">

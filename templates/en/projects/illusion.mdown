@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Optical Illusion
 credit: Based on an idea by Steve Cooper. Written by Chris Piech.
 
-Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
+Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 File: `illusion1.py`
 
 Sometimes repeating patterns can cause our eyes to see things that aren't there. Look at the picture below. Can you see little gray squares in the intersections of the white lines? Write a GraphicsProgram that create the optical illusion:

@@ -7,8 +7,7 @@ solution: soln.py
 Write a program that draws this picture. You should use the constants provided, but feel free to change them (or recolor any part of the face).</p>
 
 <center>
-	<!--<img style="width:500px;border:1px solid #000000" src="{{pathToRoot}}img/projects/robotFace/face.jpg">	-->
-	<img style="width:500px;border:1px solid #000000" src="face.jpg">	
+	<img style="width:500px;border:1px solid #000000" src="{{pathToRoot}}img/projects/robotFace/face.jpg">
 </center>
 
 ```

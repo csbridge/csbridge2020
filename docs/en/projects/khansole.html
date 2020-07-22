@@ -1,0 +1,503 @@
+<!--
+	A template used for every page - contains the header.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
+<title>CS Bridge  | Khansole Academy</title>
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../style.css">
+
+<!-- Java Script -->
+<script src="../../plugins/jquery.min.js"></script>
+<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+
+<script src="../../karel/ace/ace.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/moment.min.js"></script>
+<script type="text/javascript" src="../../js/index.js"></script>
+<script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
+
+
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+  </script>-->
+
+<script src="../karel/js/html/websiteImports.js"></script>
+<script>importCss();</script>
+<script>importJs();</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+	</head>
+	<body>
+		<!--
+	A template used for every English page - contains the nav bar, a container div, and the footer.
+-->
+
+<!-- Navigation Bar -->
+<nav class="navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="../../">CS Bridge</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <!--<li ><a href="#">Link</a></li>-->
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+          		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
+	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../en/resources/animation.html">Animation Reference</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/general-info.html">General Info</a></li>
+              <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
+              <li><a href="../../en/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
+              <li><a href="../../en/resources/section-info.html">Section Info</a></li>
+              <li><a href="../../en/resources/zoom-info.pdf">Zoom Guide</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
+              <li><a href="../../en/resources/karelInPycharm.pdf">Karel in PyCharm</a></li>
+
+              <!-- Not used nor visible -->
+				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/resources/jar.html">Exporting Projects as JARs</a>-->
+	          	<!--<a class="visible-after" href="../../en/resources/sections.html">Sections</a>-->
+	          </ul>
+	        </li>
+
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+
+	          	<!-- Day 1 -->
+	          	<li class="dropdown-header">Day 1</li>
+	            <li>
+	            	<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
+	            </li>
+	          	<li class="visible-after" data-visible-after="2019070912">
+	          		<a href="../../en/projects/arches.html">Stone Mason Karel</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../en/projects/mountain.html">Mountain Karel</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../en/projects/randomPainter.html">Random Painter</a>
+	          	</li>
+	          	
+	          	<!-- Day 2 -->
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
+          		<li class="visible-after" data-visible-after="2019071009">
+          			<a href="../../en/projects/sandcastles.html">Sandcastles</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071012">
+	          		<a href="../../en/projects/favoriteNumber.html">Favorite Number</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../en/projects/someSum.html">Some Sum</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../en/projects/gameOfStones.html">Nimm</a>
+	          	</li>
+	          	
+	          	<!-- Day 3 -->
+	          	<li class="divider visible-after" data-visible-after="2019071109" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
+          		<li class="visible-after" data-visible-after="2019071109">
+          			<a href="../../en/projects/awesome.html">Programming is Awesome</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../en/projects/mysterySquare.html">Mystery Square</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../en/projects/stringArt.html">String Art</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071113">
+	          		<a href="../../en/projects/randomCircles.html">Random Circles</a>
+	          	</li>
+	            <li class="visible-after" data-visible-after="2019071113">
+	            	<a href="../../en/projects/bouncingBall.html">Bouncing Ball</a>
+	            </li>
+
+				<!-- Day 4 -->
+				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
+          		<li class="visible-after" data-visible-after="2019071209">
+          			<a href="../../en/projects/madMethods.html">Mad Methods</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071212">
+	          		<a href="../../en/projects/target.html">Target</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071213">
+	          		<a href="../../en/projects/illusion.html">Optical Illusion</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071213">
+	          		<a href="../../en/projects/sunset.html">Short Film</a>
+	          	</li>
+
+				<!-- Day 5 / 6 -->
+          		<li class="divider visible-after" data-visible-after="2019071509" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
+          		<li class="visible-after" data-visible-after="2019071509">
+          			<a href="../../en/projects/makingTracks.html">Making Tracks</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071512">
+	          		<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+	          	</li>
+
+	          	<li class="divider visible-after" data-visible-after="2019071513" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071513">Days 5-6</li>
+          		<li class="visible-after" data-visible-after="2019071513">
+          			<a href="../../en/projects/breakout.html">Breakout</a>
+          		</li>
+
+          		<!-- Day 7 -->
+          		<li class="divider visible-after" data-visible-after="2019071709" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
+          		<li class="visible-after" data-visible-after="2019071709">
+          			<a href="../../en/projects/sortedNumbers.html">Sorted Numbers</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/snow.html">Snow</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/mouseGame.html">[Optional] The Line</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../en/projects/music.html">[Optional] Waves of Sound</a>
+	          	</li>
+
+	          	<!-- Days 7/8 -->
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071713">Days 7-8</li>
+	          	<li class="visible-after" data-visible-after="2019071713">
+	          		<a href="../../en/projects/project.html">Make Your Own</a>
+	          	</li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li class="dropdown-header">Day 1</li>
+	          	<li><a href="../../en/projects/stepUp/index.html">Step Up</a></li>
+	          	<li><a href="../../en/projects/place100/index.html">Place 100</a></li>
+	          	<li><a href="../../en/projects/beeperLine/index.html">Beeper Line</a></li>
+	          	<li><a href="../../en/projects/invertBeeper/index.html">Invert Beeper</a></li>
+	          	<li><a href="../../en/projects/unKarel/index.html">UN Karel</a></li>
+	          	<li><a href="../../en/projects/banishWinter/index.html">Banish Winter</a></li>
+
+
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/emc2.html">E=MC2</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/fibb.html">Fibonacci</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/findPi.html">Find Pi</a>
+	            </li>
+              <!-- Used to be a main course component -->
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/favoriteNumber/index.html">Favorite Number</a>
+	            </li>
+            	
+            	<li class="divider visible-after" data-visible-after="2019071109" />
+            	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../en/projects/robotFace/index.html">Robot Face</a>
+	            </li>
+              <!-- Used to be a main course component -->
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a>
+	            </li>
+            	<li class="divider visible-after" data-visible-after="2019071109" />
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../en/projects/moveToCenter.html">Move To Center</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../en/projects/gravityBall.html">Gravity Ball</a>
+	            </li>
+
+				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
+				<li class="visible-after" data-visible-after="2019071209">
+					<a href="../../en/projects/averageMethod.html">Average Method</a>
+				</li>	
+				<li class="visible-after" data-visible-after="2019071209">
+					<a href="../../en/projects/drawPeople.html">Draw People</a>
+				</li>	
+	          	<li class="visible-after" data-visible-after="2019071209">
+	          		<a href="../../en/projects/halfGreen.html">Half Green</a>
+	          	</li>
+
+	        	<li class="divider visible-after" data-visible-after="2019071509" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
+	            <li class="visible-after" data-visible-after="2019071509">
+	            	<a href="../../en/projects/stamptool/index.html">Stamp Tool</a>
+	            </li>
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../en/projects/holePuncher.html">Hole Puncher</a>
+	          	</li>	
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../en/projects/debrisSweeper.html">Debris Sweeper</a>
+	          	</li>	
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../en/projects/suchADrag.html">Such a Drag</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../en/projects/keyboardKarel.html">Keyboard Karel</a>
+	          	</li>
+
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../en/projects/rocketPaddle.html">Rocket Ship</a>
+	            </li>
+	        </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../slides/Welcome.pdf">Karel</a></li>
+	          	<li><a href="../../slides/ControlFlow.pdf">Control Flow Slides)</a></li>
+	          	<li><a href="../../starter/ControlFlow.zip">Control Flow (Code)</a></li>
+	          	<li><a href="../../slides/Variables.pdf">Variables</a></li>
+			<li><a href="../../slides/Variables2.pdf">Variables 2</a></li>
+	          	
+	          	<li><a href="../../slides/Graphics.pdf">Graphics (Slides)</a></li>
+	          	<li><a href="../../starter/Graphics.zip">Graphics (Code)</a></li>
+	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
+	          	<li><a href="../../slides/Methods.pdf">Methods</a></li>
+	          	<li><a href="../../slides/NestedLoops.pdf">Nested Loops</a></li>
+	          	<li><a href="../../slides/Events.pdf">Events (Slides)</a></li>
+	          	<li><a href="../../starter/Events.zip">Events (Code)</a></li>
+	          	<li><a href="../../slides/Breakout.pdf">Breakout</a></li>
+	          	<li><a href="../../slides/AI.pdf">AI</a></li>
+	          	<li><a href="../../slides/ArrayLists.pdf">ArrayLists</a></li>
+	          	<li><a href="../../slides/HashMaps.pdf">HashMaps</a></li>
+	         	<li><a href="../../slides/Internet.pdf">The Internet (Slides)</a></li>
+	         	<li><a href="../../starter/Internet.zip">The Internet (Code)</a></li>
+	         	<li><a href="../../slides/Beyond-CSBridge.pdf">Beyond CSBridge</a></li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forms <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Survey</a></li>
+                <li><a href="https://forms.gle/eVsMyZb8HCSUETeV6">Sign in To Lab</a></li>
+	          </ul>
+	        </li>
+
+			
+	        <!-- Bonus button -->
+	        <ul class="nav navbar-nav">
+	            <li><a href="../../en/bonus-index.html">Bonus</a></li>
+	        </ul>
+
+	        <!-- TA Link -->
+
+	      </ul>
+
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/english_flag.png"></img></a></li>
+	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
+	        
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+
+</script>
+
+<div class="container">
+	
+	<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
+
+title - problem title
+credit - problem credit (optional)
+solution - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
+
+
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		Khansole Academy
+	</h1>
+
+		<p>
+			Credit: Nick Parlante
+		</p>
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>File: <code>khansole.py</code></p>
+<p>Now that you’ve seen how programming can help us in a number of different areas, it’s
+time for you to implement Khan-sole Academy—a program that helps other people learn!
+In this problem, you’ll write a program in the file <code>khansole_academy.py</code> that randomly
+generates simple addition problems for the user, reads in the answer from the user, and then
+checks to see if they got it right or wrong, until the user appears to have mastered the
+material. Note that <strong>“console”</strong> is another name for “terminal” :-).</p>
+<p>More specifically, your program should be able to generate simple addition problems that
+involve adding two 2-digit integers (i.e., the numbers 10 through 99). The user should be
+asked for an answer to each problem. Your program should determine if the answer was
+correct or not, and give the user an appropriate message to let them know. Your program
+should keep giving the user problems until the user has gotten 3 problems <u><strong>correct in a row</strong></u>.
+(Note: the number of problems the user needs to get correctly in a row to complete the
+program is just one example of a good place to specify a constant in your program).
+A sample run of the program is shown below (user input is in bold).</p>
+<p><hr/>
+<code>
+What is 51 + 79?<br/>
+Your answer: <b style="color:blue">120</b><br/>
+Incorrect. The expected answer is 130<br/>
+What is 33 + 19?<br/>
+Your answer: <b style="color:blue">42</b><br/>
+Incorrect. The expected answer is 52<br/>
+What is 55 + 11?<br/>
+Your answer: <b style="color:blue">66</b><br/>
+Correct! You've gotten 1 correct in a row.<br/>
+What is 84 + 25?<br/>
+Your answer: <b style="color:blue">109</b><br/>
+Correct! You've gotten 2 correct in a row.<br/>
+What is 26 + 58?<br/>
+Your answer: <b style="color:blue">74</b><br/>
+Incorrect. The expected answer is 84<br/>
+What is 98 + 85?<br/>
+Your answer: <b style="color:blue">183</b><br/>
+Correct! You've gotten 1 correct in a row.<br/>
+What is 79 + 66?<br/>
+Your answer: <b style="color:blue">145</b><br/>
+Correct! You've gotten 2 correct in a row.<br/>
+What is 97 + 20?<br/>
+Your answer: <b style="color:blue">117</b><br/>
+Correct! You've gotten 3 correct in a row.<br/>
+Congratulations! You mastered addition.<br/>
+</code>
+<hr/></p>
+<p>As a side note, one of the earliest programs one of the instructors of CS106A, Mehran, wrote (with his friend Matthew) when
+he was first learning how to program was very similar to Khan-Sole Academy and it was
+called “M&amp;M’s Math Puzzles”. It was written in a language named BASIC, on a computer
+that had 4K of memory (that’s 4 Kilobytes) and used cassette tapes (the same kind used for
+music in the 1970’s) to store information. Yeah, Mehran is old.</p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
+
+			
+	<!-- Footer -->
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+		&#169; Stanford 2020 &#124; Created by 
+		<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
+		Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
+	</p>
+	<!--<p class="pull-right">
+		<a href="../../fall12">Fall 2012</a>
+	</p>-->
+</div>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<script type="text/javascript">
+		console.log('got pubnub')
+    var pubnubDemo = new PubNub({
+        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+    });
+
+		// Subscribe to the demo_tutorial channel
+		pubnubDemo.addListener({
+		    message: function(request) {
+		    	let msg = request['message']
+		    	console.log(msg)
+		    	let swalData = msg['swal'];
+		    	console.log(swalData)
+	        Swal.fire(swalData)
+		    }
+		})
+
+		pubnubDemo.subscribe({
+		    channels: ['csbridge_alert']
+		});
+		console.log('success')
+		
+
+</script>
+
+</div>
+
+	</body>
+</html>

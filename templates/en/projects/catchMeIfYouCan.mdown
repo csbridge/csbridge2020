@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Catch Me If You Can
 credit: Problem by Julia Lee, Kerem Goksel, and Chris Piech
 
-Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)
+Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)
 File: `catchmeifyoucan.py`
 
 1. Add a blue "sneaky" square to the canvas.

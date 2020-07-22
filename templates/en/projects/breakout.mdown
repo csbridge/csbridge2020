@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Breakout
 credit: Written by Eric Roberts
 
-Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
+Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 Worked Example: [Stamp Tool]({{pathToRoot}}en/projects/stampTool.html)<br/>
 File: `breakout.py`
 

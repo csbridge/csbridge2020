@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Short Film
 credit: Written by Chris Piech and Keith Schwarz.
 
-Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
+Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 Worked Example: [Half Green]({{pathToRoot}}en/projects/halfgreen.html),
 [Target]({{pathToRoot}}en/projects/target.html)<br/>
 File: `short_film.py`

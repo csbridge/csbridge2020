@@ -1,4 +1,4 @@
-template: templates/en/projects/projectTemplate.ptl
+template: templates/tr/projects/projectTemplate.ptl
 title: Stamp Tool
 credit: Problem written by a mystery CS106A Lecturer.
 solution: soln.py

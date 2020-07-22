@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Collect Newspaper
 credit: Based on a handout by Eric Roberts
 
-Handouts: [Karel Reference]({{pathToRoot}}en/handouts/karel.html)<br/>
+Handouts: [Karel Reference]({{pathToRoot}}en/resources/karel.html)<br/>
 Worked Example: [StepUp]({{pathToRoot}}en/projects/stepUp.html)<br/>
 File: `newspaper_karel.py`
 

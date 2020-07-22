@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Programming is Awesome
 credit: Chris Piech and Eric Roberts
 
-Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
+Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 
 The point of this program is to get you to create your first graphics program. You should draw three rectangles (one red, one blue and one yellow) and in the center of the screen write "Programming is Awesome." You can make your rectangles of any size and put them in any position--as long as they are visible. Here is what our program looked like.
 
@@ -41,7 +41,7 @@ The x and y coordinates you provide will be set to be the _center_ of the drawn 
 If you want your text to look more snazzy, you can change its font using your `canvas` variable:
 
 ```
-canvas.set_font(label, "Courier" 50)
+canvas.set_font(label, "Courier", 50)
 ```
 
 That's all! If you finish early, feel free to add to your picture. If you like ovals... you can add ovals too.

@@ -1,0 +1,23 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Collect Newspaper (with solution)
+credit: Based on a handout by Eric Roberts
+solution: soln.py
+
+Handouts: [Karel Reference]({{pathToRoot}}en/resources/karel.html)<br/>
+File: `step_up.py` <br/>
+
+Karel starts in the world on the left. How would you program Karel to pick up the beeper and transport it to the top of the ledge?  Karel should drop the beeper at the corner of 2nd Street and 4th Avenue and then continue one more corner to the east, ending up on 5th Avenue. At the end of your program, Karel's world should look like the picture on the right.
+
+<center>
+<img style="width:700px" class="psetImg" src="{{pathToRoot}}img/projects/stepUp/stepUp.png">	
+</center>
+
+If Karel only knows the commands:
+```
+move()
+pick_beeper()
+put_beeper()
+turn_left()
+```
+
+How can you make Karel turn to the right?

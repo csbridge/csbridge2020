@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Stone Mason Karel
 credit: Lisa Yan
 
-Handouts: [KarelReference]({{pathToRoot}}en/handouts/karel.html)<br/>
+Handouts: [KarelReference]({{pathToRoot}}en/resources/karel.html)<br/>
 Worked Example: [Place100]({{pathToRoot}}en/projects/place100.html)<br/>
 Day1: `stone_mason_karel.py`
 
