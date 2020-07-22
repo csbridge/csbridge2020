@@ -1,4 +1,4 @@
-template: templates/en/resources/faqTemplate.ptl
+template: templates/tr/resources/faqTemplate.ptl
 title: Installing PyCharm
 
 [TOC]
