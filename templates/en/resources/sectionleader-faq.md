@@ -98,6 +98,9 @@ Sections will be held in the evening (morning for Stanford) on Zoom. Every Secti
 
 * See the student-facing page [What to Expect for Section](http://online.csbridge.org/en/resources/section-info.html) for more information about section.
 
+### What will the **social activity** look like? 
+We're planning to organize one virtual social activity per week. This could take the form of a fireside chat, a talent show, movie night, or other activity. If you have an idea, tell the Head TA! These are activities for the whole group. Ed will also be used as a platform for sharing other ways for students to engage with each other (such as online pictionary or other games).
+
 ## Who to Ask/Tell for What
 
 ### Who do I contact if I'm having issues with section or office hours?
