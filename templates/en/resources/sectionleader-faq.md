@@ -94,7 +94,7 @@ This meeting will be lead by the Lecturers and is a time for ALL SLs to meet (vi
 ### What will **section** look like? 
 Sections will be held in the evening (morning for Stanford) on Zoom. Every Section Leader will have their **own** section of about 8 students. 
 
-* You will be assigned a group of students <span style="color:red;">add whether or not the students will be from different countries</span>
+* You will be assigned a group of students 
 
 * See the student-facing page [What to Expect for Section](http://online.csbridge.org/en/resources/section-info.html) for more information about section.
 
