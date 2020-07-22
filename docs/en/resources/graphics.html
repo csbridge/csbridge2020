@@ -365,10 +365,125 @@
 	
 	<h1 id="graphics-reference-in-progress">Graphics Reference (In Progress)</h1>
 <hr />
-<p>One of the most common libraries to create graphics in Python is
-called Tk (short for "tkinter"). Tk is a powerful graphics library, but some of the functions are hard to use.  For this reason, we provide our own small graphics library that is built on top of Tk and makes it easier to use.  However, it's not a replacement for Tk - it just adds new functions to make certain things like drawing text easier.  You can always explore the full Tk library if you're interested in seeing what else you can do!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <a class="btn btn-primary" role="button" data-toggle="collapse" href="#quickreference" aria-expanded="false" aria-controls="collapseExample">
+            Show/Hide Quick Reference
+        </a>
+        <a class="btn btn-primary" role="button" href="api-docs/graphics.html">
+            View Complete Reference Docs
+        </a>
+    </div>
+</div>
+
+<p><br />
+<div class="collapse" id="quickreference">
+    <h4>Create Graphical Objects</h4>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td>Method</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>create_line(x1, y1, x2, y2)</code></td>
+                <td>Creates a new line connecting <code>(x1, y1)</code> and <code>(x2, y2)</code>.</td>
+            </tr>
+            <tr>
+                <td><code>create_rectangle(x1, y1, x2, y2)</code></td>
+                <td>Creates a new rectangle on the canvas the size of this bounding box and returns it.</td>
+            </tr>
+            <tr>
+                <td><code>create_oval(x1, y1, x2, y2)</code></td>
+                <td>Creates a new oval on the canvas contained within this bounding box and returns it.</td>
+            </tr>
+            <tr>
+                <td><code>create_image(x, y, filepath)</code><br/><p>--OR--</p><code>create_image_with_size(x, y,<br /> width, height, filepath)</code></td>
+                <td>Creates a new image on the canvas from the specified file, with top-left corner at <code>(x, y)</code>.  You can also specify the width and height.</td>
+            </tr>
+            <tr>
+                <td><code>create_text(x, y, text)</code></td>
+                <td>Creates text on the canvas with the specified contents, centered at <code>(x, y)</code>.</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>Work With Graphical Objects</h4>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td>Method</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>get_width(obj)</code></td>
+                <td>Returns the width of <code>obj</code>.</td>
+            </tr>
+            <tr>
+                <td><code>get_height(obj)</code></td>
+                <td>Returns the height of <code>obj</code>.</td>
+            </tr>
+            <tr>
+                <td><code>get_left_x(obj)</code></td>
+                <td>Returns the leftmost x coordinate of <code>obj</code>.</td>
+            </tr>
+            <tr>
+                <td><code>get_top_y(obj)</code></td>
+                <td>Returns the topmost y coordinate of <code>obj</code>.</td>
+            </tr>
+            <tr>
+                <td><code>move(obj, dx, dy)</code></td>
+                <td>Moves <code>obj</code> using the displacements <code>dx</code> and <code>dy</code>.</td>
+            </tr>
+            <tr>
+                <td><code>move_to(obj, x, y)</code></td>
+                <td>Sets the location of <code>obj</code> to the specified coordinates.</td>
+            </tr>
+            <tr>
+                <td><code>set_outline_color(obj, color)</code></td>
+                <td>Sets the outline color (if applicable) of <code>obj</code>.</td>
+            </tr>
+            <tr>
+                <td><code>set_fill_color(obj, color)</code></td>
+                <td>Sets the fill color (if applicable) of <code>obj</code>.</td>
+            </tr>
+            <tr>
+                <td><code>set_font(obj, font, size)</code></td>
+                <td>Sets the font and font size for the text object <code>obj</code>.</td>
+            </tr>
+            <tr>
+                <td><code>delete(obj)</code></td>
+                <td>Removes <code>obj</code> from the canvas.</td>
+            </tr>
+        </tbody>
+    </table> <br />
+    <h4>Canvas Information</h4>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td>Method</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>get_canvas_width()</code></td>
+                <td>Returns the width of the canvas.</td>
+            </tr>
+            <tr>
+                <td><code>get_canvas_height()</code></td>
+                <td>Returns the height of the canvas.</td>
+            </tr>
+        </tbody>
+    </table>  <br />
+    <hr />
+</div></p>
+<p>One of the most common libraries to create graphics in Python is called Tk (short for "tkinter"). Tk is a powerful graphics library, but some of the functions are hard to use.  For this reason, we provide our own small graphics library that is built on top of Tk and makes it easier to use.  However, it's not a replacement for Tk - it just adds new functions to make certain things like drawing text easier.  You can always explore the full Tk library if you're interested in seeing what else you can do!</p>
 <h2 id="installation">Installation</h2>
-<p>The graphics library itself comes pre-packaged with every graphical PyCharm project.  However, it relies on one other tool that you'll need to install, called "Pillow", which contains code to manipulate images. In order for graphics to work properly with images, you need to install Pillow on your machine.  To install Pillow, you should first open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following command shown in bold below into the Terminal. (Note that "Pillow" starts with an uppercase P.) On Windows, type “py” instead of “python3”):</p>
+<p>The graphics library itself comes pre-packaged with every graphical PyCharm project.  However, it relies on one other tool that you'll need to install, called "Pillow", which contains code to manipulate images. In order for be able to work with images, you need to install Pillow on your machine.  To install Pillow, you should first open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following command shown in bold below into the Terminal. (Note that "Pillow" starts with an uppercase P.) On Windows, type “py” instead of “python3”):</p>
 <pre><code>&gt; python3 -m pip install Pillow
 ...prints stuff...
 Successfully installed Pillow-7.1.1
@@ -388,50 +503,51 @@ Successfully installed Pillow-7.1.1
   style="width: 30%;"
   alt="A diagram of the canvas coordinate scheme. (0, 0) is the top left corner. An arrow extends downwards in the y direction and rightwards in the x direction"
 /></p>
-<p>When we want to draw shapes on a canvas, we call functions on that canvas that “create” the shape we want to draw. These shapes then appear on the canvas. In CSBridge, we will generally provide the code that creates the canvas for you, so all you need to worry about is adding shapes to that canvas. For the remainder of this handout, we will assume that an object named <code>canvas</code> has already been created, and it represents the canvas that you’ll be drawing on. Below we provide a brief tour of some of the different shapes you can draw in a canvas as well as highlight a few of the options you have with regard to how those shapes look.</p>
+<p>When we want to draw shapes on a canvas, we call functions on that canvas that “create” the shape we want to draw. These shapes then appear on the canvas. In CSBridge, we will generally provide the code that creates the canvas for you, so all you need to worry about is adding shapes to that canvas. For the remainder of this handout, we will assume that a variable named <code>canvas</code> has already been created, and it represents the canvas that you’ll be drawing on. Below we provide a brief tour of some of the different shapes you can draw in a canvas as well as highlight a few of the options you have with regard to how those shapes look.</p>
 <h2 id="canvas-properties">Canvas Properties</h2>
 <ul>
-<li><code>get_canvas_height</code></li>
-<li><code>get_canvas_width</code></li>
-<li><code>set_canvas_background_color</code></li>
+<li><code>get_canvas_height</code> (ok)</li>
+<li><code>get_canvas_width</code> (ok)</li>
+<li><code>set_canvas_background_color</code> (not needed)</li>
 </ul>
 <h2 id="drawing-lines">Drawing Lines</h2>
 <ul>
-<li><code>create_line</code></li>
+<li><code>create_line</code> (ok)</li>
 </ul>
 <h2 id="drawing-rectangles">Drawing Rectangles</h2>
 <ul>
-<li><code>create_rectangle</code></li>
+<li><code>create_rectangle</code> (ok)</li>
 </ul>
 <h2 id="drawing-ovals">Drawing Ovals</h2>
 <ul>
-<li><code>create_oval</code></li>
+<li><code>create_oval</code> (ok)</li>
 </ul>
 <h2 id="drawing-text">Drawing Text</h2>
 <ul>
-<li><code>create_text</code></li>
-<li><code>set_font</code></li>
+<li><code>create_text</code> (ok)</li>
+<li><code>set_font</code> (ok)</li>
 </ul>
 <h2 id="adding-images">Adding Images</h2>
 <ul>
-<li><code>create_image</code></li>
-<li><code>create_image_with_size</code></li>
+<li><code>create_image</code> (ok)</li>
+<li><code>create_image_with_size</code> (ok)</li>
 </ul>
 <h2 id="getting-object-information">Getting Object Information</h2>
 <ul>
-<li><code>get_height</code></li>
-<li><code>get_width</code></li>
+<li><code>get_height</code> (ok)</li>
+<li><code>get_width</code> (ok)</li>
 <li><code>get_left_x</code></li>
 <li><code>get_top_y</code></li>
 </ul>
 <h2 id="updating-graphical-objects">Updating Graphical Objects</h2>
 <ul>
 <li><code>delete</code></li>
-<li><code>move_to</code></li>
-<li><code>set_color</code></li>
-<li><code>set_fill_color</code></li>
-<li><code>set_outline_color</code></li>
-<li><code>set_size</code></li>
+<li><code>move</code> (ok)</li>
+<li><code>move_to</code> (ok)</li>
+<li><code>set_color</code> (not needed)</li>
+<li><code>set_fill_color</code> (ok)</li>
+<li><code>set_outline_color</code> (ok)</li>
+<li><code>set_size</code> (not needed)</li>
 </ul>
 			
 	<!-- Footer -->

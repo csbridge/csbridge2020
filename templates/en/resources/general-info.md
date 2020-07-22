@@ -128,6 +128,14 @@ We want you to learn a lot in this course but we also really want you to have **
     This is specifically for your section. If you need to get in touch with your Section Leader, make a private post (to staff only) in this group. You can also post to the whole section if you want the other students in your section to see. For more general questions not related to your section, use the main CS Bridge Ed group instead.
 </ol>
 
+Here are some tips:
+
+* Search before you post
+* Heart questions and answers you find useful
+* Answer questions you feel confident answering
+* Share interesting course related content with staff and peers
+* For more information on Ed Discussion, you can refer to the [Quick Start Guide](https://us.edstem.org/help).
+
 <hr />
 <!-- Whom to Contact About What -->
 ### Whom to Contact About What
@@ -175,12 +183,10 @@ We want you to learn a lot in this course but we also really want you to have **
 <!-- Accessibility -->
 #### <span style="color:red;">Accessibility</span>
 <ul>
-    <li>We know that our community will have a variety of learning differences and will include many differently abled individuals. If you have a suggestion for how to make learning more accessible for you, feel free to post on Ed or submit recommendations <a href='https://docs.google.com/forms/d/e/1FAIpQLScbGAQjWZhJRKVpsV4SX1XmFHD3Mi_E69M7sNALLApwyw16Eg/viewform'>here</a>.</li>
-    <li>If you have an accommodation request that you are not comfortable submitting over a Google form, please email us at codeinplacestaff@gmail.com.</li>
+    <li>We know that our community will have a variety of learning differences and will include many differently abled individuals. If you have a suggestion for how to make learning more accessible for you, feel free to post on Ed or tell your Section Leader.</li>
 </ul>
 <!-- Process for reporting misconduct -->
-#### <span style="color:red;">Process for reporting misconduct</span>
+#### <span style="color:red;">Process for reporting misconduct - add who should be contacted</span>
 <ul>
-    <li>While we hope that it will not come into use during the class, we have created a <a href='https://docs.google.com/forms/d/e/1FAIpQLSfFRPFZ45gROMWZcvUP5e-sbFCNTc2nMkQFINIejeJkPCULAg/viewform'>form</a> through which you can submit anonymous reports of any misconduct you encounter while participating in Code in Place. If you would be more comfortable sharing your situation non-anonymously, you can also email us at codeinplacestaff@gmail.com.</li>
     <li>Creating and maintaining a safe and open community is of utmost importance to us, and if the actions or behavior of others (students or staff) make you feel unsafe or unwelcome, we want you to let us know.</li>
 </ul>
