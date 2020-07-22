@@ -64,8 +64,8 @@ title: What to Expect for Section
 
 <hr />
 
-<!-- Section Communications -->
-### Section Communications
+<!-- Section Communication -->
+### Section Communication
 <p>
 	You will be added to <b>an Ed group specifically for your section</b>. This group will include you, your section leader, and about 8 of your classmates. You’ll all meet each other in your first section.
 </p>

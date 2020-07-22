@@ -38,7 +38,7 @@ Submit as much code as you've been able to write.
 
 ### I am lost. Where am I supposed to be?  
 
-Check the schedule - <span style="color:red;">add more info. here once it's clear where the schedule will be posted</span> 
+Check the schedule that is posted in your section page on Ed. That's where you'll find times, activities, and the necessary Zoom links. 
 
 ### Can I re-watch lecture? 
 
