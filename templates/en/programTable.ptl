@@ -41,7 +41,7 @@
 <!-- Final Project -->
 <table class="table table-striped">
 
-		<!-- Day 7 -->
+		<!-- Day 11 onwards -->
 
 		<thead
       % if not get('taMode', False):
@@ -50,7 +50,7 @@
     >
 			<tr><th colspan = "6">
 					<br/>
-						<h4>Day 7-8: Final Project</h4></b></th>
+						<h4>Day 11: Final Project</h4></b></th>
 			  </th>
       </tr>
 		</thead>
@@ -68,7 +68,7 @@
 			</tr>
 		</tbody>
 
-<!-- Days 10: Dictionaries -->
+<!-- Day 10: Dictionaries -->
 		<thead
 		% if not get('taMode', False):
 			class="visible-after" data-visible-after="{{breakout}}"
@@ -77,7 +77,7 @@
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-            <h4>Days 10: Dictionaries</h4>
+            <h4>Day 10: Dictionaries</h4>
             </b>
 			</tr>
 		</thead>
@@ -218,7 +218,7 @@
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/catchMeIfYouCan.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/catchMeIfYouCan.html">Catch Me If You Can (Section)</a>
+				<td><a href="{{pathToRoot}}en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
           <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/catchMeIfYouCan.html">TA Solution</a>
