@@ -1,4 +1,4 @@
-template: templates/en/resources/faqTemplate.ptl
+template: templates/tr/resources/faqTemplate.ptl
 title: CS Bridge FAQs
 
 *Do you have a question about Code in Place? It might be answered here.*

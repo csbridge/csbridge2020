@@ -113,12 +113,11 @@ title: What to Expect for Section
 
 <!-- Personal Privacy in Section -->
 ### Personal Privacy and Safety in Section
-<p>
-	We want to make sure that everybody in CS Bridge is in an environment that they feel comfortable in. This includes during section. <b>To protect your privacy, do not share any personal information in section (this includes contact information or last name)<b>.
-</p>
-<p>
-	Finally, while we hope this will not be the case for anyone at any point during this course, if you encounter any misconduct during section or otherwise, please refer to the "process for reporting misconduct" outlined at the bottom of the <a href='http://online.csbridge.org/en/resources/general-info.html'>general course information page</a>. Creating and maintaining a safe and open community is of utmost importance to us.
-</p>
+
+We want to make sure that everybody in CS Bridge is in an environment that they feel comfortable in. This includes during section. <b>To protect your privacy, do not share any personal information in section (this includes contact information or last name)</b>.
+
+Finally, while we hope this will not be the case for anyone at any point during this course, if you encounter any misconduct during section or otherwise, please refer to the "process for reporting misconduct" outlined at the bottom of the <a href='http://online.csbridge.org/en/resources/general-info.html'>general course information page</a>. Creating and maintaining a safe and open community is of utmost importance to us.
+
 
 <hr />
 

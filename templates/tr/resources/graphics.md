@@ -1,4 +1,4 @@
-template: templates/en/template.ptl
+template: templates/tr/template.ptl
 title: Graphics Reference
 
 # Graphics Reference (In Progress)
