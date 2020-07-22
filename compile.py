@@ -40,6 +40,9 @@ if '--output_dir' in sys.argv:
 else:
     OUTPUT_DIR = 'docs'
 
+# Verbose mode
+VERBOSE = '--verbose' in sys.argv
+
 '''
 FUNCTION: compile
 -----------------
@@ -56,9 +59,11 @@ def compile():
     templateFilePaths = getTemplateFilePaths('')
     print("\nCompiling:\n----------")
     for templateFilePath in templateFilePaths:
-        print("Compiling " + templateFilePath + "...")
+        if VERBOSE:
+            print("Compiling " + templateFilePath + "...")
         outputPath = compileTemplate(templateFilePath)
-        print(templateFilePath + " -> " + outputPath)
+        if VERBOSE:
+            print(templateFilePath + " -> " + outputPath)
 
     print("\nDONE.\n")
 
@@ -153,7 +158,8 @@ def compileTemplate(relativePath):
         # Encode the HTML and make its rendered path .html instead of .mdown
         compiledHtml = compiledHtml.encode('utf8')
         relativePath = relativePath[:len(relativePath) - len(suffix)] + "html"
-        print(relativePath)
+        if VERBOSE:
+            print(relativePath)
 
     # Save HTML to file
     relativePath = os.path.join(OUTPUT_DIR, relativePath)
