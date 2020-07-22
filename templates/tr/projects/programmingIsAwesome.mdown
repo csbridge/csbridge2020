@@ -41,7 +41,7 @@ The x and y coordinates you provide will be set to be the _center_ of the drawn 
 If you want your text to look more snazzy, you can change its font using your `canvas` variable:
 
 ```
-canvas.set_font(label, "Courier" 50)
+canvas.set_font(label, "Courier", 50)
 ```
 
 That's all! If you finish early, feel free to add to your picture. If you like ovals... you can add ovals too.

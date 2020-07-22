@@ -21,6 +21,7 @@ When Karel is done, the missing columns should be replaced by beepers, so the fi
 				</p>
 
 Karel may count on the following facts about the world, listed below:
+
 * Karel starts at 1st Avenue and 1st Street, facing east.
 * The columns are exactly four squares apart, on 1st, 5th, 9th and 13th Avenue.
 * Karel can assume that columns are always five units high.
@@ -49,3 +50,7 @@ for i in range(10):
 See the [Place 100 Beepers]({{pathToRoot}}en/projects/place100.html) program for another example.
 
 Your program will be much easier to write and easier to read, if you use for loops. There are multiple opportunities to use for loops in this problem! 
+
+## Bonus
+
+Congratulations on finishing! Go check out [Stone Mason Karel]({{pathToRoot}}en/projects/stoneMasonKarel.html) for an extension of this program, where Karel can build towers in any world.

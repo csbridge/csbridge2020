@@ -21,6 +21,7 @@ When Karel is done, the missing columns should be replaced by beepers, so the fi
 				</p>
 
 Karel may count on the following facts about the world, listed below:
+
 * Karel starts at 1st Avenue and 1st Street, facing east.
 * The columns are exactly four squares apart, on 1st, 5th, 9th and 13th Avenue.
 * Karel can assume that columns are always five units high.

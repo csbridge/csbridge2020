@@ -55,7 +55,7 @@
 	            	<a href="{{pathToRoot}}tr/projects/collectNewspaper.html">Gazete Alma</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019070912">
-	          		<a href="{{pathToRoot}}tr/projects/arches.html">Stone Mason Karel</a>
+	          		<a href="{{pathToRoot}}tr/projects/arches.html">Arches Karel</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019070913">
 	          		<a href="{{pathToRoot}}tr/projects/mountain.html">Dağcı Karel</a>

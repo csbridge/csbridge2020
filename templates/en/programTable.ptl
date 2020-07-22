@@ -671,7 +671,7 @@
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/charles.jpg"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/arches.html">Stone Mason Karel</a>
+				<td><a href="{{pathToRoot}}en/projects/arches.html">Arches Karel</a>
           <br/><span class="label label-primary">Section</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/arches.html">TA Solution</a>
