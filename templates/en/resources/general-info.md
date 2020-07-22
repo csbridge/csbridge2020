@@ -128,6 +128,14 @@ We want you to learn a lot in this course but we also really want you to have **
     This is specifically for your section. If you need to get in touch with your Section Leader, make a private post (to staff only) in this group. You can also post to the whole section if you want the other students in your section to see. For more general questions not related to your section, use the main CS Bridge Ed group instead.
 </ol>
 
+Here are some tips:
+
+* Search before you post
+* Heart questions and answers you find useful
+* Answer questions you feel confident answering
+* Share interesting course related content with staff and peers
+* For more information on Ed Discussion, you can refer to the [Quick Start Guide](https://us.edstem.org/help).
+
 <hr />
 <!-- Whom to Contact About What -->
 ### Whom to Contact About What

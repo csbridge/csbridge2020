@@ -29,6 +29,8 @@ You will be enrolled in three Ed groups:
 
     You will be assigned a section and this will be your go-to location for all things related to section. You'll communicate exclusively with your group of students in this group.   
 
+For more information on Ed Discussion, you can refer to the [Quick Start Guide](https://us.edstem.org/help).
+
 ### [Course Website](online.csbridge.org)  
 
 This is where you will find all information related to the curriculum - handouts, projects, examples, and slides. You'll also find FAQ information for students and Section Leaders. 
@@ -90,6 +92,12 @@ Sections will be held in the evening (morning for Stanford) on Zoom. Every Secti
 ### If I have feedback about the program or content I'd like to discuss in the SL team meeting, who should I tell and how?
 There is a **Reflection** category in the Ed Section Leader group. Once the program starts, in Ed you'll find a link to a Google Doc with a reflection form you can fill out on a daily basis. This form will help you reflect on your own teaching experience and will help the lecturers get a pulse on how things are going. Feedback and reflection are essential for making improvements. We want this to be the best it can be for everyone!  
 
+### What if I can't make it to my section on a specific day? 
+
+If you are sick or can't make it to your section for another reason,  <span style="color:red;">Edit once process has been defined.</span>
+
+### Who should answer posts made by students in the CS Bridge group on Ed? 
 
 
-*Have a question which wasn't covered here? Please post on [Ed](https://us.edstem.org/courses/521).*
+
+*Have a question that wasn't answered here? Please post on [Ed](https://us.edstem.org/courses/972).*
