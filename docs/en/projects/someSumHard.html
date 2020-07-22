@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Run, Sum, Run!</title>
+<title>CS Bridge  | That&#039;s Some Sum!</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -394,11 +394,11 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Run, Sum, Run!
+		That&#039;s Some Sum!
 	</h1>
 
 		<p>
-			Credit: Lisa Yan
+			Credit: Bryce C-R, Julia Lee, Chris Piech, and TY Huang
 		</p>
 </div>
 <hr/>
@@ -406,43 +406,44 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>File: <code>runningsum.py</code></p>
-<p>Write a program that reads in integers from the user and then outputs the current
-sum of the entered values. Here's what the output of the program should look like:</p>
-<pre><code>Enter integers, one at a time. I will show you the sum!
-Please enter an integer: 3
-The sum is: 3
-Please enter an integer: 4
-The sum is: 7
-Please enter an integer: 5
-The sum is: 12
-Please enter an integer: 10
-The sum is: 22
-Please enter an integer: 3
-The sum is: 25
-Please enter an integer: 4
-The sum is: 29
-Please enter an integer: 1
-The sum is: 30
-Please enter an integer: ...
+		<p>File: <code>some_sum.py</code></p>
+<p>Write a program that takes 10 integers and then outputs the sum of the entered values:</p>
+<ul>
+<li>The first 5 numbers should be read in from the user.</li>
+<li>The next 5 numbers should be 5 random integers between 1 and 10. Remember <code>random.randint(min, max)</code> generates a random integer between <code>min</code> and <code>max</code>, inclusively.</li>
+</ul>
+<p>Here's what the output of the program should look like:</p>
+<pre><code>Let's compute a sum of 10 numbers together!
+First, your turn. Enter 5 numbers.
+Please enter integer number 1: 1
+Please enter integer number 2: 3
+Please enter integer number 3: 5
+Please enter integer number 4: 7
+Please enter integer number 5: 9
+Okay, now my turn.
+My integer number 6: 9
+My integer number 7: 7
+My integer number 8: 10
+My integer number 9: 1
+My integer number 10: 9
+The sum is: 61
 </code></pre>
 
-<h2 id="quitting-your-program">Quitting your program</h2>
-<p>Remember that you can run your program in Pycharm's Terminal by typing <code>python3 runningsum.py</code> (if you are on Mac)
-or <code>py runningsum.py</code> (if you are on PC). However, this program runs forever!</p>
-<p>To exit a program that runs forever, hit <code>Ctrl-C</code> on your keyboard while in the Terminal. You should then be able
-to run your program via the <code>python3 runningsum.py</code> or <code>py runningsum.py</code> again.</p>
-<h2 id="printing-variables">Printing variables</h2>
-<p>Often in console programs it is necessary to print out values to the user in a string. The example above is: </p>
-<pre><code>The sum is: 55
+<h2 id="loop-indices">Loop indices</h2>
+<p>Remember that for a <code>for</code> loop:</p>
+<pre><code>for i in range(15):
+    # some code...
 </code></pre>
 
-<p>If you run your program with the above input, 55 will be the value stored in the variable that tracks the sum. If that variable is named <code>sum</code>, then in order to output its value you would write:</p>
-<pre><code>print(&quot;The sum is: &quot; + str(total))
+<p>The counter variable <code>i</code> will always start at 0 and increase each iteration until it gets to 14, so the for loop runs a total of 15 times.</p>
+<h2 id="printing-variables-continued">Printing variables, continued</h2>
+<p>Remember that you can print values to the user in a string like this:</p>
+<pre><code>&quot;The number is &quot; + str(variable_name) + &quot;!!&quot;
 </code></pre>
 
-<p>A more general form is:</p>
-<pre><code>&quot;String message&quot; + str(variable_name) + &quot;more string message&quot;
+<p>You can also print out values to the user when requesting input:</p>
+<pre><code>x = 5
+value = input(&quot;Please enter the number + str(x) + &quot;: &quot;)
 </code></pre>
 	</div>
 </div>

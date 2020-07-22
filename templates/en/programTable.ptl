@@ -483,7 +483,7 @@
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/someSum.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/someSum.html">(old) That's Some Sum</a>
+				<td><a href="{{pathToRoot}}en/projects/someSum.html">That's Some Sum</a>
           <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/someSum.html">TA Solution</a>
@@ -594,27 +594,6 @@
           <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/khansole.html">TA Solution</a>
-					% end
-				</td>
-				<td>Variables</td>
-			</tr>
-
-
-			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/guess.jpg"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/favoriteNumber.html">(lecture) Favorite Number</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/favoriteNumber.html">TA Solution</a>
-					% end
-				</td>
-				<td>Variables</td>
-			</tr>
-			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/medicine.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/medicine.html">(old) Medicine Counterfeiting</a>
-          <br/><span class="label label-success">Project</span>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/medicine.html">TA Solution</a>
 					% end
 				</td>
 				<td>Variables</td>
