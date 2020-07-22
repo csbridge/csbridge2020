@@ -135,9 +135,6 @@
 	          	<li class="visible-after" data-visible-after="2019071012">
 	          		<a href="../../../en/projects/favoriteNumber.html">Favorite Number</a>
 	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071012">
-	          		<a href="../../../en/projects/medicine.html">Medicine</a>
-	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071013">
 	          		<a href="../../../en/projects/someSum.html">Some Sum</a>
 	          	</li>
@@ -244,8 +241,13 @@
 	            <li class="visible-after" data-visible-after="2019071009">
 	            	<a href="../../../en/projects/findPi.html">Find Pi</a>
 	            </li>
+              <!-- Used to be a main course component -->
 	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="../../../en/projects/8Ball.html">8-Ball</a>
+	            	<a href="../../../en/projects/favoriteNumber/index.html">Favorite Number</a>
+	            </li>
+              <!-- Used to be a main course component -->
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../../en/projects/medicine/index.html">Counterfeit Medicine</a>
 	            </li>
             	
             	<li class="divider visible-after" data-visible-after="2019071109" />
@@ -253,8 +255,13 @@
 	            <li class="visible-after" data-visible-after="2019071109">
 	            	<a href="../../../en/projects/robotFace.html">Robot Face</a>
 	            </li>
+              <!-- Used to be a main course component -->
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../../en/projects/medicine/index.html">Counterfeit Medicine</a>
+	            </li>
+            	<li class="divider visible-after" data-visible-after="2019071109" />
 	            <li class="visible-after" data-visible-after="2019071109">
-	            	<a href="../../../en/projects/goCenter.html">Go To Center</a>
+	            	<a href="../../../en/projects/moveToCenter.html">Move To Center</a>
 	            </li>
 	            <li class="visible-after" data-visible-after="2019071109">
 	            	<a href="../../../en/projects/gravityBall.html">Gravity Ball</a>
@@ -421,6 +428,64 @@ Good job!
 </div>
 
 <!-- Solution (if included) -->
+	<h2>Solution</h2>
+    <p>
+    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
+    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
+    		aria-controls="Collapse">
+    		Show Solution
+    	</a>
+    </p>
+    <div class="collapse" id="soln-collapse">
+		<pre class="console" id="editor" style="height:540.0px">&quot;&quot;&quot;
+File: favoritenumber.py
+-------------------
+This program prompts the user to guess its secret
+random number and gives the user hints until it guesses
+it correctly.
+&quot;&quot;&quot;
+
+FAVORITE_NUMBER = 88
+
+def main():
+    print(&quot;Try and guess my favorite number (between 0 and 100)&quot;);
+	
+    guess = int(input(&quot;Guess: &quot;))
+    while guess != FAVORITE_NUMBER:
+        if guess &lt; FAVORITE_NUMBER:
+            print(&quot;Too low&quot;)
+        else:
+            print(&quot;Too high&quot;)
+            
+        guess = int(input(&quot;Guess: &quot;))
+
+    print(&quot;Good job!&quot;)
+
+
+if __name__ == &#039;__main__&#039;:
+    main()</pre>
+    </div>
+
+    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+       editor.setTheme('ace/theme/eclipse');
+       editor.getSession().setMode("ace/mode/python");
+       editor.setReadOnly(true);
+       editor.setShowPrintMargin(false);
+       editor.renderer.setShowGutter(false); 
+    </script>
+
+    <script>
+    	function toggleButtonText() {
+    		var elem = document.getElementById("soln-btn");
+    		if (elem.innerHTML.trim() === "Show Solution") {
+    			elem.innerHTML = "Hide Solution";
+    		} else {
+    			elem.innerHTML = "Show Solution";
+    		}
+    	}
+    </script>
 
 			
 	<!-- Footer -->

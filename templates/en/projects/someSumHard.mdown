@@ -1,0 +1,51 @@
+template: templates/en/projects/projectTemplate.ptl
+title: That's Some Sum!
+credit: Bryce C-R, Julia Lee, Chris Piech, and TY Huang
+
+File: `some_sum.py`
+
+Write a program that takes 10 integers and then outputs the sum of the entered values:
+
+* The first 5 numbers should be read in from the user.
+* The next 5 numbers should be 5 random integers between 1 and 10. Remember `random.randint(min, max)` generates a random integer between `min` and `max`, inclusively.
+
+Here's what the output of the program should look like:
+
+```
+Let's compute a sum of 10 numbers together!
+First, your turn. Enter 5 numbers.
+Please enter integer number 1: 1
+Please enter integer number 2: 3
+Please enter integer number 3: 5
+Please enter integer number 4: 7
+Please enter integer number 5: 9
+Okay, now my turn.
+My integer number 6: 9
+My integer number 7: 7
+My integer number 8: 10
+My integer number 9: 1
+My integer number 10: 9
+The sum is: 61
+```
+
+## Loop indices
+Remember that for a `for` loop:
+```
+for i in range(15):
+    # some code...
+```
+
+The counter variable `i` will always start at 0 and increase each iteration until it gets to 14, so the for loop runs a total of 15 times.
+
+## Printing variables, continued
+Remember that you can print values to the user in a string like this:
+
+```
+"The number is " + str(variable_name) + "!!"
+```
+
+You can also print out values to the user when requesting input:
+```
+x = 5
+value = input("Please enter the number + str(x) + ": ")
+```

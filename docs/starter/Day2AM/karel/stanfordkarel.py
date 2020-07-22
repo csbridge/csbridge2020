@@ -125,7 +125,8 @@ def paint_corner():
 def corner_color_is():
 	pass
 
-
+def random(p):
+	pass
 # Defined constants for ease of use by students when coloring corners
 RED = "red"
 BLACK = "black"

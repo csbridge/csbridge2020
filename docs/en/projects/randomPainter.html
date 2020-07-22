@@ -135,9 +135,6 @@
 	          	<li class="visible-after" data-visible-after="2019071012">
 	          		<a href="../../en/projects/favoriteNumber.html">Favorite Number</a>
 	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071012">
-	          		<a href="../../en/projects/medicine.html">Medicine</a>
-	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071013">
 	          		<a href="../../en/projects/someSum.html">Some Sum</a>
 	          	</li>
@@ -244,8 +241,13 @@
 	            <li class="visible-after" data-visible-after="2019071009">
 	            	<a href="../../en/projects/findPi.html">Find Pi</a>
 	            </li>
+              <!-- Used to be a main course component -->
 	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="../../en/projects/8Ball.html">8-Ball</a>
+	            	<a href="../../en/projects/favoriteNumber/index.html">Favorite Number</a>
+	            </li>
+              <!-- Used to be a main course component -->
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a>
 	            </li>
             	
             	<li class="divider visible-after" data-visible-after="2019071109" />
@@ -253,8 +255,13 @@
 	            <li class="visible-after" data-visible-after="2019071109">
 	            	<a href="../../en/projects/robotFace.html">Robot Face</a>
 	            </li>
+              <!-- Used to be a main course component -->
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a>
+	            </li>
+            	<li class="divider visible-after" data-visible-after="2019071109" />
 	            <li class="visible-after" data-visible-after="2019071109">
-	            	<a href="../../en/projects/goCenter.html">Go To Center</a>
+	            	<a href="../../en/projects/moveToCenter.html">Move To Center</a>
 	            </li>
 	            <li class="visible-after" data-visible-after="2019071109">
 	            	<a href="../../en/projects/gravityBall.html">Gravity Ball</a>
@@ -415,19 +422,19 @@ Day1: <code>random_painter_karel.py</code></p>
 </code></pre>
 
 <p>The value enclosed in the parentheses is called an argument in the terminology of programming languages, and it may be any one of 
-<code><span style="color:red;">"red"</span></code>, 
-<code><span style="color:orange;">"orange"</span></code>, 
-<code><span style="color:green;">"green"</span></code>, 
-<code><span style="color:cyan;">"cyan"</span></code>, 
-<code><span style="color:blue;">"blue"</span></code>, 
-<code><span style="color:magenta;">"magenta"</span></code>,
-and so on. So you can call <code>paint_corner("red")</code> to paint the square that Karel is standing on into a red square.</p>
-<p>We'll talk about randomness later, but for now know that we want to draw one of two colors, and we need to do so randomly in Karel. The new condition <code>random.randint(0, 1)</code> is a condition that is True half of the time, but in an unpredictable (random) way. Like flipping a coin, sometimes this condition is <code>True</code> and sometimes it is `False. For example, the code</p>
-<pre><code>if random.randint(0, 1):
+<code><span style="color:red;">RED</span></code>, 
+<code><span style="color:orange;">ORANGE</span></code>, 
+<code><span style="color:green;">GREEN</span></code>, 
+<code><span style="color:cyan;">CYAN</span></code>, 
+<code><span style="color:blue">BLUE</span></code>, 
+<code><span style="color:magenta;">MAGENTA</span></code>,
+and so on. So you can call <code>paint_corner(RED)</code> to paint the square that Karel is standing on into a red square.</p>
+<p>We'll talk about randomness later, but for now know that we want to draw one of two colors, and we need to do so randomly in Karel. The new condition <code>random(0.5)</code> is a condition that is True half of the time, but in an unpredictable (random) way. Like flipping a coin, sometimes this condition is <code>True</code> and sometimes it is `False. For example, the code</p>
+<pre><code>if random(0.5):
     put_beeper()
 </code></pre>
 
-<p>will place a beeper (or will not) with equal probability.</p>
+<p>will place a beeper (or will not) with equal probability. If you wanted, say, on average 75% of the time to have a beeper (instead of 50%), you could change the condition to `random(0.75).</p>
 <h2 id="painter">Painter</h2>
 <p>Use these new abilities to have karel randomly paint each corner of a world one of two colors. You can chose any two colors you would like; we chose green and blue.</p>
 <p>Below are three executions of the same program that randomly paints any sized world green and blue executed on a 10x10 world. Note that because of the random condition, the pattern of green and blue is different on each run!</p>
