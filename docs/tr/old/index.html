@@ -1,0 +1,1147 @@
+<!--
+	A template used for every page - contains the header.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
+<title>CS Bridge  | Home</title>
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../style.css">
+
+<!-- Java Script -->
+<script src="../../plugins/jquery.min.js"></script>
+<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+
+<script src="../../karel/ace/ace.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/moment.min.js"></script>
+<script type="text/javascript" src="../../js/index.js"></script>
+<script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
+
+
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+  </script>-->
+
+<script src="../karel/js/html/websiteImports.js"></script>
+<script>importCss();</script>
+<script>importJs();</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+	</head>
+	<body>
+		<!--
+	A template used for every Turkish page - contains the nav bar, a container div, and the footer.
+-->
+
+  <!-- Navigation Bar -->
+<nav class="navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="../../">CS Bridge</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <!--<li ><a href="#">Link</a></li>-->
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ders Notları <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<!--<li><a href="../../tr/old/handouts/sections.html">Section'lar</a></li>-->
+	          	<li><a href="http://karel.csbridge.org/java/en/intro.html">Karel Reader</a></li>
+
+          		<li class="visible-after" data-visible-after="2019071009"><a href="../../tr/old/handouts/console.html">Konsol Referansı</a></li>
+          		<li class="visible-after" data-visible-after="2019071009"><a href="../../tr/old/handouts/random.html">Rasgele Sayı Üreticisi Referansı</a></li>
+	          	<li class="visible-after" data-visible-after="2019071109"><a href="../../tr/old/handouts/graphics.html">Grafik Referansı</a></li>
+				<li class="visible-after" data-visible-after="2019071509"><a href="../../tr/old/handouts/events.html">Olaylar(Events) Referansı</a></li>
+				<li class="visible-after" data-visible-after="2019071709"><a href="../../tr/old/handouts/arrayLists.html">Dizi Listeleri (ArrayLists)</a></li>
+	          	<li><a href="../../tr/old/handouts/whatsNext.html">Bundan Sonrası</a></li>
+	          </ul>
+	        </li>
+
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projeler<b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+
+	          	<!-- Day 1 -->
+	          	<li class="dropdown-header">1. Gün</li>
+	            <li>
+	            	<a href="../../tr/old/projects/collectNewspaper.html">Gazete Alma</a>
+	            </li>
+	          	<li class="visible-after" data-visible-after="2019070912">
+	          		<a href="../../tr/old/projects/arches.html">Stone Mason Karel</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../tr/old/projects/mountain.html">Dağcı Karel</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../tr/old/projects/randomPainter.html">Deli Ressam</a></li>
+	          	</li>
+	          	
+	          	<!-- Day 2 -->
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">2. Gün</li>
+          		<li class="visible-after" data-visible-after="2019071009">
+          			<a href="../../tr/old/projects/sandcastles.html">Kumdan Kaleler</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071012">
+	          		<a href="../../tr/old/projects/favoriteNumber.html">En Sevdiğim Numara</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071012">
+	          		<a href="../../tr/old/projects/medicine.html">Sahte İlaç</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../tr/old/projects/someSum.html">Üç Aşağı Beş Yukarı</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../tr/old/projects/gameOfStones.html">Nimm</a>
+	          	</li>
+	          	
+	          	<!-- Day 3 -->
+	          	<li class="divider visible-after" data-visible-after="2019071109" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071109">3. Gün</li>
+          		<li class="visible-after" data-visible-after="2019071109">
+          			<a href="../../tr/old/projects/programmingIsAwesome.html">Programcılık Bir Harika</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../tr/old/projects/mysterySquare.html">Gizemli Kare</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../tr/old/projects/stringArt.html">String Sanatı</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071113">
+	          		<a href="../../tr/old/projects/randomCircles.html">Random Circles</a>
+	          	</li>
+	            <li class="visible-after" data-visible-after="2019071113">
+	            	<a href="../../tr/old/projects/bouncingBall.html">Zıp Zıp Top</a>
+	            </li>
+
+				<!-- Day 4 -->
+				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">4. Gün</li>
+          		<li class="visible-after" data-visible-after="2019071209">
+          			<a href="../../tr/old/projects/madMethods.html">Çılgın Metotlar</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071212">
+	          		<a href="../../tr/old/projects/target.html">Hedef Tahtası</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071213">
+	          		<a href="../../tr/old/projects/illusion.html">Optik İllüzyon</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071213">
+	          		<a href="../../tr/old/projects/sunset.html">Kısa Film</a>
+	          	</li>
+
+				<!-- Day 5 / 6 -->
+          		<li class="divider visible-after" data-visible-after="2019071509" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün</li>
+          		<li class="visible-after" data-visible-after="2019071509">
+          			<a href="../../tr/old/projects/makingTracks.html">İz Çıkartmaca</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071512">
+	          		<a href="../../tr/old/projects/catchMeIfYouCan.html">Yakala Yakalayabilirsen</a>
+              </li>
+
+	          	<li class="divider visible-after" data-visible-after="2019071513" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071513">5./6. Gün</li>
+          		<li class="visible-after" data-visible-after="2019071513">
+          			<a href="../../tr/old/projects/breakout.html">Breakout</a>
+          		</li>
+
+          		<!-- Day 7 -->
+          		<li class="divider visible-after" data-visible-after="2019071709" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071709">7. Gün</li>
+          		<li class="visible-after" data-visible-after="2019071709">
+          			<a href="../../tr/old/projects/sortedNumbers.html">Sorted Numbers</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../tr/old/projects/snow.html">Kar</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../tr/old/projects/mouseGame.html">[Opsiyonel] Patika</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../tr/old/projects/music.html">[Opsiyonel] Ses Dalgaları</a>
+	          	</li>
+
+	          	<!-- Days 7/8 -->
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071713">7./8. Gün</li>
+	          	<li class="visible-after" data-visible-after="2019071713">
+	          		<a href="../../tr/old/projects/project.html">>Kendi Projenizi Yaratın</a>
+	          	</li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Örnekler<b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<!-- Day 1 -->
+	          	<li class="dropdown-header">1. Gün</li>
+	          	<li><a href="../../tr/old/projects/stepUp.html">Adım adım</a></li>
+	          	<li><a href="../../tr/old/projects/place100.html">100 Koymak</a></li>
+	          	<li><a href="../../tr/old/projects/beeperLine.html">Beeper Hattı</a></li>
+	          	<li><a href="../../tr/old/projects/invert.html">Ters Çevir</a></li>
+	          	<li><a href="../../tr/old/projects/unKarel.html">UN Karel</a></li>
+	          	<li><a href="../../tr/old/projects/banishWinter.html">İnsani Yardım Karel'i</a></li>
+
+
+	          	<!-- Day 2 -->
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">2. Gün</li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../tr/old/projects/emc2.html">E=MC2</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../tr/old/projects/fibb.html">Fibonacci</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../tr/old/projects/findPi.html">Pi'yi Bul</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../tr/old/projects/8Ball.html">8 Numaralı Top</a>
+	            </li>
+            	
+	          	<!-- Day 3 -->
+            	<li class="divider visible-after" data-visible-after="2019071109" />
+            	<li class="dropdown-header visible-after" data-visible-after="2019071109">3. Gün</li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../tr/old/projects/robotFace.html">Robot Surat</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../tr/old/projects/goCenter.html">Merkeze Git</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../tr/old/projects/gravityBall.html">Seken Top</a>
+	            </li>
+
+	          	<!-- Day 4 -->
+				      <li class="divider visible-after" data-visible-after="2019071209" />
+				      <li class="dropdown-header visible-after" data-visible-after="2019071209">4. Gün</li>
+				      <li class="visible-after" data-visible-after="2019071209">
+				      	<a href="../../tr/old/projects/averageMethod.html">Ortalama Metodu</a>
+				      </li>	
+				      <li class="visible-after" data-visible-after="2019071209">
+				      	<a href="../../tr/old/projects/drawPeople.html">İnsan Çizme</a>
+				      </li>	
+	          	<li class="visible-after" data-visible-after="2019071209">
+	          		<a href="../../tr/old/projects/halfGreen.html">Yarısı Yeşil</a>
+	          	</li>
+
+	          	<!-- Day 5 -->
+	        	<li class="divider visible-after" data-visible-after="2019071509" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün</li>
+	            <li class="visible-after" data-visible-after="2019071509">
+	            	<a href="../../tr/old/projects/stampTool.html">Damga Makinesi</a>
+	            </li>
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../tr/old/projects/holePuncher.html">Delgeç</a>
+	          	</li>	
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../tr/old/projects/debrisSweeper.html">Enkazı Kaldır</a>
+	          	</li>	
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../tr/old/projects/suchADrag.html">Ne Kaydırma Ama</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../tr/old/projects/keyboardKarel.html">Karel Klavyede</a>
+	          	</li>
+
+	          	<!-- Day 7 -->
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071709">7. Gün</li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../tr/old/projects/rocketPaddle.html">Rocket Paddle</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../tr/old/projects/racingCars.html">Racing Cars</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../tr/old/projects/anatolianRock.html">Anatolian Rock</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../tr/old/projects/bouncingBalls.html">Zıp Zıp Toplar</a>
+	            </li>
+	        </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../slides/Welcome.pdf">Karel</a></li>
+	          	<li><a href="../../slides/ControlFlow.pdf">Control Flow Slides)</a></li>
+	          	<li><a href="../../starter/ControlFlow.zip">Control Flow (Code)</a></li>
+	          	<li><a href="../../slides/Variables.pdf">Değişkenler</a></li>
+			<li><a href="../../slides/Variables2.pdf">Değişkenler 2</a></li>
+	          	
+	          	<li><a href="../../slides/Graphics.pdf">Grafikler (Slides)</a></li>
+	          	<li><a href="../../starter/Graphics.zip">Grafikler (Code)</a></li>
+	          	<li><a href="../../slides/Animation.pdf">Animasyon</a></li>
+	          	<li><a href="../../slides/Methods.pdf">Metotlar</a></li>
+	          	<li><a href="../../slides/NestedLoops.pdf">Events</a></li>
+	          	<li><a href="../../slides/Events.pdf">Events (Slides)</a></li>
+	          	<li><a href="../../starter/Events.zip">Events (Code)</a></li>
+	          	<li><a href="../../slides/Breakout.pdf">Breakout</a></li>
+	          	<li><a href="../../slides/AI.pdf">A.I. (Yapay Zeka)</a></li>
+	          	<li><a href="../../slides/ArrayLists.pdf">Dizi Listeleri (ArrayLists)</a></li>
+	          	<li><a href="../../slides/HashMaps.pdf">HashMaps</a></li>
+	         	<li><a href="../../slides/Internet.pdf">İnternet (Slides)</a></li>
+	         	<li><a href="../../starter/Internet.zip">İnternet (Code)</a></li>
+	         	<li><a href="../../slides/Beyond-CSBridge.pdf">Beyond CSBridge</a></li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Formlar<b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Survey</a></li>
+                <li><a href="https://forms.gle/eVsMyZb8HCSUETeV6">Laboratuvara giriş yapın</a></li>
+	          </ul>
+	        </li>
+
+			
+	        <!-- Bonus button -->
+	        <ul class="nav navbar-nav">
+	            <li><a href="../../tr/bonus-index.html">Bonus</a></li>
+	        </ul>
+
+	        <!-- Old/New button -->
+	        <ul class="nav navbar-nav">
+	            <li><a href="../../tr/old/index.html">[2019]</a></li>
+	            <li><a href="../../tr/index.html">[2020]</a></li>
+	        </ul>
+
+	        <!-- TA Link -->
+
+	      </ul>
+
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/english_flag.png"></img></a></li>
+	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
+	        
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+
+</script>
+  
+  <div class="container">
+  	
+  	
+    <div class="page-header" style="backgroud-color:#cdbfe3">
+    	<div class="container">
+   			<div>
+	        	<div id="logo">
+					<img id="logoImg" src="../../img/logo.png"/>
+				</div>
+				<div id="headerText" style="padding-bottom:15px;">
+					<div class="h1" style="margin-top:0px;font-size:40px;">
+						Bilgisayar Bilimine Giriş
+					</div>
+					<div>
+						2019 Yaz
+					</div>
+					<div>
+						24 Haziran - 4 Temmuz, Koç Üniversitesi, Istanbul
+					</div>
+				</div>
+	          
+	        </div>
+		</div>
+	</div>
+
+
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<div class="section" id="information">
+		<br/>
+		<div class="alert alert-info">
+      <b>Fill in the exit survey</b> after you finish your final project!!! The final survey can be found at <a href="https://tiny.cc/finish2019koc">tiny.cc/finish2019koc</a>.
+    </div>
+		<div class="alert alert-success">
+      <p>Looking for life after CSBridge? Check out the <a href="../../en/resources/whatsNext.html">What's Next</a> page!</p>
+    </div>
+		</div>
+
+		<!--<div class="alert alert-success">
+      Gerekli tüm bağlantılara (Lab için giriş yapma, çalışmaları teslim etme) 'Formlar' sekmesi altından ulaşabilirsiniz.
+		</div>
+    -->
+		<!--
+		<div class="alert alert-success">
+			<b> We want your feedback</b>. Fill in the class survey here: <a href="https://www.surveymonkey.com/r/VCVVD8N">https://www.surveymonkey.com/r/VCVVD8N</a>.
+		</div>
+
+		<div class="alert alert-success">
+			<b> Submit your work</b>. Use the submission process: <a href="../../en/handouts/submission.html">submission handout</a>.
+		</div>
+
+		<div class="alert alert-info">
+			Sign in to lab <a href="https://docs.google.com/forms/d/e/1FAIpQLSffsKTNU3mu-21-ZjZFJ3d-fPdvw6uQcvhAjbpXhux43_3gpg/viewform?usp=sf_link">here</a>.
+		</div>
+
+    <div class="alert alert-info">
+      Fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtHJpQ4Ksu3pWmPuCT5sC8m2WAvlOcr453P9UtsFFC-HCBdw/viewform">this survey</a> during the first lab.
+    </div>
+
+
+		<div class="alert alert-info">
+			Add to the class playlist here: <a href="https://open.spotify.com/user/1251835474/playlist/2E1ccnzfMTqDv2D1JEoFF3">Spotify Playlist</a>
+		</div>
+		-->
+
+
+
+		<div>
+			<h2>
+				Bu Dersin Amacı
+			</h2>
+
+			<p>Bu iki haftalık dersin amacı, size daha sonrasında kendi başınıza öğrenmeye devam edebilecek seviyede programcılığın temellerini öğretmektir. Dersler, Stanford ve Koç Üniversitesi'nden gelen bir grup eğitmen tarafından verilecektir. Programcılığı Stanford Üniversitesi'nin Bilgisayar Bilimine Giriş dersinde kullanılan materyeller üzerinden öğreneceksiniz.</p>
+
+		</div>
+
+
+		
+
+		<div>
+
+		<div class="section" id="schedule">
+			<h2>
+				Programlar
+			</h2>
+
+<!-- Final Project -->
+<table class="table table-striped">
+
+		<!-- Day 7 -->
+		<thead
+			class="visible-after" data-visible-after="2019071713"
+
+		>
+			<tr>
+				<th colspan = "6"><b>
+					<br/>
+						<h4>Days 7-8: Final Project (<a href="../../starter/BlankJavaProject.zip">Eclipse Project Here</a>)</h4>
+			</tr>
+		</thead>
+		<tbody
+			class="visible-after" data-visible-after="2019071713"
+		>
+			<tr>
+				<td><img class="projectImg" src="../../img/icons/project.png"></img></td>
+				<td><a href="../../tr/old/projects/project.html">>Kendi Projenizi Yaratın</a></td>
+				<td>All</td>
+			</tr>
+		</tbody>
+
+		<!-- Day 7 -->
+		<thead
+				class="visible-after" data-visible-after="2019071709"
+
+		>
+			<tr>
+				<th colspan = "6"><b>
+					<br/>
+						<h4>7. Gün - Diziler (Arrays) + HashMaps (<a href="../../starter/Day7.zip">Eclipse Project Here</a>)</h4>
+			</tr>
+		</thead>
+		<tbody
+				class="visible-after" data-visible-after="2019071709"
+		>
+			<tr>
+				<td><img class="projectImg" src="../../img/icons/numbers.jpg"></img></td>
+				<td><a href="../../tr/old/projects/sortedNumbers.html">Sıralayıcı</a>
+				</td>
+				<td>ArrayLists</td>
+			</tr>
+
+			<tr>
+				<td><img class="projectImg" src="../../img/old/projects/starWars/demo.png"></img></td>
+				<td><a href="../../en/old/projects/starWars.html">Star Wars Crawl [optional]</a>
+				</td>
+				<td>Dizi Listeleri (ArrayLists)</td>
+			</tr>
+
+			<tr 
+				class="visible-after" data-visible-after="2019071712"
+			>
+				<td><img class="projectImg" src="../../img/icons/snow.png"></img></td>
+				<td><a href="../../tr/old/projects/snow.html">Kar</a>
+				</td>
+				<td>Dizi Listeleri (ArrayLists)</td>
+			</tr>
+
+			<tr 
+				class="visible-after" data-visible-after="2019071712"
+			>
+				<td><img class="projectImg" src="../../img/icons/mouseGame.png"></img></td>
+				<td><a href="../../tr/old/projects/mouseGame.html">[Opsiyonel] Patika</a></td>
+				<td>Dizi Listeleri (ArrayLists)</td>
+			</tr>
+
+			<tr 
+				class="visible-after" data-visible-after="2019071712"
+			>
+				<td><img class="projectImg" src="../../img/icons/music3.jpg"></img></td>
+				<td><a href="../../tr/old/projects/music.html">[Opsiyonel] Ses Dalgaları</a></td>
+				<td>Dizi Listeleri (ArrayLists)</td>
+			</tr>
+		</tbody>
+
+
+<!-- Days 5-6: Breakout -->
+		<thead
+			class="visible-after" data-visible-after="2019071513"
+
+		>
+			<tr>
+				<th colspan = "6"><b>
+					<br/>
+            <h4>5./6. Gün: Breakout (<a href="../../starter/Breakout.zip">Eclipse Project Here</a>)</h4>
+			</tr>
+		</thead>
+		<tbody
+				class="visible-after" data-visible-after="2019071513"
+		>
+			<tr>
+				<td><img class="projectImg" src="../../img/icons/breakout.jpg"></img></td>
+				<td><a href="../../tr/old/projects/breakout.html">Breakout!</a>
+				</td>
+				<td>Etkileşim (Interactors)</td>
+			</tr>
+		</tbody>
+
+		<thead
+				class="visible-after" data-visible-after="2019071508"
+		>
+			<tr>
+				<th colspan = "6"><b>
+					<br/>
+            <h4>5 Gün: Events (<a href="../../starter/Day5.zip">Eclipse Project Here</a>)</h4></b></th>
+			</tr>
+		</thead>
+		<tbody
+				class="visible-after" data-visible-after="2019071508"
+		>
+			<tr>
+				<td><img class="projectImg" src="../../img/icons/makingTracks.png"></img></td>
+				<td><a href="../../tr/old/projects/makingTracks.html">İz Çıkartmaca (Lab)</a>
+				</td>
+				<td>Events</td>
+			</tr>
+
+			<tr>
+				<td><img class="projectImg" src="../../img/icons/mouseLocation.png"></img></td>
+				<td><a href="../../en/old/projects/mouseLocation.html">Mouse Location (Lab)</a>
+				</td>
+				<td>Events</td>
+			</tr>
+
+			<tr 
+				class="visible-after" data-visible-after="2019071512"
+			>
+				<td><img class="projectImg" src="../../img/icons/catchMeIfYouCan.png"></img></td>
+				<td><a href="../../tr/old/projects/catchMeIfYouCan.html">Yakala Yakalayabilirsen (Section)</a>
+				</td>
+				<td>Instance Variables</td>
+			</tr>
+		</tbody>
+		<thead
+				class="visible-after" data-visible-after="2019071208"
+
+		>
+			<tr>
+				<th colspan = "6"><b>
+					<br/>
+            <h4>4. Gün: Metotlar ve İleri Java (<a href="../../starter/Day4.zip">Eclipse Project Here</a>)</h4></b></th>
+			</tr>
+		</thead>
+		<tbody
+				class="visible-after" data-visible-after="2019071208"
+
+		>
+			<tr>
+				<td><img class="projectImg" src="../../img/icons/madMax.jpg"></img></td>
+				<td><a href="../../tr/old/projects/madMethods.html">Çılgın Metotlar</a>
+				</td>
+				<td>Parametre ve Return</td>
+			</tr>
+
+			<tr 
+				class="visible-after" data-visible-after="2019071212"
+			>
+				<td><img class="projectImg" src="../../img/icons/target.png"></img></td>
+				<td><a href="../../tr/old/projects/target.html">Hedef Tahtası</a>
+				</td>
+				<td>Parametreler</td>
+			</tr>
+
+			<tr 
+				class="visible-after" data-visible-after="2019071212"
+			>
+				<td><img class="projectImg" src="../../img/icons/illusion.png"></img></td>
+				<td><a href="../../tr/old/projects/illusion.html">Optik İllüzyon</a>
+				</td>
+				<td>For Döngüsüsü</td>
+			</tr>
+
+			<tr 
+				class="visible-after" data-visible-after="2019071212"
+			>
+				<td><img class="projectImg" src="../../img/icons/sunset.png"></img></td>
+				<td><a href="../../tr/old/projects/sunset.html">Kısa Film</a>
+				</td>
+				<td>Parametre ve Return</td>
+			</tr>
+		</tbody>
+		<thead
+				class="visible-after" data-visible-after="2019071108"
+		>
+			<tr>
+				<th colspan = "6"><b>
+					<br/>
+            <h4>3. Gün: Grafik (<a href="../../starter/Day3.zip">Eclipse Project Here</a>)</h4></b></th>
+			</tr>
+		</thead>
+		<tbody
+				class="visible-after" data-visible-after="2019071108"
+		>
+			<tr>
+				<td><img class="projectImg" src="../../img/icons/awesome.png"></img></td>
+				<td><a href="../../tr/old/projects/programmingIsAwesome.html">Programcılık Bir Harika</a>
+				</td>
+				<td>Graphik</td>
+			</tr>
+
+			<tr 
+					class="visible-after" data-visible-after="2019071112"
+			>
+				<td><img class="projectImg" src="../../img/icons/mysterySquare.png"></img></td>
+				<td><a href="../../tr/old/projects/mysterySquare.html">Gizemli Kare</a>
+				</td>
+				<td>Rastgelelik</td>
+			</tr>
+
+			<tr 
+					class="visible-after" data-visible-after="2019071112"
+			>
+				<td><img class="projectImg" src="../../img/icons/stringArt.png"></img></td>
+				<td><a href="../../tr/old/projects/stringArt.html">String Sanatı</a>
+				</td>
+				<td>For Döngüsü</td>
+			</tr>
+
+			<tr 
+					class="visible-after" data-visible-after="2019071112"
+			>
+				<td><img class="projectImg" src="../../img/icons/randomCircles.png"></img></td>
+				<td><a href="../../tr/old/projects/randomCircles.html">Tesadüfi Daireler</a>
+				</td>
+				<td>Rastgelelik</td>
+			</tr>
+
+			<tr 
+					class="visible-after" data-visible-after="2019071112"
+			>
+				<td><img class="projectImg" src="../../img/icons/bouncing.png"></img></td>
+				<td><a href="../../tr/old/projects/bouncingBall.html">Zıp Zıp Top</a>
+				</td>
+				<td>Animasyon</td>
+			</tr>
+		</tbody>
+
+		<thead
+				class="visible-after" data-visible-after="2019071008"
+		>
+			<tr>
+				<th colspan = "6"><b>
+					<br/>
+            <h4>2. Gün: Değişkenler (Variables) (<a href="../../starter/Day2.zip">Eclipse Project Here</a>)</h4></b></th>
+			</tr>
+		</thead>
+		<tbody
+				class="visible-after" data-visible-after="2019071008"
+		>
+			<tr>
+				<td><img class="projectImg" src="../../img/icons/sandcastle.jpg"></img></td>
+				<td><a href="../../tr/old/projects/sandcastles.html">Kumdan Kaleler</a>
+				</td>
+				<td>Değişkenler</td>
+			</tr>
+
+			<tr
+				class="visible-after" data-visible-after="2019071012"
+			>
+				<td><img class="projectImg" src="../../img/icons/guess.jpg"></img></td>
+				<td><a href="../../tr/old/projects/favoriteNumber.html">En Sevdiğim Numara</a>
+				</td>
+				<td>Değişkenler</td>
+			</tr>
+
+			<tr
+					class="visible-after" data-visible-after="2019071012"
+			>
+				<td><img class="projectImg" src="../../img/icons/medicine.png"></img></td>
+				<td><a href="../../tr/old/projects/medicine.html">Sahte İlaç</a>
+				</td>
+				<td>Eklemleme (Concatenation)</td>
+			</tr>
+
+			<tr 
+					class="visible-after" data-visible-after="2019071012"
+			>
+				<td><img class="projectImg" src="../../img/icons/someSum.png"></img></td>
+				<td><a href="../../tr/old/projects/someSum.html">Üç Aşağı Beş Yukarı</a>
+				</td>
+				<td>Değişkenler</td>
+			</tr>
+
+			<tr 
+					class="visible-after" data-visible-after="2019071012"
+			>
+				<td><img class="projectImg" src="../../img/icons/nim.jpg"></img></td>
+				<td><a href="../../tr/old/projects/gameOfStones.html">Nimm</a>
+				</td>
+				<td>Değişkenler</td>
+			</tr>
+		</tbody>
+		<thead
+				class="visible-after" data-visible-after="2019070800"
+		>
+
+			<tr>
+				<th colspan = "6"><b>
+					<br/>
+            <h4>1. Gün: Karel (<a href="../../starter/Day1.zip">Eclipse Project Here</a>)</h4></b></th>
+			</tr>
+		</thead>
+		<tbody
+				class="visible-after" data-visible-after="2019070800"
+		>
+			<tr>
+				<td><a href="../../tr/old/projects/collectNewspaper.html"><img class="projectImg" src="../../img/icons/newspaper.jpg"></img></a></td>
+				<td><a href="../../tr/old/projects/collectNewspaper.html">Gazete Alma</a>
+				</td>
+				<td>Metotlar</td>
+			</tr>
+
+			<tr
+					class="visible-after" data-visible-after="2019070913"
+			>
+				<td><img class="projectImg" src="../../img/icons/efes.jpg"></img></td>
+				<td><a href="../../tr/old/projects/arches.html">Stone Mason Karel</a>
+				</td>
+				<td>For Döngüsü</td>
+			</tr>
+
+			<tr 
+					class="visible-after" data-visible-after="2019070913"
+			>
+				<td><img class="projectImg" src="../../img/icons/mountain.png"></img></td>
+				<td><a href="../../tr/old/projects/mountain.html">Dağcı Karel</a>
+				</td>
+				<td>While Döngüsü</td>
+			</tr>
+
+			<tr 
+					class="visible-after" data-visible-after="2019070913"
+			>
+				<td><img class="projectImg" src="../../img/icons/randomPainter2.png"></img></td>
+				<td><a href="../../tr/old/projects/randomPainter.html">Deli Ressam</a>
+				</td>
+				<td>If İfadesi</td>
+			</tr>
+		</tbody>
+</table>
+			<hr/>
+
+		</div>
+
+<!-- Course Staff -->
+<div class="section" id="staff">
+	<h2>Öğretmenler</h2>
+
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/nickt.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Nick T.</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/eliska.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Eliška</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/ondra.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Ondra</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/chris.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Chris</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/juliaD.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Julia</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/matyas.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Matyáš</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/emily.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Emily</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/jaroslav.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Jaroslav</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/radek.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Radek</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/glenn.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Glenn</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/zach.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Zach</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/honza.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Honza</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/marek.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Marek</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/nickm.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Nick M.</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../../img/peeps/asena.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Asena</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+</div>
+
+		<div class="section" id="getStarted">
+			<h2>
+				Bilgisayarınızı Hazırlama
+			</h2>
+
+			<h3>Eclipse'i Yükleyin</h3>
+			<p>Yapmanız gereken ilk adım Eclipse'i indirmek. Bilgisayarınıza uygun olan <a href="../../resources/eclipse_helios_mac.zip">Mac versiyonu</a>'nu ya da<a href="../../resources/eclipse_helios_windows.zip">windows versiyonu</a>'nu indirin. Yardıma ihtiyaç duyarsanız <a href="../../handouts/DownloadingEclipse.pdf">bu rehbere</a> bakabilirsiniz. Eğer Eclipse'e zaten sahipseniz Stanford eklentisini yüklemeniz gerekiyor.  <a href="../../starter/edu.stanford.cs106_1.0.0.jar">Burada</a> bulabilirsiniz.</p>
+
+			<h3>Eclipse'e Proje Ekleyin</h3>
+			<p>Eclipse'i kurduktan sonra, artık Eclipse'e bir proje ekleyerek çalışmaya başlayabilirsiniz. Bunu (Stanford Menu -> Import Project) düğmesinden yapabilirsiniz. Sıfırdan bir program yazmak için bu <a href="../../resources/BlankProject.zip">boş proje</a>'yi kullanın.</p>
+
+			<!--<h3>Create an executable</h3>
+			<p>If you want to turn a project into a stand-alone executable, read <a href="../../handouts/CreatingJarFiles.pdf">this</a> handout.</p>-->
+			<hr/>
+		</div>
+
+			
+		<div class="section" id="playWithKarel">
+			<h2>
+				Müfredat
+			</h2>
+			<img src = "../../img/icons/curriculum.jpg" style="width:100%"></img>
+			<hr/>
+		</div>
+
+	
+		<div class="section" id="playWithKarel">
+			<h2>
+				Karel ile Oyna
+			</h2>
+
+			<p>Karel ile tanışın. Kendisi Stanford Üniversitesi tarafından öğrencileri programlama ile tanıştırmak amacıyla kullanılan bir Java robotudur. </p>
+
+			<p>Karel komutlarını kullanarak "beeper"ını tepenin üstüne çıkartabilirsiniz. Normalde programlarınızı Eclipse isimli uygulama üzerinde yazacaksınız; fakat başlangıç olarak web sitemize bir mini-eclipse yerleştirdik:</p>
+			
+
+<div style="width:100%;">
+	<div id="runButtonBar" class="buttonBar"></div> 
+       <script>importButtonBar();</script>
+</div>
+   <div id ='mainIde' class = "getStarted">
+ 
+      <div id = "mainIdeCenter" >
+      	
+         <div id = 'mainIdeEditorDiv'>
+            <script>importEditor('mainIdeEditor','mainIdeEditorDiv');</script>
+         </div>
+         <div id = 'mainIdeCanvasDiv' class = 'orange'>
+            <canvas id = 'mainIdeCanvas' class = 'red'></canvas>
+         </div>
+         
+      </div>
+
+   </div>
+
+
+   
+   
+
+<script>
+
+		
+
+  function init() {
+  	 var stepUpWorld = null;
+     var karelIde = null;
+
+     var onReadyCalled = false;
+
+     var buttonState = 'play';
+
+     document.onready = function() {
+        if (onReadyCalled) return;
+        onReadyCalled = true;
+        $("[title]").tooltip({ position: "bottom center", opacity: 0.9});
+        
+        initTabs();
+        var canvas = document.getElementById('mainIdeCanvas');
+        karelIde = KarelIde(window._editor, canvas, 'collectNewspaper');
+
+        var stepUpCanvase = document.getElementById('firstIdeCanvas');
+        stepUpWorld = KarelIde(window._editor, stepUpCanvase, '5x5');
+        
+        $('#playButton').click(function(){playClicked()});
+        $('#move').click(function(){stepUpWorld.stepMove()});
+        $('#left').click(function(){stepUpWorld.stepTurnLeft()});
+        $('#right').click(function(){stepUpWorld.stepTurnRight()});
+        $('#put').click(function(){stepUpWorld.stepPutBeeper()});
+        $('#pick').click(function(){stepUpWorld.stepPickBeeper()});
+        /*$('#worldSelector').change(
+           function() {
+              var worldName = $("#worldSelector option:selected").text();
+              karelIde.stopButton();
+              var playText = '<span class="glyphicon glyphicon-play"></span> Run Program';
+         	  $('#playButton').html(playText);
+         	  buttonState = 'play';
+	          karelIde.changeWorld(worldName);
+	        }
+        );*/
+        window.onresize();
+        
+     }
+
+     function playClicked() {
+     	if(buttonState == 'play') {
+     		karelIde.playButton();
+         	
+         	var resetText = '<span class="glyphicon glyphicon-repeat"></span> Reset Program';
+         	$('#playButton').html(resetText);
+         	buttonState = 'reset';
+         } else if (buttonState == 'reset') {
+         	karelIde.stopButton();
+         	var playText = '<span class="glyphicon glyphicon-play"></span> Run Program';
+         	$('#playButton').html(playText);
+         	buttonState = 'play';
+         }
+     	
+   }
+
+     window.onresize = function() { 
+        var parentHeight = 600;
+        var canvasWidth = 300
+        var parentWidth = $("#playWithKarel").width();
+        console.log('pw: ' + parentWidth);
+
+        var ide = document.getElementById('mainIde');
+        var editorDiv = document.getElementById('mainIdeEditorDiv');
+        var canvas = document.getElementById('mainIdeCanvasDiv');
+        var center = document.getElementById('mainIdeCenter');
+        
+        var ideHeight = parentHeight
+        ide.style.height = (ideHeight)+ 'px';
+        ide.style.width = parentWidth + 'px';
+        
+        var centerHeight = ideHeight;
+        center.style.height = centerHeight + 'px';
+        center.style.width = parentWidth + 'px';
+
+        //center.style.top = centerTop + 'px';
+
+        var availibleWidth = parentWidth ;
+        var elementSpacing = 12;
+
+        
+        var editorWidth = availibleWidth - canvasWidth - elementSpacing; 
+
+        canvas.style.width = canvasWidth + 'px';
+        canvas.style.height = canvasWidth + 'px';
+        canvas.style.left = (editorWidth + elementSpacing) + 'px';
+
+       	
+       	//editorWidth = Math.max(editorWidth, Const.MIN_EDITOR_WIDTH)
+
+        editorDiv.style.left = 0 + 'px'
+        editorDiv.style.width = editorWidth + 'px';
+
+        if (karelIde) {
+           karelIde.resizeCanvas(canvasWidth, canvasWidth);
+           stepUpWorld.resizeCanvas($("#firstIdeCanvas").width(), 200);
+        }
+        if (window._editor) {
+           window._editor.renderer.onResize();
+        }
+        ReferenceDialog.resize();
+        DeployDialog.resize();
+     }
+
+     
+  }
+  init();
+</script>		</div>
+
+  			
+  	<!-- Footer -->
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+		&#169; Stanford 2020 &#124; Hazırlayan: 
+    	<a href="http://stanford.edu/~cpiech">Chris</a> (Tüm ekibin de yardımıyla).
+		Pek yetenekli birçok eğitimci tarafından hazırlanan muhteşem CS106A sınıfından esinlenilmiştir. 
+		<a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> ve 
+		<a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>'ye özel teşekkürlerimizi sunarız.
+		Türkçe tercüme ile ilgili tüm soru ve görüşleriniz için 
+		<a href="http://web.stanford.edu/~sarslan/">Serhat Arslan</a> ile iletişime geçebilirsiniz.
+	</p>
+	<!--<p class="pull-right">
+		<a href="../../fall12">Fall 2012</a>
+	</p>-->
+</div>
+<!--<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>-->
+  
+  </div>
+	</body>
+</html>
+
+	</body>
+</html>

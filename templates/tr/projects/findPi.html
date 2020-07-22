@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Pi")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,10 +6,10 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Pi'yi Bul
+				Find Pi
 			</h1>
 			<p>
-				Yazan: Eric Roberts.
+				Problem written by Eric Roberts.
 			</p>
 
 		</div>
@@ -27,19 +18,21 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Pi (&pi;) gerçek güzelliğin matematiksel halidir. Birçok denklemde karşımıza çıkar. Özellikle de dairesel hesaplar yaparken, çan eğrisi hesaplarken ve son olarak da, inanılmaz bir şekilde, <a href="https://tr.0wikipedia.org/wiki/Euler_%C3%B6zde%C5%9Fli%C4%9Fi">Euler Özdeşliği'nde</a>.
+					Pi (&pi;) is a mathematical thing of true beauty. It comes up in many equations, most notably in the equation for the area of a circle, the p.d.f. of a normal distribution and finally, and oh so wonderously, in <a href="http://en.wikipedia.org/wiki/Euler's_identity">Euler's Identity</a>.
 				</p>
 
-				<p>Peki &pi; değerinin 3.14159265359... olduğunu nereden bliyoruz? Pi sayısını hesaplamanın birçok yöntemi var. Bu egzersiz ile pi sayısını dart tahtasını kullanarak hesaplamayı öğreneceğiz.</p>
+				<p>But how do we know that the value of &pi; is 3.14159265359...? There are several ways to calculate pi. In this problem we show how to do it using darts.</p>
 
 				<p>
 					<center>
 						<img style="width:500px" src="{{pathToRoot}}img/projects/findPi/lifeOfPi.jpg">	
-						<p style="text-align:center"><i>Bu arkadaşon ismi de Pi ama bizim problemimiz onunki ile alakalı değil.</i></p>
+						<p style="text-align:center"><i>This boy's name is also Pi. This problem is unrelated (other than name) to him.</i></p>
 					</center>
 				</p>
 
-				<p>Aşağıdaki (sol) sarı daireye bir dart oku attığınızı hayal edin. Eğer rastgele bir şekilde birçok ok atarsanız, bazıları sarı bölgenin içine bazıları da dışarıdaki gri alana isabet edecektir. Eğer hem içerideki daireye hem de dışarıdaki kareye denk gelen okları sayacak olursanız, bu toplamların oranı iki şeklin alanları oranına eşit olmalıdır.</p>
+				<p>Imagine throwing darts at the yellow circle bellow to the left. If you randomly throw a series of darts at the dartboard, some will land inside the yellow circle and some in the gray area outside it. If you count both the number of darts that fall inside the circle and the number that fall anywhere inside the square, the ratio of those numbers should be proportional to the relative area of the two figures.
+ 
+</p>
 
 				<p>
 					<center>
@@ -49,16 +42,15 @@
 				</p>
 				
 
-				<p>Dairenin alanı &pi; ve karenin alanı 4 olduğuna göre, dairenin içine isabet eden okların oranı &pi; / 4 civarında olmalıdır.</p>
+				<p>Because the area of the circle is &pi; and that of the square is 4, the fraction that falls inside the circle should approach &pi; / 4.
+</p>
 				
 			</div>
 		</div>
 		
-
-		
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Çözüm</h2>
+				<h2>Solution</h2>
 
 
 <pre id="editor" style="height:580px">/**
@@ -105,8 +97,3 @@ public class FindPi extends ConsoleProgram {
 </script>
 	</div>
 	</div>
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

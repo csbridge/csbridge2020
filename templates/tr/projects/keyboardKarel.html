@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Keyboard Karel")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,22 +6,24 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-        		Karel Klavyede (ve Çözümü)
+        Keyboard Karel (with Solution)
 			</h1>
 			<p>
-				Yazanlar: Barış Bozkurt ve Lisa Yan.
+				Problem written by Barış Bozkurt and Lisa Yan.
 			</p>
-
+		<br />
+		Day5: <code>HolePuncher.java</code>
+		
 		</div>
 		<hr/>
 
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Kullanıcının Karel'i yön tuşlarını kullanarak hareket ettirebildiği bir program yazın.
-					Karel saol-üst köşede başlamalıdır ve belirtilen yönde 100 piksel kadar ilerlemelidir.
+        Write a program that lets the user to move Karel around with arrow keys.
+        Karel should start in the top-left corner of the screen and move exactly 100 pixels in the direction specified. (Hint: make sure to click on the program window after starting the program to let it start receiving keyboard events).
         </p>
-        <p>Karel'i ekran içinde kalmaya sınırlandırmadığınız zaman kendisinin ekran dışına da çıkma özgürlüğünün bulunduğunu unutmayın.</p>
+        <p>Note that because you are not restricting Karel to the screen, Karel is free to move off-screen.</p>
 
 				<p>
 					<center>
@@ -38,7 +31,7 @@
 					</center>
 				</p>
 
-        <p>Kullanmanız için işte size bir Karel. Bu görseli Eclipse proje klasörünüz içine <code>karel.png</code> olarak kaydetmelisiniz.</p>
+        <p>Here is a Karel to help you out. You should save this Karel as <code>karel.png</code> into your Eclipse project folder.</p>
 			<center>
 						<img style="width:80px" src="{{pathToRoot}}img/projects/creativeGraphics/karel.png">	
             </center>
@@ -49,7 +42,7 @@
 		
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Çözüm</h2>
+				<h2>Solution</h2>
 
 
 <pre id="editor" style="height:680px">
@@ -109,7 +102,3 @@ public class KeyboardKarel extends GraphicsProgram {
 	
 	</div>
 	</div>
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

@@ -1,0 +1,26 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Favorite Number
+credit: Chris P., Bryce C-R and Julia L.
+solution: soln.py
+
+First think of your favorite integer between 0 and 100. Write a program that stores your favorite number as a variable and repeatedly asks the user to try and guess it. Let the user know if their last guess was too low or too high.
+
+For example my favorite number is 88. Here is a demo of a user trying to guess that number:
+
+```
+Try and guess my favorite number (between 0 and 100)
+Guess: 50
+Too low
+Guess: 75
+Too low
+Guess: 87
+Too low
+Guess: 92
+Too high
+Guess: 90
+Too high
+Guess: 89
+Too high
+Guess: 88
+Good job!
+```

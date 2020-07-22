@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Step Up")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,10 +6,10 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Adım Adım
+				Step Up
 			</h1>
 			<p>
-				Eric Roberts'ın bir ders notu temel alınmıştır.
+				Based on a handout by Eric Roberts
 			</p>
 
 			<p>
@@ -26,10 +17,10 @@
 				KarelCommands,
 				Methods
 			<br/>-->
-			Ders Notları:
-				<a href ="{{pathToRoot}}tr/handouts/karel.html">Karel Referansı</a>
+			Handouts:
+				<a href ="{{pathToRoot}}en/handouts/karel.html">Karel Reference</a>
         <br/>
-        Day1: <code>StepUp.java</code>
+      Day1: <code>StepUp.java</code>
 			</p>
 
 		</div>
@@ -38,7 +29,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Karel dünyada solda başlıyor. Karel'ı beeper'ı alması ve onu çıkıntının üstüne taşıması için nasıl programlardınız?  Karel beeper'ı 2. Cadde ile 3. Bulvarın köşesinde bırakmalı ve sonra doğuda bir köşeye doğru daha ilerleyerek 4. Bulvar'da son bulmalı. Programınızın sonunda, Karel'ın dünyası sağdaki resimdeki gibi görünmeli.
+					Karel starts in the world on the left. How would you program Karel to pick up the beeper and transport it to the top of the ledge?  Karel should drop the beeper at the corner of 2nd Street and 4th Avenue and then continue one more corner to the east, ending up on 5th Avenue. At the end of your program, Karel's world should look like the picture on the right.
 				</p
 				<p>
 					<center>
@@ -48,7 +39,7 @@
 				
 				<br/>
 				<p>
-					Eğer Karel sadece bu komutları biliyorsa: 
+					If Karel only knows the commands: 
 					<div class="well">
 						<code>
 							move();
@@ -57,7 +48,7 @@
 							<br/>turnLeft();
 						</code>
 					</div>
-					Karel'ı nasıl sağa çevirirdiniz?
+					How can you make Karel turn to the right?
 				</p>
 			</div>
 
@@ -65,10 +56,10 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Çözüm</h2>
+				<h2>Solution</h2>
 
 				<p>
-					Bu örnek için bir çözüm sağlanmıştır, bu sayede tam bir programın nasıl gözüktüğünü görebilirsiniz!
+					A solution is provided for this example, so that you can see what a full program looks like!
 				</p>
 
 
@@ -113,9 +104,3 @@ public class StepUp extends Karel {
 </script>
 			</div>
 		</div>
-
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

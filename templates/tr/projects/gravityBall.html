@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Gravity Ball")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,10 +6,10 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Seken Top
+				Gravity Ball
 			</h1>
 			<p>
-				Yazan: Chris.
+				Problem written by Chris.
 			</p>
 
 		</div>
@@ -28,8 +19,8 @@
 
 		<div class="row">
 			<div class="col-md-12">
-			<p>
-				Yerçekimi etkisinde olan bir topun sekme davranışını sergileyen bir animasyon programıdır.
+				<p>
+				Makes a ball that bounces as if under the influence of gravity.
 			</p>
 			<p>
 				<center>
@@ -40,7 +31,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Çözüm</h2>
+				<h2>Solution</h2>
 
 
 <pre id="editor" style="height:580px">public class GravityBall extends GraphicsProgram {
@@ -92,8 +83,3 @@
 </script>
 	</div>
 	</div>
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

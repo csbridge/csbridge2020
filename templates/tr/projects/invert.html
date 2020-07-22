@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Invert")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,17 +6,17 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Ters Çevir (ve çözümü)
+				Invert (with solution)
 			</h1>
 			<p>
-				Problemi yazan: Eric Roberts
+				Problem written by Eric Roberts
 			</p>
 
 			<p>
-			Ders Notları: 
-				<a href ="{{pathToRoot}}tr/handouts/karel.html">Karel Referansı</a>
-      <br/>
-      Day1: <code>InvertBeepers.java</code>
+			Handouts: 
+				<a href ="{{pathToRoot}}en/handouts/karel.html">KarelReference</a>
+        <br/>
+        Day1: <code>InvertBeepers.java</code>
 			</p>
 
 		</div>
@@ -34,7 +25,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Herhangi bir boyuttaki dünya için, (her karede en fazla bir beeper'ın olduğu) herhangi bir beeper düzenlemesi için, tüm beeper'ları tersine çevirin. Yani, daha önceden beeper olan bir yerde artık beeper olmasın ve önceden beeper olmayan bir karede artık beeper olsun. Aşağıdaki örneği göz önünde bulundurun.
+					For a world of any size, with any configuration of beepers (no square will have more than one), invert all the beepers so that, where there was a beeper previously there is no beeper... and where there was no beeper previously, there is a beeper. Consider the following example.
 				</p>
 
 				<p>
@@ -48,7 +39,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Çözüm</h2>
+				<h2>Solution</h2>
 
 
 <pre id="editor" style="height:1010px">/**
@@ -106,6 +97,7 @@ public class InvertBeepers extends SuperKarel {
 	 * Method: Return To West
 	 * ----------------------
 	 * Turn around and go back to the wall that you came from!
+	 */
 	private void returnToWest() {
 		turnAround();
 		while(frontIsClear()) {
@@ -125,8 +117,3 @@ public class InvertBeepers extends SuperKarel {
     /*editor.setTheme("ace/theme/eclipse");
     editor.getSession().setMode("ace/mode/java");*/
 </script>
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

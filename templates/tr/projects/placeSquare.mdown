@@ -1,0 +1,50 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Place Square
+credit: Written by Chris Piech
+
+Handouts: [Karel Reference]({{pathToRoot}}en/handouts/karel.html)<br/>
+File: `square_karel.py`
+
+Your goal is to place an outline of beepers in Karel's world, like below.
+
+<center>
+	<img style="width:600px"  src="{{pathToRoot}}img/projects/placeSquare/world1.png">	
+</center>
+
+You can assume:
+
+* Karel starts on the bottom left of the world, facing east.
+* Karel's world is rectangular or square.
+
+Your program should also work for worlds of different sizes, like below:
+
+<center>
+	<img style="width:600px"  src="{{pathToRoot}}img/projects/placeSquare/world2.png">	
+</center>
+
+## Writing code for humans
+
+**Decomposition**. Remember, you can define functions with meaningful names and call those. Try looking at the [Beeper Line]({{pathToRoot}}en/projects/beeperLine/index.html) worked example as a starting point when writing a helper function, and see what needs to be modified.
+
+**Using loops**. Does your program use a `for` loop, like below?
+
+```
+for i in range(4):
+    # your code here
+```
+
+If not, try it out! It will help you organize your code better. We promise :-)
+
+## Bonus extension
+
+Great job so far! If you have extra time, first make sure that your program works on 1x1 worlds as well.
+
+Then, try to modify your program to make Karel draw the following square, where all beeper in the square outline do not border any walls. This means that 1x1 and 2x2 worlds will not have any beepers in them.
+
+This part is purely optional.
+
+<center>
+	<img style="width:600px"  src="{{pathToRoot}}img/projects/placeSquare/bonus.png">	
+</center>
+
+

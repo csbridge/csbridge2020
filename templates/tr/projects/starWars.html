@@ -1,0 +1,63 @@
+% rebase('templates/en/template.ptl', title="Star Wars Crawl")
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Header -->
+    <div id="pageHeader">
+      <h1>
+        Star Wars Crawl
+      </h1>
+      <p>
+        Handouts:
+        <a href ="{{pathToRoot}}en/handouts/arrayLists.html">ArrayLists</a>
+        <br/>
+        Examples:
+        <a href ="{{pathToRoot}}en/projects/rocketPaddle.html">Rockets</a>
+        <br/>
+        Day7: <code>StarWars.java</code>
+      </p>
+
+    </div>
+    <hr/>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          Write a program that reads in a text file and animates the lines together from the bottom to the top of the screen, similar to the movie Star Wars.</p>
+        <p>
+          <center>
+            <img style="width:500px" src="{{pathToRoot}}img/projects/starWars/demo.png">  
+          </center>
+        </p>
+
+        <p>
+          This graphics program can be modeled by imagining each line of the text file as a single GLabel.  We want to put all of these GLabels on the screen, and then animate them up the screen all at the same time.  Try approaching the following steps to do this:
+        </p>
+        <ol>
+          <li>Add the background image (hint: use <code>setSize</code> to resize it)</li>
+          <li>Read in the text file <code>TEXT_FILENAME</code> using <code>readFile</code>, which takes a filename as a parameter and returns an ArrayList of the lines in the file.  Like this:
+            <pre>ArrayList&lt;String&gt; lines = readFile("myfile.txt");</pre>
+          </li>
+          <li>Place the labels bellow the screen.  The first label should initially be LABEL_PADDING pixels <i>bellow</i> the screen, and each label should be <code>LABEL_PADDING</code> further down.</li>
+          <li>
+            Some Strings are empty (<code>""</code>) which is fine. This will add spacing.
+          </li>
+          <li>Animate the labels onscreen by moving all the labels up a small amount, then pausing, and then repeating.</li>
+        </ol>
+
+        <h3>Milestones
+        </h3>
+        <ol>
+          <li>As a first step, load the ArrayList of lines from the file (test that this works)</li>
+          <li>Make a GLabel for each line and place it in its initial position. You can pull the bottom corner of your graphics window to change the size of the screen and look for objects. Here is a figure of the initial position of the GLabels:
+            <br/>
+            <center>
+            <img style="max-width:100%; width:600px" src="{{pathToRoot}}img/projects/starWars/figure.png">  
+          </center>
+          <li>Animate the GLabels</li>
+          <li>Add a background and change the labels to be white</li>
+        </ol>
+
+      </div>
+    </div>

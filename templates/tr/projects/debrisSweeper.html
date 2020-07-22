@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Debris Sweeper")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,18 +6,18 @@
 		<!-- Header -->
         <div id="pageHeader">
             <h1>
-                Enkazı Kaldır (ve çözümü)
+                Debris Sweeper (with Solution)
             </h1>
             <p>
-                Yazanlar Chris Piech ve Gizemli CS106A insanları.
+        Written by Chris Piech and Mystery CS106A people.
         <br/>
  
-        Ders Notları: 
-        <a href ="{{pathToRoot}}en/handouts/graphics.html">Grafik Referensı</a>, 
-        <a href ="{{pathToRoot}}en/handouts/events.html">Olaylar(Events) Referansı</a>
+        Handouts: 
+        <a href ="{{pathToRoot}}en/handouts/graphics.html">GraphicsReference</a>, 
+        <a href ="{{pathToRoot}}en/handouts/events.html">EventsReference</a>
  
         <br/>
-        5. Gün: <code>DebrisSweeper.java</code>
+        Day5: <code>DebrisSweeper.java</code>
             </p>
 
         </div>
@@ -35,11 +26,11 @@
         <div class="row">
             <div class="col-md-12">
                 <p>
-                    Bu örneğin amacı ekranı rastgele enkaz kalıntıları (GOval) ile doldurmak ve kullanıcı bunların üzerine tıkladıkça onları ortadan kaldırmaktır. Bu program size ilk hafta öğrendiğimiz birçok tekniği pratik etme imkanı veriyor. Metotları, for döngülerini, grafikleri, rastgele sayıları, mouse dinleyicilerini (mouseListeners) ve daha fazlasını kullanacaksınız!
+                    The goal of this example is to write a program that fills the screen with a random collection of debris (GOvals) and then allows the user to click and remove debris pieces. This program lets you practice so many techniques that we learned in the first week of class. You will be using methods, for loops, graphics, random numbers, mouse listeners, and maybe even more!
                 </p>
 
                 <p>
-                    İlk adım enkazı oluşturmak. Kaç adet ankaz parçasının oluşturulacağını ve bu parçaların boyut sınırlarını belirten sabit değerler (constant) oluşturun. Her bir parça için - rastgele boyut, konum ve renklerde (sizin önceden belirttiğiniz sınırlar içinde)- yeni bir GOval objesi oluşturun. Oluşturduklarınızın herhangi bir ekran boyutu için uyumlu olması gerektiğini unutmayın. Kodunuzun daha kolay okunabilmesi için tüm bu işleri birden fazla metoda bölüştürmek isteyebilirsiniz.
+                    The first step is to make the debris. Create constants that set limits for how large the debris pieces can be and how many pieces the screen will contain. For every piece, create a new GOval with a random size, position, and color (within the limits you have set). Remember, this should work with any size screen. Perhaps you want to split this into a few methods to make your code easy to read!
                 </p>
 
                 <p>
@@ -49,7 +40,7 @@
                 </p>
 
                 <p>
-                    Sırada kullanıcılara ekazı kaldırtmak var. Bir fare-dinleyicisi (mouseListener) ekleyin ve kullanıcının bir obje üzerine tıklayıp tıklamadığını kontrol edin. Eğer bir enkaz parçası üzerine tıklanmışsa,  bu parçayı ortadan kaldırın!
+                    Next, we need to let users remove debris from the screen. Add a mouse listener and check if the user has clicked on an object. If they have, clean that debris up (remove it from the screen)!
                 </p>
 
                 <br/>
@@ -57,7 +48,7 @@
               <p><b>BONUS!</b></p>
 
                 <p>
-                    Dilerseniz, bonus olarak, tüm enkazın kaldırılıp kaldırılmadığını kontrol eden bir yöntem de geliştirebilirsiniz. Tüm enkaz kalktığında kullnıcıyı tebrik edin ve ona teşekkür edin!
+                    If you want, as a bonus, you could add a way to check if all the debris is clear. When it is, tell the user congratulations and thank them for cleaning up the screen!
                 </p>
 
                 
@@ -66,7 +57,7 @@
 		
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Çözüm</h2>
+				<h2>Solution</h2>
 
 
 <pre id="editor" style="height:950px">
@@ -142,7 +133,3 @@ public class DebrisSweeper extends GraphicsProgram {
 	
 	</div>
 	</div>
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Place 100")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,14 +6,14 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				100 Koymak (ve çözümü)
+				Place 100 (with solution)
 			</h1>
 			<p>
-				Problemi Yazan: Chris
+				Problem written by Chris
 			</p>
 			<p>
-				Ders Notları: 
-				<a href ="{{pathToRoot}}tr/handouts/karel.html">Karel Referansı</a>
+				Handouts: 
+				<a href ="{{pathToRoot}}en/handouts/karel.html">KarelReference</a>
         <br/>
         Day1: <code>Place100.java</code>
 			</p>
@@ -33,7 +24,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Hedefiniz Karel'ın başladığı yerin önündeki karede 100 beeper'dan oluşan bir yığın oluşturmasını sağlamak.  Lütfen bir satırda 100 kez putBeeper yazmayın!!! (ipucu: for döngüsü kullanın.) 
+					Your goal is to have Karel create a pile of 100 beepers on square infront of where she starts. Please!!! Do not type out putBeeper 100 times in a row! (hint: use a for loop.) 
 				</p>
 
 				<p>
@@ -47,7 +38,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Çözüm</h2>
+				<h2>Solution</h2>
 
 
 <pre id="editor" style="height:280px">/**
@@ -77,8 +68,3 @@ public class Place100 extends SuperKarel {
     /*editor.setTheme("ace/theme/eclipse");
     editor.getSession().setMode("ace/mode/java");*/
 </script>
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

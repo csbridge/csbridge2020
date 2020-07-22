@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="String Art Solution")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,10 +6,10 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				String Sanatı
+				String Art (Solution)
 			</h1>
 			<p>
-				Eric Roberts'ın bir gösterimi temel alınmıştır.
+				Based on a demonstration by Eric Roberts.
 			</p>
 
 		</div>
@@ -27,7 +18,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Tekrar tekrar çizgiler çizerek, kavisli görünen bir şekil yaratabiliriz. Kanvasın (canvas) altı ve solu boyunca eşit aralıklarla ayrılmış noktaları hayal ettiğimiz aşağıdaki örneğe bakalım. Eğer sol kenarda en üstteki nokta ile alt kenarda en soldaki noktayı birleştirirsek, soldaki resimdeki doğru oluşur. Eğer sıradaki 10 noktayı da aynı şekilde birleştirirsek ortadaki resmi ve bütün noktaları birleştirirsek sağdaki resmi elde ederiz.
+					By repeatedly drawing lines, we can make a curved looking shape. Consider the example below where we imagine dots evenly space along the bottom and the left of a canvas. If we connect the topmost dot on the left edge to the left most dot on the right edge, we would be a line like the picture of the far left. If we then connect the next 10 dots we get a picture in the middle and if we connect all dots we get the picture on the right.
 				</p>
 				
 				<p>
@@ -35,16 +26,16 @@
 						<img style="width:700px" src="{{pathToRoot}}img/projects/stringArt/startToEnd.png">	
 					</center>
 				</p>
-				<p>Doğruları kullanarak üstte sağdaki resimdeki "eğriyi" yaratan bir program yazın..</p>
+				<p>Write a program that creates the "curve" in the above right image using straight lines.</p>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Başlangıç Kodu</h2>
+				<h2>Solution</h2>
 
 
-<pre id="editor" style="height:270px">public class StringArt extends GraphicsProgram {
+<pre id="editor" style="height:500px">public class StringArt extends GraphicsProgram {
 
 	/** The size of the screen **/
 	public static final int APPLICATION_WIDTH = 400;
@@ -82,10 +73,3 @@
 
 			</div>
 		</div>
-
-
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

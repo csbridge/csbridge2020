@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Duplicate")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,16 +6,17 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Şekilleri Çoklama
+				Duplicating Shapes
 			</h1>
 			<p>
-				Yazan: Tyler Conklin</br>
+                Written by Tyler Conklin
+								</br>
 			</p>
 			<p>
-				Ders Notları:
-                <a href ="{{pathToRoot}}tr/handouts/random.html">Rasgele Sayı Üreticisi Referansı</a><br/>
-                <a href ="{{pathToRoot}}tr/handouts/graphics.html">Grafik Referansı</a><br/>
-                <a href ="{{pathToRoot}}tr/handouts/events.html">Olaylar(Events) Referansı</a><br/>
+				Handouts:
+                <a href ="{{pathToRoot}}en/handouts/random.html">Random Generator Reference</a><br/>
+                <a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a><br/>
+                <a href ="{{pathToRoot}}en/handouts/events.html">Events Reference</a><br/>
         BonusEvents: <code>DuplicatingShapes.java</code>
 			</p>
 
@@ -34,21 +26,21 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-						Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır, ancak bu egzersizi tamamlamak kesinlikle Final Projenize yardımcı olacaktır.
+						This is a bonus program! It's meant to be challenging.
 				</p>
 				<p>
-					Kullanıcı bir "oval"e tıkladığında o "oval"i 10 kere çoklayan bir grafik programı yazın. Programınız ekranı rastgele "oval"lerle doldurarak başlamalı. (Tıpkı Tesadüfi Daireler egzersizinde olduğu gibi) Bu durumda her GOval objesinin X, Y, genişlik, yükseklik ve renk özellikleri rastgele olmalı. Böylesi bir başlangızın ardından ekranınız aşağıdaki gibi görünecektir:
+					Write a graphics program to duplicate an oval ten times if the user clicks on the oval. Your program should start by populating the canvas with ten randomly generated ovals, much like the ten random circles example. Note that this means the X, Y, width, height, and color of the GOval should all be random. After this initial step, the canvas may look something like this:
 					<center>
 						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/duplicatingShapes/duplicatingShapesStart.png">	
 					</center>
-					Eğer kullanıcı bir "oval" üzerine tıklayacak olursa, bu obje 10 defa çoklanmalıdır. Çoklanan objelerin koordinat hariç tüm özellikleri aynı olmalıdır. Yani renk, yükseklik, genişlik gibi bilgiler aynı kalırken yeni objeler rastgele koordinatlarda oluşmalıdır. Örneğin kırmızı "oval"e tıkladıktan sonra ekranın yeni görüntüsü aşağıdaki gibi olabilir:
+					If the user then clicks on an oval. This oval should be duplicated ten times. The characteristics of the oval should be the same as the original oval, but the X,Y position should change. So the new ovals should have the same color, height, and width of the oval that was clicked on, but a new random X,Y position. After one click on the red oval, the canvas may now look like this:
  					<center>
 						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/duplicatingShapes/duplicatingShapesEnd.png">	
 					</center>
-					Bu arada tüm "oval"in ekranın içinde olup olmaması önemli değildir; ama ufak da olsa bir kısmı ekranda gözükebilmelidir. (objenin X,Y değerleri ekranın yükseklik ve genişlik değerleri içerisinde olmalıdır).
+					Note that we do not care if the entire oval is on screen, but at least part of the oval should be on screen (the X,Y of the oval must be within the width and height of the canvas).
         </p>
 				<p>
-					İpucu: Aşağıdaki metot kullanılabilir.
+					Hint: The method below will be useful.
 					<center>
 						<img style="width:600px;border:2px solid grey" src="{{pathToRoot}}img/projects/duplicatingShapes/getElementAt.png">	
 					</center>
@@ -57,9 +49,3 @@
 			</div>
 
 		</div>
-
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

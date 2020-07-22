@@ -1,0 +1,441 @@
+<head>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../../../images/stanford-favicon.png" type="image/x-icon">
+<title>CS Bridge  | </title>
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../../style.css">
+
+<!-- Java Script -->
+<script src="../../../plugins/jquery.min.js"></script>
+<script src="../../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+
+<script src="../../../karel/ace/ace.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../../js/moment.min.js"></script>
+<script type="text/javascript" src="../../../js/index.js"></script>
+<script type="text/javascript" src="../../../plugins/d3.v3/d3.v3.min.js"></script>
+
+
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+  </script>-->
+
+<script src="../karel/js/html/websiteImports.js"></script>
+<script>importCss();</script>
+<script>importJs();</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+
+
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+<nav class="navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="../../../">CS Bridge</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <!--<li ><a href="#">Link</a></li>-->
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+          		<li><a class="visible-after" data-visible-after="2019071009" href="../../../tr/resources/quick-python.html">Python Referansı</a></li>
+	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../../tr/resources/graphics.html">Grafik Referansı</a>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../../tr/resources/animation.html">Animation Reference</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../../tr/resources/general-info.html">General Info</a></li>
+              <li><a href="../../../tr/resources/student-faq.html">[Student] Course FAQs</a></li>
+              <li><a href="../../../tr/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
+              <li><a href="../../../tr/resources/section-info.html">Section Info</a></li>
+              <li><a href="../../../tr/resources/zoom-info.pdf">Zoom Guide</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../../tr/resources/install.html">Install PyCharm</a></li>
+              <li><a href="../../../tr/resources/karelInPycharm.pdf">Karel in PyCharm</a></li>
+
+              <!-- Not used nor visible -->
+				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../../tr/resources/jar.html">Exporting Projects as JARs</a>-->
+	          	<!--<a class="visible-after" href="../../../tr/resources/sections.html">Sections</a>-->
+	          </ul>
+	        </li>
+
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projeler <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+
+	          	<!-- Day 1 -->
+	          	<li class="dropdown-header">1. Gün</li>
+	            <li>
+	            	<a href="../../../tr/projects/collectNewspaper.html">Gazete Alma</a>
+	            </li>
+	          	<li class="visible-after" data-visible-after="2019070912">
+	          		<a href="../../../tr/projects/arches.html">Stone Mason Karel</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../../tr/projects/mountain.html">Dağcı Karel</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../../tr/projects/randomPainter.html">Deli Ressam</a>
+	          	</li>
+	          	
+	          	<!-- Day 2 -->
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">2. Gün</li>
+          		<li class="visible-after" data-visible-after="2019071009">
+          			<a href="../../../tr/projects/sandcastles.html">Kumdan Kaleler</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../../tr/projects/someSum.html">Üç Aşağı Beş Yukarı</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../../tr/projects/gameOfStones.html">Nimm</a>
+	          	</li>
+	          	
+	          	<!-- Day 3 -->
+	          	<li class="divider visible-after" data-visible-after="2019071109" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071109">3. Gün</li>
+          		<li class="visible-after" data-visible-after="2019071109">
+          			<a href="../../../tr/projects/awesome.html">Programcılık Bir Harika<a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../../tr/projects/mysterySquare.html">Gizemli Kare</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../../tr/projects/stringArt.html">String Sanatı</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071113">
+	          		<a href="../../../tr/projects/randomCircles.html">Random Circles</a>
+	          	</li>
+	            <li class="visible-after" data-visible-after="2019071113">
+	            	<a href="../../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
+	            </li>
+
+				<!-- Day 4 -->
+				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">4. Gün</li>
+	          	<li class="visible-after" data-visible-after="2019071212">
+	          		<a href="../../../tr/projects/target.html">Hedef Tahtası</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071213">
+	          		<a href="../../../tr/projects/illusion.html">Optik İllüzyon</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071213">
+	          		<a href="../../../tr/projects/sunset.html">Kısa Film</a>
+	          	</li>
+
+				<!-- Day 5 / 6 -->
+          		<li class="divider visible-after" data-visible-after="2019071509" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün</li>
+          		<li class="visible-after" data-visible-after="2019071509">
+          			<a href="../../../tr/projects/makingTracks.html">İz Çıkartmaca</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071512">
+	          		<a href="../../../tr/projects/catchMeIfYouCan.html">Yakala Yakalayabilirsen</a>
+	          	</li>
+
+	          	<li class="divider visible-after" data-visible-after="2019071513" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071513">5./6. Gün</li>
+          		<li class="visible-after" data-visible-after="2019071513">
+          			<a href="../../../tr/projects/breakout.html">Breakout</a>
+          		</li>
+
+          		<!-- Day 7 -->
+          		<li class="divider visible-after" data-visible-after="2019071709" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071709">7. Gün</li>
+          		<li class="visible-after" data-visible-after="2019071709">
+          			<a href="../../../tr/projects/sortedNumbers.html">Sorted Numbers</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../../tr/projects/snow.html">Kar</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../../tr/projects/mouseGame.html">[Opsiyonel] Patika</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../../tr/projects/music.html">[Opsiyonel] Ses Dalgaları</a>
+	          	</li>
+
+	          	<!-- Days 7/8 -->
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071713">7./8. Gün</li>
+	          	<li class="visible-after" data-visible-after="2019071713">
+	          		<a href="../../../tr/projects/project.html">Kendi Projenizi Yaratın</a>
+	          	</li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li class="dropdown-header">1. Gün</li>
+	          	<li><a href="../../../tr/projects/stepUp.html">Adım adım</a></li>
+	          	<li><a href="../../../tr/projects/place100.html">100 Koymak</a></li>
+	          	<li><a href="../../../tr/projects/beeperLine/index.html">Beeper Hattı</a></li>
+	          	<li><a href="../../../tr/projects/invert.html">Ters Çevir</a></li>
+	          	<li><a href="../../../tr/projects/unKarel.html">UN Karel</a></li>
+	          	<li><a href="../../../tr/projects/banishWinter.html">İnsani Yardım Karel'i</a></li>
+
+
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">2. Gün</li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../../tr/projects/emc2.html">E=MC2</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../../tr/projects/fibb.html">Fibonacci</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../../tr/projects/findPi.html">Pi'yi Bul</a>
+	            </li>
+              <!-- Used to be a main course component -->
+	          	<li class="visible-after" data-visible-after="2019071012">
+	          		<a href="../../../trold/projects/favoriteNumber.html">En Sevdiğim Numara</a>
+	          	</li>
+            	
+            	<li class="divider visible-after" data-visible-after="2019071109" />
+            	<li class="dropdown-header visible-after" data-visible-after="2019071109">3. Gün</li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../../tr/projects/robotFace.html">Robot Surat</a>
+	            </li>
+              <!-- Used to be a main course component -->
+	          	<li class="visible-after" data-visible-after="2019071012">
+	          		<a href="../../../trold/projects/medicine.html">Sahte İlaç</a>
+	          	</li>
+            	<li class="divider visible-after" data-visible-after="2019071109" />
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../../tr/projects/moveToCenter.html">Merkeze Git</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../../tr/projects/gravityBall.html">Seken Top</a>
+	            </li>
+
+				      <li class="divider visible-after" data-visible-after="2019071209" />
+				      <li class="dropdown-header visible-after" data-visible-after="2019071209">4. Gün</li>
+				      <li class="visible-after" data-visible-after="2019071209">
+				      	<a href="../../../tr/projects/averageMethod.html">Ortalama Metodu</a>
+				      </li>	
+				      <li class="visible-after" data-visible-after="2019071209">
+				      	<a href="../../../tr/projects/drawPeople.html">İnsan Çizme</a>
+				      </li>	
+	          	<li class="visible-after" data-visible-after="2019071209">
+	          		<a href="../../../tr/projects/halfGreen.html">Yarısı Yeşil</a>
+	          	</li>
+
+	        	<li class="divider visible-after" data-visible-after="2019071509" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün</li>
+	            <li class="visible-after" data-visible-after="2019071509">
+	            	<a href="../../../tr/projects/stamptool/index.html">Damga Makinesi</a>
+	            </li>
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../../tr/projects/holePuncher.html">Delgeç</a>
+	          	</li>	
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../../tr/projects/debrisSweeper.html">Enkazı Kaldır</a>
+	          	</li>	
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../../tr/projects/suchADrag.html">Ne Kaydırma Ama<</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../../tr/projects/keyboardKarel.html">Karel Klavyede</a>
+	          	</li>
+
+	          <li class="divider visible-after" data-visible-after="2019071709" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071709">7. Gün</li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../../tr/projects/rocketPaddle.html">Rocket Ship</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../../trold/projects/anatolianRock.html">Anatolian Rock</a>
+	            </li>
+	        </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../../slides/Welcome.pdf">Karel</a></li>
+	          	<li><a href="../../../slides/ControlFlow.pdf">Control Flow Slides)</a></li>
+	          	<li><a href="../../../starter/ControlFlow.zip">Control Flow (Code)</a></li>
+	          	<li><a href="../../../slides/Variables.pdf">Değişkenler</a></li>
+			<li><a href="../../../slides/Variables2.pdf">Değişkenler 2</a></li>
+	          	
+	          	<li><a href="../../../slides/Graphics.pdf">Grafikler (Slides)</a></li>
+	          	<li><a href="../../../starter/Graphics.zip">Grafikler (Code)</a></li>
+	          	<li><a href="../../../slides/Animation.pdf">Animasyon</a></li>
+	          	<li><a href="../../../slides/Methods.pdf">Metotlar</a></li>
+	          	<li><a href="../../../slides/NestedLoops.pdf">Nested Loops</a></li>
+	          	<li><a href="../../../slides/Events.pdf">Events (Slides)</a></li>
+	          	<li><a href="../../../starter/Events.zip">Events (Code)</a></li>
+	          	<li><a href="../../../slides/Breakout.pdf">Breakout</a></li>
+	          	<li><a href="../../../slides/AI.pdf">AI (Yapay Zeka)</a></li>
+	          	<li><a href="../../../slides/ArrayLists.pdf">Dizi Listeleri (ArrayLists)</a></li>
+	          	<li><a href="../../../slides/HashMaps.pdf">HashMaps</a></li>
+	         	<li><a href="../../../slides/Internet.pdf">The Internet (Slides)</a></li>
+	         	<li><a href="../../../starter/Internet.zip">The Internet (Code)</a></li>
+	         	<li><a href="../../../slides/Beyond-CSBridge.pdf">Beyond CSBridge</a></li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forms <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Survey</a></li>
+                <li><a href="https://forms.gle/eVsMyZb8HCSUETeV6">Sign in To Lab</a></li>
+	          </ul>
+	        </li>
+
+			
+	        <!-- Bonus button -->
+	        <ul class="nav navbar-nav">
+	            <li><a href="../../../tr/old/bonus-index.html">Bonus</a></li>
+	        </ul>
+			
+	        <!-- Old/New button -->
+	        <ul class="nav navbar-nav">
+	            <li><a href="../../../tr/old/index.html">[2019]</a></li>
+	            <li><a href="../../../tr/index.html">[2020]</a></li>
+	        </ul>
+
+	        <!-- TA Link -->
+
+	      </ul>
+
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../../img/english_flag.png"></img></a></li>
+	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../../img/turkish_flag.png"></img></a></li>
+	        
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+
+</script>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Header -->
+    <div id="pageHeader">
+      <h1>
+        Yakala Yakalayabilirsen
+      </h1>
+      <p>
+        Yazanlar: Julia Lee, Kerem Goksel, ve Chris Piech
+      </p>
+      <p>
+        Ders Notları:
+        <a href ="../../../tr/handouts/graphics.html">Grafik Referansı</a>, <a href ="../../../tr/handouts/events.html">Events</a>
+        <br/>
+        <br/>
+        Day5: <code>CatchMeIfYouCan.java</code>
+      </p>
+
+    </div>
+    <hr/>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          <ol>
+            <li>Ekrana "sinsi" mavi bir kare ekleyin.</li>
+            <li>Şimdi de ekranda 20 tane siyah kare yartın.</li>
+            <li>"Mouse event listener" kullanarak imleş her "sinsi" kareye dokunduğunda karenin rastgele bir lokasyona gitmesini sağlayın.</li>
+          </ol>
+        </p>
+        <p>
+          <center>
+            <img style="width:500px" src="../../../img/projects/catchMeIfYouCan/demo1.png">  
+          </center>
+        </p>
+        <p>
+          
+          <center>
+            İmlecin kareye her dokunuşunda "sinsi" kare hareket etsin...
+            <img style="width:500px" src="../../../img/projects/catchMeIfYouCan/demo2.png">  
+          </center>
+        </p>
+      </div>
+    </div>
+
+    <br/>
+    
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+		&#169; Stanford 2020 &#124; Hazırlayan: 
+    	<a href="http://stanford.edu/~cpiech">Chris</a> (Tüm ekibin de yardımıyla).
+		Pek yetenekli birçok eğitimci tarafından hazırlanan muhteşem CS106A sınıfından esinlenilmiştir. 
+		<a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> ve 
+		<a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>'ye özel teşekkürlerimizi sunarız.
+		Türkçe tercüme ile ilgili tüm soru ve görüşleriniz için 
+		<a href="http://web.stanford.edu/~sarslan/">Serhat Arslan</a> ile iletişime geçebilirsiniz.
+	</p>
+	<!--<p class="pull-right">
+		<a href="../../../fall12">Fall 2012</a>
+	</p>-->
+</div>
+<!--<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>-->
+
+  </div>
+</body>

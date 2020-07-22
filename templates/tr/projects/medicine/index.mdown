@@ -1,0 +1,43 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Counterfeit Medicine
+credit: Chris Piech
+solution: soln.py
+
+## The Story
+This problem starts with a sad story. When I was growing up in Kenya it was estimated that over 38% of medicines sold at pharmacies were fake [1]. That was a big problem! Depending on which organization you ask, deaths from counterfeit medicine ranged from 100,000 per year (WHO) to 700,000 (IPN) [2].
+
+> Deaths from counterfeit drugs are equivalent to, "four fully laden jumbo jets crashing everyday" [2]
+
+In 2009 a Ghanaian fellow named Bright Simmons came up with a straightforward technology solution he called mPedigree. He partnered with companies that make medicine. On each legitimate package of medicine they stamped a unique scratch code. Now when you buy medicine at a pharmacy in Kenya you check the scratch code and text message mPedigree. If the code is in their system, and has never been used before, mPedigree sends a text message back saying: "valid." There has been a 58% decrease in child deaths from Malaria alone [3]. Sometimes simple programming solutions can have a large, positive impact on the world.
+
+## Your Job
+Write a program that generates 10-digit numbers for 1,000 packages of medicine. Each number you generate should be (1) unique and (2) unpredictable.
+
+Here is sample output from an example execution:
+
+```
+1000063221
+1000144321
+1000219310
+1000369301
+1000474307
+1000594126
+1000675471
+1000766455
+1000870655
+1000974702
+1001071787
+1001125100
+1001241855
+1001361460
+1001430979
+1001546607
+1001615135
+1001797139
+1001835707
+...
+```
+
+Those numbers will be put on medicine packages. Counterfeiters won't stand a chance!
+
+Ask questions if you don't understand something (or want to know more about counterfeit medicine).

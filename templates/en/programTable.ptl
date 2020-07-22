@@ -68,72 +68,6 @@
 			</tr>
 		</tbody>
 
-		<!-- Day 7 -->
-		<thead
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{arrayListStart}}"
-			% end
-
-		>
-			<tr>
-				<th colspan = "6"><b>
-					<br/>
-            <h4>Old: ArrayLists+ HashMaps</h4></b></th>
-			</tr>
-		</thead>
-		<tbody
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{arrayListStart}}"
-			% end
-		>
-
-			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/projects/starWars/demo.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/starWars.html">(old) Star Wars Crawl [optional]</a>
-        <br/><span class="label label-primary">Section</span>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/starWars.html">TA Solution</a>
-					% end
-				</td>
-				<td>ArrayLists</td>
-			</tr>
-    </tbody>
-    <tbody
-    >
-      <tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/snow.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/snow.html">(old) Snow</a>
-        <br/><span class="label label-success">Project</span>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/snow.html">TA Solution</a>
-					% end
-				</td>
-				<td>ArrayLists</td>
-			</tr>
-
-			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/lineGame.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/lineGame.html">[old, Optional] The Line</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/lineGame.html">TA Solution</a>
-					% end
-          <br/><span class="label label-success">Project</span>
-          </td>
-				<td>ArrayLists</td>
-			</tr>
-
-			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/music3.jpg"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/music.html">[old, Optional] Waves of Sound</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/music.html">TA Solution</a>
-					% end
-          </td>
-				<td>ArrayLists</td>
-			</tr>
-		</tbody>
-
-
 <!-- Days 10: Dictionaries -->
 		<thead
 		% if not get('taMode', False):
@@ -271,6 +205,17 @@
 				</td>
 				<td>Lists</td>
 			</tr>
+      <tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/snow.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/snow.html">(old) Snow</a>
+        <br/><span class="label label-primary">Section</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/snow.html">TA Solution</a>
+					% end
+				</td>
+				<td>ArrayLists</td>
+			</tr>
+
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/catchMeIfYouCan.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/catchMeIfYouCan.html">Catch Me If You Can (Section)</a>
@@ -280,6 +225,16 @@
 					% end
 				</td>
 				<td>Mouse and Lists</td>
+			</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/lineGame.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/lineGame.html">[old, Optional] The Line</a>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/lineGame.html">TA Solution</a>
+					% end
+          <br/><span class="label label-success">Project</span>
+          </td>
+				<td>ArrayLists</td>
 			</tr>
 		</tbody>
 

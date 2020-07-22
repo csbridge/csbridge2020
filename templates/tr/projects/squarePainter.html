@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Square Painter")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,13 +6,13 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Gizemli Kare
+                Square Painter
 			</h1>
 			<p>
-        		Yazan: Lisa Yan
+                Written by Lisa Yan
 			</p>
       <p>
-            BonusKarel: <code>SquarePainter.java</code>
+      BonusKarel: <code>SquarePainter.java</code>
       </p>
 
 		</div>
@@ -29,45 +20,43 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<p>Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır, ancak bu egzersizi tamamlamak kesinlikle Final Projesnize yardımcı olacaktır.</p>
-        		<p>Kodunuzun düzenli kalması için <b><u>methotları</u></b> kullanmayı ihmal etmeyin!</p>
-                <h2></h2>
-        		<p>Karel'in biraz sanat yapası gelmiş. Kendisine mavi ve yeşil renkler arasında gidip gelen karelerin olduğu dikdörtgen bir dünya yaratmasında yardım edin.</p>
+				<p>
+                This is a bonus program. It's meant to be a bit challenging!
+				</p>
+                    <p>Remember to use <b><u>methods</u></b> to organize your code!</p>
+                    <h2></h2>
+                <p>
+                Karel wants to make some real art. Help her fill in any rectangular world with alternating squares of blue and green.
+                </p>
 					<center>
 						<img style="width:300px" src="{{pathToRoot}}img/projects/squarePainter/5x5.png">	
 					</center>
                     <br>
 
-                <p><b><u>Not:</u></b>: Bu egzersiz için biraz ekstra mantıksal ilişki kullanmanız gerekebilir. Yarın bu konuyla ilgili daha fazla şey öğreneceksiniz.</p>
-                <p>Her hangi bir şart ifadesinin tersini kontrol etmek için, ünlem işaretini (!) kullanın:</p>
-				<pre>
-				// Bulunduğunuz köşenin "color" rengnde olmadığını kontrol eder
-				if (!cornerColorIs(color)) {
-					...
-				}
-				</pre>
-				<br>
+                <p><b><u>Note</u></b>: You might have to use some extra logic for this problem. You will learn more about this logic tomorrow.</p>
+                <p>To check the opposite of any conditional, use the "bang," commonly known as the exclamation point:</p>
+<pre>
+// checks that the corner you are on is NOT a certain color
+if (!cornerColorIs(color)) {
+    ...
+}
+</pre>
+<br>
 
-                <p>Karel herhangi boyuttaki bir dikdörtgen dünyayı boyayabilmeli:</p>
-				<center>
-					<img style="width:300px" src="{{pathToRoot}}img/projects/squarePainter/8x8.png">	
-				</center>
-				<br>
-				<p>Kare olmayan dörtgenler de Karel'in sanatsal yetenekleri arasında olabilmeli:</p>
-				<center>
-					<img style="width:400px" src="{{pathToRoot}}img/projects/squarePainter/16x20.png">	
-				</center>
-				<br>
-				<p>İşi bittiğinde Karel'in nerede olduğu önemli değil. Kendisi sadece sanatsal dışavurumunu maksimize etmek istiyor.</p>
+                <p>Karel should be able to paint any type of rectangular world:</p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/squarePainter/8x8.png">	
+					</center>
+                    <br>
+                    <p>Even non-square rectangles are within Karel's realm of artistic talent:</p>
+					<center>
+						<img style="width:400px" src="{{pathToRoot}}img/projects/squarePainter/16x20.png">	
+					</center>
+                    <br>
+                    <p>It doesn't matter where Karel ends up once she's finished; she just wants to maximize her artistic expression.</p>
 
 
 
 
 			</div>
 		</div>
-
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

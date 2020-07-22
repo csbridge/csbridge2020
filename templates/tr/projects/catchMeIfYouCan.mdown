@@ -1,0 +1,22 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Catch Me If You Can
+credit: Problem by Julia Lee, Kerem Goksel, and Chris Piech
+
+Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)
+File: `catchmeifyoucan.py`
+
+1. Add a blue "sneaky" square to the canvas.
+
+1. Add 20 black squares to the canvas.
+
+1. Add a mouse event listener that moves the "sneaky" square to a random position whenever the mouse touches it.
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/catchMeIfYouCan/demo1.png">
+</center>
+
+When the mouse touches the "sneaky" square, it moves.
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/catchMeIfYouCan/demo2.png">
+</center>

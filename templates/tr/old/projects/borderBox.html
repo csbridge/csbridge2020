@@ -1,0 +1,89 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+				Sınırdaki Kutu
+			</h1>
+			<p>
+				Yazan Lisa Yan
+			</p>
+			<p>
+				Ders Notları:
+				<a href ="{{pathToRoot}}tr/handouts/graphics.html">Grafik Referansı</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+					Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır, ancak bu egzersizi tamamlamak kesinlikle Final Projesnize yardımcı olacaktır.
+                </p>
+                <p>
+					Yazacağınız Grafik Programı ile ekranın sınırlarında, saat yönünün tersine, dönen bir kutu yaratın.
+					<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/borderBox/borderBox.gif">	
+					</center>
+                </p>
+            <h2>Sınırdaki Karel</h2>
+            <p>BonusMethods: <code>BorderKarel.java</code></p>
+            <p>
+				Java versiyonuna başlamadan önce Karel versiyonunu yazalım. Bu versiyonu BorderKarel.java dosyası içine yazabilirsiniz. Karel'in her zaman sol alt köşede başladığını unutmayın! Kendisini saatin tersi yönünde gezintiye çıkarın. Sonsuza kadar dönmesini sağlayın!
+            </p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/borderBox/borderKarel.png">	
+					</center>
+
+            <h2>Sınırdaki Kutu</h2>
+            <p>BonusMethods: <code>BorderBox.java</code></p>
+            <p>Şimdi BorderBox.java dosyasını açabilirsiniz. Sınırlarda gezen Karel kodunuzu buraya kopayalın. <b> move() metodunu moveBox() olarak değiştirmeyi unutmayın!</b>Elbette bunun çalışması için moveBox() isimli yeni bir metot tanımlamanız gerekecektir.</p>
+            <p>Karel yerine şimdi bir kutumuz var (a GRect). Bu kutu aşağıdaki iki değişkenle kontrol edilebilir:</p>
+			<div class="well"><code>
+                private GRect box;<br>
+                private int boxDirection = EAST; // starting direction
+			</code></div>
+            <h2>Kutu Yaratma</h2>
+            <p>Kutu yaratmak için makeBox() isimli metodu kullanın. Tıpkı Karel gibi bu kutu da ekranın sol alt köşesinde başlasın.</p>
+			<center>
+				<img style="width:300px" src="{{pathToRoot}}img/projects/borderBox/boxSetup.png">	
+			</center>
+
+            <h2>Doğu yönünde Hareket</h2>
+            <p>Hadi kutumuzu harekete geçirelim! Şimdilik, frontIsClear() isimli metodu her zaman True dönecek şekilde değiştirelim (şu anda sürekli olarak False dönecek şekilde ayarlı). Böylece kutumuzun tek bir yönde hareket edebiliğini test edebileceğiz.</p>
+            <p>Karel fonksiyonuna benzer şekilde moveBox() isimli metodun içini dolduralım. Bu metot ile kutu, yüzünün dönük olduğu tarafa doğru bir adım ilerlesin. Kutumuz doğuya bakarak başlıyor. Bu nedenle metodu sağa doğru bir adım atacak şekilde dolduralım. Kutunun SQUARE_LENGTH + SQUARE_GAP kadar ilerlediğinden emin olun!</p>
+            <p>Şimdi sıra frontIsClear() metodunu doldurmaya geldi. Böylece kutumuz ekranın sağındaki sınıra geldiğinde durabilecek.</p>
+					<center>
+						<img style="width:300px" src="{{pathToRoot}}img/projects/borderBox/boxMove.png">	
+					</center>
+            <h2>Sınır boyunca ilerleyin</h2>
+            <p>Artık bitti sayılır! Sınır boyunca ilerlemek için turnLeft() metodunu doldurmamız gerekiyor. Ayrıca frontIsClear() ve moveBox() metotlarını da farklı yönleri de halledebilecek şekilde güncellemeliyiz.</p>
+            <p>turnLeft() isimli metot ile başlayın. İpucu: boxDirection değerini değiştirmeniz yeterli olmalı; kutuda görsel olarak bir değişiklik olmamalı. Ne de olsa kutumuz sadece bir simetrik bir kare.</p>
+            <p>Son olarak, kutunun hangi yöne baktığına göre moveBox() ve frontIsClear() metotlarını doldurun. Tekrardan kutunun SQUARE_LENGTH + SQUARE_GAP kadar ilerlediğinden emin olun!</p>
+            
+
+
+
+
+			</div>
+
+		</div>
+
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

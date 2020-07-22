@@ -1,4 +1,4 @@
-% rebase('templates/en/template.ptl', title="Home")
+% rebase('templates/tr/template.ptl', title="Home")
 
     <div class="page-header" style="backgroud-color:#cdbfe3">
     	<div class="container">
@@ -11,7 +11,7 @@
 						Bilgisayar Bilimine Giriş
 					</div>
 					<div>
-						2019 Yaz
+						2020 Yaz
 					</div>
 					<div>
 						24 Haziran - 4 Temmuz, Koç Üniversitesi, Istanbul
@@ -91,23 +91,6 @@
 
     % include('templates/parts/peeps.ptl', teachers="Öğretmenler")
 
-		<div class="section" id="getStarted">
-			<h2>
-				Bilgisayarınızı Hazırlama
-			</h2>
-
-			<h3>Eclipse'i Yükleyin</h3>
-			<p>Yapmanız gereken ilk adım Eclipse'i indirmek. Bilgisayarınıza uygun olan <a href="{{pathToRoot}}resources/eclipse_helios_mac.zip">Mac versiyonu</a>'nu ya da<a href="{{pathToRoot}}resources/eclipse_helios_windows.zip">windows versiyonu</a>'nu indirin. Yardıma ihtiyaç duyarsanız <a href="{{pathToRoot}}handouts/DownloadingEclipse.pdf">bu rehbere</a> bakabilirsiniz. Eğer Eclipse'e zaten sahipseniz Stanford eklentisini yüklemeniz gerekiyor.  <a href="{{pathToRoot}}starter/edu.stanford.cs106_1.0.0.jar">Burada</a> bulabilirsiniz.</p>
-
-			<h3>Eclipse'e Proje Ekleyin</h3>
-			<p>Eclipse'i kurduktan sonra, artık Eclipse'e bir proje ekleyerek çalışmaya başlayabilirsiniz. Bunu (Stanford Menu -> Import Project) düğmesinden yapabilirsiniz. Sıfırdan bir program yazmak için bu <a href="{{pathToRoot}}resources/BlankProject.zip">boş proje</a>'yi kullanın.</p>
-
-			<!--<h3>Create an executable</h3>
-			<p>If you want to turn a project into a stand-alone executable, read <a href="{{pathToRoot}}handouts/CreatingJarFiles.pdf">this</a> handout.</p>-->
-			<hr/>
-		</div>
-
-			
 		<div class="section" id="playWithKarel">
 			<h2>
 				Müfredat
@@ -116,15 +99,3 @@
 			<hr/>
 		</div>
 
-	
-		<div class="section" id="playWithKarel">
-			<h2>
-				Karel ile Oyna
-			</h2>
-
-			<p>Karel ile tanışın. Kendisi Stanford Üniversitesi tarafından öğrencileri programlama ile tanıştırmak amacıyla kullanılan bir Java robotudur. </p>
-
-			<p>Karel komutlarını kullanarak "beeper"ını tepenin üstüne çıkartabilirsiniz. Normalde programlarınızı Eclipse isimli uygulama üzerinde yazacaksınız; fakat başlangıç olarak web sitemize bir mini-eclipse yerleştirdik:</p>
-			
-			%include templates/parts/playWithKarel.html
-		</div>

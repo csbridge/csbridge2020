@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Half Green")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,14 +6,14 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Yarısı Yeşil
+				Half Green
 			</h1>
 			<p>
-				Yazan: Chris Piech
+				Written by Chris Piech
 			</p>
 			<p>
-				Ders Notları:
-				<a href ="{{pathToRoot}}tr/handouts/graphics.html">Grafik Referansı</a>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a>
 			</p>
 
 		</div>
@@ -31,7 +22,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Ekranda rastgele konumlarda 1000 adet daire oluşturacağız. Sol alt köşeye daha yakın olan daireler mavi olurken sağ üste yakın olanlar yeşil olacak. Bu örnek döndürülen (return) değerlere dair bir örnek.
+					We are going to create 1000 circles in random positions on the screen. Circles closer to the bottom-left corner will be blue and circles closer to the top-right corner will be green. This is an example of return values.
 				</p>
 				<p>
 					<center>
@@ -39,7 +30,7 @@
 					</center>
 				</p>
 				<p>
-					Her daire 20 piksele 20 piksel.
+					Each circle is 20 pixels by 20 pixels.
 				</p>
 
 			</div>
@@ -48,7 +39,7 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Çözüm</h2>
+				<h2>Solution</h2>
 
 
 <pre id="editor" style="height:500px">public class CircleRandom2 extends GraphicsProgram {
@@ -97,9 +88,3 @@
 			</div>
 
 		</div>
-
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

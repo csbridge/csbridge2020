@@ -2,146 +2,83 @@
   # Set these values to change when they appear on the website
   # Times are formatted as YYYYMMDDHH
 
-  # day 6 + 7
   setdefault('finalProject', '2019071713')
   setdefault('arrayListSection', '2019071712')
   setdefault('arrayListStart', '2019071709')
 
-  # day 5
+  # day 8 + 9
   setdefault('breakout', '2019071513')
+
+  # day 7
   setdefault('eventsSection', '2019071512')
   setdefault('eventsStart', '2019071508')
 
-  # day 4
-  setdefault('methodsSection', '2019071212')
-  setdefault('methodsStart', '2019071208')
+  # day 6
+  setdefault('animationSection', '2019071212')
+  setdefault('animationStart', '2019071208')
 
-  # day 3
+  # day 5
   setdefault('graphicsSection', '2019071112')
   setdefault('graphicsStart', '2019071108')
 
-  # day 2
+  # day 4
+  setdefault('varsStart2', '2019071008')
+
+  # day 3
   setdefault('varsSection', '2019071012')
   setdefault('varsStart', '2019071008')
+
+  # day 2
+  setdefault('karelSection2', '2019082013')
+  setdefault('karelStart2', '2019070800')
 
   # day 1
   setdefault('karelSection', '2019070913')
   setdefault('karelStart', '2019070800')
+
 %>
 
 <!-- Final Project -->
 <table class="table table-striped">
 
 		<!-- Day 7 -->
-		<thead
-		% if not get('taMode', False):
-			class="visible-after" data-visible-after="{{finalProject}}"
-		% end
 
-		>
-			<tr>
-				<th colspan = "6"><b>
+		<thead
+      % if not get('taMode', False):
+          class="visible-after" data-visible-after="{{finalProject}}"
+      % end
+    >
+			<tr><th colspan = "6">
 					<br/>
-						<h4>Days 7-8: Final Project (<a href="{{pathToRoot}}starter/BlankJavaProject.zip">Eclipse Project Here</a>)</h4>
-			</tr>
+						<h4>Day 7-8: Final Project</h4></b></th>
+			  </th>
+      </tr>
 		</thead>
 		<tbody
-		% if not get('taMode', False):
-			class="visible-after" data-visible-after="{{finalProject}}"
-		% end
+		  % if not get('taMode', False):
+		  	class="visible-after" data-visible-after="{{finalProject}}"
+		  % end
 		>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/project.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/project.html">>Kendi Projenizi Yaratın</a></td>
+				<td><a href="{{pathToRoot}}tr/projects/project.html">Kendi Projenizi Yaratın</a>
+            <br/><span class="label label-success">Project</span>
+        </td>
 				<td>All</td>
 			</tr>
 		</tbody>
 
-		<!-- Day 7 -->
-		<thead
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{arrayListStart}}"
-			% end
-
-		>
-			<tr>
-				<th colspan = "6"><b>
-					<br/>
-						<h4>7. Gün - Diziler (Arrays) + HashMaps (<a href="{{pathToRoot}}starter/Day7.zip">Eclipse Project Here</a>)</h4>
-			</tr>
-		</thead>
-		<tbody
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{arrayListStart}}"
-			% end
-		>
-			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/numbers.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/sortedNumbers.html">Sıralayıcı</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/sortedNumbers.html">TA Solution</a>
-					% end
-				</td>
-				<td>ArrayLists</td>
-			</tr>
-
-			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/projects/starWars/demo.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/starWars.html">Star Wars Crawl [optional]</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/starWars.html">TA Solution</a>
-					% end
-				</td>
-				<td>Dizi Listeleri (ArrayLists)</td>
-			</tr>
-
-			<tr 
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{arrayListSection}}"
-			% end
-			>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/snow.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/snow.html">Kar</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/snow.html">TA Solution</a>
-					% end
-				</td>
-				<td>Dizi Listeleri (ArrayLists)</td>
-			</tr>
-
-			<tr 
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{arrayListSection}}"
-			% end
-			>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mouseGame.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/mouseGame.html">[Opsiyonel] Patika</a></td>
-				<td>Dizi Listeleri (ArrayLists)</td>
-			</tr>
-
-			<tr 
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{arrayListSection}}"
-			% end
-			>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/music3.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/music.html">[Opsiyonel] Ses Dalgaları</a></td>
-				<td>Dizi Listeleri (ArrayLists)</td>
-			</tr>
-		</tbody>
-
-
-<!-- Days 5-6: Breakout -->
+<!-- Days 10: Dictionaries -->
 		<thead
 		% if not get('taMode', False):
 			class="visible-after" data-visible-after="{{breakout}}"
 		% end
-
 		>
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-            <h4>5./6. Gün: Breakout (<a href="{{pathToRoot}}starter/Breakout.zip">Eclipse Project Here</a>)</h4>
+            <h4>Days 10: Dictionaries</h4>
+            </b>
 			</tr>
 		</thead>
 		<tbody
@@ -150,16 +87,55 @@
 			% end
 		>
 			<tr>
+      <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day10AM.zip">here</a>]</h4></center></td>
+      </tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/phonebook.jpg"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/phonebook.html">Phone Book</a>
+        <br/><span class="label label-success">Project</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/phonebook.html">TA Solution</a>
+					% end
+				</td>
+				<td>Interactors</td>
+			</tr>
+		</tbody>
+
+
+<!-- Days 8-9: Breakout -->
+		<thead
+		% if not get('taMode', False):
+			class="visible-after" data-visible-after="{{breakout}}"
+		% end
+		>
+			<tr>
+				<th colspan = "6"><b>
+					<br/>
+						<h4>Days 8-9: Breakout</h4>
+            </b>
+			</tr>
+		</thead>
+		<tbody
+		  % if not get('taMode', False):
+				class="visible-after" data-visible-after="{{breakout}}"
+			% end
+		>
+			<tr>
+      <td colspan="6"><center><h4>Project [<a href="{{pathToRoot}}starter/Breakout.zip">here</a>]</h4></center></td>
+      </tr>
+			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/breakout.jpg"></img></td>
 				<td><a href="{{pathToRoot}}tr/projects/breakout.html">Breakout!</a>
+        <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/breakout.html">TA Solution</a>
 					% end
 				</td>
-				<td>Etkileşim (Interactors)</td>
+				<td>Interactors</td>
 			</tr>
 		</tbody>
 
+<!-- Day 7 -->
 		<thead
 			% if not get('taMode', False):
 				class="visible-after" data-visible-after="{{eventsStart}}"
@@ -168,7 +144,7 @@
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-            <h4>5 Gün: Events (<a href="{{pathToRoot}}starter/Day5.zip">Eclipse Project Here</a>)</h4></b></th>
+						<h4>Day 7: Mouse and Lists</h4></b></th>
 			</tr>
 		</thead>
 		<tbody
@@ -177,201 +153,278 @@
 			% end
 		>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/makingTracks.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/makingTracks.html">İz Çıkartmaca (Lab)</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/makingTracks.html">TA Solution</a>
-					% end
-				</td>
-				<td>Events</td>
-			</tr>
-
+      <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day7AM.zip">here</a>]</h4></center></td>
+      </tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mouseLocation.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/mouseLocation.html">Mouse Location (Lab)</a>
+				<td><a href="{{pathToRoot}}tr/projects/mouseLocation.html">Mouse Location (Lab)</a>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/mouseLocation.html">TA Solution</a>
 					% end
 				</td>
 				<td>Events</td>
 			</tr>
-
-			<tr 
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/makingTracks.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/makingTracks.html">İz Çıkartmaca</a>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/makingTracks.html">TA Solution</a>
+					% end
+        <br/><span class="label label-success">Project</span>
+				</td>
+				<td>Events</td>
+			</tr>
+    </tbody>
+    <tbody
 			% if not get('taMode', False):
 				class="visible-after" data-visible-after="{{eventsSection}}"
 			% end
-			>
+    >
+			<tr>
+      <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day7PM.zip">here</a>]</h4></center></td>
+      </tr>
+      </tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/isAscending.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/isAscending.html">Is Ascending</a>
+          <br/><span class="label label-default">Quickstart</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/isAscending.html">TA Solution</a>
+					% end
+				</td>
+				<td>Lists</td>
+			</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sorted.jpg"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/sorted.html">Sorted Numbers</a>
+          <br/><span class="label label-default">Quickstart</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/sorted.html">TA Solution</a>
+					% end
+				</td>
+				<td>Lists</td>
+			</tr>
+      <tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/snow.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/snow.html">Kar</a>
+        <br/><span class="label label-primary">Section</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/snow.html">TA Solution</a>
+					% end
+				</td>
+				<td>ArrayLists</td>
+			</tr>
+
+			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/catchMeIfYouCan.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/catchMeIfYouCan.html">Yakala Yakalayabilirsen (Section)</a>
+				<td><a href="{{pathToRoot}}tr/projects/catchMeIfYouCan.html">Yakala Yakalayabilirsen</a>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/catchMeIfYouCan.html">TA Solution</a>
 					% end
 				</td>
-				<td>Instance Variables</td>
+				<td>Mouse and Lists</td>
+			</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/lineGame.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/lineGame.html">[old, Opsiyonel] Patika</a>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/lineGame.html">TA Solution</a>
+					% end
+          <br/><span class="label label-success">Project</span>
+          </td>
+				<td>ArrayLists</td>
 			</tr>
 		</tbody>
+
+<!-- Day 6 -->
 		<thead
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{methodsStart}}"
+				class="visible-after" data-visible-after="{{animationStart}}"
 			% end
-
 		>
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-            <h4>4. Gün: Metotlar ve İleri Java (<a href="{{pathToRoot}}starter/Day4.zip">Eclipse Project Here</a>)</h4></b></th>
+						<h4>Day 6: Animation</h4></b>
+        </th>
 			</tr>
 		</thead>
 		<tbody
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{methodsStart}}"
+				class="visible-after" data-visible-after="{{animationStart}}"
 			% end
-
 		>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/madMax.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/madMethods.html">Çılgın Metotlar</a>
+      <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day6AM.zip">here</a>]</h4></center></td>
+      </tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/indexCounter.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/indexCounter.html">Index counter</a>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/madMethods.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/indexCounter.html">TA Solution</a>
 					% end
 				</td>
-				<td>Parametre ve Return</td>
+				<td>For Loops</td>
 			</tr>
-
-			<tr 
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{methodsSection}}"
-			% end
-			>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/target.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/target.html">Hedef Tahtası</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/target.html">TA Solution</a>
-					% end
-				</td>
-				<td>Parametreler</td>
-			</tr>
-
-			<tr 
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{methodsSection}}"
-			% end
-			>
+			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/illusion.png"></img></td>
 				<td><a href="{{pathToRoot}}tr/projects/illusion.html">Optik İllüzyon</a>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/illusion.html">TA Solution</a>
 					% end
 				</td>
-				<td>For Döngüsüsü</td>
+				<td>For Loops</td>
 			</tr>
-
-			<tr 
+    </tbody>
+    <tbody
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{methodsSection}}"
+				class="visible-after" data-visible-after="{{animationSection}}"
 			% end
-			>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sunset.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/sunset.html">Kısa Film</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/sunset.html">TA Solution</a>
-					% end
-				</td>
-				<td>Parametre ve Return</td>
-			</tr>
-		</tbody>
-		<thead
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{graphicsStart}}"
-			% end
-		>
+    >
 			<tr>
-				<th colspan = "6"><b>
-					<br/>
-            <h4>3. Gün: Grafik (<a href="{{pathToRoot}}starter/Day3.zip">Eclipse Project Here</a>)</h4></b></th>
-			</tr>
-		</thead>
-		<tbody
-			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{graphicsStart}}"
-			% end
-		>
+      <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day6PM.zip">here</a>]</h4></center></td>
+      </tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/awesome.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/awesome.html">Programcılık Bir Harika</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/awesome.html">TA Solution</a>
-					% end
-				</td>
-				<td>Graphik</td>
-			</tr>
-
-			<tr 
-				% if not get('taMode', False):
-					class="visible-after" data-visible-after="{{graphicsSection}}"
-				% end
-			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mysterySquare.png"></img></td>
 				<td><a href="{{pathToRoot}}tr/projects/mysterySquare.html">Gizemli Kare</a>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/mysterySquare.html">TA Solution</a>
 					% end
 				</td>
-				<td>Rastgelelik</td>
+				<td>Randomness</td>
 			</tr>
-
-			<tr 
-			% if not get('taMode', False):
-					class="visible-after" data-visible-after="{{graphicsSection}}"
-				% end
-			>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/stringArt.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/stringArt.html">String Sanatı</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/stringArt.html">TA Solution</a>
-					% end
-				</td>
-				<td>For Döngüsü</td>
-			</tr>
-
-			<tr 
-			% if not get('taMode', False):
-					class="visible-after" data-visible-after="{{graphicsSection}}"
-				% end
-			>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomCircles.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/randomCircles.html">Tesadüfi Daireler</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/randomCircles.html">TA Solution</a>
-					% end
-				</td>
-				<td>Rastgelelik</td>
-			</tr>
-
-			<tr 
-			% if not get('taMode', False):
-					class="visible-after" data-visible-after="{{graphicsSection}}"
-				% end
-			>
+			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/bouncing.png"></img></td>
 				<td><a href="{{pathToRoot}}tr/projects/bouncingBall.html">Zıp Zıp Top</a>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/bouncingBall.html">TA Solution</a>
 					% end
+          <br/><span class="label label-primary">Section</span>
 				</td>
-				<td>Animasyon</td>
+				<td>Animation</td>
+			</tr>
+			<tr 
+			>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sunset.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/shortFilm.html">Kısa Film</a>
+          <br/><span class="label label-success">Project</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/shortFilm.html">TA Solution</a>
+					% end
+				</td>
+				<td>Params and Returns</td>
 			</tr>
 		</tbody>
 
+<!-- Day 5 -->
 		<thead
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{varsStart}}"
+				class="visible-after" data-visible-after="{{graphicsStart}}"
 			% end
 		>
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-            <h4>2. Gün: Değişkenler (Variables) (<a href="{{pathToRoot}}starter/Day2.zip">Eclipse Project Here</a>)</h4></b></th>
+						<h4>Day 5: Graphics and Methods</h4></b>
+			</tr>
+		</thead>
+		<tbody
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{graphicsStart}}"
+			% end
+		>
+			<tr>
+      <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day5AM.zip">here</a>]</h4></center></td>
+      </tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/awesome.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/programmingIsAwesome.html">Programcılık Bir Harika</a>a>
+          <br/><span class="label label-default">Quickstart</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/programmingIsAwesome.html">TA Solution</a>
+					% end
+				</td>
+				<td>Graphics</td>
+			</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomCircles.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/randomCircles.html">Random Circles</a>
+          <br/><span class="label label-success">Project</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/randomCircles.html">TA Solution</a>
+					% end
+				</td>
+				<td>Randomness</td>
+			</tr>
+    </tbody>
+    <tbody
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{graphicsSection}}"
+			% end
+    >
+			<tr>
+      <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day5PM.zip">here</a>]</h4></center></td>
+      </tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/dogYears.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/dogYears.html">Dog Years</a>
+          <br/><span class="label label-default">Quickstart</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/dogYears.html">TA Solution</a>
+					% end
+				</td>
+				<td>Randomness</td>
+			</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/fizzBuzz.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/fizzBuzz.html">Fizz Buzz</a>
+          <br/><span class="label label-primary">Section</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/fizzBuzz.html">TA Solution</a>
+					% end
+				</td>
+				<td>Randomness</td>
+			</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/target.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/target.html">Hedef Tahtası</a>
+          <br/><span class="label label-primary">Section</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/target.html">TA Solution</a>
+					% end
+				</td>
+				<td>Parameters</td>
+			</tr>
+
+	    <tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/stringArt.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/stringArt.html">String Sanatı</a>
+          <br/><span class="label label-success">Project</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/stringArt.html">TA Solution</a>
+					% end
+				</td>
+				<td>For Loops</td>
+			</tr>
+
+		</tbody>
+
+<!-- Day 4 -->
+		<thead
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{varsStart2}}"
+			% end
+		>
+			<tr>
+				<th colspan = "6"><b>
+					<br/>
+						<h4>Day 4: For loops, deconstructed</h4></b>
+        </th>
 			</tr>
 		</thead>
 		<tbody
@@ -380,81 +433,221 @@
 			% end
 		>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sandcastle.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/sandcastles.html">Kumdan Kaleler</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/sandcastles.html">TA Solution</a>
-					% end
-				</td>
-				<td>Değişkenler</td>
-			</tr>
+      <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day4AM.zip">here</a>]</h4></center></td>
+      </tr>
 
-			<tr
-				% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{varsSection}}"
-			% end
-			>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/guess.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/favoriteNumber.html">En Sevdiğim Numara</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/favoriteNumber.html">TA Solution</a>
-					% end
-				</td>
-				<td>Değişkenler</td>
-			</tr>
-
-			<tr
-				% if not get('taMode', False):
-					class="visible-after" data-visible-after="{{varsSection}}"
-				% end
-			>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/medicine.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/medicine.html">Sahte İlaç</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/medicine.html">TA Solution</a>
-					% end
-				</td>
-				<td>Eklemleme (Concatenation)</td>
-			</tr>
-
-			<tr 
-				% if not get('taMode', False):
-					class="visible-after" data-visible-after="{{varsSection}}"
-				% end
-			>
+			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/someSum.png"></img></td>
 				<td><a href="{{pathToRoot}}tr/projects/someSum.html">Üç Aşağı Beş Yukarı</a>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/someSum.html">TA Solution</a>
 					% end
 				</td>
-				<td>Değişkenler</td>
+				<td>Variables</td>
 			</tr>
 
-			<tr 
-				% if not get('taMode', False):
-					class="visible-after" data-visible-after="{{varsSection}}"
-				% end
-			>
+			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/nim.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/gameOfStones.html">Nimm</a>
+				<td><a href="{{pathToRoot}}tr/projects/nimm.html">Nimm</a>
+          <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/gameOfStones.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/nimm.html">TA Solution</a>
 					% end
 				</td>
-				<td>Değişkenler</td>
+				<td>Variables</td>
 			</tr>
-		</tbody>
+    </tbody>
+
+
+<!-- Day 3 -->
 		<thead
 			% if not get('taMode', False):
-				class="visible-after" data-visible-after="{{karelStart}}"
+				class="visible-after" data-visible-after="{{varsStart}}"
 			% end
 		>
-
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-            <h4>1. Gün: Karel (<a href="{{pathToRoot}}starter/Day1.zip">Eclipse Project Here</a>)</h4></b></th>
+						<h4>Day 3: Variables</h4></b>
+        </th>
+			</tr>
+		</thead>
+		<tbody
+			% if not get('taMode', False):
+				class="visible-after" data-visible-after="{{varsStart}}"
+			% end
+		>
+			<tr>
+      <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day3AM.zip">here</a>]</h4></center></td>
+      </tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sandcastle.jpg"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/sandcastles.html">Kumdan Kaleler</a>
+          <br/><span class="label label-default">Quickstart</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/sandcastles.html">TA Solution</a>
+					% end
+				</td>
+				<td>Variables</td>
+			</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/subtractNum.jpg"></img></td>
+        <td><a href="{{pathToRoot}}tr/projects/subtractNum.html">Subtract Numbers</a>
+          <br/><span class="label label-success">Project</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/subtractNum.html">TA Solution</a>
+					% end
+				</td>
+				<td>Variables</td>
+			</tr>
+    </tbody>
+
+    <tbody
+		  % if not get('taMode', False):
+				class="visible-after" data-visible-after="{{varsSection}}"
+			% end
+    >
+			<tr>
+      <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day3PM.zip">here</a>]</h4></center></td>
+      </tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/runningSum.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/runningSum.html">Run, Sum, Run</a>
+          <br/><span class="label label-default">Quickstart<span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/runningSum.html">TA Solution</a>
+					% end
+				</td>
+				<td>Variables</td>
+			</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/8ball.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/8ball.html">8 Numaralı Top</a>
+          <br/><span class="label label-primary">Section</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/8ball.html">TA Solution</a>
+					% end
+				</td>
+				<td>Control flow</td>
+			</tr>
+
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/viralVideo.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/viralVideo.html">Viral Video</a>
+          <br/><span class="label label-primary">Section</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/viralVideo.html">TA Solution</a>
+					% end
+				</td>
+				<td>Variables</td>
+			</tr>
+
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/khansole.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/khansole.html">Khansole Academy</a>
+          <br/><span class="label label-success">Project</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/khansole.html">TA Solution</a>
+					% end
+				</td>
+				<td>Variables</td>
+			</tr>
+
+		</tbody>
+
+
+
+<!-- Day 2 -->
+		<thead
+		  % if not get('taMode', False):
+		  	class="visible-after" data-visible-after="{{karelStart2}}"
+		  % end
+    >
+		<tr>
+			<th colspan = "6"><b>
+				<br/>
+					<h4>Day 2: Karel and Control Flow</h4></b></th>
+		</tr>
+		</thead>
+		<tbody
+		  % if not get('taMode', False):
+		  	class="visible-after" data-visible-after="{{karelStart2}}"
+		  % end
+		>
+			<tr>
+      <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day2AM.zip">here</a>]</h4></center></td>
+      </tr>
+
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/placeSquare.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/placeSquare.html">Place Square</a>
+          <br/><span class="label label-default">Quickstart</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/placeSquare.html">TA Solution</a>
+					% end
+				</td>
+				<td>While loops</td>
+			</tr>
+
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mountain.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/mountain.html">Dağcı Karel</a>
+          <br/><span class="label label-success">Project</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/mountain.html">TA Solution</a>
+					% end
+				</td>
+				<td>While Loops</td>
+			</tr>
+
+      <tbody
+				% if not get('taMode', False):
+					class="visible-after" data-visible-after="{{karelSection2}}"
+				% end
+      >
+			<tr>
+      <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day2PM.zip">here</a>]</h4></center></td>
+      </tr>
+
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/stripeKarel.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/stripeKarel.html">Stripe Karel</a>
+          <br/><span class="label label-default">Quickstart</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/stripeKarel.html">TA Solution</a>
+					% end
+				</td>
+				<td>Nested Loops</td>
+			</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/hospitalKarel.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/hospitalKarel.html">Hospital Karel</a>
+          <br/><span class="label label-primary">Section</span>
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/hospitalKarel.html">TA Solution</a>
+					% end
+				</td>
+				<td>Nested loops</td>
+			</tr>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomPainter2.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/randomPainter.html">Deli Ressam</a>
+          <br/><span class="label label-success">Project</span>
+
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/randomPainter.html">TA Solution</a>
+					% end
+				</td>
+				<td>If Statements</td>
+			</tr>
+    </tbody>
+
+    <thead>
+			<tr>
+				<th colspan = "6"><b>
+					<br/>
+						<h4>Day 1: Karel</h4></b></th>
 			</tr>
 		</thead>
 		<tbody
@@ -462,56 +655,29 @@
 				class="visible-after" data-visible-after="{{karelStart}}"
 			% end
 		>
+      <tr>
+      <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day1PM.zip">here</a>]</h4></center></td>
+      </tr>
 			<tr>
-				<td><a href="{{pathToRoot}}tr/projects/collectNewspaper.html"><img class="projectImg" src="{{pathToRoot}}img/icons/newspaper.jpg"></img></a></td>
+        <td><img class="projectImg" src="{{pathToRoot}}img/icons/newspaper.jpg"></img></td>
 				<td><a href="{{pathToRoot}}tr/projects/collectNewspaper.html">Gazete Alma</a>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/collectNewspaper.html">TA Solution</a>
 					% end
 				</td>
-				<td>Metotlar</td>
+				<td>Methods</td>
 			</tr>
 
-			<tr
-				% if not get('taMode', False):
-					class="visible-after" data-visible-after="{{karelSection}}"
-				% end
-			>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/efes.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/efes.html">Efes'in İnşaatı</a>
+			<tr>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/charles.jpg"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/arches.html">Stone Mason Karel</a>
+          <br/><span class="label label-primary">Section</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/efes.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/arches.html">TA Solution</a>
 					% end
 				</td>
-				<td>For Döngüsü</td>
-			</tr>
-
-			<tr 
-				% if not get('taMode', False):
-					class="visible-after" data-visible-after="{{karelSection}}"
-				% end
-			>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mountain.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/mountain.html">Dağcı Karel</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/mountain.html">TA Solution</a>
-					% end
-				</td>
-				<td>While Döngüsü</td>
-			</tr>
-
-			<tr 
-				% if not get('taMode', False):
-					class="visible-after" data-visible-after="{{karelSection}}"
-				% end
-			>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomPainter2.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/randomPainter.html">Deli Ressam</a>
-					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/randomPainter.html">TA Solution</a>
-					% end
-				</td>
-				<td>If İfadesi</td>
+				<td>For Loops</td>
 			</tr>
 		</tbody>
 </table>

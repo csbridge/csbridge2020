@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Illusion")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,17 +6,17 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Optik İllüzyon
+				Optical Illusion
 			</h1>
 			<p>
-				Yazan: Chris Piech (Steve Cooper'ın fikri temel alınmıştır.)
+				Based on an idea by Steve Cooper. Written by Chris Piech.
 			</p>
 			<p>
-				Ders Notları:
-				<a href ="{{pathToRoot}}tr/handouts/graphics.html">Grafik Referansı</a>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a>
 				<br/>
-				Çalışılan Örnek: 
-				<a href="{{pathToRoot}}tr/projects/stringArtSoln.html">String Sanatı</a>
+				Worked Example: 
+				<a href="{{pathToRoot}}en/projects/stringArtSoln.html">String Art Solution</a>
         <br/>
         Day4: <code>Illusion</code>
 			</p>
@@ -36,7 +27,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Bazen örüntülerin tekrar etmesi, gözlerimizin olmayan şeyleri görmesine yol açar. Aşağıdaki resme bakın. Beyaz çizgilerin kesişimlerindeki küçük gri kareleri görebiliyor musunuz? Optik illüzyon yaratan bir GraphicsProgram yazın:
+					Sometimes repeating patterns can cause our eyes to see things that aren't there. Look at the picture below. Can you see little grey squares in the intersections of the white lines? Write a <code>GraphicsProgram</code> that creates the optical illusion:
 				</p>
 				
 				<p>
@@ -49,11 +40,11 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Sabitler</h2>
+				<h2>Constants</h2>
 				<p>
-					Bu projenin başlangıç kodunda aşağıdaki satırların varlığı dikkatinizi çekmiş olabilir:
+					You may notice that the starter code for this project has the lines:
 					<div class="well"><code>private static final int SIZE = 100; <br/>private static final int GAP = 10;</code></div>
-					run metodunun dışında yazılmışlar (aynı rastgele sayı üreticisindeki gibi). Bu satırlar sabitleri tanımlar: yani, değerleri hiç değişmeyen değişkenler. Bir metodun dışında tanımlandıkları için, programın herhangi bir yerinde onların değerlerini okuyabilirsiniz. Programda 100 ve 10 sayılarını doğrudan kullanarak da bu optik illüzyonu <i>yazabilecek</i> olmanıza rağmen, sabitleri kullanmak programınızın okunmasını kolaylaştırır.
+					which are written outside the <code>run</code> method (much like the random number generator). These lines define constants: variables whose values never change, and since they are defined outside a method you can read their value from any point in the program. Though you <i>could</i> write this optical illusion using the numbers 100 and 10 directly in your code, using constants makes your program much easier to read.
 					<!--<div class="well"><code>private drawSquare(int row, int col) {
 						<br/>&nbsp;&nbsp;&nbsp;//code for drawing a square at the position row, col
 						<br/>}</code></div>-->
@@ -64,11 +55,11 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Çift For Döngüsü</h2>
+				<h2>Double For Loop</h2>
 				<p>
-					Bu problem for döngüsü içinde for döngüsü kullanmanızı gerektirir. İçerideki döngü için farklı bir döngü değişkeni kullanmayı unutmayın. Örneğin, eğer dışarıdaki döngünüz şu şekildeyse:
+					This problem requires using a for loop inside a for loop. Remember to use a different iterator variable for the inner loop. For example if your outer loop is of the form
 					<div class="well"><code>for(int i = 0; i &lt; 100; i++)</code></div>
-					Onun içindeki for döngüsü i'den başka bir değişken üzerinde gezinmeli.
+					The loop in the body must iterate through a variable other than i.
 					<!--<div class="well"><code>private drawSquare(int row, int col) {
 						<br/>&nbsp;&nbsp;&nbsp;//code for drawing a square at the position row, col
 						<br/>}</code></div>-->
@@ -90,10 +81,10 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Ek</h2>
+				<h2>Extension</h2>
         <p>Day4: <code>Illusion2.java</code>
 				<p>
-					Vaktiniz olursa, bu optik illüzyonu yaratmayı deneyin! Tüm karelerin aynı boyutta ve tüm çizgilerin yatay olduğuna dikkat edin! Çözümünüzü nasıl parçalara ayıracağınız üzerine düşünün.
+					If you have time, try creating this optical illusion! Note that all the squares are the same size and all lines are horizontal! Think about how to decompose your solution.
 				</p>
 				
 				<p>
@@ -102,13 +93,6 @@
 					</center>
 				</p>
 
-				<p>Eğer takılırsanız, her bir satırı ilk siyah karesi x = 0'da başlayacak şekilde çizmeyi deneyin. Ardından her satırın başındaki fazlalığın örüntüsünü nasıl oluşturacağınızı bulmaya çalışın.</p>
+				<p>If you are stuck, try drawing each row with the first black square always starting at x = 0. Then try to figure out how to create the offset pattern.</p>
 			</div>
 		</div>
-
-
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="UN Karel")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,14 +6,14 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				İnsani Yardım Karel'ı (ve çözümü)
+				UN Karel (with solution)
 			</h1>
 			<p>
-				Problemi yazan: Eric Roberts
+				Problem written by Eric Roberts
 			</p>
 			<p>
-				Ders Notları: 
-				<a href ="{{pathToRoot}}tr/handouts/karel.html">Karel Referansı</a>
+				Handouts: 
+				<a href ="{{pathToRoot}}en/handouts/karel.html">KarelReference</a>
         <br/>
         Day1: <code>UNKarel.java</code>
 			</p>	
@@ -33,7 +24,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Karel evlerin inşa edilmesinde yardımcı olması için BM (Birleşmiş Milletler) tarafından işe alınmıştır. Bir kurtarıcıya ihtiyaç vardır ve Karel da şüphesiz bu görev için en iyi robottur. Hedefiniz Karel'ın en alt sıra boyunca yürümesi ve aşağıdaki gibi bir ev inşa etmesi:
+					Karel has been hired by the UN to come and help build houses. The day needs saving and Karel is clearly the best robot for the job. Your goal is to have Karel walk along the bottom row and build a house like the following:
 				</p>
 
 				<p>
@@ -43,7 +34,7 @@
 				</p>
 
 				<p>
-					Karel bir beeper bulduğu her zaman. Aşağıdaki resimler iki örnek dünya için Karel'ın yapması gerekeni gösteriyor. Hiçbir evin çakışmayacağını ve tüm evlerin dünyanın içine sığacağını varsayabilirsiniz. Dünyanın büyüklüğüne veya evlerin sayısına dair varsayımda bulunamazsınız!
+					Every time Karel finds a beeper. The below images show what Karel should do for two example worlds. You can assume that no houses will overlap and that all houses will fit inside the world. You can't assume the size of the world or the number of houses!
 				</p>
 
 				<p>
@@ -63,7 +54,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Çözüm</h2>
+				<h2>Solution</h2>
 
 
 <pre id="editor" style="height:1100px">/**
@@ -144,8 +135,3 @@ public class UNKarel extends SuperKarel {
     /*editor.setTheme("ace/theme/eclipse");
     editor.getSession().setMode("ace/mode/java");*/
 </script>
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

@@ -25,7 +25,7 @@
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
           		<li><a class="visible-after" data-visible-after="2019071009" href="{{pathToRoot}}en/resources/quick-python.html">Python Reference</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="{{pathToRoot}}en/resources/graphics.html">Graphics Reference</a>
-				      <li><a class="visible-after" data-visible-after="2019071509" href="{{pathToRoot}}en/handouts/animation.html">Animation Reference</a></li>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="{{pathToRoot}}en/resources/animation.html">Animation Reference</a></li>
               % # begin Yosefa's part
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="{{pathToRoot}}en/resources/general-info.html">General Info</a></li>
@@ -39,20 +39,8 @@
               <li><a href="{{pathToRoot}}en/resources/karelInPycharm.pdf">Karel in PyCharm</a></li>
 
               <!-- Not used nor visible -->
-				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="{{pathToRoot}}en/handouts/jar.html">Exporting Projects as JARs</a>-->
-	          	<!--<a class="visible-after" href="{{pathToRoot}}en/handouts/sections.html">Sections</a>-->
-	          </ul>
-	        </li>
-	          <ul class="dropdown-menu">
-	          	<!--<li><a href="{{pathToRoot}}en/handouts/sections.html">Sections</a></li>-->
-	          	<li><a href="http://karel.csbridge.org/java/en/intro.html">Karel Reader</a></li>
-	          	<li><a href="{{pathToRoot}}en/handouts/karel.html">Karel Reference</a></li>	          	
-          		<li class="visible-after" data-visible-after="2019071009"><a href="{{pathToRoot}}en/handouts/console.html">Console Reference</a></li>
-          		<li class="visible-after" data-visible-after="2019071009"><a href="{{pathToRoot}}en/handouts/random.html">Random Generator Reference</a></li>
-	          	<li class="visible-after" data-visible-after="2019071109"><a href="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a></li>
-				<li class="visible-after" data-visible-after="2019071509"><a href="{{pathToRoot}}en/handouts/events.html">Events Reference</a></li>
-				<li class="visible-after" data-visible-after="2019071709"><a href="{{pathToRoot}}en/handouts/arrayLists.html">Array Lists</a></li>
-				<li class="visible-after" data-visible-after="2019071909"><a href="{{pathToRoot}}en/handouts/jar.html">Exporting Projects as JARs</a></li>
+				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="{{pathToRoot}}en/resources/jar.html">Exporting Projects as JARs</a>-->
+	          	<!--<a class="visible-after" href="{{pathToRoot}}en/resources/sections.html">Sections</a>-->
 	          </ul>
 	        </li>
 
@@ -194,10 +182,6 @@
               <!-- Used to be a main course component -->
 	            <li class="visible-after" data-visible-after="2019071009">
 	            	<a href="{{pathToRoot}}en/projects/favoriteNumber/index.html">Favorite Number</a>
-	            </li>
-              <!-- Used to be a main course component -->
-	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="{{pathToRoot}}en/projects/medicine/index.html">Counterfeit Medicine</a>
 	            </li>
             	
             	<li class="divider visible-after" data-visible-after="2019071109" />

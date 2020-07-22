@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Hangman")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,10 +6,10 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Adam Asmaca
+				Hangman
 			</h1>
 			<p>
-				Yazanlar: Eric Roberts ve Mehran Sahami.
+				Written by Eric Roberts and Mehran Sahami.
 			</p>
 			<!--<p>
 				Worked Example: 
@@ -31,7 +22,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Klasik adam asmaca oyununu kodlayın
+					Make the classic game of hangman
 
 				</p>
 
@@ -49,17 +40,10 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Stanford'da kullanılan ödev kağıdına bakın:
+					See the Stanford handout:
 						<a href="{{pathToRoot}}img/projects/hangman/hangman.pdf">Hangman.pdf</a>
 				</p>
 				
 
 			</div>
 		</div>
-
-		
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

@@ -1,0 +1,125 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Looping Fun
+credit: Lisa Yan
+
+These are practice programs to help you get familiar with loops in Python. They are ordered from easiest to hardest.
+
+## Loop Refresher
+Recall the general structure of a `for` loop:
+
+```
+for i in range(15):
+    # some code...
+```
+
+The loop above runs for 15 iterations. You can parse the meaning of a `for` loop from the first line:
+
++ Create a counter variable `i`
++ Every iteration of the loop, assign `i` to be the next number in the range 0 to 15, exclusive.  In other words, the first loop iteration, `i` is 0, the next time `i` is 1, and so on, and the last iteration, `i` is 14.
++ For each value of `i`, run the code inside the loop. While running the loop code, you can use the value of `i`. So for example, the first time the loop runs, the value of `i` is zero.
++ Note that even if you change `i` within the loop body, `i` will still be the next value in the range the next time through the loop.  For example:
+
+```
+for i in range(10):
+    i += 2
+    print(i)
+```
+
+The first time through this loop, `i` will be 0, and it will print out 2.  However, the second time through the loop, `i` will be 1.  Think about it as each loop iteration, regardless of what `i` currently is, `i` is re-assigned the next value in the specified range.
+
+That being said, it may be easier to follow if you create another variable instead of changing the loop variable:
+
+```
+for i in range(10):
+    j = i + 2 # does not change the value of i
+    print(j)
+```
+
+The following exercises are all about using the `for` loop counter `i`.
+
+**Tip:** when approaching looping problems, think about how a value of the loop counter can tell you what to do.  For instance, in problem 1 below, we might consider, "when `i` is 0, I want to print 1; when `i` is 1, I want to print 3, when `i` is 2, I want to print 5, etc.".
+{: class="alert alert-info"}
+
+## Looping Fun 1
+Try to produce the following output with a `for` loop. Print the first ten odd numbers, starting from 1.
+
+```
+Print the first ten odd numbers, starting from 1.
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+```
+
+Extension: Now try to print the first ten even numbers, starting from 0.
+
+## Looping Fun 2
+Try to produce the following output with a `for` loop. Print the first ten even numbers in decreasing order.
+
+```
+Print the first ten numbers in decreasing order, starting from 20 and ending with 2.
+20
+18
+16
+14
+12
+10
+8
+6
+4
+2
+```
+
+Can you solve this problem without changing the loop condition from the previous problem? That is, start from the following `for` loop code:
+
+```
+for i in range(10):
+	# some code...
+```
+
+How would you solve the problem by using the following loop?
+
+```
+for i in range(20):
+	# some code...
+```
+
+## Looping Fun 3
+Use a `for` loop, but print out everything on a single line. Using `print()` automatically adds a line break/new line after what is printed.  To tell it not to do this, add `end=''` right before the closing parentheses.  For instance, `print("some text or variables")` adds a line break/new line, whereas `print("some text or variables", end='')` does not.
+
+Print out the squares, starting from 1.
+
+```
+Print the first ten square numbers on a single line, starting from 1.
+1, 4, 9, 16, 25, 36, 49, 64, 81, 100
+```
+
+Try avoiding a comma at the end of the last square!
+
+## Looping Fun 4
+Time for nested `for` loops!  Print out the coordinates of a 5x5 grid.
+
+```
+Print the coordinates of a 5x5 grid, row by row.
+(0,0), (1,0), (2,0), (3,0), (4,0)
+(0,1), (1,1), (2,1), (3,1), (4,1)
+(0,2), (1,2), (2,2), (3,2), (4,2)
+(0,3), (1,3), (2,3), (3,3), (4,3)
+(0,4), (1,4), (2,4), (3,4), (4,4)
+```
+
+Hint: try the following code structure:
+```
+for i in range(5):
+	for j in range(5):
+		# some code...
+```
+
+## Additional Practice: `while` Loops
+Want more practice with `while` loops? Do all the above exercises with a `while` loop instead of a `for` loop. Good luck!

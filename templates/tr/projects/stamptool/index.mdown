@@ -1,0 +1,12 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Stamp Tool
+credit: Problem written by a mystery CS106A Lecturer.
+solution: soln.py
+
+Write a program where a blue rectangle (which represents a stamp) follows a user's mouse around. Your program should draw a rectangle on the screen centered around the mouse when the user clicks.
+
+<center>
+  <img style="width:500px"
+          alt = "Stamp tool demo"
+          src="{{pathToRoot}}img/projects/stamptool/demo.png">
+</center>

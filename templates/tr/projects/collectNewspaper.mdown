@@ -1,0 +1,25 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Collect Newspaper
+credit: Based on a handout by Eric Roberts
+
+Handouts: [Karel Reference]({{pathToRoot}}en/handouts/karel.html)<br/>
+Worked Example: [StepUp]({{pathToRoot}}en/projects/stepUp.html)<br/>
+File: `newspaper_karel.py`
+
+Your first task is to solve a simple story-problem in Karel's world.  Suppose that Karel has settled into its house, which is the square area in the center of the following diagram:
+
+<center>
+	<img class="psetImg" src="{{pathToRoot}}img/projects/newspaper/newspaper.png">	
+</center>
+
+Karel starts off in the corner of its house as shown in the diagram. The problem Karel needs to solve is to collect the newspaper, represented (as all objects in Karel's world are) by a beeper, from outside the doorway and then to return to her initial position.
+
+You can assume that every part of the world looks just as it does in the diagram.  The house is exactly this size, the door is always in the position shown, and the beeper is just outside the door.  Thus, all you have to do is write the sequence of commands necessary to have Karel
+
+1. Move to the newspaper,
++ Pick it up, and
++ Return to its starting point.
+
+
+Even though the program is only a few lines, it is still worth getting at least a little practice in decomposition.  In your solution, include a private method for each of the steps shown in the outline.
+

@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Draw People")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,14 +6,16 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				İnsan Çizme
+				Draw People
 			</h1>
 			<p>
-				Yazan: Chris, Bryce and Julia
+				Written by Chris, Bryce and Julia
 			</p>
 			<p>
-				Ders Notları:
-				<a href ="{{pathToRoot}}tr/handouts/graphics.html">Grafik Referansı</a>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a>
+        <br/>
+        Day4: <code>DrawPeople.java</code>
 			</p>
 
 		</div>
@@ -31,13 +24,13 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Bu egzersizde ayakları verilen (x,y) koordinatlarında olan bir insan çizeceksiniz.
+					This demo shows a simple method that draws people with the bottom of their feet at the provided (x, y) position.
 					<div class="well"><code>private void drawPerson(int x, int y)</code></div>
 				</p>
 
 				<center>
-					<img style="width:500px" src="{{pathToRoot}}img/projects/drawPeople/demo2.png">	
-				</center>
+						<img style="width:500px" src="{{pathToRoot}}img/projects/drawPeople/demo2.png">	
+					</center>
 				
 
 			</div>
@@ -91,9 +84,3 @@
 			</div>
 
 		</div>
-
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

@@ -1,0 +1,12 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Stone Mason Karel
+credit: Lisa Yan
+
+Handouts: [KarelReference]({{pathToRoot}}en/handouts/karel.html)<br/>
+Worked Example: [Place100]({{pathToRoot}}en/projects/place100.html)<br/>
+Day1: `stone_mason_karel.py`
+
+This program is a bonus program. It is an extension of [Arches Karel]({{pathToRoot}}en/projects/arches.html). Re-implement the problem, but now make
+sure that your program works for all of the 
+sample worlds (`StoneMasonKarel.w`, `SampleQuad1`, and `SampleQuad2`) supplied in the starter folder.
+

@@ -1,0 +1,10 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Average Function
+credit: Chris Piech and Mehran Sahami
+solution: soln.py
+
+This demo shows a function that takes in two inputs and returns the average:
+
+```
+def average(a, b)
+```

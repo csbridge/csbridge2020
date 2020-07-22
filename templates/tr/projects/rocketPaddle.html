@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Rocket Paddle")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,16 +6,16 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Roket Atar
+				Rocket Paddle
 			</h1>
 			<p>
-				Yazan: Chris Piech
+				Written by Chris Piech
 			</p>
 			<p>
-				Ders Notları:
-				<a href ="{{pathToRoot}}tr/handouts/arrayLists.html">Dizi Listeleri (ArrayLists)</a>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/arrayLists.html">ArrayLists</a>
         <br/>
-        7. Gün: <code>RocketPaddle.java</code>
+        Day7: <code>RocketPaddle.java</code>
 			</p>
 
 		</div>
@@ -33,11 +24,11 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Fare ile tıklayınca roket atın! Ateşleyeceğiniz roket sayısının herhangi bir sınırı yok.	
+					On mouseclick fire a rocket! There is no limit to the number of rockets you can fire.	
 				</p>
 				<p>
 					<center>
-						<img style="width:100%" src="{{pathToRoot}}img/projects/rocketPaddle/demo.gif">	
+						<img style="width:100%" src="{{pathToRoot}}img/projects/rocketPaddle/demo.png">	
 					</center>
 				</p>
 			</div>
@@ -45,7 +36,7 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Çözüm</h2>
+				<h2>Solution</h2>
 
 
 <pre id="editor" style="height:1000px">public class RocketPaddle extends GraphicsProgram {
@@ -122,11 +113,3 @@
 </script>
 </div>
 </div>
-
-		
-
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

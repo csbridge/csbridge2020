@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Waves of Sound")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,16 +6,14 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Ses Dalgaları
+				Waves of Sound
 			</h1>
 			<p>
-				Keith Schwarz'ın bir ödevinden esinlenilmiş ve onun üzerine kurulmuştur. Oluşturan: Chris Piech Kevin Miller ve Bryce Cronkite-Ratcliff
+				Inspired by, and built off an assignment by Keith Schwarz. Created by Chris Piech Kevin Miller and Bryce Cronkite-Ratcliff
 			</p>
 			<p>
-				Örnek:
-				<a href ="{{pathToRoot}}tr/projects/snow.html">Kar</a>
-				<br/>Ders Notları:
-				<a href ="{{pathToRoot}}tr/handouts/arrayLists.html">Dizi Listeleri (ArrayLists)</a>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/arrayLists.html">ArrayLists</a>
         <br/>
         Day7: <code>SoundConsole.java</code>, <code>SoundGraphics.java</code>
 			</p>
@@ -35,7 +24,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				
-				<p>İnsanlar sürekli yeni sesler arıyorlar, ve son dönemlerde giderek artan sayıda sanatçı enstrümanların üretemedikleri işitsel tecrübeleri elde etmek için programları kullanıyorlar. Bilgisayar üretimi seslerle oluşturulmuş şarkıların iki örneği:</p>
+				<p>Humans are always looking for new sounds, and recently a growing number of artists have been using programs to create experiences that instruments are unable to produce. Here are two examples of songs that were created with computer generated sounds:</p>
 				<p>
 					<center>
 					<iframe width="400" height="315" src="//www.youtube.com/embed/mehLx_Fjv_c" frameborder="0" allowfullscreen></iframe>
@@ -43,7 +32,7 @@
 					</center>
 				</p>
 				<p>
-					Bir dosyadan notaları okuyup besteyi kullanıcıya çalacak bir program yazın.
+					Write a program that reads in notes from a file and play the composition back to the user.
 				</p>
 				<!--<p>
 					<center>
@@ -59,25 +48,25 @@
 			<div class="col-md-12">
 				<h2>Audio</h2>
 				<p>
-					Notaları üretmenize ve çalmanıza izin veren üç adet Audio metodu var.
+					There are three Audio methods that will allow you to generate and play notes.
 				</p>
 				<div class="well"><code>ArrayList&lt;Double&gt; <i>samples</i> = Audio.getNoteSamples(<i>frequency</i>, <i>length</i>)</code></div>
 				<div class="well"><code>Audio.play(<i>arrayListOfDoubles</i>)</code></div>
-				<div class="well"><code>ArrayList&lt;String&gt; <i>notes</i> = Audio.getNotes(<i>songName</i>)</code></div>
-				<p><b>getNoteSamples</b> metodu iki sayı alıyor, frekans ve sampleların uzunluğu (CD kalitesinde bir seste saniye başına 44.100 sample var). Frekans çalınan notayı belirliyor. Örneğin; C notasının frekansı 130.81 Hz ve G notasınınki ise 196.00 Hz'dir. Tanımlanmış olan sabitleri kullanmalısınız. Bu metot, sesi üreten dalganın sample'larını içeren Double ArrayList'i dönüyor. </p>
+				
+				<p><b>getNoteSamples</b> is a method that takes in two numbers, a frequency and a length in samples (there are 44,100 samples per second in CD quality sound). The frequency defines the note being played. For example a C note has frequency 130.81 Hz and a G note has frequency 196.00 Hz. You should use the contants defined. This method returns an ArrayList of Doubles, which represents the samples of the wave that makes the sound. </p>
 
-				<p>Aşadağıdaki dalgayı örnek olarak ele alalım. Frekansı 130.81 Hz, bu sebeple bir C notası. getNoteSample metodu dalgayı sample'layacak, ve sample'dan toplanmış (-1, 1) aralığındaki double'ları dönecek:</p>
+				<p>Let's take the wave below as an example. It has a frequency of 130.81 Hz which is a C note. The method will sample the wave, and return the doubles collected from the sample, in the range (-1, 1):</p>
 
 				<p>
 					<center>
 					<img style="width:450px" src="{{pathToRoot}}img/projects/music/sound2.png">
-					<br><i style="text-align:center">Keith'in izniyle</i>
+					<br><i style="text-align:center">Image courtesy of Keith</i>
 				</center>
 				<p></p>
 
-				<p><b>play</b> metodu sample'ların listesini (ArrayList&lt;Double&gt; türünde olmalı) alır ve onu kullanıcıya oynatır.</p>
+				<p><b>play</b> is a method that takes in a list of samples (which must be of type ArrayList&lt;Double&gt;) and plays it to the user.</p>
 
-        <p><b>getNotes</b> metodu şarkı adını alır, ve şarkıdaki tüm notaları içeren bir ArrayList&lt;String&gt; döndürür. ArrayList'teki harfler, küçük ya da büyük harfle notalar olabilir (a-g ve durdurmak (pause) için p). Örnek bir ArrayList: {a, a, G, f, p, B}.</p>
+        <p><b>getNotes</b> is a method that takes in the name of a song, and returns an ArrayList&lt;String&gt; with all the notes in the song. The letters in the ArrayList can be lower or upper case notes (a-g and p for pause). Here is an example ArrayList: {a, a, G, f, p, B}.</p>
 				
 
 			</div>
@@ -85,53 +74,37 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>1) Bir Nota Çalın</h2>
-				<p>Başlamak için, <i>NOTE_LENGTH</i> uzunluğunda tek bir C notası üretmeyi ve kullanıcıya geri oynatmayı deneyin. Ardından başka notaları çalmayı deneyin. E, C, C notalarını çalmayı deneyin. Son olarak, bir oktav yukarıdan bir nota çalın ve ayırt edebildiğinize emin olun. </p>
+				<h2>1) Play a Note</h2>
+				<p>To get started try to generate a single C note of length <i>NOTE_LENGTH</i> and play it back to the user. Then try to play some different notes. Try to play the notes E, C, C. Finally, play a note an octave up and make sure you can tell the difference. </p>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>2) Şarkıları Yazdırın</h2>
-				<p>Tek bir notayı çalmayı öğrendik. Sırada bir şarkıyı oynatmak var. Bunu yapmak için, kullanıcıdan şarkıyı almanız gerekiyor. Kullanıcıya şarkıyı soran ve ilişkili notaları yazdıran bir kod yazın. <code>Audio.getNotes</code> bu kısım için elverişli olacaktır.
+				<h2>2) Make a Musical Program</h2>
+				<p>This project is open ended. At this point you can program what ever you would like. Would you like to create a graphical piano? How about generating more complex sounds? See the extensions and try and implement as many as you would like.</p>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>3) Şarkıları Oynatın</h2>
-				<p>
-					Son olarak, tüm şarkıyı oluşturmak için her bir notayı bir ArrayList'in içine koyun. Her bir nota için:
-          <ul>
-            <li>Eğer küçük harfse (a, b, c, d, e, f or g), şarkıya bu nota için sample'lar ekleyin</li>
-            <li>Eğer büyük harfse (A, B, C, D, E, F, or G), şarkıya bu notadan bir oktav yukarıdan bir nota ekleyin</li>
-            <li>Eğer 'p' ise, ara (pause) için <i>NOTE_LENGTH</i> adet 0 değerli sample ekleyin</li>
-          </ul>
-				</p>
-
-				<p>İşte bu kadar! ArrayList'lerin ve bilgisayar müziğinin dünyasına hoş geldiniz. Ustalık gerektiren kısımlara dair bazı ipuçları için aşağıdaki "İpuçları" bölümünü okumalısınız.</p>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<h2>İpuçları</h2>
-				<p><b>Bir Oktav Yukarıdan Çalmak<br/></b>Bir nota yukarıdan çalmak için (nota büyük harf olduğunda), tüm yapmanız gereken frekansı iki katına çıkarmaktır. Örneğin, eğer asıl C'nin frekansı 130.81 ise, bir oktav yukarıdan olan C notasının frekansı 2 * 130.81 = 261.62'dir.
+				<h2>Tips and Tricks</h2>
+				<p><b>Playing up an Octave<br/></b>To play an octave up all you have to do is double the frequency. For example, if the original C is 130.81, then the higher C one octave up is 2 * 130.81 = 261.62
 				</p>
 
 				<p>
-					<b>Metotlar Kullanın<br/></b>
-					Her bir notayı çalan ayrı bir metot yazmak daha kolay gelebilir:
+					<b>Use Methods<br/></b>
+					You might find it easier to write a method to play each note:
 					<div class="well"><code>private void playG() {<br/>
 		&nbsp;&nbsp;&nbsp;ArrayList&lt;Double&gt; example = Audio.getNoteSamples(G, NOTE_LENGTH); <br/>
 		&nbsp;&nbsp;&nbsp;Audio.play(example);<br/>
 	}</code></div>
 				</p>
 
-				<b>String Karşılaşması Kullanın<br/></b>
-        		<p>Stringleri karşılaştırmak için, == operatörünü kullanmayın. Onun yerine şunu kullanmalısınız:</p>
+				<b>Compare Strings<br/></b>
+        		<p>To compare strings, don't use the == operator. Instead you should use:</p>
 				<div class="well"><code><i>s1</i>.equals(<i>s2</i>)</code></div>
-				<p>Hepsi bu! ArrayList'lerin ve bilgisayar müziğinin dünyasına hoş geldiniz. Eğer erken bitirirseniz aşağıdakilerden bir ek deneyin.</p>
+				<p>That's all! Welcome to the world of ArrayLists and computer music. If you finish early try an extension.</p>
         
         
 
@@ -140,30 +113,14 @@
 
 		<hr>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Ek 1: Nota Süresi</h2>
-				<p>
-					Müzikte tüm notalar aynı uzunlukta değiller. Daha çeşitli şarkılar çalabilmek için, notaları daha kısa veya daha uzun süre çalabilmek faydalı olur.
-				</p>
-
-				<p>
-          Müzik çalarınızı sesleri değişken uzunlukta oynatabilecek şekilde değiştirin. Bunun için, Audio'da size yardımcı olabilecek bir metot var, <code>getDurations</code>. Bir şarkıyı alıyor ve size NOTE_FREQUENCY biriminde tüm notaların sürelerini veriyor.
-
-        <br><br><code>ArrayList&lt;Double&gt; durations = Audio.getDurations(songName);</code><br><br>
-
- Bir notanın ne kadar süre oynatılacağını değiştirmek için <code>Audio.play</code>'i çağırdığınızda, bu süreleri kullanabilirsiniz. Bir kez yaptığınızda, happybirthday'in kulağa nasıl geldiğini görün.
-				</p>
-
-			</div>
-		</div>
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Ek 2: Kendi Müziğinizi Yazın</h2>
+				<h2>Extension 1: Write your Own Music</h2>
 				<p>
-        Şarkı dosyalarına bir göz atın ve fark edeceksiniz ki aşırı basitler. Bu demek ki kolaylıkla kendi şarkı dosyanızı da yazabilirsiniz! Kendi şarkılarınızı eklemeyi ve onları sizin yarattığınız müzik çalar ile oynatmayı deneyin. 
-        </p>
+					Try and compose a melody from different notes. 
+					Add higher level phrases to the songs. Use loops and methods to make complex sounds. 
+       			 </p>
 				
 				
 			</div>
@@ -171,14 +128,12 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Ek 2: Algoritmik Şarkı</h2>
+				<h2>Extension 2: Chords</h2>
 				<p>
-					Şarkınıza daha üst seviye ifadeler ekleyin. Daha karmaşık sesler üretmek için, loop'ları ve metotları kullanın. Örneğin, belki koro ("chorus") için 'h' harfini okumak istiyorsunuz (c harfi zaten 'c' notasını çalmak için kullanılıyor) ve o halde şarkının koro kısmını oluşturan nota dizisini algoritmik bir şekilde üretebilirsiniz.
+					Two play two (or more) notes simultaneously you simply add up each value in the sample. Then, to make the volume normal, divide the resulting sample by its maximum value.
 				</p>
 
-				<p>Tycho ve Pretty Lights tarafından kullanılanlara (başlangıçtaki örneklerdekilere) benzer, zengin sesler üretebilirsiniz.</p>
-
-				<p>Lütfen yarattığınız tüm şarkıları bizle paylaşın.</p>
+				<p>You can make richer sounds, that are closer to the ones used by Tycho and Pretty Lights (in the examples at the beggining).</p>
 				
 				
 				
@@ -187,12 +142,12 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Ek 3: Grafiksel Arayüz</h2>
+				<h2>Extension 3: Graphical Interface</h2>
 				<p>
-					GRect'lerden oluşan bir grid'i kullanarak grafiksel bir arayüz yapın. Bu grid'in her bir satırı bir notayı (C, D, G, E, A) ve her bir sütunu zamanda bir noktayı temsil etsin. Eğer bir GRect aktif hale getirilirse (mavi renge dönerse) o zaman noktasında o notayı çalmalısınız.
+					Make a graphical interface using a grid of GRects where each row represents a note (C, D, G, E, A) and each column represents a point in time. If a GRect is turned on (is colored blue) you should play that note at that time.
 				</p>
 
-				<p>Tuşlar hakkindaki sorularınızı bize sorun</p>
+				<p>Ask us about buttons</p>
 
 				<p>
 					</p><center>
@@ -306,9 +261,3 @@
 				
 			</div>
 		</div>-->
-
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

@@ -1,0 +1,145 @@
+<head>
+
+	%include templates/parts/header.ptl
+
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+	%include templates/tr/navBar.ptl
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Tıklama Falan
+			</h1>
+			<p>
+                Yazan: Lisa Yan
+			</p>
+			<p>
+                Ders Notları:
+                <a href ="{{pathToRoot}}tr/handouts/graphics.html">Grafik Referansı</a><br/>
+				<a href ="{{pathToRoot}}tr/handouts/events.html">Olaylar(Events) Referansı</a>
+			</p>
+
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+                    Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır, ancak bu egzersizi tamamlamak kesinlikle Final Projesnize yardımcı olacaktır.
+                </p>
+                <p>
+                    Kullanıcı tıkladıkça animasyon oluşturan bir GraphicsPrograms yazın.
+                </p>
+            <h2>İlk Adım: Harf Seçme</h2>
+            <p> <code><b>ClickNPause.java</b></code> dosyasının içine bir GraphicsProgram ekleyin. Bu program İngiliz alfabesindeki harfler üzerinde döngü kursun (A'dan Z'ye). Ayrıca praograma, kullanıcı ekranda herhangi bir yere her tıkladığında, "pausing..." yazan bir uyarı oluşturan bir metot ekleyin. Uyarı kullanıcının tıkladığı yerde oluşsun.
+                <center>
+                    <img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/clickNStuff/character.gif">	
+			    </center>
+            </p>
+            <p>
+                Anahatlar:
+            </p>
+            <ul>
+                <li>Harfler arasında 100 milisaniyeden daha uzun beklemeyin.</li>
+                <li>Her tık sonrasında 1 saniye bekleyin.</li>
+                <li>Harflere geçmeden önce sayılar ile animasyonunuza başlangıç jeneriği ekleyebilirsiniz.</li>
+                <li>Kullanıcının tıkladığı noktada <code>pausing...</code> uyarısı oluşturun.</li>
+            </ul>
+            <p>
+            <h3>Karakter animasyonlarını oluşturmak</h3>
+            <p>
+                Animasyonumuzda sayı değil de karakter kullandığımıza göre, animasyonumuz boyunca <code>char</code> class değişkenlerini takip etmemiz gerekecektir. 
+                <code>char</code> değişkeni tek karakter uzunluğundadır. (Dolayısıyla String değişkeninden farklıdır. String değişkeni birden fazla karakter içerebilir). Bir GLabel'in metin kısmını tek bir karakter olarak yaratmak için:
+            </p>
+			<div class="well"><code>
+                char c = 'c';<br>
+                label.setLabel(c + "");
+			</code></div>
+            <p>String yerine <code>char</code> kullanmanın avantajıher karakterin ASCII adı verilen kendine özgü sayısal bir karşılığının olmasıdır. Dolayısıyla <code>A</code> karakterini bir integer değişkenine dönüştürürsek:</p>
+			<div class="well"><code>
+                System.out.println((int) 'A'); // returns 65
+			</code></div>
+            <p>Benzer şekilde <code>Z</code> karakterinin sayısal gösterimi <code>65 + 26 - 1 = 90</code> olacaktır. <code>char</code> ile <code>int</code> arasındaki dönüşüm <a href ="http://ascii.cl/">ASCII Kodları</a> tarafından belirlenmiştir.</p>
+            <p>Bu yöntemi kullanarak A ile Z harfleri arasında döngü yaratan bir metot oluşturun.
+
+            <h3>Event Bayrakları</h3>
+            <p>Mouse Listener kullanarak, kullanıcı her tıkladığında harf döngüsünü geçici olarak durdurun ve tıklanılan noktada "pausing..." uyarısını gösterin. Bir saniye sonra uyarı ekranda gitmeli ve döngü kaldığı yerden devam etmelidir.</p>
+			<center>
+				<img style="width:300px" src="{{pathToRoot}}img/projects/clickNStuff/pauseCharacter.png">	
+			</center>
+            <br>
+            <p><b>Her şeyi <code>mouseClicked()</code>metodu içine yazmak zor olacaktır!!!</b> <code>mouseClicked()</code> veya <code>mouseMoved()</code> gibi listener (dinleyici) metotları içerisinde "pause"(dur) komutu kullanılamaz çünkü bu metotlar hızlıca cevap vermek için tasarlanmıştır. Onun yerine, <i>Event Bayrakları(Flags)</i> kullanmalısınınız.</p>
+
+            <p>Bayraklar (<b>flag</b>) programcıların bir "event" olduğunda değerini <code>true</code> olarak değiştirdikleri "boolean" değişkenlerdir. Aynı "event" tamalandığında bayrağın değeri tekrar <code>false</code> olarak değiştirilir. Genelde, programcı "mouse listener" içindeki "event" bayraklarını "false" olarak belirler. Daha sonra ana kod bloğunda bu bayrağın değerine göre gerçekleşen farklı komutlar oluşturur ve bayrak her kalktığında ("true" değeri aldığında) önceden belirlenmiş komutları gerçekleştirir. Aşağıda bir bayrağın değerine göre hareket eden ana kod bloğu örneği görebilirsiniz:</p>
+
+            <div class="well"><code><pre>private boolean eventFlag = false;
+public void run() {
+    while(true) {
+        if (eventFlag) {
+            doSomethingSpecial();
+            eventFlag = false; // reset the flag once you're done
+        }
+        doSomethingNormal();
+        pause(DELAY);
+    }
+}
+
+public void mouseMoved(MouseEvent e) {
+    eventFlag = true; // turn on the flag
+}</pre></code></div>
+            <p>Bu bilgileri kullarak ilk adımı tamamlayabilirsiniz.</p>
+
+            <h2>İkinci Adım: Hayret Verici Zıp Zıp Karel</h2>
+            <p><code><b>ClickNJump.java</b></code> dosyası içine Karel'in (aşağıda) sürekli yatay olarak hareket ettiği bir program yazın. Kullanıcı tıkladığında Karel yukarı zıplasın ve indiğinde yatay hareketine devam etsin.</p>
+			<center>
+						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/clickNStuff/karelJump.gif">	
+            </center>
+
+            <p>
+                Anahatlar:
+            </p>
+            <ul>
+                <li>Karel'in fotoğrafını proje dosyalarınızın olduğu <code>src</code> klasörü içine kaydedin. Projenizin bulunduğu yeri öğrenmek için Eclipse programında proje klasörü üzerinde sağ-klik yapıp "Properties" seçeneğini seçebilirsiniz.</li>
+                <li><code>karel.png</code> dosyasını proje klasörünüz içinde görene kadar sayfanızı yenileyin.</li>
+                <li>Karel yumuşak bir şekilde hareket etmelidir. (yani 50 milisaniyede bir (ya da daha sık)).</li>
+            </ul>
+            <p>Zıplama için Öneriler:</p>
+            <ul>
+                <li>Toplam zıplama hareketi iki saniye sürmelidir.</li>
+                <li>Karel zıplarken yeni bir zıplama hareketi başlatılamaz.</li>
+                <li>Karel'i önce yukarı-aşağı sabit hızda zıplatarak başlayın.</li>
+                <li>Daha sonra yerçekimi eklemeyi düşünebilirsiniz. Başlangıç hızınız ne olmalı?</li>
+                <li>Son olarak Karel zıplarken yatayda da hareket etmesini sağlayın.</li>
+            </ul>
+
+            <p>Yardımcı olması için Karel'in zıplarkenki bazı fotoğraflarını aşağıda bulabilirsiniz.</p>
+			<center>
+                <img style="width:80px" src="{{pathToRoot}}img/projects/clickNStuff/karel.png">	
+                <img style="width:80px" src="{{pathToRoot}}img/projects/clickNStuff/karelFlipped.png">	
+            </center>
+
+
+            <h2>Üçüncü Adım: Karel Çıldırdı</h2>
+            <p>Karel'e her türlü çılgınlığı yaptırmak için programınızı gönlünüzce düzenleyebilirsiniz!!</p>
+
+
+
+
+
+
+			</div>
+
+		</div>
+
+		
+		%include templates/tr/footer.ptl
+
+	</div>
+</body>

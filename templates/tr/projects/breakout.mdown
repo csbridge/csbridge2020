@@ -1,0 +1,150 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Breakout
+credit: Written by Eric Roberts
+
+Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
+Worked Example: [Stamp Tool]({{pathToRoot}}en/projects/stampTool.html)<br/>
+File: `breakout.py`
+
+Your job in this assignment is to write the classic arcade game of Breakout, which was invented by Steve Wozniak before he founded Apple with Steve Jobs (moment of silence).  It is a large assignment, but entirely manageable as long as you break the problem up into pieces.  
+
+## The Breakout Game
+
+
+In Breakout, the initial configuration of the world appears as shown on the right. The colored rectangles in the top part of the screen are <b>bricks</b>, and the slightly larger rectangle at the bottom is the <b>paddle</b>. The paddle is in a fixed position in the vertical dimension, but moves back and forth across the screen along with the mouse until it reaches the edge of its space. 
+
+<center><img style="padding:10px;max-width:100%" src="{{pathToRoot}}img/projects/breakout/breakoutGameH.png" /></center>
+
+A complete game consists of three turns. On each turn, a ball is launched from the center of the window toward the bottom of the screen at a random angle. That ball bounces off the paddle and the walls of the world, in accordance with the physical principle generally expressed as "the angle of incidence equals the angle of reflection" (which turns out to be very easy to implement as discussed later in this handout). Thus, after two bounces--one off the paddle and one off the right wall--the ball might have the trajectory shown in the second diagram. (Note that the dotted line is there to show the ball's path and won't appear on the screen.)
+
+As you can see from the second diagram, the ball is about to collide with one of the bricks on the bottom row.  When that happens, the ball bounces just as it does on any other collision, but the brick disappears.  The third diagram shows what the game looks like after that collision and after the player has moved the paddle to put it in line with the oncoming ball.
+
+The play on a turn continues in this way until one of two conditions occurs: 
+
+1. The ball hits the lower wall, which means that the player must have missed it with the paddle.  In this case, the turn ends and the next ball is served if the player has any turns left.  If not, the game ends in a loss for the player.
+1. The last brick is eliminated.  In this case, the player wins, and the game ends immediately.
+
+Success in this assignment will depend on breaking up the problem into manageable pieces and getting each one working before you move on to the next.  The next few sections describe a reasonable staged approach to the problem.
+
+## 1. Create bricks
+
+Before you start playing the game, you have to set up the various pieces.  Thus, it probably makes sense to implement the run method as two method calls: one that sets up the game and one that plays it.  An important part of the setup consists of creating the rows of bricks at the top of the game, which look like this:
+
+<center>
+<img style="padding:10px;max-width:100%" src="{{pathToRoot}}img/projects/breakout/breakoutBricks.png"></img>
+</center>
+
+ The number, dimensions, and spacing of the bricks are specified using named constants in the starter file, as is the distance from the top of the window to the first line of bricks.  The only value you need to compute is the x coordinate of the first column, which should be chosen so that the bricks are centered in the window, with the leftover space divided equally on the left and right sides.  The color of the bricks remain constant for two rows and run in the following rainbow-like sequence: `"red", "orange", "yellow", "green", "cyan"`.
+
+## 2. Add a boouncing ball
+At one level, creating the ball is easy, given that it's just a filled oval.  The interesting part lies in getting it to move and bounce appropriately.  You are now past the "setup" phase and into the "play" phase of the game.  To start, create a ball and put it in the center of the window.  As you do so, keep in mind that the coordinates of the oval do not specify the location of the center of the ball but rather its upper left corner.
+
+The program needs to keep track of the velocity of the ball, which consists of two separate components, which you will presumably declare as variables like this:
+
+```
+change_x = 10
+change_y = 10
+```
+
+The "change" components
+represent the change in position that occurs on each time step.  Initially, the ball should be heading downward, and you might try a starting velocity of +10.0 for `change_x` and `change_y`.
+
+Recall that there are two ways to move an object in the Python graphics library:
+
+```
+# Move to the object to a specific new_x, new_y
+canvas.moveto(object, new_x, new_y)
+
+# Increase the x coordinate by change_x and the y coordinate by change_y
+canvas.move(object, change_x, change_y)
+```
+
+Once you've created your ball and the chnage variables, your next challenge is to get the ball to bounce around the world, ignoring entirely the paddle and the bricks.  This will require that you program an "animation loop" where you move the ball and then pause. Then you can consider how to make the ball bounce. To do so, you need to check to see if the coordinates of the ball have gone beyond the boundary, taking into account that the ball has a nonzero size.  Thus, to see if the ball has bounced off the right wall, you need to see whether the coordinate of the right edge of the ball has become greater than the width of the window; the other three directions are treated similarly.  For now, have the ball bounce off the bottom wall so that you can watch it make its path around the world.
+					
+Computing what happens after a bounce is extremely simple.  If a ball bounces off the top or bottom wall, all you need to do is reverse the sign of `change_y`.  Symmetrically, bounces off the side walls simply reverse the sign of `change_x`.
+
+## 3. Add the paddle
+
+The next step is to create the paddle.   There is only one paddle, which is a filled rectangle.  You even know its position relative to the bottom of the window.
+
+The challenge in creating the paddle is to make it track the mouse. Here, however, you only have to pay attention to the x coordinate of the mouse because the y position of the paddle is fixed.  
+
+Each time through the animation loop, ask for the location of the mouse and move the rectangle representing the paddle. To get the location of the mouse, you can use the canvas function `canvas.get_mouse_x()`:
+
+```
+mouse_x = canvas.get_mouse_x()
+```
+
+## 4. Check for Collisions
+Now comes the interesting part.  In order to make Breakout into a real game, you have to be able to tell whether the ball is colliding with another object in the window.  As scientists often do, it helps to begin by making a simplifying assumption and then relaxing that assumption later.  Suppose the ball were a single point rather than a circle.  In that case, how could you tell whether it had collided with another object?</p>
+
+There is a canvas function: `canvas.find_overlapping(x_1, y_1, x_2, y_2) which returns a list of all objects that are overlapping the rectangle defined by the four coordinates.
+
+```
+objs = canvas.find_overlapping(x_1,  y_1, x_2, y_2)
+```
+
+The easiest thing to do, which is in fact typical of real computer games, is to check a larger bounding box for collision. Look for any objects in this rectangle:
+
+<center>
+  <img src="{{pathToRoot}}img/projects/breakout/breakoutCollision.png"></img>
+</center>
+
+To get a list of objects that are overlapping the ball, you can use code as follows which calls the canvas function `canvas.coords(obj)`, returning the 4 corners of an object:
+
+```
+# this graphics method gets the location of the ball as a list
+ball_coords = canvas.coords(ball)
+# the list has four elements:
+x_1 = ball_coords[0]
+y_1 = ball_coords[1]
+x_2 = ball_coords[2]
+y_2 = ball_coords[3]
+# we can then get a list of all objects in that area
+colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
+```
+
+If you get all overlapping objects in this rectangle, you will be returned a list. In that list will be the `ball`, as well as any object that the ball is currently colliding with. To test if a colliding object is the ball, you can simply check if the element is `==` to your ball variable.
+
+If the ball collides with the paddle, you need to bounce the ball so that it starts traveling up.  If it isn't the paddle, the only other thing it might be is a brick, since those are the only other objects in the world.  Once again, you need to cause a bounce in the vertical direction (flip the direction of the `change_y` variable), but you also need to take the brick away.  To do so, all you need to do is remove it from the screen by calling the `delete` method:
+
+```
+canvas.delete(square) # deletes the object called square
+```
+
+## <span style="color:blue">Extra Touches</span>
+
+If you've gotten to here, you've done all the hard parts.  There are, however, a few more details you could take into account if you have time.</p>
+
+1. Take care of the case when the ball hits the bottom wall. In the prototype you've been building, the ball just bounces off this wall like all the others, but that makes the game pretty hard to lose. Modify your loop structure so that it tests for hitting the bottom wall as one of its terminating conditions.
+
+1. Make your game play three turns!
+
+1. Make it so that your ball bounces differently, depending on where it hits the paddle. If it hits the left of the paddle it bounces more to the left. If it hits the right of the paddle it bounces more to the right.
+
+1. Check for the other terminating condition, which is hitting the last brick. How do you know when you've done so? Although there are other ways to do it, one of the easiest is to have your program keep track of the number of bricks remaining. Every time you hit one, subtract one from that counter. When the count reaches zero, you must be done. It would be nice to give the player a little feedback that at least indicates whether the game was won or lost.
+
+1. Test your program to see that it works. If you think everything is working, here is something to try: Just before the ball is going to pass the paddle level, move the paddle quickly so that the paddle collides with the ball rather than vice-versa. Does everything still work, or does your ball seem to get "glued" to the paddle? This error occurs because the ball collides with the paddle, changes direction, and then collides with the paddle again before escaping. How can you fix this bug?
+
+1. Check for the other terminating condition, which is hitting the last brick. How do you know when you've done so?  Although there are other ways to do it, one of the easiest is to have your program keep track of the number of bricks remaining.  Every time you hit one, subtract one from that counter.  When the count reaches zero, you must be done.  It would be nice to give the player a little feedback that at least indicates whether the game was won or lost.
+
+## <span style="color:blue">Demo</span>
+
+<div class="row">
+	<div class="col-md-12">
+		<iframe style="width: 410px; height: 650px; border: none;" id="canvas" src="https://web.stanford.edu/class/archive/cs/cs106a/cs106a.1164/assignments/Assignment3/Breakout/"></iframe>
+	</div>
+</div>
+
+## <span style="color:blue">Extensions</span>
+If you have the basic play working well, then this would be a great opportunity to go above and beyond. Here are a few ideas of for possible extensions (of course, we encourage you to use your imagination to come up with other ideas as well):
+
+* *Add sounds.*<br/>
+  <span style="color:red">TODO: Add documentation.</span> Requires student to run `pip install playsound` through the Terminal.
+
+* *Improve the user control over bounces.<br/>
+The program gets rather boring if the only thing the player has to do is hit the ball.  It is far more interesting, if the player can control the ball by hitting it at different parts of the paddle.  The way the old arcade game worked was that the ball would bounce in both the x and y directions if you hit it on the edge of the paddle from which the ball was coming.  The web version implements this feature.
+
+* *Use your imagination.*<br/>
+What else have you always awanted a game like this for?
+<i>Use your imagination</i> What else have you always wanted a game like this to do?

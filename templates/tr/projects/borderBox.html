@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Border Box")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,14 +6,14 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Sınırdaki Kutu
+                Border Box
 			</h1>
 			<p>
-				Yazan Lisa Yan
+                Written by Lisa Yan
 			</p>
 			<p>
-				Ders Notları:
-				<a href ="{{pathToRoot}}tr/handouts/graphics.html">Grafik Referansı</a>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a>
 			</p>
 
 		</div>
@@ -31,48 +22,51 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır, ancak bu egzersizi tamamlamak kesinlikle Final Projesnize yardımcı olacaktır.
+                    This is a bonus program! It's meant to be a bit challenging, but completing this program will definitely help you write your final project.
                 </p>
                 <p>
-					Yazacağınız Grafik Programı ile ekranın sınırlarında, saat yönünün tersine, dönen bir kutu yaratın.
+                    Write a GraphicsProgram that moves a box counter-clockwise around the border of the canvas.
 					<center>
 						<img style="width:300px;border:2px solid grey" src="{{pathToRoot}}img/projects/borderBox/borderBox.gif">	
 					</center>
                 </p>
-            <h2>Sınırdaki Karel</h2>
+            <h2>BorderKarel</h2>
             <p>BonusMethods: <code>BorderKarel.java</code></p>
             <p>
-				Java versiyonuna başlamadan önce Karel versiyonunu yazalım. Bu versiyonu BorderKarel.java dosyası içine yazabilirsiniz. Karel'in her zaman sol alt köşede başladığını unutmayın! Kendisini saatin tersi yönünde gezintiye çıkarın. Sonsuza kadar dönmesini sağlayın!
+            Before we start with the Java version, let's write the Karel version. Implement the Karel version in <code>BorderKarel.java</code>. Remember that Karel always starts out in the bottom-left; move him counter-clockwise around the border of the map. Make him move forever!
             </p>
 					<center>
 						<img style="width:300px" src="{{pathToRoot}}img/projects/borderBox/borderKarel.png">	
 					</center>
 
-            <h2>Sınırdaki Kutu</h2>
+            <h2>BorderBox</h2>
             <p>BonusMethods: <code>BorderBox.java</code></p>
-            <p>Şimdi BorderBox.java dosyasını açabilirsiniz. Sınırlarda gezen Karel kodunuzu buraya kopayalın. <b> move() metodunu moveBox() olarak değiştirmeyi unutmayın!</b>Elbette bunun çalışması için moveBox() isimli yeni bir metot tanımlamanız gerekecektir.</p>
-            <p>Karel yerine şimdi bir kutumuz var (a GRect). Bu kutu aşağıdaki iki değişkenle kontrol edilebilir:</p>
+            <p>Now open <code>BorderBox.java</code>. Copy over your border-moving code from BorderKarel. <b>Remember to rename move() to moveBox()</b>, as you will need to define moveBox().</p>
+            <p>Instead of Karel, we now have a box (a GRect), represented by the following two variables:</p>
 			<div class="well"><code>
                 private GRect box;<br>
                 private int boxDirection = EAST; // starting direction
 			</code></div>
-            <h2>Kutu Yaratma</h2>
-            <p>Kutu yaratmak için makeBox() isimli metodu kullanın. Tıpkı Karel gibi bu kutu da ekranın sol alt köşesinde başlasın.</p>
+            <h2>Box Setup</h2>
+            <p>Make the box by implementing the method makeBox(). Like Karel, start him off in the bottom-left of the canvas.</p>
 			<center>
 				<img style="width:300px" src="{{pathToRoot}}img/projects/borderBox/boxSetup.png">	
 			</center>
 
-            <h2>Doğu yönünde Hareket</h2>
-            <p>Hadi kutumuzu harekete geçirelim! Şimdilik, frontIsClear() isimli metodu her zaman True dönecek şekilde değiştirelim (şu anda sürekli olarak False dönecek şekilde ayarlı). Böylece kutumuzun tek bir yönde hareket edebiliğini test edebileceğiz.</p>
-            <p>Karel fonksiyonuna benzer şekilde moveBox() isimli metodun içini dolduralım. Bu metot ile kutu, yüzünün dönük olduğu tarafa doğru bir adım ilerlesin. Kutumuz doğuya bakarak başlıyor. Bu nedenle metodu sağa doğru bir adım atacak şekilde dolduralım. Kutunun SQUARE_LENGTH + SQUARE_GAP kadar ilerlediğinden emin olun!</p>
-            <p>Şimdi sıra frontIsClear() metodunu doldurmaya geldi. Böylece kutumuz ekranın sağındaki sınıra geldiğinde durabilecek.</p>
+            <h2>Move eastward</h2>
+            <p>For the time being, let's get our box moving a bit! Set frontIsClear() to always return true for now (it currently always returns false) so that we can just test our box moving in one direction.</p>
+            <p>Implement moveBox() similar to the Karel functionality; that is, move one step in the direction that the box is facing. Our lovely box starts out facing east, so implement moveBox to move just one step to the right. Make sure it moves SQUARE_LENGTH + SQUARE_GAP!
+            </p>
+            <p>Now implement frontIsClear() so that our box stops when it reaches the rightmost wall.
+            </p>
 					<center>
 						<img style="width:300px" src="{{pathToRoot}}img/projects/borderBox/boxMove.png">	
 					</center>
-            <h2>Sınır boyunca ilerleyin</h2>
-            <p>Artık bitti sayılır! Sınır boyunca ilerlemek için turnLeft() metodunu doldurmamız gerekiyor. Ayrıca frontIsClear() ve moveBox() metotlarını da farklı yönleri de halledebilecek şekilde güncellemeliyiz.</p>
-            <p>turnLeft() isimli metot ile başlayın. İpucu: boxDirection değerini değiştirmeniz yeterli olmalı; kutuda görsel olarak bir değişiklik olmamalı. Ne de olsa kutumuz sadece bir simetrik bir kare.</p>
-            <p>Son olarak, kutunun hangi yöne baktığına göre moveBox() ve frontIsClear() metotlarını doldurun. Tekrardan kutunun SQUARE_LENGTH + SQUARE_GAP kadar ilerlediğinden emin olun!</p>
+            <h2>Move along the border</h2>
+            <p>You're almost there! In order to move along the border, we need to implement turnLeft(), and also extend our frontIsClear() and moveBox() to handle different directions.</p>
+            <p>Start by implementing turnLeft(). Hint: you should only be changing the boxDirection; you shouldn't see anything happen visually to the box, since it's a square and exhibits rotational symmetry.</p>
+            <p>Finally, implement moveBox() and frontIsClear(), depending on which direction the box is facing. Again, remember to move the box SQUARE_LENGTH + SQUARE_GAP!
+            </p>
             
 
 
@@ -81,9 +75,3 @@
 			</div>
 
 		</div>
-
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

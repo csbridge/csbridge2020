@@ -1,0 +1,94 @@
+% rebase('templates/en/template.ptl', title="Random Circles")
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+                Random Circles Revisited
+			</h1>
+			<p>
+				Created by Brian Lam, Amy Nguyen, and Bryce Cronkite-Ratcliff
+			</p>
+            <p>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/js/jsJSSyntax.html">JavaScript Syntax Handout</a>
+			</p>
+			
+
+		</div>
+		<hr/>
+
+<p>I like random circles, so let’s make some!</p>
+
+<p>The program starts with an web page. Every time a user clicks on that web page, a new random circle will appear. </p>
+
+<p>Your task is to complete the function <strong>addRandomCircle</strong> in randomCircles.js and <strong>run</strong> in main.js. Open both of these files in "Notepad++"; they can be found inside the folder "js" inside "randomCircles" inside "jsday1" on your Desktop. This function will draw a circle of random radius and random color at a random position on the canvas. Be careful to constrain the position and size of the circle so it is always completely in the window!</p>
+
+<h3 id="toc_2">Day 1 Milestone</h3>
+
+<p>When the page opens, have it display 20 random circles.</p>
+
+<h3 id="toc_3">Day 2 Milestone</h3>
+
+<p>Have a random circle appear when the user (you) clicks on the page. </p>
+
+<p>Note: to draw circles on the screen, you will need the functions in the GOval reference at the bottom of this document. Check them out!</p>
+
+<h3 id="toc_4">Extension 1</h3>
+
+<p>Have the random circle center on where the user clicked.</p>
+
+<h3 id="toc_5">Extension 2: Extreme Catch Me If You Can</h3>
+
+<p>Have the ball move to a new random location when the mouse touches it</p>
+
+<h1 id="toc_4">Debugging</h1>
+
+<h2 id="toc_5"></h2>
+
+<p>If something doesn’t seem to be working right, remember that the Javascript Console can sometimes have useful error messages explaining how to fix your code. Make a habit of opening it!</p>
+
+<p><img src="{{pathToRoot}}img/projects/jawascript/developer-console.png"></img></p>
+
+<h1 id="toc_6">GOval Reference</h1>
+
+<h2 id="toc_7"></h2>
+
+<p>Here are some handy functions you can use to help create your random circles.</p>
+
+<h3 id="toc_8">Make a new circle</h3>
+
+<pre><code>var myCoolOval = new GOval();</code></pre>
+
+<h3 id="toc_9">Set properties of that circle:</h3>
+
+<pre><code>// Set the fill color of the oval to color
+myCoolOval.setColor(color);
+
+// Set the width and height of the oval in pixels
+myCoolOval.setSize(width, height);
+
+// Set the upper left hand corner position of this oval&#39;s bounding box
+// to x, y, where x and y are pixel coordinates.
+myCoolOval.setLocation(x,y);</code></pre>
+
+<h3 id="toc_10">Add your circle to the canvas:</h3>
+
+<pre><code>// get canvas width
+canvas.offsetWidth; // returns 1000 (for example)
+
+// get canvas height
+canvas.offsetHeight; // returns 800 (for example)
+
+// add myCoolOval to canvas
+canvas.add(myCoolOval);</code></pre>
+
+<h3 id="toc_11">Helpers for Randomness</h3>
+
+<pre><code>// return a random integer between min and max, inclusive of both
+randomInt(min, max);
+
+// return a random color
+randomColor();</code></pre>

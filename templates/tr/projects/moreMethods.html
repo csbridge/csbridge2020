@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="More Methods")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,12 +6,12 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Daha Fazla Metotlar
+                More Method Programs
 			</h1>
 			<p>
-				Yazan: Tyler Conklin
-				</br>
-				Geçmişte Mehran Sahami, Keith Schwarz, Eric Roberts ve diğerleri tarafından hazırlanan egzersizlerden esinlenilmiştir.
+                Written by Tyler Conklin
+								</br>
+								Based on past problems as created by Mehran Sahami, Keith Schwarz, Eric Roberts and others.
 			</p>
 
 		</div>
@@ -29,25 +20,26 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Bu sayfadaki egzersizler bonus programlardır! Biraz zorlayıcı olması için hazırlanmışlardır, ancak bu egzersizi tamamlamak kesinlikle Final Projesnize yardımcı olacaktır. Programlar zorluk sırasına göre sıralanmamıştır. İstediğiniz egzersiz ile başlayabilirsiniz!
+						These are bonus programs! They are meant to be challenging. They are not listed in order of difficulty, so choose whichever programs sound interesting!
+				</p>
+
+				<p>
+					Methods provide a service to other, higher-level parts of the program and therefore act as tools.  The run method can call subsidiary methods to accomplish parts of the overall task.  Those methods in turn call other methods that perform simpler operations, and so on.  The caller views the method in terms of the effect it accomplishes.  The method supplies all the details about how that operation is done.  By hiding the details of complex operations, methods simplify the conceptual structure of a program considerably and allow you as a programmer to view it at varying levels of detail.
 				</p>
 				<p>
-					Metotlar programların genel amaçlarına servis ederler, dolayısıyla da birer araç gibi iş görürler. "Run" metodu diğer alt metotları çağırarak genel işin tamamlanmasını sağlar. Bu alt metotlar da benzer şekilde başka metotları çağırabilir. Metodu çağıran, sadece metot tarafından yapılan işi görebilir. Metot ise yapılan işle ilgili tüm detayları içerir. Karmaşık işlemlerin detaylarını metotlar içine saklayarak programınızın algısal olarak basit kalmasını sağlayabilirsiniz. Böylece programcı istediği karmaşıklık seviyesinde kodu okuyabilme imkanına sahip olur.
+					The fundamental difference between methods in Karel and their counterparts in Java is that Java makes it possible for data to pass back and forth between the caller and the method.  Callers supply information to the method by supplying arguments; methods give information back to their callers by returning results.  The entire process of passing this data between the two levels is in many respects the most important issue for you to understand.
 				</p>
 				<p>
-					Karel ve ona tekabül eden Java metotları arasındaki temel fark Javanın metotlar ve onları çağıranlar arasında veri akışını mümkün kılmasıdır. Metotları çağıranlar aynı zamanda "argument" bildirerek metoda nasıl çalışması gerektiği bilgisini verir. Metotlar da sonuç döndürerek kendilerini çağıranları bilgilendirmiş olur. Bu iki seviye arasındaki veri akışını anlamak bir çok yönden en önemli şeydir.
+					Arguments in the calling method are assigned to the corresponding formal parameters in the callee according to their position in the argument list.  Thus, the first argument is assigned to the first parameter name, the second to the second, and so on.  The names of the variables are completely irrelevant to this process.
 				</p>
 				<p>
-					Çağıran tarafından verilen argümanlar çağırılan metot tanımındaki uygun parametrelere atanır. Dolayısıyla ilk argüman ilk parametreye, ikinci argüman ikinci parametreye vs şeklinde atama yapılmış olur. Değişkenlerin isimleri bu işlemler sırasında önemli değildir.
+					Arguments are copied rather than shared.  If you change the value of a formal parameter, the corresponding actual argument—even if it is a variable with the same name—is unaffected.
 				</p>
 				<p>
-					Argümanlar paylaşılmak yerine kopyalanır. Metot içerisinde parametre değerini değiştirirseniz, ilgili argüman (ismi dışarıda da aynı olsa bile) değişmez.
+					The return statement causes a method to return immediately to its caller and also indicates the value to be returned as a result.
 				</p>
 				<p>
-					"return" ifadesi bir metodu derhal sonlandırılması ve ilgili değerin çağırana döndürülmesi anlamına gelmektedir.
-				</p>
-				<p>
-					Metotlar bugüne kadar işlediğiniz bütün tiplerde değişken döndürebilirler. Çoğunuz sayısal değer döndüren metotlara tanıdık sayılırsınız. Bu yüzden sizin için bunları anlamak sorun olmayacaktır. Nedendir bilinmez ama; obje veya "Boolean" döndüren metotlar daha zor anlaşılmaktadır. Oysa ki temel mantık tamamen aynıdır.
+					Methods can return values of any of the types you have encountered so far.  Most of you will have little trouble with methods that return numeric data because you are familiar with this concept.  For some reason, methods that return objects or Boolean data seem harder, although the basic idea is precisely the same.
 				</p>
 
 				<h2>
@@ -55,7 +47,7 @@
 				</h2>
         <p>BonusMethods: <code>Fibonacci.java</code></p>
 				<p>
-					13. yüzyılda, İtalyan matematikçi Leonardo Fibonacci — tavşan nüfusunun artışını incelemek adına — artık kendi adıyla da anılan bir matematiksel dizi öne sürmüştür. Bu dizideki ilk 2 terim, Fib(0) ve Fib(1), 0 ve 1'dir. Sonraki her terim de ondan önceki iki terimin toplamına eşittir. Dolyısıyla bu dizideki ilk birkaç terim şu şekildedir:
+					In the 13th century, the Italian mathematician Leonardo Fibonacci—as a way to explain the geometric growth of a population of rabbits—devised a mathematical sequence that now bears his name.  The first two terms in this sequence, Fib(0) and Fib(1), are 0 and 1, and every subsequent term is the sum of the preceding two.  Thus, the first several terms in the Fibonacci sequence look like this:
 					<center>
 						Fib(0)	=	0</br>
 						Fib(1)	=	1</br>
@@ -65,56 +57,51 @@
 						Fib(5)	=	5	(2 + 3)</br>
 					</center>
 					</br>
-       			</p>
+        </p>
 				<p>
-					Fibonacci dizisindeki terimleri gösteren bir program yazın. Bunun için yazılmasınız istediğiniz en büyük terimi argüman olarak belirttiğiniz bir metot yazmalısını. "Run" metodu sizin için önceden yazılmış durumdadır:
+					Write a program that displays the terms in the Fibonacci sequence. This will require writing a method that takes as a parameter, the value of the max term that should be printed. The run method has already been written:
 					<center>
 						<img style="width:300px" src="{{pathToRoot}}img/projects/moreMethods/fibonacciRun.png">
 					</center>
 					</br>
-					Bu kodun çıktısı şöyle olmalıdır:
+					This would produce an output of:
 					<center>
 						<img style="height:400px" src="{{pathToRoot}}img/projects/moreMethods/fibonacciOutput.png">
 					</center>
 				</p>
 				</br>
 				<h2>
-					Ortalanmış Metin
+					Centered Label
 				</h2>
         <p>BonusMethods: <code>CenteredLabel.java</code></p>
-				<p>Bir metin yazan ve bunu ortalayarak ekranda gösteren bir program yazın. 
-					Write a program that draws and centers a label. This label should be a parameter to a method. "Run" metodu sizin için önceden yazılmış durumdadır:
+				<p>
+					Write a program that draws and centers a label. This label should be a parameter to a method. The Run method is already written for you:
 					<center>
 						<img style="width:500px" src="{{pathToRoot}}img/projects/moreMethods/centeredLabelRun.png">
 					</center>
 					</br>
-					Bu kodun çıktısı şöyle olmalıdır:
+					This would produce an output like below:
  					<center>
 						<img style="width:500px" src="{{pathToRoot}}img/projects/moreMethods/centeredLabelOutput.png">
 					</center>
-       			</p>
+       </p>
 				</br>
 				<h2>
-					Alışveriş Bağımlısı
+					Speedy Shopper
 				</h2>
         <p>BonusMethods: <code>SpeedyShopper.java</code></p>
-				<p>İndirimdeki ürünlerin yüzde cinsinden ne kadar indirim yapıldığı yazılır. Örneğin normalde 100 TL tutan bir ürün %25'lik indirime girerse 75 TL'ye satılıyor demektir. Bir ürünün indirimli satış fiyatını hesaplayann bir program yazın. Diğer bir deyişle, normal fiyat ve indirim miktarını alan ve indirimli fiyatı döndüren bir metot yazın. "Run" metodu sizin için önceden yazılmış durumdadır:
-					<center>
+				<p>
+					Items on sale at a store are listed with the percent off for that item. For example, an item that originally costs 100 Turkish Lira at 25% off would cost 75 Turkish Lira. Write a program that calculates the cost of an on-sale item. Specifically, write a method that takes in a price, and the percent off for that item. This method should return the new price for that item. The Run method is already written for you:
+ 					<center>
 						<img style="width:500px" src="{{pathToRoot}}img/projects/moreMethods/speedyShopperRun.png">
 					</center>
 					</br>
-					Bu kodun çıktısı şöyle olmalıdır:
+					This would produce an output like below:
  					<center>
 						<img style="height:50px" src="{{pathToRoot}}img/projects/moreMethods/speedyShopperOutput.png">
 					</center>
-        		</p>
+        </p>
 				</br>
 
 			</div>
 		</div>
-
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>

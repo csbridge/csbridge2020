@@ -1,0 +1,26 @@
+<!--
+Template for rendering an FAQ page, for use with Markdown specs.  Expects
+the following properties passed in:
+
+title - problem title
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
+
+% rebase('templates/en/template.ptl', title=title)
+
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		{{title}}
+	</h1>
+
+</div>
+<hr/>
+
+<!-- Text description -->
+<div class="row">
+	<div class="col-xs-12">
+		{{!base}}
+	</div>
+</div>

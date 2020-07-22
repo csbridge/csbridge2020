@@ -1,13 +1,4 @@
-<head>
-
-	%include templates/parts/header.ptl
-
-
-</head>
-<body>
-
-	<!-- Navigation Bar -->
-	%include templates/tr/navBar.ptl
+% rebase('templates/en/template.ptl', title="Circle")
 
 	<!-- Main Content -->
 	<div class="container">
@@ -15,14 +6,14 @@
 		<!-- Header -->
 		<div id="pageHeader">
 			<h1>
-				Hareketli Daireler
+				Moving Circle
 			</h1>
 			<p>
-				Yazan: Chris Piech
+				Written by Chris Piech
 			</p>
 			<p>
-				Dern Notları:
-				<a href ="{{pathToRoot}}tr/handouts/graphics.html">Grafik Referansı</a>
+				Handouts:
+				<a href ="{{pathToRoot}}en/handouts/graphics.html">Graphics Reference</a>
 			</p>
 
 		</div>
@@ -31,7 +22,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					Bu program bir daire çizmekte ve bu daireyi ekranda hareket ettirerek bir animasyon oluşturmaktadır.
+					This program simply draws a circle, then animates it moving across the screen.
 				</p>
 				<p>
 					<center>
@@ -39,7 +30,7 @@
 					</center>
 				</p>
 				<p>
-					Her bir daire 20 piksel genişliğinde ve yüksekliğindedir.
+					Each circle is 20 pixels by 20 pixels.
 				</p>
 
 			</div>
@@ -48,7 +39,7 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Çözüm</h2>
+				<h2>Solution</h2>
 
 
 <pre id="editor" style="height:500px">public class CircleRandom2 extends GraphicsProgram {
@@ -97,9 +88,3 @@
 			</div>
 
 		</div>
-
-		
-		%include templates/tr/footer.ptl
-
-	</div>
-</body>
