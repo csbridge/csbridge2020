@@ -1,8 +1,6 @@
 template: templates/en/resources/faqTemplate.ptl
 title: General CS Bridge Information
 
-<div align="right"><i>All times listed on this handout are in Pacific Time.</i></div>
-
 [TOC]
 
 
@@ -142,12 +140,11 @@ Here are some tips:
 <p>
     This class is taking place across three time zones so it is important that you know who to contact for what and how so that you can get help in a timely manner. Please use the Ed platform (<a href='#Communications'>described above</a>) where the Section Leaders and other students can help you. Some guidelines:
 </p>
-<ul>
-    <li>For <b>logistical questions, conceptual and technical questions, or general course conversation</b>, please post a public question on our CS Bridge Ed forum.</li>
-    <li>For <b>personal concerns or issues</b>, please make a private post in the CS Bridge Ed.</li>
-    <li>To <b>send a message to your Section Leader</b>, make a private post in your section’s Ed.</li>
-    <li> <span style="color:red;">For <b>major personal issues or concerns</b>, please email EDIT THIS ONCE HAVE THE ANSWER. We will need several days to get back to you -- so this is a very slow option.</span> </li>
-</ul>
+
+* For logistical questions, conceptual and technical questions, or general course conversation</b>, please post a public question on our CS Bridge Ed forum.</li>
+* For <b>personal concerns or issues</b>, please make a private post in the CS Bridge Ed.</li>
+* To <b>send a message to your Section Leader</b>, make a private post in your section’s Ed.</li>
+* For <b>major personal issues or concerns</b>, please contact either Burcu Hanim (Koç) or Mr. Kolar (CTU). Contact information can be found on the CS Bridge Ed in the "General" category [here](https://us.edstem.org/courses/968/discussion/).</li>
 
 
 <hr />
@@ -181,12 +178,12 @@ Here are some tips:
 <!-- Additional Resources -->
 ### Additional Resources
 <!-- Accessibility -->
-#### <span style="color:red;">Accessibility</span>
+#### Accessibility
 <ul>
     <li>We know that our community will have a variety of learning differences and will include many differently abled individuals. If you have a suggestion for how to make learning more accessible for you, feel free to post on Ed or tell your Section Leader.</li>
 </ul>
 <!-- Process for reporting misconduct -->
-#### <span style="color:red;">Process for reporting misconduct - add who should be contacted</span>
-<ul>
-    <li>Creating and maintaining a safe and open community is of utmost importance to us, and if the actions or behavior of others (students or staff) make you feel unsafe or unwelcome, we want you to let us know.</li>
-</ul>
+#### Process for reporting misconduct
+
+* Creating and maintaining a safe and open community is of utmost importance to us, and if the actions or behavior of others (students or staff) make you feel unsafe or unwelcome, we want you to let us know. Contact information can be found on the CS Bridge Ed in the "General" category [here](https://us.edstem.org/courses/968/discussion/)
+
