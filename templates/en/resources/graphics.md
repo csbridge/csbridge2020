@@ -124,15 +124,14 @@ title: Graphics Reference
 One of the most common libraries to create graphics in Python is called Tk (short for "tkinter"). Tk is a powerful graphics library, but some of the functions are hard to use.  For this reason, we provide our own small graphics library that is built on top of Tk and makes it easier to use.  However, it's not a replacement for Tk - it just adds new functions to make certain things like drawing text easier.  You can always explore the full Tk library if you're interested in seeing what else you can do!
 
 ## Installation
-The graphics library itself comes pre-packaged with every graphical PyCharm project.  However, it relies on one other tool that you'll need to install, called "Pillow", which contains code to manipulate images. In order for be able to work with images, you need to install Pillow on your machine.  To install Pillow, you should first open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following command shown in bold below into the Terminal. (Note that "Pillow" starts with an uppercase P.) On Windows, type “py” instead of “python3”):
+The graphics library itself comes pre-packaged with every graphical PyCharm project.  However, it relies on one other tool that you'll need to install, called "Pillow", which contains code to manipulate images. In order for be able to work with images, you need to install Pillow on your machine.  To install Pillow, you should first open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following command below into the Terminal. (Note that "Pillow" starts with an uppercase P.) On Windows, type “py” instead of “python3”):
 
 ```
 > python3 -m pip install Pillow
 ...prints stuff...
-Successfully installed Pillow-7.1.1
 ```
 
-Now you should be able to add images to your graphics program canvases.  Woohoo!
+If it printed "Successfully installed Pillow-7.1.1" at the end, you should now be able to add images to your graphics program canvases.  Woohoo!
 
 ## Importing
 To use our graphics library, you must first import it at the top of your program, like this:

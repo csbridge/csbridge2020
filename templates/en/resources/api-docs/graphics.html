@@ -88,7 +88,7 @@ was taken from <a href="https://stackoverflow.com/questions/4969543/colour-chart
 <h3>Methods</h3>
 <dl>
 <dt id="src.graphics.Canvas.create_image"><code class="name flex">
-<span>def <span class="ident">create_image</span></span>(<span>self, x, y, file_path)</span>
+<span>def <span class="ident">create_image</span></span>(<span>self, x, y, file_path, **kwargs)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Creates an image with the specified filename at the specified position on the canvas.
@@ -102,12 +102,14 @@ will be the same size as the image file loaded in.</p>
 <dd>the y coordinate of the top-left corner of the image on the canvas</dd>
 <dt><strong><code>file_path</code></strong></dt>
 <dd>the path to the image file to load and display on the canvas</dd>
+<dt><strong><code>kwargs</code></strong></dt>
+<dd>other tkinter keyword args</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <p>the graphical image object that is displaying the specified image at the specified location.</p></div>
 </dd>
 <dt id="src.graphics.Canvas.create_image_with_size"><code class="name flex">
-<span>def <span class="ident">create_image_with_size</span></span>(<span>self, x, y, width, height, file_path)</span>
+<span>def <span class="ident">create_image_with_size</span></span>(<span>self, x, y, width, height, file_path, **kwargs)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Creates an image with the specified filename at the specified position on the canvas, and resized
@@ -124,13 +126,15 @@ to the specified width and height.</p>
 <dd>the height to set for the image</dd>
 <dt><strong><code>file_path</code></strong></dt>
 <dd>the path to the image file to load and display on the canvas</dd>
+<dt><strong><code>kwargs</code></strong></dt>
+<dd>other tkinter keyword args</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <p>the graphical image object that is displaying the specified image at the specified location with the
 specified size.</p></div>
 </dd>
 <dt id="src.graphics.Canvas.create_line"><code class="name flex">
-<span>def <span class="ident">create_line</span></span>(<span>self, x1, y1, x2, y2)</span>
+<span>def <span class="ident">create_line</span></span>(<span>self, x1, y1, x2, y2, *args, **kwargs)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Creates and returns a line graphical object on the screen from the specified point to the specified point.
@@ -145,12 +149,16 @@ The line is drawn black.</p>
 <dd>the ending x location of the line</dd>
 <dt><strong><code>y2</code></strong></dt>
 <dd>the ending y location of the line</dd>
+<dt><strong><code>args</code></strong></dt>
+<dd>you can optionally specify additional points on the line or shape</dd>
+<dt><strong><code>kwargs</code></strong></dt>
+<dd>other tkinter keyword args</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <p>the graphical line object between the two specified points.</p></div>
 </dd>
 <dt id="src.graphics.Canvas.create_oval"><code class="name flex">
-<span>def <span class="ident">create_oval</span></span>(<span>self, x1, y1, x2, y2)</span>
+<span>def <span class="ident">create_oval</span></span>(<span>self, x1, y1, x2, y2, **kwargs)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Creates and returns an oval graphical object on the screen contained within the bounding box whose top left
@@ -167,12 +175,14 @@ unfilled with a black outline.</p>
 <dd>the bottom-right x location of the bounding box</dd>
 <dt><strong><code>y2</code></strong></dt>
 <dd>the bottom-right y location of the bounding box</dd>
+<dt><strong><code>kwargs</code></strong></dt>
+<dd>other tkinter keyword args</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <p>the graphical oval object at the specified location.</p></div>
 </dd>
 <dt id="src.graphics.Canvas.create_rectangle"><code class="name flex">
-<span>def <span class="ident">create_rectangle</span></span>(<span>self, x1, y1, x2, y2)</span>
+<span>def <span class="ident">create_rectangle</span></span>(<span>self, x1, y1, x2, y2, *args, **kwargs)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Creates and returns a rectangle graphical object on the screen with its top-left corner at the first coordinate
@@ -188,12 +198,14 @@ The rect is drawn unfilled with a black outline.</p>
 <dd>the bottom-right x location of the rect</dd>
 <dt><strong><code>y2</code></strong></dt>
 <dd>the bottom-right y location of the rect</dd>
+<dt><strong><code>kwargs</code></strong></dt>
+<dd>other tkinter keyword args</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <p>the graphical rectangle object at the specified location.</p></div>
 </dd>
 <dt id="src.graphics.Canvas.create_text"><code class="name flex">
-<span>def <span class="ident">create_text</span></span>(<span>self, x, y, text)</span>
+<span>def <span class="ident">create_text</span></span>(<span>self, x, y, text, **kwargs)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Creates and returns a text graphical object on the screen at the specified location with the specified text.
@@ -207,6 +219,8 @@ The text will be in size 13 font.</p>
 <dd>the y location of the center of the text</dd>
 <dt><strong><code>text</code></strong></dt>
 <dd>the text that should be displayed on the canvas at the given position</dd>
+<dt><strong><code>kwargs</code></strong></dt>
+<dd>other tkinter keyword args</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <p>the graphical text object that is displaying the specified text at the specified location.</p></div>
@@ -424,9 +438,9 @@ second object, but in front of all objects that the second object is also in fro
 <dl>
 <dt><strong><code>obj</code></strong></dt>
 <dd>the object to move</dd>
-<dt><strong><code>new_x</code></strong></dt>
+<dt><strong><code>x</code></strong></dt>
 <dd>the new x coordinate for the object</dd>
-<dt><strong><code>new_y</code></strong></dt>
+<dt><strong><code>y</code></strong></dt>
 <dd>the new y coordinate for the object</dd>
 </dl></div>
 </dd>
@@ -541,6 +555,19 @@ graphical object.</p>
 <dd>the name of the font, as a string</dd>
 <dt><strong><code>size</code></strong></dt>
 <dd>the size of the font</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_hidden"><code class="name flex">
+<span>def <span class="ident">set_hidden</span></span>(<span>self, obj, hidden)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the given graphical object to be either hidden or visible on the canvas.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the graphical object to make hidden or visible on the canvas.</dd>
+<dt><strong><code>hidden</code></strong></dt>
+<dd>True if the object should be hidden, False if the object should be visible.</dd>
 </dl></div>
 </dd>
 <dt id="src.graphics.Canvas.set_on_key_pressed"><code class="name flex">
@@ -721,6 +748,7 @@ Cannot be used on any non-text graphical object.</p>
 <li><code><a title="src.graphics.Canvas.set_color" href="#src.graphics.Canvas.set_color">set_color</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_fill_color" href="#src.graphics.Canvas.set_fill_color">set_fill_color</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_font" href="#src.graphics.Canvas.set_font">set_font</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_hidden" href="#src.graphics.Canvas.set_hidden">set_hidden</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_on_key_pressed" href="#src.graphics.Canvas.set_on_key_pressed">set_on_key_pressed</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_on_mouse_pressed" href="#src.graphics.Canvas.set_on_mouse_pressed">set_on_mouse_pressed</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_on_mouse_released" href="#src.graphics.Canvas.set_on_mouse_released">set_on_mouse_released</a></code></li>
