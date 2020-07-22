@@ -78,7 +78,7 @@ title: Graphics Reference
 				<td>Moves <code>obj</code> using the displacements <code>dx</code> and <code>dy</code>.</td>
 			</tr>
 			<tr>
-				<td><code>move_to(obj, x, y)</code></td>
+				<td><code>moveto(obj, x, y)</code></td>
 				<td>Sets the location of <code>obj</code> to the specified coordinates.</td>
 			</tr>
 			<tr>
@@ -184,7 +184,7 @@ When we want to draw shapes on a canvas, we call functions on that canvas that â
 ## Updating Graphical Objects
 + `delete`
 + `move` (ok)
-+ `move_to` (ok)
++ `moveto` (ok)
 + `set_color` (not needed)
 + `set_fill_color` (ok)
 + `set_outline_color` (ok)
