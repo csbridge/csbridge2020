@@ -375,8 +375,7 @@ class Canvas(tkinter.Canvas):
         Returns:
             the width of the specified graphical object.
         """
-        # Use bbox for texts (since coords is 2-dimensional)
-        if self.type(obj) == "text" or self.type(obj) == "image":  # two-dimensional coords
+        if len(self.coords(obj)) == 2: # two-dimensional coords
             return self.bbox(obj)[2] - self.bbox(obj)[0]
         return self.coords(obj)[2] - self.coords(obj)[0]
 
@@ -390,19 +389,13 @@ class Canvas(tkinter.Canvas):
         Returns:
             the height of the specified graphical object.
         """
-        # Use bbox for texts (since coords is 2-dimensional)
-        if self.type(obj) == "text" or self.type(obj) == "image":  # two-dimensional coords
+        if len(self.coords(obj)) == 2: # two-dimensional coords
             return self.bbox(obj)[3] - self.bbox(obj)[1]
         return self.coords(obj)[3] - self.coords(obj)[1]
 
     def move_to(self, obj, new_x, new_y):
         """
-        Moves the specified graphical object to the specified location.
-
-        Args:
-            obj: the object to move
-            new_x: the new x coordinate for the object
-            new_y: the new y coordinate for the object
+        Same as `Canvas.moveto`.
         """
         # Note: Implements manually due to inconsistencies on some machines of bbox vs. coord.
         old_x = self.get_left_x(obj)
@@ -411,9 +404,25 @@ class Canvas(tkinter.Canvas):
 
     def moveto(self, obj, x='', y=''):
         """
-        Same as `Canvas.move_to`.
+        Moves the specified graphical object to the specified location.
+
+        Args:
+            obj: the object to move
+            x: the new x coordinate for the object
+            y: the new y coordinate for the object
         """
         self.move_to(obj, float(x), float(y))
+
+    def move(self, obj, dx, dy):
+        """
+        Moves the specified graphical object by the specified amounts in the x and y directions.
+
+        Args:
+            obj: the object to move
+            dx: the amount by which to change the object's x position
+            dy: the amount by which to change the object's y position
+        """
+        super(Canvas, self).move(obj, dx, dy)
 
     def set_size(self, obj, width, height):
         """
@@ -438,6 +447,16 @@ class Canvas(tkinter.Canvas):
             obj: the graphical object to remove from the canvas
         """
         super(Canvas, self).delete(obj)
+
+    def set_hidden(self, obj, hidden):
+        """
+        Sets the given graphical object to be either hidden or visible on the canvas.
+
+        Args:
+            obj: the graphical object to make hidden or visible on the canvas.
+            hidden: True if the object should be hidden, False if the object should be visible.
+        """
+        self.itemconfig(obj, state='hidden' if hidden else 'normal')
         
     def find_overlapping(self, x1, y1, x2, y2):
         """
@@ -452,19 +471,7 @@ class Canvas(tkinter.Canvas):
         Returns:
             a list of graphical objects on the canvas that overlap with this bounding box.
         """
-        super(Canvas, self).find_overlapping(x1, y1, x2, y2)
-        
-    def type(self, obj):
-        """
-        Get the type of the specified graphical object as a string.
-
-        Args:
-            obj: the graphical object for which to get the type
-
-        Returns:
-            the type of the graphical object as a string, such as "image" or "text"
-        """
-        super(Canvas, self).type(obj)
+        return super(Canvas, self).find_overlapping(x1, y1, x2, y2)
 
     def get_random_color(self):
         """
@@ -529,7 +536,7 @@ class Canvas(tkinter.Canvas):
         """
         self.itemconfig(obj, width=width)
         
-    def create_line(self, x1, y1, x2, y2):
+    def create_line(self, x1, y1, x2, y2, *args, **kwargs):
         """
         Creates and returns a line graphical object on the screen from the specified point to the specified point.
         The line is drawn black.
@@ -539,13 +546,15 @@ class Canvas(tkinter.Canvas):
             y1: the starting y location of the line
             x2: the ending x location of the line
             y2: the ending y location of the line
+            args: you can optionally specify additional points on the line or shape
+            kwargs: other tkinter keyword args
 
         Returns:
             the graphical line object between the two specified points.
         """
-        return super(Canvas, self).create_line(x1, y1, x2, y2)
+        return super(Canvas, self).create_line(x1, y1, x2, y2, *args, **kwargs)
 
-    def create_rectangle(self, x1, y1, x2, y2):
+    def create_rectangle(self, x1, y1, x2, y2, *args, **kwargs):
         """
         Creates and returns a rectangle graphical object on the screen with its top-left corner at the first coordinate
         and its bottom-right corner at the second coordinate.  The rect is drawn unfilled with a black outline.
@@ -555,13 +564,14 @@ class Canvas(tkinter.Canvas):
             y1: the top-left y location of the rect
             x2: the bottom-right x location of the rect
             y2: the bottom-right y location of the rect
+            kwargs: other tkinter keyword args
 
         Returns:
             the graphical rectangle object at the specified location.
         """
-        return super(Canvas, self).create_rectangle(x1, y1, x2, y2)
+        return super(Canvas, self).create_rectangle(x1, y1, x2, y2, **kwargs)
 
-    def create_oval(self, x1, y1, x2, y2):
+    def create_oval(self, x1, y1, x2, y2, **kwargs):
         """
         Creates and returns an oval graphical object on the screen contained within the bounding box whose top left
         corner is the first coordinate, and whose bottom right corner is the second coordinate.  The oval is drawn
@@ -572,13 +582,14 @@ class Canvas(tkinter.Canvas):
             y1: the top-left y location of the bounding box
             x2: the bottom-right x location of the bounding box
             y2: the bottom-right y location of the bounding box
+            kwargs: other tkinter keyword args
 
         Returns:
             the graphical oval object at the specified location.
         """
-        return super(Canvas, self).create_oval(x1, y1, x2, y2)
+        return super(Canvas, self).create_oval(x1, y1, x2, y2, **kwargs)
 
-    def create_text(self, x, y, text):
+    def create_text(self, x, y, text, **kwargs):
         """
         Creates and returns a text graphical object on the screen at the specified location with the specified text.
         The specified x and y location is for the center of the text.  The text will be in size 13 font.
@@ -587,11 +598,12 @@ class Canvas(tkinter.Canvas):
             x: the x location of the center of the text
             y: the y location of the center of the text
             text: the text that should be displayed on the canvas at the given position
+            kwargs: other tkinter keyword args
 
         Returns:
             the graphical text object that is displaying the specified text at the specified location.
         """
-        return super().create_text(x, y, text=text)
+        return super().create_text(x, y, text=text, **kwargs)
 
     def set_text(self, obj, text):
         """
@@ -669,7 +681,7 @@ class Canvas(tkinter.Canvas):
         """
         self.tag_lower(obj, behind)
 
-    def create_image(self, x, y, file_path):
+    def create_image(self, x, y, file_path, **kwargs):
         """
         Creates an image with the specified filename at the specified position on the canvas.  The image
         will be the same size as the image file loaded in.
@@ -678,13 +690,14 @@ class Canvas(tkinter.Canvas):
             x: the x coordinate of the top-left corner of the image on the canvas
             y: the y coordinate of the top-left corner of the image on the canvas
             file_path: the path to the image file to load and display on the canvas
+            kwargs: other tkinter keyword args
 
         Returns:
             the graphical image object that is displaying the specified image at the specified location.
         """
-        self.__create_image_with_optional_size(x, y, file_path)
+        return self.__create_image_with_optional_size(x, y, file_path, **kwargs)
 
-    def create_image_with_size(self, x, y, width, height, file_path):
+    def create_image_with_size(self, x, y, width, height, file_path, **kwargs):
         """
         Creates an image with the specified filename at the specified position on the canvas, and resized
         to the specified width and height.
@@ -695,14 +708,15 @@ class Canvas(tkinter.Canvas):
             width: the width to set for the image
             height: the height to set for the image
             file_path: the path to the image file to load and display on the canvas
+            kwargs: other tkinter keyword args
 
         Returns:
             the graphical image object that is displaying the specified image at the specified location with the
                 specified size.
         """
-        return self.__create_image_with_optional_size(x, y, file_path, width=width, height=height)
+        return self.__create_image_with_optional_size(x, y, file_path, width=width, height=height, **kwargs)
 
-    def __create_image_with_optional_size(self, x, y, file_path, width=None, height=None):
+    def __create_image_with_optional_size(self, x, y, file_path, width=None, height=None, **kwargs):
         """
         Creates an image with the specified filename at the specified position on the canvas.
         Optionally specify the width and height to resize the image.
@@ -713,6 +727,7 @@ class Canvas(tkinter.Canvas):
             file_path: the path to the image file to load and display on the canvas
             width: optional width to include for the image.  If none, uses the width of the image file.
             height: optional height to include for the image  If none, uses the height of the image file.
+            kwargs: other tkinter keyword args
 
         Returns:
             the graphical image object that is displaying the specified image at the specified location.
@@ -726,7 +741,7 @@ class Canvas(tkinter.Canvas):
             image = image.resize((width, height))
 
         image = ImageTk.PhotoImage(image)
-        img_obj = super().create_image(x, y, anchor="nw", image=image)
+        img_obj = super().create_image(x, y, anchor="nw", image=image, **kwargs)
         # note: if you don't do this, the image gets garbage collected!!!
         # this introduces a memory leak which can be fixed by overloading delete
         self._image_gb_protection[img_obj] = image

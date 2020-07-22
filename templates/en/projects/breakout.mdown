@@ -143,7 +143,7 @@ If you've gotten to here, you've done all the hard parts.  There are, however, a
 ## <span style="color:blue">Extensions</span>
 If you have the basic play working well, then this would be a great opportunity to go above and beyond. Here are a few ideas of for possible extensions (of course, we encourage you to use your imagination to come up with other ideas as well):
 
-+ **Add sounds.** It can be fun to add sound effects to your game, such as a sound whenever the ball bounces, whenever the brick is removed, whenever the user wins, and so forth.  To do this, first, add the sound file you want to use to your PyCharm project on your computer.  (Drag the file into the folder containing the project files on your computer).  Then, you'll need to install the library that can play sound files.  First open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following 2 commands below into the Terminal.  On Windows, type “py” instead of “python3”:
++ **Add sounds.** It can be fun to add sound effects to your game, such as a sound whenever the ball bounces, whenever the brick is removed, whenever the user wins, and so forth.  To do this, first, add the sound file you want to use to your PyCharm project on your computer.  (Drag the file into the folder containing the project files on your computer).  Then, you'll need to install the library that can play sound files.  First open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following 2 commands below into the Terminal.  On Windows, type `py` instead of `python3`:
 
 ```
 > python3 -m pip install playsound
@@ -164,7 +164,7 @@ Finally, whenever you want to play a sound in your program, call the following f
 playsound('mysoundfile.au', block=False)
 ```
 
-You should replace 'mysoundfile.au' with the name of the sound file in your project.  Make sure you don't forget to include the 'block=False' at the end.
+You should replace `'mysoundfile.au'` with the name of the sound file in your project.  Make sure you don't forget to include the `block=False` at the end.
 
 + **Improve the user control over bounces.**  The program gets rather boring if the only thing the player has to do is hit the ball.  It is far more interesting if the player can control the ball by hitting it at different parts of the paddle.  The way the old arcade game worked was that the ball would bounce in both the x and y directions if you hit it on the edge of the paddle from which the ball was coming.  The web version implements this feature.
 + **Use your imagination.** What else have you always awanted a game like this for?
