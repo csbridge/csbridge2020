@@ -1,3 +1,1 @@
-python3 compile.py 
-cd docs
-python3 -m http.server
+watchmedo auto-restart --directory templates --pattern '*' --recursive sh compileAndRun.sh

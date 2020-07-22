@@ -2,7 +2,11 @@
 
 This site uses GitHub pages with a custom domain.  You can find these settings on the main settings page for this project - specifically, all files in the `docs` folder of the master branch are published.
 
-Hello world asdfasdfasdfasdfasd
+Make sure to install all necessary tools before working on this website:
+
+```
+pip3 install -r requirements.txt
+```
 
 ## Website Updates
 
@@ -21,6 +25,9 @@ Note: there is a special `{{pathToRoot}}` placeholder that you can use in all te
 ```
 <img src="{{pathToRoot}}img/projects/newspaper/newspaper.png">	
 ```
+
+####Local Development
+Run `./runLocal.sh` to compile and run a local copy of the website at `localhost:8000`.  The script is long-running, monitoring any changes to the `templates` folder and automatically recompiling whenever a file changes so that you can see modifications you make while you are working.  Enter `Ctl-c` to terminate the script.
 
 #### Templates Structure
 
