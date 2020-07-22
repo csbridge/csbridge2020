@@ -1,14 +1,12 @@
 template: templates/en/resources/faqTemplate.ptl
-title: CS Bridge FAQs
+title: Student Frequently Asked Questions (FAQs) 
 
 *Do you have a question about CS Bridge? It might be answered here.*
 
 <!-- Table of Contents -->
 [TOC]
 
-## General
 
-# Student Frequently Asked Questions (FAQs) 
 
 ### Is this course graded?
 

@@ -8,7 +8,7 @@ title: What to Expect for Section
 
 
 <!-- Section Description -->
-### What is Section?
+### Section Description
 <p>
     You will be attending a daily 1-hour discussion section in small groups with a Section Leader. For short, we just call this part of the class “section.”
 </p>
@@ -17,16 +17,14 @@ title: What to Expect for Section
     <li>In section, we’ll <b>answer questions, go over common errors or misconceptions, and discuss sample problems</b> in more detail than we can in lecture.</li>
 </ul>
 <p>
-	We have a large team of wonderful Section Leaders, whose jobs are to facilitate each of these sections. One of them will specifically be your section leader for the entire course. You and a group of about 10 other students will attend their section every week. We hope you will all get to know each other throughout the course.
+	We have a large team of wonderful Section Leaders, whose jobs are to facilitate each of these sections. One of them will specifically be your section leader for the entire course. You and a group of about 7 other students will attend their section every day. We hope you will all get to know each other throughout the course.
 </p>
 
 <hr />
 
-### When and Where is Section?
-    <p><b>When:</b> You can find your section time on the course home page. Get ready at least 10 minutes before:<br/>
-        <p><img src="img/yoursection.png" width="250px"/>
-    <p><b>I don't have a section: </b> Some people signed up late, or didn't get section time preferences in on time. That is fine. See the section on "<a href='#Swap'>permanently changing my section time</a>" below. That applies to you.
-    <p><b>Where: </b>The link for the section video conference will be posted by your section leader in the section "Ed".
+### Time and Place of Section
+* Section will be held every night at 20:00 (in CZ) 21:00 (in TU).  
+* The link for the section video conference will be posted by your Section Leader in the section "Ed".
 <hr/>
 
 <!-- Section Structure -->
@@ -35,10 +33,10 @@ title: What to Expect for Section
     Here’s how a standard section might work:
 </p>
 <ol>
-    <li>Your section leader gives a <b>recap of the important concepts</b> from that week’s lectures.</li>
-    <li>Your section leader <b>introduces the sample problems</b> you’ll be working on in section.</li>
-    <li>You and your fellow students <b>collaboratively come up with solutions to the problems</b>, one step at a time, with the guidance of your section leader.</li>
-    <li>You all help <b>turn these solutions into actual Python code</b>, which your section leader will type on their computer while showing you what’s on their screen.</li>
+    <li>Your Section Leader gives a <b>recap of the important concepts</b> from that week’s lectures.</li>
+    <li>Your Section Leader <b>introduces the sample problems</b> you’ll be working on in section.</li>
+    <li>You and your fellow students <b>collaboratively come up with solutions to the problems</b>, one step at a time, with the guidance of your Section Leader.</li>
+    <li>You all help <b>turn these solutions into actual Python code</b>, which your Section Leader will type on their computer while showing you what’s on their screen, or you'll use the Workspace function on Ed.</li>
     <li>During your entire section, you and your classmates should <b>ask any questions you have</b> so you can all understand everything better.</li>
 </ol>
 <p>
@@ -48,17 +46,17 @@ title: What to Expect for Section
 <hr />
 
 <!-- Getting the most out of section -->
-### Getting the most out of section
+### Getting the Most out of Section
 <p>
-	<b>Staying up to date on the course material</b> will help you get the most out of your discussion sections. That way, you’ll all be able to spend more time working on sample problems. Section will cover material from the previous three lectures. Please refer to the <a href='https://compedu.stanford.edu/codeinplace/v1/#/course/schedule'>course schedule</a> to visualize this. Before attending your section each week, please do your best to:
+	<b>Staying up to date on the course material</b> will help you get the most out of your discussion sections. That way, you’ll all be able to spend more time working on sample problems. Section will cover material from the day's lectures. Before attending your section every evening, please do your best to:
 </p>
 <ul>
-	<li>Watch that week’s lectures (including that week’s Wednesday lecture)</li>
-	<li>Do the reading for that week</li>
+	<li>Pay attention during lecture</li>
+	<li>Use the work/office hours time to work on the projects</li>
 	<li>Be excited and prepared to participate in section :-)</li>
 </ul>
 <p>
-	And of course, please be respectful and considerate throughout this course, including (and especially) during your section. Code in Place is a diverse and wonderful community.
+	And of course, please be respectful and considerate throughout this course, including (and especially) during your section. CS Bridge is a diverse and wonderful community. Please keep an open mind and engage fully and positively.
 </p>
 <p>
 	These are just our general guidelines. During your first section, your section leader will describe their own specific section norms and goals that they’d like to focus on with all of you.
@@ -69,15 +67,15 @@ title: What to Expect for Section
 <!-- Section Communications -->
 ### Section Communications
 <p>
-	You will be added to <b>an Ed group specifically for your section</b>. This group will include you, your section leader, and about 10 of your classmates. You’ll all meet each other in your first section.
+	You will be added to <b>an Ed group specifically for your section</b>. This group will include you, your section leader, and about 8 of your classmates. You’ll all meet each other in your first section.
 </p>
 <ul>
-    <li>Your section leader will use your section’s Ed group to <b>post announcements related to section.</b></li>
+    <li>Your Section Leader will use your section’s Ed group to <b>post announcements related to section.</b></li>
     <li>Feel free to post in this Ed group to <b>connect more with the other students in your section.</b></li>
-    <li>For posts not directly related to section, use the main Code in Place Ed group.</li>
+    <li>For posts not directly related to section, use the main CS Bridge Ed group.</li>
 </ul>
 <p>
-    If you need to get in touch specifically with your section leader, make a private post (to staff only) in this group. Your section leader is a volunteer and as such might take a while to answer your question. Please be patient with them. Do not expect your section leader to debug your assignment code, for example.
+    If you need to get in touch specifically with your section leader, make a private post (to staff only) in this group. 
 </p>
 
 <hr />
@@ -85,101 +83,49 @@ title: What to Expect for Section
 <!-- Attending Section -->
 ### Attending Section
 <p>
-	Most sections will be held as a group video call over Zoom. Download the <b>"Zoom Client for Meetings" version 4.6.10</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a>
+	Sections will be held as a group video call over Zoom. Download the <b>"Zoom Client for Meetings" version 5.1.2</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a>
 </p>
 <p>
-	See your section’s Ed page for the specifics about how to attend your section from your computer (e.g. a Zoom link to your section’s video call). <b>You should get an announcement from your section leader on Ed with these details.</b> If your section is not using Zoom, their announcement will include this information, too.
+	See your section’s Ed page for the specifics about how to attend your section from your computer (e.g. a Zoom link to your section’s video call). <b>Your schedule with all of the Zoom links you need will be posted on your section Ed page.</b>
 </p>
+
 
 <hr />
 
 <!-- Section Scheduling -->
 ### Section Scheduling
 <p>
-	You will attend the same section at the same time every week. Section time assignments will be released by 11:59pm Monday, April 13 PDT. All sections take place between the second and third lectures of each week (Wednesday-Friday).
+	You will attend the same section at the same time every evening (there might be a slight change on a day when there's a social activity but your Section Leader will make sure you are aware of this).
 </p>
-<!-- Where do I find my section time? -->
+<!-- Where do I find my section time and Zoom link? -->
 #### Where do I find my section time?
 <p>
-    We will post it on the website before 11:59 PDT.
+    You will find your full schedule on your Ed section page.
 </p>
 
 <!-- When do sections start? -->
 #### When do sections start?
 <p>
-    <b>Sections start the first week of the course (this week!).</b> Your first section will be between Wednesday, April 15 and Friday April, 17, depending on your assigned section time.
+    <b>Sections start the first night of the course (Tuesday, August 4th)! </b> 
 </p>
 
-<hr />
-
-<!-- What to do if you can’t make it to section -->
-### What to do if you can't make it to section
-<!-- I can’t make it to my section for one week -->
-#### I can't make it to my section for one week
-<p>
-	If for some reason you miss your section, everything is going to be alright: there is a recorded section. For more details see <a href='https://codeinplace2020.github.io/faqs/coursefaqs.html#section'>https://codeinplace2020.github.io/faqs/coursefaqs.html#section</a>
-</p>
-
-<!-- I need to permanently change my section time -->
-#### I need to permanently change my section time
-<p>
-	If you were assigned to a section time that doesn’t work for you, please let us know by filling out <a href='https://docs.google.com/forms/d/e/1FAIpQLScCWxU7zOxkqABUi8pcbsB9e-BBldZ24tAzKKI-xl12oH-6eQ/viewform'> this form</a>.
-</p>
-<p>
-	Changing section times is hard. We only process section changes one time in the week. We will process all section swaps submitted during the first week of the course around 11:59pm on Sunday April 19, PDT. We will accept section swap requests through the first two weeks of the course.
-</p>
-<p>
-    While waiting try attending your section (if you have one) and or watch the recorded section which will be released on Friday 10pm PDT!
-</p>
-
-<hr />
-
-<!-- I haven't gotten a section time -->
-### I haven't gotten my section time
-<p>
-	We have posted section times for everybody who is currently assigned to a section. Once we post it, you can find it on the course website and on Ed. For the course website:
-</p>
-<ul>
-	<li>Go to the course website and refresh the page.</li>
-	<li>Try a hard refresh (Control+F5 on Windows, Cmd+Shift+R on Mac).</li>
-</ul>
-<p>
-	For Ed:
-</p>
-<ul>
-	<li>Go to Ed and click on the home button on the top-right of the screen. Refresh the page.</li>
-</ul>
-<p>
-	You should then see your section time listed on the left side of the course website, and you should be a part of an Ed group called “Section ### - Code in Place”.
-</p>
-<p>
-	<b>If you still do not see a section time anywhere,</b> then you are not assigned to a section yet. Some people signed up late, or didn't get section time preferences in on time. That is fine. See the section on "<a href='#Swap'>permanently changing my section time</a>" above. That applies to you.
-</p>
 <hr />
 
 <!-- Personal Privacy in Section -->
 ### Personal Privacy and Safety in Section
 <p>
-	We want to make sure that everybody in Code in Place is in an environment that they feel comfortable in. This includes during section. To protect your privacy, you are not required to disclose any personal information in section that you don't want to share. If you feel comfortable sharing more about yourself during section, we leave that choice up to you.
+	We want to make sure that everybody in CS Bridge is in an environment that they feel comfortable in. This includes during section. <b>To protect your privacy, do not share any personal information in section (this includes contact information or last name)<b>.
 </p>
 <p>
-	Finally, while we hope this will not be the case for anyone at any point during this course, if you encounter any misconduct during section or otherwise, please refer to the "process for reporting misconduct" outlined at the bottom of the <a href='https://compedu.stanford.edu/codeinplace/v1/#/handout/info.html'>general course information handout</a>. Creating and maintaining a safe and open community is of utmost importance to us.
+	Finally, while we hope this will not be the case for anyone at any point during this course, if you encounter any misconduct during section or otherwise, please refer to the "process for reporting misconduct" outlined at the bottom of the <a href='http://online.csbridge.org/en/resources/general-info.html'>general course information page</a>. Creating and maintaining a safe and open community is of utmost importance to us.
 </p>
 
 <hr />
 
 <!-- FAQs -->
-### Additional Questions
-<!-- My section leader didn’t show up to section -->
-#### <u>My section leader didn’t show up to section, what should I do?</u>
-<p>
-	This is going to be a very rare occurrence, but recall that we have already had a few section leaders get sick! If you can't find your section leader, please fill out this form: <a href='https://forms.gle/RBd7avY165cm9WQ7A'>https://forms.gle/RBd7avY165cm9WQ7A</a>
-</p>
-<p>
-	We’ll help you find a solution here. Or, you may watch the recorded section, if you prefer.
-</p>
+
 #### <u>Other Questions</u>
 <p>
     We will answer your questions as they come up. <br />
-    Please see: <a href='https://codeinplace2020.github.io/faqs/coursefaqs.html#section'>https://codeinplace2020.github.io/faqs/coursefaqs.html#section</a>
+    Please see: <a href='http://online.csbridge.org/en/resources/student-faq.html'>http://online.csbridge.org/en/resources/student-faq.html</a>
 </p>

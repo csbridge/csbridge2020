@@ -56,19 +56,30 @@ This is a snapshot of the schedule that shows a regular day and a day with a soc
 />
 </center>
 
-### What will **lectures** look like? 
+### What will **lectures** look like?  
 Lectures will be held twice a day - there will be one 30 minute lecture at the start of the day and one 30 minute lecture in the evening. The morning lectures will be taught by a lecturer from either Koç University or Czech Technical University and the evening lecture will be taught by a lecturer from Stanford University. This is where students will learn the core concepts of the class.
 
 * Lectures will be delivered LIVE through Zoom and will be recorded and posted on Ed so students can refer back to them later if they need to. If students want to ask questions during lecture, they can. The Head TA will help by monitoring the chat. 
+* You do not need to attend lecture.
 
 ### What is **quickstart**?
-This can be thought of as supervised work time. It will occur in Zoom but can be thought of as work time and not teaching time. It is a time in which students will be working individually on a "quickstart" problem.
+This can be thought of as time that you are supervising students as they work. It will occur in Zoom but can be thought of as work time and not teaching time. It is a time in which students will be working individually on a "quickstart" problem.
 
 ### What is **tea time**? 
 This is an opportunity for you to get to know a small group of students better. You can do some ice breakers as a form of social time or you can have discussions about cs. Due to the time difference, the Koç and CTU SLs will run these sessions so the Stanford SLs' students will be distributed among the Koç and CTU SLs. 
 
-### What will the **office hours/work** block look?
-These office hours will be help sessions with opportunities for small breakout sessions over Zoom. Ten Koç and CTU SLs will be assigned to run each morning office hour session and all of the Stanford SLs plus 5 Koc/CTU SLs will be assigned the evening sessions. We are not expecting students to have to spend time working on the course outside of the scheduled blocks which is why this time is also titled “work”. If students don’t need individual help, they’ll just work on the projects on their own. Office hours are an opportunity for students to work on the assignments and if they need help, there will be SLs there in the Zoom who can help them. There will be a system for students to submit the code they need help with when they sign up for the office hours so that you can see their code and help them in a breakout room. There will be one or two SLs hosting the Zoom office hour session who will pair off SLs and students into breakout rooms for individual help.
+### What will the **office hours/work** block look like?
+These office hours will be help sessions with opportunities for small breakout sessions over Zoom. 
+
+* The Koç and CTU SLs will be broken up into two groups and assigned to the following office hours: 
+    
+    * 1) Monday+Wednesday+Friday morning office hours and Tuesday+Thursday evening office hours
+    
+    * 2) Tuesday+Thursday morning office hours and Monday+Wednesday+Friday evening office hours
+    
+* Stanford SLs will run all evening office hours.
+
+We are not expecting students to have to spend time working on the course outside of the scheduled blocks which is why this time is also titled “work”. If students don’t need individual help, they’ll just work on the projects on their own. Office hours are an opportunity for students to work on the assignments and if they need help, there will be SLs there in the Zoom who can help them. There will be a system for students to submit the code they need help with when they sign up for the office hours so that you can see their code and help them in a breakout room. There will be one or two SLs hosting the Zoom office hour session who will pair off SLs and students into breakout rooms for individual help.
 
 ### What is the difference between **morning submit** and **evening submit**? 
 Students will be submitting two projects per day - once for the project they've been working on in the morning (morning submit) and once in the evening for the project they've been working in the second half of the day (evening submit). Submissions will be made directly to Ed. 
@@ -94,10 +105,10 @@ There is a **Reflection** category in the Ed Section Leader group. Once the prog
 
 ### What if I can't make it to my section on a specific day? 
 
-If you are sick or can't make it to your section for another reason,  <span style="color:red;">Edit once process has been defined.</span>
+If you are sick or can't make it to your section for another reason, communicate this with the Head TA as soon as possible. We will then ask for a volunteer to take your students for that section and they will be notified of the Zoom link for the section on Ed. 
 
 ### Who should answer posts made by students in the CS Bridge group on Ed? 
 
-
+If you see the Ed post and are confident of the answer, you can go ahead and respond. As the course progresses, we might create a system for answering Ed questions if we think it's necessary.
 
 *Have a question that wasn't answered here? Please post on [Ed](https://us.edstem.org/courses/972).*

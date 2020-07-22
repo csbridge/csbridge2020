@@ -1,11 +1,11 @@
 template: templates/en/resources/faqTemplate.ptl
-title: General Information
+title: General CS Bridge Information
 
 <div align="right"><i>All times listed on this handout are in Pacific Time.</i></div>
 
 [TOC]
 
-# CS Bridge
+
 
 ### Description
 CS Bridge is a collaboration between Stanford University in the United States, Czech Technical University in the Czech Republic, and Koç University in Turkey. Lecturers and students from all three universities have come together to teach high school students in Czech Republic and Turkey how to code.
