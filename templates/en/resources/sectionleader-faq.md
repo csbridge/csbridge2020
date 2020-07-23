@@ -31,7 +31,7 @@ You will be enrolled in three Ed groups:
 
 For more information on Ed Discussion, you can refer to the [Quick Start Guide](https://us.edstem.org/help).
 
-### [Course Website](http://online.csbridge.org/en/index.html)  
+### [Course Website](http://online.csbridge.org/)  
 
 This is where you will find all information related to the curriculum - handouts, projects, examples, and slides. You'll also find FAQ information for students and Section Leaders. 
 
