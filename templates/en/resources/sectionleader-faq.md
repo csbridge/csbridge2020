@@ -31,17 +31,17 @@ You will be enrolled in three Ed groups:
 
 For more information on Ed Discussion, you can refer to the [Quick Start Guide](https://us.edstem.org/help).
 
-### [Course Website](online.csbridge.org)  
+### [Course Website](http://online.csbridge.org/en/index.html)  
 
 This is where you will find all information related to the curriculum - handouts, projects, examples, and slides. You'll also find FAQ information for students and Section Leaders. 
 
 ### Zoom  
 
-We'll be using Zoom to host all live interactions. You will be provided instructions for logging into Zoom by the Program Administrator at hour host university. We'll go through a short Zoom tutorial during the Section Leader training and <span style="color:red;">you can find a tutorial document here: </span>
+We'll be using Zoom to host all live interactions. You will be provided instructions for logging into Zoom by the Program Administrator at hour host university. If you have not already been provided details for your Zoom account, you will receive that information from someone at your university soon. We'll go through a short Zoom tutorial during the Section Leader training and you can find a [Zoom tutorial here](http://online.csbridge.org/en/resources/zoom-info.pdf) 
 
 ### PyCharm
 
-This is the Integrated Development Environment (IDE) that everyone will be using for the course. <span style="color:red;">You can find the installation tutorial here: .</span>
+This is the Integrated Development Environment (IDE) that everyone will be using for the course. You can find the [PyCharm installation tutorial here](http://online.csbridge.org/en/resources/install.html) 
 
 ## Schedule
 
@@ -94,21 +94,30 @@ This meeting will be lead by the Lecturers and is a time for ALL SLs to meet (vi
 ### What will **section** look like? 
 Sections will be held in the evening (morning for Stanford) on Zoom. Every Section Leader will have their **own** section of about 8 students. 
 
-* You will be assigned a group of students <span style="color:red;">add whether or not the students will be from different countries</span>
+* You will be assigned a group of students 
 
-* See the student [What to Expect for Section](http://online.csbridge.org/en/resources/section-info.html) page for more information about section.
+* See the student-facing page [What to Expect for Section](http://online.csbridge.org/en/resources/section-info.html) for more information about section.
+
+### What will the **social activity** look like? 
+We're planning to organize one virtual social activity per week. This could take the form of a fireside chat, a talent show, movie night, or other activity. If you have an idea, tell the Head TA! These are activities for the whole group. Ed will also be used as a platform for sharing other ways for students to engage with each other (such as online pictionary or other games).
+
+## Who to Ask/Tell for What
+
+### Who do I contact if I'm having issues with section or office hours?
+Contact the Head TA, Ceren. 
+
+### What if I can't make it to my section on a specific day, who do I tell? 
+If you are sick or can't make it to your section for another reason, communicate this with the Head TA as soon as possible. We will then ask for a volunteer to take your students for that section and students will be notified of the Zoom link for the section on Ed. 
+
+### Who do I contact if I'm having personal issues or if one of my students is having a serious personal issue? 
+Please contact either Ayça or Burcu (Koç), Josef (CTU), or Yosefa (Stanford). Contact information can be found in the welcome message in the Welcome post on the Section Leaders Ed page [here](https://us.edstem.org/courses/972/discussion/94282). 
 
 ## General Questions###
 
-### If I have feedback about the program or content I'd like to discuss in the SL team meeting, who should I tell and how?
+### If I have feedback about the program or content I'd like to discuss in the SL team meeting, where can I share my thoughts?
 There is a **Reflection** category in the Ed Section Leader group. Once the program starts, in Ed you'll find a link to a Google Doc with a reflection form you can fill out on a daily basis. This form will help you reflect on your own teaching experience and will help the lecturers get a pulse on how things are going. Feedback and reflection are essential for making improvements. We want this to be the best it can be for everyone!  
 
-### What if I can't make it to my section on a specific day? 
-
-If you are sick or can't make it to your section for another reason, communicate this with the Head TA as soon as possible. We will then ask for a volunteer to take your students for that section and they will be notified of the Zoom link for the section on Ed. 
-
 ### Who should answer posts made by students in the CS Bridge group on Ed? 
-
 If you see the Ed post and are confident of the answer, you can go ahead and respond. As the course progresses, we might create a system for answering Ed questions if we think it's necessary.
 
 *Have a question that wasn't answered here? Please post on [Ed](https://us.edstem.org/courses/972).*

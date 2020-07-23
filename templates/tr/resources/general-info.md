@@ -1,4 +1,4 @@
-template: templates/en/resources/faqTemplate.ptl
+template: templates/tr/resources/faqTemplate.ptl
 title: General Information
 
 <div align="right"><i>All times listed on this handout are in Pacific Time.</i></div>

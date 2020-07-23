@@ -440,7 +440,7 @@ filePath - the total path to the markdown file being rendered in this template
 		<p>Handouts: <a href="../../en/resources/graphics.html">Graphics Reference</a><br/>
 Worked Example: <a href="../../en/projects/stampTool.html">Stamp Tool</a><br/>
 Project: <a href="../../en/projects/bouncingBall.html">Bouncing Ball</a><br/>
-File: <code>breakout.py</code></p>
+<b>Starter code:</b> <a href="../../starter/Breakout.zip">Breakout.zip</a></p>
 <p>Your job in this assignment is to write the classic arcade game of Breakout, which was invented by Steve Wozniak before he founded Apple with Steve Jobs (moment of silence).  It is a large assignment, but entirely manageable as long as you break the problem up into pieces.  </p>
 <h2 id="the-breakout-game">The Breakout Game</h2>
 <p>In Breakout, the initial configuration of the world appears as shown below. The colored rectangles in the top part of the screen are <strong>bricks</strong>, and the slightly larger rectangle at the bottom is the <strong>paddle</strong>. The paddle is in a fixed position in the vertical dimension, but moves back and forth across the screen along with the mouse until it reaches the edge of its space. </p>
@@ -540,7 +540,7 @@ colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 <h2 id="extensions"><span style="color:blue">Extensions</span></h2>
 <p>If you have the basic play working well, then this would be a great opportunity to go above and beyond. Here are a few ideas of for possible extensions (of course, we encourage you to use your imagination to come up with other ideas as well):</p>
 <ul>
-<li><strong>Add sounds.</strong> It can be fun to add sound effects to your game, such as a sound whenever the ball bounces, whenever the brick is removed, whenever the user wins, and so forth.  To do this, first, add the sound file you want to use to your PyCharm project on your computer.  (Drag the file into the folder containing the project files on your computer).  Then, you'll need to install the library that can play sound files.  First open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following 2 commands below into the Terminal.  On Windows, type “py” instead of “python3”:</li>
+<li><strong>Add sounds.</strong> It can be fun to add sound effects to your game, such as a sound whenever the ball bounces, whenever the brick is removed, whenever the user wins, and so forth.  To do this, first, add the sound file you want to use to your PyCharm project on your computer.  (Drag the file into the folder containing the project files on your computer).  Then, you'll need to install the library that can play sound files.  First open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following 2 commands below into the Terminal.  On Windows, type <code>py</code> instead of <code>python3</code>:</li>
 </ul>
 <pre><code>&gt; python3 -m pip install playsound
 ...prints stuff...
@@ -556,7 +556,7 @@ colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 <pre><code>playsound('mysoundfile.au', block=False)
 </code></pre>
 
-<p>You should replace 'mysoundfile.au' with the name of the sound file in your project.  Make sure you don't forget to include the 'block=False' at the end.</p>
+<p>You should replace <code>'mysoundfile.au'</code> with the name of the sound file in your project.  Make sure you don't forget to include the <code>block=False</code> at the end.</p>
 <ul>
 <li><strong>Improve the user control over bounces.</strong>  The program gets rather boring if the only thing the player has to do is hit the ball.  It is far more interesting if the player can control the ball by hitting it at different parts of the paddle.  The way the old arcade game worked was that the ball would bounce in both the x and y directions if you hit it on the edge of the paddle from which the ball was coming.  The web version implements this feature.</li>
 <li><strong>Use your imagination.</strong> What else have you always awanted a game like this for?</li>
