@@ -104,13 +104,13 @@ We're planning to organize one virtual social activity per week. This could take
 ## Who to Ask/Tell for What
 
 ### Who do I contact if I'm having issues with section or office hours?
-Contact the Head TA. 
+Contact the Head TA, Ceren. 
 
 ### What if I can't make it to my section on a specific day, who do I tell? 
 If you are sick or can't make it to your section for another reason, communicate this with the Head TA as soon as possible. We will then ask for a volunteer to take your students for that section and students will be notified of the Zoom link for the section on Ed. 
 
 ### Who do I contact if I'm having personal issues or if one of my students is having a serious personal issue? 
-Please contact either Ayca or Burcu (Koç), Josef (CTU), or Yosefa (Stanford). Contact information can be found in the Section Leader "General" category on Ed [here](https://us.edstem.org/courses/972/discussion/). 
+Please contact either Ayça or Burcu (Koç), Josef (CTU), or Yosefa (Stanford). Contact information can be found in the welcome message in the Welcome post on the Section Leaders Ed page [here](https://us.edstem.org/courses/972/discussion/94282). 
 
 ## General Questions###
 
