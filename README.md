@@ -26,7 +26,7 @@ Note: there is a special `{{pathToRoot}}` placeholder that you can use in all te
 <img src="{{pathToRoot}}img/projects/newspaper/newspaper.png">	
 ```
 
-####Local Development
+#### Local Development
 Run `./runLocal.sh` to compile and run a local copy of the website at `localhost:8000`.  The script is long-running, monitoring any changes to the `templates` folder and automatically recompiling whenever a file changes so that you can see modifications you make while you are working.  Enter `Ctl-c` to terminate the script.
 
 #### Templates Structure
