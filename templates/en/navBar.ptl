@@ -25,7 +25,6 @@
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
           		<li><a class="visible-after" data-visible-after="2019071009" href="{{pathToRoot}}en/resources/quick-python.html">Python Reference</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="{{pathToRoot}}en/resources/graphics.html">Graphics Reference</a>
-				      <li><a class="visible-after" data-visible-after="2019071509" href="{{pathToRoot}}en/resources/animation.html">Animation Reference</a></li>
               % # begin Yosefa's part
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="{{pathToRoot}}en/resources/general-info.html">General Info</a></li>
