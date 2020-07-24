@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Draw People</title>
+<title>CS Bridge  | Mad Methods</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -193,10 +193,10 @@
 	          	    </li>
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="../../en/projects/dogYears.html">Dog Years</a>
+	          	    	<a href="../../en/projects/madMethods.html">Mad Methods</a>
 	          	    </li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="../../en/projects/fizzBuzz.html">Fizz Buzz</a>
+	          	    	<a href="../../en/projects/fizzbuzz.html">Fizzbuzz</a>
 	          	    </li>
 	          	    <li class="visible-after" data-visible-after="2019071212">
 	          	    	<a href="../../en/projects/target.html">Target</a>
@@ -424,91 +424,81 @@
 
 <div class="container">
 	
-	
-	<!-- Main Content -->
-	<div class="container">
+	<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
 
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-				Draw People
-			</h1>
-			<p>
-				Written by Chris, Bryce and Julia
-			</p>
-			<p>
-				Handouts:
-				<a href ="../../en/handouts/graphics.html">Graphics Reference</a>
-        <br/>
-        Day4: <code>DrawPeople.java</code>
-			</p>
-
-		</div>
-		<hr/>
-
-		<div class="row">
-			<div class="col-md-12">
-				<p>
-					This demo shows a simple method that draws people with the bottom of their feet at the provided (x, y) position.
-					<div class="well"><code>private void drawPerson(int x, int y)</code></div>
-				</p>
-
-				<center>
-						<img style="width:500px" src="../../img/projects/drawPeople/demo2.png">	
-					</center>
-				
-
-			</div>
-
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Solution</h2>
+title - problem title
+credit - problem credit (optional)
+solution - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
 
 
-<pre id="editor" style="height:500px">public class DrawPeople extends GraphicsProgram {
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		Mad Methods
+	</h1>
 
-	public void run() {
-		drawPerson(50, 150);
-		drawPerson(100, 300);
-		drawPerson(500, 200);
-		drawPerson(300, 250);
-		drawPerson(700, 310);
-	}
+		<p>
+			Credit: Written by Chris, Bryce, and Lisa
+		</p>
+</div>
+<hr/>
 
-	private void drawPerson(int x, int y) {
-		GRect body = new GRect(20, 80);
-		body.setColor(Color.BLACK);
-		body.setFilled(true);
-		add(body, x - body.getWidth()/2, y - body.getHeight());
-		
-		GRect arms = new GRect(40, 40);
-		arms.setColor(Color.BLACK);
-		arms.setFilled(true);
-		add(arms, x - arms.getWidth()/2, y - 60);
-		
-		GOval head = new GOval(40, 40);
-		head.setColor(Color.BLUE);
-		head.setFilled(true);
-		add(head, x - 20, y - 100);
-	}
-}</pre>
-    
-<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-   editor.setTheme('ace/theme/eclipse');
-   editor.getSession().setMode("ace/mode/java");
-   editor.setReadOnly(true);
-   editor.renderer.setShowGutter(false); 
-    /*editor.setTheme("ace/theme/eclipse");
-    editor.getSession().setMode("ace/mode/java");*/
-</script>
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<h2 id="1-mad-max">1. Mad Max</h2>
+<p>Example: <a href="../../en/projects/averageMethod.html}}">Average Method</a> <br/>
+File: <code>mad_max.py</code></p>
+<p>Complete the program by filling in the <code>mad_max</code> method that returns the largest of three numbers:</p>
+<pre><code>def mad_max(x, y, z):
+    ... your code here ...
+</code></pre>
 
-			</div>
+<p>The <code>main</code> method has already been written for you:</p>
+<pre><code>def main():
+    print(&quot;The max of 4, 5, and 6 is:&quot;, mad_max(4, 5, 6))
+    print(&quot;The max of -4, 4, and 0 is:&quot;, mad_max(-4, 4, 0))
+    print(&quot;The max of 3, 2, and 1 is:&quot;, mad_max(3, 2, 1))
+    print(&quot;The max of 0, 0, and 0 is:&quot;, mad_max(0, 0, 0))
+</code></pre>
 
-		</div>
+<p>Your output should look like this:</p>
+<pre><code>The max of 4, 5, and 6 is: 6
+The max of -4, 4, and 0 is: 4
+The max of 3, 2, and 1 is: 3
+The max of 0, 0, and 0 is: 0
+</code></pre>
+
+<h2 id="2-draw-trees">2. Draw Trees</h2>
+<p>Handouts: <a href="../../en/handouts/graphics.html">Graphics Reference</a><br/>
+Example: <a href="../../en/projects/drawpeople.html}}">Draw People</a>,
+<a href="../../en/projects/halfgreen.html}}">Half Green</a><br/>
+File: <code>draw_trees.py</code></p>
+<p>Fill in the <code>draw_tree</code> method that draws a tree with the <em><em>base</em></em> of its trunk centered at the provided <code>(x, y)</code> position.</p>
+<p>The <code>main</code> method has already been written for you:</p>
+<pre><code>def main():
+    draw_tree(50, 150)
+    draw_tree(100, 300)
+    draw_tree(500, 200)
+    draw_tree(300, 250)
+    draw_tree(700, 310)
+
+</code></pre>
+
+<p>Each tree should have a trunk with a width of 20 pixels (<code>TRUNK_WIDTH</code>) and a height of 80 pixels (<code>TRUNK_HEIGHT</code>). The leaves should have a radius of 30 pixels (<code>LEAVES_RADIUS</code>). Your output should look like this:</p>
+<p><center>
+  <img style="width:500px;border: 1px solid #000000" src="../../img/projects/madmethods/demo.png">
+</center></p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
+
 			
 	<!-- Footer -->
 <hr>

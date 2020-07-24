@@ -14,12 +14,12 @@ Write a program that creates the "curve" in the above right image using straight
 
 ## Hints and tips
 
-* Remember that you can use the index variable of a `for` loop:
+* Remember that you can use the loop variable of a `for` loop:
 
         for i in range(NUM_LINES):
             ... some code that uses i here to draw lines...
   
-    This program can be completed with a single `for` loop by using the index variable, `i`. Do you see how? (Hint: We know that the topmost dot on the left edge can *only* connect to the leftmost dot on the bottom edge. Let's suppose this is the line we draw when `i = 0`. What about for when `i = 1`? The second dot from the top on the left edge can only connect to one specific dot on the bottom edge! And so on...)
+    This program can be completed with a single `for` loop by using the loop variable, `i`. Do you see how? (Hint: We know that the topmost dot on the left edge can *only* connect to the leftmost dot on the bottom edge. Let's suppose this is the line we draw when `i = 0`. What about for when `i = 1`? The second dot from the top on the left edge can only connect to one specific dot on the bottom edge! And so on...)
 
 * Check out the [Graphics Reference]({{pathToRoot}}en/resources/graphics.html) (click on "Show/Hide Quick Reference") for tips on how to draw lines onto the canvas.
 

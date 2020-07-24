@@ -371,8 +371,8 @@
       <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day5PM.zip">here</a>]</h4></center></td>
       </tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/dogYears.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/dogYears.html">Dog Years</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/madMethods.jpg"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/madMethods.html">Mad Methods</a>
           <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/dogYears.html">TA Solution</a>
@@ -381,11 +381,11 @@
 				<td>Randomness</td>
 			</tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/fizzBuzz.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/fizzBuzz.html">Fizz Buzz</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/fizzbuzz.png"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/fizzbuzz.html">Fizzbuzz</a>
           <br/><span class="label label-primary">Section</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/fizzBuzz.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/fizzbuzz.html">TA Solution</a>
 					% end
 				</td>
 				<td>Randomness</td>

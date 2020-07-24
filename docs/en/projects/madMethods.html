@@ -193,10 +193,10 @@
 	          	    </li>
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="../../en/projects/dogYears.html">Dog Years</a>
+	          	    	<a href="../../en/projects/madMethods.html">Mad Methods</a>
 	          	    </li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="../../en/projects/fizzBuzz.html">Fizz Buzz</a>
+	          	    	<a href="../../en/projects/fizzbuzz.html">Fizzbuzz</a>
 	          	    </li>
 	          	    <li class="visible-after" data-visible-after="2019071212">
 	          	    	<a href="../../en/projects/target.html">Target</a>
@@ -443,7 +443,7 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Written by Chris, Bryce, and Lisa
+			Credit: Written by Chris, Bryce, Brahm, and Lisa
 		</p>
 </div>
 <hr/>
@@ -451,12 +451,11 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<h2 id="1-mad-max">1. Mad Max</h2>
-<p>Example: <a href="../../en/projects/averageMethod.html}}">Average Method</a> <br/>
-File: <code>mad_max.py</code></p>
+		<p>Example: <a href="../../en/projects/averageMethod.html}}">Average Method</a></p>
+<h2 id="1-mad-max">1. Mad Max</h2>
 <p>Complete the program by filling in the <code>mad_max</code> method that returns the largest of three numbers:</p>
 <pre><code>def mad_max(x, y, z):
-    # your code here
+    ... your code here ...
 </code></pre>
 
 <p>The <code>main</code> method has already been written for you:</p>
@@ -474,26 +473,45 @@ The max of 3, 2, and 1 is: 3
 The max of 0, 0, and 0 is: 0
 </code></pre>
 
-<h2 id="2-draw-trees">2. Draw Trees</h2>
-<p>Handouts: <a href="../../en/handouts/graphics.html">Graphics Reference</a><br/>
-Example: <a href="../../en/projects/drawpeople.html}}">Draw People</a>,
-<a href="../../en/projects/halfgreen.html}}">Half Green</a><br/>
-File: <code>draw_trees.py</code></p>
-<p>Fill in the <code>draw_tree</code> method that draws a tree with the <em><em>base</em></em> of its trunk centered at the provided <code>(x, y)</code> position.</p>
-<p>The <code>main</code> method has already been written for you:</p>
-<pre><code>def main():
-    draw_tree(50, 150)
-    draw_tree(100, 300)
-    draw_tree(500, 200)
-    draw_tree(300, 250)
-    draw_tree(700, 310)
-
+<p>Hint: There are several ways to write your <code>mad_max</code> method.</p>
+<ul>
+<li>
+<p>One approach uses if and if-else conditionals.</p>
+</li>
+<li>
+<p>Another approach uses the built-in Python function, <code>max</code>, which takes in two numbers and returns the maximum:</p>
+<pre><code>print(max(-3, 4)) # prints 4
+print(max(100, 5)) # prints 100
+</code></pre>
+<p>Since your method must return the max of 3 numbers, you will have to call the Python function <code>max</code> multiple times!</p>
+</li>
+</ul>
+<p>Try out both approaches if you have time!</p>
+<h2 id="2-dog-years">2. Dog Years</h2>
+<p>Everyone knows that our furry friends age at a different rate to humans. Write a program that takes asks the user for a human age (expressed as a whole number) and prints the equivalent dog age using the fact that there are seven dog years per human year. Consider defining a constant <code>DOG_YEARS_PER_HUMAN_YEAR</code>. You can assume the user types in an integer age, but not necessarily that the integer is positive. If it isn't, print an error message.</p>
+<p>Your program should define a function called <code>compute_dog_years</code> which accepts as a parameter an integer called <code>human_years</code>. The function should return the converted human age. You should then edit the <code>main</code> function to call this function.</p>
+<pre><code>def compute_dog_years(human_years):
+    ... your code here ...
 </code></pre>
 
-<p>Each tree should have a trunk with a width of 20 pixels (<code>TRUNK_WIDTH</code>) and a height of 80 pixels (<code>TRUNK_HEIGHT</code>). The leaves should have a radius of 30 pixels (<code>LEAVES_RADIUS</code>). Your output should look like this:</p>
-<p><center>
-  <img style="width:500px;border: 1px solid #000000" src="../../img/projects/madmethods/demo.png">
-</center></p>
+<p>The main method is already written for you, but it is missing the code that calls your <code>compute_dog_years</code> function and prints out the correct statement.</p>
+<pre><code>def main():
+    user_input = int(input(&quot;Enter an age in human years: &quot;))
+    while user_input != 0:
+        if user_input &lt; 0:
+            print(&quot;Sorry, please enter a positive number or 0 to exit&quot;)
+        else:
+            ... your code here ...
+        user_input = int(input(&quot;Enter an age in human years: &quot;))
+</code></pre>
+
+<p>Here is an example of what one run of your program should look like (user inputs -12, 13, and 0, in order):</p>
+<pre><code>Enter an age in human years: -12
+Sorry, please enter a positive number or 0 to exit
+Enter an age in human years: 13
+The age in dog years is 91
+Enter an age in human years: 0
+</code></pre>
 	</div>
 </div>
 

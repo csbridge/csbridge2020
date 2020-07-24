@@ -2,9 +2,16 @@ template: templates/en/projects/projectTemplate.ptl
 title: Fizzbuzz
 credit: Mehran Sahami, Keith Schwarz, Eric Roberts, Marty Stepp, and others.
 
-Fizzbuzz is a classic coding problem. Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for multiples of five print “Buzz”. For numbers that are multiples of both three and five, print “FizzBuzz”. Below is some sample output for the first 16 numbers.
+Fizzbuzz is a classic coding problem. 
+
+In the game Fizz Buzz, players take turns counting up from one. If a player’s turn lands on a number that’s divisible by 3, she should say “Fizz” instead of the number, and if it lands on a number that’s divisible by 5, she should say “Buzz” instead of the number. If the number is both a multiple of 3 and of 5, she should say "Fizzbuzz" instead of the number. A spectator sport, it is not. What it is, however, is an interesting problem in control flow and parameter usage.
+
+Write a function called `fizzbuzz` which accepts as a parameter an integer called `n`. The function should count up until and including n, fizzing and buzzing the correct numbers along the way. Once it's done, the function should return how many numbers were fizzed or buzzed along the way.
+
+Next, complete your program by writing a main function that reads in an integer from the user and plays fizzbuzz until it counts to the number. Here's a sample run of the program (user input is "17" below):
 
 ```
+Number to count to: 17
 1
 2
 Fizz
@@ -19,6 +26,8 @@ Buzz
 Fizz
 13
 14
-FizzBuzz
+Fizzbuzz
 16
+17
+17 numbers were fizzed or buzzed
 ```
