@@ -107,7 +107,7 @@ We're planning to organize one virtual social activity per week. This could take
 Contact the Head TA, Ceren. 
 
 ### What if I can't make it to my section on a specific day, who do I tell? 
-If you are sick or can't make it to your section for another reason, communicate this with the Head TA as soon as possible. We will then ask for a volunteer to take your students for that section and students will be notified of the Zoom link for the section on Ed. 
+If you are sick or can't make it to your section for another reason, communicate this with the Head TA, Ceren, as soon as possible. We will then ask for a volunteer to take your students for that section and students will be notified of the Zoom link for the section on Ed. 
 
 ### Who do I contact if I'm having personal issues or if one of my students is having a serious personal issue? 
 Please contact either Ayça or Burcu (Koç), Josef (CTU), or Yosefa (Stanford). Contact information can be found in the welcome message in the Welcome post on the Section Leaders Ed page [here](https://us.edstem.org/courses/972/discussion/94282). 
@@ -115,7 +115,7 @@ Please contact either Ayça or Burcu (Koç), Josef (CTU), or Yosefa (Stanford). 
 ## General Questions###
 
 ### If I have feedback about the program or content I'd like to discuss in the SL team meeting, where can I share my thoughts?
-There is a **Reflection** category in the Ed Section Leader group. Once the program starts, in Ed you'll find a link to a Google Doc with a reflection form you can fill out on a daily basis. This form will help you reflect on your own teaching experience and will help the lecturers get a pulse on how things are going. Feedback and reflection are essential for making improvements. We want this to be the best it can be for everyone!  
+There is a **Reflection** category in the Ed Section Leader group. Once the program starts, we encourage you to fill out the reflection form that we've linked to in Ed [here](https://us.edstem.org/courses/972/discussion/94782).' This form will help you reflect on your own teaching experience and will help the lecturers get a pulse on how things are going. Feedback and reflection are essential for making improvements. We want this to be the best it can be for everyone!  
 
 ### Who should answer posts made by students in the CS Bridge group on Ed? 
 If you see the Ed post and are confident of the answer, you can go ahead and respond. As the course progresses, we might create a system for answering Ed questions if we think it's necessary.
