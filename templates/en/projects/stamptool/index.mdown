@@ -8,5 +8,5 @@ Write a program where a blue rectangle (which represents a stamp) follows a user
 <center>
   <img style="width:500px"
           alt = "Stamp tool demo"
-          src="{{pathToRoot}}img/projects/stampTool/demo.png">
+          src="{{pathToRoot}}img/projects/stamptool/demo.png">
 </center>
