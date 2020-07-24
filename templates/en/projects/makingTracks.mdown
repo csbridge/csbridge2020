@@ -9,7 +9,6 @@ File: `making_tracks.py`
 Write a program that draws an image anywhere the user clicks.
 
 <center>
-  <!--<img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/icons/makingTracks.png">-->
   <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/makingTracks/demo.png">
 </center>
 
