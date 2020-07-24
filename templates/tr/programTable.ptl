@@ -448,11 +448,11 @@
 			</tr>
 
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/nim.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/nimm.html">Nimm</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/carbonDating.jpg"></img></td>
+				<td><a href="{{pathToRoot}}tr/projects/carbonDating.html">Karbon Tarihi Saptama</a>
           <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/nimm.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/carbonDating.html">TA Solution</a>
 					% end
 				</td>
 				<td>Variables</td>

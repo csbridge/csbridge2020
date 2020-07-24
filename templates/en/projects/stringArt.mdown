@@ -4,10 +4,23 @@ credit: Based on a demonstration by Eric Roberts
 
 Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 
-By repeatedly drawing lines, we can make a curved looking shape. Consider the example below where we imagine dots evenly space along the bottom and the left of a canvas. If we connect the topmost dot on the left edge to the left most dot on the right edge, we would be a line like the picture of the far left. If we then connect the next 10 dots we get a picture in the middle and if we connect all dots we get the picture on the right.
+By repeatedly drawing lines, we can make a curved looking shape. Consider the example below where we imagine dots evenly space along the bottom and the left of a canvas. If we connect the topmost dot on the left edge to the left most dot on the bottom edge, we would be a line like the picture of the far left. If we then connect the next 10 dots we get a picture in the middle and if we connect all dots we get the picture on the right.
 
 <center>
   <img style="width:600px;" src="{{pathToRoot}}img/projects/stringArt/startToEnd.png">
 </center>
 
 Write a program that creates the "curve" in the above right image using straight lines.
+
+## Hints and tips
+
+* Remember that you can use the index variable of a `for` loop:
+
+        for i in range(NUM_LINES):
+            ... some code that uses i here to draw lines...
+  
+    This program can be completed with a single `for` loop by using the index variable, `i`. Do you see how? (Hint: We know that the topmost dot on the left edge can *only* connect to the leftmost dot on the bottom edge. Let's suppose this is the line we draw when `i = 0`. What about for when `i = 1`? The second dot from the top on the left edge can only connect to one specific dot on the bottom edge! And so on...)
+
+* Check out the [Graphics Reference]({{pathToRoot}}en/resources/graphics.html) (click on "Show/Hide Quick Reference") for tips on how to draw lines onto the canvas.
+
+* Use a pencil and paper to sketch out your idea! Even though we're coding using the computer, sometimes it's useful to first draw what you think is happening, and then write out the code.

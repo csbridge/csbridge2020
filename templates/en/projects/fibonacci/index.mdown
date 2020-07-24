@@ -1,0 +1,30 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Fibonacci (with solution)
+credit: Eric Roberts
+solution: soln.py
+
+In the 13th century, the Italian mathematician Leonardo Fibonacci, as a way to explain the geometric growth of a population of rabbits, devised a mathematical sequence that now bears his name.  The first two terms in this sequence, Fib(0) and Fib(1), are 0 and 1, and every subsequent term is the sum of the preceding two.  Thus, the first several terms in the Fibonacci sequence look like this:
+
+<p style="padding-left:2em">
+					Fib(0)	=	0
+	<br/>Fib(1)	=	1
+	<br/>Fib(2)	=	1	(0 + 1)
+	<br/>Fib(3)	=	2	(1 + 1)
+	<br/>Fib(4)	=	3	(1 + 2)
+	<br/>Fib(5)	=	5	(2 + 3)
+</p>
+
+Write a program that displays the terms in the Fibonacci sequence, starting with Fib(0) and continuing as long as the terms are less than 10,000.  Thus, your program should produce the following sample run:
+
+<center>
+<img style="width:400px" src="{{pathToRoot}}img/projects/fib/demo.png">	
+</center>
+
+This program should continue as long as the value of the term is less than the maximum value. To do this, you should use a while loop, presumably with a header line that looks like this:
+
+```
+while term <= MAX_TERM_VALUE:
+    ... your code here ...
+```
+
+Note that the maximum term value is specified with a named constant.

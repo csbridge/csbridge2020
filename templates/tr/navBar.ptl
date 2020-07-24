@@ -107,7 +107,7 @@
 	          		<a href="{{pathToRoot}}tr/projects/someSum.html">Üç Aşağı Beş Yukarı</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071013">
-	          		<a href="{{pathToRoot}}tr/projects/nimm.html">Nimm</a>
+	          		<a href="{{pathToRoot}}tr/projects/carbonDating.html">Karbon Tarihi Saptama</a>
 	          	</li>
 
 				<!-- Day 5 -->
@@ -266,7 +266,7 @@
 	        	<li class="divider visible-after" data-visible-after="2019071509" />
 	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün</li>
 	            <li class="visible-after" data-visible-after="2019071509">
-	            	<a href="{{pathToRoot}}tr/projects/stamptool/index.html">Damga Makinesi</a>
+	            	<a href="{{pathToRoot}}tr/projects/stampTool/index.html">Damga Makinesi</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="{{pathToRoot}}tr/projects/holePuncher.html">Delgeç</a>

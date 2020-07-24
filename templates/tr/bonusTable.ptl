@@ -76,8 +76,8 @@
 						<td><a href="{{pathToRoot}}starter/BonusConsole.zip">BonusConsole.zip</a></td>
 					</tr>
 					<tr class="table-bordered table-striped">
-						<td><img style="width:auto;max-height:100px;max-width:150px" class="projectImg" src="{{pathToRoot}}img/icons/carbonDating.jpg"></img></td>
-						<td><a href="{{pathToRoot}}tr/projects/carbonDating.html">Karbon Tarihi Saptama</a></td>
+						<td><img style="width:auto;max-height:100px;max-width:150px" class="projectImg" src="{{pathToRoot}}img/icons/nimm.jpg"></img></td>
+						<td><a href="{{pathToRoot}}tr/projects/nimm.html">Nimm</a></td>
 						<td>&#9733;&#9733;&#9734;</td>
 						<td><a href="{{pathToRoot}}starter/BonusConsole.zip">BonusConsole.zip</a></td>
 

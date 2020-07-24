@@ -247,7 +247,7 @@
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-						<h4>Day 6: Animation</h4></b>
+						<h4>Day 6: Loops and Animation</h4></b>
         </th>
 			</tr>
 		</thead>
@@ -448,11 +448,11 @@
 			</tr>
 
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/nim.jpg"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/nimm.html">Game of Nimm</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/carbonDating.jpg"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/carbonDating.html">Carbon Dating</a>
           <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/soln/nimm.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/soln/carbonDating.html">TA Solution</a>
 					% end
 				</td>
 				<td>Variables</td>

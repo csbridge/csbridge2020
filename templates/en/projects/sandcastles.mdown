@@ -4,7 +4,7 @@ title: Sandcastles
 Write the following three programs to get warmed up to Python variables.
 
 ## 1. Hello world
-Day2: `HelloWorld.py`
+File: `hello_world.py`
 
 Write a console program that displays hello world (or any message you like):
 
@@ -13,7 +13,7 @@ Hello, world!
 ```
 
 ## 2. Moon Weight
-Day2: `Moon.py`
+File: `moon.py`
 
 The user (an Earthling) enters their weight on Earth. Your program will print the user's weight on the moon, which is 16.5% of their weight on Earth.
 
@@ -23,7 +23,7 @@ Your weight on the moon is 9.9
 ```
 
 ## 3. Random Numbers
-Day2: `RandomNumbers.py`
+File: `random_numbers.py`
 
 Write a program that prints 1,000 random numbers between 0 and 100.
 

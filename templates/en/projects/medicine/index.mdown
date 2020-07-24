@@ -1,5 +1,5 @@
 template: templates/en/projects/projectTemplate.ptl
-title: Counterfeit Medicine
+title: Counterfeit Medicine (with solution)
 credit: Chris Piech
 solution: soln.py
 
