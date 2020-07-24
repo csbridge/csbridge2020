@@ -15,12 +15,12 @@
 
 <!-- Styles -->
 
-<link href="../../plugins/bootstrap-3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../plugins/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../../style.css">
 
 <!-- Java Script -->
 <script src="../../plugins/jquery.min.js"></script>
-<script src="../../plugins/bootstrap-3.1/js/bootstrap.min.js"></script>
+<script src="../../plugins/bootstrap-3.4.1/js/bootstrap.min.js"></script>
 
 <script src="../../karel/ace/ace.js" type="text/javascript"></script>
 <script type="text/javascript" src="../../js/moment.min.js"></script>
@@ -69,12 +69,13 @@
 	      <ul class="nav navbar-nav">
 	        <!--<li ><a href="#">Link</a></li>-->
 	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
 
             <ul class="dropdown-menu">
 	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
 	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+          		<li><a class="visible-after" data-visible-after="2019071009" href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></li>
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
@@ -98,251 +99,265 @@
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
 
-	          	<!-- Day 1 -->
-	          	<li class="dropdown-header">Day 1</li>
-	            <li>
-	            	<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
-	            </li>
-	          	<li class="visible-after" data-visible-after="2019070912">
-	          		<a href="../../en/projects/arches.html">Arches Karel</a>
-	          	</li>
-	          	
-	          	<!-- Day 2 -->
-	          	<li class="divider visible-after" data-visible-after="2019071009" />
-	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
-	          	<li class="visible-after" data-visible-after="2019070913">
-	          		<a href="../../en/projects/placeSquare.html">Place Square</a>
-	          	</li>
-	          	<li class="visible-after" data-visible-after="2019070913">
-	          		<a href="../../en/projects/mountain.html">Mountain Karel</a>
-	          	</li>
-	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2 Evening</li>
-	          	<li class="visible-after" data-visible-after="2019070913">
-	          		<a href="../../en/projects/stripeKarel.html">Stripe Karel</a>
-	          	</li>
-	          	<li class="visible-after" data-visible-after="2019070913">
-	          		<a href="../../en/projects/hospitalKarel.html">Hospital Karel</a>
-	          	</li>
-	          	<li class="visible-after" data-visible-after="2019070913">
-	          		<a href="../../en/projects/randomPainter.html">Random Painter</a>
-	          	</li>
-	          	
-	          	<!-- Day 3 -->
-	          	<li class="divider visible-after" data-visible-after="2019071109" />
-	          	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
-          		<li class="visible-after" data-visible-after="2019071009">
-          			<a href="../../en/projects/sandcastles.html">Sandcastles</a>
-          		</li>
-          		<li class="visible-after" data-visible-after="2019071009">
-          			<a href="../../en/projects/subtractNum.html">Subtract Numbers</a>
-          		</li>
-          		<li class="visible-after" data-visible-after="2019071009">
-          			<a href="../../en/projects/runningSum.html">Run, Sum, Rum</a>
-          		</li>
-          		<li class="visible-after" data-visible-after="2019071009">
-          			<a href="../../en/projects/8ball.html">8 Ball</a>
-          		</li>
-          		<li class="visible-after" data-visible-after="2019071009">
-          			<a href="../../en/projects/viralVideo.html">Viral Video</a>
-          		</li>
-	          	<li class="visible-after" data-visible-after="2019071013">
-	          		<a href="../../en/projects/khansoleAcademy.html">Khansole Academy</a>
-	          	</li>
+	        <!-- Day 1 -->
+              <li class="dropdown-submenu">
+                <a tabindex"-1" href="#">1. Karel</a>
+                <ul class="dropdown-menu">
+	                <li>
+	                	<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
+	                </li>
+	          	    <li class="visible-after" data-visible-after="2019070912">
+	          	    	<a href="../../en/projects/arches.html">Arches Karel</a>
+	          	    </li>
+                </ul>
+              </li>
 
-				<!-- Day 4 -->
-				<li class="divider visible-after" data-visible-after="2019071209" />
-				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
-	          	<li class="visible-after" data-visible-after="2019071013">
-	          	<li class="visible-after" data-visible-after="2019071013">
-	          		<a href="../../en/projects/someSum.html">Some Sum</a>
-	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071013">
-	          		<a href="../../en/projects/nimm.html">Nimm</a>
-	          	</li>
+	          	
+	        <!-- Day 2 -->
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">2. Control Flow</a>
+                <ul class="dropdown-menu">
+	          	    <li class="dropdown-header visible-after" data-visible-after="2019071009">Morning</li>
+	          	    <li class="visible-after" data-visible-after="2019070913">
+	          	    	<a href="../../en/projects/placeSquare.html">Place Square</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019070913">
+	          	    	<a href="../../en/projects/mountain.html">Mountain Karel</a>
+	          	    </li>
+	          	    <li class="divider visible-after" data-visible-after="2019071009" />
+	          	    <li class="dropdown-header visible-after" data-visible-after="2019071009">Evening</li>
+	          	    <li class="visible-after" data-visible-after="2019070913">
+	          	    	<a href="../../en/projects/stripeKarel.html">Stripe Karel</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019070913">
+	          	    	<a href="../../en/projects/hospitalKarel.html">Hospital Karel</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019070913">
+	          	    	<a href="../../en/projects/randomPainter.html">Random Painter</a>
+	          	    </li>
+                </ul>
+              </li>
+	          	
+	        <!-- Day 3 -->
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">3. Variables</a>
+                <ul class="dropdown-menu">
+	          	    <li class="dropdown-header visible-after" data-visible-after="2019071109">Morning</li>
+          		    <li class="visible-after" data-visible-after="2019071009">
+          		    	<a href="../../en/projects/sandcastles.html">Sandcastles</a>
+          		    </li>
+          		    <li class="visible-after" data-visible-after="2019071009">
+          		    	<a href="../../en/projects/subtractNum.html">Subtract Numbers</a>
+          		    </li>
+	          	    <li class="divider visible-after" data-visible-after="2019071109" />
+	          	    <li class="dropdown-header visible-after" data-visible-after="2019071109">Evening</li>
+          		    <li class="visible-after" data-visible-after="2019071009">
+          		    	<a href="../../en/projects/runningSum.html">Run, Sum, Rum</a>
+          		    </li>
+          		    <li class="visible-after" data-visible-after="2019071009">
+          		    	<a href="../../en/projects/8ball.html">8 Ball</a>
+          		    </li>
+          		    <li class="visible-after" data-visible-after="2019071009">
+          		    	<a href="../../en/projects/viralVideo.html">Viral Video</a>
+          		    </li>
+	          	    <li class="visible-after" data-visible-after="2019071013">
+	          	    	<a href="../../en/projects/khansole.html">Khansole Academy</a>
+	          	    </li>
+                </ul>
+              </li>
+
+	        <!-- Day 4 -->
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">4. For loops</a>
+                <ul class="dropdown-menu">
+				          <li class="dropdown-header visible-after" data-visible-after="2019071209">Morning</li>
+	          	    <li class="visible-after" data-visible-after="2019071013">
+	          	    	<a href="../../en/projects/someSum.html">Some Sum</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071013">
+	          	    	<a href="../../en/projects/nimm.html">Nimm</a>
+	          	    </li>
+                </ul>
+              </li>
 
 				<!-- Day 5 -->
-          		<li class="divider visible-after" data-visible-after="2019071509" />
-          		<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
-          		<li class="visible-after" data-visible-after="2019071109">
-          			<a href="../../en/projects/awesome.html">Programming is Awesome</a>
-          		</li>
-	          	<li class="visible-after" data-visible-after="2019071113">
-	          		<a href="../../en/projects/randomCircles.html">Random Circles</a>
-	          	</li>
-          		<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5/6 PM</li>
-	          	<li class="visible-after" data-visible-after="2019071113">
-	          		<a href="../../en/projects/dogYears.html">Dog Years</a>
-	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071113">
-	          		<a href="../../en/projects/fizzBuzz.html">Fizz Buzz</a>
-	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071212">
-	          		<a href="../../en/projects/target.html">Target</a>
-	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071112">
-	          		<a href="../../en/projects/stringArt.html">String Art</a>
-	          	</li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <ul class="dropdown-menu">
+          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
+          		    <li class="visible-after" data-visible-after="2019071109">
+          		    	<a href="../../en/projects/awesome.html">Programming is Awesome</a>
+          		    </li>
+	          	    <li class="visible-after" data-visible-after="2019071113">
+	          	    	<a href="../../en/projects/randomCircles.html">Random Circles</a>
+	          	    </li>
+          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
+	          	    <li class="visible-after" data-visible-after="2019071113">
+	          	    	<a href="../../en/projects/madMethods.html">Mad Methods</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071113">
+	          	    	<a href="../../en/projects/fizzbuzz.html">Fizzbuzz</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071212">
+	          	    	<a href="../../en/projects/target.html">Target</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071112">
+	          	    	<a href="../../en/projects/stringArt.html">String Art</a>
+	          	    </li>
+                </ul>
+              </li>
 
 				<!-- Day 6 -->
-          		<li class="divider visible-after" data-visible-after="2019071509" />
-          		<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 6 Morning</li>
-	          	<li class="visible-after" data-visible-after="2019071112">
-	          		<a href="../../en/projects/indexCounter.html">Index Counter</a>
-	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../en/projects/illusion.html">Optical Illusion</a>
-	          	</li>
-          		<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 6 Evening</li>
-	          	<li class="visible-after" data-visible-after="2019071112">
-	          		<a href="../../en/projects/mysterySquare.html">Mystery Square</a>
-	          	</li>
-	            <li class="visible-after" data-visible-after="2019071113">
-	            	<a href="../../en/projects/bouncingBall.html">Bouncing Ball</a>
-	            </li>
-	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../en/projects/sunset.html">Short Film</a>
-	          	</li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">6. Loops/Animation</a>
+                <ul class="dropdown-menu">
+          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
+	          	    <li class="visible-after" data-visible-after="2019071112">
+	          	    	<a href="../../en/projects/indexCounter.html">Index Counter</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071213">
+	          	    	<a href="../../en/projects/illusion.html">Optical Illusion</a>
+	          	    </li>
+          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
+	          	    <li class="visible-after" data-visible-after="2019071112">
+	          	    	<a href="../../en/projects/mysterySquare.html">Mystery Square</a>
+	          	    </li>
+	                <li class="visible-after" data-visible-after="2019071113">
+	                	<a href="../../en/projects/bouncingBall.html">Bouncing Ball</a>
+	                </li>
+	          	    <li class="visible-after" data-visible-after="2019071213">
+	          	    	<a href="../../en/projects/sunset.html">Short Film</a>
+	          	    </li>
+                </ul>
+              </li>
 
 				<!-- Day 7 -->
-          		<li class="divider visible-after" data-visible-after="2019071509" />
-          		<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 7 Morning</li>
-          		<li class="visible-after" data-visible-after="2019071509">
-          			<a href="../../en/projects/mouseLocation.html">Mouse Location</a>
-          		</li>
-          		<li class="visible-after" data-visible-after="2019071509">
-          			<a href="../../en/projects/makingTracks.html">Making Tracks</a>
-          		</li>
-          		<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 7 Evening</li>
-	          	<li class="visible-after" data-visible-after="2019071512">
-	          		<a href="../../en/projects/isAscending.html">Is Ascending</a>
-	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071512">
-	          		<a href="../../en/projects/sorted.html">Sorted</a>
-	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071712">
-	          		<a href="../../en/projects/snow.html">Snow</a>
-	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071712">
-	          		<a href="../../en/projects/mouseGame.html">[Optional] The Line</a>
-	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071712">
-	          		<a href="../../en/projects/music.html">[Optional] Waves of Sound</a>
-	          	</li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">7. Mouse/Lists</a>
+                <ul class="dropdown-menu">
+          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
+          		    <li class="visible-after" data-visible-after="2019071509">
+          		    	<a href="../../en/projects/mouseLocation.html">Mouse Location</a>
+          		    </li>
+          		    <li class="visible-after" data-visible-after="2019071509">
+          		    	<a href="../../en/projects/makingTracks.html">Making Tracks</a>
+          		    </li>
+          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
+	          	    <li class="visible-after" data-visible-after="2019071512">
+	          	    	<a href="../../en/projects/isAscending.html">Is Ascending</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071512">
+	          	    	<a href="../../en/projects/sorted.html">Sorted</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071712">
+	          	    	<a href="../../en/projects/snow.html">Snow</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071712">
+	          	    	<a href="../../en/projects/mouseGame.html">[Optional] The Line</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071712">
+	          	    	<a href="../../en/projects/music.html">[Optional] Waves of Sound</a>
+	          	    </li>
+                </ul>
+              </li>
 
 				<!-- Day 8-9 -->
-	          	<li class="divider visible-after" data-visible-after="2019071513" />
-	          	<li class="dropdown-header visible-after" data-visible-after="2019071513">Days 8-9</li>
           		<li class="visible-after" data-visible-after="2019071513">
-          			<a href="../../en/projects/breakout.html">Breakout</a>
+                <a href="../../en/projects/breakout.html">Breakout</a>
           		</li>
 
 				<!-- Day 10 -->
-	          	<li class="divider visible-after" data-visible-after="2019071513" />
-	          	<li class="dropdown-header visible-after" data-visible-after="2019071513">Day 10</li>
-          		<li class="visible-after" data-visible-after="2019071513">
-          			<a href="../../en/projects/phoneBook.html">Phone Book</a>
-          		</li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">10. Dictionaries</a>
+                <ul class="dropdown-menu">
+          		    <li class="visible-after" data-visible-after="2019071513">
+          		    	<a href="../../en/projects/phoneBook.html">Phone Book</a>
+          		    </li>
+                </ul>
+              </li>
 
 				<!-- Day end -->
-	          	<li class="divider visible-after" data-visible-after="2019071709" />
-	          	<li class="dropdown-header visible-after" data-visible-after="2019071713">Day 11</li>
-	          	<li class="visible-after" data-visible-after="2019071713">
-	          		<a href="../../en/projects/project.html">Make Your Own</a>
-	          	</li>
+          		<li class="visible-after" data-visible-after="2019071513">
+                <a href="../../en/projects/project.html">Make Your Own</a>
+          		</li>
 	          </ul>
 	        </li>
 
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
-	          	<li class="dropdown-header">Day 1</li>
-	          	<li><a href="../../en/projects/stepUp/index.html">Step Up</a></li>
-	          	<li><a href="../../en/projects/place100/index.html">Place 100</a></li>
-	          	<li><a href="../../en/projects/beeperLine/index.html">Beeper Line</a></li>
-	          	<li><a href="../../en/projects/invertBeeper/index.html">Invert Beeper</a></li>
-	          	<li><a href="../../en/projects/unKarel/index.html">UN Karel</a></li>
-	          	<li><a href="../../en/projects/banishWinter/index.html">Banish Winter</a></li>
-
-
-	          	<li class="divider visible-after" data-visible-after="2019071009" />
-	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">Day 2</li>
-	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="../../en/projects/emc2.html">E=MC2</a>
-	            </li>
-	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="../../en/projects/fibb.html">Fibonacci</a>
-	            </li>
-	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="../../en/projects/findPi.html">Find Pi</a>
-	            </li>
-              <!-- Used to be a main course component -->
-	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="../../en/projects/favoriteNumber/index.html">Favorite Number</a>
-	            </li>
-            	
-            	<li class="divider visible-after" data-visible-after="2019071109" />
-            	<li class="dropdown-header visible-after" data-visible-after="2019071109">Day 3</li>
-	            <li class="visible-after" data-visible-after="2019071109">
-	            	<a href="../../en/projects/robotFace/index.html">Robot Face</a>
-	            </li>
-              <!-- Used to be a main course component -->
-	            <li class="visible-after" data-visible-after="2019071009">
-	            	<a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a>
-	            </li>
-            	<li class="divider visible-after" data-visible-after="2019071109" />
-	            <li class="visible-after" data-visible-after="2019071109">
-	            	<a href="../../en/projects/moveToCenter.html">Move To Center</a>
-	            </li>
-	            <li class="visible-after" data-visible-after="2019071109">
-	            	<a href="../../en/projects/gravityBall.html">Gravity Ball</a>
-	            </li>
-
-				<li class="divider visible-after" data-visible-after="2019071209" />
-				<li class="dropdown-header visible-after" data-visible-after="2019071209">Day 4</li>
-				<li class="visible-after" data-visible-after="2019071209">
-					<a href="../../en/projects/averageMethod.html">Average Method</a>
-				</li>	
-				<li class="visible-after" data-visible-after="2019071209">
-					<a href="../../en/projects/drawPeople.html">Draw People</a>
-				</li>	
-	          	<li class="visible-after" data-visible-after="2019071209">
-	          		<a href="../../en/projects/halfGreen.html">Half Green</a>
-	          	</li>
-
-	        	<li class="divider visible-after" data-visible-after="2019071509" />
-	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 5</li>
-	            <li class="visible-after" data-visible-after="2019071509">
-	            	<a href="../../en/projects/stamptool/index.html">Stamp Tool</a>
-	            </li>
-	          	<li class="visible-after" data-visible-after="2019071509">
-	          		<a href="../../en/projects/holePuncher.html">Hole Puncher</a>
-	          	</li>	
-	          	<li class="visible-after" data-visible-after="2019071509">
-	          		<a href="../../en/projects/debrisSweeper.html">Debris Sweeper</a>
-	          	</li>	
-	          	<li class="visible-after" data-visible-after="2019071509">
-	          		<a href="../../en/projects/suchADrag.html">Such a Drag</a>
-	          	</li>
-	          	<li class="visible-after" data-visible-after="2019071509">
-	          		<a href="../../en/projects/keyboardKarel.html">Keyboard Karel</a>
-	          	</li>
-
-	          	<li class="divider visible-after" data-visible-after="2019071709" />
-	        	<li class="dropdown-header visible-after" data-visible-after="2019071709">Day 7</li>
-	            <li class="visible-after" data-visible-after="2019071709">
-	            	<a href="../../en/projects/rocketPaddle.html">Rocket Ship</a>
-	            </li>
+              <li class="dropdown-submenu">
+                <a tabindex"-1" href="#">1. Karel</a>
+                <ul class="dropdown-menu">
+	          	    <li><a href="../../en/projects/stepUp/index.html">Step Up</a></li>
+	          	    <li><a href="../../en/projects/place100/index.html">Place 100</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">2. Control Flow</a>
+                <ul class="dropdown-menu">
+	          	    <li><a href="../../en/projects/beeperLine/index.html">Beeper Line</a></li>
+	          	    <li><a href="../../en/projects/invertBeeper/index.html">Invert Beeper</a></li>
+	          	    <li><a href="../../en/projects/unKarel/index.html">UN Karel</a></li>
+	          	    <li><a href="../../en/projects/banishWinter/index.html">Banish Winter</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">3. Variables</a>
+                <ul class="dropdown-menu">
+	          	    <li><a href="../../en/projects/emc2/index.html">E=MC<sup>2</sup></a></li>
+	          	    <li><a href="../../en/projects/fibonacci/index.html">Fibonacci</a></li>
+	          	    <li><a href="../../en/projects/findPi/index.html">Find Pi</a></li>
+                  <!-- Used to be a main course component -->
+	          	    <li><a href="../../en/projects/favoriteNumber/index.html">Favorite Number</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">4. For loops</a>
+                <ul class="dropdown-menu">
+                  <li><a>Stay tuned!</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <ul class="dropdown-menu">
+	          	    <li><a href="../../en/projects/robotFace/index.html">Robot Face</a></li>
+	          	    <li><a href="../../en/projects/halfGreen/index.html">Half Green</a></li>
+                  <!-- Used to be a main course component -->
+	          	    <li><a href="../../en/projects/averageMethod/index.html">Average Method</a></li>
+	          	    <li><a href="../../en/projects/drawPeople/index.html">Draw People</a></li>
+	          	    <li><a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">6. Loops/Animation</a>
+                <ul class="dropdown-menu">
+	          	    <li><a href="../../en/projects/moveToCenter/index.html">Move to Center</a></li>
+	          	    <li><a href="../../en/projects/gravityBall/index.html">Gravity Ball</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">7. Mouse/Lists</a>
+                <ul class="dropdown-menu">
+	          	    <li><a href="../../en/projects/stampTool/index.html">Stamp Tool</a></li>
+	          	    <li><a href="../../en/projects/holePuncher/index.html">Hole Puncher</a></li>
+	          	    <li><a href="../../en/projects/debrisSweeper/index.html">Debris Sweeper</a></li>
+	          	    <li><a href="../../en/projects/suchADrag/index.html">Such a Drag</a></li>
+	          	    <li><a href="../../en/projects/keyboardKarel/index.html">Keyboard Karel</a></li>
+	          	    <li><a href="../../en/projects/rocketPaddle/index.html">Rocket Paddle</a></li>
+                </ul>
+              </li>
 	        </ul>
 	        </li>
 
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
-	          	<li><a href="../../slides/Welcome.pdf">Karel</a></li>
-	          	<li><a href="../../slides/ControlFlow.pdf">Control Flow Slides)</a></li>
-	          	<li><a href="../../starter/ControlFlow.zip">Control Flow (Code)</a></li>
-	          	<li><a href="../../slides/Variables.pdf">Variables</a></li>
-			<li><a href="../../slides/Variables2.pdf">Variables 2</a></li>
+	          	<li><a href="../../slides/Welcome.pdf">1. Karel</a></li>
+	          	<li><a href="../../slides/ControlFlow.pdf">2. Control Flow Slides)</a></li>
+	          	<li><a href="../../starter/ControlFlow.zip">2. Control Flow (Code)</a></li>
+	          	<li><a href="../../slides/Variables.pdf">3. Variables</a></li>
+			        <li><a href="../../slides/Variables2.pdf">3. Variables 2</a></li>
 	          	
 	          	<li><a href="../../slides/Graphics.pdf">Graphics (Slides)</a></li>
 	          	<li><a href="../../starter/Graphics.zip">Graphics (Code)</a></li>
@@ -361,14 +376,15 @@
 	          </ul>
 	        </li>
 
+          <!--
 	        <li class="dropdown">
-
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forms <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
 	          	<li><a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Survey</a></li>
                 <li><a href="https://forms.gle/eVsMyZb8HCSUETeV6">Sign in To Lab</a></li>
 	          </ul>
 	        </li>
+          -->
 
 			
 	        <!-- Bonus button -->
@@ -431,44 +447,11 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Text description -->
 <div class="row">
 	<div class="col-xs-12">
-		<div class="toc">
-<ul></ul>
-</div>
-<div class="alert alert-warning">
-    <p id="osspiel"></p>
-</div>
+		<p id="osspiel" class="alert alert-warning"></p>
 
-<!--
-<div class="alert alert-info">
-    <p>
-        <b>Running into issues?</b> Post on
-        <a href="https://us.edstem.org/join/KPUYZn">ed</a>. Please make your post visible to all so that other students can learn from the answer.
-    </p>
-</div>
--->
-
-<p>
-    In CS Bridge, you will be writing your code on your
-    computer using an application called
-    <a href="https://www.jetbrains.com/pycharm/"> PyCharm</a>. PyCharm is
-    what is known as an IDE, or <i>Integrated Development Environment</i>,
-    which means that it allows us to edit our code, browse our files, run
-    our programs and debug them, all in the same place. It's one of the
-    most popular Python IDEs in the world, and used extremely commonly in
-    industry. This handout is intended to take you through installing
-    PyCharm on your own computer.
-</p>
-
-<h2>Installing Python</h2>
-
-<p>
-    In order to be able to run Python programs on your computer, you need
-    to install a <i>Python Interpreter.</i> An interpreter is a program
-    that is capable of reading a <code>.py</code> file that you have
-    written, and translating the Python code in that file to instructions
-    that your computer can easily execute. Begin by downloading Python:
-</p>
-
+<p>You will be writing your code on your computer using an application called <a href="https://www.jetbrains.com/pycharm/">PyCharm</a>. PyCharm is what is known as an IDE, or <em>Integrated Development Environment</em>, which means that it allows us to edit our code, browse our files, run our programs and debug them, all in the same place. It's one of the most popular Python IDEs in the world, and used extremely commonly in industry. This handout is intended to take you through installing PyCharm on your own computer.</p>
+<h2 id="installing-python">Installing Python</h2>
+<p>In order to be able to run Python programs on your computer, with or without PyCharm, you first need to install a <em>Python Interpreter</em>. An interpreter is a program that is capable of reading a <em>.py</em> file that you have written, and translating the Python code in that file to instructions that your computer can easily execute.  When downloading this on Mac and Windows, this also automatically includes the <em>Tkinter</em> library, which allows us to draw graphics, and which we'll be learning about later in the course.  Begin by downloading Python:</p>
 <ul>
     <li class="maconly">
         <a href="https://www.python.org/ftp/python/3.8.1/python-3.8.1-macosx10.9.pkg">
@@ -493,43 +476,30 @@ filePath - the total path to the markdown file being rendered in this template
 <h3 class="maconly" data-toc-skip>Installing Python on a Mac</h3>
 
 <p class="note maconly">
-    Macs come with a version of Python installed, but this
-    is an older version of Python. CS 106A
-    requires the use of the newest version of Python, so make sure to follow these
-    instructions even if you think you already have Python installed. 
-    To install Python, simply open the downloaded installer file 
+    Macs come with a version of Python already installed, but this is an older version of Python. We use the newest version of Python, so make sure to follow these instructions even if you think you already have Python installed.  To install Python, simply open the downloaded installer file 
     and follow the default instructions.
 </p>
 
 <h3 class="winonly" data-toc-skip>Installing Python on Windows</h3>
 
 <p class="winonly">
-    Open the downloaded file. Before installing, there should be an
-    option that says "Add Python 3.8 in PATH".
-    <b>Make sure to check this box.</b> Then, continue installing
-    normally.
+    Open the downloaded file. Before installing, there should be an option that says "Add Python 3.8 in PATH". <b>Make sure to check this box.</b> Then, continue installing normally.
 </p>
 
 <hr />
-
-<h2> Installing and Testing PyCharm </h2>
-
-<h3> Installation </h3>
-
-<p>
-    To get started, download and install the community version of PyCharm:
-</p>
-
+<h2 id="installing-and-testing-pycharm">Installing and Testing PyCharm</h2>
+<h3 id="installation">Installation</h3>
+<p>To get started, download and install the community version of PyCharm:</p>
 <ul>
     <li class="maconly">
-        <a href="https://download.jetbrains.com/python/pycharm-community-2019.3.4.dmg">
+        <a href="https://download.jetbrains.com/python/pycharm-community-2020.1.4.dmg">
             Mac Download
         </a>
         (Open the downloaded <code>.dmg</code> file and drag PyCharm into
         your Applications folder)
-    </li> <!-- TODO old mac download -->
+    </li> 
     <li class="winonly">
-        <a href="https://download.jetbrains.com/python/pycharm-community-2019.3.4.exe">
+        <a href="https://download.jetbrains.com/python/pycharm-community-2020.1.4.exe">
             Windows Download
         </a>
         (Open the downloaded <code>.exe</code> file and install PyCharm,
@@ -537,16 +507,12 @@ filePath - the total path to the markdown file being rendered in this template
     </li>
 </ul>
 
-<p>
-    At the end of the PyCharm installation process, you will be taken to a 
-    welcome screen that looks like this:
-</p>
-
+<p>Once PyCharm finishes installing, go ahead and run the program.  Once the program launches, you will be taken to a welcome screen that looks like this (note: if it first walks you through customizing PyCharm, just click "Skip Remaining and Set Defaults" in the bottom-left corner):</p>
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <img 
-            src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/welcomescreen.png" 
+            src="../../img/pycharm/welcomescreen.png" 
             style="width:100%"
             alt="PyCharm Welcome Screen"
         />
@@ -554,301 +520,193 @@ filePath - the total path to the markdown file being rendered in this template
 </div>
 
 <p><br /></p>
-<p id="configure_interpreter">Click 'Configure' and then open PyCharm's settings, like so: </p>
-
+<p id="configure_interpreter">Click 'Configure' and then open PyCharm's settings, like so:</p>
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img 
-            src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/welcomescreen-config.png"
-            style="width:100%"
-            alt="PyCharm Welcome Screen, with 'Configure->Preferences' highlighted"
-        />
+        <div class="maconly">
+            <img 
+                src="../../img/pycharm/welcomescreen-config.png"
+                style="width:100%"
+                alt="PyCharm Welcome Screen, with 'Configure->Preferences' highlighted"
+            />
+        </div>
+        <div class="winonly">
+            <img 
+                src="../../img/pycharm/welcomescreen-config-win.png"
+                style="width:100%"
+                alt="PyCharm Welcome Screen, with 'Configure->Preferences' highlighted"
+            />
+        </div>
     </div>
 </div>
 
 <p><br /></p>
-<p id="setinterpreter">
-    In the Preferences window, click 'Project Interpreter', open the dropdown menu, and click 
-    'Show All':
-</p>
-
+<p id="setinterpreter">In the Preferences window, click 'Project Interpreter', open the dropdown menu, and click 'Show All':</p>
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <img 
-            src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/preferences-showinterpreters.png"
+            src="../../img/pycharm/preferences-showinterpreters.png"
             style="width:100%"
             alt="PyCharm Preferences Window, in the 'Project Interpreter' Pane, with 'Show All' highlighted in the dropdown menu" />
     </div>
 </div>
 
 <p><br /></p>
-<p>
-    In the following Window, click the plus icon in the bottom left corner:
-</p>
-
+<p>In the following window, click the plus icon:</p>
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/addnewinterpreter.png"
+        <div class="maconly">
+            <img src="../../img/pycharm/addnewinterpreter.png"
+                style="width:100%"
+                alt="PyCharm Interpreter List, with the plus button in the bottom left circled" />
+        </div>
+        <div class="winonly">
+            <img src="../../img/pycharm/addnewinterpreter-win.png"
             style="width:100%"
-            alt="PyCharm Interpreter List, with the plus button in the bottom left highlighted" />
+            alt="PyCharm Interpreter List, with the plus button in the top right circled" />
+        </div>
     </div>
 </div>
 
 <p><br /></p>
-<p>
-    Click 'System Interpreter' in the sidebar. Depending on whether you've installed other versions of Python 
-    before, Python 3.8 may already be selected in the dropdown menu. If not, select Python 3.8 and then click 'OK' 
-    and 'OK' again:
-</p>
-
+<p>Click 'System Interpreter' in the sidebar. Depending on whether you've installed other versions of Python before, Python 3.8 may already be selected in the dropdown menu. If not, select Python 3.8 and then click 'OK' and 'OK' again:</p>
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/addsysteminterpreter.png"
+        <img src="../../img/pycharm/addsysteminterpreter.png"
             style="width:100%"
             alt="Adding the system interpreter in PyCharm" />
     </div>
 </div>
 
 <p><br /></p>
-<p>
-    You should now be on a window that looks like this (although the contents of your list might look different):
-</p>
-
+<p>You should now be on a window that looks like this (although the contents of your list might look different):</p>
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/interpreterafterselection.png"
+        <img src="../../img/pycharm/interpreterafterselection.png"
             style="width:100%"
             alt="Interpreter window after selecting system interpreter" />
     </div>
 </div>
 
 <p><br /></p>
-<p>
-    Click 'OK' again to be taken back to the welcome page. You're now ready to test PyCharm!
-</p>
-
+<p>Click 'OK' again to be taken back to the welcome page. You're now ready to test PyCharm!</p>
 <hr />
-
-<h3> Testing PyCharm </h3>
-
-<p>
-    PyCharm models a program as a 'project', which consists of one or more
-    Python files, as well as any additional resources like images or text
-    files. To get you familiar with working with and running progams in PyCharm,
-    we've provided a sample project, which you can download
-    <a href="../../starter/pycharm_intro.zip">
-        here</a>. To test out this project, and to gain familiarity with the PyCharm
-    environment, download the sample project <span style="display: inline-block;" class="winonly">(on Windows, you'll 
-    need to manually unzip it by opening it in Windows Explorer and selecting 'Extract All')</span> 
-    and open it in PyCharm (using
-    the 'open' option on the first screen). <b>Whenever you open projects in PyCharm,
-    open the folder directly <i>containing the files you want to edit</i> as opposed to just 
-    the files themselves.</b> Upon 
-    opening the project, you should be greeted by a window that looks like this:
-</p>
-
+<h3 id="testing-pycharm">Testing PyCharm</h3>
+<p>PyCharm models a program as a 'project', which consists of one or more Python files, as well as any additional resources like images or text files. To get you familiar with working with and running progams in PyCharm, we've provided a sample project, which you can download <a href="../../starter/pycharm_intro.zip">here</a>. To test out this project, and to gain familiarity with the PyCharm environment, download the sample project <span style="display: inline-block;" class="winonly">(on Windows, you'll need to manually unzip it by opening it in Windows Explorer and selecting 'Extract All')</span> and open it in PyCharm (using the 'open' option on the first screen). <strong>Whenever you open projects in PyCharm, open the folder directly <em>containing the files you want to edit</em> as opposed to just the files themselves.</strong>  For instance, in this case make sure to select the folder "pycharm_intro" to open in PyCharm.  Upon opening the project, you should be greeted by a window that looks like this:</p>
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/pycharmblank.png"
+        <img src="../../img/pycharm/pycharmblank.png"
             style="width:100%"
             alt="Blank PyCharm Window" />
     </div>
 </div>
 
 <p><br /></p>
-<p>
-    Click 'Project' in the top left or use the <code><span id="modifier">Command</span> + 1</code> shortcut
-    to open the file explorer, and open <code>intro.py</code> to pull up the editor: 
-</p>
-
+<p>Click 'Project' in the top left to open the file explorer, and open <code>intro.py</code> to pull up the editor:</p>
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/pycharmeditor.png"
+        <img src="../../img/pycharm/pycharmeditor.png"
             style="width:100%"
             alt="PyCharm Editor" />
     </div>
 </div>
 
 <p><br /></p>
-<p>
-    You aren't required to read or understand this code (although you will be able to by the end of the quarter!)
-    but note that this editor is where you'll be writing all your code this quarter. Now, to run your program, click 
-    'Terminal' in the bottom left corner, which will pull up a new terminal pane in your PyCharm window:
-</p>
-
+<p>You aren't required to read or understand this code (although you will be able to by the end of the course!) but note that this editor is where you'll be writing all your code for the class. Now, to run your program, click 'Terminal' in the bottom left corner, which will pull up a new terminal pane in your PyCharm window:</p>
 <div class="row">
-<div class="col-md-2"></div>
-<div class="col-md-8">
-    <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/pycharmterminal.png" 
-            style="width:100%"
-        alt="PyCharm Terminal" />
-</div>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <img src="../../img/pycharm/pycharmterminal.png" 
+             style="width:100%"
+             alt="PyCharm Terminal" />
+    </div>
 </div>
 
 <p><br /></p>
-<p>
-    We'll talk more about the terminal later in the quarter, but for now, know that 
-    the terminal is how you'll be running your Python programs throughout the quarter. 
-    To run your first Python program, type this into the terminal and press enter:
-</p>
-
+<p>We'll talk more about the terminal later in the course, but for now, know that the terminal is how you'll be running your Python programs throughout the course. To run your first Python program, type this into the terminal and press enter:</p>
 <div class="text-center">
     <code><span class="launcher">python3</span> intro.py</code>
 </div>
 
 <p><br /></p>
-<p>
-    You should see output that looks like this:
-</p>
+<p>You should see output that looks like this:</p>
+<div class="maconly">
+    <img src="../../img/pycharm/firstrun.png"
+        style="width:100%"
+        alt="First run output" />
+</div>
 
-<div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-        <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/firstrun.png"
-            style="width:100%"
-            alt="First run output" />
-    </div>
+<div class="winonly">
+    <img src="../../img/pycharm/firstrun-win.png"
+        style="width:100%"
+        alt="First run output" />
 </div>
 
 <p><br /></p>
-<p>
-    Now, type the following command into the terminal:
-</p>
-
+<p>Now, type the following command into the terminal:</p>
 <div class="text-center">
-    <code><span class="launcher">python3</span> intro.py &lt; YOUR NAME HERE &gt; </code>
+    <code><span class="launcher">python3</span> intro.py &lt;YOUR NAME HERE&gt; </code>
 </div>
 
 <p><br /></p>
-<p>
-    For example, if your name is Brahm, you'd type <code><span class="launcher">python3</span> intro.py Brahm</code>. You
-    can type your full name if you'd prefer. You should now see output like this:
-</p>
+<p>For example, if your name is Nick, you'd type <code><span class="launcher">python3</span> intro.py Nick</code>. You can type your full name if you'd prefer. You should now see output like this:</p>
+<div class="maconly">
+    <img src="../../img/pycharm/secondrun.png"
+        style="width:100%"
+        alt="Second run output" />
+</div>
 
-<div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-        <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/secondrun.png"
-            style="width:100%"
-            alt="Second run output" />
-    </div>
+<div class="winonly">
+    <img src="../../img/pycharm/secondrun-win.png"
+        style="width:100%"
+        alt="Second run output" />
 </div>
 
 <p><br /></p>
-<p>
-    Congratulations! You're now done with the PyCharm setup process.
-</p>
-
+<p>Congratulations! You're now done with the PyCharm setup process.</p>
 <hr />
-
-<h2>
-    Frequently Asked Questions
-</h2>
-
-<h3>
-    Can I use another version of Python?
-</h3>
-
-<p>
-    Our strong recommendation is to use Python 3.8, which can be installed 
-    in parallel with other versions of Python. This is the only version of Python
-    we'll be supporting in this class. You must use at least Python 3.6.
-</p>
-
-<h3>
-    Can I use an editor that isn't PyCharm?
-</h3>
-
-<p>
-    If there's another environment that you're more comfortable with, you may use it,
-    but the course staff will only provide support for issues in PyCharm. You must not 
-    modify any configuration files provided in assignment starter code. 
-</p>
-
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="can-i-use-another-version-of-python">Can I use another version of Python?</h3>
+<p>Our strong recommendation is to use Python 3.8, which can be installed in parallel with other versions of Python. This is the only version of Python we'll be supporting in this class.</p>
+<h3 id="can-i-use-an-editor-that-isnt-pycharm">Can I use an editor that isn't PyCharm?</h3>
+<p>If there's another environment that you're more comfortable with, you may use it, but the course staff will only provide support for issues in PyCharm. You must not modify any configuration files provided in assignment starter code. </p>
 <h3 data-toc-text="Can't open file">
     When I try to run my code, I'm getting an error saying <code>can't open file intro.py: No such file or directory</code>! What does this mean?
 </h3>
 
-<p>
-    This most often happens when you open the incorrect file or folder in PyCharm. In this case, make sure to 
-    open the <code>pycharm_intro</code> folder that <i>directly</i> contains <code>intro.py</code>, rather than 
-    <code>intro.py</code> itself or a folder containing <code>pycharm_intro</code>. On Windows computer, you may 
-    have a folder called <code>pycharm_intro</code> with another folder inside it called <code>pycharm_intro</code>. 
-    Make sure to open the inner folder.
-</p>
-
-<p>
-    To correct this error, open the 'File' menu and click 'Open'. Then, navigate to the correct 
-    <code>pycharm_intro</code> folder and open it. 
-</p>
-
-<p>
-    To verify that you are in the correct folder,
-    type <span class="maconly"><code>ls</code> (that's a lowercase 'L')</span>
-    <span class="winonly"><code>dir</code></span> into your terminal (the same place
-    you type <code><span class="launcher">python3</span> intro.py &lt; YOUR NAME HERE &gt; </code>).
-    This will show you a list of all the files in that folder, and <code>intro.py</code> should 
-    be in this list.
-</p>
-
+<p>This most often happens when you open the incorrect file or folder in PyCharm. In this case, make sure to open the <code>pycharm_intro</code> folder that <em>directly</em> contains <code>intro.py</code>, rather than <code>intro.py</code> itself or a folder containing <code>pycharm_intro</code>. On a Windows computer, you may have a folder called <code>pycharm_intro</code> with another folder inside it called <code>pycharm_intro</code>. Make sure to open the inner folder.</p>
+<p>To correct this error, open the 'File' menu and click 'Open'. Then, navigate to the correct <code>pycharm_intro</code> folder and open it. </p>
+<p>To verify that you are in the correct folder, type <span class="maconly"><code>ls</code> (that's a lowercase 'L')</span> <span class="winonly"><code>dir</code></span> into your terminal (the same place you type <code><span class="launcher">python3</span> intro.py &lt; YOUR NAME HERE &gt; </code>).  This will show you a list of all the files in that folder, and <code>intro.py</code> should be in this list.</p>
 <h3 data-toc-text="No Python Interpeter Configured">
     I'm getting a 'No Python Interpreter configured for the project' message when I open a file! What should I do?
 </h3>
 
-<p>
-   This is likely caused by an issue with how you set up the interpreter. 
-   To fix this, click 'Configure Python Interpreter', and set up the interpreter 
-   by following <a href="#setinterpreter">these steps</a> until the 'Testing Pycharm' 
-   section.
-</p>
-
+<p>This is likely caused by an issue with how you set up the interpreter.  To fix this, click 'Configure Python Interpreter', and set up the interpreter by following <a href="#setinterpreter">these steps</a> until the 'Testing Pycharm' section.</p>
 <h3 data-toc-text="The default interactive shell is now zsh">
     I'm on a Mac and I'm getting a message saying <code>The default interactive shell is now zsh.
     To update your account to use zsh, please run `chsh -s /bin/zsh</code>. What should I do?
 </h3>
 
-<p>
-    That's just an innocuous message, don't worry about it!
-</p>
-
+<p>That's just an innocuous message, don't worry about it!</p>
 <h3 data-toc-text="PyCharm won't open on a Mac">
     I'm on a Mac and PyCharm won't open! What should I do?
 </h3>
 
-<p>
-    You might be using a slightly older version of MacOS. Try installing 
-    <a href="https://download.jetbrains.com/python/pycharm-community-2018.3.7.dmg?_ga=2.154013245.444478522.1586284244-1193515711.1586109339">this version</a> 
-    of PyCharm instead.
-</p>
-
+<p>You might be using a slightly older version of MacOS. Try installing <a href="https://download.jetbrains.com/python/pycharm-community-2018.3.7.dmg&quot;">this version</a> of PyCharm instead.</p>
 <h3 data-toc-text="JetBrains Runtime 11 & Windows 32-bit">
     I'm getting an error window saying "This installation contains JetBrains Runtime 11
     which does not support Microsoft Windows 32-bit version"! What should I do?
 </h3>
 
-<p>
-    <p>
-        Try installing
-        <a
-            href="https://download.jetbrains.com/python/pycharm-community-2018.3.7.exe?_ga=2.144731825.444478522.1586284244-1193515711.1586109339">this
-            version</a>
-        of PyCharm instead.
-    </p>
-</p>
-
-<p>
-    <i>
-        Course FAQs will be updated as we receive questions.
-    </i>
-</p>
-
+<p>Try installing <a href="https://download.jetbrains.com/python/pycharm-community-2018.3.7.exe">this version</a> of PyCharm instead.</p>
+<p><strong>Course FAQs will be continually updated as we receive questions.</strong></p>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -857,17 +715,12 @@ filePath - the total path to the markdown file being rendered in this template
 
   ga('create', 'UA-74362126-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 
 <script>
     function setWindows() {
         toggle("maconly", "none");
         toggle("winonly", "inline-block");
-        const images = document.getElementsByTagName('img');
-        for (let i = 0; i < images.length; i++) {
-            images[i].src = images[i].src.replace("macos/", "win/")
-        }
 
         const launchers = document.getElementsByClassName("launcher");
         for (let i = 0; i < launchers.length; i++) {
@@ -875,19 +728,12 @@ filePath - the total path to the markdown file being rendered in this template
         }
 
         const osSpiel = document.getElementById('osspiel');
-        osSpiel.innerHTML = "We've detected you're using a Windows Computer. &nbsp; &nbsp; <a href='#' onclick='setMacOS()'> I'm using a Mac </a>."
-
-        const modifier = document.getElementById('modifier');
-        modifier.innerHTML = "Alt";  
+        osSpiel.innerHTML = "We've detected you're using a Windows computer. &nbsp; &nbsp; <a href='#' onclick='setMacOS()'>I'm using a Mac</a>."
     }
 
     function setMacOS() {
         toggle("maconly", "inline-block");
         toggle("winonly", "none");
-        const images = document.getElementsByTagName('img');
-        for (let i = 0; i < images.length; i++) {
-            images[i].src = images[i].src.replace("win/", "macos/")
-        }
 
         const launchers = document.getElementsByClassName("launcher");
         for (let i = 0; i < launchers.length; i++) {
@@ -895,10 +741,7 @@ filePath - the total path to the markdown file being rendered in this template
         }
 
         const osSpiel = document.getElementById('osspiel');
-        osSpiel.innerHTML = "We've detected you're using a Mac. &nbsp; &nbsp; <a href='#' onclick='setWindows()'> I'm using a Windows Machine </a>.";  
-
-        const modifier = document.getElementById('modifier');
-        modifier.innerHTML = "Command";       
+        osSpiel.innerHTML = "We've detected you're using a Mac. &nbsp; &nbsp; <a href='#' onclick='setWindows()'>I'm using a Windows Machine</a>.";   
     }
 
     function setUnknownOS() {
@@ -906,7 +749,7 @@ filePath - the total path to the markdown file being rendered in this template
        osSpiel.innerHTML = `
         We weren't able to detect what operating system you're using. Click 
         <a href="#" onclick="setMacOS()"> here </a> if you're using a Mac and 
-        <a href="#" onclick="setWindows()"> here </a> if you're using a Windows Machine.
+        <a href="#" onclick="setWindows()"> here </a> if you're using a Windows machine.
        `
     }
 
@@ -931,12 +774,8 @@ filePath - the total path to the markdown file being rendered in this template
         }
     }
 
-
     window.onload = setOS;
-
 </script>
-
-<p></body></p>
 	</div>
 </div>
 

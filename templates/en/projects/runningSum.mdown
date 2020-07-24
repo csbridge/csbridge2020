@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Run, Sum, Run!
 credit: Lisa Yan
 
-File: `runningsum.py`
+File: `running_sum.py`
 
 Write a program that reads in integers from the user and then outputs the current
 sum of the entered values. Here's what the output of the program should look like:

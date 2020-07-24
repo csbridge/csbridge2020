@@ -21,7 +21,7 @@ def main():
     increment = 1
     for i in range(NUM_PACKAGES):
       suffix = random.randint(10000, 99999)
-      increment += 1 # if students don't know loop index variables yet
+      increment += 1
       prefix = base_prefix + increment
       print(str(prefix) + str(suffix))
 

@@ -25,7 +25,7 @@ And so on...
 
 When an organism is alive, it keeps replenishing its supply of c14 to the natural level. But when it dies (moment of silence), the amount of c14 starts to decrease. By testing how much c14 is left, scientists know how how long a dead thing has been dead for. Good times.
 
-## Lookup Table
+## Milestone 1: Lookup Table
 To get started, let's make a lookup table that maps the percent of c14 remaining to the number of years the sample has been dead for. Print out the percent c14 remaining, and the number of years passed for the first 20 half lives. Your table should look like the following:
 
 ```
@@ -54,8 +54,7 @@ Percent C-14 Remaining: years passed
 0.00019073486328125%: 108300 years
 ```
 
-## Extension
-If you finish early and have extra time, try this extension.
+## Milestone 2: Interactive Mode
 
 For scientists it will be much more useful for them to input the percent of natural c14 that they measured, and have the program tell them the age. Repeatedly ask the user to enter a percent of natural c14 remaining and then output the age of their sample.
 
@@ -87,6 +86,7 @@ To take the natural log of a number (the ln function), add `import math` at the 
 math.log(value)
 ```
 
+## Final product
 Overall, your program should look like the following.  If the user enters -1 as the percent, end the program.
 
 ```

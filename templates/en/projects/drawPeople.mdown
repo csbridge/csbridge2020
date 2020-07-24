@@ -1,0 +1,57 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Mad Methods
+credit: Written by Chris, Bryce, and Lisa
+
+## 1. Mad Max
+
+Example: [Average Method]({{pathToRoot}}en/projects/averageMethod.html}}) <br/>
+File: `mad_max.py`
+
+Complete the program by filling in the `mad_max` method that returns the largest of three numbers:
+
+```
+def mad_max(x, y, z):
+    ... your code here ...
+```
+The `main` method has already been written for you:
+```
+def main():
+    print("The max of 4, 5, and 6 is:", mad_max(4, 5, 6))
+    print("The max of -4, 4, and 0 is:", mad_max(-4, 4, 0))
+    print("The max of 3, 2, and 1 is:", mad_max(3, 2, 1))
+    print("The max of 0, 0, and 0 is:", mad_max(0, 0, 0))
+```
+
+Your output should look like this:
+```
+The max of 4, 5, and 6 is: 6
+The max of -4, 4, and 0 is: 4
+The max of 3, 2, and 1 is: 3
+The max of 0, 0, and 0 is: 0
+```
+
+## 2. Draw Trees
+Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
+Example: [Draw People]({{pathToRoot}}en/projects/drawpeople.html}}),
+[Half Green]({{pathToRoot}}en/projects/halfgreen.html}})<br/>
+File: `draw_trees.py`
+
+
+Fill in the `draw_tree` method that draws a tree with the _*base*_ of its trunk centered at the provided `(x, y)` position.
+
+The `main` method has already been written for you:
+```
+def main():
+    draw_tree(50, 150)
+    draw_tree(100, 300)
+    draw_tree(500, 200)
+    draw_tree(300, 250)
+    draw_tree(700, 310)
+
+```
+
+Each tree should have a trunk with a width of 20 pixels (`TRUNK_WIDTH`) and a height of 80 pixels (`TRUNK_HEIGHT`). The leaves should have a radius of 30 pixels (`LEAVES_RADIUS`). Your output should look like this:
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/madmethods/demo.png">
+</center>

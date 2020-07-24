@@ -6,6 +6,8 @@ File: step_up.py
 Your first example Karel program. Have Karel pick up the beeper infront
 of her and place it on top of the ledge.
 This is a comment. Your computer will ignore it.
+
+This program is already completed for you. Try running it!
 """
 
 def main():
