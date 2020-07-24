@@ -97,7 +97,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/phonebook.html">TA Solution</a>
 					% end
 				</td>
-				<td>Interactors</td>
+				<td>Dictionaries</td>
 			</tr>
 		</tbody>
 
@@ -163,7 +163,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/mouseLocation.html">TA Solution</a>
 					% end
 				</td>
-				<td>Events</td>
+				<td>Interactors</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/makingTracks.png"></img></td>
@@ -173,7 +173,7 @@
 					% end
         <br/><span class="label label-success">Project</span>
 				</td>
-				<td>Events</td>
+				<td>Interactors</td>
 			</tr>
     </tbody>
     <tbody
@@ -213,7 +213,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/snow.html">TA Solution</a>
 					% end
 				</td>
-				<td>ArrayLists</td>
+				<td>Lists</td>
 			</tr>
 
 			<tr>
@@ -234,7 +234,7 @@
 					% end
           <br/><span class="label label-success">Project</span>
           </td>
-				<td>ArrayLists</td>
+				<td>Lists</td>
 			</tr>
 		</tbody>
 
@@ -296,7 +296,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/mysterySquare.html">TA Solution</a>
 					% end
 				</td>
-				<td>Randomness</td>
+				<td>Animation</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/bouncing.png"></img></td>
@@ -317,7 +317,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/shortFilm.html">TA Solution</a>
 					% end
 				</td>
-				<td>Params and Returns</td>
+				<td>Animation</td>
 			</tr>
 		</tbody>
 
@@ -359,7 +359,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/randomCircles.html">TA Solution</a>
 					% end
 				</td>
-				<td>Randomness</td>
+				<td>Graphics and Randomness</td>
 			</tr>
     </tbody>
     <tbody
@@ -378,7 +378,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/dogYears.html">TA Solution</a>
 					% end
 				</td>
-				<td>Randomness</td>
+				<td>Params and Returns</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/fizzbuzz.png"></img></td>
@@ -388,7 +388,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/fizzbuzz.html">TA Solution</a>
 					% end
 				</td>
-				<td>Randomness</td>
+				<td>Params and Returns</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/target.png"></img></td>
@@ -444,7 +444,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/someSum.html">TA Solution</a>
 					% end
 				</td>
-				<td>Variables</td>
+				<td>Loop variables</td>
 			</tr>
 
 			<tr>
@@ -455,7 +455,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/carbonDating.html">TA Solution</a>
 					% end
 				</td>
-				<td>Variables</td>
+				<td>Loop variables</td>
 			</tr>
     </tbody>
 
@@ -529,7 +529,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/8ball.html">TA Solution</a>
 					% end
 				</td>
-				<td>Control flow</td>
+				<td>Conditionals</td>
 			</tr>
 
 			<tr>
@@ -540,7 +540,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/viralVideo.html">TA Solution</a>
 					% end
 				</td>
-				<td>Variables</td>
+				<td>Conditionals</td>
 			</tr>
 
 			<tr>
@@ -551,7 +551,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/khansole.html">TA Solution</a>
 					% end
 				</td>
-				<td>Variables</td>
+				<td>Conditionals</td>
 			</tr>
 
 		</tbody>

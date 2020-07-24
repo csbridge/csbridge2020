@@ -97,7 +97,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/phonebook.html">TA Solution</a>
 					% end
 				</td>
-				<td>Interactors</td>
+				<td>Dictionaries</td>
 			</tr>
 		</tbody>
 
@@ -163,7 +163,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/mouseLocation.html">TA Solution</a>
 					% end
 				</td>
-				<td>Events</td>
+				<td>Interactors</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/makingTracks.png"></img></td>
@@ -173,7 +173,7 @@
 					% end
         <br/><span class="label label-success">Project</span>
 				</td>
-				<td>Events</td>
+				<td>Interactors</td>
 			</tr>
     </tbody>
     <tbody
@@ -207,13 +207,13 @@
 			</tr>
       <tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/snow.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/snow.html">(old) Snow</a>
+				<td><a href="{{pathToRoot}}en/projects/snow.html">Snow</a>
         <br/><span class="label label-primary">Section</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/soln/snow.html">TA Solution</a>
 					% end
 				</td>
-				<td>ArrayLists</td>
+				<td>Lists</td>
 			</tr>
 
 			<tr>
@@ -234,7 +234,7 @@
 					% end
           <br/><span class="label label-success">Project</span>
           </td>
-				<td>ArrayLists</td>
+				<td>Lists</td>
 			</tr>
 		</tbody>
 
@@ -317,7 +317,7 @@
 						<br><a href="{{pathToRoot}}tas/soln/shortFilm.html">TA Solution</a>
 					% end
 				</td>
-				<td>Params and Returns</td>
+				<td>Animation</td>
 			</tr>
 		</tbody>
 
