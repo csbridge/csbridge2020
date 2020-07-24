@@ -174,7 +174,7 @@
 	          	<div class="dropdown-divider visible-after" data-visible-after="2019071109"></div>
 	          	<h6 class="dropdown-header visible-after" data-visible-after="2019071513">Day 5</h6>
 	            <a class="dropdown-item visible-after" data-visible-after="2019071509"
-	            	href="{{pathToRoot}}en/projects/stamptool/index.html">Stamp Tool</a>
+	            	href="{{pathToRoot}}en/projects/stampTool/index.html">Stamp Tool</a>
 	          	<a class="dropdown-item visible-after" data-visible-after="2019071509"
 	          		href="{{pathToRoot}}en/projects/holePuncher.html">Hole Puncher</a>
 	          	<a class="dropdown-item visible-after" data-visible-after="2019071509"
