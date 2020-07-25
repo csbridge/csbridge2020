@@ -1,0 +1,118 @@
+% rebase('templates/tas/notes/template.ptl', problemTitle="Short Film")
+
+<p>
+	This is the main lab problem in the afternoon.  Students develop a program that animates a short film.  We provide some initial milestones, and then students are free to use their creativity to create anything they'd like!
+</p>
+
+<h3>Milestone 1</h3>
+<p>Students should start by implementing a <code>displayMessage</code> method that displays a white label with specified text on a black background.  It may look something like this:</p>
+<pre id="editor1" style="height:300px">private void displayMessage(String message) {
+    // Add a black "background"
+    GRect background = new GRect(getWidth(), getHeight());
+    background.setFilled(true);
+    add(background);
+
+    // Create the centered white message
+    GLabel label = new GLabel(message);
+    label.setColor(Color.WHITE);
+    label.setFont("Papyrus-40");
+    double xLocation = getWidth() / 2 - label.getWidth() / 2;
+    double yLocation = getHeight() / 2 + label.getAscent() / 2;
+    add(label, xLocation, yLocation);
+
+    pause(2000);
+    remove(label);
+    remove(background);
+}</pre>
+
+<h3>Milestone 2</h3>
+<p>Students should add a scene to show a sun setting.  It should have the sky and earth, and then animate the sun moving down the screen until it goes below the horizon (behind the earth rectangle).  A good two-step process is to first display the static graphics, and then animate the sun.  Here's what this might look like:</p>
+<pre id="editor2" style="height:500px">public void run() {
+    // Add the sky
+    GRect sky = new GRect(getWidth(), getHeight() / 2);
+    sky.setFilled(true);
+    sky.setColor(Color.BLUE);
+    add(sky);
+    
+    // Add the sun
+    GOval sun = new GOval(SUN_DIAMETER, SUN_DIAMETER);
+    sun.setFilled(true);
+    sun.setColor(Color.YELLOW);
+    double sunX = getWidth() / 2 - sun.getWidth() / 2;
+    double sunY = getHeight() / 4 - sun.getHeight() / 2;
+    add(sun, sunX, sunY);
+    
+    // Add the earth
+    GRect earth = new GRect(0, getHeight() / 2, getWidth(), getHeight() / 2);
+    earth.setFilled(true);
+    earth.setColor(Color.GREEN);
+    add(earth);
+    
+    // Animate the sun
+    while (sun.getY() < earth.getY()) {
+        sun.move(0, 5);
+        pause(50);
+    }
+}</pre>
+
+<h3>Milestone 3</h3>
+<p>Next, students should write a method <code>getSunColor</code> that returns the color the sun should be given some parameter about the animation.  This could be something like the position of the sun, or the frame number in the animation, or so on.  It is up to them how to determine the sun's color with this information.  Here are two examples.</p>
+<pre id="editor3" style="height:400px"> // Use the y position of the sun
+public void run() {
+    ...
+    // Animate the sun
+    while (sun.getY() < earth.getY()) {
+        sun.setColor(getSunColor(sun.getY()));
+        sun.move(0, 2);
+        pause(DELAY);
+    }
+}
+
+private Color getSunColor(double sunY) {
+    if (sunY <= MAX_Y_YELLOW) {
+        return Color.yellow;
+    } else if (sunY <= MAX_Y_ORANGE) {
+        return Color.orange;
+    }
+    
+    return Color.RED;
+}</pre>
+
+<pre id="editor4" style="height:400px">// Use the frame number in the sun animation
+public void run() {
+    ...
+    // Animate the sun
+    int frame = 0;
+    while (sun.getY() < earth.getY()) {
+        sun.setColor(getSunColor(frame));
+        sun.move(0, 2);
+        pause(DELAY);
+        frame++;
+    }
+}
+
+private Color getSunColor(int frame) {
+    if (frame <= MAX_FRAME_YELLOW) {
+        return Color.yellow;
+    } else if (frame <= MAX_FRAME_ORANGE) {
+        return Color.orange;
+    }
+    
+    return Color.RED;
+}</pre>
+
+<p>After this, students are free to do whatever they'd like to make their film better!</p>
+
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    for (var i = 1; i <= 4; i++) {
+        var editor = ace.edit("editor" + i);
+        editor.setTheme('ace/theme/eclipse');
+        editor.getSession().setMode("ace/mode/java");
+        editor.setReadOnly(true);
+        editor.renderer.setShowGutter(false); 
+        /*editor.setTheme("ace/theme/eclipse");
+        editor.getSession().setMode("ace/mode/java");*/
+    }
+</script>
