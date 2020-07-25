@@ -641,6 +641,16 @@
 				</td>
 				<td>If Statements</td>
 			</tr>
+			<tr>
+        <td><img class="projectImg" src="{{pathToRoot}}img/icons/midpoint.png"></img></a></td>
+				<td><a href="{{pathToRoot}}en/bonus-index.html">[Optional] Midpoint or Checkerboard</a></td>
+
+					% if get('taMode', False):
+						<br><a href="{{pathToRoot}}tas/soln/randomPainter.html">TA Solution</a>
+					% end
+				</td>
+				<td>Control Flow</td>
+			</tr>
     </tbody>
 
     <thead>
