@@ -615,7 +615,7 @@
 				<td><a href="{{pathToRoot}}en/projects/stripeKarel.html">Stripe Karel</a>
           <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/stripeKarel.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/notes/stripeKarel.html">TA Notes</a>
 					% end
 				</td>
 				<td>Nested Loops</td>
