@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-# hello world change asdfasdf
-
 '''
 FILE: compile.py
 ----------------

@@ -1,3 +1,4 @@
+% setdefault('problemTitle', get('problemtitle'))
 % rebase('templates/en/template.ptl', title=problemTitle + " (TA)", taMode=True)
 
 <!-- Main Content -->

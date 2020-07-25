@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Arches Karel</title>
+<title>CS Bridge  | Build Arches (TA)</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -393,6 +393,9 @@
 	        </ul>
 
 	        <!-- TA Link -->
+		        <ul class="nav navbar-nav navbar-right">
+		            <li><a href="../../tas">TA Page</a></li>
+		        </ul>
 
 	      </ul>
 
@@ -425,76 +428,28 @@
 
 <div class="container">
 	
-	<!--
-Template for rendering a project page, for use with Markdown specs.  Expects
-the following properties passed in:
+	
+<!-- Main Content -->
+<div class="container">
 
-title - problem title
-credit - problem credit (optional)
-solution - problem solution python filename (optional)
-base - the HTML body for this template
-filePath - the total path to the markdown file being rendered in this template
--->
+	<!-- Header -->
+	<div id="pageHeader">
+		<h1>
+            TA Solution: Build Arches
+		</h1>
+    </div>
 
+	<hr/>
 
-<!-- Header -->
-<div id="pageHeader">
-	<h1>
-		Arches Karel
-	</h1>
-
-		<p>
-			Credit: Lisa Yan
-		</p>
-</div>
-<hr/>
-
-<!-- Problem description -->
-<div class="row">
-	<div class="col-xs-12">
-		<p>Handouts: <a href="../../en/resources/karel.html">KarelReference</a><br/>
-Worked Example: <a href="../../en/projects/place100.html">Place100</a><br/>
-Day1: <code>arches_karel.py</code></p>
-<p>Karel has been hired to build the arches done to the Stanford Main Quad in the 1989 Loma Prieta earthquake. Or use your imagination! Karel has been hired to build the columns of the Charles Bridge, or the columns in the Temple of Artemis in Efes. In particular, there are a set of arches where the stones (represented by beepers, of course) are missing as below:
-                <p>
-                    <center>
-                        <img style="width:600px" src="../../img/projects/efes/efesBroken.png"><br />
-                    </center>
-                </p></p>
-<p>When Karel is done, the missing columns should be replaced by beepers, so the final picture would look like this:
-                <p>
-                    <center>
-                        <img style="width:600px" src="../../img/projects/efes/efesRepaired.png">  <br />
-                    </center>
-                </p></p>
-<p>Karel may count on the following facts about the world, listed below:</p>
-<ul>
-<li>Karel starts at 1st Avenue and 1st Street, facing east.</li>
-<li>The columns are exactly four squares apart, on 1st, 5th, 9th and 13th Avenue.</li>
-<li>Karel can assume that columns are always five units high.</li>
-</ul>
-<p>This problem is a great opportunity to practice decomposition. For example, it would make sense to have a <code>build_column</code> method. </p>
-<h2 id="for-loops">For loops</h2>
-<p>One thing that computers are really good at is repeating commands.</p>
-<p>In general, if you know before hand that there is a block of code you would like to repeat many times you can use a "for" loop, which looks like this:</p>
-<pre><code>for i in range(n):
-    ... your code ...
-
-</code></pre>
-
-<p>Instead of <code>n</code>, you should write the number of times you want your code to be repeated.</p>
-<p>For example if you want to move forward ten times, instead of writing the move(); command ten times you could write:</p>
-<pre><code>for i in range(10):
-    move()
-</code></pre>
-
-<p>See the <a href="../../en/projects/place100/">Place 100 Beepers</a> program for another example.</p>
-<p>Your program will be much easier to write and easier to read, if you use <code>for</code> loops. There are multiple opportunities to use them in this problem! </p>
+	<div class="row">
+		<div class="col-xs-12">
+            <p>The problem below is the section problem for the day.  Here is information about the goals for the problem and what you should focus on during section:</p>
+<p><strong>Learning Goal</strong>: <code>for</code> loops and decomposition</p>
+<p><strong>Milestone</strong>: build a single column</p>
+<p>Write code on the board. Start with pseudocode, turn to real code.  Encourage students to work in pairs to program out the milestones.  The hardest part is the fence-post bug when building a col, and when putting beepers in a column.</p>	
+		</div>
 	</div>
 </div>
-
-<!-- Solution (if included) -->
-
 			
 	<!-- Footer -->
 <hr>
