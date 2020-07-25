@@ -1,0 +1,21 @@
+% rebase('templates/en/template.ptl', title='Section Leader Resources', taMode=True)
+
+<!-- Header -->
+<div id="pageHeader">
+  <h1>
+    Section Leader Resources
+  </h1>
+</div>
+<hr/>
+
+<div class="row">
+  <div class="col-xs-12">
+    {{!base}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    % include('templates/en/programTable.ptl', taMode=True)
+  </div>
+</div>
