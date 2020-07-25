@@ -34,7 +34,7 @@ Note that Karel should still work on the below world as well:
 
 ## Extension
 
-Congrats on finishing this part! If you have time, try editing your code to work with an even nuber of rows, like below.
+Congrats on finishing this part! If you have time, try editing your code to work with an even number of rows, like below.
 
 <center>
 	<img style="width:600px"  src="{{pathToRoot}}img/projects/stripeKarel/world_even.png">	
