@@ -1,0 +1,574 @@
+<!--
+	A template used for every page - contains the header.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
+<title>CS Bridge  | How to use PyCharm</title>
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../../plugins/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../style.css">
+
+<!-- Java Script -->
+<script src="../../plugins/jquery.min.js"></script>
+<script src="../../plugins/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+
+<script src="../../karel/ace/ace.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/moment.min.js"></script>
+<script type="text/javascript" src="../../js/index.js"></script>
+<script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
+
+
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+  </script>-->
+
+<script src="../karel/js/html/websiteImports.js"></script>
+<script>importCss();</script>
+<script>importJs();</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+	</head>
+	<body>
+		<!--
+	A template used for every Turkish page - contains the nav bar, a container div, and the footer.
+-->
+
+  <!-- Navigation Bar -->
+<nav class="navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="../../">CS Bridge</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <!--<li ><a href="#">Link</a></li>-->
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+          		<li><a class="visible-after" data-visible-after="2019071009" href="../../tr/resources/quick-python.html">Python Referansı</a></li>
+	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../tr/resources/graphics.html">Grafik Referansı</a>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../tr/resources/animation.html">Animation Reference</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../tr/resources/general-info.html">General Info</a></li>
+              <li><a href="../../tr/resources/student-faq.html">[Student] Course FAQs</a></li>
+              <li><a href="../../tr/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
+              <li><a href="../../tr/resources/section-info.html">Section Info</a></li>
+              <li><a href="../../tr/resources/zoom-info.pdf">Zoom Guide</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../../tr/resources/install.html">Install PyCharm</a></li>
+              <li><a href="../../tr/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+
+              <!-- Not used nor visible -->
+				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../tr/resources/jar.html">Exporting Projects as JARs</a>-->
+	          	<!--<a class="visible-after" href="../../tr/resources/sections.html">Sections</a>-->
+	          </ul>
+	        </li>
+
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projeler <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+
+	          	<!-- Day 1 -->
+	          	<li class="dropdown-header">1. Gün</li>
+	            <li>
+	            	<a href="../../tr/projects/collectNewspaper.html">Gazete Alma</a>
+	            </li>
+	          	<li class="visible-after" data-visible-after="2019070912">
+	          		<a href="../../tr/projects/arches.html">Arches Karel</a>
+	          	</li>
+	          	
+	          	<!-- Day 2 -->
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">2. Gün Morning</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../tr/projects/placeSquare.html">Place Square</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../tr/projects/mountain.html">Dağcı Karel</a>
+	          	</li>
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">2. Gün Evening</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../tr/projects/stripeKarel.html">Stripe Karel</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../tr/projects/hospitalKarel.html">Hospital Karel</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019070913">
+	          		<a href="../../tr/projects/randomPainter.html">Deli Ressam</a>
+	          	</li>
+	          	
+	          	<!-- Day 3 -->
+	          	<li class="divider visible-after" data-visible-after="2019071109" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071109">3. Gün</li>
+          		<li class="visible-after" data-visible-after="2019071009">
+          			<a href="../../tr/projects/sandcastles.html">Kumdan Kaleler</a>
+          		</li>
+          		<li class="visible-after" data-visible-after="2019071009">
+          			<a href="../../tr/projects/subtractNum.html">Subtract Numbers</a>
+          		</li>
+          		<li class="visible-after" data-visible-after="2019071009">
+          			<a href="../../tr/projects/runningSum.html">Run, Sum, Rum</a>
+          		</li>
+          		<li class="visible-after" data-visible-after="2019071009">
+          			<a href="../../tr/projects/8ball.html">8 Numaralı Top</a>
+          		</li>
+          		<li class="visible-after" data-visible-after="2019071009">
+          			<a href="../../tr/projects/viralVideo.html">Viral Video</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../tr/projects/khansoleAcademy.html">Khansole Academy</a>
+	          	</li>
+
+				<!-- Day 4 -->
+				<li class="divider visible-after" data-visible-after="2019071209" />
+				<li class="dropdown-header visible-after" data-visible-after="2019071209">4. Gün</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../tr/projects/someSum.html">Üç Aşağı Beş Yukarı</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071013">
+	          		<a href="../../tr/projects/carbonDating.html">Karbon Tarihi Saptama</a>
+	          	</li>
+
+				<!-- Day 5 -->
+          		<li class="divider visible-after" data-visible-after="2019071509" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün Morning</li>
+          		<li class="visible-after" data-visible-after="2019071109">
+          			<a href="../../tr/projects/awesome.html">Programcılık Bir Harika<a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071113">
+	          		<a href="../../tr/projects/randomCircles.html">Random Circles</a>
+	          	</li>
+          		<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün Evening</li>
+	          	<li class="visible-after" data-visible-after="2019071113">
+	          		<a href="../../tr/projects/madMethods.html">Mad Methods</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071113">
+	          		<a href="../../tr/projects/fizzbuzz.html">Fizzbuzz</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071212">
+	          		<a href="../../tr/projects/target.html">Hedef Tahtası</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../tr/projects/stringArt.html">String Sanatı</a>
+	          	</li>
+
+				<!-- Day 6 -->
+          		<li class="divider visible-after" data-visible-after="2019071509" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071509">6. Gün Morning</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../tr/projects/indexCounter.html">Index Counter</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071213">
+	          		<a href="../../tr/projects/illusion.html">Optik İllüzyon</a>
+	          	</li>
+          		<li class="dropdown-header visible-after" data-visible-after="2019071509">Day 6 Evening</li>
+	          	<li class="visible-after" data-visible-after="2019071112">
+	          		<a href="../../tr/projects/mysterySquare.html">Gizemli Kare</a>
+	          	</li>
+	            <li class="visible-after" data-visible-after="2019071113">
+	            	<a href="../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
+	            </li>
+	          	<li class="visible-after" data-visible-after="2019071213">
+	          		<a href="../../tr/projects/sunset.html">Kısa Film</a>
+	          	</li>
+
+        <!-- Day 7 -->
+          		<li class="divider visible-after" data-visible-after="2019071709" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071709">7. Gün Morning</li>
+          		<li class="visible-after" data-visible-after="2019071509">
+          			<a href="../../tr/projects/mouseLocation.html">Mouse Location</a>
+          		</li>
+          		<li class="visible-after" data-visible-after="2019071509">
+          			<a href="../../tr/projects/makingTracks.html">İz Çıkartmaca</a>
+          		</li>
+          		<li class="dropdown-header visible-after" data-visible-after="2019071709">7. Gün Evening</li>
+	          	<li class="visible-after" data-visible-after="2019071512">
+	          		<a href="../../tr/projects/isAscending.html">Is Ascending</a>
+	          	</li>
+          		<li class="visible-after" data-visible-after="2019071709">
+          			<a href="../../tr/projects/sortedNumbers.html">Sorted Numbers</a>
+          		</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../tr/projects/snow.html">Kar</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../tr/projects/mouseGame.html">[Opsiyonel] Patika</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071712">
+	          		<a href="../../tr/projects/music.html">[Opsiyonel] Ses Dalgaları</a>
+	          	</li>
+              
+	          	<li class="visible-after" data-visible-after="2019071512">
+	          		<a href="../../tr/projects/catchMeIfYouCan.html">Yakala Yakalayabilirsen</a>
+	          	</li>
+
+        <!-- Day 8-9 -->
+	          	<li class="divider visible-after" data-visible-after="2019071513" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071513">5./6. Gün</li>
+          		<li class="visible-after" data-visible-after="2019071513">
+          			<a href="../../tr/projects/breakout.html">Breakout</a>
+          		</li>
+
+        <!-- Day 10 -->
+          		<li class="divider visible-after" data-visible-after="2019071709" />
+          		<li class="dropdown-header visible-after" data-visible-after="2019071709">10. Gün</li>
+          		<li class="visible-after" data-visible-after="2019071513">
+          			<a href="../../tr/projects/phoneBook.html">Phone Book</a>
+          		</li>
+
+	      <!-- Days end -->
+	          	<li class="divider visible-after" data-visible-after="2019071709" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071713">11. Gün</li>
+	          	<li class="visible-after" data-visible-after="2019071713">
+	          		<a href="../../tr/projects/project.html">Kendi Projenizi Yaratın</a>
+	          	</li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Örnekler  <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li class="dropdown-header">1. Gün</li>
+	          	<li><a href="../../tr/projects/stepUp/index.html">Adım adım</a></li>
+	          	<li><a href="../../tr/projects/place100/index.html">100 Koymak</a></li>
+	          	<li><a href="../../tr/projects/beeperLine/index.html">Beeper Hattı</a></li>
+	          	<li><a href="../../tr/projects/invertBeeper/index.html">Beeper Ters Çevir</a></li>
+	          	<li><a href="../../tr/projects/unKarel/index.html">UN Karel</a></li>
+	          	<li><a href="../../tr/projects/banishWinter/index.html">İnsani Yardım Karel'i</a></li>
+
+
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+	          	<li class="dropdown-header visible-after" data-visible-after="2019071009">2. Gün</li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../tr/projects/emc2.html">E=MC2</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../tr/projects/fibb.html">Fibonacci</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071009">
+	            	<a href="../../tr/projects/findPi.html">Pi'yi Bul</a>
+	            </li>
+              <!-- Used to be a main course component -->
+	          	<li class="visible-after" data-visible-after="2019071012">
+	          		<a href="../../trold/projects/favoriteNumber.html">En Sevdiğim Numara</a>
+	          	</li>
+            	
+            	<li class="divider visible-after" data-visible-after="2019071109" />
+            	<li class="dropdown-header visible-after" data-visible-after="2019071109">3. Gün</li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../tr/projects/robotFace/index.html">Robot Surat</a>
+	            </li>
+              <!-- Used to be a main course component -->
+	          	<li class="visible-after" data-visible-after="2019071012">
+	          		<a href="../../trold/projects/medicine.html">Sahte İlaç</a>
+	          	</li>
+            	<li class="divider visible-after" data-visible-after="2019071109" />
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../tr/projects/moveToCenter.html">Merkeze Git</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071109">
+	            	<a href="../../tr/projects/gravityBall.html">Seken Top</a>
+	            </li>
+
+				      <li class="divider visible-after" data-visible-after="2019071209" />
+				      <li class="dropdown-header visible-after" data-visible-after="2019071209">4. Gün</li>
+				      <li class="visible-after" data-visible-after="2019071209">
+				      	<a href="../../tr/projects/averageMethod.html">Ortalama Metodu</a>
+				      </li>	
+				      <li class="visible-after" data-visible-after="2019071209">
+				      	<a href="../../tr/projects/drawPeople.html">İnsan Çizme</a>
+				      </li>	
+	          	<li class="visible-after" data-visible-after="2019071209">
+	          		<a href="../../tr/projects/halfGreen.html">Yarısı Yeşil</a>
+	          	</li>
+
+	        	<li class="divider visible-after" data-visible-after="2019071509" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün</li>
+	            <li class="visible-after" data-visible-after="2019071509">
+	            	<a href="../../tr/projects/stampTool/index.html">Damga Makinesi</a>
+	            </li>
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../tr/projects/holePuncher.html">Delgeç</a>
+	          	</li>	
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../tr/projects/debrisSweeper.html">Enkazı Kaldır</a>
+	          	</li>	
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../tr/projects/suchADrag.html">Ne Kaydırma Ama<</a>
+	          	</li>
+	          	<li class="visible-after" data-visible-after="2019071509">
+	          		<a href="../../tr/projects/keyboardKarel.html">Karel Klavyede</a>
+	          	</li>
+
+	          <li class="divider visible-after" data-visible-after="2019071709" />
+	        	<li class="dropdown-header visible-after" data-visible-after="2019071709">7. Gün</li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../tr/projects/rocketPaddle.html">Rocket Ship</a>
+	            </li>
+	            <li class="visible-after" data-visible-after="2019071709">
+	            	<a href="../../trold/projects/anatolianRock.html">Anatolian Rock</a>
+	            </li>
+	        </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slaytlar  <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../../slides/Welcome.pdf">Karel</a></li>
+	          	<li><a href="../../slides/ControlFlow.pdf">Control Flow Slides)</a></li>
+	          	<li><a href="../../starter/ControlFlow.zip">Control Flow (Code)</a></li>
+	          	<li><a href="../../slides/Variables.pdf">Değişkenler</a></li>
+			<li><a href="../../slides/Variables2.pdf">Değişkenler 2</a></li>
+	          	
+	          	<li><a href="../../slides/Graphics.pdf">Grafikler (Slides)</a></li>
+	          	<li><a href="../../starter/Graphics.zip">Grafikler (Code)</a></li>
+	          	<li><a href="../../slides/Animation.pdf">Animasyon</a></li>
+	          	<li><a href="../../slides/Methods.pdf">Metotlar</a></li>
+	          	<li><a href="../../slides/NestedLoops.pdf">Nested Loops</a></li>
+	          	<li><a href="../../slides/Events.pdf">Events (Slides)</a></li>
+	          	<li><a href="../../starter/Events.zip">Events (Code)</a></li>
+	          	<li><a href="../../slides/Breakout.pdf">Breakout</a></li>
+	          	<li><a href="../../slides/AI.pdf">AI (Yapay Zeka)</a></li>
+	          	<li><a href="../../slides/ArrayLists.pdf">Dizi Listeleri (ArrayLists)</a></li>
+	          	<li><a href="../../slides/HashMaps.pdf">HashMaps</a></li>
+	         	<li><a href="../../slides/Internet.pdf">The Internet (Slides)</a></li>
+	         	<li><a href="../../starter/Internet.zip">The Internet (Code)</a></li>
+	         	<li><a href="../../slides/Beyond-CSBridge.pdf">Beyond CSBridge</a></li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Formlar <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Survey</a></li>
+                <li><a href="https://forms.gle/eVsMyZb8HCSUETeV6">Sign in To Lab</a></li>
+	          </ul>
+	        </li>
+
+			
+	        <!-- Bonus button -->
+	        <ul class="nav navbar-nav">
+	            <li><a href="../../tr/old/bonus-index.html">Bonus</a></li>
+	        </ul>
+			
+	        <!-- Old/New button -->
+	        <ul class="nav navbar-nav">
+	            <li><a href="../../tr/old/index.html">[2019]</a></li>
+	            <li><a href="../../tr/index.html">[2020]</a></li>
+	        </ul>
+
+	        <!-- TA Link -->
+
+	      </ul>
+
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/english_flag.png"></img></a></li>
+	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
+	        
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+
+</script>
+  
+  <div class="container">
+  	
+  	<!--
+Template for rendering an FAQ page, for use with Markdown specs.  Expects
+the following properties passed in:
+
+title - problem title
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
+
+
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		How to use PyCharm
+	</h1>
+
+</div>
+<hr/>
+
+<!-- Text description -->
+<div class="row">
+	<div class="col-xs-12">
+		<div class="toc">
+<ul>
+<li><a href="#download-a-starter-project">Download a starter project</a></li>
+<li><a href="#import-a-project">Import a project</a></li>
+<li><a href="#edit-code">Edit code</a></li>
+<li><a href="#run-programs">Run programs</a><ul>
+<li><a href="#how-to-run-python-programs-in-pycharm">How to run Python programs in Pycharm</a></li>
+<li><a href="#how-to-run-karel-programs-in-pycharm">How to run Karel programs in Pycharm</a><ul>
+<li><a href="#running-karel-in-different-worlds">Running Karel in different worlds</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Once you have downloaded a copy of PyCharm as described in the “Installing PyCharm” handout on the course website, your next task is to understand how to write and run Karel programs using PyCharm.</p>
+<h2 id="download-a-starter-project">Download a starter project</h2>
+<ol>
+<li>In the navigation bar above, go to the front page of the CS Bridge website and click on the morning or evening project you want to download. Suppose you download the starter code for Day 1 ("Morning project [here]").</li>
+<li>You will now have a folder called <code>Day1PM.zip</code>. Unzip it by double-clicking.<ul>
+<li>In some cases, the browser will also automatically unzip/extract the folder when you download it if you have the appropriate software for expanding files from a ZIP archive (extraction software is usually built in to Windows 7, 8, and 10 or macOS).</li>
+<li>The unzipped contents of the ZIP file will be a directory named Day1PM that contains the project.</li>
+<li><strong>Note</strong> If you are on a Windows computer, you may have a second Day1PM folder nested outside the outer Day1PM folder. <strong>Make sure to use the innermost Day1PM folder</strong>.</li>
+</ul>
+</li>
+<li>Move that folder to some place on your computer where you can keep track of it when you want to load the project.</li>
+</ol>
+<h2 id="import-a-project">Import a project</h2>
+<ol>
+<li>Open PyCharm (see Figure 1 below, left-hand side). Select the project you want to work on, or click "Open".</li>
+<li>If you already have PyCharm open with a different project, go to the top of the screen and click "File"-&gt;"Open".</li>
+<li>
+<p>Navigate to the Day1PM folder and open it. Open the <i><strong>folder</strong></i>, rather than a particular file you want to edit.</p>
+<ul>
+<li>If you already have another project open, PyCharm will prompt you to either open the project in your existing window or in a new window. You can select either.</li>
+</ul>
+</li>
+<li>
+<p>You should see a view shown in Figure 1 below, right-hand side.</p>
+</li>
+</ol>
+<p><center>
+  <img style="width:100%" src="../../img/resources/pycharm-how-to/import.png">
+  <p style="text-align:center"><b>Figure 1</b>: The first window that opens when you start PyCharm (left) should have an Open option for you to select a project. After opening a project, you should see the default PyCharm landing view (right).</p>
+</center></p>
+<h2 id="edit-code">Edit code</h2>
+<p>The <strong>Project toolbar</strong> on the left (Figure 2) shows the current project we are working on (Day1PM) as well as all of its contents: folders, Python files, etc. For Karel programs, you do not need to inspect or edit any files in the <strong>karel</strong> or <strong>worlds</strong> folders.</p>
+<p>Double-click on a program (say, <code>newspaper_karel.py</code>) and it will open up a text editor view in the main window of PyCharm.</p>
+<p>It's time to code! <!--Check out the <a href="../../tr/resources/pycharm-how-to.html#debug">debugging tips</a> section below for tips and tricks when programming.--></p>
+<h2 id="run-programs">Run programs</h2>
+<h3 id="how-to-run-python-programs-in-pycharm">How to run Python programs in Pycharm</h3>
+<p><center>
+  <img style="width:50%" src="../../img/resources/pycharm-how-to/terminal.png">
+  <p style="text-align:center">The PyCharm terminal used to run Python programs.</p>
+</center></p>
+<p>To run a program in PyCharm, click the "Terminal" option at the bottom of the screen. To run any program, all you have to do is type the following command into the Terminal and hit "Enter":</p>
+<ul>
+<li><strong>Mac Users</strong>: <code>python3 insert_name_here.py</code></li>
+<li><strong>PC Users</strong>: <code>py insert_name_here.py</code></li>
+</ul>
+<p>The terminal (also known as a <strong>console</strong>) will then print output and accept user text input, depending on how you write your program.</p>
+<p>As a side note, in many handouts we might use the Mac convention of running programs by using the command <b><code>python3 &lt;program name&gt;</code></b>.  If you are a PC user, you should instead use the command <b><code>py &lt;program name&gt;</code></b>.  Just by convention on the PC, you run the Python interpreter using the command <b><code>py</code></b> (as opposed to <b><code>python3</code></b> on the Mac).</p>
+<h3 id="how-to-run-karel-programs-in-pycharm">How to run Karel programs in Pycharm</h3>
+<p>Karel programs are also Python programs!</p>
+<ol>
+<li>Follow the steps above to run the Karel program. You should then see something like this:</li>
+</ol>
+<p><center>
+  <img style="width:60%" src="../../img/resources/pycharm-how-to/newspaper_karel.png">
+  <p style="text-align:center">The Karel display that appears when running <code>newspaper_karel.py</code>, including Karel’s world, a Run Program button, and a Load World button</p>
+</center></p>
+<ol>
+<li>
+<p>If you then press the <b>Run Program</b> button, Karel will go through the steps in the <b>`main()</b> function that you wrote.</p>
+</li>
+<li>
+<p>Use the scroll bar to speed Karel up.</p>
+</li>
+<li>
+<p><b>Exit out of the window when you are done</b>. The next time you run any Karel program from the PyCharm Terminal (even if it's the same program), it will create a new Karel window.</p>
+</li>
+</ol>
+<h4 id="running-karel-in-different-worlds">Running Karel in different worlds</h4>
+<p>Suppose we are working on Hospital Karel and we think we have gotten our code to work in the default world. Press the <b>Load World</b> button and select and open the world in which you want to run Karel. You can then test Karel in this new world by clicking on the <b>Run Program</b> button.</p>
+<!--
+## Debug
+-->
+	</div>
+</div>
+
+  			
+  	<!-- Footer -->
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+		&#169; Stanford 2020 &#124; Hazırlayan: 
+    	<a href="http://stanford.edu/~cpiech">Chris</a> (Tüm ekibin de yardımıyla).
+		Pek yetenekli birçok eğitimci tarafından hazırlanan muhteşem CS106A sınıfından esinlenilmiştir. 
+		<a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> ve 
+		<a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>'ye özel teşekkürlerimizi sunarız.
+		Türkçe tercüme ile ilgili tüm soru ve görüşleriniz için 
+		<a href="http://web.stanford.edu/~sarslan/">Serhat Arslan</a> ile iletişime geçebilirsiniz.
+	</p>
+	<!--<p class="pull-right">
+		<a href="../../fall12">Fall 2012</a>
+	</p>-->
+</div>
+<!--<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>-->
+  
+  </div>
+	</body>
+</html>
+
+	</body>
+</html>
