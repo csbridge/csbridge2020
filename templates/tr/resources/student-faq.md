@@ -6,9 +6,6 @@ title: CS Bridge SSS
 <!-- Table of Contents -->
 [TOC]
 
-## General
-
-# Öğrenciler için Sıkça Sorulan Sorular
 
 ### Bu program notlandırılıyor mu?
 

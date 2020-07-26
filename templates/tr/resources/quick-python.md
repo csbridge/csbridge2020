@@ -6,8 +6,8 @@ title: Hızlı Python Referansı
 ## PyCharm'da Python programları nasıl çalıştırılır
 PyCharm'da bir program çalıştırmak için sayfanın altındaki "Terminal" opsiyonuna tıklayın. Herhangi bir programı çalıştırmak için aşağıdaki komutu Terminal'e girip "Enter"'a basmanız yeterli:
 
-* **Mac Users**: `python3 programinizin_adi.py`
-* **PC Users**: `programinizin_adi.py`
+* **Mac Kullanıcıları**: `python3 programinizin_adi.py`
+* **PC Kullanıcıları**: `programinizin_adi.py`
 
 Yukarıdaki komutu çalıştırdıktan sonra terminal (**konsol** olarak da bilinir) programınızın çıktısını yazdırır ve programınızı nasıl yazdığınıza göre kullanıcıdan yazılı veri girişi alabilir.
 
@@ -41,12 +41,12 @@ Kullanıcıdan konsol aracılığıyla girdi alıp değerini bir değişkende tu
 
 ```
 what_you_said = input("How are you doing? ")            # Kullanıcıya nasıl olduğu soruluyor
-print("You said: " + what_you_said)                     # Kullanıcının cevabı konsola geri yazdırılıyor
+print("You said: " + what_you_said)                     # Kullanıcının cevabı konsola yazdırılıyor
 
-radius = int(input("Enter an integer: "))               # Kullanıcıdan çemberin yarı çapı isteniyor ve değeri int olarak radius değişkeninde tutuluyor
+radius = int(input("Enter an integer: "))               # Kullanıcıdan alınan yarı çap değeri int olarak radius değişkeninde tutuluyor
 diameter = 2 * radius                                   # Çap
 print("diameter = " + str(diameter))
-pi = float(input("Enter your best guess at pi: "))      # Kullanıcıdan pi için en iyi tahminini girmesi isteniyor
+pi = float(input("Enter your best guess at pi: "))      # Kullanıcıdan pi tahmini isteniyor
 circumference = pi*diameter     
 print("circumference = " + str(circumference))          # Çemberin çevresi konsola yazdırılıyor
 ```
@@ -79,3 +79,4 @@ Daha sonra aşağıdaki gibi rastgele sayılar elde edebilirsiniz. Rastgele say�
 x = random.randint(lower, upper)  # [lower, upper] aralığında (alt ve üst limit dahil) rastgele bir tamsayı
 y = random.random()               # 0 ve 1 arasında rastgele rasyonel sayı
 y = random.uniform(lower, upper)  # [lower, upper] aralığında rastgele rasyonel sayı 
+```
