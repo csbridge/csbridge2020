@@ -47,4 +47,4 @@ Yes! All lectures will be recorded and posted to the "Lectures" category on the 
  
 
 <br/>
-*Have a question which wasn't covered here? Please post on [Ed](https://us.edstem.org/courses/490).*
+*Have a question which wasn't covered here? Please post on [Ed](https://us.edstem.org/courses/968).*

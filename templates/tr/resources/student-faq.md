@@ -1,29 +1,50 @@
 template: templates/tr/resources/faqTemplate.ptl
-title: CS Bridge FAQs
+title: CS Bridge SSS
 
-*Do you have a question about Code in Place? It might be answered here.*
+*CS Bridge hakkında bir sorunuz mu var? Bu sayfada cevaplanmış olabilir.*
 
 <!-- Table of Contents -->
 [TOC]
 
 ## General
 
-# Student FAQ test
+# Öğrenciler için Sıkça Sorulan Sorular
 
-### Is this course graded?
+### Bu program notlandırılıyor mu?
 
-No, this is purely for the joy of learning!
+Hayır, bu programı sadece öğrenmenin keyfi için düzenliyoruz!
 
-### Will I receive a certificate of completion?
-                            
-We don’t promise a certificate of completion. This class is purely for the joy of learning! We are talking to folks to see what is possible and it seems very reasonable that we could help you share that you participated in this experience :-)
+### Bitirme sertifikası alacak mıyım?
 
-### How can I make the most of this course? 
+Evet, bütün programa katılım sağlarsanız bir bitirme sertifikası alacaksınız.
 
-Have fun with it. Do the readings. Come to section. Download PyCharm and do the assignments. Learn from your community on Ed.
-### I have a suggestion for improving the course. How can I tell you?
+### Bu kurstan en iyi şekilde nasıl yararlanabilirim?
 
-Wonderful. Please fill out <a href='https://docs.google.com/forms/d/e/1FAIpQLSdINcYsz1JN8eekMJntExxNyz7m5fa6JKztT_pkeYqfUMIRwg/viewform'>this form</a>. We want to improve this course and love suggestions! We might not be able to make all suggestions happen this term, but you could still be helping future students.
+Olabildiğince eğlenmeye çalışın. Program aktivitelerinin hepsine katılın: dersleri dinleyin, projeniz için çalışın, ihtiyaç duyduğunuzda ofis saatlerine katılın ya da Grup Liderinizden yardım isteyin, CS Bridge topluluğu ile Ed üzerinden etkileşime geçin ve aynı anda hem kodlamayı öğrenin hem de yeni arkadaşlar edinin!
+
+### Program hakkında genel bir sorum var, nerede sorabilirim?
+
+CS Bridge [Ed sayfası](https://us.edstem.org/courses/968/discussion/) genel sorularınızı sormak için en doğru yer. Ed'deki kategorileri kontrol edin ve sorunuzu en çok kapsayan kategoriyi seçin. Gün boyunca Ed'i kontrol edeceğiz ve sorularınızı olabildiğince hızlı cevaplamaya çalışacağız.
+
+### Hastayım (ya da başka bir işim çıktı) ve Ders/Çay Saati/Grup buluşmamıza katılamayacağım, ne yapmalıyım?
+
+Bu programı, düzenlenen bütün aktivitelere katılacağınız beklentisi ile tasarladık ancak beklenmedik durumların oluşabileceğinin farkındayız (hastalanabilir ya da ani bir kişisel sorunla karşılaşabilirsiniz), böyle bir durumda, özellikle bir aktiviteye katılamayacaksanız, en kısa zamanda Grup Liderinize Ed üzerinden özel mesaj gönderin. Grup Liderleriniz programdad geri kalmamanız için sizi yönlendirecektir. 
+
+### Ödevimi erken bitirdim, fazla zamanımla ne yapabilirim?
+
+Öğrendiğiniz konseptlerle yapabileceğiniz eğlenceli şeyleri düşünün; fikirlerinizi ve yaptıklarınızı diğer öğrencilerle Ed üzerinden paylaşın.
+
+### Daha ödevimi bitirmedim ama teslim zamanı geldi, ne yapabilirim? 
+
+Yazabildiğiniz kadar kodu teslim edin.
+
+### Kayboldum. Nerede olmalıym? 
+
+Grubunuzun Ed sayfasında paylaşılan zaman çizelgesini kontrol edin. Aktivitelerin zamanlarını ve Zoom linklerini bu sayfada bulabilirsiniz.
+
+### Dersleri tekrar izleyebilir miyim?
+
+Evet! Bütün dersler kaydedilip CS Bridge Ed sayfasının "Dersler" (Lectures) bölümünde sizinle paylaşılacak.
 
 <br/>
-*Have a question which wasn't covered here? Please post on [Ed](https://us.edstem.org/courses/490).*
+* Bu sayfada cevaplanmamış sorularınızı [Ed](https://us.edstem.org/courses/968) üzerinden sorabilirsiniz.*
