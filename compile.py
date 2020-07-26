@@ -126,7 +126,7 @@ just rendered on its own.
 def compileTemplate(relativePath):
     pathToRoot = getPathToRootFrom(relativePath)
     filePath = os.path.join(TEMPLATE_DIR, relativePath)
-    fileContents = open(filePath).read()
+    fileContents = open(filePath, encoding='utf8').read()
 
     compiledHtml = ''
 
@@ -148,7 +148,7 @@ def compileTemplate(relativePath):
         # If the markdown file specifies a template to be rendered within,
         # use that.  Otherwise just use the compiled markdown file itself
         if 'template' in md.Meta:
-            templateText = open(md.Meta['template'][0]).read()
+            templateText = open(md.Meta['template'][0], encoding='utf8').read()
             attributes = {key:"\n".join(md.Meta[key]) for key in md.Meta}
             compiledHtml = SimpleTemplate(templateText).render(pathToRoot=pathToRoot,
             base=html, filePath=filePath, **attributes)

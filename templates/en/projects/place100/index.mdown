@@ -1,7 +1,7 @@
 template: templates/en/projects/projectTemplate.ptl
 title: Place 100 (with solution)
 credit: Based on a handout by Eric Roberts
-solution: soln.py
+solution: ../soln.py
 
 Handouts: [Karel Reference]({{pathToRoot}}en/resources/karel.html)<br/>
 File: `place_100.py`<br/>
