@@ -1,0 +1,15 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Draw People
+credit: Written by Chris, Bryce, and Julia
+solution: soln.py
+
+Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
+
+This demo shows a simple method that draws people with the bottom of their feet at the provided (x, y) position.
+
+    def draw_person(x, y):
+        # ... draws a person standing at (x, y)
+
+<center>
+<img style="width:500px" src="{{pathToRoot}}img/projects/drawPeople/demo2.png">	
+</center>

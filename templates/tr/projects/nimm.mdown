@@ -3,8 +3,8 @@ title: Ancient Game of Nimm
 credit: Danielle Kain and Chris Piech
 
 Worked Examples: 
-<a href="{{pathToRoot}}en/projects/emc2.html">E=MC2</a>,
-<a href="{{pathToRoot}}en/projects/fibb.html">Fibbonacci</a>
+<a href="{{pathToRoot}}tr/projects/emc2.html">E=MC2</a>,
+<a href="{{pathToRoot}}tr/projects/fibb.html">Fibbonacci</a>
 <br/>
 File: `nimm.py`
 

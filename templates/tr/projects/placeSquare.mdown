@@ -2,7 +2,7 @@ template: templates/tr/projects/projectTemplate.ptl
 title: Place Square
 credit: Written by Chris Piech
 
-Handouts: [Karel Reference]({{pathToRoot}}en/handouts/karel.html)<br/>
+Handouts: [Karel Reference]({{pathToRoot}}tr/handouts/karel.html)<br/>
 File: `square_karel.py`
 
 Your goal is to place an outline of beepers in Karel's world, like below.
@@ -24,7 +24,7 @@ Your program should also work for worlds of different sizes, like below:
 
 ## Writing code for humans
 
-**Decomposition**. Remember, you can define functions with meaningful names and call those. Try looking at the [Beeper Line]({{pathToRoot}}en/projects/beeperLine/index.html) worked example as a starting point when writing a helper function, and see what needs to be modified.
+**Decomposition**. Remember, you can define functions with meaningful names and call those. Try looking at the [Beeper Line]({{pathToRoot}}tr/projects/beeperLine/index.html) worked example as a starting point when writing a helper function, and see what needs to be modified.
 
 **Using loops**. Does your program use a `for` loop, like below?
 
