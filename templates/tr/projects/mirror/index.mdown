@@ -1,0 +1,10 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Mirror Left-Right
+credit: Problem written by many folks. Solution from a lecture by Mehran Sahami.
+solution: soln.py
+
+Take an image, and produce one which is twice as wide. The right side of the new image is the left side of the old image, but mirror reflected.
+
+<center>
+    <img style="width:400px" src="{{pathToRoot}}img/projects/mirror/demo.png">
+</center>

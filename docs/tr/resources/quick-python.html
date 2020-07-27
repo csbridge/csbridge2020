@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Student Frequently Asked Questions (FAQs)</title>
+<title>CS Bridge  | Hızlı Python Referansı</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -438,7 +438,7 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Student Frequently Asked Questions (FAQs)
+		Hızlı Python Referansı
 	</h1>
 
 </div>
@@ -447,42 +447,75 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Text description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p><em>Do you have a question about CS Bridge? It might be answered here.</em></p>
-<!-- Table of Contents -->
-
-<div class="toc">
+		<div class="toc">
 <ul>
-<li><a href="#is-this-course-graded">Is this course graded?</a></li>
-<li><a href="#will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</a></li>
-<li><a href="#how-can-i-make-the-most-of-this-course">How can I make the most of this course?</a></li>
-<li><a href="#i-have-a-general-question-about-the-course-where-do-i-ask-it">I have a general question about the course, where do I ask it?</a></li>
-<li><a href="#i-am-sick-or-i-have-a-time-conflict-and-i-cant-make-it-to-lecturetea-timesection-what-should-i-do">I am sick (or I have a time conflict) and I can't make it to Lecture/Tea Time/Section, what should I do?</a></li>
-<li><a href="#i-finished-the-assignment-early-what-do-i-do-with-the-extra-work-time">I finished the assignment early, what do I do with the extra work time?</a></li>
-<li><a href="#i-havent-finished-the-assignment-yet-but-its-time-to-submit-what-do-i-do">I haven't finished the assignment yet but it's time to submit, what do I do?</a></li>
-<li><a href="#i-am-lost-where-am-i-supposed-to-be">I am lost. Where am I supposed to be?</a></li>
-<li><a href="#can-i-re-watch-lecture">Can I re-watch lecture?</a></li>
+<li><a href="#pycharmda-python-programlar-nasl-calstrlr">PyCharm'da Python programları nasıl çalıştırılır</a></li>
+<li><a href="#konsol-ckts">Konsol Çıktısı</a></li>
+<li><a href="#konsol-girdisi">Konsol Girdisi</a></li>
+<li><a href="#rastgele-saylar">Rastgele Sayılar</a></li>
 </ul>
 </div>
-<h3 id="is-this-course-graded">Is this course graded?</h3>
-<p>No, you will not receive a grade. This is purely for the joy of learning! </p>
-<h3 id="will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</h3>
-<p>Yes, you will receive a certificate of completion after participating in the full course.  </p>
-<h3 id="how-can-i-make-the-most-of-this-course">How can I make the most of this course?</h3>
-<p>Have fun with it! Participate <strong>fully</strong> in all program activities. This means attending lectures, doing the project work, asking for help in office hours, asking your Section Leader for help, engaging with the community on Ed, and making new friends as you learn to code!</p>
-<h3 id="i-have-a-general-question-about-the-course-where-do-i-ask-it">I have a general question about the course, where do I ask it?</h3>
-<p>The CS Bridge Ed page is the perfect place to ask a general question. Check out the list of categories and select the one that best matches the topic you have a question about. We will keep an eye on Ed throughout the day and will try to answer questions as quickly as we can.</p>
-<h3 id="i-am-sick-or-i-have-a-time-conflict-and-i-cant-make-it-to-lecturetea-timesection-what-should-i-do">I am sick (or I have a time conflict) and I can't make it to Lecture/Tea Time/Section, what should I do?</h3>
-<p>We've designed the program with the expectation that you attend every activity in the schedule, but we know things happen (you might get sick or have to deal with a sudden family issue) so just send a private message in Ed to your Section Leader right away if you can't attend something. They can let you know the best way to make sure that you get the information you need so that you do not fall behind in the course.   </p>
-<h3 id="i-finished-the-assignment-early-what-do-i-do-with-the-extra-work-time">I finished the assignment early, what do I do with the extra work time?</h3>
-<p>Think about other fun things you can create based on what you've learned and then post fun things to the Ed page to show other students.</p>
-<h3 id="i-havent-finished-the-assignment-yet-but-its-time-to-submit-what-do-i-do">I haven't finished the assignment yet but it's time to submit, what do I do?</h3>
-<p>Submit as much code as you've been able to write. </p>
-<h3 id="i-am-lost-where-am-i-supposed-to-be">I am lost. Where am I supposed to be?</h3>
-<p>Check the schedule that is posted in your section page on Ed. That's where you'll find times, activities, and the necessary Zoom links. </p>
-<h3 id="can-i-re-watch-lecture">Can I re-watch lecture?</h3>
-<p>Yes! All lectures will be recorded and posted to the "Lectures" category on the CS Bridge Ed page.</p>
-<p><br/>
-<em>Have a question which wasn't covered here? Please post on <a href="https://us.edstem.org/courses/968">Ed</a>.</em></p>
+<h2 id="pycharmda-python-programlar-nasl-calstrlr">PyCharm'da Python programları nasıl çalıştırılır</h2>
+<p>PyCharm'da bir program çalıştırmak için sayfanın altındaki "Terminal" opsiyonuna tıklayın. Herhangi bir programı çalıştırmak için aşağıdaki komutu Terminal'e girip "Enter"'a basmanız yeterli:</p>
+<ul>
+<li><strong>Mac Kullanıcıları</strong>: <code>python3 programinizin_adi.py</code></li>
+<li><strong>PC Kullanıcıları</strong>: <code>programinizin_adi.py</code></li>
+</ul>
+<p>Yukarıdaki komutu çalıştırdıktan sonra terminal (<strong>konsol</strong> olarak da bilinir) programınızın çıktısını yazdırır ve programınızı nasıl yazdığınıza göre kullanıcıdan yazılı veri girişi alabilir.</p>
+<h2 id="konsol-ckts">Konsol Çıktısı</h2>
+<p>Konsola bir şeyler yazdırmak için:</p>
+<pre><code>print("Bu bir mesajdır.")
+</code></pre>
+<p><code>print( ... )</code> fonksiyonu parantezlerin içine bir <code>string</code> almalıdır (unutmayın, <code>string</code> metin tutan bir veri türü olarak düşünülebilir). Konsola integer (tamsayı) ya da float (rasyonel sayılar) türünde bir değişken içeren bir mesaj yazdırmak istediğinizde bu değişkeni <code>str(...)</code> fonksiyonunu kullanarak string'e <em>çevirmeniz</em> gerekecek:</p>
+<pre><code>message = &quot;Bu bir string&quot;
+print(message)                        # message zaten string türünde bir değişken
+x = 5                                 # int
+print(&quot;Değişken x'in değeri: &quot; + str(x))
+pi = 3.14                             # float
+print(&quot;Pi'nin yaklaşık değeri: &quot; + str(pi))
+</code></pre>
+
+<p>Yukarıdaki kod çalıştırıldığında aşağıdaki çıktıyı verir:</p>
+<pre><code>Bu bir string
+Değişken x'in değeri: 5
+Pi'nin yaklaşık değeri: 3.14
+</code></pre>
+
+<h2 id="konsol-girdisi">Konsol Girdisi</h2>
+<p>Kullanıcıdan konsol aracılığıyla girdi alıp değerini bir değişkende tutmak için <code>input(..)</code> fonksiyonu kullanılır. Kullanıcı girdisini başka türde (integer, float, vb.) veri yapılarında tutmak için girdiyi istediğiniz türe <strong>çevirmeniz</strong> gerekecektir. </p>
+<pre><code>what_you_said = input(&quot;How are you doing? &quot;)            # Kullanıcıya nasıl olduğu soruluyor
+print(&quot;You said: &quot; + what_you_said)                     # Kullanıcının cevabı konsola yazdırılıyor
+
+radius = int(input(&quot;Enter an integer: &quot;))               # Kullanıcıdan alınan yarı çap değeri int olarak radius değişkeninde tutuluyor
+diameter = 2 * radius                                   # Çap
+print(&quot;diameter = &quot; + str(diameter))
+pi = float(input(&quot;Enter your best guess at pi: &quot;))      # Kullanıcıdan pi tahmini isteniyor
+circumference = pi*diameter     
+print(&quot;circumference = &quot; + str(circumference))          # Çemberin çevresi konsola yazdırılıyor
+</code></pre>
+
+<p>Yukarıdaki kod çalıştırıldığında aşağıdaki çıktıyı verir (Kullanıcı girdisi mavi ile belirtilmiştir):</p>
+<p><center>
+<img
+  src="../../img/resources/quick-python/input_demo.png"
+  class="img-fluid mx-auto d-block"
+  style="width: 55%"
+  alt="Konsol girişi için örnek sonuç. Kullanıcı girdileri "Fine, thank you", daha sonra "4", sonra da "3.1415926535323846" ve program yarı çapı 4 olan bir çemberin çevresini sizin girdiğiniz pi (\pi) değeri ile hesaplar.
+/>
+</center></p>
+<h2 id="rastgele-saylar">Rastgele Sayılar</h2>
+<p>Rastgele sayılar üretmek için programınızın başına, fonksiyonların dışına <code>import random</code> yazın.</p>
+<pre><code>import random
+
+def main():
+    ...
+</code></pre>
+
+<p>Daha sonra aşağıdaki gibi rastgele sayılar elde edebilirsiniz. Rastgele sayıların üretilmesini istediğimiz alt ve üst limiti <code>lower = 0</code> ve <code>upper = 10</code> olarak tanımladığımızı varsayın.:</p>
+<pre><code>x = random.randint(lower, upper)  # [lower, upper] aralığında (alt ve üst limit dahil) rastgele bir tamsayı
+y = random.random()               # 0 ve 1 arasında rastgele rasyonel sayı
+y = random.uniform(lower, upper)  # [lower, upper] aralığında rastgele rasyonel sayı 
+</code></pre>
 	</div>
 </div>
 

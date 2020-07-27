@@ -1,50 +1,51 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Place Square
-credit: Written by Chris Piech
+title: Kare Yerleştir
+credit: Problemi Yazan: Lisa Yan
 
-Handouts: [Karel Reference]({{pathToRoot}}tr/handouts/karel.html)<br/>
-File: `square_karel.py`
+Ders Notları: [Karel Referansı]({{pathToRoot}}tr/handouts/karel.html)<br/>
+Çalışılan Örnekler: [Beeper Hattı]({{pathToRoot}}tr/projects/beeperLine/index.html)<br/>
+Dosya: `square_karel.py`
 
-Your goal is to place an outline of beepers in Karel's world, like below.
+Göreviniz Karel'in dünyasının sınırlarını aşağıda görebileceğiniz resimdeki gibi beeper'larla donatmak.
 
 <center>
 	<img style="width:600px"  src="{{pathToRoot}}img/projects/placeSquare/world1.png">	
 </center>
 
-You can assume:
+Programınızı yazarken bu varsayımları yapabilirsiniz:
 
-* Karel starts on the bottom left of the world, facing east.
-* Karel's world is rectangular or square.
+- Programın başında Karel dünyanın sol alt tarafındaki karede, güneye dönüktür.
+- Karel'in dünyası dikdörtgen şeklindedir. Karenin de özel bir dikdörtgen olduğunu unutmayın.
 
-Your program should also work for worlds of different sizes, like below:
+Yazdığınız program yukarıdaki varsayımlara uygun farklı boyutlardaki dünyalarda da çalışabilmeli. Alternatif bir dünyayı aşağıda görebilirsiniz:
 
 <center>
 	<img style="width:600px"  src="{{pathToRoot}}img/projects/placeSquare/world2.png">	
 </center>
 
-## Writing code for humans
+## İnsanlar İçin Kod Yazmak
 
-**Decomposition**. Remember, you can define functions with meaningful names and call those. Try looking at the [Beeper Line]({{pathToRoot}}tr/projects/beeperLine/index.html) worked example as a starting point when writing a helper function, and see what needs to be modified.
+Bilgisayarın anlayıp çalıştırabildiği bir program yazmak etkileyici bir başarı. Fakat asıl hedeflemen gereken insanların da kolaylıkla anlayabileceği programlar yazmak.
 
-**Using loops**. Does your program use a `for` loop, like below?
+**Ayrıştırma (Decomposition)**. Fonksiyonlar yaratarak programını küçük parçalara bölebileceğini ve bu fonksiyonlara anlamlı isimler vererek onları gerekli yerlerde kullanabileceğini unutma. [Beeper Hattı]({{pathToRoot}}tr/projects/beeperLine/index.html) örneğini fonksiyon oluşturma konusunda fikir almak için inceleyebilirsin. Bu örneği bir başlangıç noktası olarak al ve neleri değiştirmen gerektiğini anlamaya çalış.
+
+**Döngüleri kullanmak**. Programında aşağıdaki gibi bir `for` döngüsünü kullandın mı?
 
 ```
 for i in range(4):
     # your code here
 ```
 
-If not, try it out! It will help you organize your code better. We promise :-)
+Eğer kullanmadıysan programını `for` döngüsü kullanacak şekilde düzenlemelisin. Bunu yapman kodunu çok daha iyi organize edebilmeni sağlayacak, söz veriyoruz :-)
 
-## Bonus extension
+## Bonus Görev
 
-Great job so far! If you have extra time, first make sure that your program works on 1x1 worlds as well.
+Bu aşamaya kadar geldiğin için tebrik ederiz! Eğer erken bitirdiysen programının 1x1 boyutundaki dünyada da çalıştığını kontrol et.
 
-Then, try to modify your program to make Karel draw the following square, where all beeper in the square outline do not border any walls. This means that 1x1 and 2x2 worlds will not have any beepers in them.
+Daha sonra programını Karel'e aşağıda gördüğün beeper'ların sınıra bir birim daha uzak olduğu kareyi yerleştirecek şekilde güncelle. Bu Karel'in 1x1 ve 2x2 boyutundaki dünyalara hiç beeper yerleştirmeyeceği anlamına da geliyor.
 
-This part is purely optional.
+Bonus görevi yapmak tamamen isteğe bağlıdır, zorunlu değildir.
 
 <center>
 	<img style="width:600px"  src="{{pathToRoot}}img/projects/placeSquare/bonus.png">	
 </center>
-
-
