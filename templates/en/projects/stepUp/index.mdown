@@ -1,5 +1,5 @@
 template: templates/en/projects/projectTemplate.ptl
-title: Collect Newspaper (with solution)
+title: Step Up (with solution)
 credit: Based on a handout by Eric Roberts
 solution: soln.py
 

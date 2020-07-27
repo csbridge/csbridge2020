@@ -1,0 +1,22 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Find Pi (with solution)
+credit: Eric Roberts
+solution: soln.py
+
+Pi (&pi;) is a mathematical thing of true beauty. It comes up in many equations, most notably in the equation for the area of a circle, the p.d.f. of a normal distribution and finally, and oh so wonderously, in [Euler's Identity](http://en.wikipedia.org/wiki/Euler's_identity)
+
+But how do we know that the value of &pi; is 3.14159265359...? There are several ways to calculate pi. In this problem we show how to do it using darts.
+
+<center>
+<img style="width:500px" src="{{pathToRoot}}img/projects/findPi/lifeOfPi.jpg">	
+<p style="text-align:center"><i>This boy's name is also Pi. This problem is unrelated (other than name) to him.</i></p>
+</center>
+
+Imagine throwing darts at the yellow circle bellow to the left. If you randomly throw a series of darts at the dartboard, some will land inside the yellow circle and some in the gray area outside it. If you count both the number of darts that fall inside the circle and the number that fall anywhere inside the square, the ratio of those numbers should be proportional to the relative area of the two figures.
+
+<center>
+<img style="width:700px" src="{{pathToRoot}}img/projects/findPi/darts.png">	
+</center>
+
+
+Because the area of the circle is &pi; and that of the square is 4, the fraction that falls inside the circle should approach &pi; / 4.

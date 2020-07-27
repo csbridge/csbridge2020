@@ -1,0 +1,13 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Gravity Ball
+credit: Problem written by Chris.
+solution: soln.py
+
+Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
+
+Make a ball that bounces as if under the influence of gravity.
+
+
+<center>
+<img style="width:500px" src="{{pathToRoot}}img/projects/gravityBall/demo.png">	
+</center>

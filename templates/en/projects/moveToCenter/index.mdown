@@ -1,0 +1,13 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Move To Center
+credit: Problem written by Chris and Julia
+solution: soln.py
+
+Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
+
+This program animates a square that moves until it is in the center of the screen. It starts on the left side.
+
+
+<center>
+<img style="width:500px" src="{{pathToRoot}}img/projects/moveToCenter/demo.png">	
+</center>

@@ -2,7 +2,7 @@ template: templates/tr/projects/projectTemplate.ptl
 title: Snow
 credit: Chris Piech
 
-Examples: [Rockets]({{pathToRoot}}en/projects/rocketShip.html)<br/>
+Examples: [Rockets]({{pathToRoot}}tr/projects/rocketShip.html)<br/>
 File: snow.py
 
 Animate circles (snow) falling down from the sky and piling up on the ground.
