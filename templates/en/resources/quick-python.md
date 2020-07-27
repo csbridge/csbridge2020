@@ -16,7 +16,7 @@ To print out something to the console:
 
     print("This is a message")
 
-Note that `print( ... )` must have a `string` within the parentheses (remember, `string` can be thought of as a data type that stores text). To print out a message to the console that involves a variable that is an integer or double, you will need to *cast* the variable to a string using the function `str(...)`:
+Note that `print( ... )` must have a `string` within the parentheses (remember, `string` can be thought of as a data type that stores text). To print out a message to the console that involves a variable that is an integer or float, you will need to *cast* the variable to a string using the function `str(...)`:
 
 ```
 message = "This is a string"
