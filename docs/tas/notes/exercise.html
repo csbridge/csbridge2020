@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Short Film (TA)</title>
+<title>CS Bridge  | Office Hours Exercise (TA)</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -435,7 +435,7 @@
 	<!-- Header -->
 	<div id="pageHeader">
 		<h1>
-            TA Notes: Short Film
+            TA Notes: Office Hours Exercise
 		</h1>
     </div>
 
@@ -443,131 +443,37 @@
 
 	<div class="row">
 		<div class="col-xs-12">
-            
-<p>
-	This is the main lab problem in the afternoon.  Students develop a program that animates a short film.  We provide some initial milestones, and then students are free to use their creativity to create anything they'd like!
-</p>
+            <h2 id="exercise-1-mountain-karel-debugging">Exercise 1: Mountain Karel Debugging</h2>
+<p>Each of you should choose a role.  Then, click the button (and only that button!) corresponding to your role below.</p>
+<p><a class="btn btn-primary" role="button" data-toggle="collapse" href="#ta" aria-expanded="false" aria-controls="ta">
+  You're the SL 
+</a></p>
+<p><a class="btn btn-primary" role="button" data-toggle="collapse" href="#student" aria-expanded="false" aria-controls="student">
+  I am the student
+</a></p>
+<div class="collapse" id="ta">
+  <div class="well">
+    You're an SL helping a student with a bug they have while working on <a href="../../en/projects/mountain.html">Mountain Karel</a>.  They have submitted their code to the CSBridge Ed (remember that students submit code under "Lessons", and there is a special lesson for this exercise).  You can navigate to the "CSBridge" test student to see their submission, and you can copy/paste the code from there into your own Karel project on your computer to play around with it first if you want to.
+    <br />
+    <br />
+    It looks like they are working on getting Karel to ascend the mountain.  Remember that loops and conditions are tricky at this point - the <a href="../../tas/notes/mountain.html">TA Notes</a> for this problem may help you!  The student will also fill you in on where they're at.
+  </div>
+</div>
 
-<h3>Milestone 1</h3>
-<p>Students should start by implementing a <code>displayMessage</code> method that displays a white label with specified text on a black background.  It may look something like this:</p>
-<pre id="editor1" style="height:300px">private void displayMessage(String message) {
-    // Add a black "background"
-    GRect background = new GRect(getWidth(), getHeight());
-    background.setFilled(true);
-    add(background);
-
-    // Create the centered white message
-    GLabel label = new GLabel(message);
-    label.setColor(Color.WHITE);
-    label.setFont("Papyrus-40");
-    double xLocation = getWidth() / 2 - label.getWidth() / 2;
-    double yLocation = getHeight() / 2 + label.getAscent() / 2;
-    add(label, xLocation, yLocation);
-
-    pause(2000);
-    remove(label);
-    remove(background);
-}</pre>
-
-<h3>Milestone 2</h3>
-<p>Students should add a scene to show a sun setting.  It should have the sky and earth, and then animate the sun moving down the screen until it goes below the horizon (behind the earth rectangle).  A good two-step process is to first display the static graphics, and then animate the sun.  Here's what this might look like:</p>
-<pre id="editor2" style="height:500px">public void run() {
-    // Add the sky
-    GRect sky = new GRect(getWidth(), getHeight() / 2);
-    sky.setFilled(true);
-    sky.setColor(Color.BLUE);
-    add(sky);
-    
-    // Add the sun
-    GOval sun = new GOval(SUN_DIAMETER, SUN_DIAMETER);
-    sun.setFilled(true);
-    sun.setColor(Color.YELLOW);
-    double sunX = getWidth() / 2 - sun.getWidth() / 2;
-    double sunY = getHeight() / 4 - sun.getHeight() / 2;
-    add(sun, sunX, sunY);
-    
-    // Add the earth
-    GRect earth = new GRect(0, getHeight() / 2, getWidth(), getHeight() / 2);
-    earth.setFilled(true);
-    earth.setColor(Color.GREEN);
-    add(earth);
-    
-    // Animate the sun
-    while (sun.getY() < earth.getY()) {
-        sun.move(0, 5);
-        pause(50);
-    }
-}</pre>
-
-<h3>Milestone 3</h3>
-<p>Next, students should write a method <code>getSunColor</code> that returns the color the sun should be given some parameter about the animation.  This could be something like the position of the sun, or the frame number in the animation, or so on.  It is up to them how to determine the sun's color with this information.  Here are two examples.</p>
-<pre id="editor3" style="height:400px"> // Use the y position of the sun
-public void run() {
-    ...
-    // Animate the sun
-    while (sun.getY() < earth.getY()) {
-        sun.setColor(getSunColor(sun.getY()));
-        sun.move(0, 2);
-        pause(DELAY);
-    }
-}
-
-private Color getSunColor(double sunY) {
-    if (sunY <= MAX_Y_YELLOW) {
-        return Color.yellow;
-    } else if (sunY <= MAX_Y_ORANGE) {
-        return Color.orange;
-    }
-    
-    return Color.RED;
-}</pre>
-
-<pre id="editor4" style="height:400px">// Use the frame number in the sun animation
-public void run() {
-    ...
-    // Animate the sun
-    int frame = 0;
-    while (sun.getY() < earth.getY()) {
-        sun.setColor(getSunColor(frame));
-        sun.move(0, 2);
-        pause(DELAY);
-        frame++;
-    }
-}
-
-private Color getSunColor(int frame) {
-    if (frame <= MAX_FRAME_YELLOW) {
-        return Color.yellow;
-    } else if (frame <= MAX_FRAME_ORANGE) {
-        return Color.orange;
-    }
-    
-    return Color.RED;
-}</pre>
-
-<p>After this, students are free to do whatever they'd like to make their film better!</p>
-
-    
-<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    for (var i = 1; i <= 4; i++) {
-        var editor = ace.edit("editor" + i);
-        editor.setTheme('ace/theme/eclipse');
-        editor.getSession().setMode("ace/mode/java");
-        editor.setReadOnly(true);
-        editor.renderer.setShowGutter(false); 
-        /*editor.setTheme("ace/theme/eclipse");
-        editor.getSession().setMode("ace/mode/java");*/
-    }
-</script>	
+<div class="collapse" id="student">
+  <div class="well">
+    You're a student signing up for Office Hours for help with a bug you have while working on <a href="../../en/projects/mountain.html">Mountain Karel</a>.  You have already submitted your code to the CSBridge Ed.  Download <a href="../../starter/MountainKarelExercise.zip">this PyCharm project</a> and open it in PyCharm - this is "your code". From there you can play around with it first if you want to.
+    <br />
+    <br />
+    You are currently working on getting Karel to ascend the mountain, but are struggling - it looks like Karel climbs in a reasonable manner, but doesn't stop at the top, and keeps going to the top edge of the screen!  Tell this to the SL when you start to describe where you are, and what you are stuck with.  You're having a hard time knowing what condition to use to get Karel to climb and then stop!
+    <br />
+    <br />
+    Note: the ultimate issue is the condition for the while loop, which is still true even when you reach the top of the mountain.  One possible solution is to use right_is_blocked() instead.  Another is to not have Karel turn left, and instead immediately check for front_is_blocked(), and use that as a condition to stop.
+  </div>
+</div>	
 		</div>
 	</div>
 
-		<div class="row">
-			<div class="col-xs-12">
-				<b>Solution available on Section Leader Ed Resources Page.</b>
-			</div>
-		</div>
 </div>
 			
 	<!-- Footer -->

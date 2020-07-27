@@ -595,7 +595,7 @@
 				<td><a href="{{pathToRoot}}en/projects/mountain.html">Mountain Karel</a>
           <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/mountain.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/notes/mountain.html">TA Notes</a>
 					% end
 				</td>
 				<td>While Loops</td>
