@@ -548,7 +548,7 @@
 				<td><a href="{{pathToRoot}}en/projects/khansole.html">Khansole Academy</a>
           <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/khansole.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}tas/notes/khansole.html">TA Notes</a>
 					% end
 				</td>
 				<td>Conditionals</td>
