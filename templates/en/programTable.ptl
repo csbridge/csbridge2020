@@ -514,7 +514,7 @@
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/runningSum.png"></img></td>
 				<td><a href="{{pathToRoot}}en/projects/runningSum.html">Run, Sum, Run</a>
-          <br/><span class="label label-default">Quickstart<span>
+          <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/notes/runningSum.html">TA Solution</a>
 					% end
@@ -642,8 +642,8 @@
 				<td>If Statements</td>
 			</tr>
 			<tr>
-        <td><img class="projectImg" src="{{pathToRoot}}img/icons/midpoint.png"></img></a></td>
-				<td><a href="{{pathToRoot}}en/bonus-index.html">[Optional] Midpoint or Checkerboard</a></td>
+        		<td><img class="projectImg" src="{{pathToRoot}}img/icons/midpoint.png"></img></td>
+				<td><a href="{{pathToRoot}}en/bonus-index.html">[Optional] Midpoint or Checkerboard</a>
 
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}tas/notes/randomPainter.html">TA Solution</a>
