@@ -1,4 +1,4 @@
-template: templates/en/projects/projectTemplate.ptl
+template: templates/tr/projects/projectTemplate.ptl
 title: Viral Video
 credit: Lisa Yan
 translation: Gül Sena Altıntaş
