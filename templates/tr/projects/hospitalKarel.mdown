@@ -1,6 +1,7 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Hastaneci Karel
 credit: Chris Piech
+translation: Gül Sena Altıntaş
 
 Handouts: [KarelReference]({{pathToRoot}}en/resources/karel.html)<br/>
 Worked Examples: [UN Karel]({{pathToRoot}}en/projects/unKarel/index.html), [Banish Winter]({{pathToRoot}}en/projects/banishWinter/index.html)<br/>
