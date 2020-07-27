@@ -345,7 +345,7 @@
 	        <!-- TA Link -->
 	        % if get('taMode', False):
 		        <ul class="nav navbar-nav navbar-right">
-		            <li><a href="{{pathToRoot}}tas">TA Page</a></li>
+		            <li><a href="{{pathToRoot}}teach">SL Page</a></li>
 		        </ul>
 		    % end
 

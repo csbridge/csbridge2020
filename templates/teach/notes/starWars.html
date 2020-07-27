@@ -1,0 +1,74 @@
+% rebase('templates/teach/notes/template.ptl', problemTitle="Star Wars Crawl")
+
+<p>
+  This is the second lab problem for the morning.  It gives students practice writing their first programs with ArrayLists and animation.  The key idea is to store the graphics they want to animate together in an ArrayList and update all of their positions each step of the animation loop.
+  <br />
+  <br />
+  Note that in the libraries we provide the <code>readFile</code> method that takes a filename and returns an arraylist of lines in the file.
+</p>
+
+<h3>Solution</h3>
+<pre id="editor" style="height:900px">public class StarWars extends GraphicsProgram implements FileUtil {
+
+    private static final String TEXT_FILENAME = "res/opening-crawl.txt";
+    private static final String BACKGROUND_IMAGE = "res/background.jpg";
+
+    private static final double LABEL_PADDING = 15; 
+    private static final double PAUSE_TIME = 20;
+
+    public void run() {
+        // Add our background image
+        GImage bg = new GImage(BACKGROUND_IMAGE);
+        bg.setSize(getWidth(), getHeight());
+        add(bg);
+
+        // Create GLabels from the text file positioned correctly
+        ArrayList&lt;GLabel&gt; labelsList = getLabelsForTextFile(TEXT_FILENAME);
+
+        // Animate labels forever
+        while (true) {
+            for (int i = 0; i &lt; labelsList.size(); i++) {
+                labelsList.get(i).move(0, -1);
+            }
+            pause(PAUSE_TIME);
+        }
+    }
+
+    /* This method returns an ArrayList containing a GLabel for each line in the
+     * given file.  The GLabels are in the same order as the lines in the text file
+     * and positioned correctly onscreen.
+     */
+    private ArrayList&lt;GLabel&gt; getLabelsForTextFile(String crawlFilename) {
+        ArrayList&lt;String&gt; lines = readFile(crawlFilename);
+        ArrayList&lt;GLabel&gt; labels = new ArrayList&lt;GLabel&gt;();
+        
+        double y = getHeight();
+        for (int i = 0; i &lt; lines.size(); i++) {
+            String line = lines.get(i);
+            
+            // Make a GLabel out of this line and put it in our arraylist
+            GLabel label = new GLabel(line);
+            label.setFont("Courier New-bold-32");
+            label.setColor(Color.WHITE);
+            double x = getWidth() / 2.0 - label.getWidth() / 2.0;
+            labels.add(label);
+            add(labels.get(i), x, y + label.getAscent());
+
+            y += label.getAscent() + LABEL_PADDING;
+        }
+
+        return labels;
+    }
+    
+}</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>

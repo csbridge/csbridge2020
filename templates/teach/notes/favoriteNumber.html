@@ -1,0 +1,101 @@
+% rebase('templates/teach/notes/template.ptl', problemTitle="Favorite Number")
+
+<p>
+    Before starting this section problem, as a warmup exercise for students take a little time to walk through how loops and variables can work together, since that is a natural followup to the material shown in lecture.  Specifically, pose the following problem to students that you then walk through: how can we print out a rocket ship countdown? For example:
+
+<pre>10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+Blast off!
+</pre>
+
+The solution is something like this:
+
+<pre>public void run() {
+    int num = 10;
+    while (num >= 0) {
+        println(num);
+        num = num - 1;
+    }
+    println("Blast off!");
+}</pre>
+
+It's important to walk students through how we can make a variable outside the loop and then have the variable be continually used and updated inside the loop.  It's also important to talk through the condition to use in the loop - how long do we want to loop for?
+</p>
+
+<hr />
+
+<p>
+	After this warmup, the problem below is one section problem for the day.  Here is information about the goals for the problem and what you should focus on during section:
+	<br />
+	<b>Learning Goal</b>: using variables with while and conditions
+	<br />
+	<b>Milestone</b>: play the game with no feedback - just guess until correct
+	<br />
+	<br />
+	Write code on the board. Try to not use pseudocode!  The hardest part is that guess must be reassigned...and in general this section is hard, but not many lines of code. Do your best to pace yourself. Try not to have students with experience give it away.
+</p>
+
+<h3>Solution</h3>
+<pre id="editor" style="height:400px">public class FavoriteNumber extends ConsoleProgram {
+
+	private static final int FAVORITE_NUMBER = 88;
+	
+	public void run() {
+	    println("Try and guess my favorite number (between 0 and 100)");
+	    
+        int guess = readInt("Guess: ");
+        while (guess != FAVORITE_NUMBER) {
+            if (guess < FAVORITE_NUMBER) {
+                println("Too low");
+            } else {
+                println("Too high");
+            } 
+            
+            guess = readInt("Guess: ");
+        }
+
+        println("Good job!");
+	}
+
+}</pre>
+
+<p>You may be guided towards a solution such as this:</p>
+<pre>
+public void run() {
+    println("Try and guess my favorite number (between 0 and 100)");
+
+    int guess = -1;
+    while(guess != FAVORITE_NUMBER) {
+        guess = readInt("Guess: ");
+        if(guess < FAVORITE_NUMBER) {
+            println("Too low");
+        } else if(guess > FAVORITE_NUMBER) {
+            println("Too high");
+        } else {
+            println("Good job!");
+        }
+    }
+}
+</pre>
+
+<p>This is another functional solution, but one that is not as elegant as the first.  The reason is that guess is initialized to a somewhat arbitrary value in the second solution in order to initialize it.  Additionally, it is not as clear that the program terminates when the guess is correct.  In the first solution, we can look at the code after the loop to know it terminates.  But in the second solution, we must look inside the loop to see that it will print "Good job!" and then exit the loop.  However, it is better than the first solution in that it only has to call <code>readInt</code> one time instead of two.</p>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
