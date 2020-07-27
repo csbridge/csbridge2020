@@ -1,7 +1,7 @@
 template: templates/en/projects/projectTemplate.ptl
 title: Counterfeit Medicine (with solution)
 credit: Chris Piech
-solution: ../soln.py
+solution: soln.py
 
 ## The Story
 This problem starts with a sad story. When I was growing up in Kenya it was estimated that over 38% of medicines sold at pharmacies were fake [1]. That was a big problem! Depending on which organization you ask, deaths from counterfeit medicine ranged from 100,000 per year (WHO) to 700,000 (IPN) [2].

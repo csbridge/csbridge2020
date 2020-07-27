@@ -1,7 +1,7 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Robot Face
 credit: Problem written by Eric Roberts. Updated by Chris Piech and Lisa Yan.
-solution: ../soln.py
+solution: soln.py
 
 
 Write a program that draws this picture. You should use the constants provided, but feel free to change them (or recolor any part of the face).</p>

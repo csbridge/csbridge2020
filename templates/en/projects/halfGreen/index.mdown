@@ -1,7 +1,7 @@
 template: templates/en/projects/projectTemplate.ptl
 title: Half Green
 credit: Problem written by Chris Piech
-solution: ../soln.py
+solution: soln.py
 
 Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 

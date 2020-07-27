@@ -1,7 +1,7 @@
 template: templates/en/projects/projectTemplate.ptl
 title: Find Pi (with solution)
 credit: Eric Roberts
-solution: ../soln.py
+solution: soln.py
 
 Pi (&pi;) is a mathematical thing of true beauty. It comes up in many equations, most notably in the equation for the area of a circle, the p.d.f. of a normal distribution and finally, and oh so wonderously, in [Euler's Identity](http://en.wikipedia.org/wiki/Euler's_identity)
 

@@ -1,7 +1,7 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Draw People
 credit: Written by Chris, Bryce, and Julia
-solution: ../soln.py
+solution: soln.py
 
 Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 

@@ -1,7 +1,7 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Gravity Ball
 credit: Problem written by Chris.
-solution: ../soln.py
+solution: soln.py
 
 Handouts: [Graphics Reference]({{pathToRoot}}tr/resources/graphics.html)<br/>
 
