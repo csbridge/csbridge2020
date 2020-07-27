@@ -1,6 +1,7 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Kare Yerleştir
-credit: Problemi Yazan: Lisa Yan
+credit: Lisa Yan
+translation: Ahmet Uysal
 
 Ders Notları: [Karel Referansı]({{pathToRoot}}tr/handouts/karel.html)<br/>
 Çalışılan Örnekler: [Beeper Hattı]({{pathToRoot}}tr/projects/beeperLine/index.html)<br/>

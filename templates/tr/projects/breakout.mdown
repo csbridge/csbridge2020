@@ -1,6 +1,6 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Breakout
-credit: Eric Roberts
+Hazırlayan: Written by Eric Roberts
 translation: Ceren Kocaoğullar
 
 Handouts: [Grafikler Referansı]({{pathToRoot}}tr/handouts/graphics.html)<br/>
