@@ -26,7 +26,7 @@ Karel may count on the following facts about the world, listed below:
 * The columns are exactly four squares apart, on 1st, 5th, 9th and 13th Avenue.
 * Karel can assume that columns are always five units high.
 
-Even though the program is only a few lines, it is still worth getting a little practice in decomposition. For example, it would make sense to have a `build_column` method. 
+This problem is a great opportunity to practice decomposition. For example, it would make sense to have a `build_column` method. 
 
 ## For loops
 
@@ -35,7 +35,7 @@ One thing that computers are really good at is repeating commands.
 In general, if you know before hand that there is a block of code you would like to repeat many times you can use a "for" loop, which looks like this:
 ```
 for i in range(n):
-  ... your code ...
+	... your code ...
 
 ```
 
@@ -47,6 +47,6 @@ for i in range(10):
     move()
 ```
 
-See the [Place 100 Beepers]({{pathToRoot}}en/projects/place100.html) program for another example.
+See the [Place 100 Beepers]({{pathToRoot}}en/projects/place100/) program for another example.
 
-Your program will be much easier to write and easier to read, if you use for loops. There are multiple opportunities to use for loops in this problem! 
+Your program will be much easier to write and easier to read, if you use `for` loops. There are multiple opportunities to use them in this problem! 

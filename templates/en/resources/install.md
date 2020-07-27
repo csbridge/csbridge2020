@@ -247,7 +247,17 @@ For example, if your name is Nick, you'd type <code><span class="launcher">pytho
 </div>
 <br />
 
-Congratulations! You're now done with the PyCharm setup process.
+Congratulations! Your PyCharm installation is working so far!
+
+### Installing Graphics
+The graphics library that we will be using for the course should have automatically been installed for you when you installed Python.  However, it relies on one other tool that you'll need to install, called "Pillow", which contains code to manipulate images. In order for be able to work with images, you need to install Pillow on your machine.  To install Pillow, you should first open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following command below into the Terminal. (Note that "Pillow" starts with an uppercase P.):
+
+<div class="text-center">
+    <code><span class="launcher">python3</span> -m pip install Pillow</code>
+</div>
+<br />
+
+If it prints a bunch of output followed by "Successfully installed Pillow-7.1.1" at the end, your installation should be complete.  You're ready to program!
 
 ---
 

@@ -2,9 +2,9 @@ template: templates/tr/projects/projectTemplate.ptl
 title: Short Film
 credit: Written by Chris Piech and Keith Schwarz.
 
-Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
-Worked Example: [Half Green]({{pathToRoot}}en/projects/halfgreen.html),
-[Target]({{pathToRoot}}en/projects/target.html)<br/>
+Handouts: [Graphics Reference]({{pathToRoot}}tr/handouts/graphics.html)<br/>
+Worked Example: [Half Green]({{pathToRoot}}tr/projects/halfgreen.html),
+[Target]({{pathToRoot}}tr/projects/target.html)<br/>
 File: `short_film.py`
 
 Did you know that animated movies like <i>Toy Story</i>, <i>Up</i>, and <i>Frozen</i> are made using computer programs? In this assignment you are going to use a program to create a short film.

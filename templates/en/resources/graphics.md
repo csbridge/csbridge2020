@@ -123,16 +123,6 @@ title: Graphics Reference
 
 One of the most common libraries to create graphics in Python is called Tk (short for "tkinter"). Tk is a powerful graphics library that should be automatically installed for Windows and Mac along with Python when you installed it.  But some of the functions are hard to use.  For this reason, we provide our own small graphics library that is built on top of Tk and makes it easier to use.  However, it's not a replacement for Tk - it just adds new functions to make certain things like drawing text easier.  You can always explore the full Tk library if you're interested in seeing what else you can do!
 
-## Installation
-The graphics library itself comes pre-packaged with every graphical PyCharm project, and Tkinter should automatically be installed for you.  However, it relies on one other tool that you'll need to install, called "Pillow", which contains code to manipulate images. In order for be able to work with images, you need to install Pillow on your machine.  To install Pillow, you should first open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following command below into the Terminal. (Note that "Pillow" starts with an uppercase P.) On Windows, type “py” instead of “python3”):
-
-```
-> python3 -m pip install Pillow
-...prints stuff...
-```
-
-If it printed "Successfully installed Pillow-7.1.1" at the end, you should now be able to add images to your graphics program canvases.  Woohoo!
-
 ## Importing
 To use our graphics library, you must first import it at the top of your program, like this:
 ```
@@ -253,6 +243,9 @@ canvas.set_font(label, "Times", 25)
 ```
 
 ## Adding Images
+_Note: if images do not work in your program, and instead give an error, you may not have installed the library necessary for images to work.  Make sure you followed the instructions in the [installation guide]({{pathToRoot}}en/resources/install.html) under "Installing Graphics"._
+{: .alert .alert-info}
+
 You can add image files to your canvas as well.  To do this, use `create_image` (if you want the image to be the same size on the canvas as the image file) or `create_image_with_size`) (if you want the image to be another size you specify).  Both require you to specify the x and y location of the **upper-left corner** of the image on the canvas, as well as the name of the image file.  `create_image_with_size` also requires a width and a height that the image should be.  Here's an example that adds a smiley-face image to the canvas with upper-left corner at (25, 30), assuming we have an image file named "smiley.jpg" in our PyCharm project:
 
 ```

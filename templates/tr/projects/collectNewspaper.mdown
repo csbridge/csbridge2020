@@ -2,8 +2,8 @@ template: templates/tr/projects/projectTemplate.ptl
 title: Collect Newspaper
 credit: Based on a handout by Eric Roberts
 
-Handouts: [Karel Reference]({{pathToRoot}}en/handouts/karel.html)<br/>
-Worked Example: [StepUp]({{pathToRoot}}en/projects/stepUp.html)<br/>
+Handouts: [Karel Reference]({{pathToRoot}}tr/handouts/karel.html)<br/>
+Worked Example: [StepUp]({{pathToRoot}}tr/projects/stepUp.html)<br/>
 File: `newspaper_karel.py`
 
 Your first task is to solve a simple story-problem in Karel's world.  Suppose that Karel has settled into its house, which is the square area in the center of the following diagram:

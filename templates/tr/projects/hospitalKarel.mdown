@@ -2,8 +2,8 @@ template: templates/tr/projects/projectTemplate.ptl
 title: Hospital Karel
 credit: Chris Piech
 
-Handouts: [KarelReference]({{pathToRoot}}en/handouts/karel.html)<br/>
-Worked Examples: [Invert]({{pathToRoot}}en/projects/invert.html), [UN Karel]({{pathToRoot}}en/projects/unkarel/index.html)<br/>
+Handouts: [KarelReference]({{pathToRoot}}tr/handouts/karel.html)<br/>
+Worked Examples: [Invert]({{pathToRoot}}tr/projects/invert.html), [UN Karel]({{pathToRoot}}tr/projects/unkarel/index.html)<br/>
 Day1: `hospital_karel.py`
 
 Countries around the world are dispatching hospital-building robots to make sure anyone who

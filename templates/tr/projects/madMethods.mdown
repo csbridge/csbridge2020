@@ -4,7 +4,7 @@ credit: Written by Chris, Bryce, and Lisa
 
 ## 1. Mad Max
 
-Example: [Average Method]({{pathToRoot}}en/projects/averageMethod.html}}) <br/>
+Example: [Average Method]({{pathToRoot}}tr/projects/averageMethod.html}}) <br/>
 File: `mad_max.py`
 
 Complete the program by filling in the `mad_max` method that returns the largest of three numbers:
@@ -31,9 +31,9 @@ The max of 0, 0, and 0 is: 0
 ```
 
 ## 2. Draw Trees
-Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
-Example: [Draw People]({{pathToRoot}}en/projects/drawpeople.html}}),
-[Half Green]({{pathToRoot}}en/projects/halfgreen.html}})<br/>
+Handouts: [Graphics Reference]({{pathToRoot}}tr/handouts/graphics.html)<br/>
+Example: [Draw People]({{pathToRoot}}tr/projects/drawpeople.html}}),
+[Half Green]({{pathToRoot}}tr/projects/halfgreen.html}})<br/>
 File: `draw_trees.py`
 
 

@@ -274,7 +274,7 @@
 	          	    <li><a href="{{pathToRoot}}en/projects/robotFace/index.html">Robot Face</a></li>
 	          	    <li><a href="{{pathToRoot}}en/projects/halfGreen/index.html">Half Green</a></li>
                   <!-- Used to be a main course component -->
-	          	    <li><a href="{{pathToRoot}}en/projects/averageMethod/index.html">Average Method</a></li>
+	          	    <li><a href="{{pathToRoot}}en/projects/average/index.html">Average Method</a></li>
 	          	    <li><a href="{{pathToRoot}}en/projects/drawPeople/index.html">Draw People</a></li>
 	          	    <li><a href="{{pathToRoot}}en/projects/medicine/index.html">Counterfeit Medicine</a></li>
                 </ul>

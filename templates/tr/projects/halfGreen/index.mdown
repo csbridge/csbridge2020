@@ -1,0 +1,18 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Half Green
+credit: Problem written by Chris Piech
+solution: soln.py
+
+Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
+
+We are going to create 1000 circles in random positions on the screen. Circles closer to the bottom-left corner will be blue and circles closer to the top-right corner will be green. This is an example of return values.
+
+<center>
+<img style="width:500px" src="{{pathToRoot}}img/projects/halfGreen/halfGreen.png">	
+</center>
+
+* Each circle is 20 pixels by 20 pixels.
+
+* Note every circle is drawn fully on the canvas.
+
+* The `time.sleep(0.002)` function call waits 2 milliseconds between drawing circles.
