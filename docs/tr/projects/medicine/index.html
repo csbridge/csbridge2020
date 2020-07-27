@@ -428,6 +428,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -441,113 +442,9 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Chris Piech
+			Hazırlayan: Chris Piech
 		</p>
-</div>
-<hr/>
 
-<!-- Problem description -->
-<div class="row">
-	<div class="col-xs-12">
-		<h2 id="the-story">The Story</h2>
-<p>This problem starts with a sad story. When I was growing up in Kenya it was estimated that over 38% of medicines sold at pharmacies were fake [1]. That was a big problem! Depending on which organization you ask, deaths from counterfeit medicine ranged from 100,000 per year (WHO) to 700,000 (IPN) [2].</p>
-<blockquote>
-<p>Deaths from counterfeit drugs are equivalent to, "four fully laden jumbo jets crashing everyday" [2]</p>
-</blockquote>
-<p>In 2009 a Ghanaian fellow named Bright Simmons came up with a straightforward technology solution he called mPedigree. He partnered with companies that make medicine. On each legitimate package of medicine they stamped a unique scratch code. Now when you buy medicine at a pharmacy in Kenya you check the scratch code and text message mPedigree. If the code is in their system, and has never been used before, mPedigree sends a text message back saying: "valid." There has been a 58% decrease in child deaths from Malaria alone [3]. Sometimes simple programming solutions can have a large, positive impact on the world.</p>
-<h2 id="your-job">Your Job</h2>
-<p>Write a program that generates 10-digit numbers for 1,000 packages of medicine. Each number you generate should be (1) unique and (2) unpredictable.</p>
-<p>Here is sample output from an example execution:</p>
-<pre><code>1000063221
-1000144321
-1000219310
-1000369301
-1000474307
-1000594126
-1000675471
-1000766455
-1000870655
-1000974702
-1001071787
-1001125100
-1001241855
-1001361460
-1001430979
-1001546607
-1001615135
-1001797139
-1001835707
-...
-</code></pre>
-
-<p>Those numbers will be put on medicine packages. Counterfeiters won't stand a chance!</p>
-<p>Ask questions if you don't understand something (or want to know more about counterfeit medicine).</p>
-	</div>
-</div>
-
-<!-- Solution (if included) -->
-	<h2>Solution</h2>
-    <p>
-    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
-    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
-    		aria-controls="Collapse">
-    		Show Solution
-    	</a>
-    </p>
-    <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:620.0px">&quot;&quot;&quot;
-File: medicine.py
--------------------
-This program creates unique and hard-to-predict numbers that can
-be put on packages of real medicine. People who buy the medicine
-can text message the number on their package to tell if it&#039;s real.
-&quot;&quot;&quot;
-
-import random
-
-NUM_PACKAGES = 1000
-
-def main():
-    &quot;&quot;&quot;
-    Main ideas:
-    (1) Generate prefix of strictly increasing numbers for uniqueness
-    (2) Generate completely random 5-digit suffix
-    &quot;&quot;&quot;
-
-    base_prefix = random.randint(10000, 99999-NUM_PACKAGES)
-    increment = 1
-    for i in range(NUM_PACKAGES):
-      suffix = random.randint(10000, 99999)
-      increment += 1 # if students don&#039;t know loop index variables yet
-      prefix = base_prefix + increment
-      print(str(prefix) + str(suffix))
-
-
-if __name__ == &#039;__main__&#039;:
-    main()
-</pre>
-    </div>
-
-    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        var editor = ace.edit("editor");
-       editor.setTheme('ace/theme/eclipse');
-       editor.getSession().setMode("ace/mode/python");
-       editor.setReadOnly(true);
-       editor.setShowPrintMargin(false);
-       editor.renderer.setShowGutter(false); 
-    </script>
-
-    <script>
-    	function toggleButtonText() {
-    		var elem = document.getElementById("soln-btn");
-    		if (elem.innerHTML.trim() === "Show Solution") {
-    			elem.innerHTML = "Hide Solution";
-    		} else {
-    			elem.innerHTML = "Show Solution";
-    		}
-    	}
-    </script>
 
   			
   	<!-- Footer -->

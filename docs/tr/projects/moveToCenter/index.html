@@ -428,6 +428,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -441,97 +442,9 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Problem written by Chris and Julia
+			Hazırlayan: Problem written by Chris and Julia
 		</p>
-</div>
-<hr/>
 
-<!-- Problem description -->
-<div class="row">
-	<div class="col-xs-12">
-		<p>Handouts: <a href="../../../en/resources/graphics.html">Graphics Reference</a><br/></p>
-<p>This program animates a square that moves until it is in the center of the screen. It starts on the left side.</p>
-<p><center>
-<img style="width:500px" src="../../../img/projects/moveToCenter/demo.png"> 
-</center></p>
-	</div>
-</div>
-
-<!-- Solution (if included) -->
-	<h2>Solution</h2>
-    <p>
-    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
-    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
-    		aria-controls="Collapse">
-    		Show Solution
-    	</a>
-    </p>
-    <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:860.0px">&quot;&quot;&quot;
-File: move_to_center.py
--------------------
-Moves a square from the left edge to the center of the screen.
-&quot;&quot;&quot;
-
-import time
-from graphics import Canvas
-
-SIZE = 100
-DELAY = 0.1
-
-def main():
-    canvas = Canvas()
-    canvas.set_canvas_title(&quot;Move to Center&quot;)
-
-    x = 0
-    y = (canvas.get_canvas_height() - SIZE)/2
-    # draw a square on the left of the screen
-    square = canvas.create_rectangle(x, y,
-                                     x + SIZE, y + SIZE)
-    canvas.set_color(square, &quot;black&quot;)
-
-    # move until we get to the center
-    target_x = (canvas.get_canvas_width() - canvas.get_width(square))/2
-    while canvas.get_left_x(square) &lt; target_x:
-        canvas.move(square, 5, 0)   # move 5 pixels to the right
-        time.sleep(DELAY) # animation pause
-        canvas.update()
-
-    canvas.mainloop()
-
-def get_color(x, y):
-    if is_green(x, y):
-        return &quot;green&quot;
-    return &quot;blue&quot;
-
-def is_green(x, y):
-    return x &gt; y
-
-if __name__ == &quot;__main__&quot;:
-    main()
-</pre>
-    </div>
-
-    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        var editor = ace.edit("editor");
-       editor.setTheme('ace/theme/eclipse');
-       editor.getSession().setMode("ace/mode/python");
-       editor.setReadOnly(true);
-       editor.setShowPrintMargin(false);
-       editor.renderer.setShowGutter(false); 
-    </script>
-
-    <script>
-    	function toggleButtonText() {
-    		var elem = document.getElementById("soln-btn");
-    		if (elem.innerHTML.trim() === "Show Solution") {
-    			elem.innerHTML = "Hide Solution";
-    		} else {
-    			elem.innerHTML = "Show Solution";
-    		}
-    	}
-    </script>
 
   			
   	<!-- Footer -->

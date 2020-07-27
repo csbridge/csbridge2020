@@ -1,6 +1,7 @@
-template: templates/en/projects/projectTemplate.ptl
+template: templates/tr/projects/projectTemplate.ptl
 title: Khansole Akademi
-credit: Hazırlayan: Nick Parlante
+credit: Nick Parlante
+translation: Gül Sena Altıntaş
 
 File: `khansole.py`
 
@@ -52,8 +53,8 @@ Tebrikler! Toplama işleminde uzmansınız.<br/>
 </code>
 <hr/>
 
-Bir not olarak, CS106A'nın eğitmenlerinden biri olan Mehran'ın programlama öğrenmeye başladığında
+İlginç bir bilgi: CS106A'nın eğitmenlerinden biri olan Mehran'ın programlama öğrenmeye başladığında
 (arkadaşı Matthew ile birlikte) yazdığı ilk programlardan biri Khan-Sole Akademi'ye çok benziyordu ve
-"M&M's Matematik Bulmacıları" adındaydı. Bu program BASIC isimli bir programlama dilinde
+"M&M's Matematik Bulmacalarını" adındaydı. Bu program BASIC isimli bir programlama dilinde
 yazılmıştı ve 4K hafızası (4 Kilobyte) olan ve bilgi tutmak için kaset (1970'lerde müzik dinlemek
 için kullanılanlar gibi) kullanan bir bilgisayar kullanılmıştı.

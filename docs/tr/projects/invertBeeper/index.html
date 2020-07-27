@@ -428,6 +428,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -441,119 +442,9 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Based on a handout by Eric Roberts
+			Hazırlayan: Based on a handout by Eric Roberts
 		</p>
-</div>
-<hr/>
 
-<!-- Problem description -->
-<div class="row">
-	<div class="col-xs-12">
-		<p>Handouts: <a href="../../../en/resources/karel.html">Karel Reference</a><br/>
-File: <code>invert_beeper.py</code><br/></p>
-<p>For a world of any size, with any configuration of beepers (no square will have more than one), invert all the beepers so that, where there was a beeper previously there is no beeper... and where there was no beeper previously, there is a beeper. Consider the following example.</p>
-<p><center>
-<img style="width:600px" src="../../../img/projects/invert/invert.png"> 
-</center></p>
-	</div>
-</div>
-
-<!-- Solution (if included) -->
-	<h2>Solution</h2>
-    <p>
-    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
-    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
-    		aria-controls="Collapse">
-    		Show Solution
-    	</a>
-    </p>
-    <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:1280.0px">from karel.stanfordkarel import *
-
-&quot;&quot;&quot;
-File: invert_beeper.py
-------------------------
-Invert all the beepers so that, where there was a beeper previously 
-there is no beeper... and where there was no beeper previously, there is a 
-beeper.
-&quot;&quot;&quot;
-
-def main():
-    invert_row()
-    return_to_west()
-    while left_is_clear():
-        turn_left()
-        move()
-        turn_right()
-        invert_row()
-        return_to_west()
-
-def invert_row():
-    &quot;&quot;&quot;
-    Invert a single row. At the start, Karel should be facing east from
-	  the west side of the row. After Karel should be facing east from the
-	  east side of the same row, and all beepers in the row will be inverted.
-    &quot;&quot;&quot;
-    while front_is_clear():
-        invert_beeper()
-        move()
-    invert_beeper()
-
-def invert_beeper():
-    &quot;&quot;&quot;
-    Inverts the beeper configuration on a square. If there was previously
-	  a beeper, it is picked up. If there was previously no beeper, a beeper
-	  is placed.
-    &quot;&quot;&quot;
-    if beepers_present():
-        pick_beeper()
-    else:
-        put_beeper()
-
-def return_to_west():
-    &quot;&quot;&quot;
-    Turn around and go back to the wall that you came from!
-    &quot;&quot;&quot;
-    turn_around()
-    while front_is_clear():
-        move()
-    turn_around()
-
-def turn_around():
-    turn_left()
-    turn_left()
-
-def turn_right():
-    turn_left()
-    turn_left()
-    turn_left()
-
-# There is no need to edit code beyond this point
-if __name__ == &quot;__main__&quot;:
-    run_karel_program()
-</pre>
-    </div>
-
-    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        var editor = ace.edit("editor");
-       editor.setTheme('ace/theme/eclipse');
-       editor.getSession().setMode("ace/mode/python");
-       editor.setReadOnly(true);
-       editor.setShowPrintMargin(false);
-       editor.renderer.setShowGutter(false); 
-    </script>
-
-    <script>
-    	function toggleButtonText() {
-    		var elem = document.getElementById("soln-btn");
-    		if (elem.innerHTML.trim() === "Show Solution") {
-    			elem.innerHTML = "Hide Solution";
-    		} else {
-    			elem.innerHTML = "Show Solution";
-    		}
-    	}
-    </script>
 
   			
   	<!-- Footer -->

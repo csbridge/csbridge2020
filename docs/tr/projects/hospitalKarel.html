@@ -428,6 +428,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -441,59 +442,9 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Chris Piech
+			Hazırlayan: Chris Piech
 		</p>
-</div>
-<hr/>
 
-<!-- Problem description -->
-<div class="row">
-	<div class="col-xs-12">
-		<p>Handouts: <a href="../../tr/handouts/karel.html">KarelReference</a><br/>
-Worked Examples: <a href="../../tr/projects/invert.html">Invert</a>, <a href="../../tr/projects/unkarel/index.html">UN Karel</a><br/>
-Day1: <code>hospital_karel.py</code></p>
-<p>Countries around the world are dispatching hospital-building robots to make sure anyone who
-gets sick can be treated. They have decided to enlist Karel robots. Your job is to program those
-robots.</p>
-<p>Karel begins at the left end of a row that might look like this:</p>
-<p>
-<center>
-    <img style="width:100%"  src="../../img/projects/hospitalkarel/hospitalstart.png">
-</center>
-</p>
-
-<p>Each beeper in the figure represents a pile of supplies. Karel’s job is to walk along
-the row and build a new hospital in the places marked by each beeper. Each hospital
-should look exactly like the picture below (two columns of three beepers):</p>
-<p>
-<center>
-    <img style="width:50px"  src="../../img/projects/hospitalkarel/supplies.png">
-</center>
-</p>
-
-<p>The new hospital should have their corner at the point at which the pile of supplies was left. At
-the end of the run, Karel should be at the end of the row having created a set of hospitals. For the
-initial conditions shown, the result would look like this:</p>
-<p>
-<center>
-    <img style="width:100%"  src="../../img/projects/hospitalkarel/hospitalend.png">
-</center>
-</p>
-
-<p>Keep in mind the following information about the world:</p>
-<ul>
-<li>Karel starts facing east at (1, 1) with an infinite number of beepers in its beeper bag.</li>
-<li>The beepers indicating the positions at which hospitals should be built will be spaced so
-that there is room to build the hospitals without overlapping or hitting walls.</li>
-<li>There will be no supplies left on the last column.</li>
-<li>Karel should not run into a wall if it builds a hospital that extends into that final corner.</li>
-</ul>
-<p>Write a program to implement the Hospital Building Karel project. Remember that your program
-should work for any world that meets the above conditions.</p>
-	</div>
-</div>
-
-<!-- Solution (if included) -->
 
   			
   	<!-- Footer -->

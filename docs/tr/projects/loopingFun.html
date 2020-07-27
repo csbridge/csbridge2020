@@ -428,6 +428,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -441,113 +442,9 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Lisa Yan
+			Hazırlayan: Lisa Yan
 		</p>
-</div>
-<hr/>
 
-<!-- Problem description -->
-<div class="row">
-	<div class="col-xs-12">
-		<p>These are practice programs to help you get familiar with loops in Python. They are ordered from easiest to hardest.</p>
-<h2 id="loop-refresher">Loop Refresher</h2>
-<p>Recall the general structure of a <code>for</code> loop:</p>
-<pre><code>for i in range(15):
-    # some code...
-</code></pre>
-
-<p>The loop above runs for 15 iterations. You can parse the meaning of a <code>for</code> loop from the first line:</p>
-<ul>
-<li>Create a counter variable <code>i</code></li>
-<li>Every iteration of the loop, assign <code>i</code> to be the next number in the range 0 to 15, exclusive.  In other words, the first loop iteration, <code>i</code> is 0, the next time <code>i</code> is 1, and so on, and the last iteration, <code>i</code> is 14.</li>
-<li>For each value of <code>i</code>, run the code inside the loop. While running the loop code, you can use the value of <code>i</code>. So for example, the first time the loop runs, the value of <code>i</code> is zero.</li>
-<li>Note that even if you change <code>i</code> within the loop body, <code>i</code> will still be the next value in the range the next time through the loop.  For example:</li>
-</ul>
-<pre><code>for i in range(10):
-    i += 2
-    print(i)
-</code></pre>
-
-<p>The first time through this loop, <code>i</code> will be 0, and it will print out 2.  However, the second time through the loop, <code>i</code> will be 1.  Think about it as each loop iteration, regardless of what <code>i</code> currently is, <code>i</code> is re-assigned the next value in the specified range.</p>
-<p>That being said, it may be easier to follow if you create another variable instead of changing the loop variable:</p>
-<pre><code>for i in range(10):
-    j = i + 2 # does not change the value of i
-    print(j)
-</code></pre>
-
-<p>The following exercises are all about using the <code>for</code> loop counter <code>i</code>.</p>
-<p class="alert alert-info"><strong>Tip:</strong> when approaching looping problems, think about how a value of the loop counter can tell you what to do.  For instance, in problem 1 below, we might consider, "when <code>i</code> is 0, I want to print 1; when <code>i</code> is 1, I want to print 3, when <code>i</code> is 2, I want to print 5, etc.".</p>
-<h2 id="looping-fun-1">Looping Fun 1</h2>
-<p>Try to produce the following output with a <code>for</code> loop. Print the first ten odd numbers, starting from 1.</p>
-<pre><code>Print the first ten odd numbers, starting from 1.
-1
-3
-5
-7
-9
-11
-13
-15
-17
-19
-</code></pre>
-
-<p>Extension: Now try to print the first ten even numbers, starting from 0.</p>
-<h2 id="looping-fun-2">Looping Fun 2</h2>
-<p>Try to produce the following output with a <code>for</code> loop. Print the first ten even numbers in decreasing order.</p>
-<pre><code>Print the first ten numbers in decreasing order, starting from 20 and ending with 2.
-20
-18
-16
-14
-12
-10
-8
-6
-4
-2
-</code></pre>
-
-<p>Can you solve this problem without changing the loop condition from the previous problem? That is, start from the following <code>for</code> loop code:</p>
-<pre><code>for i in range(10):
-    # some code...
-</code></pre>
-
-<p>How would you solve the problem by using the following loop?</p>
-<pre><code>for i in range(20):
-    # some code...
-</code></pre>
-
-<h2 id="looping-fun-3">Looping Fun 3</h2>
-<p>Use a <code>for</code> loop, but print out everything on a single line. Using <code>print()</code> automatically adds a line break/new line after what is printed.  To tell it not to do this, add <code>end=''</code> right before the closing parentheses.  For instance, <code>print("some text or variables")</code> adds a line break/new line, whereas <code>print("some text or variables", end='')</code> does not.</p>
-<p>Print out the squares, starting from 1.</p>
-<pre><code>Print the first ten square numbers on a single line, starting from 1.
-1, 4, 9, 16, 25, 36, 49, 64, 81, 100
-</code></pre>
-
-<p>Try avoiding a comma at the end of the last square!</p>
-<h2 id="looping-fun-4">Looping Fun 4</h2>
-<p>Time for nested <code>for</code> loops!  Print out the coordinates of a 5x5 grid.</p>
-<pre><code>Print the coordinates of a 5x5 grid, row by row.
-(0,0), (1,0), (2,0), (3,0), (4,0)
-(0,1), (1,1), (2,1), (3,1), (4,1)
-(0,2), (1,2), (2,2), (3,2), (4,2)
-(0,3), (1,3), (2,3), (3,3), (4,3)
-(0,4), (1,4), (2,4), (3,4), (4,4)
-</code></pre>
-
-<p>Hint: try the following code structure:</p>
-<pre><code>for i in range(5):
-    for j in range(5):
-        # some code...
-</code></pre>
-
-<h2 id="additional-practice-while-loops">Additional Practice: <code>while</code> Loops</h2>
-<p>Want more practice with <code>while</code> loops? Do all the above exercises with a <code>while</code> loop instead of a <code>for</code> loop. Good luck!</p>
-	</div>
-</div>
-
-<!-- Solution (if included) -->
 
   			
   	<!-- Footer -->

@@ -428,6 +428,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -441,101 +442,9 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Problem written by Chris.
+			Hazırlayan: Problem written by Chris.
 		</p>
-</div>
-<hr/>
 
-<!-- Problem description -->
-<div class="row">
-	<div class="col-xs-12">
-		<p>Handouts: <a href="../../../tr/resources/graphics.html">Graphics Reference</a><br/></p>
-<p>Make a ball that bounces as if under the influence of gravity.</p>
-<p><center>
-<img style="width:500px" src="../../../img/projects/gravityBall/demo.png"><br />
-</center></p>
-	</div>
-</div>
-
-<!-- Solution (if included) -->
-	<h2>Solution</h2>
-    <p>
-    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
-    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
-    		aria-controls="Collapse">
-    		Show Solution
-    	</a>
-    </p>
-    <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:940.0px">&quot;&quot;&quot;
-File: gravity_ball.py
--------------------
-A ball bounces as if due to gravity.
-&quot;&quot;&quot;
-
-import time
-from graphics import Canvas
-
-SIZE = 20
-DELAY = 0.02    # 20 milliseconds
-GRAVITY = 0.5
-DAMPING = 0.7
-
-def main():
-    canvas = Canvas()
-    canvas.set_canvas_title(&quot;Gravity Ball&quot;)
-
-    # draw a ball on the top left corner
-    ball = canvas.create_oval(0, 0, SIZE, SIZE)
-    canvas.set_color(ball, &quot;black&quot;)
-
-    # variables for velocity
-    vx = 3
-    vy = 0
-
-    while True:
-        # update vy
-        vy += GRAVITY
-
-        # should the ball bounce?
-        if (canvas.get_top_y(ball) &gt; (canvas.get_canvas_height() - SIZE)) \
-                    and (vy &gt; 0):
-            vy = vy * -DAMPING
-
-        # move
-        canvas.move(ball, vx, vy)
-
-        # animation pause. refresh canvas
-        time.sleep(DELAY)
-        canvas.update()
-
-    canvas.mainloop()
-
-if __name__ == &quot;__main__&quot;:
-    main()
-</pre>
-    </div>
-
-    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        var editor = ace.edit("editor");
-       editor.setTheme('ace/theme/eclipse');
-       editor.getSession().setMode("ace/mode/python");
-       editor.setReadOnly(true);
-       editor.setShowPrintMargin(false);
-       editor.renderer.setShowGutter(false); 
-    </script>
-
-    <script>
-    	function toggleButtonText() {
-    		var elem = document.getElementById("soln-btn");
-    		if (elem.innerHTML.trim() === "Show Solution") {
-    			elem.innerHTML = "Hide Solution";
-    		} else {
-    			elem.innerHTML = "Show Solution";
-    		}
-    	}
-    </script>
 
   			
   	<!-- Footer -->

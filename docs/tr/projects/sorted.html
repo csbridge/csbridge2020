@@ -428,6 +428,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -441,74 +442,9 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Chris Piech
+			Hazırlayan: Chris Piech
 		</p>
-</div>
-<hr/>
 
-<!-- Problem description -->
-<div class="row">
-	<div class="col-xs-12">
-		<p>Ask the user to enter 10 numbers, then print thoses numbers in sorted order.  Here's example output:</p>
-<pre><code>&gt; 9
-&gt; 2
-&gt; 12
-&gt; 34
-&gt; -5
-&gt; 12
-&gt; 0
-&gt; 23
-&gt; 4
-&gt; 1
--5
-0
-1
-2
-4
-9
-12
-12
-23
-34
-</code></pre>
-
-<p>Store the numbers that the user entered in a list. You can sort the content of a list using:</p>
-<pre><code>my_list.sort()
-</code></pre>
-
-<p>Calling sort re-orders the elements in the specified list. For example, calling sort on the following list has the given result:</p>
-<p><img alt="Image of list of numbers before and after sorting - afterwards the list is in ascending order" src="../../img/projects/sorted/sorting.png" style="width: 400px" /></p>
-<h2 id="hints">Hints</h2>
-<p>To create a list of numbers use:</p>
-<pre><code>my_list = []
-</code></pre>
-
-<p>Recall that you can read an intenger from the user using:</p>
-<pre><code>number = int(input(prompt))
-</code></pre>
-
-<p>To add an element to a list:</p>
-<pre><code>my_list.append(newValue)
-</code></pre>
-
-<p>To get an element from a list:</p>
-<pre><code>my_list[index]
-</code></pre>
-
-<p>To loop over all elements in a list:</p>
-<pre><code>for i in range(len(my_list)):
-    # do something with my_list[i]
-}
-
--- OR --
-
-for elem in my_list:
-    # do something with elem
-</code></pre>
-	</div>
-</div>
-
-<!-- Solution (if included) -->
 
   			
   	<!-- Footer -->

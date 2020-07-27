@@ -428,6 +428,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -441,127 +442,9 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Chris Piech
+			Hazırlayan: Chris Piech
 		</p>
-</div>
-<hr/>
 
-<!-- Problem description -->
-<div class="row">
-	<div class="col-xs-12">
-		<p>You probably have seen or read news stories about fascinating ancient artifacts. At an archaeological dig a piece of wooden tool is unearthed and the archaeologist finds it to be 5,000 years old. A child mummy is found high in the Andes and the archaeologist says the child lived more than 2,000 years ago. Ever wondered how they know?</p>
-<p>Carbon dating is a way of determining the age of certain archaeological artifacts of biological origin. Your job is to write a program that figures out how old a sample is.</p>
-<p><center>
-<figure>
-    <img src="../../img/projects/carbonDating/carbondating.jpg" alt="A velociraptor fossil" class="center" style="width: 400px">
-    <figcaption style="text-align: center">This is a real velociraptor fossil.  It's very old.</figcaption>
-</figure>
-</center></p>
-<p>When an organism is alive, its matter will have a constant amount of a special type of carbon called carbon-14 (c14). It turns out that all living things have the same fraction: wood, mammoths, your body right now... small cats... they all have the same amount.</p>
-<p>An important property of c14 is that it dissapears at a constant rate: every 5,700 years the amount of c14 is halfed (its half life is 5,700 years). For example, if one starts with 100% of the natural occurence of c14:</p>
-<pre><code>In 5,700 years we expect there will only be 50% left. 
-In 11,400 years we would expect there will only have 25% left. 
-And so on...
-</code></pre>
-
-<p>When an organism is alive, it keeps replenishing its supply of c14 to the natural level. But when it dies (moment of silence), the amount of c14 starts to decrease. By testing how much c14 is left, scientists know how how long a dead thing has been dead for. Good times.</p>
-<h2 id="milestone-1-lookup-table">Milestone 1: Lookup Table</h2>
-<p>To get started, let's make a lookup table that maps the percent of c14 remaining to the number of years the sample has been dead for. Print out the percent c14 remaining, and the number of years passed for the first 20 half lives. Your table should look like the following:</p>
-<pre><code>Carbon Dating Lookup Table
-Percent C-14 Remaining: years passed
---------------------------
-100.0%: 0 years
-50.0%: 5700 years
-25.0%: 11400 years
-12.5%: 17100 years
-6.25%: 22800 years
-3.125%: 28500 years
-1.5625%: 34200 years
-0.78125%: 39900 years
-0.390625%: 45600 years
-0.1953125%: 51300 years
-0.09765625%: 57000 years
-0.048828125%: 62700 years
-0.0244140625%: 68400 years
-0.01220703125%: 74100 years
-0.006103515625%: 79800 years
-0.0030517578125%: 85500 years
-0.00152587890625%: 91200 years
-0.000762939453125%: 96900 years
-0.0003814697265625%: 102600 years
-0.00019073486328125%: 108300 years
-</code></pre>
-
-<h2 id="milestone-2-interactive-mode">Milestone 2: Interactive Mode</h2>
-<p>For scientists it will be much more useful for them to input the percent of natural c14 that they measured, and have the program tell them the age. Repeatedly ask the user to enter a percent of natural c14 remaining and then output the age of their sample.</p>
-<pre><code>What percent of natural carbon-14 does your sample have? 99
-99.0 carbon-14...
-Your sample is 82.64754726215602 years old.
-
-What percent of natural carbon-14 does your sample have? 10
-10.0 carbon-14...
-Your sample is 18934.990140857964 years old.
-
-What percent of natural carbon-14 does your sample have? 0.001
-0.001 carbon-14...
-Your sample is 94674.95070428983 years old.
-
-What percent of natural carbon-14 does your sample have? -1
-</code></pre>
-
-<p>The formula for the age in years of a sample, given the percent of natural c14 remaining, is:</p>
-<p><center>
-<img src="../../img/projects/carbonDating/formula.png" alt="age is natural log of (percent / 100) divided by the natural log of 0.5, all multiplied by 5700" class="center" style="width: 400px" />
-</center></p>
-<p>To take the natural log of a number (the ln function), add <code>import math</code> at the top of your file, and use the function:</p>
-<pre><code>math.log(value)
-</code></pre>
-
-<p>Overall, your program should look like the following.  If the user enters -1 as the percent, end the program.</p>
-<pre><code>Carbon Dating Lookup Table
-Percent C-14 Remaining: years passed
---------------------------
-100.0%: 0 years
-50.0%: 5700 years
-25.0%: 11400 years
-12.5%: 17100 years
-6.25%: 22800 years
-3.125%: 28500 years
-1.5625%: 34200 years
-0.78125%: 39900 years
-0.390625%: 45600 years
-0.1953125%: 51300 years
-0.09765625%: 57000 years
-0.048828125%: 62700 years
-0.0244140625%: 68400 years
-0.01220703125%: 74100 years
-0.006103515625%: 79800 years
-0.0030517578125%: 85500 years
-0.00152587890625%: 91200 years
-0.000762939453125%: 96900 years
-0.0003814697265625%: 102600 years
-0.00019073486328125%: 108300 years
-
-What percent of natural carbon-14 does your sample have? 99
-99.0 carbon-14...
-Your sample is 82.64754726215602 years old.
-
-What percent of natural carbon-14 does your sample have? 10
-10.0 carbon-14...
-Your sample is 18934.990140857964 years old.
-
-What percent of natural carbon-14 does your sample have? 0.001
-0.001 carbon-14...
-Your sample is 94674.95070428983 years old.
-
-What percent of natural carbon-14 does your sample have? -1
-</code></pre>
-
-<p>All the best, and ask questions if you don't understand something (or want to know more about the archaeology).</p>
-	</div>
-</div>
-
-<!-- Solution (if included) -->
 
   			
   	<!-- Footer -->

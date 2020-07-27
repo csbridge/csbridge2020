@@ -428,6 +428,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -441,128 +442,9 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Based on a handout by Eric Roberts
+			Hazırlayan: Based on a handout by Eric Roberts
 		</p>
-</div>
-<hr/>
 
-<!-- Problem description -->
-<div class="row">
-	<div class="col-xs-12">
-		<p>Handouts: <a href="../../../tr/resources/karel.html">Karel Reference</a><br/>
-File: <code>un_karel.py</code><br/></p>
-<p>Karel has been hired by the UN to come and help build houses. The day needs saving and Karel is clearly the best robot for the job. Your goal is to have Karel walk along the bottom row and build a house like the following:</p>
-<p><center>
-<img style="width:150px" src="../../../img/projects/unKarel/house.png"> 
-</center></p>
-<p>Every time Karel finds a beeper. The below images show what Karel should do for two example worlds. You can assume that no houses will overlap and that all houses will fit inside the world. You can't assume the size of the world or the number of houses!</p>
-<p><center>
-<img style="width:700px" src="../../../img/projects/unKarel/un1.png"> <br />
-</center></p>
-<p><center>
-<img style="width:600px" src="../../../img/projects/unKarel/un2.png"> <br />
-</center></p>
-	</div>
-</div>
-
-<!-- Solution (if included) -->
-	<h2>Solution</h2>
-    <p>
-    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
-    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
-    		aria-controls="Collapse">
-    		Show Solution
-    	</a>
-    </p>
-    <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:1320.0px">from karel.stanfordkarel import *
-
-&quot;&quot;&quot;
-File: un_karel.py
-------------------------
-This program makes Karel builds houses, as work for the UN.
-&quot;&quot;&quot;
-
-def main():
-    while front_is_clear():
-        move()
-        if beepers_present():
-            build_house()
-
-def build_house():
-    &quot;&quot;&quot;
-    Constructs a single house centered around Karel&#039;s current position.
-	  You can assume that there is a beeper present at the start state.
-	  At the end of the method, Karel will be facing east on the bottom-
-	  right corner of the house.
-    &quot;&quot;&quot;
-    pick_beeper()
-    turn_around()
-    move()
-    turn_right()
-    place_three()
-    turn_right()
-    move()
-    turn_right()
-    place_three()
-    turn_left()
-    move()
-    turn_left()
-    place_three()
-    turn_around()
-    move_to_wall()
-    turn_left()
-
-def move_to_wall():
-    &quot;&quot;&quot;
-    Move forward until Karel hits a wall.
-    &quot;&quot;&quot;
-    while front_is_clear():
-        move()
-
-def place_three():
-    &quot;&quot;&quot;
-    Places three beepers in a row and moves three times!
-    &quot;&quot;&quot;
-    for i in range(3):
-        put_beeper()
-        move()
-
-def turn_around():
-    turn_left()
-    turn_left()
-
-def turn_right():
-    turn_left()
-    turn_left()
-    turn_left()
-
-# There is no need to edit code beyond this point
-if __name__ == &quot;__main__&quot;:
-    run_karel_program()
-</pre>
-    </div>
-
-    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        var editor = ace.edit("editor");
-       editor.setTheme('ace/theme/eclipse');
-       editor.getSession().setMode("ace/mode/python");
-       editor.setReadOnly(true);
-       editor.setShowPrintMargin(false);
-       editor.renderer.setShowGutter(false); 
-    </script>
-
-    <script>
-    	function toggleButtonText() {
-    		var elem = document.getElementById("soln-btn");
-    		if (elem.innerHTML.trim() === "Show Solution") {
-    			elem.innerHTML = "Hide Solution";
-    		} else {
-    			elem.innerHTML = "Show Solution";
-    		}
-    	}
-    </script>
 
   			
   	<!-- Footer -->
