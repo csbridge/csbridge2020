@@ -36,8 +36,7 @@ filePath - the total path to the markdown file being rendered in this template
 % if defined('solution'):
 	<%
 		import os
-		lastSlash = filePath.rfind("/")
-		solutionPath = filePath[:lastSlash] + "/" + solution
+		solutionPath = os.path.join(filePath, os.pardir, solution)
 		soln = open(solutionPath).read()
 		nLines = len(soln.split('\n')) if len(soln) else 0
   		editorHeight = 20.0 * nLines
