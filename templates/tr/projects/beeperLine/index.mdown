@@ -1,7 +1,7 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Beeper Line
 credit: Written by Chris Piech
-solution: soln.py
+solution: ../soln.py
 
 Handouts: [Karel Reference]({{pathToRoot}}en/handouts/karel.html)<br/>
 File: `beeper_line.py`

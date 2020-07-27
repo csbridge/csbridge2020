@@ -1,7 +1,7 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Hole Puncher
 credit: Problem written by Chris Piech.
-solution: soln.py
+solution: ../soln.py
 
 This example lets you treat your computer like a piece of paper and your mouse like a hole puncher. The user should be able to click anywhere on the window and create holes (ovals). 
 
