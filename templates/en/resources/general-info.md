@@ -40,9 +40,9 @@ Our goal is to create one community of enthusiastic teachers and students who su
 ### Requirements for the Course
 
 1. An internet connection strong enough to stream video.</li>
-1. <b>Video conferencing software</b> to participate in lecture, office hours, section, and social activities. We will be using Zoom for all program-related activities where we are online together. You can download the <b>"Zoom Client for Meetings" version 5.1.2</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a></li>
-1. The <b>PyCharm development environment</b> to complete assignments. Installation instructions here: <span style="color:red;">add link once it's linked on the course webpage</span>
-1. A love of learning and an interest in getting to know other high school students in Turkey and Czech Republic!</li>
+2. <b>Video conferencing software</b> to participate in lecture, office hours, section, and social activities. We will be using Zoom for all program-related activities where we are online together. You can download the <b>"Zoom Client for Meetings" version 5.1.2</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a></li>
+3. The <b>PyCharm development environment</b> to complete assignments. Installation instructions here: <a href='http://online.csbridge.org/en/resources/install.html'>http://online.csbridge.org/en/resources/install.html</a>
+4. A love of learning and an interest in getting to know other high school students in Turkey and Czech Republic!</li>
 
 What if I don’t have some of these things or don't understand what I'm being asked to do? The best place to ask for questions is on Ed. See below for more information about Ed!
 
