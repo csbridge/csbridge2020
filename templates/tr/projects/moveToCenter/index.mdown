@@ -1,7 +1,7 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Move To Center
 credit: Problem written by Chris and Julia
-solution: soln.py
+solution: ../soln.py
 
 Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 

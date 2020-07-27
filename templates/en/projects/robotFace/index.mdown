@@ -1,7 +1,7 @@
 template: templates/en/projects/projectTemplate.ptl
 title: Robot Face
 credit: Problem written by Eric Roberts. Updated by Chris Piech and Lisa Yan.
-solution: soln.py
+solut
 
 Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 

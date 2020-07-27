@@ -1,7 +1,7 @@
 template: templates/en/projects/projectTemplate.ptl
 title: Banish Winter (with solution)
 credit: Based on a handout by Eric Roberts, with updates by Zach Birnholz and Lisa Yan
-solution: soln.py
+solution: ../soln.py
 
 Handouts: [Karel Reference]({{pathToRoot}}en/resources/karel.html)<br/>
 File: `banish_winter.py`<br/>

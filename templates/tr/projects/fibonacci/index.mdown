@@ -1,7 +1,7 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Fibonacci (with solution)
 credit: Eric Roberts
-solution: soln.py
+solution: ../soln.py
 
 In the 13th century, the Italian mathematician Leonardo Fibonacci, as a way to explain the geometric growth of a population of rabbits, devised a mathematical sequence that now bears his name.  The first two terms in this sequence, Fib(0) and Fib(1), are 0 and 1, and every subsequent term is the sum of the preceding two.  Thus, the first several terms in the Fibonacci sequence look like this:
 

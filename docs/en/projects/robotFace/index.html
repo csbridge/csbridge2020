@@ -452,7 +452,8 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../../en/resources/graphics.html">Graphics Reference</a><br/></p>
+		<p>solut</p>
+<p>Handouts: <a href="../../../en/resources/graphics.html">Graphics Reference</a><br/></p>
 <p>Write a program that draws this picture. You should use the constants provided, but feel free to change them (or recolor any part of the face).</p></p>
 <p><center>
     <img style="width:500px;border:1px solid #000000" src="../../../img/projects/robotFace/face.jpg">
@@ -471,109 +472,6 @@ LABEL_Y = 40          # The distance from the top of the screen to the center of
 </div>
 
 <!-- Solution (if included) -->
-	<h2>Solution</h2>
-    <p>
-    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
-    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
-    		aria-controls="Collapse">
-    		Show Solution
-    	</a>
-    </p>
-    <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:1440.0px">&quot;&quot;&quot;
-File: robot_face.py
--------------------
-Draws an awesome robot face, with label and different colored
-eyes!!!@#$%#@!
-&quot;&quot;&quot;
-
-from graphics import Canvas
-
-FACE_WIDTH = 300      # The width of the robot face
-FACE_HEIGHT = 350     # The height of the robot face
-EYE_DIAMETER = 70     # The diameter of each robot eye
-EYE_Y_OFFSET = 40     # The distance from the top of the head to the top of the eyes
-EYE_X_SEPARATION = 40 # The distance between the left eye and right eye
-MOUTH_WIDTH = 150     # The width of the mouth
-MOUTH_HEIGHT = 30     # The height of the mouth
-MOUTH_Y_OFFSET = 200  # The distance from the top of the head to the top of the mouth
-LABEL_Y = 40          # The distance from the top of the screen to the center of the text
-
-def main():
-  canvas = Canvas()
-  canvas.set_canvas_title(&quot;Draw Robot Face&quot;)
-
-  ## Start of your code
-  draw_head(canvas)
-  draw_mouth(canvas)
-  draw_eyes(canvas)
-  draw_label(canvas)
-  ## End of your code
-
-  canvas.mainloop()
-
-def draw_head(canvas): 
-  x = (canvas.get_canvas_width() - FACE_WIDTH)/2
-  y = (canvas.get_canvas_height() - FACE_HEIGHT)/2
-  head = canvas.create_rectangle(x, y, x + FACE_WIDTH, y + FACE_HEIGHT)
-  canvas.set_fill_color(head, &quot;yellow&quot;)
-
-def draw_mouth(canvas):
-  head_x = (canvas.get_canvas_width() - FACE_WIDTH)/2
-  head_y = (canvas.get_canvas_height() - FACE_HEIGHT)/2
-
-  mouth_x = head_x + (FACE_WIDTH - MOUTH_WIDTH) / 2
-  mouth_y = head_y + MOUTH_Y_OFFSET      # mouth offset is from top of the head
-
-  mouth = canvas.create_rectangle(mouth_x, mouth_y,
-                                  mouth_x + MOUTH_WIDTH, mouth_y + MOUTH_HEIGHT)
-  canvas.set_fill_color(mouth, &quot;black&quot;)
-
-def draw_eyes(canvas):
-  head_y = (canvas.get_canvas_height() - FACE_HEIGHT)/2
-  eye_y = head_y + EYE_Y_OFFSET           # eye offset is from the top of the head
-
-  right_x = canvas.get_canvas_width()/2 + EYE_X_SEPARATION/2
-  right_eye = canvas.create_oval(right_x, eye_y,
-                                right_x + EYE_DIAMETER,  eye_y + EYE_DIAMETER)
-  canvas.set_fill_color(right_eye, &quot;green&quot;)
-
-  left_x = canvas.get_canvas_width()/2 - EYE_X_SEPARATION/2 - EYE_DIAMETER
-  left_eye = canvas.create_oval(left_x, eye_y,
-                                left_x + EYE_DIAMETER,  eye_y + EYE_DIAMETER)
-  canvas.set_fill_color(left_eye, &quot;blue&quot;)
-
-
-def draw_label(canvas):
-  x = canvas.get_canvas_width()/2
-  label = canvas.create_text(x, LABEL_Y, &quot;Robot Face&quot;)
-  canvas.set_font(label, &quot;Times New Roman&quot;, 44)
-
-if __name__ == &quot;__main__&quot;:
-    main()
-</pre>
-    </div>
-
-    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        var editor = ace.edit("editor");
-       editor.setTheme('ace/theme/eclipse');
-       editor.getSession().setMode("ace/mode/python");
-       editor.setReadOnly(true);
-       editor.setShowPrintMargin(false);
-       editor.renderer.setShowGutter(false); 
-    </script>
-
-    <script>
-    	function toggleButtonText() {
-    		var elem = document.getElementById("soln-btn");
-    		if (elem.innerHTML.trim() === "Show Solution") {
-    			elem.innerHTML = "Hide Solution";
-    		} else {
-    			elem.innerHTML = "Show Solution";
-    		}
-    	}
-    </script>
 
 			
 	<!-- Footer -->
