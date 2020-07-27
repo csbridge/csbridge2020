@@ -1,0 +1,46 @@
+% rebase('templates/teach/notes/template.ptl', problemTitle="Medicine")
+
+<p>
+	This is one section problem for the day.  The main learning goal is using variables and concatenating different variable types together.  When transitioning to this problem, take a minute to emphasize the societal impact of this solution!  It turned out to save countless lives, and is a great example of Computer Science being used as a tool to solve larger problems.
+
+
+  Here is the main way to understand how to approach the problem:
+
+  <ul>
+    <li>Initially, we may think to just loop <code>NUM_PACKAGES</code> times and each time print out a random number, but we may print out the same random number more than once.  We need a way to print out numbers that have not been printed out before.</li>
+    <li>One approach is to focus on the two requirements: being <u>unique</u> and being <u>random</u>.  Approach each one at a time and discuss how we might be able to satisfy it.</li>
+    <li>For example, one way to do this is to make just <i>part</i> of the number completely random.  In other words, let's make the first five digits a fixed number that we increment each time we make a medicine number.  Then, let's make the last five digits a random number between 10000 and 99999.</li>
+    <li>This will make a number 10 digits long in total, where no two numbers will be the same.  This is because the first 5 digits are always unique.  This also makes a number that is random, since the last 5 digits are always random.</li>
+  </ul>
+</p>
+
+<h3>Solution</h3>
+<pre id="editor" style="height:300px">public class Medicine extends ConsoleProgram {
+  
+    // The number of medicine numbers to generate
+    private static final int NUM_PACKAGES = 1000;
+
+    private RandomGenerator rgen = new RandomGenerator();
+  
+    public void run() {
+        int firstFiveDigits = 10000;
+        for (int i = 0; i < NUM_PACKAGES; i++) {
+            println("" + firstFiveDigits + rgen.nextInt(10000, 99999));
+            firstFiveDigits = firstFiveDigits + 1;
+        }
+    }
+
+}</pre>
+
+<p>Try brainstorming other ways of generating these numbers in section!  It's a great exercise to think through how to design an algorithm to solve this problem.</p>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
