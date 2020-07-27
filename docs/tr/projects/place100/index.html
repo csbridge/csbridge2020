@@ -428,6 +428,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -441,8 +442,9 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Based on a handout by Eric Roberts
+			Hazırlayan: Based on a handout by Eric Roberts
 		</p>
+
 </div>
 <hr/>
 
@@ -459,12 +461,12 @@ File: <code>place_100.py</code><br/></p>
 </div>
 
 <!-- Solution (if included) -->
-	<h2>Solution</h2>
+	<h2>Çözüm</h2>
     <p>
     	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
     		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
     		aria-controls="Collapse">
-    		Show Solution
+    		Çözümü Göster
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
@@ -502,10 +504,10 @@ if __name__ == &quot;__main__&quot;:
     <script>
     	function toggleButtonText() {
     		var elem = document.getElementById("soln-btn");
-    		if (elem.innerHTML.trim() === "Show Solution") {
-    			elem.innerHTML = "Hide Solution";
+    		if (elem.innerHTML.trim() === "Çözümü Göster") {
+    			elem.innerHTML = "Çözümü Gizle";
     		} else {
-    			elem.innerHTML = "Show Solution";
+    			elem.innerHTML = "Çözümü Göster";
     		}
     	}
     </script>

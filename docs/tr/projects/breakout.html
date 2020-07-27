@@ -428,6 +428,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -440,134 +441,144 @@ filePath - the total path to the markdown file being rendered in this template
 		Breakout
 	</h1>
 
-		<p>
-			Credit: Written by Eric Roberts
-		</p>
+
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../tr/handouts/graphics.html">Graphics Reference</a><br/>
-Worked Example: <a href="../../tr/projects/stampTool.html">Stamp Tool</a><br/>
+		<p>Hazırlayan: Written by Eric Roberts
+translation: Ceren Kocaoğullar</p>
+<p>Handouts: <a href="../../tr/handouts/graphics.html">Grafikler Referansı</a><br/>
+Worked Example: <a href="../../tr/projects/stampTool.html">Damga Makinesi</a><br/>
 File: <code>breakout.py</code></p>
-<p>Your job in this assignment is to write the classic arcade game of Breakout, which was invented by Steve Wozniak before he founded Apple with Steve Jobs (moment of silence).  It is a large assignment, but entirely manageable as long as you break the problem up into pieces.  </p>
-<h2 id="the-breakout-game">The Breakout Game</h2>
-<p>In Breakout, the initial configuration of the world appears as shown on the right. The colored rectangles in the top part of the screen are <b>bricks</b>, and the slightly larger rectangle at the bottom is the <b>paddle</b>. The paddle is in a fixed position in the vertical dimension, but moves back and forth across the screen along with the mouse until it reaches the edge of its space. </p>
+<p>Bu projedeki işiniz Steve Jobs'la (saygı duruşu) Apple'ı kurmadan önce Steve Wozniak tarafından bulunan klasik arcade oyunu Breakout'u yazmak. Büyük bir proje, ama problemi parçalara böldüğünüz sürece tümüyle üstesinden gelinebilir.</p>
+<h2 id="breakout-oyunu">Breakout Oyunu</h2>
+<p>Breakout oyununda dünyanın başlangıç şekli aşağıdaki resimde solda göründüğü gibidir. Ekranın üst tarafındaki renkli dikdörtgenler <b>tuğlalar</b>, ve alttaki nispeten büyük dikdörtgen ise <b>paddle</b> olarak geçer. paddle düşey boyutta sabitlenmiştir, ama fare ile birlikte ekranın bir yanından bir yanına ekranın kenarına ulaşana kadar hareket edebilir.</p>
 <p><center><img style="padding:10px;max-width:100%" src="../../img/projects/breakout/breakoutGameH.png" /></center></p>
-<p>A complete game consists of three turns. On each turn, a ball is launched from the center of the window toward the bottom of the screen at a random angle. That ball bounces off the paddle and the walls of the world, in accordance with the physical principle generally expressed as "the angle of incidence equals the angle of reflection" (which turns out to be very easy to implement as discussed later in this handout). Thus, after two bounces--one off the paddle and one off the right wall--the ball might have the trajectory shown in the second diagram. (Note that the dotted line is there to show the ball's path and won't appear on the screen.)</p>
-<p>As you can see from the second diagram, the ball is about to collide with one of the bricks on the bottom row.  When that happens, the ball bounces just as it does on any other collision, but the brick disappears.  The third diagram shows what the game looks like after that collision and after the player has moved the paddle to put it in line with the oncoming ball.</p>
-<p>The play on a turn continues in this way until one of two conditions occurs: </p>
+<p>Tam bir oyun üç turdan oluşur. Her elde, pencerenin ortasından ekranın altına doğru rastgele bir açıyla bir top fırlatılır. "Gelen açı yansıyan açıya eşittir" fiziksel ilkesine uygun bir şekilde (bu ders notunda daha sonra da bahsedileceği üzere kodlaması gayet kolay), top paddle'dan ve ekranın duvarlarından seker. Böylece, biri paddle'dan ve biri sağ duvardan olan iki sekmeden sonra top ikinci şemada gösterilen yörüngede hareket edebilir. (Kesikli çizginin sadece topun gittiği yolu göstermek için orada olduğunu ve normalde ekranda görünmeyeceğini unutmayın.)</p>
+<p>İkinci şemadan da görebileceğiniz üzere, top alt sıradan bir tuğla ile çarpışmak üzere. Bu olduğunda, top başka bir çarpışmada olduğu gibi seker, fakat tuğla kaybolur. Üçüncü şema bu çarpışmadan ve oyuncu gelen topun hizasına paddle'ı hareket ettirdikten sonra oyunun durumunu göstermektedir.</p>
+<p>Bir dönüşte oyun, iki koşuldan biri gerçekleşene kadar bu şekilde devam eder:</p>
 <ol>
-<li>The ball hits the lower wall, which means that the player must have missed it with the paddle.  In this case, the turn ends and the next ball is served if the player has any turns left.  If not, the game ends in a loss for the player.</li>
-<li>The last brick is eliminated.  In this case, the player wins, and the game ends immediately.</li>
+<li>Top alt duvara çarpar. Bu oyuncunun topu paddle'la yakalayamadığı anlamına gelir. Bu durumda, el biter ve oyuncunun başka eli kaldıysa, sıradaki top verilir. Eğer kalmadıysa, oyuncu oyunu kaybetmiş bir şekilde oyun biter.</li>
+<li>Son tuğla elenir. Bu durumda, oyuncu kazanır ve oyun hemen sona erer.</li>
 </ol>
-<p>Success in this assignment will depend on breaking up the problem into manageable pieces and getting each one working before you move on to the next.  The next few sections describe a reasonable staged approach to the problem.</p>
-<h2 id="1-create-bricks">1. Create bricks</h2>
-<p>Before you start playing the game, you have to set up the various pieces.  Thus, it probably makes sense to implement the run method as two method calls: one that sets up the game and one that plays it.  An important part of the setup consists of creating the rows of bricks at the top of the game, which look like this:</p>
-<p><center>
-<img style="padding:10px;max-width:100%" src="../../img/projects/breakout/breakoutBricks.png"></img>
-</center></p>
-<p>The number, dimensions, and spacing of the bricks are specified using named constants in the starter file, as is the distance from the top of the window to the first line of bricks.  The only value you need to compute is the x coordinate of the first column, which should be chosen so that the bricks are centered in the window, with the leftover space divided equally on the left and right sides.  The color of the bricks remain constant for two rows and run in the following rainbow-like sequence: <code>"red", "orange", "yellow", "green", "cyan"</code>.</p>
-<h2 id="2-add-a-boouncing-ball">2. Add a boouncing ball</h2>
-<p>At one level, creating the ball is easy, given that it's just a filled oval.  The interesting part lies in getting it to move and bounce appropriately.  You are now past the "setup" phase and into the "play" phase of the game.  To start, create a ball and put it in the center of the window.  As you do so, keep in mind that the coordinates of the oval do not specify the location of the center of the ball but rather its upper left corner.</p>
-<p>The program needs to keep track of the velocity of the ball, which consists of two separate components, which you will presumably declare as variables like this:</p>
-<pre><code>change_x = 10
-change_y = 10
-</code></pre>
-
-<p>The "change" components
-represent the change in position that occurs on each time step.  Initially, the ball should be heading downward, and you might try a starting velocity of +10.0 for <code>change_x</code> and <code>change_y</code>.</p>
-<p>Recall that there are two ways to move an object in the Python graphics library:</p>
-<pre><code># Move to the object to a specific new_x, new_y
-canvas.moveto(object, new_x, new_y)
-
-# Increase the x coordinate by change_x and the y coordinate by change_y
-canvas.move(object, change_x, change_y)
-</code></pre>
-
-<p>Once you've created your ball and the chnage variables, your next challenge is to get the ball to bounce around the world, ignoring entirely the paddle and the bricks.  This will require that you program an "animation loop" where you move the ball and then pause. Then you can consider how to make the ball bounce. To do so, you need to check to see if the coordinates of the ball have gone beyond the boundary, taking into account that the ball has a nonzero size.  Thus, to see if the ball has bounced off the right wall, you need to see whether the coordinate of the right edge of the ball has become greater than the width of the window; the other three directions are treated similarly.  For now, have the ball bounce off the bottom wall so that you can watch it make its path around the world.</p>
-<p>Computing what happens after a bounce is extremely simple.  If a ball bounces off the top or bottom wall, all you need to do is reverse the sign of <code>change_y</code>.  Symmetrically, bounces off the side walls simply reverse the sign of <code>change_x</code>.</p>
-<h2 id="3-add-the-paddle">3. Add the paddle</h2>
-<p>The next step is to create the paddle.   There is only one paddle, which is a filled rectangle.  You even know its position relative to the bottom of the window.</p>
-<p>The challenge in creating the paddle is to make it track the mouse. Here, however, you only have to pay attention to the x coordinate of the mouse because the y position of the paddle is fixed.  </p>
-<p>Each time through the animation loop, ask for the location of the mouse and move the rectangle representing the paddle. To get the location of the mouse, you can use the canvas function <code>canvas.get_mouse_x()</code>:</p>
-<pre><code>mouse_x = canvas.get_mouse_x()
-</code></pre>
-
-<h2 id="4-check-for-collisions">4. Check for Collisions</h2>
-<p>Now comes the interesting part.  In order to make Breakout into a real game, you have to be able to tell whether the ball is colliding with another object in the window.  As scientists often do, it helps to begin by making a simplifying assumption and then relaxing that assumption later.  Suppose the ball were a single point rather than a circle.  In that case, how could you tell whether it had collided with another object?</p></p>
-<p>There is a canvas function: `canvas.find_overlapping(x_1, y_1, x_2, y_2) which returns a list of all objects that are overlapping the rectangle defined by the four coordinates.</p>
-<pre><code>objs = canvas.find_overlapping(x_1,  y_1, x_2, y_2)
-</code></pre>
-
-<p>The easiest thing to do, which is in fact typical of real computer games, is to check a larger bounding box for collision. Look for any objects in this rectangle:</p>
-<p><center>
-  <img src="../../img/projects/breakout/breakoutCollision.png"></img>
-</center></p>
-<p>To get a list of objects that are overlapping the ball, you can use code as follows which calls the canvas function <code>canvas.coords(obj)</code>, returning the 4 corners of an object:</p>
-<pre><code># this graphics method gets the location of the ball as a list
-ball_coords = canvas.coords(ball)
-# the list has four elements:
-x_1 = ball_coords[0]
-y_1 = ball_coords[1]
-x_2 = ball_coords[2]
-y_2 = ball_coords[3]
-# we can then get a list of all objects in that area
-colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
-</code></pre>
-
-<p>If you get all overlapping objects in this rectangle, you will be returned a list. In that list will be the <code>ball</code>, as well as any object that the ball is currently colliding with. To test if a colliding object is the ball, you can simply check if the element is <code>==</code> to your ball variable.</p>
-<p>If the ball collides with the paddle, you need to bounce the ball so that it starts traveling up.  If it isn't the paddle, the only other thing it might be is a brick, since those are the only other objects in the world.  Once again, you need to cause a bounce in the vertical direction (flip the direction of the <code>change_y</code> variable), but you also need to take the brick away.  To do so, all you need to do is remove it from the screen by calling the <code>delete</code> method:</p>
-<pre><code>canvas.delete(square) # deletes the object called square
-</code></pre>
-
-<h2 id="extra-touches"><span style="color:blue">Extra Touches</span></h2>
-<p>If you've gotten to here, you've done all the hard parts.  There are, however, a few more details you could take into account if you have time.</p></p>
-<ol>
-<li>
-<p>Take care of the case when the ball hits the bottom wall. In the prototype you've been building, the ball just bounces off this wall like all the others, but that makes the game pretty hard to lose. Modify your loop structure so that it tests for hitting the bottom wall as one of its terminating conditions.</p>
-</li>
-<li>
-<p>Make your game play three turns!</p>
-</li>
-<li>
-<p>Make it so that your ball bounces differently, depending on where it hits the paddle. If it hits the left of the paddle it bounces more to the left. If it hits the right of the paddle it bounces more to the right.</p>
-</li>
-<li>
-<p>Check for the other terminating condition, which is hitting the last brick. How do you know when you've done so? Although there are other ways to do it, one of the easiest is to have your program keep track of the number of bricks remaining. Every time you hit one, subtract one from that counter. When the count reaches zero, you must be done. It would be nice to give the player a little feedback that at least indicates whether the game was won or lost.</p>
-</li>
-<li>
-<p>Test your program to see that it works. If you think everything is working, here is something to try: Just before the ball is going to pass the paddle level, move the paddle quickly so that the paddle collides with the ball rather than vice-versa. Does everything still work, or does your ball seem to get "glued" to the paddle? This error occurs because the ball collides with the paddle, changes direction, and then collides with the paddle again before escaping. How can you fix this bug?</p>
-</li>
-<li>
-<p>Check for the other terminating condition, which is hitting the last brick. How do you know when you've done so?  Although there are other ways to do it, one of the easiest is to have your program keep track of the number of bricks remaining.  Every time you hit one, subtract one from that counter.  When the count reaches zero, you must be done.  It would be nice to give the player a little feedback that at least indicates whether the game was won or lost.</p>
-</li>
-</ol>
-<h2 id="demo"><span style="color:blue">Demo</span></h2>
+<p>Bu ödevdeki başarı, sorunu yönetilebilir parçalara ayırmaya ve bir sonrakine geçmeden önce her birinin çalışmasına bağlı olacaktır. Sonraki birkaç bölüm, probleme makul bir aşamalı yaklaşımı açıklamaktadır.</p>
+<h2 id="demo">Demo</h2>
 <div class="row">
     <div class="col-md-12">
         <iframe style="width: 410px; height: 650px; border: none;" id="canvas" src="https://web.stanford.edu/class/archive/cs/cs106a/cs106a.1164/assignments/Assignment3/Breakout/"></iframe>
     </div>
 </div>
 
-<h2 id="extensions"><span style="color:blue">Extensions</span></h2>
-<p>If you have the basic play working well, then this would be a great opportunity to go above and beyond. Here are a few ideas of for possible extensions (of course, we encourage you to use your imagination to come up with other ideas as well):</p>
+<h2 id="1-tuglalar-olustur">1. Tuğlaları oluştur</h2>
+<p>Oyuna başlamadan önce, problemin çeşitli parçalarını kurmalısınız. Bu sebeple, run metodunu biri oyun parçalarının kurulumunu yapan, diğeriyse oyunu oynatan iki metot çağrısı olarak kodlamak muhtemelen mantıklı olacaktır. Kurulumun önemli bir parçası aşağıdaki gibi ekranın üst tarafındaki tuğla sıralarını oluşturmaktan ibarettir:</p>
+<p><center>
+<img style="padding:10px;max-width:100%" src="../../img/projects/breakout/breakoutBricks.png"></img>
+</center></p>
+<p>Tuğlaların sayısı, boyutları, aralarındaki boşluklar ve pencerenin üstünden ilk satırdaki tuğlalara kadar olan mesafe, başlangıç dosyasındaki sabitler kullanılarak belirtilir. Hesaplamanız gereken tek değer ilk sütunun x koordinatıdır. Bu değer, tuğlalar pencerenin sol ve sağ tarafından eşit miktarda uzakta kalacak şekilde seçilmelidir. Tuğlaların renkleri iki satırda bir değişmelidir ve gökkuşağına benzer şu sırada ilerler: RED (kırmızı), ORANGE (turuncu), YELLOW (sarı), GREEN (yeşil), CYAN (camgöbeği).</p>
+<h2 id="2-zplayan-bir-top-ekle">2. Zıplayan bir top ekle</h2>
+<p>Bir noktada, onun sadece içi boyanmış bir oval olduğunu düşünürsek topu yaratmak kolay. İlginç olan kısım onu uygun olarak hareket ettirmek ve sektirmekte. "Kurulum" aşamasını artık geçtiniz ve oyunun "oynatılması" kısmına geldiniz. Başlangıç olarak, bir top yaratın ve onu pencerenin merkezine yerleştirin. Bunu yaparken, ovalin koordinatlarının topun merkezininin değil de sol üst köşesinin konumunu belirttiğini aklınızda tutun.</p>
+<p>Program topun hızını takip etmelidir. Bu hızı aşağıdaki gibi değişkenler olarak tanımlayabileceğiniz iki ayrı bileşenden oluştuğunu belirtmekte fayda var:</p>
+<pre><code>change_x = 10
+change_y = 10
+</code></pre>
+
+<p>"Değişim" (change) bileşenleri, her zaman adımında meydana gelen konum değişikliğini temsil eder. Başlangıçta, top aşağıya doğru gidiyor olmalı. <code>change_x</code> and <code>change_y</code> için +10.0 başlangıç hızını deneyebilirsiniz.</p>
+<p>Python grafik kütüphanesinde bir nesneyi taşımanın iki yolu olduğunu hatırlayın:</p>
+<pre><code># Objeyi spesifik bir new_x, new_y konumuna taşımak
+canvas.moveto(object, new_x, new_y)
+
+# x koordinatını change_x kadar ve the y koordinatını change_y kadar arttırmak
+canvas.move(object, change_x, change_y)
+</code></pre>
+
+<p>Topunuzu ve change değişkenlerini yarattıktan sonra, bir sonraki görev, kürek ve tuğlaları göz ardı ederek topu ekranda sektirmek. Bu, topu hareket ettirip duraklattığınız bir "animasyon döngüsü" programlamanızı gerektirir. Sonra topun nasıl zıplayacağını düşünebilirsiniz. Bunu yapmak için, topun sıfır olmayan bir boyuta sahip olduğunu göz önünde bulundurarak topun koordinatlarının sınırların ötesine geçip geçmediğini kontrol etmeniz gerekir. Böylece, topun sağ duvardan sekip sekmediğini görmek için, topun sağ kenarının koordinatının pencerenin genişliğinden daha büyük olup olmadığını görmeniz gerekir; diğer üç yön benzer şekilde ele alınır. Şimdilik, topun alt duvardan sekmesini sağlayın, böylece dünyadaki yolunu izlemesini izleyebilirsiniz.</p>
+<p>Bir sıçramadan sonra ne olduğunu hesaplamak son derece basittir. Top üst veya alt duvardan sekerse, tek yapmanız gereken <code>change_y</code> işaretini ters çevirmektir. Simetrik olarak, yan duvarlardan sekmek, <code>change_x</code> işaretini tersine çevirir.</p>
+<p>Yararlı olabilecek bir şey, topun sekmesini ve <code>change_x</code> ve <code>change_y</code> değiştirilmesini sağlayarak <code>change_x</code> ve <code>change_y</code>nin yeni değerlerini döndüren bir fonksiyon yaratmaktır. Birden fazla değer döndüren bir fonksiyonunuz olabilir:</p>
+<pre><code>x, y = my_func(...)
+
+...
+
+def my_func(...):
+    ...
+    return var1, var2
+</code></pre>
+
+<h2 id="3-paddle-olustur">3. Paddle'ı oluştur</h2>
+<p>Sıradaki adım paddle'ı oluşturmak. Sadece bir paddle var, o da içi boyanmış bir dikdörtgen. Paddle'ın pencerenin altına göre konumunu bile biliyorsunuz.</p>
+<p>Paddle oluşturmanın zor kısmı, onun imleci takip etmesini sağlamak. Fakat burada sadece imlecin x koordinatına dikkat etmelisiniz çünkü paddle'ın y pozisyonu değişmiyor.</p>
+<p>Animasyon döngüsünde her seferinde farenin konumunu isteyin ve paddle'ı temsil eden dikdörtgeni buna göre hareket ettirin. Farenin konumunu almak için <code>canvas.get_mouse_x()</code> fonksiyonunu aşağıdaki gibi kullanabilirsiniz:</p>
+<pre><code>mouse_x = canvas.get_mouse_x()
+</code></pre>
+
+<h2 id="4-carpsmalar-tespit-et">4. Çarpışmaları tespit et</h2>
+<p>İlginç kısım burada geliyor. Breakout'u gerçek bir oyun haline getirmek için, topun ekrandaki başka bir nesneyle çarpışıp çarpışmadığını söyleyebilmeniz gerekiyor. Bilim insanlarının sık sık yaptığı gibi, basitleştiren bir varsayımda bulunarak başlamak ve sonrasında da bu varsayımı genişletmek yardımcı olabilir. Topu bir daireden çok tek bir nokta gibi düşünün. Bu durumda, başka bir nesne ile çarpışıp çarpışmadığını nasıl söyleyebilirsiniz?</p></p>
+<p>Dört koordinat tarafından tanımlanan dikdörtgenle üst üste binen tüm nesnelerin listesini döndüren bir canvas fonksiyonu vardır:<code>canvas.find_overlapping(x_1, y_1, x_2, y_2)</code></p>
+<pre><code>objs = canvas.find_overlapping(x_1,  y_1, x_2, y_2)
+</code></pre>
+
+<p>Yapılacak en kolay şey, aslında gerçek bilgisayar oyunlarında da yapılan, topun dışındaki dikkatli bir şekilde seçilmiş birkaç noktayı kontrol etmek ve bu noktalardan hiçbirinin herhangi bir şeyle çarpışıp çarpışmadığını görmek. Bu noktalardan birine bir şey bulduğunuz anda, topun o nesneyle çarpışmış olduğunu ilan edebilirsiniz.</p>
+<p><center>
+  <img src="../../img/projects/breakout/breakoutCollision.png"></img>
+</center></p>
+<p>Topla çakışan nesnelerin bir listesini almak için, bir nesnenin 4 köşesini döndürerek <code>canvas.coords(obj)</code> canvas fonksiyonunu çağıran kodu aşağıdaki gibi kullanabilirsiniz:</p>
+<pre><code># Bu grafik fonksiyonu topun yerini liste olarak alır
+ball_coords = canvas.coords(ball)
+# the list has four elements:
+x_1 = ball_coords[0]
+y_1 = ball_coords[1]
+x_2 = ball_coords[2]
+y_2 = ball_coords[3]
+# sonra o bölgedeki tüm nesnelerin bir listesini alabiliriz
+colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
+</code></pre>
+
+<p>Bu dikdörtgendeki tüm çakışan nesneleri alırsanız, fonksiyon size bir liste döndürür. Bu listede <code>top</code> ve topun şu anda çarpıştığı nesneler olacaktır. Çarpışan bir nesnenin top olup olmadığını test etmek için, elemanın top değişkeninize <code>==</code> olup olmadığını kontrol edebilirsiniz.</p>
+<p>Top paddle ile çarpışırsa, yukarı çıkması için topu zıplatmanız gerekir. Eğer topun çarptığı nesne paddle değilse, olabileceği tek şey tuğladır, çünkü dünyadaki diğer nesnelerin tamamı tuğlalardır. Bir kez daha, dikey yönde bir sıçramaya neden olmalısınız (<code>change_y</code> değişkeninin yönünü çevirin), ancak tuğlayı da almanız gerekir. Bunu yapmak için tek yapmanız gereken <code>delete</code> fonskiyonunu çağırarak ekrandan kaldırmaktır:</p>
+<pre><code>canvas.delete(square) # square adındaki objeyi siler
+</code></pre>
+
+<h2 id="ekstra-dokunuslar"><span style="color:blue">Ekstra Dokunuşlar</span></h2>
+<p>Eğer buraya kadar geldiyseniz, tüm zahmetli kısımları yapmışsınızdır. Fakat zamanınız varsa, göz önünde bulundurabileceğiz birkaç detay daha var.</p></p>
+<ol>
+<li>
+<p>Topun alt duvara vurduğu durumun çaresine bakın. İnşa ettiğiniz modelde, top bu duvardan diğer tüm duvarlarla aynı şekilde sekiyor, ama bu oyunu kaybetmeyi epey zorlaştırıyor. Döngü yapınızı öyle bir değiştirin ki alt duvara çarpmayı oyunu bitirecek koşullardan biri olarak test etsin.</p>
+</li>
+<li>
+<p>Diğer bitirme koşulunu, son tuğlaya çarpmayı, da denetleyin. Çarptığınızda nereden bileceksiniz? Bunun farklı yolları olmasına rağmen, en kolay yollardan biri kalan tuğlaların sayısını takip etmektir. Bir tuğlaya çarptığınız her seferinde, bu sayaçtan 1 çıkarın. Sayaç 0'a ulaştığında, işiniz bitmiştir. Oyuncuya en azından oyunun kazanıldığını veya kaybedildiğini gösteren ufak bir geribildirim vermek hoş olabilir.</p>
+</li>
+<li>
+<p>Oyunun üç tur sürecek hale getirin!</p>
+</li>
+<li>
+<p>Programınızın çalıştığını görmek için onu test edin. Eğer her şeyin çalıştığını düşünüyorsanız, şunu deneyebilirsiniz: Top paddle seviyesini geçmeden hemen önce, paddle'ı öyle hızlı hareket ettirin ki top paddle çarpışacağına paddle topla çarpışsın. Her şey hala çalışıyor mu, yoksa topunuz paddle'a "tutkallanmış" gibi mi gözüküyor? Bu hata gerçekleşiyor çünkü top paddle'a çarpışıyor, yön değiştiriyor, ve kaçamadan yine paddle'la çarpışıyor. Bu hatayı (bug) nasıl düzeltirsiniz?</p>
+</li>
+</ol>
+<h2 id="eklemeler"><span style = "color: blue"> Eklemeler </span></h2>
+<p>Temel oyun iyi çalışıyorsa, bu daha da öteye gitmek için harika bir fırsat! Olası uzantılar için birkaç fikir (elbette, başka fikirleri de bulmak için hayal gücünüzü kullanmanızı öneririz):</p>
 <ul>
-<li>
-<p><em>Add sounds.</em><br/>
-  <span style="color:red">TODO: Add documentation.</span> Requires student to run <code>pip install playsound</code> through the Terminal.</p>
-</li>
-<li>
-<p>*Improve the user control over bounces.<br/>
-The program gets rather boring if the only thing the player has to do is hit the ball.  It is far more interesting, if the player can control the ball by hitting it at different parts of the paddle.  The way the old arcade game worked was that the ball would bounce in both the x and y directions if you hit it on the edge of the paddle from which the ball was coming.  The web version implements this feature.</p>
-</li>
-<li>
-<p><em>Use your imagination.</em><br/>
-What else have you always awanted a game like this for?
-<i>Use your imagination</i> What else have you always wanted a game like this to do?</p>
-</li>
+<li><strong>Ses ekleyin.</strong> Topunuza sıçradığı zaman, tuğla çıkarıldığında, kullanıcı kazandığında vb. ses efektleri eklemek eğlenceli olabilir. Bunu yapmak için, önce kullanmak istediğiniz ses dosyasını bilgisayarınızdaki PyCharm projenize ekleyin. (Dosyayı bilgisayarınızdaki proje dosyalarını içeren klasöre sürükleyin). Ardından, ses dosyalarını çalabilen kitaplığı yüklemeniz gerekir. İlk önce bir "terminal" penceresi açın: Bunu yapmanın en kolay yolu, sol altta (“Run” ve “Python Console” sekmelerinin yanında) PyCharm içindeki “Terminal” sekmesini kullanmaktır. Terminal'e aşağıdaki 2 komutu yazın. Windows'ta, <code>python3</code> yerine <code>py</code> yazın:</li>
+</ul>
+<pre><code>&gt; python3 -m pip install playsound
+...bir şeyler yazar...
+&gt; python3 -m pip install pyobjc
+...bir şeyler yazar...
+</code></pre>
+
+<p>Ardından, programınızın üstüne aşağıdaki içe aktarmayı ekleyin:</p>
+<pre><code>from playsound import playsound
+</code></pre>
+
+<p>Son olarak, programınızda bir ses çalmak istediğinizde, aşağıdaki fonksiyonu çağırın:</p>
+<pre><code>playsound('mysoundfile.au', block=False)
+</code></pre>
+
+<p><code>'mysoundfile.au'</code> dosyasını projenizdeki ses dosyasının adıyla değiştirmelisiniz. Sonuna <code>block=False</code> yazmayı unutmadığınızdan emin olun.</p>
+<ul>
+<li><strong>Sıçramalarda kullanıcı kontrolünü geliştirin.</strong> Oyuncunun yapması gereken tek şey topa vurmaksa program oldukça sıkıcı bir hal alabilir. Oyuncunun topu paddle'ın farklı yerlerine vurarak kontrol edebilmesi çok daha ilginç olur. Eski arcade oyununun çalışma şekli, topun geldiği raketin kenarına vurursanız topun hem x hem de y yönlerinde zıplamasıydı. Web sürümü bu özelliği uygular.</li>
+<li><strong>Hayal gücünüzü kullanın.</strong> Böyle bir oyunca başka neler yapabilmek istersiniz?</li>
 </ul>
 	</div>
 </div>
