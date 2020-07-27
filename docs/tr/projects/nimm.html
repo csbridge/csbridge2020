@@ -445,6 +445,120 @@ filePath - the total path to the markdown file being rendered in this template
 			Hazırlayan: Danielle Kain and Chris Piech
 		</p>
 
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Worked Examples: 
+<a href="../../tr/projects/emc2.html">E=MC2</a>,
+<a href="../../tr/projects/fibb.html">Fibbonacci</a>
+<br/>
+File: <code>nimm.py</code></p>
+<p>Nimm is an ancient game of strategy that is named after the old German word for "take." It is also called Tiouk Tiouk in West Africa and Tsynshidzi in China. Players alternate taking stones until there are zero left. The game of Nimm goes as follows:</p>
+<ol>
+<li>The game starts with a pile of 20 stones between the players</li>
+<li>The two players alternate turns</li>
+<li>On a given turn, a player may take either 1 or 2 stone from the center pile</li>
+<li>The two players continue until the center pile has run out of stones.</li>
+</ol>
+<p>The last player to take a stone loses. Here is sample output from an example execution:</p>
+<pre><code>There are 20 stones left
+Player 1 would you like to remove 1 or 2 stones? 2
+
+There are 18 stones left
+Player 2 would you like to remove 1 or 2 stones? 2
+
+There are 16 stones left
+Player 1 would you like to remove 1 or 2 stones? 1
+
+There are 15 stones left
+Player 2 would you like to remove 1 or 2 stones? 2
+
+There are 13 stones left
+Player 1 would you like to remove 1 or 2 stones? 2
+
+There are 11 stones left
+Player 2 would you like to remove 1 or 2 stones? 1
+
+There are 10 stones left
+Player 1 would you like to remove 1 or 2 stones? 2
+
+There are 8 stones left
+Player 2 would you like to remove 1 or 2 stones? -1
+Please enter 1 or 2: 2
+
+There are 6 stones left
+Player 1 would you like to remove 1 or 2 stones? 2
+
+There are 4 stones left
+Player 2 would you like to remove 1 or 2 stones? 2
+
+There are 2 stones left
+Player 1 would you like to remove 1 or 2 stones? 1
+
+There are 1 stones left
+Player 2 would you like to remove 1 or 2 stones? 1
+
+Player 1 wins!
+</code></pre>
+
+<p>Write a program to play Nimm. To make your life easier we have broken the problem down into smaller milestones. You have a lot of time for this program. Take it slowly, piece by piece.</p>
+<h2 id="milestone-1">Milestone 1</h2>
+<p>Start with 20 stones. Repeat the process of removing stones and printing out how many stones are left until there are zero. Don't worry about whose turn it is. Don't worry about making sure only one or two stones are removed. Use the function <code>input(msg)</code> which prints <code>msg</code> and waits for the user to enter something.</p>
+<pre><code>There are 20 stones left
+Would you like to remove 1 or 2 stones? 2
+
+There are 18 stones left
+Would you like to remove 1 or 2 stones? 17
+
+There are 1 stones left
+Would you like to remove 1 or 2 stones? 3
+
+Game over
+</code></pre>
+
+<h2 id="milestone-2">Milestone 2</h2>
+<p>Create an integer variable to keep track of whose turn it is (remember there are two players). Tell the user whose turn it is. Each time someone picks up stones, change the player number.</p>
+<pre><code>There are 20 stones left
+Player 1 would you like to remove 1 or 2 stones? 1
+
+There are 19 stones left
+Player 2 would you like to remove 1 or 2 stones? 1
+
+There are 18 stones left
+Player 1 would you like to remove 1 or 2 stones? 17
+
+There are 1 stones left
+Player 2 would you like to remove 1 or 2 stones? 1
+
+Game over
+</code></pre>
+
+<h2 id="milestone-3">Milestone 3</h2>
+<p>Make sure that each turn only one or two stones are removed. After you read a number of stones to remove from a user (their input), you can use the following pattern to check if it was valid and keep asking until it is valid.</p>
+<pre><code>while input is invalid:
+   input = int(input(&quot;Please enter 1 or 2: &quot;))
+</code></pre>
+
+<h2 id="milestone-4">Milestone 4</h2>
+<p>Announce the winner.</p>
+<h2 id="extensions">Extensions</h2>
+<p>Can you write an AI opponent? You can start with a dummy AI that always plays a random number. Then try to make one that plays intelligently...</p>
+<p>Some other extension ideas:</p>
+<ul>
+<li>Make sure that if there is only one stone left, the last player may only remove one stone</li>
+<li>Give the user the option for the winner to be the player that doesn’t take the last stone, or the player that does take the last stone.</li>
+<li>Expand the game to let players take 1, 2, or 3, stones per turn.</li>
+<li>Divisible by 3 rule: if the number of stones remaining at the end of a player’s turn is divisible by 3, they must go again.</li>
+<li>Give the user the option to play against the computer and design a process for the computer to choose how many stone to remove.</li>
+<li>Come up with your own extension!</li>
+</ul>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
 
   			
   	<!-- Footer -->

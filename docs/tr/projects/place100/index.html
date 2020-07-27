@@ -445,6 +445,72 @@ filePath - the total path to the markdown file being rendered in this template
 			Hazırlayan: Based on a handout by Eric Roberts
 		</p>
 
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Handouts: <a href="../../../en/resources/karel.html">Karel Reference</a><br/>
+File: <code>place_100.py</code><br/></p>
+<p>Your goal is to have Karel create a pile of 100 beepers on square infront of where she starts. Please!!! Do not type out putBeeper 100 times in a row! (hint: use a <code>for</code> loop.) </p>
+<p><center>
+<img style="width:700px" src="../../../img/projects/place100/place100.png"> 
+</center></p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
+	<h2>Çözüm</h2>
+    <p>
+    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
+    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
+    		aria-controls="Collapse">
+    		Çözümü Göster
+    	</a>
+    </p>
+    <div class="collapse" id="soln-collapse">
+		<pre class="console" id="editor" style="height:380.0px">from karel.stanfordkarel import *
+
+&quot;&quot;&quot;
+File: place_100.py
+------------------------
+This program makes karel place a pile of 100 beepers. Good times.
+&quot;&quot;&quot;
+
+def main():
+    move()
+    # This for loop will repeat the code inside 100 times.
+    for i in range(100):
+        put_beeper()
+    move()
+
+# There is no need to edit code beyond this point
+if __name__ == &quot;__main__&quot;:
+    run_karel_program()
+</pre>
+    </div>
+
+    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+       editor.setTheme('ace/theme/eclipse');
+       editor.getSession().setMode("ace/mode/python");
+       editor.setReadOnly(true);
+       editor.setShowPrintMargin(false);
+       editor.renderer.setShowGutter(false); 
+    </script>
+
+    <script>
+    	function toggleButtonText() {
+    		var elem = document.getElementById("soln-btn");
+    		if (elem.innerHTML.trim() === "Çözümü Göster") {
+    			elem.innerHTML = "Çözümü Gizle";
+    		} else {
+    			elem.innerHTML = "Çözümü Göster";
+    		}
+    	}
+    </script>
 
   			
   	<!-- Footer -->

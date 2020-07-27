@@ -445,6 +445,91 @@ filePath - the total path to the markdown file being rendered in this template
 			Hazırlayan: Eric Roberts
 		</p>
 
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>In the 13th century, the Italian mathematician Leonardo Fibonacci, as a way to explain the geometric growth of a population of rabbits, devised a mathematical sequence that now bears his name.  The first two terms in this sequence, Fib(0) and Fib(1), are 0 and 1, and every subsequent term is the sum of the preceding two.  Thus, the first several terms in the Fibonacci sequence look like this:</p>
+<p style="padding-left:2em">
+                    Fib(0)  =   0
+    <br/>Fib(1) =   1
+    <br/>Fib(2) =   1   (0 + 1)
+    <br/>Fib(3) =   2   (1 + 1)
+    <br/>Fib(4) =   3   (1 + 2)
+    <br/>Fib(5) =   5   (2 + 3)
+</p>
+
+<p>Write a program that displays the terms in the Fibonacci sequence, starting with Fib(0) and continuing as long as the terms are less than 10,000.  Thus, your program should produce the following sample run:</p>
+<p><center>
+<img style="width:400px" src="../../../img/projects/fib/demo.png"><br />
+</center></p>
+<p>This program should continue as long as the value of the term is less than the maximum value. To do this, you should use a while loop, presumably with a header line that looks like this:</p>
+<pre><code>while term &lt;= MAX_TERM_VALUE:
+    ... your code here ...
+</code></pre>
+
+<p>Note that the maximum term value is specified with a named constant.</p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
+	<h2>Çözüm</h2>
+    <p>
+    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
+    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
+    		aria-controls="Collapse">
+    		Çözümü Göster
+    	</a>
+    </p>
+    <div class="collapse" id="soln-collapse">
+		<pre class="console" id="editor" style="height:480.0px">&quot;&quot;&quot;
+File: Fibonacci
+--------------------
+This program lists the terms in the Fibonacci sequence up to
+a constant MAX_TERM_VALUE, which is the largest Fibonacci term
+the program will display.
+&quot;&quot;&quot;
+
+# Defines the largest term to display
+MAX_TERM_VALUE = 10000
+
+def main():
+    print(&quot;This program lists the Fibonacci sequence.&quot;)
+    t1 = 0
+    t2 = 1
+    while t1 &lt;= MAX_TERM_VALUE:
+        print(t1)
+        t3 = t1 + t2
+        t1 = t2
+        t2 = t3
+
+if __name__ == &#039;__main__&#039;:
+    main()
+</pre>
+    </div>
+
+    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+       editor.setTheme('ace/theme/eclipse');
+       editor.getSession().setMode("ace/mode/python");
+       editor.setReadOnly(true);
+       editor.setShowPrintMargin(false);
+       editor.renderer.setShowGutter(false); 
+    </script>
+
+    <script>
+    	function toggleButtonText() {
+    		var elem = document.getElementById("soln-btn");
+    		if (elem.innerHTML.trim() === "Çözümü Göster") {
+    			elem.innerHTML = "Çözümü Gizle";
+    		} else {
+    			elem.innerHTML = "Çözümü Göster";
+    		}
+    	}
+    </script>
 
   			
   	<!-- Footer -->

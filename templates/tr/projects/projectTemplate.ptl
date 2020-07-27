@@ -28,6 +28,7 @@ filePath - the total path to the markdown file being rendered in this template
 		<p>
 			{{ 'Çevirenler' if ',' in translation or ' ve ' in translation else 'Çeviren' }}: {{translation}}
 		</p>
+	% end
 </div>
 <hr/>
 

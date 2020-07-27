@@ -445,6 +445,112 @@ filePath - the total path to the markdown file being rendered in this template
 			Hazırlayanlar: Written by Chris, Bryce, and Julia
 		</p>
 
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Handouts: <a href="../../../en/resources/graphics.html">Graphics Reference</a><br/></p>
+<p>This demo shows a simple method that draws people with the bottom of their feet at the provided (x, y) position.</p>
+<pre><code>def draw_person(x, y):
+    # ... draws a person standing at (x, y)
+</code></pre>
+<p><center>
+<img style="width:500px" src="../../../img/projects/drawPeople/demo2.png"><br />
+</center></p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
+	<h2>Çözüm</h2>
+    <p>
+    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
+    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
+    		aria-controls="Collapse">
+    		Çözümü Göster
+    	</a>
+    </p>
+    <div class="collapse" id="soln-collapse">
+		<pre class="console" id="editor" style="height:1140.0px">&quot;&quot;&quot;
+File: draw_people.py
+-------------------
+Draws several people standing at specific (x, y) coordinates.
+&quot;&quot;&quot;
+
+from graphics import Canvas
+
+BODY_WIDTH = 20
+BODY_HEIGHT = 60
+ARMS_WIDTH = 40
+ARMS_HEIGHT = 40
+HEAD_DIAMETER = 40
+
+def main():
+    canvas = Canvas()
+    canvas.set_canvas_title(&quot;Draw People&quot;)
+
+    draw_person(canvas, 50, 150)
+    draw_person(canvas, 100, 300)
+    draw_person(canvas, 500, 200)
+    draw_person(canvas, 300, 250)
+    draw_person(canvas, 700, 310)
+
+    canvas.mainloop()
+
+def draw_person(canvas, x, y):
+    # body is centered horizontally at x
+    # bottom of body should be at specified y
+    body_y = y - BODY_HEIGHT
+    body_x = x - BODY_WIDTH/2
+    body = canvas.create_rectangle(body_x,
+                                   body_y,
+                                   body_x + BODY_WIDTH,
+                                   body_y + BODY_HEIGHT)
+    canvas.set_color(body, &quot;black&quot;)
+
+    # arms should be at same height as the body
+    arms_x = x - ARMS_WIDTH/2
+    arms = canvas.create_rectangle(arms_x,
+                                   body_y,
+                                   arms_x + ARMS_WIDTH,
+                                   body_y + ARMS_HEIGHT)
+    canvas.set_color(arms, &quot;black&quot;)
+
+    # bottom of head should be top of body
+    head_y = body_y - HEAD_DIAMETER
+    head_x = x - HEAD_DIAMETER/2
+    head = canvas.create_oval(head_x, head_y,
+                              head_x + HEAD_DIAMETER,
+                              head_y + HEAD_DIAMETER)
+    canvas.set_color(head, &quot;blue&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</pre>
+    </div>
+
+    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+       editor.setTheme('ace/theme/eclipse');
+       editor.getSession().setMode("ace/mode/python");
+       editor.setReadOnly(true);
+       editor.setShowPrintMargin(false);
+       editor.renderer.setShowGutter(false); 
+    </script>
+
+    <script>
+    	function toggleButtonText() {
+    		var elem = document.getElementById("soln-btn");
+    		if (elem.innerHTML.trim() === "Çözümü Göster") {
+    			elem.innerHTML = "Çözümü Gizle";
+    		} else {
+    			elem.innerHTML = "Çözümü Göster";
+    		}
+    	}
+    </script>
 
   			
   	<!-- Footer -->

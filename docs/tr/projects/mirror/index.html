@@ -445,6 +445,101 @@ filePath - the total path to the markdown file being rendered in this template
 			Hazırlayan: Problem written by many folks. Solution from a lecture by Mehran Sahami.
 		</p>
 
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Take an image, and produce one which is twice as wide. The right side of the new image is the left side of the old image, but mirror reflected.</p>
+<p><center>
+    <img style="width:400px" src="../../../img/projects/mirror/demo.png">
+</center></p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
+	<h2>Çözüm</h2>
+    <p>
+    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
+    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
+    		aria-controls="Collapse">
+    		Çözümü Göster
+    	</a>
+    </p>
+    <div class="collapse" id="soln-collapse">
+		<pre class="console" id="editor" style="height:1000.0px">&quot;&quot;&quot;
+File: mirror.py
+---------------
+This program shows an example of creating an image
+that shows an original image and its mirror reflection
+in a new image.
+&quot;&quot;&quot;
+
+
+from simpleimage import SimpleImage
+
+
+def mirror_image(filename):
+    &quot;&quot;&quot;
+    Read an image from the file specified by filename.
+    Returns a new images that includes the original image
+    and its mirror reflection.
+    Returns the resulting &quot;redscreened&quot; image.
+    &quot;&quot;&quot;
+    image = SimpleImage(filename)
+    width = image.width
+    height = image.height
+
+    # Create new image to contain mirror reflection
+    mirror = SimpleImage.blank(width * 2, height)
+
+    for y in range(height):
+        for x in range(width):
+            pixel = image.get_pixel(x, y)
+            mirror.set_pixel(x, y, pixel)
+            mirror.set_pixel((width * 2) - (x + 1), y, pixel)
+    return mirror
+
+
+def main():
+    &quot;&quot;&quot;
+    Run your desired image manipulation functions here.
+    You should store the return value (image) and then
+    call .show() to visualize the output of your program.
+    &quot;&quot;&quot;
+    original = SimpleImage(&#039;images/burrito.jpg&#039;)
+    original.show()
+
+    mirrored = mirror_image(&#039;images/burrito.jpg&#039;)
+    mirrored.show()
+
+
+if __name__ == &#039;__main__&#039;:
+    main()
+</pre>
+    </div>
+
+    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+       editor.setTheme('ace/theme/eclipse');
+       editor.getSession().setMode("ace/mode/python");
+       editor.setReadOnly(true);
+       editor.setShowPrintMargin(false);
+       editor.renderer.setShowGutter(false); 
+    </script>
+
+    <script>
+    	function toggleButtonText() {
+    		var elem = document.getElementById("soln-btn");
+    		if (elem.innerHTML.trim() === "Çözümü Göster") {
+    			elem.innerHTML = "Çözümü Gizle";
+    		} else {
+    			elem.innerHTML = "Çözümü Göster";
+    		}
+    	}
+    </script>
 
   			
   	<!-- Footer -->

@@ -445,6 +445,84 @@ filePath - the total path to the markdown file being rendered in this template
 			Hazırlayanlar: Problem written by Chris Piech, discovered by Einstein
 		</p>
 
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>One of the exciting human discoveries is that mass and energy are interchangable and are related by the equation E = M &times; C <sup>2</sup>. This relationship was uncovered by Albert Einstein almost 100 years ago and we now know that the sun produces its heat by transforming small amounts of mass into large amounts of energy.</p>
+<p>Write a program that continually reads in mass from the user and then outputs the amount of energy. Show your work in the following way:</p>
+<p><center>
+<img style="width:400px" src="../../../img/projects/emc2/demo.png"> 
+</center></p>
+<p>If you ask the user to input kilograms, and you use speed of light equals 299792458 (which is in meters per second) the result of calculating E = M &times; C <sup>2</sup> will be in Joules.</p>
+<p>Note that 3.0E8 is scientific notation for 3.0 &times; 10 <sup>8</sup>... which is 300,000,000. You don't need to do anything for java to print doubles in scientific notation. It will automatically do so when numbers get big enough.</p>
+<p>Since the speed of light will never change, it makes sense to declare it as a constant.</p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
+	<h2>Çözüm</h2>
+    <p>
+    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
+    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
+    		aria-controls="Collapse">
+    		Çözümü Göster
+    	</a>
+    </p>
+    <div class="collapse" id="soln-collapse">
+		<pre class="console" id="editor" style="height:580.0px">&quot;&quot;&quot;
+File: EMC2
+-------------------
+This program helps users calculate how much energy they could
+get if they transformed their mass. Thanks Einstein!
+&quot;&quot;&quot;
+
+# This declares a constant... it can never change value.
+# Speed of light in m/s
+C = 299792458;
+
+def main():
+    while True:
+        # Read the mass in from the user.
+        mass_in_kg = float(input(&quot;Enter kilos of mass: &quot;))
+
+        # Calculate energy
+        energy_in_joules = mass_in_kg * C * C
+
+        # Display work to the user
+        print(&quot;E = m * C^2 ...&quot;)
+        print(&quot;m = &quot; + str(mass_in_kg) + &quot; kg&quot;)
+        print(&quot;C = &quot; + str(C) + &quot;m/s&quot;)
+        print(str(energy_in_joules) + &quot; joules of energy!&quot;)
+        print()
+
+if __name__ == &#039;__main__&#039;:
+    main()
+</pre>
+    </div>
+
+    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+       editor.setTheme('ace/theme/eclipse');
+       editor.getSession().setMode("ace/mode/python");
+       editor.setReadOnly(true);
+       editor.setShowPrintMargin(false);
+       editor.renderer.setShowGutter(false); 
+    </script>
+
+    <script>
+    	function toggleButtonText() {
+    		var elem = document.getElementById("soln-btn");
+    		if (elem.innerHTML.trim() === "Çözümü Göster") {
+    			elem.innerHTML = "Çözümü Gizle";
+    		} else {
+    			elem.innerHTML = "Çözümü Göster";
+    		}
+    	}
+    </script>
 
   			
   	<!-- Footer -->

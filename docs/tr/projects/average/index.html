@@ -445,6 +445,70 @@ filePath - the total path to the markdown file being rendered in this template
 			Hazırlayanlar: Chris Piech ve Mehran Sahami
 		</p>
 
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>This demo shows a function that takes in two inputs and returns the average:</p>
+<pre><code>def average(a, b):
+    # ... returns the average of a and b ...
+</code></pre>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
+	<h2>Çözüm</h2>
+    <p>
+    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
+    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
+    		aria-controls="Collapse">
+    		Çözümü Göster
+    	</a>
+    </p>
+    <div class="collapse" id="soln-collapse">
+		<pre class="console" id="editor" style="height:380.0px">&quot;&quot;&quot;
+File: average.py
+-------------------
+This program contains an implementation of an average
+function that takes in two inputs and returns their average.
+The main program calls this function several times with different
+inputs and prints out the results.
+&quot;&quot;&quot;
+def main():
+    print(average(4, 5))
+    print(average(10, 2))
+    print(average(-4.1, 9.8))
+
+def average(a, b):
+    return (a + b) / 2
+
+
+if __name__ == &#039;__main__&#039;:
+    main()</pre>
+    </div>
+
+    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+       editor.setTheme('ace/theme/eclipse');
+       editor.getSession().setMode("ace/mode/python");
+       editor.setReadOnly(true);
+       editor.setShowPrintMargin(false);
+       editor.renderer.setShowGutter(false); 
+    </script>
+
+    <script>
+    	function toggleButtonText() {
+    		var elem = document.getElementById("soln-btn");
+    		if (elem.innerHTML.trim() === "Çözümü Göster") {
+    			elem.innerHTML = "Çözümü Gizle";
+    		} else {
+    			elem.innerHTML = "Çözümü Göster";
+    		}
+    	}
+    </script>
 
   			
   	<!-- Footer -->

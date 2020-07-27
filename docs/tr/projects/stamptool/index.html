@@ -445,6 +445,105 @@ filePath - the total path to the markdown file being rendered in this template
 			Hazırlayan: Problem written by a mystery CS106A Lecturer.
 		</p>
 
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Write a program where a blue rectangle (which represents a stamp) follows a user's mouse around. Your program should draw a rectangle on the screen centered around the mouse when the user clicks.</p>
+<p><center>
+  <img style="width:500px"
+          alt = "Stamp tool demo"
+          src="../../../img/projects/stampTool/demo.png">
+</center></p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
+	<h2>Çözüm</h2>
+    <p>
+    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
+    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
+    		aria-controls="Collapse">
+    		Çözümü Göster
+    	</a>
+    </p>
+    <div class="collapse" id="soln-collapse">
+		<pre class="console" id="editor" style="height:1040.0px">&quot;&quot;&quot;
+File: stamp_tool.py
+-------------------
+This program lets you move the mouse to move a &quot;stamp&quot; around the screen,
+and wherever you click it &quot;stamps&quot; (adds a copy of the stamp shape) to that
+location.
+&quot;&quot;&quot;
+
+from graphics import Canvas
+
+STAMP_SIZE = 50
+
+
+def main():
+    canvas = Canvas()
+    canvas.set_canvas_title(&quot;Stamp Tool&quot;)
+
+    stamp_tool = draw_stamp(canvas, canvas.get_mouse_x(), canvas.get_mouse_y(), &#039;blue&#039;)
+    while True:
+        clicks = canvas.get_new_mouse_clicks()
+        for click in clicks:
+            draw_stamp(canvas, click.x, click.y, &#039;black&#039;)
+
+        canvas.raise_to_front(stamp_tool)  # stamp tool should be topmost
+        center_stamp(canvas, stamp_tool, canvas.get_mouse_x(), canvas.get_mouse_y())
+        canvas.update()
+
+    canvas.mainloop()
+
+
+def draw_stamp(canvas, x, y, color):
+    &quot;&quot;&quot;
+    Draws a stamp (rect) of the given color centered around the given location.
+    Returns the rectangle drawn.
+    &quot;&quot;&quot;
+    x -= STAMP_SIZE / 2
+    y -= STAMP_SIZE / 2
+    rect = canvas.create_rectangle(x, y, x + STAMP_SIZE, y + STAMP_SIZE)
+    canvas.set_fill_color(rect, color)
+    return rect
+
+
+def center_stamp(canvas, stamp, x, y):
+    &quot;&quot;&quot;
+    Repositions the given stamp (rect) to be centered around the given location.
+    &quot;&quot;&quot;
+    canvas.move_to(stamp, x - STAMP_SIZE / 2, y - STAMP_SIZE / 2)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</pre>
+    </div>
+
+    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+       editor.setTheme('ace/theme/eclipse');
+       editor.getSession().setMode("ace/mode/python");
+       editor.setReadOnly(true);
+       editor.setShowPrintMargin(false);
+       editor.renderer.setShowGutter(false); 
+    </script>
+
+    <script>
+    	function toggleButtonText() {
+    		var elem = document.getElementById("soln-btn");
+    		if (elem.innerHTML.trim() === "Çözümü Göster") {
+    			elem.innerHTML = "Çözümü Gizle";
+    		} else {
+    			elem.innerHTML = "Çözümü Göster";
+    		}
+    	}
+    </script>
 
   			
   	<!-- Footer -->

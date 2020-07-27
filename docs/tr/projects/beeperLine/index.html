@@ -445,6 +445,82 @@ filePath - the total path to the markdown file being rendered in this template
 			Hazırlayan: Written by Chris Piech
 		</p>
 
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Handouts: <a href="../../../en/handouts/karel.html">Karel Reference</a><br/>
+File: <code>beeper_line.py</code></p>
+<p>Your goal is to fill the first row of Karel's world with beepers. You can assume that Karel starts in the bottom left corner, facing east. For example, if you ran your program on the world on the left, it should produce the world on the right.</p>
+<p><center>
+    <img style="width:600px"  src="../../../img/projects/beeperLine/beeperLine1.png"> <br />
+</center></p>
+<p>Your program should also work for worlds of different sizes. For example if we run the EXACT same program on this slightly larger world, Karel should still be able to place a full line of beepers without crashing. This means we can't use a for loop. We don't know before hand how big the world is going to be!</p>
+<p><center>
+    <img style="width:700px"  src="../../../img/projects/beeperLine/beeperLine2.png"> <br />
+</center></p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
+	<h2>Çözüm</h2>
+    <p>
+    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
+    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
+    		aria-controls="Collapse">
+    		Çözümü Göster
+    	</a>
+    </p>
+    <div class="collapse" id="soln-collapse">
+		<pre class="console" id="editor" style="height:500.0px">from karel.stanfordkarel import *
+
+&quot;&quot;&quot;
+File: beeper_line_karel.py
+------------------------------
+Places a row of beepers on the bottom row of Karel&#039;s world.
+Works with any size world.
+&quot;&quot;&quot;
+
+
+def main():
+    while front_is_clear():
+        put_beeper()
+        move()
+
+    # the line below is necessary to place the final beeper.
+    # the number of times Karel moves is one less than the number
+    # of times Karel places a beeper (if the world is five squares
+    # wide, we place 5 beepers, but only move 4 times).
+    put_beeper()
+
+if __name__ == &quot;__main__&quot;:
+    run_karel_program()
+
+</pre>
+    </div>
+
+    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+       editor.setTheme('ace/theme/eclipse');
+       editor.getSession().setMode("ace/mode/python");
+       editor.setReadOnly(true);
+       editor.setShowPrintMargin(false);
+       editor.renderer.setShowGutter(false); 
+    </script>
+
+    <script>
+    	function toggleButtonText() {
+    		var elem = document.getElementById("soln-btn");
+    		if (elem.innerHTML.trim() === "Çözümü Göster") {
+    			elem.innerHTML = "Çözümü Gizle";
+    		} else {
+    			elem.innerHTML = "Çözümü Göster";
+    		}
+    	}
+    </script>
 
   			
   	<!-- Footer -->

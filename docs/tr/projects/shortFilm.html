@@ -445,6 +445,73 @@ filePath - the total path to the markdown file being rendered in this template
 			Hazırlayan: Written by Chris Piech and Keith Schwarz.
 		</p>
 
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Handouts: <a href="../../tr/handouts/graphics.html">Graphics Reference</a><br/>
+Worked Example: <a href="../../tr/projects/halfgreen.html">Half Green</a>,
+<a href="../../tr/projects/target.html">Target</a><br/>
+File: <code>short_film.py</code></p>
+<p>Did you know that animated movies like <i>Toy Story</i>, <i>Up</i>, and <i>Frozen</i> are made using computer programs? In this assignment you are going to use a program to create a short film.</p>
+<h2 id="display-message-method">Display Message Method</h2>
+<p>Every movie has a beginning and an end. Sometimes it will start "Once Upon a Time...", sometimes it will start with a title, sometimes it will start with something sillier. At the end of the movie it sometimes says "The end."</p>
+<p>Add a method to your program that will draw a message on the screen (on a black background) and leave the message for two seconds.</p>
+<pre><code>def display_message(canvas, message):
+  ...
+</code></pre>
+
+<p>The start message should look like the screen below.</p>
+<p><center>
+  <img style="width:500px" src="../../img/projects/shortfilm/onceUpon.png">
+</center></p>
+<p>The font (and font size) that we used was:</p>
+<pre><code>canvas.set_font(label, &quot;Papyrus&quot;, 40)
+</code></pre>
+
+<p>After two seconds you should remove the rectangle that is the background and the text that is the message. To do so you can use the <code>delete</code> method (which takes an object that was on the canvas and removes it).</p>
+<pre><code>canvas.delete(your_object)
+</code></pre>
+
+<p>Of course, you can use this method as much as you want to tell your story!</p>
+<h2 id="setting-sun">Setting Sun</h2>
+<p>Your movie must have one scene to start: A setting sun. draw the sky, the earth and a sun. Then, slowly animate the sun descending. The sky should take up the top half of the canvas, and the earth should take up the second half. Considering the following images from the start of the program, and the program after a few seconds.</p>
+<p><center>
+  <img style="width:100%" src="../../img/projects/shortfilm/animation.png">
+</center></p>
+<h2 id="get_sun_color-method"><code>get_sun_color</code> Method</h2>
+<p>Write a method that takes some parameter, and returns the color of the sun. You should specify the parameter of this method: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.</p>
+<pre><code>def getSunColor(...):
+  ...
+  return color
+</code></pre>
+
+<p>Have the method return "yellow", "orange", or "red" based on how many iterations have passed.</p>
+<h2 id="finishing-up">Finishing up</h2>
+<p>After your movie ends, display a finishing message using your <code>display_message()</code> method defined earlier. The end message should look like the screen below.</p>
+<p><center>
+  <img style="width:500px" src="../../img/projects/shortfilm/theEnd.png">
+</center></p>
+<h1 id="make-it-better">Make It Better</h1>
+<p>Do anything you want to make your story more captivating than just a setting sun. Can you tell a tale of love or action? Don't forget to use methods to make your life easier.</p>
+<p><center>
+  <img style="width:500px" src="../../img/projects/shortfilm/poster.jpg">
+</center></p>
+<p>You can also add more objects to make your scene more captivating. Add a rainbow (or a double rainbow)? Do you have an idea about what sunsets have always been missing? How about a lit up Bosphorus Bridge or Charles Bridge?</p>
+<div class="row">
+  <div class="col-md-12 col-lg-6">
+    <img style="width:100%" src="../../img/projects/shortfilm/sunsetTrees.png"></img>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <img style="width:100%" src="../../img/projects/shortfilm/sunsetT2.png"></img>
+  </div>
+</div>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
 
   			
   	<!-- Footer -->
