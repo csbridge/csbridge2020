@@ -6,6 +6,11 @@ title: Student Frequently Asked Questions (FAQs)
 <!-- Table of Contents -->
 [TOC]
 
+## Schedule
+
+<center>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FPrague&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;showTabs=1&amp;mode=WEEK" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</center>
 
 
 ### Is this course graded?
