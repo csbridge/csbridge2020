@@ -1,57 +1,59 @@
-template: templates/tr/projects/projectTemplate.ptl
-title: Khansole Academy
-credit: Nick Parlante
+template: templates/en/projects/projectTemplate.ptl
+title: Khansole Akademi
+credit: Hazırlayan: Nick Parlante
 
 File: `khansole.py`
 
-Now that you’ve seen how programming can help us in a number of different areas, it’s
-time for you to implement Khan-sole Academy—a program that helps other people learn!
-In this problem, you’ll write a program in the file `khansole_academy.py` that randomly
-generates simple addition problems for the user, reads in the answer from the user, and then
-checks to see if they got it right or wrong, until the user appears to have mastered the
-material. Note that **“console”** is another name for “terminal” :-).
+Artık programlamanın bize farklı alanlarda nasıl yardım edebildiğini gördüğünüze göre
+başkalarının öğrenmesine yardımcı olan Khan-sole Akademi programını uygulamaya koyma
+vaktiniz geldi! Bu problem için `khansole_academy.py` isimli dosyaya yazacağınız program
+kullanıcı için rastgele basit toplama işlemleri üretecek, kullanıcının cevabını alıp
+doğruluğunu kontrol edecek ve kullanıcının materyalde uzmanlaştığından emin olana kadar
+bu aşamaları tekrar edecek. Unutmayın, **"konsol"** "terminal" için kullandığımız başka
+bir isim :-).
 
-More specifically, your program should be able to generate simple addition problems that
-involve adding two 2-digit integers (i.e., the numbers 10 through 99). The user should be
-asked for an answer to each problem. Your program should determine if the answer was
-correct or not, and give the user an appropriate message to let them know. Your program
-should keep giving the user problems until the user has gotten 3 problems <u>**correct in a row**</u>.
-(Note: the number of problems the user needs to get correctly in a row to complete the
-program is just one example of a good place to specify a constant in your program).
-A sample run of the program is shown below (user input is in bold).
+
+Daha detaylı anlatmak gerekirse, programınız iki tane 2 basamaklı (10 ila 99 arasındaki sayılar)
+sayının toplama işlemini üretebilmeli. Kullanıcıya her işlem için cevabı sorulmalı. Daha sonra,
+programınız kullanıcının cevabının doğru olup olmadığına karar verip kullanıcıyı sonucu
+açıklayan bir mesajla bilgilendirmeli. Programınız kullanıcı 3 problemi <u>**art arda**</u>
+doğru cevaplayana kadar soru sormaya devam etmeli. (Not: kullanıcının programı tamamlamak için
+üst üste doğru cevaplaması gereken problem sayısı constant (sabit değişken) tanımlamak için
+verebileceğimiz güzel bir örnek). Pogramın örnek bir çalıştırılması aşağıda gösterilmiştir
+(kullanıcı girdileri kalın karakterlerle gösterilmiştir).
 
 <hr/>
 <code>
-What is 51 + 79?<br/>
-Your answer: <b style="color:blue">120</b><br/>
-Incorrect. The expected answer is 130<br/>
-What is 33 + 19?<br/>
-Your answer: <b style="color:blue">42</b><br/>
-Incorrect. The expected answer is 52<br/>
-What is 55 + 11?<br/>
-Your answer: <b style="color:blue">66</b><br/>
-Correct! You've gotten 1 correct in a row.<br/>
-What is 84 + 25?<br/>
-Your answer: <b style="color:blue">109</b><br/>
-Correct! You've gotten 2 correct in a row.<br/>
-What is 26 + 58?<br/>
-Your answer: <b style="color:blue">74</b><br/>
-Incorrect. The expected answer is 84<br/>
-What is 98 + 85?<br/>
-Your answer: <b style="color:blue">183</b><br/>
-Correct! You've gotten 1 correct in a row.<br/>
-What is 79 + 66?<br/>
-Your answer: <b style="color:blue">145</b><br/>
-Correct! You've gotten 2 correct in a row.<br/>
-What is 97 + 20?<br/>
-Your answer: <b style="color:blue">117</b><br/>
-Correct! You've gotten 3 correct in a row.<br/>
-Congratulations! You mastered addition.<br/>
+51 + 79 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">120</b><br/>
+Maalesef. Doğru cevap 130 idi<br/>
+33 + 19 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">42</b><br/>
+Maalesef. Doğru cevap 52 idi<br/>
+55 + 11 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">66</b><br/>
+Doğru! Bu art arda verdiğiniz 1. doğru cevap.<br/>
+84 + 25 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">109</b><br/>
+Doğru! Bu art arda verdiğiniz 2. doğru cevap.<br/>
+26 + 58 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">74</b><br/>
+Maalesef. Doğru cevap 84 idi<br/>
+98 + 85 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">183</b><br/>
+Doğru! Bu art arda verdiğiniz 1. doğru cevap.<br/>
+79 + 66 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">145</b><br/>
+Doğru! Bu art arda verdiğiniz 2. doğru cevap.<br/>
+97 + 20 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">117</b><br/>
+Doğru! Bu art arda verdiğiniz 3. doğru cevap.<br/>
+Tebrikler! Toplama işleminde uzmansınız.<br/>
 </code>
 <hr/>
 
-As a side note, one of the earliest programs one of the instructors of CS106A, Mehran, wrote (with his friend Matthew) when
-he was first learning how to program was very similar to Khan-Sole Academy and it was
-called “M&M’s Math Puzzles”. It was written in a language named BASIC, on a computer
-that had 4K of memory (that’s 4 Kilobytes) and used cassette tapes (the same kind used for
-music in the 1970’s) to store information. Yeah, Mehran is old.
+Bir not olarak, CS106A'nın eğitmenlerinden biri olan Mehran'ın programlama öğrenmeye başladığında
+(arkadaşı Matthew ile birlikte) yazdığı ilk programlardan biri Khan-Sole Akademi'ye çok benziyordu ve
+"M&M's Matematik Bulmacıları" adındaydı. Bu program BASIC isimli bir programlama dilinde
+yazılmıştı ve 4K hafızası (4 Kilobyte) olan ve bilgi tutmak için kaset (1970'lerde müzik dinlemek
+için kullanılanlar gibi) kullanan bir bilgisayar kullanılmıştı.
