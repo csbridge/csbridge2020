@@ -59,7 +59,7 @@ title: PyCharm Kurulumu
     Python'u Mac'inize kurmak için basitçe indirdiğiniz kurulum dosyasını çalıştırın ve 
     talimatları uygulayın. Kurulum boyunca varsayılan ayarları kullanabilirsiniz. 
 </p>
-<h3 class="winonly" data-toc-skip>Installing Python on Windows</h3>
+<h3 class="winonly" data-toc-skip>Windows İçin Python Kurulumu</h3>
 <p class="winonly">
     İndirdiğiniz kurulum dosyasını açın. Kuruluma başlamadan önce "Add Python 3.8 to PATH" 
     yazan seçeneği işaretleyin. Bu seçeneği işaretlemeniz Python'u kolaylıkla çalıştırmanız 
@@ -376,7 +376,7 @@ title: PyCharm Kurulumu
 
 <p>
     <i>
-        Sıkça sorulan soruları sizden gelen sorular doğrultusunda sıkça güncelleyeceğiz.
+        Sıkça sorulan sorular sizden gelen sorular doğrultusunda güncellenecektir.
     </i>
 </p>
 
