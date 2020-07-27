@@ -1,5 +1,5 @@
 template: templates/en/resources/faqTemplate.ptl
-title: General CS Bridge Information
+title: CS Bridge ile İlgili Genel Bilgiler
 
 [TOC]
 
@@ -129,7 +129,7 @@ Bu programda çok şey öğrenmenizi ama aynı zamanda **EĞLENMENİZİ** ve far
 
 <p>
     Sınıf tartışma forumumuz Ed'de, burada bulunuyor: <a href='https://us.edstem.org/'> https://us.edstem.org/ </a> <br>
-    Öğretim ekibi ve öğrenciler ile tüm iletişim Ed üzerinden gerçekleşir. **Kişisel iletişim bilgilerini kimseyle paylaşmayın.**
+    Öğretim ekibi ve öğrenciler ile tüm iletişim Ed üzerinden gerçekleşir. <b>Kişisel iletişim bilgilerinizi programdaki kimseyle paylaşmayın.</b>
     <p> İki Ed grubuna kayıt olacaksınız: </p>
 </p>
 <ol>
