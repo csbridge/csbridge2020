@@ -1,0 +1,59 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Khansole Akademi
+credit: Hazırlayan: Nick Parlante
+
+File: `khansole.py`
+
+Artık programlamanın bize farklı alanlarda nasıl yardım edebildiğini gördüğünüze göre
+başkalarının öğrenmesine yardımcı olan Khan-sole Akademi programını uygulamaya koyma
+vaktiniz geldi! Bu problem için `khansole_academy.py` isimli dosyaya yazacağınız program
+kullanıcı için rastgele basit toplama işlemleri üretecek, kullanıcının cevabını alıp
+doğruluğunu kontrol edecek ve kullanıcının materyalde uzmanlaştığından emin olana kadar
+bu aşamaları tekrar edecek. Unutmayın, **"konsol"** "terminal" için kullandığımız başka
+bir isim :-).
+
+
+Daha detaylı anlatmak gerekirse, programınız iki tane 2 basamaklı (10 ila 99 arasındaki sayılar)
+sayının toplama işlemini üretebilmeli. Kullanıcıya her işlem için cevabı sorulmalı. Daha sonra,
+programınız kullanıcının cevabının doğru olup olmadığına karar verip kullanıcıyı sonucu
+açıklayan bir mesajla bilgilendirmeli. Programınız kullanıcı 3 problemi <u>**art arda**</u>
+doğru cevaplayana kadar soru sormaya devam etmeli. (Not: kullanıcının programı tamamlamak için
+üst üste doğru cevaplaması gereken problem sayısı constant (sabit değişken) tanımlamak için
+verebileceğimiz güzel bir örnek). Pogramın örnek bir çalıştırılması aşağıda gösterilmiştir
+(kullanıcı girdileri kalın karakterlerle gösterilmiştir).
+
+<hr/>
+<code>
+51 + 79 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">120</b><br/>
+Maalesef. Doğru cevap 130 idi<br/>
+33 + 19 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">42</b><br/>
+Maalesef. Doğru cevap 52 idi<br/>
+55 + 11 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">66</b><br/>
+Doğru! Bu art arda verdiğiniz 1. doğru cevap.<br/>
+84 + 25 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">109</b><br/>
+Doğru! Bu art arda verdiğiniz 2. doğru cevap.<br/>
+26 + 58 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">74</b><br/>
+Maalesef. Doğru cevap 84 idi<br/>
+98 + 85 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">183</b><br/>
+Doğru! Bu art arda verdiğiniz 1. doğru cevap.<br/>
+79 + 66 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">145</b><br/>
+Doğru! Bu art arda verdiğiniz 2. doğru cevap.<br/>
+97 + 20 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">117</b><br/>
+Doğru! Bu art arda verdiğiniz 3. doğru cevap.<br/>
+Tebrikler! Toplama işleminde uzmansınız.<br/>
+</code>
+<hr/>
+
+Bir not olarak, CS106A'nın eğitmenlerinden biri olan Mehran'ın programlama öğrenmeye başladığında
+(arkadaşı Matthew ile birlikte) yazdığı ilk programlardan biri Khan-Sole Akademi'ye çok benziyordu ve
+"M&M's Matematik Bulmacıları" adındaydı. Bu program BASIC isimli bir programlama dilinde
+yazılmıştı ve 4K hafızası (4 Kilobyte) olan ve bilgi tutmak için kaset (1970'lerde müzik dinlemek
+için kullanılanlar gibi) kullanan bir bilgisayar kullanılmıştı.
