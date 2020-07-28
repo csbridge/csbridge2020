@@ -1,51 +1,51 @@
 """
-File: stamp_tool.py
+File: debris_sweeper.py
 -------------------
-This program lets you move the mouse to move a "stamp" around the screen,
-and wherever you click it "stamps" (adds a copy of the stamp shape) to that
-location.
+Puts a random collection of debris (ovals) on the screen
+and then allows the user to click and remove the debris.
 """
 
+import random
 from graphics import Canvas
 
-STAMP_SIZE = 50
+# minimum and maximum size of a piece of debris
+MIN_DEBRIS_SIZE = 50
+MAX_DEBRIS_SIZE = 150
 
+# number of pieces of debris
+NUM_DEBRIS_PIECES = 100
 
 def main():
     canvas = Canvas()
-    canvas.set_canvas_title("Stamp Tool")
+    canvas.set_canvas_title("Debris Sweeper")
 
-    stamp_tool = draw_stamp(canvas, canvas.get_mouse_x(), canvas.get_mouse_y(), 'blue')
+    create_debris(canvas)
     while True:
         clicks = canvas.get_new_mouse_clicks()
         for click in clicks:
-            draw_stamp(canvas, click.x, click.y, 'black')
-
-        canvas.raise_to_front(stamp_tool)  # stamp tool should be topmost
-        center_stamp(canvas, stamp_tool, canvas.get_mouse_x(), canvas.get_mouse_y())
+            remove_debris(canvas, click.x, click.y)
         canvas.update()
 
     canvas.mainloop()
 
+def create_debris(canvas):
+    for i in range(NUM_DEBRIS_PIECES):
+        create_single_debris_piece(canvas)
 
-def draw_stamp(canvas, x, y, color):
-    """
-    Draws a stamp (rect) of the given color centered around the given location.
-    Returns the rectangle drawn.
-    """
-    x -= STAMP_SIZE / 2
-    y -= STAMP_SIZE / 2
-    rect = canvas.create_rectangle(x, y, x + STAMP_SIZE, y + STAMP_SIZE)
-    canvas.set_fill_color(rect, color)
-    return rect
+def create_single_debris_piece(canvas):
+    width = random.uniform(MIN_DEBRIS_SIZE, MAX_DEBRIS_SIZE)
+    height = random.uniform(MIN_DEBRIS_SIZE, MAX_DEBRIS_SIZE)
+    x = random.uniform(0, canvas.get_canvas_width() - width)
+    y = random.uniform(0, canvas.get_canvas_height() - height)
+
+    piece = canvas.create_oval(x, y, x + width, y + height)
+    canvas.set_color(piece, random.choice(canvas.COLORS))
 
 
-def center_stamp(canvas, stamp, x, y):
-    """
-    Repositions the given stamp (rect) to be centered around the given location.
-    """
-    canvas.move_to(stamp, x - STAMP_SIZE / 2, y - STAMP_SIZE / 2)
-
+def remove_debris(canvas, x, y):
+    item = canvas.find_closest(x, y)
+    if item is not None:
+        canvas.delete(item)
 
 if __name__ == "__main__":
     main()

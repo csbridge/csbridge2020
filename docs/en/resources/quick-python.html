@@ -451,7 +451,7 @@ filePath - the total path to the markdown file being rendered in this template
 <li><a href="#how-to-run-python-programs-in-pycharm">How to run Python programs in Pycharm</a></li>
 <li><a href="#console-output">Console Output</a></li>
 <li><a href="#console-input">Console Input</a></li>
-<li><a href="#random-numbers">Random numbers</a></li>
+<li><a href="#random">Random</a></li>
 </ul>
 </div>
 <h2 id="how-to-run-python-programs-in-pycharm">How to run Python programs in Pycharm</h2>
@@ -502,7 +502,7 @@ print(&quot;circumference = &quot; + str(circumference))
   alt="Example output for console input. User inputs "Fine, thank you", then "4", then "3.1415926535323846" and the program computes the circumference of a circle with radius 4 and your estimate of pi.
 />
 </center></p>
-<h2 id="random-numbers">Random numbers</h2>
+<h2 id="random">Random</h2>
 <p>To generate random numbers, type <code>import random</code> at the top of your program, outside of any functions:</p>
 <pre><code>import random
 
@@ -514,6 +514,15 @@ def main():
 <pre><code>x = random.randint(lower, upper)  # a random int in the range (lower, upper), inclusive
 y = random.random()               # a random decimal number between 0 and 1
 y = random.uniform(lower, upper)  # a random decimal number between lower and upper
+</code></pre>
+
+<p>You can also randomly choose an element from a list!</p>
+<pre><code>numbers = [10, 9, 20, 3, 4]
+number = random.choice(numbers)   # picks a random element from numbers
+</code></pre>
+
+<p>To randomly pick a color, if you have a <code>canvas</code> variable:</p>
+<pre><code>color = random.choice(canvas.COLORS)
 </code></pre>
 	</div>
 </div>

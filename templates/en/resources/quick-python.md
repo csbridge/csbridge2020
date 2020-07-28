@@ -61,7 +61,7 @@ Running the above code gives the below output (User input in blue):
 />
 </center>
 
-## Random numbers
+## Random
 
 To generate random numbers, type `import random` at the top of your program, outside of any functions:
 
@@ -78,4 +78,16 @@ You can then generate lots of random numbers as below. Let `lower = 0` and `uppe
 x = random.randint(lower, upper)  # a random int in the range (lower, upper), inclusive
 y = random.random()               # a random decimal number between 0 and 1
 y = random.uniform(lower, upper)  # a random decimal number between lower and upper
+```
+
+You can also randomly choose an element from a list!
+
+```
+numbers = [10, 9, 20, 3, 4]
+number = random.choice(numbers)   # picks a random element from numbers
+```
+
+To randomly pick a color, if you have a `canvas` variable:
+```
+color = random.choice(canvas.COLORS)
 ```
