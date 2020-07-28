@@ -19,8 +19,8 @@ def main():
 def fix_tree():
     """
     Climbs to the top of one tree, adds leaves, and descends
-    other side of tree.  When this method is called, Karel is assumed to
-    be facing east at the bottom of the tree to fix, and when the method
+    other side of tree.  When this function is called, Karel is assumed to
+    be facing east at the bottom of the tree to fix, and when the function 
     is done Karel will be facing east immediately after the tree which has
     now been fixed.
     """

@@ -13,7 +13,7 @@ Did you know that animated movies like <i>Toy Story</i>, <i>Up</i>, and <i>Froze
 
 Every movie has a beginning and an end. Sometimes it will start "Once Upon a Time...", sometimes it will start with a title, sometimes it will start with something sillier. At the end of the movie it sometimes says "The end."
 
-Add a method to your program that will draw a message on the screen (on a black background) and leave the message for two seconds.
+Add a function to your program that will draw a message on the screen (on a black background) and leave the message for two seconds.
 
 ```
 def display_message(canvas, message):
@@ -32,13 +32,13 @@ The font (and font size) that we used was:
 canvas.set_font(label, "Papyrus", 40)
 ```
 
-After two seconds you should remove the rectangle that is the background and the text that is the message. To do so you can use the `delete` method (which takes an object that was on the canvas and removes it).
+After two seconds you should remove the rectangle that is the background and the text that is the message. To do so you can use the `delete` function (which takes an object that was on the canvas and removes it).
 
 ```
 canvas.delete(your_object)
 ```
 
-Of course, you can use this method as much as you want to tell your story!
+Of course, you can use this function as much as you want to tell your story!
 
 ## Setting Sun
 
@@ -50,7 +50,7 @@ Your movie must have one scene to start: A setting sun. draw the sky, the earth 
 
 ## `get_sun_color` Method
 
-Write a method that takes some parameter, and returns the color of the sun. You should specify the parameter of this method: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.
+Write a function that takes some parameter, and returns the color of the sun. You should specify the parameter of this function: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.
 
 ```
 def getSunColor(...):
@@ -58,11 +58,11 @@ def getSunColor(...):
   return color
 ```
 
-Have the method return "yellow", "orange", or "red" based on how many iterations have passed.
+Have the function return "yellow", "orange", or "red" based on how many iterations have passed.
 
 ## Finishing up
 
-After your movie ends, display a finishing message using your `display_message()` method defined earlier. The end message should look like the screen below.
+After your movie ends, display a finishing message using your `display_message()` function defined earlier. The end message should look like the screen below.
 
 <center>
   <img style="width:500px" src="{{pathToRoot}}img/projects/shortfilm/theEnd.png">
@@ -70,7 +70,7 @@ After your movie ends, display a finishing message using your `display_message()
 
 # Make It Better
 
-Do anything you want to make your story more captivating than just a setting sun. Can you tell a tale of love or action? Don't forget to use methods to make your life easier.
+Do anything you want to make your story more captivating than just a setting sun. Can you tell a tale of love or action? Don't forget to use functions to make your life easier.
 
 <center>
   <img style="width:500px" src="{{pathToRoot}}img/projects/shortfilm/poster.jpg">

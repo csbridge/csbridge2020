@@ -21,5 +21,5 @@ You can assume that every part of the world looks just as it does in the diagram
 + Return to its starting point.
 
 
-Even though the program is only a few lines, it is still worth getting at least a little practice in decomposition.  In your solution, include a private method for each of the steps shown in the outline.
+Even though the program is only a few lines, it is still worth getting at least a little practice in decomposition.  In your solution, include a function for each of the steps shown in the outline.
 

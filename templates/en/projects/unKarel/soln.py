@@ -16,7 +16,7 @@ def build_house():
     """
     Constructs a single house centered around Karel's current position.
 	  You can assume that there is a beeper present at the start state.
-	  At the end of the method, Karel will be facing east on the bottom-
+	  At the end of the function, Karel will be facing east on the bottom-
 	  right corner of the house.
     """
     pick_beeper()

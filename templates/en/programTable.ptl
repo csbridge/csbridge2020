@@ -330,7 +330,7 @@
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-						<h4>Day 5: Graphics and Methods</h4></b>
+						<h4>Day 5: Graphics and Functions</h4></b>
 			</tr>
 		</thead>
 		<tbody
@@ -372,7 +372,7 @@
       </tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/madMethods.jpg"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/madMethods.html">Mad Methods</a>
+				<td><a href="{{pathToRoot}}en/projects/funkyFunctions.html">Funky Functions</a>
           <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}teach/notes/dogYears.html">SL Solution (In Progress)</a>
@@ -676,7 +676,7 @@
 						<br><a href="{{pathToRoot}}teach/notes/collectNewspaper.html">SL Notes</a>
 					% end
 				</td>
-				<td>Methods</td>
+				<td>Functions</td>
 			</tr>
 
 			<tr>

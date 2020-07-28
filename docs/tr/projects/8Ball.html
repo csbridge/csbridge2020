@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | 8-Ball</title>
+<title>CS Bridge  | 8 Numaralı Top</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -72,8 +72,8 @@
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kaynaklar<b class="caret"></b></a>
 
             <ul class="dropdown-menu">
-	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Okuyucu</a></li>
-	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Okuyucu</a></li>
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/tr/intro.html">Karel Okuyucu</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/tr/intro/">Python Okuyucu</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../tr/resources/quick-python.html">Python Referansı</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../tr/resources/graphics.html">Grafik Referansı</a>
@@ -177,7 +177,7 @@
 	          	</li>
           		<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün Evening</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
-	          		<a href="../../tr/projects/madMethods.html">Mad Methods</a>
+	          		<a href="../../tr/projects/funkyFuncions.html">Funky Functions</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
 	          		<a href="../../tr/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -310,8 +310,9 @@
 				      <li class="divider visible-after" data-visible-after="2019071209" />
 				      <li class="dropdown-header visible-after" data-visible-after="2019071209">4. Gün</li>
 				      <li class="visible-after" data-visible-after="2019071209">
-				      	<a href="../../tr/projects/average.html">Ortalama Metodu</a>
+				      	<a href="../../tr/projects/average.html">Average Function</a>
 				      </li>	
+	          	<li><a href="../../tr/projects/divisible/index.html">Division Functions</a></li>
 				      <li class="visible-after" data-visible-after="2019071209">
 				      	<a href="../../tr/projects/drawPeople.html">İnsan Çizme</a>
 				      </li>	
@@ -386,7 +387,7 @@
 			
 	        <!-- Bonus button -->
 	        <ul class="nav navbar-nav">
-	            <li><a href="../../tr/old/bonus-index.html">Bonus</a></li>
+	            <li><a href="../../tr/bonus-index.html">Bonus</a></li>
 	        </ul>
 			
 	        <!-- Old/New button -->
@@ -444,13 +445,16 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		8-Ball
+		8 Numaralı Top
 	</h1>
 
 		<p>
 			Hazırlayanlar: Chris Piech, with modifications by Lisa Yan
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
@@ -458,60 +462,60 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<p>File: <code>8ball.py</code></p>
-<p>The idea behind an 8-Ball is very simple. You ask the eight ball a yes or no question, and it tells you the answer.</p>
-<p>Except, that the answer it choses is randomly selected from a set of prefabricated responses.</p></p>
+<p>8 Top'un arkasındaki fikir çok basit. Topa bir evet hayır sorusu soruyorsunuz ve o da size cevabı söylüyor.</p>
+<p>Elbette, cevabın önceden hazırlanmış cevaplardan rastgele seçiliyor olması haricinde doğru cevabı söylüyor. :)</p></p>
 <p><center>
     <img style="width:300px" src="../../img/projects/8Ball/real.gif"> <br />
     <p style="text-align:center"><i>A real life 8-Ball</i></p>
 </center></p>
-<p>Write a program that continuously prompts the user for a yes or no question, and then randomly selects from 5 canned answers:
-* Without a doubt.
-* Yes.
-* Ask again later.
-* No.
-* Karel thinks so.</p>
-<p>Here is an example run of the program.
-<center>
+<p>Sürekli olarak kullanıcıdan bir evet hayır sorusu bekleyen ve sonrasında da önceden hazırlanmış 5 cevaptan birini rastgele olarak seçen bir program yazın:</p>
+<ul>
+<li>Şüphesiz.</li>
+<li>Evet.</li>
+<li>Daha sonra tekrar sorun.</li>
+<li>Hayır.</li>
+<li>Karel öyle düşünüyor.</li>
+</ul>
+<p>Programın örnek bir çıktısını burada görebilirsiniz.</p>
+<p><center>
       <img style="width:700px" src="../../img/projects/8Ball/sampleRun.png">  <br />
 </center></p>
-<h2 id="infinite-loop">Infinite loop</h2>
-<p>We've implemented part of this program for you---specifically, the <strong>infinite loop</strong> part which continuously asks for user input). We've left you the job of getting the program to answer with the 5 canned answers above.</p>
-<p>Take a look at what we've implemented below. If you run this code as-is, <strong>what does this program do?</strong> Try it out in PyCharm by running the file <code>8ball.py</code>!
-Remember that you can run your program in Pycharm's Terminal by typing <code>python3 8ball.py</code> (if you are on Mac)
-or <code>py 8ball.py</code> (if you are on PC).</p>
+<h2 id="sonsuz-dongu">Sonsuz döngü</h2>
+<p>Bu programın bir bölümünü sizin için yazdık (spesifik olarak, sürekli kullanıcı girişi isteyen <strong>sonsuz döngü</strong> bölümü). Size, soruları yukarıdaki 5 hazır cevapla yanıtlama işini bıraktık.</p>
+<p>Aşağıda neler yazdığımıza bir göz atın. Bu kodu olduğu gibi çalıştırırsanız, <strong>bu program ne işe yarar?</strong> PyCharm'da <code>8ball.py</code> dosyasını çalıştırarak deneyin!
+Mac'te iseniz <code>Python3 8ball.py</code> veya PC'deyseniz <code>py 8ball.py</code> yazarak programınızı PyCharm Terminalinde çalıştırabileceğinizi unutmayın.</p>
 <pre><code>def main():
     while True:
         input(&quot;Ask a yes or no question: &quot;)
 
-        # remember, this is a comment
-        # BEGIN YOUR CODE
+        # unutmayın, bu bir 'comment'
+        # KODUNUZ BURADA BAŞLASIN
 
 
-        # END YOUR CODE
+        # KODUNUZ BURADA BİTSİN
 </code></pre>
 
-<h2 id="quitting-an-infinite-loop">Quitting an infinite loop</h2>
-<p>This program runs forever!
-To exit a program that runs forever, hit <code>Ctrl-C</code> on your keyboard while in the Terminal. You should then be able
-to run your program via the <code>python3 runningsum.py</code> or <code>py runningsum.py</code> again.</p>
-<h2 id="choices-and-random-numbers">Choices and random numbers</h2>
-<p>One way to choose randomly between 5 answers is to associate each answer with a number and make use of Python's ability to randomly pick numbers.
-Then, depending on which number is picked, you can use <strong>conditional statements</strong> (<code>if</code>, <code>else</code>) to print out the selected answer.</p>
-<p>To generate a random integer, you can do the following:</p>
+<h2 id="sonsuz-donguden-ckmak">Sonsuz döngüden çıkmak</h2>
+<p>Bu program sonsuza dek çalışıyor!
+Sonsuza dek çalışan bir programdan çıkmak için, Terminal'deyken klavyenizdeki <code>Ctrl-C</code> tuşlarına basın. Böylece programı tekrar <code>python3 runningsum.py</code> veya <code>py runningsum.py</code> komutuyla çalıştırabilirsiniz.</p>
+<h2 id="secimler-ve-rastgele-saylar">Seçimler ve rastgele sayılar</h2>
+<p>5 cevap arasında rasgele seçim yapmanın bir yolu, her cevabı bir numara ile ilişkilendirmek ve Python'un rasgele sayı seçme yeteneğinden faydalanmaktır.
+Ardından, hangi sayının seçildiğine bağlı olarak, seçilen yanıtı yazdırmak için <strong>koşullu ifadeler</strong> (<code>if</code>,<code>else</code>) kullanabilirsiniz.</p>
+<p>Rastgele bir tamsayı (integer) oluşturmak için aşağıdakileri yapabilirsiniz:</p>
 <pre><code>num = random.randint(min, max)
 </code></pre>
 
-<p><code>min</code> and <code>max</code> are the minimum and maximum integers, respectively that the variable <code>num</code> can take on. For example:</p>
+<p><code>min</code> and <code>max</code>, sırasıyla <code>num</code> değişkeninin alabileceği minimum ve maksimum tamsayılardır. Örneğin:</p>
 <pre><code>num = random.randint(10, 20)
 </code></pre>
 
-<p>will store a random number between 10 and 20, inclusive, in the variable <code>num</code>.</p>
-<h2 id="bonus-extension">Bonus: extension</h2>
-<p>Your current program runs forever. How would you change the while loop conditional (currently <code>True</code>) to exit when the user types nothing (just presses Enter)?</p>
-<p>Hint: Here's a program that outputs "nothing entered" when the user types in nothing (just presses Enter). Otherwise the program prints the user input. How can you use a similar idea and apply it to the while loop?</p>
-<pre><code>statement = input(&quot;Type in something: &quot;)
+<p><code>num</code> değişkenine 10 ile 20 arasında rastgele bir sayı kaydeder.</p>
+<h2 id="bonus-ekleme">Bonus: ekleme</h2>
+<p>Mevcut programınız sonsuza dek çalışır. Kullanıcı hiçbir şey yazmadığında (yalnızca Enter tuşuna bastığında), şu anda <code>True</code> olan while döngüsü koşulunu nasıl değiştirirsiniz?</p>
+<p>İpucu: İşte size kullanıcı hiçbir şey yazdığında (yalnızca Enter tuşuna basarsa) ekrana "Hiçbir şey girilmedi." yazan bir program. Bu program aksi takdirde program kullanıcı girişini yazdırır. Benzer bir fikri nasıl kullanabilir ve while döngüsüne uygulayabilirsiniz?</p>
+<pre><code>statement = input(&quot;Bir şeyler yazın: &quot;)
 if statement == &quot;&quot;:
-    print(&quot;nothing entered&quot;)
+    print(&quot;Hiçbir şey girilmedi.&quot;)
 else:
     print(statement)
 </code></pre>
