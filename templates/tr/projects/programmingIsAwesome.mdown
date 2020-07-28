@@ -1,6 +1,6 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Programlamak Bir Harika
-credit: Chris Piech and Eric Roberts
+credit: Chris Piech ve Eric Roberts
 translation: Serhat Arslang, Gül Sena Altıntaş
 Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
 
