@@ -19,7 +19,7 @@ SIZE = 100
 GAP = 10
 ```
 
-which are written outside the main() method. These lines define constants: variables whose values never change. Since they are defined outside all methods, you can read their values at any point in the program. Though you could write this optical illusion using the numbers 100 and 10 directly wherever you need them, using constants makes your program much easier to read.
+which are written outside the main() function. These lines define constants: variables whose values never change. Since they are defined outside all methods, you can read their values at any point in the program. Though you could write this optical illusion using the numbers 100 and 10 directly wherever you need them, using constants makes your program much easier to read.
 
 ## Double for loop
 

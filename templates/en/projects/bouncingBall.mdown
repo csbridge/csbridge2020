@@ -24,7 +24,7 @@ time.sleep(seconds)
 
 If you don't pause, the computer will animate faster than the human eye can see the movement!
 
-There is also a method to move a graphical shape on the canvas:
+There is also a function to move a graphical shape on the canvas:
 
 ```
 canvas.move(object, dx, dy)
@@ -39,7 +39,7 @@ Now, before you update the position of the ball, you should check if the ball ha
 
 Reflections should follow the rule "the angle of incidence equals the angle of reflection". This turns out to be simple to implement. You simply flip the x direction if you hit a left or right wall and flip the y direction if you hit a bottom or top wall.ß
 
-How do you figure out the position of the ball? You can use the methods:
+How do you figure out the position of the ball? You can use the functions:
 
 ```
 canvas.get_left_x(obj)

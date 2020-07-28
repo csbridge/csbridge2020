@@ -79,12 +79,15 @@
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li class="dropdown-header">Course information</li>
               <li><a href="../../en/resources/general-info.html">General Info</a></li>
               <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
               <li><a href="../../en/resources/section-info.html">Section Info</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
               <li><a href="../../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+              <li class="divider" />
+              <li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -180,7 +183,7 @@
 
 				<!-- Day 5 -->
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
           		    <li class="visible-after" data-visible-after="2019071109">
@@ -191,7 +194,7 @@
 	          	    </li>
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="../../en/projects/madMethods.html">Mad Methods</a>
+	          	    	<a href="../../en/projects/funkyFunctions.html">Funky Functions</a>
 	          	    </li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
 	          	    	<a href="../../en/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -317,12 +320,13 @@
                 </ul>
               </li>
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
 	          	    <li><a href="../../en/projects/robotFace/index.html">Robot Face</a></li>
 	          	    <li><a href="../../en/projects/halfGreen/index.html">Half Green</a></li>
                   <!-- Used to be a main course component -->
-	          	    <li><a href="../../en/projects/average/index.html">Average Method</a></li>
+	          	    <li><a href="../../en/projects/average/index.html">Average Function</a></li>
+	          	    <li><a href="../../en/projects/divisible/index.html">Division Functions</a></li>
 	          	    <li><a href="../../en/projects/drawPeople/index.html">Draw People</a></li>
 	          	    <li><a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a></li>
                 </ul>
@@ -360,7 +364,7 @@
 	          	<li><a href="../../slides/Graphics.pdf">Graphics (Slides)</a></li>
 	          	<li><a href="../../starter/Graphics.zip">Graphics (Code)</a></li>
 	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
-	          	<li><a href="../../slides/Methods.pdf">Methods</a></li>
+	          	<li><a href="../../slides/Methods.pdf">Functions</a></li>
 	          	<li><a href="../../slides/NestedLoops.pdf">Nested Loops</a></li>
 	          	<li><a href="../../slides/Events.pdf">Events (Slides)</a></li>
 	          	<li><a href="../../starter/Events.zip">Events (Code)</a></li>
@@ -482,7 +486,7 @@
                 System.out.println((int) 'A'); // returns 65
 			</code></div>
             <p>Likewise, the numeric representation of <code>Z</code> is <code>65 + 26 - 1 = 90</code>. The <code>char</code> to <code>int</code> mapping is decided by the <a href ="http://ascii.cl/">ASCII Codes</a>.</p>
-            <p>Use this insight to devise a method for looping through the letters A through Z, then loop back to A again.
+            <p>Use this insight to devise a function for looping through the letters A through Z, then loop back to A again.
 
             <h3>Event Flags</h3>
             <p>Add a mouse listener so that when a user clicks, the counter temporarily stops incrementing, and "pausing..." sign shows up at the location that the user clicked. After one second, the "pausing..." sign should go away and the counter should continue incrementing.</p>
@@ -490,7 +494,7 @@
 				<img style="width:300px" src="../../img/projects/clickNStuff/pauseCharacter.png">	
 			</center>
             <br>
-            <p><b>It will be difficult to implement this all in <code>mouseClicked()</code>!!!</b> You cannot pause inside a listener method like <code>mouseClicked()</code> or <code>mouseMoved()</code>, because these methods are designed to act quickly. Instead, you need to use <i>Event Flags</i>.</p>
+            <p><b>It will be difficult to implement this all in <code>mouseClicked()</code>!!!</b> You cannot pause inside a listener function like <code>mouseClicked()</code> or <code>mouseMoved()</code>, because these functions are designed to act quickly. Instead, you need to use <i>Event Flags</i>.</p>
 
             <p>A <b>flag</b> is a boolean variable that the programmer sets to <code>true</code> when an event happens, and is set back to <code>false</code> when the event ends. In practice, a programmer sets event flags to true in mouse listeners, checks if they are true in the main animation loop, and then does some action after it sees the flag is turned on. Here is an example of a main animation loop that also checks a flag:</p>
 

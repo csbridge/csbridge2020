@@ -79,12 +79,15 @@
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li class="dropdown-header">Course information</li>
               <li><a href="../../en/resources/general-info.html">General Info</a></li>
               <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
               <li><a href="../../en/resources/section-info.html">Section Info</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
               <li><a href="../../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+              <li class="divider" />
+              <li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -180,7 +183,7 @@
 
 				<!-- Day 5 -->
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
           		    <li class="visible-after" data-visible-after="2019071109">
@@ -191,7 +194,7 @@
 	          	    </li>
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="../../en/projects/madMethods.html">Mad Methods</a>
+	          	    	<a href="../../en/projects/funkyFunctions.html">Funky Functions</a>
 	          	    </li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
 	          	    	<a href="../../en/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -317,12 +320,13 @@
                 </ul>
               </li>
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
 	          	    <li><a href="../../en/projects/robotFace/index.html">Robot Face</a></li>
 	          	    <li><a href="../../en/projects/halfGreen/index.html">Half Green</a></li>
                   <!-- Used to be a main course component -->
-	          	    <li><a href="../../en/projects/average/index.html">Average Method</a></li>
+	          	    <li><a href="../../en/projects/average/index.html">Average Function</a></li>
+	          	    <li><a href="../../en/projects/divisible/index.html">Division Functions</a></li>
 	          	    <li><a href="../../en/projects/drawPeople/index.html">Draw People</a></li>
 	          	    <li><a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a></li>
                 </ul>
@@ -360,7 +364,7 @@
 	          	<li><a href="../../slides/Graphics.pdf">Graphics (Slides)</a></li>
 	          	<li><a href="../../starter/Graphics.zip">Graphics (Code)</a></li>
 	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
-	          	<li><a href="../../slides/Methods.pdf">Methods</a></li>
+	          	<li><a href="../../slides/Methods.pdf">Functions</a></li>
 	          	<li><a href="../../slides/NestedLoops.pdf">Nested Loops</a></li>
 	          	<li><a href="../../slides/Events.pdf">Events (Slides)</a></li>
 	          	<li><a href="../../starter/Events.zip">Events (Code)</a></li>
@@ -457,7 +461,7 @@ File: <code>short_film.py</code></p>
 <p>Did you know that animated movies like <i>Toy Story</i>, <i>Up</i>, and <i>Frozen</i> are made using computer programs? In this assignment you are going to use a program to create a short film.</p>
 <h2 id="display-message-method">Display Message Method</h2>
 <p>Every movie has a beginning and an end. Sometimes it will start "Once Upon a Time...", sometimes it will start with a title, sometimes it will start with something sillier. At the end of the movie it sometimes says "The end."</p>
-<p>Add a method to your program that will draw a message on the screen (on a black background) and leave the message for two seconds.</p>
+<p>Add a function to your program that will draw a message on the screen (on a black background) and leave the message for two seconds.</p>
 <pre><code>def display_message(canvas, message):
   ...
 </code></pre>
@@ -470,31 +474,31 @@ File: <code>short_film.py</code></p>
 <pre><code>canvas.set_font(label, &quot;Papyrus&quot;, 40)
 </code></pre>
 
-<p>After two seconds you should remove the rectangle that is the background and the text that is the message. To do so you can use the <code>delete</code> method (which takes an object that was on the canvas and removes it).</p>
+<p>After two seconds you should remove the rectangle that is the background and the text that is the message. To do so you can use the <code>delete</code> function (which takes an object that was on the canvas and removes it).</p>
 <pre><code>canvas.delete(your_object)
 </code></pre>
 
-<p>Of course, you can use this method as much as you want to tell your story!</p>
+<p>Of course, you can use this function as much as you want to tell your story!</p>
 <h2 id="setting-sun">Setting Sun</h2>
 <p>Your movie must have one scene to start: A setting sun. draw the sky, the earth and a sun. Then, slowly animate the sun descending. The sky should take up the top half of the canvas, and the earth should take up the second half. Considering the following images from the start of the program, and the program after a few seconds.</p>
 <p><center>
   <img style="width:100%" src="../../img/projects/shortfilm/animation.png">
 </center></p>
 <h2 id="get_sun_color-method"><code>get_sun_color</code> Method</h2>
-<p>Write a method that takes some parameter, and returns the color of the sun. You should specify the parameter of this method: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.</p>
+<p>Write a function that takes some parameter, and returns the color of the sun. You should specify the parameter of this function: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.</p>
 <pre><code>def getSunColor(...):
   ...
   return color
 </code></pre>
 
-<p>Have the method return "yellow", "orange", or "red" based on how many iterations have passed.</p>
+<p>Have the function return "yellow", "orange", or "red" based on how many iterations have passed.</p>
 <h2 id="finishing-up">Finishing up</h2>
-<p>After your movie ends, display a finishing message using your <code>display_message()</code> method defined earlier. The end message should look like the screen below.</p>
+<p>After your movie ends, display a finishing message using your <code>display_message()</code> function defined earlier. The end message should look like the screen below.</p>
 <p><center>
   <img style="width:500px" src="../../img/projects/shortfilm/theEnd.png">
 </center></p>
 <h1 id="make-it-better">Make It Better</h1>
-<p>Do anything you want to make your story more captivating than just a setting sun. Can you tell a tale of love or action? Don't forget to use methods to make your life easier.</p>
+<p>Do anything you want to make your story more captivating than just a setting sun. Can you tell a tale of love or action? Don't forget to use functions to make your life easier.</p>
 <p><center>
   <img style="width:500px" src="../../img/projects/shortfilm/poster.jpg">
 </center></p>

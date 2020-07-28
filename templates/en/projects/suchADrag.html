@@ -25,7 +25,7 @@
         </p>
         <p>
         First, we generate 10 GOvals and place them randomly about the canvas. This 
-        happens in the method addRandomObjects( ). Notice how we use the constants 
+        happens in the function addRandomObjects( ). Notice how we use the constants 
         NUM_RANDOM_OBJECTS and OBJECT_SIZE instead of the magic numbers 10 and 50 when creating
         the objects. 
 
@@ -37,9 +37,9 @@
 
 		<p>
         Once we've added the random objects, we tell the program to listen for mouse events
-        like mouse clicks and drags with the addMouseListeners( ) method. We also specify
+        like mouse clicks and drags with the addMouseListeners( ) function. We also specify
         what the program should do in the event of a mouse click or drag by implementing the mousePressed and mouseDragged
-        methods. Because we can't pass variables other than the MouseEvent to the mouseDragged method,
+        functions. Because we can't pass variables other than the MouseEvent to the mouseDragged function,
         we need an instance variable to keep track of which oval was clicked. 
         Ask one of the teachers to explain why we need an instance variable here if it doesn't make sense.</p>
 			</div>

@@ -108,7 +108,7 @@ The easiest thing to do, which is in fact typical of real computer games, is to 
 To get a list of objects that are overlapping the ball, you can use code as follows which calls the canvas function `canvas.coords(obj)`, returning the 4 corners of an object:
 
 ```
-# this graphics method gets the location of the ball as a list
+# this graphics function gets the location of the ball as a list
 ball_coords = canvas.coords(ball)
 
 # the list has four elements:
@@ -123,7 +123,7 @@ colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 
 If you get all overlapping objects in this rectangle, you will be returned a list. In that list will be the `ball` itself (since the ball overlaps too!), as well as any objects that the ball is currently colliding with. To test if a colliding object is the ball, you can simply check if the element is `==` to your ball variable.
 
-If the ball collides with the paddle, you need to bounce the ball so that it starts traveling up.  If it isn't the paddle, the only other thing it might be is a brick, since those are the only other objects in the world.  Once again, you need to cause a bounce in the vertical direction (flip the direction of the `change_y` variable), but you also need to take the brick away.  To do so, all you need to do is remove it from the screen by calling the `delete` method:
+If the ball collides with the paddle, you need to bounce the ball so that it starts traveling up.  If it isn't the paddle, the only other thing it might be is a brick, since those are the only other objects in the world.  Once again, you need to cause a bounce in the vertical direction (flip the direction of the `change_y` variable), but you also need to take the brick away.  To do so, all you need to do is remove it from the screen by calling the `delete` function:
 
 ```
 canvas.delete(square)  # deletes the object called square

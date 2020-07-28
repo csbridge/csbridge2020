@@ -1,4 +1,4 @@
-template: templates/en/projects/projectTemplate.ptl
+template: templates/tr/projects/projectTemplate.ptl
 title: Viral Video
 credit: Lisa Yan
 translation: Gül Sena Altıntaş
@@ -15,9 +15,9 @@ Göreviniz TikTok'u Dünya'da popüler hale getirmek! Bu proje için iki girdi a
 
 Videonuzun toplam görüntülenme sayısı her gün yukarıdaki büyüme oranıyla çarpılarak artar. Yukarıdaki örnekte üstel büyüme oranının 3 olması şunu ifade eder:
 
-* 1. günde, 1 görüntüleme ile başlarsınız (kendi görüntülemeniz).
-* 2. günde, görüntülenme sayınız 3'e çıkar.
-* 3. günde, görüntülenme sayınız 9'a çıkar.
+* <span>1.</span> günde, 1 görüntüleme ile başlarsınız (kendi görüntülemeniz).
+* <span>2.</span> günde, görüntülenme sayınız 3'e çıkar.
+* <span>3.</span> günde, görüntülenme sayınız 9'a çıkar.
 
 ... ve böyle devam eder.
 

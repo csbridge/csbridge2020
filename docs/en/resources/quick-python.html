@@ -79,12 +79,15 @@
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li class="dropdown-header">Course information</li>
               <li><a href="../../en/resources/general-info.html">General Info</a></li>
               <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
               <li><a href="../../en/resources/section-info.html">Section Info</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
               <li><a href="../../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+              <li class="divider" />
+              <li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -180,7 +183,7 @@
 
 				<!-- Day 5 -->
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
           		    <li class="visible-after" data-visible-after="2019071109">
@@ -191,7 +194,7 @@
 	          	    </li>
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="../../en/projects/madMethods.html">Mad Methods</a>
+	          	    	<a href="../../en/projects/funkyFunctions.html">Funky Functions</a>
 	          	    </li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
 	          	    	<a href="../../en/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -317,12 +320,13 @@
                 </ul>
               </li>
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
 	          	    <li><a href="../../en/projects/robotFace/index.html">Robot Face</a></li>
 	          	    <li><a href="../../en/projects/halfGreen/index.html">Half Green</a></li>
                   <!-- Used to be a main course component -->
-	          	    <li><a href="../../en/projects/average/index.html">Average Method</a></li>
+	          	    <li><a href="../../en/projects/average/index.html">Average Function</a></li>
+	          	    <li><a href="../../en/projects/divisible/index.html">Division Functions</a></li>
 	          	    <li><a href="../../en/projects/drawPeople/index.html">Draw People</a></li>
 	          	    <li><a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a></li>
                 </ul>
@@ -360,7 +364,7 @@
 	          	<li><a href="../../slides/Graphics.pdf">Graphics (Slides)</a></li>
 	          	<li><a href="../../starter/Graphics.zip">Graphics (Code)</a></li>
 	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
-	          	<li><a href="../../slides/Methods.pdf">Methods</a></li>
+	          	<li><a href="../../slides/Methods.pdf">Functions</a></li>
 	          	<li><a href="../../slides/NestedLoops.pdf">Nested Loops</a></li>
 	          	<li><a href="../../slides/Events.pdf">Events (Slides)</a></li>
 	          	<li><a href="../../starter/Events.zip">Events (Code)</a></li>
@@ -450,7 +454,7 @@ filePath - the total path to the markdown file being rendered in this template
 <li><a href="#how-to-run-python-programs-in-pycharm">How to run Python programs in Pycharm</a></li>
 <li><a href="#console-output">Console Output</a></li>
 <li><a href="#console-input">Console Input</a></li>
-<li><a href="#random-numbers">Random numbers</a></li>
+<li><a href="#random">Random</a></li>
 </ul>
 </div>
 <h2 id="how-to-run-python-programs-in-pycharm">How to run Python programs in Pycharm</h2>
@@ -501,7 +505,7 @@ print(&quot;circumference = &quot; + str(circumference))
   alt="Example output for console input. User inputs "Fine, thank you", then "4", then "3.1415926535323846" and the program computes the circumference of a circle with radius 4 and your estimate of pi.
 />
 </center></p>
-<h2 id="random-numbers">Random numbers</h2>
+<h2 id="random">Random</h2>
 <p>To generate random numbers, type <code>import random</code> at the top of your program, outside of any functions:</p>
 <pre><code>import random
 
@@ -513,6 +517,15 @@ def main():
 <pre><code>x = random.randint(lower, upper)  # a random int in the range (lower, upper), inclusive
 y = random.random()               # a random decimal number between 0 and 1
 y = random.uniform(lower, upper)  # a random decimal number between lower and upper
+</code></pre>
+
+<p>You can also randomly choose an element from a list!</p>
+<pre><code>numbers = [10, 9, 20, 3, 4]
+number = random.choice(numbers)   # picks a random element from numbers
+</code></pre>
+
+<p>To randomly pick a color, if you have a <code>canvas</code> variable:</p>
+<pre><code>canvas.get_random_color()
 </code></pre>
 	</div>
 </div>

@@ -153,7 +153,7 @@ canvas.set_canvas_title("My Program")  # sets the text in the window title bar
 canvas.mainloop()
 ```
 
-Below we provide a brief tour of some of the different shapes you can draw in a canvas as well as highlight a few of the options you have with regard to how those shapes look.  For a complete list of methods, check out the link at the top of this page to the full reference documentation.
+Below we provide a brief tour of some of the different shapes you can draw in a canvas as well as highlight a few of the options you have with regard to how those shapes look.  For a complete list of functions, check out the link at the top of this page to the full reference documentation.
 
 ## Drawing Lines
 To draw lines on the canvas, use `create_line` and specify the coordinates for the **start** and **end** points of the line.  For example, the following command would draw a line from location (10, 20) to (100, 50) on the canvas:
@@ -325,7 +325,7 @@ print(canvas.get_top_y(oval))   # prints 10
 Note that for something like an oval, the dimensions and left corner are from the bounding box that contains it.
 
 ## Updating Graphical Objects
-There are several helpful methods you can use to update the state of different graphical objects.
+There are several helpful functions you can use to update the state of different graphical objects.
 
 #### Moving Objects
 You can change the location of an object using `moveto`.  You specify a new coordinate which will be the upper-left corner of the bounding box for the object (e.g. bounding box for an oval, bounding box for a line, etc.).  Here's how we would move a rect to have upper-left corner at (25, 50):
@@ -335,7 +335,7 @@ rect = canvas.create_rectangle(100, 200, 300, 400)
 canvas.moveto(rect, 25, 50)
 ```
 
-You can also change the location of an object by specifying _how much_ you would like to move it by, instead of specifying the new location.  The `move` method lets you specify the change in `x` and the change in `y` for the object.  For example, here's how we would move a rect 5 pixels to the right, and 10 pixels down:
+You can also change the location of an object by specifying _how much_ you would like to move it by, instead of specifying the new location.  The `move` function lets you specify the change in `x` and the change in `y` for the object.  For example, here's how we would move a rect 5 pixels to the right, and 10 pixels down:
 
 ```
 rect = canvas.create_rectangle(100, 200, 300, 400)

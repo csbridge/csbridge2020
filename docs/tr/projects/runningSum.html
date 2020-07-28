@@ -72,27 +72,22 @@
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kaynaklar<b class="caret"></b></a>
 
             <ul class="dropdown-menu">
-	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Okuyucu</a></li>
-	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Okuyucu</a></li>
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/tr/intro.html">Karel Okuyucu</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/tr/intro/">Python Okuyucu</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../tr/resources/quick-python.html">Python Referansı</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../tr/resources/graphics.html">Grafik Referansı</a>
 				      <li><a class="visible-after" data-visible-after="2019071509" href="../../tr/resources/animation.html">Animasyon Referansı</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
-<<<<<<< Updated upstream
-              <li><a href="../../tr/resources/general-info.html">General Info</a></li>
-              <li><a href="../../tr/resources/student-faq.html">[Student] Course FAQs</a></li>
-              <li><a href="../../tr/resources/section-info.html">Section Info</a></li>
-=======
+              <li class="dropdown-header">Course information</li>
               <li><a href="../../tr/resources/general-info.html">Genel Bilgiler</a></li>
-              <li><a href="../../tr/resources/student-faq.html">[Student] Sıkça Sorulan Sorular</a></li>
-              <li><a href="../../tr/resources/sectionleader-faq.html">[Section Leader] Sıkça Sorulan Sorular</a></li>
+              <li><a href="../../tr/resources/student-faq.html">Sıkça Sorulan Sorular</a></li>
               <li><a href="../../tr/resources/section-info.html">Grup Bilgisi</a></li>
-              <li><a href="../../tr/resources/zoom-info.pdf">Zoom Rehberi</a></li>
->>>>>>> Stashed changes
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="../../tr/resources/install.html">PyCharm Kurulumu</a></li>
               <li><a href="../../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
+              <li class="divider" />
+              <li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../tr/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -177,7 +172,7 @@
 	          	</li>
           		<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün Evening</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
-	          		<a href="../../tr/projects/madMethods.html">Mad Methods</a>
+	          		<a href="../../tr/projects/funkyFuncions.html">Funky Functions</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
 	          		<a href="../../tr/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -310,8 +305,9 @@
 				      <li class="divider visible-after" data-visible-after="2019071209" />
 				      <li class="dropdown-header visible-after" data-visible-after="2019071209">4. Gün</li>
 				      <li class="visible-after" data-visible-after="2019071209">
-				      	<a href="../../tr/projects/average.html">Ortalama Metodu</a>
+				      	<a href="../../tr/projects/average.html">Average Function</a>
 				      </li>	
+	          	<li><a href="../../tr/projects/divisible/index.html">Division Functions</a></li>
 				      <li class="visible-after" data-visible-after="2019071209">
 				      	<a href="../../tr/projects/drawPeople.html">İnsan Çizme</a>
 				      </li>	
@@ -328,7 +324,7 @@
 	          		<a href="../../tr/projects/holePuncher.html">Delgeç</a>
 	          	</li>	
 	          	<li class="visible-after" data-visible-after="2019071509">
-	          		<a href="../../tr/projects/debrisSweeper.html">Enkazı Kaldır</a>
+	          		<a href="../../tr/projects/debrisSweeper/index.html">Enkazı Kaldır</a>
 	          	</li>	
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../tr/projects/suchADrag.html">Ne Kaydırma Ama<</a>
@@ -386,7 +382,7 @@
 			
 	        <!-- Bonus button -->
 	        <ul class="nav navbar-nav">
-	            <li><a href="../../tr/old/bonus-index.html">Bonus</a></li>
+	            <li><a href="../../tr/bonus-index.html">Bonus</a></li>
 	        </ul>
 			
 	        <!-- Old/New button -->
@@ -462,37 +458,45 @@ filePath - the total path to the markdown file being rendered in this template
 sum of the entered values. Here's what the output of the program should look like:</p>
 <pre><code>Enter integers, one at a time. I will show you the sum!
 Please enter an integer: 3
-The sum is: 3
+The current sum is: 3 (1 integers entered)
 Please enter an integer: 4
-The sum is: 7
+The current sum is: 7 (2 integers entered)
 Please enter an integer: 5
-The sum is: 12
+The current sum is: 12 (3 integers entered)
 Please enter an integer: 10
-The sum is: 22
+The current sum is: 22 (4 integers entered)
 Please enter an integer: 3
-The sum is: 25
+The current sum is: 25 (5 integers entered)
 Please enter an integer: 4
-The sum is: 29
+The current sum is: 29 (6 integers entered)
 Please enter an integer: 1
-The sum is: 30
-Please enter an integer: ...
+The current sum is: 30 (7 integers entered)
+Please enter an integer:
 </code></pre>
 
+<h2 id="an-infinite-loop">An infinite loop</h2>
+<p>Remember in Karel, we wrote while loops that executed code until some particular condition is true? In Python, we can extend this idea to write a loop that executes <em>forever</em> (an infinite number of times). The basic structure looks like the below code, which will print "Hello" to the console an infinite number of times—one "Hello" on each line:</p>
+<pre><code>while True:
+    print(&quot;Hello&quot;)
+</code></pre>
+
+<p>Because your program will just keep adding up user input until the end of time, your program should use an infinite loop.</p>
+<p><strong>Caution</strong>: Note that you need to keep track of some information that needs to stay somewhere between loop iterations (like the total sum so far). You can declare these variables <em>before</em> the infinite loop starts.</p>
 <h2 id="quitting-your-program">Quitting your program</h2>
 <p>Remember that you can run your program in Pycharm's Terminal by typing <code>python3 runningsum.py</code> (if you are on Mac)
 or <code>py runningsum.py</code> (if you are on PC). However, this program runs forever!</p>
 <p>To exit a program that runs forever, hit <code>Ctrl-C</code> on your keyboard while in the Terminal. You should then be able
 to run your program via the <code>python3 runningsum.py</code> or <code>py runningsum.py</code> again.</p>
 <h2 id="printing-variables">Printing variables</h2>
-<p>Often in console programs it is necessary to print out values to the user in a string. The example above is: </p>
-<pre><code>The sum is: 55
-</code></pre>
-
-<p>If you run your program with the above input, 55 will be the value stored in the variable that tracks the sum. If that variable is named <code>sum</code>, then in order to output its value you would write:</p>
+<p>Often in console programs it is necessary to print out values to the user in a string. Suppose you have a variable <code>total</code> that stores the number 55 and you want to output it. In your program, you should write:</p>
 <pre><code>print(&quot;The sum is: &quot; + str(total))
 </code></pre>
 
-<p>A more general form is:</p>
+<p>If you run your program with the above input, the program will output the following to the console:</p>
+<pre><code>The sum is: 55
+</code></pre>
+
+<p>A more general form for printing out variables in code is:</p>
 <pre><code>&quot;String message&quot; + str(variable_name) + &quot;more string message&quot;
 </code></pre>
 	</div>
