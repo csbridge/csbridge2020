@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Hospital Karel</title>
+<title>CS Bridge  | Hastaneci Karel</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -436,60 +436,63 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Hospital Karel
+		Hastaneci Karel
 	</h1>
 
 		<p>
 			Hazırlayan: Chris Piech
 		</p>
 
+		<p>
+			Çeviren: Gül Sena Altıntaş
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../tr/handouts/karel.html">KarelReference</a><br/>
-Worked Examples: <a href="../../tr/projects/invert.html">Invert</a>, <a href="../../tr/projects/unkarel/index.html">UN Karel</a><br/>
+		<p>Handouts: <a href="../../en/resources/karel.html">KarelReference</a><br/>
+Worked Examples: <a href="../../en/projects/unKarel/index.html">UN Karel</a>, <a href="../../en/projects/banishWinter/index.html">Banish Winter</a><br/>
 Day1: <code>hospital_karel.py</code></p>
-<p>Countries around the world are dispatching hospital-building robots to make sure anyone who
-gets sick can be treated. They have decided to enlist Karel robots. Your job is to program those
-robots.</p>
-<p>Karel begins at the left end of a row that might look like this:</p>
+<p>Dünyanın dört bir tarafındaki ülkeler, hastalanan herkesin tedavi gördüğünden emin olmak için
+hastane inşa eden robotları görevlendiriyor. Bu görev için Karel robotları seçildi. Sizin
+göreviniz de bu robotları programlamak.</p>
+<p>Karel programa satırın solunda aşağıdaki gibi başlıyor:</p>
 <p>
 <center>
     <img style="width:100%"  src="../../img/projects/hospitalkarel/hospitalstart.png">
 </center>
 </p>
 
-<p>Each beeper in the figure represents a pile of supplies. Karel’s job is to walk along
-the row and build a new hospital in the places marked by each beeper. Each hospital
-should look exactly like the picture below (two columns of three beepers):</p>
+<p>Fotoğraftaki her beeper bir malzeme yığınını temsil ediyor. Karel'ın görevi satır boyunca
+yürüyüp beeper'la işaretlenmiş yerlere hastane inşa etmek. Her hastane aşağıdaki fotoğraftaki
+gibi gözükmeli (üçer beeper'dan oluşan iki sütun):</p>
 <p>
 <center>
     <img style="width:50px"  src="../../img/projects/hospitalkarel/supplies.png">
 </center>
 </p>
 
-<p>The new hospital should have their corner at the point at which the pile of supplies was left. At
-the end of the run, Karel should be at the end of the row having created a set of hospitals. For the
-initial conditions shown, the result would look like this:</p>
+<p>Yeni hastanenin köşesi malzeme yığınının bırakıldığı köşede bulunmalı. Program tamamlandığında, Karel
+gerekli hastaneleri yaratmış ve satırın sonunda olmalı. Yukarıda gösterilen başlangıç koşulları için
+sonuç şu şekilde gözükmelidir:</p>
 <p>
 <center>
     <img style="width:100%"  src="../../img/projects/hospitalkarel/hospitalend.png">
 </center>
 </p>
 
-<p>Keep in mind the following information about the world:</p>
+<p>Dünya hakkında aşağıdaki bigileri unutmayın:</p>
 <ul>
-<li>Karel starts facing east at (1, 1) with an infinite number of beepers in its beeper bag.</li>
-<li>The beepers indicating the positions at which hospitals should be built will be spaced so
-that there is room to build the hospitals without overlapping or hitting walls.</li>
-<li>There will be no supplies left on the last column.</li>
-<li>Karel should not run into a wall if it builds a hospital that extends into that final corner.</li>
+<li>Karel doğuya (east) bakarak (1, 1) koordinatlarında çantasında sonsuz sayıda beeper'la başlar.</li>
+<li>Hastanelerin yerlerini gösteren beeper'lar yeterli sayıda hastaneyi üst üste gelmeyecek ya da
+duvarlarla çakışmayacak şekilde yerleştirileceğinden emin olabilirsiniz.</li>
+<li>Son sütunda malzeme olmayacak.</li>
+<li>Karel son sütunu da kapsayan bir hastane inşa ederse bitişte duvara çarpmamalı.</li>
 </ul>
-<p>Write a program to implement the Hospital Building Karel project. Remember that your program
-should work for any world that meets the above conditions.</p>
+<p>Hastane İnşa Eden Karel projesini gerçekleştiren bir program yazın. Unutmayın, programınız
+yukarıdaki koşulları sağlayan tüm dünyalarda çalışmalıdır.</p>
 	</div>
 </div>
 

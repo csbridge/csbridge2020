@@ -1,6 +1,7 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Şerit Karel
 credit: Chris Piech tarafından yazılmıştır
+translation: Gül Sena Altıntaş
 
 Handouts: [Karel Reference]({{pathToRoot}}en/handouts/karel.html)<br/>
 File: `stripe_karel.py`
