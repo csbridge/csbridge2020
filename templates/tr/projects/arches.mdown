@@ -1,52 +1,55 @@
-template: templates/tr/projects/projectTemplate.ptl
-title: Arches Karel
+template: templates/en/projects/projectTemplate.ptl
+title: Sütun Tamircisi
 credit: Lisa Yan
+translation: Serhat Arslan, Ceren Kocaoğullar
 
-Handouts: [KarelReference]({{pathToRoot}}tr/handouts/karel.html)<br/>
-Worked Example: [Place100]({{pathToRoot}}tr/projects/place100.html)<br/>
-Day1: `arches_karel.py`
+Ders Notları: [KarelReference]({{pathToRoot}}en/resources/karel.html)<br/>
+Çözümlü Örnek: [Place100]({{pathToRoot}}en/projects/place100.html)<br/>
+Birinci Gün: `arches_karel.py`
 
-Karel has been hired to build the arches done to the Stanford Main Quad in the 1989 Loma Prieta earthquake. Or use your imagination! Karel has been hired to build the columns of the Charles Bridge, or the columns in the Temple of Artemis in Efes. In particular, there are a set of arches where the stones (represented by beepers, of course) are missing as below:
-				<p>
-					<center>
-						<img style="width:600px" src="{{pathToRoot}}img/projects/efes/efesBroken.png">	
-					</center>
-				</p>
+Karel, Stanford Ana Avlusundaki 1989 Loma Prieta depreminde zarar gören sütunları inşa etmek için tutuldu, veya hayalgücünüzü kullanın ve başka bir yerdeki sütunları tamir ettiğinizi düşünün! Karel Charles Köprüsünün veya Efes'taki Artemis tapınağını tamir etmek için tutulmuş olabilir! Özellikle aşağıda belirtildiği şekilde, kendilerini destekleyen sütunlarda (tabii ki, beeper'lar tarafından temsil edilen) taşların eksik olduğu sütünlar var:
 
-When Karel is done, the missing columns should be replaced by beepers, so the final picture would look like this:
-				<p>
-					<center>
-						<img style="width:600px" src="{{pathToRoot}}img/projects/efes/efesRepaired.png">	
-					</center>
-				</p>
+<p>
+	<center>
+		<img style="width:600px" src="{{pathToRoot}}img/projects/efes/efesBroken.png">
+	</center>
+</p>
 
-Karel may count on the following facts about the world, listed below:
+Karel'ın işi bittiğinde, eksik sütunlar beeper'lar tarafından değiştirilmiş olmalı ki son hali şu şekilde gözüksün:
 
-* Karel starts at 1st Avenue and 1st Street, facing east.
-* The columns are exactly four squares apart, on 1st, 5th, 9th and 13th Avenue.
-* Karel can assume that columns are always five units high.
+<p>
+<center>
+<img style="width:600px" src="{{pathToRoot}}img/projects/efes/efesRepaired.png">
+</center>
+</p>
 
-This problem is a great opportunity to practice decomposition. For example, it would make sense to have a `build_column` method. 
+Karel dünyaya dair aşağıda listelenen gerçeklere güvenebilir:
+_ Karel yüzü doğuya bakar şekilde 1. Bulvar ve 1. Cadde'de başlar.
+_ Sütunlar birbirlerinden tam olarak dört kareyle, 1., 5., 9. ve 13. Bulvar'da, ayrılmış haldeler. \* Karel sütunların beş birim yükseklikte olduğunu varsayabilir.
 
-## For loops
+Program birkaç satır olmasına rağmen, problemi küçük parçalara ayırmaya az da olsa hala değer. Örneğin, bir `build_column` metoduna sahip olmak mantıklı.
 
-One thing that computers are really good at is repeating commands.
+## For Döngüleri
 
-In general, if you know before hand that there is a block of code you would like to repeat many times you can use a "for" loop, which looks like this:
+Bilgisayaların gerçekten iyi olduğu bir şey tekrar eden komutlardır.
+
+Genelde, eğer birçok kez tekrar ettirmek istediğiniz bir kod bloğunun var olduğunu önceden biliyorsanız, bir "for" döngüsü kullanabilirsiniz. Şu şekilde görünür:
+
 ```
 for i in range(n):
-  ... your code ...
+	... your code ...
 
 ```
 
-Instead of `n`, you should write the number of times you want your code to be repeated.
+`n`'nin yerine kodunuzun kaç defa tekrar etmesini istediğinizi yazmalısınız.
 
-For example if you want to move forward ten times, instead of writing the move(); command ten times you could write:
+Örneğin eğer on defa ileri gitmesini istiyorsanız, move(); komutunu on kez yazmak yerine şunu yazabilirsiniz:
+
 ```
 for i in range(10):
     move()
 ```
 
-See the [Place 100 Beepers]({{pathToRoot}}tr/projects/place100.html) program for another example.
+Başka bir örnek için [100 Koymak]({{pathToRoot}}en/projects/place100/) programını inceleyebilirsiniz.
 
-Your program will be much easier to write and easier to read, if you use for loops. There are multiple opportunities to use for loops in this problem! 
+Eğer for döngülerini kullanırsanız, programınızı yazması ve okuması çok daha kolay olacak. Bu problemde for döngüleri kullanmanın birçok avantajı var!
