@@ -26,7 +26,7 @@ Karel may count on the following facts about the world, listed below:
 * The columns are exactly four squares apart, on 1st, 5th, 9th and 13th Avenue.
 * Karel can assume that columns are always five units high.
 
-This problem is a great opportunity to practice decomposition. For example, it would make sense to have a `build_column` method. 
+This problem is a great opportunity to practice decomposition. For example, it would make sense to have a `build_column` function. 
 
 ## For loops
 

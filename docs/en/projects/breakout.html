@@ -180,7 +180,7 @@
 
 				<!-- Day 5 -->
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
           		    <li class="visible-after" data-visible-after="2019071109">
@@ -191,7 +191,7 @@
 	          	    </li>
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="../../en/projects/madMethods.html">Mad Methods</a>
+	          	    	<a href="../../en/projects/funkyFunctions.html">Funky Functions</a>
 	          	    </li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
 	          	    	<a href="../../en/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -317,12 +317,13 @@
                 </ul>
               </li>
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
 	          	    <li><a href="../../en/projects/robotFace/index.html">Robot Face</a></li>
 	          	    <li><a href="../../en/projects/halfGreen/index.html">Half Green</a></li>
                   <!-- Used to be a main course component -->
-	          	    <li><a href="../../en/projects/average/index.html">Average Method</a></li>
+	          	    <li><a href="../../en/projects/average/index.html">Average Function</a></li>
+	          	    <li><a href="../../en/projects/divisible/index.html">Division Functions</a></li>
 	          	    <li><a href="../../en/projects/drawPeople/index.html">Draw People</a></li>
 	          	    <li><a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a></li>
                 </ul>
@@ -360,7 +361,7 @@
 	          	<li><a href="../../slides/Graphics.pdf">Graphics (Slides)</a></li>
 	          	<li><a href="../../starter/Graphics.zip">Graphics (Code)</a></li>
 	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
-	          	<li><a href="../../slides/Methods.pdf">Methods</a></li>
+	          	<li><a href="../../slides/Methods.pdf">Functions</a></li>
 	          	<li><a href="../../slides/NestedLoops.pdf">Nested Loops</a></li>
 	          	<li><a href="../../slides/Events.pdf">Events (Slides)</a></li>
 	          	<li><a href="../../starter/Events.zip">Events (Code)</a></li>
@@ -523,7 +524,7 @@ def my_func(...):
   <img src="../../img/projects/breakout/breakoutCollision.png"></img>
 </center></p>
 <p>To get a list of objects that are overlapping the ball, you can use code as follows which calls the canvas function <code>canvas.coords(obj)</code>, returning the 4 corners of an object:</p>
-<pre><code># this graphics method gets the location of the ball as a list
+<pre><code># this graphics function gets the location of the ball as a list
 ball_coords = canvas.coords(ball)
 
 # the list has four elements:
@@ -537,7 +538,7 @@ colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 </code></pre>
 
 <p>If you get all overlapping objects in this rectangle, you will be returned a list. In that list will be the <code>ball</code> itself (since the ball overlaps too!), as well as any objects that the ball is currently colliding with. To test if a colliding object is the ball, you can simply check if the element is <code>==</code> to your ball variable.</p>
-<p>If the ball collides with the paddle, you need to bounce the ball so that it starts traveling up.  If it isn't the paddle, the only other thing it might be is a brick, since those are the only other objects in the world.  Once again, you need to cause a bounce in the vertical direction (flip the direction of the <code>change_y</code> variable), but you also need to take the brick away.  To do so, all you need to do is remove it from the screen by calling the <code>delete</code> method:</p>
+<p>If the ball collides with the paddle, you need to bounce the ball so that it starts traveling up.  If it isn't the paddle, the only other thing it might be is a brick, since those are the only other objects in the world.  Once again, you need to cause a bounce in the vertical direction (flip the direction of the <code>change_y</code> variable), but you also need to take the brick away.  To do so, all you need to do is remove it from the screen by calling the <code>delete</code> function:</p>
 <pre><code>canvas.delete(square)  # deletes the object called square
 </code></pre>
 

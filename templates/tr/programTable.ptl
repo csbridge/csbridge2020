@@ -330,7 +330,7 @@
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-						<h4>5. Gün: Grafikler ve Metotlar</h4></b>
+						<h4>5. Gün: Grafikler ve Functions</h4></b>
 			</tr>
 		</thead>
 		<tbody
@@ -372,7 +372,7 @@
       </tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/madMethods.jpg"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/madMethods.html">Mad Methods</a>
+				<td><a href="{{pathToRoot}}en/projects/funkyFunctions.html">Funky Functions</a>
           <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
 						<br><a href="{{pathToRoot}}teach/notes/dogYears.html">TA Solution</a>
@@ -681,14 +681,10 @@
 				<td><a href="{{pathToRoot}}en/projects/collectNewspaper.html">Collect Newspaper</a>
           <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-<<<<<<< Updated upstream
 						<br><a href="{{pathToRoot}}teach/notes/collectNewspaper.html">TA Solution</a>
-=======
-						<br><a href="{{pathToRoot}}tas/notes/collectNewspaper.html">TA Notes</a>
->>>>>>> Stashed changes
 					% end
 				</td>
-				<td>Metotlar</td>
+				<td>Functions</td>
 			</tr>
 
 			<tr>
@@ -696,11 +692,7 @@
 				<td><a href="{{pathToRoot}}en/projects/arches.html">Arches Karel</a>
           <br/><span class="label label-primary">Grup</span>
 					% if get('taMode', False):
-<<<<<<< Updated upstream
 						<br><a href="{{pathToRoot}}teach/notes/arches.html">TA Solution</a>
-=======
-						<br><a href="{{pathToRoot}}tas/notes/arches.html">TA Notes</a>
->>>>>>> Stashed changes
 					% end
 				</td>
 				<td>For Döngüleri</td>

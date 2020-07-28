@@ -22,4 +22,4 @@ Dünyanın her bir kısmının şemada göründüğü gibi olduğunu varsayabili
 - Onu almak,
 - Başlangıç noktasına geri dönmek.
 
-Program sadece birkaç satır olmasına rağmen problemi küçük parçalara ayırmaya değer, böylece pratik yapmış olursunuz. Çözümünüzde, listede görülen her bir adım için private bir metot yazın.
+Program sadece birkaç satır olmasına rağmen problemi küçük parçalara ayırmaya değer, böylece pratik yapmış olursunuz. Çözümünüzde, listede görülen her bir adım için bir metot yazın.

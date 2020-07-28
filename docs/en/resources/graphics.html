@@ -180,7 +180,7 @@
 
 				<!-- Day 5 -->
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
           		    <li class="visible-after" data-visible-after="2019071109">
@@ -191,7 +191,7 @@
 	          	    </li>
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="../../en/projects/madMethods.html">Mad Methods</a>
+	          	    	<a href="../../en/projects/funkyFunctions.html">Funky Functions</a>
 	          	    </li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
 	          	    	<a href="../../en/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -317,12 +317,13 @@
                 </ul>
               </li>
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
 	          	    <li><a href="../../en/projects/robotFace/index.html">Robot Face</a></li>
 	          	    <li><a href="../../en/projects/halfGreen/index.html">Half Green</a></li>
                   <!-- Used to be a main course component -->
-	          	    <li><a href="../../en/projects/average/index.html">Average Method</a></li>
+	          	    <li><a href="../../en/projects/average/index.html">Average Function</a></li>
+	          	    <li><a href="../../en/projects/divisible/index.html">Division Functions</a></li>
 	          	    <li><a href="../../en/projects/drawPeople/index.html">Draw People</a></li>
 	          	    <li><a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a></li>
                 </ul>
@@ -360,7 +361,7 @@
 	          	<li><a href="../../slides/Graphics.pdf">Graphics (Slides)</a></li>
 	          	<li><a href="../../starter/Graphics.zip">Graphics (Code)</a></li>
 	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
-	          	<li><a href="../../slides/Methods.pdf">Methods</a></li>
+	          	<li><a href="../../slides/Methods.pdf">Functions</a></li>
 	          	<li><a href="../../slides/NestedLoops.pdf">Nested Loops</a></li>
 	          	<li><a href="../../slides/Events.pdf">Events (Slides)</a></li>
 	          	<li><a href="../../starter/Events.zip">Events (Code)</a></li>
@@ -566,7 +567,7 @@ canvas.set_canvas_title(&quot;My Program&quot;)  # sets the text in the window t
 canvas.mainloop()
 </code></pre>
 
-<p>Below we provide a brief tour of some of the different shapes you can draw in a canvas as well as highlight a few of the options you have with regard to how those shapes look.  For a complete list of methods, check out the link at the top of this page to the full reference documentation.</p>
+<p>Below we provide a brief tour of some of the different shapes you can draw in a canvas as well as highlight a few of the options you have with regard to how those shapes look.  For a complete list of functions, check out the link at the top of this page to the full reference documentation.</p>
 <h2 id="drawing-lines">Drawing Lines</h2>
 <p>To draw lines on the canvas, use <code>create_line</code> and specify the coordinates for the <strong>start</strong> and <strong>end</strong> points of the line.  For example, the following command would draw a line from location (10, 20) to (100, 50) on the canvas:</p>
 <pre><code>canvas.create_line(10, 20, 100, 50)
@@ -694,14 +695,14 @@ print(canvas.get_top_y(oval))   # prints 10
 
 <p>Note that for something like an oval, the dimensions and left corner are from the bounding box that contains it.</p>
 <h2 id="updating-graphical-objects">Updating Graphical Objects</h2>
-<p>There are several helpful methods you can use to update the state of different graphical objects.</p>
+<p>There are several helpful functions you can use to update the state of different graphical objects.</p>
 <h4 id="moving-objects">Moving Objects</h4>
 <p>You can change the location of an object using <code>moveto</code>.  You specify a new coordinate which will be the upper-left corner of the bounding box for the object (e.g. bounding box for an oval, bounding box for a line, etc.).  Here's how we would move a rect to have upper-left corner at (25, 50):</p>
 <pre><code>rect = canvas.create_rectangle(100, 200, 300, 400)
 canvas.moveto(rect, 25, 50)
 </code></pre>
 
-<p>You can also change the location of an object by specifying <em>how much</em> you would like to move it by, instead of specifying the new location.  The <code>move</code> method lets you specify the change in <code>x</code> and the change in <code>y</code> for the object.  For example, here's how we would move a rect 5 pixels to the right, and 10 pixels down:</p>
+<p>You can also change the location of an object by specifying <em>how much</em> you would like to move it by, instead of specifying the new location.  The <code>move</code> function lets you specify the change in <code>x</code> and the change in <code>y</code> for the object.  For example, here's how we would move a rect 5 pixels to the right, and 10 pixels down:</p>
 <pre><code>rect = canvas.create_rectangle(100, 200, 300, 400)
 canvas.move(rect, 5, 10)
 </code></pre>

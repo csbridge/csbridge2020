@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Collect Newspaper</title>
+<title>CS Bridge  | Gazete Alma</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -72,8 +72,8 @@
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kaynaklar<b class="caret"></b></a>
 
             <ul class="dropdown-menu">
-	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Okuyucu</a></li>
-	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Okuyucu</a></li>
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/tr/intro.html">Karel Okuyucu</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/tr/intro/">Python Okuyucu</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../tr/resources/quick-python.html">Python Referansı</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../tr/resources/graphics.html">Grafik Referansı</a>
@@ -177,7 +177,7 @@
 	          	</li>
           		<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün Evening</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
-	          		<a href="../../tr/projects/madMethods.html">Mad Methods</a>
+	          		<a href="../../tr/projects/funkyFuncions.html">Funky Functions</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
 	          		<a href="../../tr/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -310,8 +310,9 @@
 				      <li class="divider visible-after" data-visible-after="2019071209" />
 				      <li class="dropdown-header visible-after" data-visible-after="2019071209">4. Gün</li>
 				      <li class="visible-after" data-visible-after="2019071209">
-				      	<a href="../../tr/projects/average.html">Ortalama Metodu</a>
+				      	<a href="../../tr/projects/average.html">Average Function</a>
 				      </li>	
+	          	<li><a href="../../tr/projects/divisible/index.html">Division Functions</a></li>
 				      <li class="visible-after" data-visible-after="2019071209">
 				      	<a href="../../tr/projects/drawPeople.html">İnsan Çizme</a>
 				      </li>	
@@ -386,7 +387,7 @@
 			
 	        <!-- Bonus button -->
 	        <ul class="nav navbar-nav">
-	            <li><a href="../../tr/old/bonus-index.html">Bonus</a></li>
+	            <li><a href="../../tr/bonus-index.html">Bonus</a></li>
 	        </ul>
 			
 	        <!-- Old/New button -->
@@ -444,34 +445,41 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Collect Newspaper
+		Gazete Alma
 	</h1>
 
 		<p>
-			Hazırlayan: Based on a handout by Eric Roberts
+			Hazırlayan: Eric Roberts&#039;ın bir ders notu temel alınmıştır.
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../tr/handouts/karel.html">Karel Reference</a><br/>
-Worked Example: <a href="../../tr/projects/stepUp.html">StepUp</a><br/>
-File: <code>newspaper_karel.py</code></p>
-<p>Your first task is to solve a simple story-problem in Karel's world.  Suppose that Karel has settled into its house, which is the square area in the center of the following diagram:</p>
+		<p>Ders Notları: <a href="../../en/resources/karel.html">Karel Reference</a><br/>
+Çözümlü Örnek: <a href="../../en/projects/stepUp.html">StepUp</a><br/>
+Dosya: <code>newspaper_karel.py</code></p>
+<p>İlk göreviniz Karel'ın dünyasında basit bir hikaye problemini çözmek. Varsayın ki, Karel evine, aşağıdaki şemanın merkezindeki kare alana, yerleşmiş olsun:</p>
 <p><center>
     <img class="psetImg" src="../../img/projects/newspaper/newspaper.png"><br />
 </center></p>
-<p>Karel starts off in the corner of its house as shown in the diagram. The problem Karel needs to solve is to collect the newspaper, represented (as all objects in Karel's world are) by a beeper, from outside the doorway and then to return to her initial position.</p>
-<p>You can assume that every part of the world looks just as it does in the diagram.  The house is exactly this size, the door is always in the position shown, and the beeper is just outside the door.  Thus, all you have to do is write the sequence of commands necessary to have Karel</p>
+<p>Karel şemada gösterildiği gibi evinin köşesinden harekete başlıyor. Karel'ın çözmesi gereken problem hemen kapının dışındaki (Karel'ın dünyasındaki tüm nesneler gibi) bir beeper tarafından temsil edilen gazeteyi almak ve onu başlangıç konumuna getirmek.</p>
+<p>Dünyanın her bir kısmının şemada göründüğü gibi olduğunu varsayabilirsiniz. Ev birebir gösterildiği büyüklükte, kapı her zaman gösterildiği konumda, ve beeper da kapının hemen dışında. Bu yüzden, tüm yapmanız gereken Karel'a şunları yaptırmak için gereken komut serisini yazmak:</p>
 <ol>
-<li>Move to the newspaper,</li>
-<li>Pick it up, and</li>
-<li>Return to its starting point.</li>
+<li>
+<p>Gazetenin yanına gitmek,</p>
+</li>
+<li>
+<p>Onu almak,</p>
+</li>
+<li>Başlangıç noktasına geri dönmek.</li>
 </ol>
-<p>Even though the program is only a few lines, it is still worth getting at least a little practice in decomposition.  In your solution, include a private method for each of the steps shown in the outline.</p>
+<p>Program sadece birkaç satır olmasına rağmen problemi küçük parçalara ayırmaya değer, böylece pratik yapmış olursunuz. Çözümünüzde, listede görülen her bir adım için bir metot yazın.</p>
 	</div>
 </div>
 
