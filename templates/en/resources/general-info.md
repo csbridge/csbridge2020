@@ -140,6 +140,15 @@ We want you to learn a lot in this course but we also really want you to have **
     This is specifically for your section. If you need to get in touch with your Section Leader, make a private post (to staff only) in this group. You can also post to the whole section if you want the other students in your section to see. For more general questions not related to your section, use the main CS Bridge Ed group instead.
 </ol>
 
+<center>
+<img
+ src="{{pathToRoot}}img/Ed_dashboard.png"
+ class="img-fluid mx-auto d-block"
+ alt="A screenshot of the Ed dashboard."
+ style="width: 80%;"
+/>
+</center>
+
 Here are some tips:
 
 - Search before you post
