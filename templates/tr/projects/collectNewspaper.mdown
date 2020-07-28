@@ -1,25 +1,25 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Collect Newspaper
-credit: Based on a handout by Eric Roberts
+title: Gazete Alma
+credit: Eric Roberts'ın bir ders notu temel alınmıştır.
+translation: Serhat Arslan, Ceren Kocaoğullar
 
-Handouts: [Karel Reference]({{pathToRoot}}tr/handouts/karel.html)<br/>
-Worked Example: [StepUp]({{pathToRoot}}tr/projects/stepUp.html)<br/>
-File: `newspaper_karel.py`
+Ders Notları: [Karel Reference]({{pathToRoot}}en/resources/karel.html)<br/>
+Çözümlü Örnek: [StepUp]({{pathToRoot}}en/projects/stepUp.html)<br/>
+Dosya: `newspaper_karel.py`
 
-Your first task is to solve a simple story-problem in Karel's world.  Suppose that Karel has settled into its house, which is the square area in the center of the following diagram:
+İlk göreviniz Karel'ın dünyasında basit bir hikaye problemini çözmek. Varsayın ki, Karel evine, aşağıdaki şemanın merkezindeki kare alana, yerleşmiş olsun:
 
 <center>
 	<img class="psetImg" src="{{pathToRoot}}img/projects/newspaper/newspaper.png">	
 </center>
 
-Karel starts off in the corner of its house as shown in the diagram. The problem Karel needs to solve is to collect the newspaper, represented (as all objects in Karel's world are) by a beeper, from outside the doorway and then to return to her initial position.
+Karel şemada gösterildiği gibi evinin köşesinden harekete başlıyor. Karel'ın çözmesi gereken problem hemen kapının dışındaki (Karel'ın dünyasındaki tüm nesneler gibi) bir beeper tarafından temsil edilen gazeteyi almak ve onu başlangıç konumuna getirmek.
 
-You can assume that every part of the world looks just as it does in the diagram.  The house is exactly this size, the door is always in the position shown, and the beeper is just outside the door.  Thus, all you have to do is write the sequence of commands necessary to have Karel
+Dünyanın her bir kısmının şemada göründüğü gibi olduğunu varsayabilirsiniz. Ev birebir gösterildiği büyüklükte, kapı her zaman gösterildiği konumda, ve beeper da kapının hemen dışında. Bu yüzden, tüm yapmanız gereken Karel'a şunları yaptırmak için gereken komut serisini yazmak:
 
-1. Move to the newspaper,
-+ Pick it up, and
-+ Return to its starting point.
+1. Gazetenin yanına gitmek,
 
+- Onu almak,
+- Başlangıç noktasına geri dönmek.
 
-Even though the program is only a few lines, it is still worth getting at least a little practice in decomposition.  In your solution, include a private method for each of the steps shown in the outline.
-
+Program sadece birkaç satır olmasına rağmen problemi küçük parçalara ayırmaya değer, böylece pratik yapmış olursunuz. Çözümünüzde, listede görülen her bir adım için private bir metot yazın.
