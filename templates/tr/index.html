@@ -1,34 +1,30 @@
 % rebase('templates/tr/template.ptl', title="Home")
 
-    <div class="page-header" style="backgroud-color:#cdbfe3">
-    	<div class="container">
-   			<div>
-	        	<div id="logo">
-					<img id="logoImg" src="{{pathToRoot}}img/logo.png"/>
-				</div>
-				<div id="headerText" style="padding-bottom:15px;">
-					<div class="h1" style="margin-top:0px;font-size:40px;">
-						Bilgisayar Bilimine Giriş
-					</div>
-					<div>
-						2020 Yaz
-					</div>
-					<div>
-						24 Haziran - 4 Temmuz, Koç Üniversitesi, Istanbul
-					</div>
-				</div>
-	          
-	        </div>
-		</div>
-	</div>
+<div class="page-header" style="backgroud-color: #cdbfe3;">
+  <div class="container">
+    <div>
+      <div id="logo">
+        <img id="logoImg" src="{{pathToRoot}}img/logo.png" />
+      </div>
+      <div id="headerText" style="padding-bottom: 15px;">
+        <div class="h1" style="margin-top: 0px; font-size: 40px;">
+          Bilgisayar Bilimine Giriş
+        </div>
+        <div>
+          2020 Yaz
+        </div>
+        <div>
+          4 - 20 Ağustos, Online
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-
-
-	<!-- Main Content -->
-	<div class="container">
-
-		<div class="section" id="information">
-		<br/>
+<!-- Main Content -->
+<div class="container">
+  <div class="section" id="information">
+    <br />
     <!--
 		<div class="alert alert-info">
       <b>Fill in the exit survey</b> after you finish your final project!!! The final survey can be found at <a href="https://tiny.cc/finish2019koc">tiny.cc/finish2019koc</a>.
@@ -37,13 +33,13 @@
       <p>Looking for life after CSBridge? Check out the <a href="{{pathToRoot}}en/handouts/whatsNext.html">What's Next</a> page!</p>
     </div>
     -->
-		</div>
+  </div>
 
-		<!--<div class="alert alert-success">
+  <!--<div class="alert alert-success">
       Gerekli tüm bağlantılara (Lab için giriş yapma, çalışmaları teslim etme) 'Formlar' sekmesi altından ulaşabilirsiniz.
 		</div>
     -->
-		<!--
+  <!--
 		<div class="alert alert-success">
 			<b> We want your feedback</b>. Fill in the class survey here: <a href="https://www.surveymonkey.com/r/VCVVD8N">https://www.surveymonkey.com/r/VCVVD8N</a>.
 		</div>
@@ -66,38 +62,100 @@
 		</div>
 		-->
 
+  <div>
+    <h2>
+      Bu Dersin Amacı
+    </h2>
+
+    <p>
+      Bu iki haftalık dersin amacı, size daha sonrasında kendi başınıza
+      öğrenmeye devam edebilecek seviyede programcılığın temellerini
+      öğretmektir. Dersler, Stanford, Koç Üniversitesi ve CTU'dan gelen bir grup
+      eğitmen tarafından verilecektir. Programcılığı Stanford Üniversitesi'nin
+      Bilgisayar Bilimine Giriş dersinde kullanılan materyeller üzerinden
+      öğreneceksiniz.
+    </p>
+  </div>
+</div>
+</hr>
+
+<div class="section" id="schedule">
+	<h2>Programlar</h2>
+  <!--
+	<div class="alert alert-info">
+	  Here are instructions for how to work on the programs below during labs: <a href="{{pathToRoot}}en/handouts/eclipse.html">click here</a>.
+	</div>
+  -->
+	%include templates/tr/programTable.ptl
+</div>
+
+<!-- Course Staff -->
+<div class="section" id="staff">
+	<h2>Öğretmenler</h2>
+	<%
+	# A list of the rows of staff members.
+	# Each row is a list of the staff members to display photos for,
+	# with each staff member being a (name, image file) tuple.  The
+	# image files are assumed to live in img/peeps/.
+	courseStaff = [
+		[
+		  ("Nick T.", "nickt.jpg"),
+		  ("Eliška", "eliska.jpg"),
+		  ("Ondra", "ondra.jpg"),
+		  ("Chris", "chris.jpg"),
+		  ("Julia", "juliaD.jpg"),
+		  ("Matyáš", "matyas.jpg")
+		],
+		[
+		  ("Emily", "emily.jpg"),
+		  ("Jaroslav", "jaroslav.jpg"),
+		  ("Radek", "radek.jpg"),
+		  ("Glenn", "glenn.jpg"),
+		  ("Zach", "zach.jpg"),
+		  ("Honza", "honza.jpg")
+		],
+		[
+		  ("Marek", "marek.jpg"),
+		  ("Nick M.", "nickm.jpg"),
+		  ("Asena", "asena.jpg")
+		]
+	]
+	%>
+
+	% for i in range(len(courseStaff)):
+	  	<div class="row">
+			% for staffMember in courseStaff[i]:
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="{{pathToRoot}}img/peeps/{{staffMember[1]}}" alt="profile picture">
+				  		<div class="caption">
+							<b>{{staffMember[0]}}</b>
+				  		</div>
+					</div>
+		  		</div>
+			% end
+	  	</div>
+	% end
+</div>
+
+<hr/>
+
+<!-- Müfredat Özeti -->
+<div class="section" id="playWithKarel">
+	<h2>Müfredat</h2>
+	<img src = "{{pathToRoot}}img/icons/curriculum.jpg" style="width:100%"></img>
+</div>
 
 
-		<div>
-			<h2>
-				Bu Dersin Amacı
-			</h2>
+<!--<div class="section" id="playWithKarel">
+	<h2>
+		Play With Karel
+	</h2>
 
-			<p>Bu iki haftalık dersin amacı, size daha sonrasında kendi başınıza öğrenmeye devam edebilecek seviyede programcılığın temellerini öğretmektir. Dersler, Stanford ve Koç Üniversitesi'nden gelen bir grup eğitmen tarafından verilecektir. Programcılığı Stanford Üniversitesi'nin Bilgisayar Bilimine Giriş dersinde kullanılan materyeller üzerinden öğreneceksiniz.</p>
+	<p>Meet Karel, The Java Robot that Stanford uses to introduce university students to programming. </p>
 
-		</div>
+	<p>Use Karel's commands to get her to move the beeper to the top of the ledge. Normally you will write your programs in an application called Eclipse, but to get you started we made a mini-eclipse for our website:
+	</p>
 
-
-		
-
-		<div>
-
-		<div class="section" id="schedule">
-			<h2>
-				Programlar
-			</h2>
-			%include templates/tr/programTable.ptl
-			<hr/>
-
-		</div>
-
-    % include('templates/parts/peeps.ptl', teachers="Öğretmenler")
-
-		<div class="section" id="playWithKarel">
-			<h2>
-				Müfredat
-			</h2>
-			<img src = "{{pathToRoot}}img/icons/curriculum.jpg" style="width:100%"></img>
-			<hr/>
-		</div>
-
+	%include templates/parts/playWithKarel.ptl
+</div>-->

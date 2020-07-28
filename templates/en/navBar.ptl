@@ -30,9 +30,7 @@
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="{{pathToRoot}}en/resources/general-info.html">General Info</a></li>
               <li><a href="{{pathToRoot}}en/resources/student-faq.html">[Student] Course FAQs</a></li>
-              <li><a href="{{pathToRoot}}en/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
               <li><a href="{{pathToRoot}}en/resources/section-info.html">Section Info</a></li>
-              <li><a href="{{pathToRoot}}en/resources/zoom-info.pdf">Zoom Guide</a></li>
               % # end Yosefa's part
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="{{pathToRoot}}en/resources/install.html">Install PyCharm</a></li>
@@ -345,7 +343,7 @@
 	        <!-- TA Link -->
 	        % if get('taMode', False):
 		        <ul class="nav navbar-nav navbar-right">
-		            <li><a href="{{pathToRoot}}tas">TA Page</a></li>
+		            <li><a href="{{pathToRoot}}teach">SL Page</a></li>
 		        </ul>
 		    % end
 

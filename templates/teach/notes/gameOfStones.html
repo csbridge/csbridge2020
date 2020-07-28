@@ -1,0 +1,137 @@
+% rebase('templates/teach/notes/template.ptl', problemTitle="Nimm")
+
+<p>
+	This is the main lab problem in the afternoon.  Students develop their own working "Nimm" game.  We recommend that students approach the program in 4 milestones.  Each milestone solution is provided below, along with notes about them.
+</p>
+
+<h3>Milestone 1</h3>
+<p>The first milestone challenges students to design a structure with a variable to store the number of stones remaining that is updated across iterations of the loop that asks the user how many stones to remove.  They must figure out how to create and update this variable, and what the loop condition should be.</p>
+<pre id="editor1" style="height:300px">public class Nimm extends ConsoleProgram {
+    
+    private static final int STARTING_STONES = 20;
+
+    public void run() {
+        int numStones = STARTING_STONES;
+        while (numStones > 0) {
+            println("There are " + numStones + " stones left");
+            int numToRemove = readInt("Would you like to remove 1 or 2 stones? ");
+            numStones = numStones - numToRemove;
+            println();
+        }
+        
+        println("Game over");
+    }
+
+}</pre>
+
+<h3>Milestone 2</h3>
+<p>Next, students add another variable outside of the loop that they must also update and print each time in the loop to keep track of the current player.</p>
+<pre id="editor2" style="height:500px">public class Nimm extends ConsoleProgram {
+    
+    private static final int STARTING_STONES = 20;
+
+    public void run() {
+        int numStones = STARTING_STONES;
+        int player = 1;     // new
+        
+        while (numStones > 0) {
+            println("There are " + numStones + " stones left");
+
+            // updated printed text
+            int numToRemove = readInt("Player " + player + " would you like to remove 1 or 2 stones? ");
+
+            numStones = numStones - numToRemove;
+            
+            // new if/else
+            if (player == 1) {
+                player = 2;
+            } else {
+                player = 1;
+            }
+
+            println();
+        }
+        
+        println("Game over");
+    }
+
+}</pre>
+
+<h3>Milestone 3</h3>
+<p>Next, students add a loop to reprompt the user if the input is invalid.  This is a common "reprompt until valid" pattern that students are challenged to develop, with a guide on the problem page for how a while loop can help.</p>
+<pre id="editor3" style="height:500px">public class Nimm extends ConsoleProgram {
+    
+    private static final int STARTING_STONES = 20;
+
+    public void run() {
+        int numStones = STARTING_STONES;
+        int player = 1;
+        
+        while (numStones > 0) {
+            println("There are " + numStones + " stones left");
+            int numToRemove = readInt("Player " + player + " would you like to remove 1 or 2 stones? ");
+
+            // New loop to handle invalid user input
+            while (numToRemove != 1 && numToRemove != 2) {
+                numToRemove = readInt("Please enter 1 or 2: ");
+            }
+            
+            numStones = numStones - numToRemove;
+            if (player == 1) {
+                player = 2;
+            } else {
+                player = 1;
+            }
+            println();
+        }
+        
+        println("Game over");
+    }
+
+}</pre>
+
+<h3>Milestone 4</h3>
+<p>Finally, when the loop terminates, students must detect which player won.  Since the last player to take a stone loses, the current player when the loop terminates is the winner, since they are the player that <i>would be</i> next.</p>
+<pre id="editor4" style="height:500px">public class Nimm extends ConsoleProgram {
+    
+    private static final int STARTING_STONES = 20;
+
+    public void run() {
+        int numStones = STARTING_STONES;
+        int player = 1;
+        
+        while (numStones > 0) {
+            println("There are " + numStones + " stones left");
+            int numToRemove = readInt("Player " + player + " would you like to remove 1 or 2 stones? ");
+            while (numToRemove != 1 && numToRemove != 2) {
+                numToRemove = readInt("Please enter 1 or 2: ");
+            }
+            
+            numStones = numStones - numToRemove;
+            if (player == 1) {
+                player = 2;
+            } else {
+                player = 1;
+            }
+            println();
+        }
+        
+        // updated print statement
+        println("Player " + player + " wins!");
+    }
+
+}</pre>
+
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    for (var i = 1; i <= 4; i++) {
+        var editor = ace.edit("editor" + i);
+        editor.setTheme('ace/theme/eclipse');
+        editor.getSession().setMode("ace/mode/java");
+        editor.setReadOnly(true);
+        editor.renderer.setShowGutter(false); 
+        /*editor.setTheme("ace/theme/eclipse");
+        editor.getSession().setMode("ace/mode/java");*/
+    }
+</script>

@@ -91,7 +91,7 @@ Break times in the afternoon are a great time to get students out of lab and do 
 
 
 ## Todos
-- [ ] Write up Day 1 project TA solutions (code is currently in `templates/tas/soln/todo.html` but needs to be split into `.html` files for each problem and have writeups done for each)
+- [ ] Write up Day 1 project TA solutions (code is currently in `templates/teach/soln/todo.html` but needs to be split into `.html` files for each problem and have writeups done for each)
 - [ ] Refactor bonus problems table in `templates/en/bonus-index.html` to match the main table style in `programTable.ptl` in that it is a single table using date variables at the top, and only includes `visible-after` for non-TA mode.
 - [ ] Include a TA version of the bonus table on the `/tas` page so TAs can see all bonus problems.  This should be a shared version of the table across `/tas` and `/bonus-index` so changes once are propagated everywhere.
 

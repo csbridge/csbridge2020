@@ -20,7 +20,7 @@ Here are some tips:
 
 Your program should also work for worlds of different sizes. For example if we run the EXACT same program on this slightly larger world, Karel should still be able to place stripes of beepers without crashing. This means we can't use a for loop. We don't know before hand how big the world is going to be!
 
-Try to get your program to work on worlds with an <b>odd</b> number of rows first. Then if you have time, edit your code to work on worlds with any number or rows, even or odd.
+Try to get your program to work on worlds with an **odd** number of rows first. Then if you have time, edit your code to work on worlds with any number or rows, even or odd.
 
 <center>
 	<img style="width:600px"  src="{{pathToRoot}}img/projects/stripeKarel/world2.png">	
