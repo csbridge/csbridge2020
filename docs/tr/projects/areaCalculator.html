@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Debris Sweeper</title>
+<title>CS Bridge  | Area Calculator</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -79,12 +79,15 @@
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li class="dropdown-header">Course information</li>
               <li><a href="../../en/resources/general-info.html">General Info</a></li>
               <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
               <li><a href="../../en/resources/section-info.html">Section Info</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
               <li><a href="../../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+              <li class="divider" />
+              <li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -424,140 +427,65 @@
 
 <div class="container">
 	
-	
-	<!-- Main Content -->
-	<div class="container">
+	<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
 
-		<!-- Header -->
-        <div id="pageHeader">
-            <h1>
-                Debris Sweeper (with Solution)
-            </h1>
-            <p>
-        Written by Chris Piech and Mystery CS106A people.
-        <br/>
- 
-        Handouts: 
-        <a href ="../../en/handouts/graphics.html">GraphicsReference</a>, 
-        <a href ="../../en/handouts/events.html">EventsReference</a>
- 
-        <br/>
-        Day5: <code>DebrisSweeper.java</code>
-            </p>
-
-        </div>
-        <hr/>
-
-        <div class="row">
-            <div class="col-md-12">
-                <p>
-                    The goal of this example is to write a program that fills the screen with a random collection of debris (GOvals) and then allows the user to click and remove debris pieces. This program lets you practice so many techniques that we learned in the first week of class. You will be using functions, for loops, graphics, random numbers, mouse listeners, and maybe even more!
-                </p>
-
-                <p>
-                    The first step is to make the debris. Create constants that set limits for how large the debris pieces can be and how many pieces the screen will contain. For every piece, create a new GOval with a random size, position, and color (within the limits you have set). Remember, this should work with any size screen. Perhaps you want to split this into a few functions to make your code easy to read!
-                </p>
-
-                <p>
-                    <center>
-                        <img style="width:500px" src="../../img/projects/debrisSweeper/demo.png">   
-                    </center>
-                </p>
-
-                <p>
-                    Next, we need to let users remove debris from the screen. Add a mouse listener and check if the user has clicked on an object. If they have, clean that debris up (remove it from the screen)!
-                </p>
-
-                <br/>
-
-              <p><b>BONUS!</b></p>
-
-                <p>
-                    If you want, as a bonus, you could add a way to check if all the debris is clear. When it is, tell the user congratulations and thank them for cleaning up the screen!
-                </p>
-
-                
-            </div>
-        </div>
-		
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Solution</h2>
+title - problem title
+credit - problem credit (optional)
+solution - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
 
 
-<pre id="editor" style="height:950px">
-/**
- * Class: DebrisSweeper
- * -----------------
- * Puts a random collection of debris (GOvals) on the screen
- * and then allows the user to click and remove the debris.
- */
-public class DebrisSweeper extends GraphicsProgram {
-    /* Minimum and maxmimum size of a piece of debris. */
-    private static final double MIN_DEBRIS_SIZE = 50;
-    private static final double MAX_DEBRIS_SIZE = 150;
-  
-    /* Number of pieces of debris. */
-    private static final double NUM_DEBRIS_PIECES = 100;
-  
-    public void run() {
-        createDebris();
-        addMouseListeners();
-    }
-  
-    public void mousePressed(MouseEvent e) {
-        GObject hitObject = getElementAt(e.getX(), e.getY());
-        if (hitObject != null) {
-          remove(hitObject);
-        }
-    }
-  
-    /* * * * * Code for adding debris to the screen. * * * * */
-  
-    /* Creates debris and strews it randomly on the canvas. */
-    private void createDebris() {
-        for (int i = 0; i < NUM_DEBRIS_PIECES; i++) {
-            createSingleDebrisPiece();
-        }
-    }
-  
-    /* Creates a single piece of debris and adds it to the
-     * canvas.
-     */
-    private void createSingleDebrisPiece() {
-        RandomGenerator rgen = RandomGenerator.getInstance();
-  
-        /* Compute the width and height first so that we know where we can
-         * safely put the object on screen.
-         */
-        double width  = rgen.nextDouble(MIN_DEBRIS_SIZE, MAX_DEBRIS_SIZE);
-        double height = rgen.nextDouble(MIN_DEBRIS_SIZE, MAX_DEBRIS_SIZE);
-        double x = rgen.nextDouble(0, getWidth() - width);
-        double y = rgen.nextDouble(0, getHeight() - height);
-  
-        /* Add an oval of that size and position to the screen. */
-        GOval oval = new GOval(x, y, width, height);
-        oval.setFilled(true);
-        oval.setColor(rgen.nextColor());
-        add(oval);
-    }
-}
-</pre>
-    
-<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-   editor.setTheme('ace/theme/eclipse');
-   editor.getSession().setMode("ace/mode/java");
-   editor.setReadOnly(true);
-   editor.setShowPrintMargin(false);
-   editor.renderer.setShowGutter(false); 
-    /*editor.setTheme("ace/theme/eclipse");
-    editor.getSession().setMode("ace/mode/java");*/
-</script>
-	
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		Area Calculator
+	</h1>
+
+		<p>
+			Credit: Lisa Yan
+		</p>
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>File: <code>area_calculator.py</code></p>
+<p>Write a program that reads in a float radius from the user and then prints out the associated
+area of the circle. If the radius is invalid (negative or zero), print an error. Here are three example runs of the program:</p>
+<pre><code>Please enter a circle radius: 5
+The area of your circle is: 78.53981633974483
+</code></pre>
+
+<pre><code>Please enter a circle radius: -3
+Error! You entered an invalid radius.
+</code></pre>
+
+<pre><code>Please enter a circle radius: 0
+Error! You entered an invalid radius.
+</code></pre>
+
+<h2 id="computing-the-area-of-a-circle">Computing the area of a circle</h2>
+<p>Given the radius <code>r</code> of a circle, the area of the circle is π times r-squared (see <a href="https://en.wikipedia.org/wiki/Area_of_a_circle">Wikipedia</a>).</p>
+<p><center>
+  <img style="width:500px;border: 1px solid #000000" src="../../img/projects/areaCalculator/area.png">
+</center></p>
+<p>Python has a pretty good approximation of the number π (pi) in the math library, which we've already included for you with the <code>import math</code> line above. Don't delete this line.</p>
+<p>To access π inside your <code>main()</code> function, you can call <code>math.pi</code>. For example, if we wanted to print out π to the console:</p>
+<pre><code>def main():
+    print(math.pi)
+</code></pre>
+
+<h2 id="keep-going">Keep going!</h2>
+<p>Once you finish this exercise, you can either start the 8-Ball section exercise or you can extend your program to compute the diameter of a circle.</p>
 	</div>
-	</div>
+</div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->

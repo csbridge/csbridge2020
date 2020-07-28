@@ -28,6 +28,7 @@
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="{{pathToRoot}}en/resources/graphics.html">Graphics Reference</a>
               % # begin Yosefa's part
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li class="dropdown-header">Course information</li>
               <li><a href="{{pathToRoot}}en/resources/general-info.html">General Info</a></li>
               <li><a href="{{pathToRoot}}en/resources/student-faq.html">[Student] Course FAQs</a></li>
               <li><a href="{{pathToRoot}}en/resources/section-info.html">Section Info</a></li>
@@ -35,6 +36,8 @@
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="{{pathToRoot}}en/resources/install.html">Install PyCharm</a></li>
               <li><a href="{{pathToRoot}}en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+              <li class="divider" />
+              <li><a href="{{pathToRoot}}en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="{{pathToRoot}}en/resources/jar.html">Exporting Projects as JARs</a>-->

@@ -492,11 +492,11 @@
 				<td>Variables</td>
 			</tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/subtractNum.jpg"></img></td>
-        <td><a href="{{pathToRoot}}en/projects/subtractNum.html">Subtract Numbers</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/runningSum.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/runningSum.html">Run, Sum, Run</a>
           <br/><span class="label label-success">Project</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}teach/notes/subtractNum.html">SL Solution (In Progress)</a>
+						<br><a href="{{pathToRoot}}teach/notes/runningSum.html">SL Solution (In Progress)</a>
 					% end
 				</td>
 				<td>Variables</td>
@@ -512,11 +512,11 @@
       <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day3PM.zip">here</a>]</h4></center></td>
       </tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/runningSum.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/runningSum.html">Run, Sum, Run</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/areaCalculator.png"></img></td>
+        <td><a href="{{pathToRoot}}en/projects/areaCalculator.html">Area Calculator</a>
           <br/><span class="label label-default">Quickstart</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}teach/notes/runningSum.html">SL Solution (In Progress)</a>
+						<br><a href="{{pathToRoot}}teach/notes/areaCalculator.html">SL Solution (In Progress)</a>
 					% end
 				</td>
 				<td>Variables</td>
