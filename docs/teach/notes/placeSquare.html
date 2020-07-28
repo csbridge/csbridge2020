@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Stripe Karel</title>
+<title>CS Bridge  | Place Square (SL)</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -391,6 +391,9 @@
 	        </ul>
 
 	        <!-- TA Link -->
+		        <ul class="nav navbar-nav navbar-right">
+		            <li><a href="../../teach">SL Page</a></li>
+		        </ul>
 
 	      </ul>
 
@@ -423,65 +426,32 @@
 
 <div class="container">
 	
-	<!--
-Template for rendering a project page, for use with Markdown specs.  Expects
-the following properties passed in:
+	
+<!-- Main Content -->
+<div class="container">
 
-title - problem title
-credit - problem credit (optional)
-solution - problem solution python filename (optional)
-base - the HTML body for this template
-filePath - the total path to the markdown file being rendered in this template
--->
+	<!-- Header -->
+	<div id="pageHeader">
+		<h1>
+            SL Notes: Place Square
+		</h1>
+    </div>
 
+	<hr/>
 
-<!-- Header -->
-<div id="pageHeader">
-	<h1>
-		Stripe Karel
-	</h1>
-
-		<p>
-			Credit: Written by Lisa Yan
-		</p>
-</div>
-<hr/>
-
-<!-- Problem description -->
-<div class="row">
-	<div class="col-xs-12">
-		<p>Handouts: <a href="../../en/resources/karel.html">Karel Reference</a><br/>
-Worked Examples: <a href="../../en/projects/invertBeeper/index.html">Invert Beeper</a><br/>
-File: <code>stripe_karel.py</code></p>
-<p>Your goal is to fill every odd row of Karel's world with beepers.
-For example, if you ran your program on the world on the left, it should produce the world on the right.</p>
-<p><center>
-    <img style="width:600px"  src="../../img/projects/stripeKarel/world1.png"><br />
-</center></p>
-<p>Here are some tips:</p>
-<ul>
-<li>You can assume that Karel starts on the bottom left of the world, facing east.</li>
-<li>Karel must place beepers on odd-numbered rows 1, 3, 5, and so on.</li>
-</ul>
-<p>Your program should also work for worlds of different sizes. For example if we run the EXACT same program on this slightly larger world, Karel should still be able to place stripes of beepers without crashing. This means we can't use a for loop. We don't know before hand how big the world is going to be!</p>
-<p>Try to get your program to work on worlds with an <strong>odd</strong> number of rows first. Then if you have time, edit your code to work on worlds with any number or rows, even or odd.</p>
-<p><center>
-    <img style="width:600px"  src="../../img/projects/stripeKarel/world2.png"><br />
-</center></p>
-<p>Note that Karel should still work on the below world as well:</p>
-<p><center>
-    <img style="width:600px"  src="../../img/projects/stripeKarel/world3.png"><br />
-</center></p>
-<h2 id="extension">Extension</h2>
-<p>Congrats on finishing this part! If you have time, try editing your code to work with an even number of rows, like below.</p>
-<p><center>
-    <img style="width:600px"  src="../../img/projects/stripeKarel/world_even.png"><br />
-</center></p>
+	<div class="row">
+		<div class="col-xs-12">
+            <p>This is the first activity for the morning.  It gives students practice with <code>while</code> loops along with <code>for</code> loops in Karel.  The challenge is that the program must work in a variety of worlds (any square world other than 1x1).  Generalized programs are important, but hard, so you may need to walk students through these concepts.  The hardest part is figuring out how to make multiple beeper lines one after the other.  When helping students with loop conditions, it can help to talk through what it is that may no longer be true once we want the loop to stop that is true when we want the loop to continue.  It's also worth highlighting when different types of loops are appropriate - e.g. we always know that we will be drawing 4 beeper lines, so a <code>for</code> loop is appropriate there.  But when drawing a single beeper line, we don't know how many beepers we will be putting down, so a <code>while</code> loop is appropriate there.</p>
+<p><strong>Milestone:</strong> draw a single beeper line across one side of the world.</p>	
+		</div>
 	</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<b>Solution available on Section Leader Ed Resources Page.</b>
+			</div>
+		</div>
 </div>
-
-<!-- Solution (if included) -->
-
 			
 	<!-- Footer -->
 <hr>

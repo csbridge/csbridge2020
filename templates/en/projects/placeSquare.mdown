@@ -15,15 +15,15 @@ Your goal is to place an outline of beepers in Karel's world, like below.
 You can assume:
 
 * Karel starts on the bottom left of the world, facing east.
-* Karel's world is rectangular or square.
+* Karel's world is square (the same number of rows and columns), and is not 1x1
 
-Your program should also work for worlds of different sizes, like below:
+Your program should also work for worlds of different sizes (other than 1x1), like below:
 
 <center>
 	<img style="width:600px"  src="{{pathToRoot}}img/projects/placeSquare/world2.png">	
 </center>
 
-## Writing code for humans
+## Writing Code That Is Easy To Read
 
 **Decomposition**. Remember, you can define functions with meaningful names and call those. Try looking at the [Beeper Line]({{pathToRoot}}en/projects/beeperLine/index.html) worked example as a starting point when writing a helper function, and see what needs to be modified.
 
@@ -36,11 +36,9 @@ for i in range(4):
 
 If not, try it out! It will help you organize your code better. We promise :-)
 
-## Bonus extension
+## Bonus Extension
 
-Great job so far! If you have extra time, first make sure that your program works on 1x1 worlds as well.
-
-Then, try to modify your program to make Karel draw the following square, where all beeper in the square outline do not border any walls. This means that 1x1 and 2x2 worlds will not have any beepers in them.
+Great job so far!  There is one more topic, called `if` statements, that you will learn soon.  Once you have learned that, you can optionally revisit this problem if you have extra time, and try to modify your program using everything you've learned, including `if` statements, to make Karel draw the following square, where all beepers in the square outline do not border any walls. This means that 1x1 and 2x2 worlds will not have any beepers in them.  The world could also be any size, including non-square.
 
 This part is purely optional.
 
