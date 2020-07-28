@@ -1,4 +1,4 @@
-template: templates/en/projects/projectTemplate.ptl
+template: templates/tr/projects/projectTemplate.ptl
 title: Gazete Alma
 credit: Eric Roberts'ın bir ders notu temel alınmıştır.
 translation: Serhat Arslan, Ceren Kocaoğullar

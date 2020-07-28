@@ -1,12 +1,13 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Mountain Karel
+title: Dağcı Karel
 credit: Chris Piech
+translation: Serhat Arslan, Ceren Kocaoğullar
 
-Handouts: [KarelReference]({{pathToRoot}}en/handouts/karel.html)<br/>
-File: `mountain_karel.py`
+Ders Notları: [KarelReference]({{pathToRoot}}en/resources/karel.html)<br/>
+Çözümlü Örnek: [UN Karel]({{pathToRoot}}en/projects/unKarel/index.html)<br/>
+Dosya: `mountain_karel.py`
 
-
-Karel dreams of climbing mountains. Teach her to get to the top of a mountain of any height. For example, for the following mountain:
+Karel dağlara tırmanmanın hayalini kuruyor. Ona herhangi bir yükseklikteki bir dağın zirvesine çıkmayı öğretin. Mesela, aşağıdaki dağın:
 
 <p>
 <center>
@@ -14,7 +15,7 @@ Karel dreams of climbing mountains. Teach her to get to the top of a mountain of
 </center>
 </p>
 
-Karel should climb to the top and leave a flag (a beeper) at the summit as shown bellow:
+Karel zirveye tırmanmalı ve aşağıda gösterildiği gibi bir bayrağı (bir beeper'ı) zirvede bırakmalı:
 
 <p>
 <center>
@@ -22,18 +23,19 @@ Karel should climb to the top and leave a flag (a beeper) at the summit as shown
 </center>
 </p>
 
-Unlike the previous problems, you are <b>not</b> guaranteed the height of the mountain before hand. The program you write should allow Karel to climb mountains of any size. For example the following three:
+Önceki problemlerin aksine, dağın yüksekliği önceden verilmiş <b>değil</b>. Yazdığınız program Karel'ın herhangi bir boyuttaki dağa tırmanmasına izin vermeli. Örneğin aşağıdaki üçüne:
+
 <p>
 <center>
     <img class="psetImg" style="width:100%"  src="{{pathToRoot}}img/projects/mountain/mountains.png">	
 </center>
 </p>
 
-You can assume:
+Şunları varsayabilirsiniz:
 
-* Karel starts on the bottom left of the world, facing east.
-* There is one space (on the left and the right) between the mountain and the world boundry.
-* The mountain is at least one square high.
-* The mountain consists of steps that are 1 space big up/down and left/right.<
+- Karel dünyanın sol altında yüzü doğuya dönük bir şekilde başlıyor.
+- Dağ ile dünya sınırları arasında (solda ve sağda) bir birim boşluk var.
+- Dağ en az bir kare yükseklikte.
+- Dağ, yukarı/aşağı ve sol/sağ olmak üzere 1 boşluk büyüklüğünde basamaklardan oluşur.
 
-Use while loops.
+While döngüleri kullanın.

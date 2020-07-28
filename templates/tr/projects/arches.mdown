@@ -1,4 +1,4 @@
-template: templates/en/projects/projectTemplate.ptl
+template: templates/tr/projects/projectTemplate.ptl
 title: Sütun Tamircisi
 credit: Lisa Yan
 translation: Serhat Arslan, Ceren Kocaoğullar
@@ -7,7 +7,7 @@ Ders Notları: [KarelReference]({{pathToRoot}}en/resources/karel.html)<br/>
 Çözümlü Örnek: [Place100]({{pathToRoot}}en/projects/place100.html)<br/>
 Birinci Gün: `arches_karel.py`
 
-Karel, Stanford Ana Avlusundaki 1989 Loma Prieta depreminde zarar gören sütunları inşa etmek için tutuldu, veya hayalgücünüzü kullanın ve başka bir yerdeki sütunları tamir ettiğinizi düşünün! Karel Charles Köprüsünün veya Efes'taki Artemis tapınağını tamir etmek için tutulmuş olabilir! Özellikle aşağıda belirtildiği şekilde, kendilerini destekleyen sütunlarda (tabii ki, beeper'lar tarafından temsil edilen) taşların eksik olduğu sütünlar var:
+Karel, Stanford Ana Avlusundaki 1989 Loma Prieta depreminde zarar gören sütunları inşa etmek için tutuldu, veya hayalgücünüzü kullanın ve başka bir yerdeki sütunları tamir ettiğinizi düşünün! Karel Charles Köprüsünün veya Efes'taki Artemis tapınağını tamir etmek için tutulmuş olabilir! Özellikle aşağıda belirtildiği şekilde, kendilerini destekleyen sütunlarda (tabii ki, beeper'lar tarafından temsil edilen) taşların eksik olduğu süt	ünlar var:
 
 <p>
 	<center>
