@@ -492,11 +492,11 @@
 				<td>Değişkenler</td>
 			</tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/subtractNum.jpg"></img></td>
-        <td><a href="{{pathToRoot}}en/projects/subtractNum.html">Subtract Numbers</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/runningSum.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/runningSum.html">Run, Sum, Run</a>
           <br/><span class="label label-success">Proje</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}teach/notes/subtractNum.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/runningSum.html">TA Solution</a>
 					% end
 				</td>
 				<td>Değişkenler</td>
@@ -512,11 +512,11 @@
       <td colspan="6"><center><h4>Akşam Projesi [<a href="{{pathToRoot}}starter/Day3PM.zip">burada</a>]</h4></center></td>
       </tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/runningSum.png"></img></td>
-				<td><a href="{{pathToRoot}}en/projects/runningSum.html">Run, Sum, Run</a>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/areaCalculator.jpg"></img></td>
+        <td><a href="{{pathToRoot}}en/projects/areaCalculator.html">Subtract Numbers</a>
           <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}teach/notes/runningSum.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/areaCalculator.html">TA Solution</a>
 					% end
 				</td>
 				<td>Değişkenler</td>

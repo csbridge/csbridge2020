@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Student Frequently Asked Questions (FAQs)</title>
+<title>CS Bridge  | Area Calculator</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -425,10 +425,12 @@
 <div class="container">
 	
 	<!--
-Template for rendering an FAQ page, for use with Markdown specs.  Expects
+Template for rendering a project page, for use with Markdown specs.  Expects
 the following properties passed in:
 
 title - problem title
+credit - problem credit (optional)
+solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
@@ -437,89 +439,50 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Student Frequently Asked Questions (FAQs)
+		Area Calculator
 	</h1>
 
+		<p>
+			Credit: Lisa Yan
+		</p>
 </div>
 <hr/>
 
-<!-- Text description -->
+<!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p><em>Do you have a question about CS Bridge? It might be answered here.</em></p>
-<!-- Table of Contents -->
+		<p>File: <code>area_calculator.py</code></p>
+<p>Write a program that reads in a float radius from the user and then prints out the associated
+area of the circle. If the radius is invalid (negative or zero), print an error. Here are three example runs of the program:</p>
+<pre><code>Please enter a circle radius: 5
+The area of your circle is: 78.53981633974483
+</code></pre>
 
-<div class="toc">
-<ul>
-<li><a href="#schedule">Schedule</a></li>
-<li><a href="#frequently-asked-questions">Frequently Asked Questions</a><ul>
-<li><a href="#is-this-course-graded">Is this course graded?</a></li>
-<li><a href="#will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</a></li>
-<li><a href="#how-can-i-make-the-most-of-this-course">How can I make the most of this course?</a></li>
-<li><a href="#i-have-a-general-question-about-the-course-where-do-i-ask-it">I have a general question about the course, where do I ask it?</a></li>
-<li><a href="#i-am-sick-or-i-have-a-time-conflict-and-i-cant-make-it-to-lecturetea-timesection-what-should-i-do">I am sick (or I have a time conflict) and I can't make it to Lecture/Tea Time/Section, what should I do?</a></li>
-<li><a href="#i-finished-the-assignment-early-what-do-i-do-with-the-extra-work-time">I finished the assignment early, what do I do with the extra work time?</a></li>
-<li><a href="#i-havent-finished-the-assignment-yet-but-its-time-to-submit-what-do-i-do">I haven't finished the assignment yet but it's time to submit, what do I do?</a></li>
-<li><a href="#i-am-lost-where-am-i-supposed-to-be">I am lost. Where am I supposed to be?</a></li>
-<li><a href="#can-i-re-watch-lecture">Can I re-watch lecture?</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<h2 id="schedule">Schedule</h2>
-<p>Click on one of the two buttons below to set the calendar to your timezone.</p>
-<div class="panel-group" id="accordion">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-        Timezone: Czech</a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse in">
-      <div class="panel-body">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FPrague&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;showTabs=1&amp;mode=WEEK" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-danger">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-        Timezone: Turkey</a>
-      </h4>
-    </div>
-    <div id="collapse2" class="panel-collapse collapse">
-      <div class="panel-body">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FIstanbul&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;mode=WEEK&amp;hl=tr" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-      </div>
-    </div>
-  </div>
-</div>
+<pre><code>Please enter a circle radius: -3
+Error! You entered an invalid radius.
+</code></pre>
 
-<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
-<h3 id="is-this-course-graded">Is this course graded?</h3>
-<p>No, you will not receive a grade. This is purely for the joy of learning! </p>
-<h3 id="will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</h3>
-<p>Yes, you will receive a certificate of completion after participating in the full course.  </p>
-<h3 id="how-can-i-make-the-most-of-this-course">How can I make the most of this course?</h3>
-<p>Have fun with it! Participate <strong>fully</strong> in all program activities. This means attending lectures, doing the project work, asking for help in office hours, asking your Section Leader for help, engaging with the community on Ed, and making new friends as you learn to code!</p>
-<h3 id="i-have-a-general-question-about-the-course-where-do-i-ask-it">I have a general question about the course, where do I ask it?</h3>
-<p>The CS Bridge Ed page is the perfect place to ask a general question. Check out the list of categories and select the one that best matches the topic you have a question about. We will keep an eye on Ed throughout the day and will try to answer questions as quickly as we can.</p>
-<h3 id="i-am-sick-or-i-have-a-time-conflict-and-i-cant-make-it-to-lecturetea-timesection-what-should-i-do">I am sick (or I have a time conflict) and I can't make it to Lecture/Tea Time/Section, what should I do?</h3>
-<p>We've designed the program with the expectation that you attend every activity in the schedule, but we know things happen (you might get sick or have to deal with a sudden family issue) so just send a private message in Ed to your Section Leader right away if you can't attend something. They can let you know the best way to make sure that you get the information you need so that you do not fall behind in the course.   </p>
-<h3 id="i-finished-the-assignment-early-what-do-i-do-with-the-extra-work-time">I finished the assignment early, what do I do with the extra work time?</h3>
-<p>Think about other fun things you can create based on what you've learned and then post fun things to the Ed page to show other students.</p>
-<h3 id="i-havent-finished-the-assignment-yet-but-its-time-to-submit-what-do-i-do">I haven't finished the assignment yet but it's time to submit, what do I do?</h3>
-<p>Submit as much code as you've been able to write. </p>
-<h3 id="i-am-lost-where-am-i-supposed-to-be">I am lost. Where am I supposed to be?</h3>
-<p>Check the schedule that is posted in your section page on Ed. That's where you'll find times, activities, and the necessary Zoom links. </p>
-<h3 id="can-i-re-watch-lecture">Can I re-watch lecture?</h3>
-<p>Yes! All lectures will be recorded and posted to the "Lectures" category on the CS Bridge Ed page.</p>
-<p><br/>
-<em>Have a question which wasn't covered here? Please post on <a href="https://us.edstem.org/courses/968">Ed</a>.</em></p>
+<pre><code>Please enter a circle radius: 0
+Error! You entered an invalid radius.
+</code></pre>
+
+<h2 id="computing-the-area-of-a-circle">Computing the area of a circle</h2>
+<p>Given the radius <code>r</code> of a circle, the area of the circle is π times r-squared (see <a href="https://en.wikipedia.org/wiki/Area_of_a_circle">Wikipedia</a>).</p>
+<p><center>
+  <img style="width:500px;border: 1px solid #000000" src="../../img/projects/areaCalculator/area.png">
+</center></p>
+<p>Python has a pretty good approximation of the number π (pi) in the math library, which we've already included for you with the <code>import math</code> line above. Don't delete this line.</p>
+<p>To access π inside your <code>main()</code> function, you can call <code>math.pi</code>. For example, if we wanted to print out π to the console:</p>
+<pre><code>def main():
+    print(math.pi)
+</code></pre>
+
+<h2 id="keep-going">Keep going!</h2>
+<p>Once you finish this exercise, you can either start the 8-Ball section exercise or you can extend your program to compute the diameter of a circle.</p>
 	</div>
 </div>
+
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->
