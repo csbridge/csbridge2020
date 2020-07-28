@@ -1,7 +1,7 @@
 template: templates/teach/notes/template.ptl
 problemtitle: Stripe Karel
 
-The problem below is the first problem for the evening.  The focus is on more complex control flow - approaching more complex Karel problems using loops and conditions.  In particular, it motivates using `while` loops, because we do not know the size of the world, and therefore do not know how long each stripe should be, nor how many stripes we will draw.
+The problem below is the first problem for the evening.  The focus is on more complex control flow, particularly `if` statements, which they just learned.  It also further motivates using `while` loops, because we do not know the size of the world, and therefore do not know how long each stripe should be, nor how many stripes we will draw.
 
 The spec encourages students to first think about the problem assuming only an odd number of rows.  With this assumption, the problem mimics a fencepost problem - we must draw `n` stripes, but move between stripes `n - 1` times.
 

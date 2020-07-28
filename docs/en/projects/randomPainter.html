@@ -454,14 +454,14 @@ filePath - the total path to the markdown file being rendered in this template
 Worked Examples: <a href="../../en/projects/invert/index.html">Invert</a>, <a href="../../en/projects/unkarel/index.html">UN Karel</a><br/>
 Day1: <code>random_painter_karel.py</code></p>
 <h2 id="problem">Problem</h2>
-<p>Karel is starting to find her world too black and white. Help her fill it with color.
+<p>Karel is starting to find its world too black and white. Help it fill it with color.
 <p>
 <center>
     <img style="width:100%"  src="../../img/projects/randomPainter/long.png"> <br />
 </center>
 </p></p>
 <h2 id="paint-and-random">Paint and Random</h2>
-<p>Karel has a few commands up her sleeve. She can paint the corner on which she is standing using the instruction</p>
+<p>Karel has a few commands up its sleeve. It can paint the corner on which it is standing using the instruction</p>
 <pre><code>paint_corner(color)
 </code></pre>
 
@@ -473,14 +473,14 @@ Day1: <code>random_painter_karel.py</code></p>
 <code><span style="color:blue">BLUE</span></code>, 
 <code><span style="color:magenta;">MAGENTA</span></code>,
 and so on. So you can call <code>paint_corner(RED)</code> to paint the square that Karel is standing on into a red square.</p>
-<p>We'll talk about randomness later, but for now know that we want to draw one of two colors, and we need to do so randomly in Karel. The new condition <code>random(0.5)</code> is a condition that is True half of the time, but in an unpredictable (random) way. Like flipping a coin, sometimes this condition is <code>True</code> and sometimes it is `False. For example, the code</p>
+<p>We'll talk about randomness later, but for now know that we want to draw one of two colors, and we need to do so randomly in Karel. The new condition <code>random(0.5)</code> is a condition that is True half of the time, but in an unpredictable (random) way. Like flipping a coin, sometimes this condition is <code>True</code> and sometimes it is <code>False</code>. For example, the code</p>
 <pre><code>if random(0.5):
     put_beeper()
 </code></pre>
 
-<p>will place a beeper (or will not) with equal probability. If you wanted, say, on average 75% of the time to have a beeper (instead of 50%), you could change the condition to `random(0.75).</p>
+<p>will place a beeper (or will not) with equal probability. If you wanted, say, on average 75% of the time to have a beeper (instead of 50%), you could change the condition to <code>random(0.75).</code></p>
 <h2 id="painter">Painter</h2>
-<p>Use these new abilities to have karel randomly paint each corner of a world one of two colors. You can chose any two colors you would like; we chose green and blue.</p>
+<p>Use these new abilities to have Karel randomly paint each corner of a world one of two colors. You can chose any two colors you would like; we chose green and blue.</p>
 <p>Below are three executions of the same program that randomly paints any sized world green and blue executed on a 10x10 world. Note that because of the random condition, the pattern of green and blue is different on each run!</p>
 <p>
     <center>
