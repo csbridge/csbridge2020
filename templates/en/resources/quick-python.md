@@ -89,5 +89,5 @@ number = random.choice(numbers)   # picks a random element from numbers
 
 To randomly pick a color, if you have a `canvas` variable:
 ```
-color = random.choice(canvas.COLORS)
+canvas.get_random_color()
 ```

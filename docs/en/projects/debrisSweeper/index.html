@@ -79,6 +79,7 @@
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../../en/resources/quick-python.html">Python Reference</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../../en/resources/graphics.html">Graphics Reference</a>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li class="dropdown-header">Course information</li>
               <li><a href="../../../en/resources/general-info.html">General Info</a></li>
               <li><a href="../../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
               <li><a href="../../../en/resources/section-info.html">Section Info</a></li>
@@ -451,13 +452,22 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>The goal of this example is to write a program that fills the screen with a random collection of debris (GOvals) and then allows the user to click and remove debris pieces. This program lets you practice so many techniques that we learned in the first week of class. You will be using functions, for loops, graphics, random numbers, mouse listeners, and maybe even more!</p>
-<p>The first step is to make the debris. Create constants that set limits for how large the debris pieces can be and how many pieces the screen will contain. For every piece, create a new GOval with a random size, position, and color (within the limits you have set). Remember, this should work with any size screen. Perhaps you want to split this into a few functions to make your code easy to read!</p>
+		<p>The goal of this example is to write a program that fills the screen with a random collection of debris (ovals) and then allows the user to click and remove debris pieces. This program lets you practice so many techniques that we learned in the first week of class. You will be using functions, for loops, graphics, random numbers, mouse listeners, and maybe even more!</p>
+<p>The first step is to make the debris. Create constants that set limits for how large the debris pieces can be and how many pieces the screen will contain. For every piece, create a new oval with a random size, position, and color (within the limits you have set). Remember, this should work with any size screen. Perhaps you want to split this into a few functions to make your code easy to read!</p>
 <p><center>
 <img style="width:500px" src="../../../img/projects/debrisSweeper/demo.png"> <br />
 </center></p>
-<p>Next, we need to let users remove debris from the screen. Add a mouse listener and check if the user has clicked on an object. If they have, clean that debris up (remove it from the screen)!</p>
-<h4 id="bonus">Bonus!</h4>
+<p>Next, we need to let users remove debris from the screen. Add an infinite loop and check if the user has clicked on an object. If they have, clean that debris up (remove it from the screen)!</p>
+<h2 id="getting-a-clicked-object">Getting a clicked object</h2>
+<p>The canvas function <code>canvas.find_closest(x, y)</code> will get the object that is closest to the provided <code>(x, y)</code> argument. If there is no object, it will return <code>None</code>. To perform some actions on an object (if it exists), you could write something like below:</p>
+<pre><code>object = canvas.find_closest(x, y)    # x and y are some coordinates
+if object is not None:
+    print(&quot;Object found at (&quot; + str(x) + &quot;, &quot; + str(y) + &quot;)&quot;)
+else:
+    print(&quot;Object not found&quot;)
+</code></pre>
+
+<h2 id="bonus">Bonus!</h2>
 <p>If you want, as a bonus, you could add a way to check if all the debris is clear. When it is, tell the user congratulations and thank them for cleaning up the screen!</p>
 	</div>
 </div>
@@ -513,7 +523,7 @@ def create_single_debris_piece(canvas):
     y = random.uniform(0, canvas.get_canvas_height() - height)
 
     piece = canvas.create_oval(x, y, x + width, y + height)
-    canvas.set_color(piece, random.choice(canvas.COLORS))
+    canvas.set_color(canvas.get_random_color())
 
 
 def remove_debris(canvas, x, y):
