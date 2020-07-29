@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Programming is Awesome</title>
+<title>CS Bridge  | Programlamak Bir Harika</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -86,6 +86,8 @@
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="../../tr/resources/install.html">PyCharm Kurulumu</a></li>
               <li><a href="../../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
+              <li class="divider" />
+              <li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../tr/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -438,46 +440,48 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Programming is Awesome
+		Programlamak Bir Harika
 	</h1>
 
 		<p>
-			Hazırlayan: Chris Piech and Eric Roberts
+			Hazırlayanlar: Chris Piech ve Eric Roberts
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Gül Sena Altıntaş
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../en/handouts/graphics.html">Graphics Reference</a><br/></p>
-<p>The point of this program is to get you to create your first graphics program. You should draw three rectangles (one red, one blue and one yellow) and in the center of the screen write "Programming is Awesome." You can make your rectangles of any size and put them in any position--as long as they are visible. Here is what our program looked like.</p>
+		<p>Bu programın amacı sizin ilk grafik programınızı oluşturmanızı sağlamak. Biri kırmızı, biri mavi ve biri sarı olmak üzere üç dikdörtgen çizmelisiniz ve ekranın merkezine "Programming is Awesome." ("Programlamak Bir Harika.") yazmalısınız. Dikdörtgenlerinizi herhangi bir boyutta yapabilirsiniz ve görülebilir olduğu sürece ekranda istediğiniz yere yerleştirebilirsiniz. Bizim programımızın görünüşü şu şekilde:</p>
 <p><center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/programmingIsAwesome/demo.png">
 </center></p>
-<h2 id="milestone-1-draw-rectangles">Milestone 1: Draw Rectangles</h2>
-<p>Very simple geometric art sometimes sells for huge amounts of money. For example, this painting, Composition II by Piet Mondrian, sold for $40 million:</p>
+<h2 id="asama-1-dikdortgenler-cizin">Aşama 1: Dikdörtgenler Çizin</h2>
+<p>Geometri kullanan basit sanat eseleri bazen çok fazla paraya satılır. Örneğin, bu tablo, Piet Mondrian'ın Composition II adlı eseri, 40 milyon dolara satıldı:</p>
 <p><center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/programmingIsAwesome//mondrian.jpg">
 </center></p>
-<p>Your first task is to add three rectangles, one red, one blue, one yellow. You don't have to create the image above. You can put your rectangles anywhere on the screen that you want. If you sell your picture for millions of dollars... remember your teachers :). If you feel like adding more rectangles, thats cool. Just make sure to finish milestone #2 first.</p>
-<h2 id="milestone-2-centered-text">Milestone 2: Centered Text</h2>
-<p>Create and add some text in the center of the screen. You can get the width and height of the screen with the following commands using your <code>canvas</code> variable:</p>
+<p>İlk göreviniz biri kırmızı, biri mavi, biri sarı üç dikdötgen eklemek. Yukarıdaki resmi oluşturmak zorunda değilsiniz. Dikdörtgenlerinizi ekranda istediğiniz herhangi bir yere koyabilirsiniz. Eğer resimleriniz milyonlarca dolara satılırsa... öğretmenlerinizi unutmayın :). Daha çok dikdörtgen eklemeye ihtiyaç duyuyorsanz, bu harika. Sadece önce aşama #2'yi bitirdiğinize emin olun.</p>
+<h2 id="asama-2-ortalanms-metin">Aşama 2: Ortalanmış Metin</h2>
+<p>Bir metin yaratın ve ekranın merkezine ekleyin. Ekranın genişliğini ve yüksekliğini <code>canvas</code> değişkeninizi kullanarak şu komutlarla elde edebilirsiniz:</p>
 <pre><code>canvas.get_canvas_width()
 canvas.get_canvas_height()
 </code></pre>
 
-<p>You can create some text on the screen using <code>create_text</code>:</p>
+<p><code>create_text</code> fonksiyonunu kullanarak metin üretebilirsiniz:</p>
 <pre><code>label = canvas.create_text(x, y, text)
 </code></pre>
 
-<p>The x and y coordinates you provide will be set to be the <em>center</em> of the drawn text.</p>
-<p>If you want your text to look more snazzy, you can change its font using your <code>canvas</code> variable:</p>
+<p>Fonksiyona girdiğiniz x ve y koordinatları çizilen metinin <em>merkezi</em> olarak ayarlanacak.</p>
+<p>Metninizin daha havalı görünmesini istiyorsanız, <code>canvas</code> değişkeninizi kullanarak yazı tipini değiştirebilirsiniz:</p>
 <pre><code>canvas.set_font(label, &quot;Courier&quot;, 50)
 </code></pre>
 
-<p>That's all! If you finish early, feel free to add to your picture. If you like ovals... you can add ovals too.</p>
+<p>Hepsi bu kadar! Eğer erken bitirirseniz, resminize istediğinizi eklemekte özgürsünüz. Elipsleri seviyorsanız... onları da ekleyebilirsiniz.</p>
 	</div>
 </div>
 

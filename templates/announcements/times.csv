@@ -1,0 +1,6 @@
+datetime_start,datetime_end,alert_type,category,location
+20200728 17:32,20200728 17:37,alert-success,lecture-am.ptl
+20200728 17:32,20200728 17:37,alert-info,lecture-am.ptl
+20200728 17:32,20200729 17:37,alert-info,lecture-am.ptl
+20200728 17:32,20200729 17:37,alert-info,nothing.ptl
+20200728 17:32,20200728 17:37,alert-warning,lecture-am.ptl

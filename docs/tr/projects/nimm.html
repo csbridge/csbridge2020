@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Ancient Game of Nimm</title>
+<title>CS Bridge  | Antik Nimm Oyunu</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -86,6 +86,8 @@
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="../../tr/resources/install.html">PyCharm Kurulumu</a></li>
               <li><a href="../../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
+              <li class="divider" />
+              <li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../tr/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -438,13 +440,16 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Ancient Game of Nimm
+		Antik Nimm Oyunu
 	</h1>
 
 		<p>
 			Hazırlayan: Danielle Kain and Chris Piech
 		</p>
 
+		<p>
+			Çeviren: Gül Sena Altıntaş
+		</p>
 </div>
 <hr/>
 
@@ -456,104 +461,104 @@ filePath - the total path to the markdown file being rendered in this template
 <a href="../../tr/projects/fibb.html">Fibbonacci</a>
 <br/>
 File: <code>nimm.py</code></p>
-<p>Nimm is an ancient game of strategy that is named after the old German word for "take." It is also called Tiouk Tiouk in West Africa and Tsynshidzi in China. Players alternate taking stones until there are zero left. The game of Nimm goes as follows:</p>
+<p>Nimm "almak" anlamına gelen eski bir Almanca kelimenin ardından isimlendirilmiş antik bir strateji oyunudur. Batı Afrika'da <em>Tiouk Tiouk</em> ve Çin'de <em>Tsynshidzi</em> olarak da adlandırılır. Oyuncular ortada hiç taş kalmayana kadar sırayla ortadan taş alırlar. Nimm oyunu şu şekilde ilerler:</p>
 <ol>
-<li>The game starts with a pile of 20 stones between the players</li>
-<li>The two players alternate turns</li>
-<li>On a given turn, a player may take either 1 or 2 stone from the center pile</li>
-<li>The two players continue until the center pile has run out of stones.</li>
+<li>Oyun ortada 20 taşla başlar</li>
+<li>İki oyuncu sırayla hamle yapar</li>
+<li>Belirli bir turda, bir oyuncu ortadaki taşlardan 1 ya da 2 tane alabilir</li>
+<li>Oyuncular ortadaki taşlar bitene kadar devam eder</li>
 </ol>
-<p>The last player to take a stone loses. Here is sample output from an example execution:</p>
-<pre><code>There are 20 stones left
-Player 1 would you like to remove 1 or 2 stones? 2
+<p>Ortadan son taş alan oyuncu oyunu kaybeder. Aşağıda örnek bir oyunun işleyişini görebilirsiniz:</p>
+<pre><code>Ortada 20 taş kaldı
+Oyuncu 1, ortadan 1 mi 2 taş mı almak istersiniz? 2
 
-There are 18 stones left
-Player 2 would you like to remove 1 or 2 stones? 2
+Ortada 18 taş kaldı
+Oyuncu 2, ortadan 1 mi 2 taş mı almak istersiniz? 2
 
-There are 16 stones left
-Player 1 would you like to remove 1 or 2 stones? 1
+Ortada 16 taş kaldı
+Oyuncu 1, ortadan 1 mi 2 taş mı almak istersiniz? 1
 
-There are 15 stones left
-Player 2 would you like to remove 1 or 2 stones? 2
+Ortada 15 taş kaldı
+Oyuncu 2, ortadan 1 mi 2 taş mı almak istersiniz? 2
 
-There are 13 stones left
-Player 1 would you like to remove 1 or 2 stones? 2
+Ortada 13 taş kaldı
+Oyuncu 1, ortadan 1 mi 2 taş mı almak istersiniz? 2
 
-There are 11 stones left
-Player 2 would you like to remove 1 or 2 stones? 1
+Ortada 11 taş kaldı
+Oyuncu 2, ortadan 1 mi 2 taş mı almak istersiniz? 1
 
-There are 10 stones left
-Player 1 would you like to remove 1 or 2 stones? 2
+Ortada 10 taş kaldı
+Oyuncu 1, ortadan 1 mi 2 taş mı almak istersiniz? 2
 
-There are 8 stones left
-Player 2 would you like to remove 1 or 2 stones? -1
+Ortada 8 taş kaldı
+Oyuncu 2, ortadan 1 mi 2 taş mı almak istersiniz? -1
 Please enter 1 or 2: 2
 
-There are 6 stones left
-Player 1 would you like to remove 1 or 2 stones? 2
+Ortada 6 taş kaldı
+Oyuncu 1, ortadan 1 mi 2 taş mı almak istersiniz? 2
 
-There are 4 stones left
-Player 2 would you like to remove 1 or 2 stones? 2
+Ortada 4 taş kaldı
+Oyuncu 2, ortadan 1 mi 2 taş mı almak istersiniz? 2
 
-There are 2 stones left
-Player 1 would you like to remove 1 or 2 stones? 1
+Ortada 2 taş kaldı
+Oyuncu 1, ortadan 1 mi 2 taş mı almak istersiniz? 1
 
-There are 1 stones left
-Player 2 would you like to remove 1 or 2 stones? 1
+Ortada 1 taş kaldı
+Oyuncu 2, ortadan 1 mi 2 taş mı almak istersiniz? 1
 
-Player 1 wins!
+Oyuncu 1, kazandı!
 </code></pre>
 
-<p>Write a program to play Nimm. To make your life easier we have broken the problem down into smaller milestones. You have a lot of time for this program. Take it slowly, piece by piece.</p>
-<h2 id="milestone-1">Milestone 1</h2>
-<p>Start with 20 stones. Repeat the process of removing stones and printing out how many stones are left until there are zero. Don't worry about whose turn it is. Don't worry about making sure only one or two stones are removed. Use the function <code>input(msg)</code> which prints <code>msg</code> and waits for the user to enter something.</p>
-<pre><code>There are 20 stones left
-Would you like to remove 1 or 2 stones? 2
+<p>Nimm oynamak için bir program yazın. İşinizi kolaylaştırmak için problemi daha küçük kilometre taşlarına ayırdık. Bu problemi çözmek için çok zamanınız var. Probleme yavaşça, parça parça yaklaşmaya çalışın.</p>
+<h2 id="1-kilometre-tas"><span>1.</span> Kilometre Taşı</h2>
+<p>20 taşla başlayın. Ortadan taş alma işlemini ve ortada kalan toplam taş sayısını hiç taş kalmayana kadar tekrarlayın. Hangi oyuncunun sırası olduğuyla ilgili endişelenmeyin. Bu aşamada ortadan bir ya da iki taş alındığını kontrol etmenize de gerek yok. <code>input(mesaj)</code>fonksiyonunu kullanın, unutmayın bu fonksiyon <code>mesaj</code>ı yazdırıp kullanıcının konsola bir şey girmesini bekler.</p>
+<pre><code>Ortada 20 taş kaldı
+Ortadan 1 mi 2 taş mı almak istersiniz? 2
 
-There are 18 stones left
-Would you like to remove 1 or 2 stones? 17
+Ortada 18 taş kaldı
+Ortadan 1 mi 2 taş mı almak istersiniz? 17
 
-There are 1 stones left
-Would you like to remove 1 or 2 stones? 3
+Ortada 1 taş kaldı
+Ortadan 1 mi 2 taş mı almak istersiniz? 3
 
-Game over
+Oyunu kaybettiniz
 </code></pre>
 
-<h2 id="milestone-2">Milestone 2</h2>
-<p>Create an integer variable to keep track of whose turn it is (remember there are two players). Tell the user whose turn it is. Each time someone picks up stones, change the player number.</p>
-<pre><code>There are 20 stones left
-Player 1 would you like to remove 1 or 2 stones? 1
+<h2 id="2-kilometre-tas"><span>2.</span> Kilometre Taşı</h2>
+<p>Hangi oyuncunun sırası olduğunu takip etmek için bir integer (tamsayı) değişkeni oluşturun (unutmayın, toplamda iki oyuncu var). Kullanıcıya hangi oyuncunun sırası olduğunu söyleyin. Ortadan taş alındığında kullanıcı sayısını değiştirin.</p>
+<pre><code>Ortada 20 taş kaldı
+Oyuncu 1, ortadan 1 mi 2 taş mı almak istersiniz? 1
 
-There are 19 stones left
-Player 2 would you like to remove 1 or 2 stones? 1
+Ortada 19 taş kaldı
+Oyuncu 2, ortadan 1 mi 2 taş mı almak istersiniz? 1
 
-There are 18 stones left
-Player 1 would you like to remove 1 or 2 stones? 17
+Ortada 18 taş kaldı
+Oyuncu 1, ortadan 1 mi 2 taş mı almak istersiniz? 17
 
-There are 1 stones left
-Player 2 would you like to remove 1 or 2 stones? 1
+Ortada 1 taş kaldı
+Oyuncu 2, ortadan 1 mi 2 taş mı almak istersiniz? 1
 
-Game over
+Oyunu kaybettiniz
 </code></pre>
 
-<h2 id="milestone-3">Milestone 3</h2>
-<p>Make sure that each turn only one or two stones are removed. After you read a number of stones to remove from a user (their input), you can use the following pattern to check if it was valid and keep asking until it is valid.</p>
-<pre><code>while input is invalid:
-   input = int(input(&quot;Please enter 1 or 2: &quot;))
+<h2 id="3-kilometre-tas"><span>3.</span> Kilometre Taşı</h2>
+<p>Her turda sadece bir ya da iki taşın alındığından emin olun. Kullanıcıdan kaç taş almak istediklerini (kullanıcı girdisi) okuduktan sonra taş sayısının geçerli olup olmadığını kontrol etmek ve kullanıcı geçerli bir değer girene kadar sormaya devam etmek için şu şekilde bir yapı kullanabilirsiniz:</p>
+<pre><code>while kullanici_girdisi gecersizken:
+   input = int(input(&quot;Lütfen 1 ya da 2 girin: &quot;))
 </code></pre>
 
-<h2 id="milestone-4">Milestone 4</h2>
-<p>Announce the winner.</p>
-<h2 id="extensions">Extensions</h2>
-<p>Can you write an AI opponent? You can start with a dummy AI that always plays a random number. Then try to make one that plays intelligently...</p>
-<p>Some other extension ideas:</p>
+<h2 id="4-kilometre-tas"><span>4.</span> Kilometre Taşı</h2>
+<p>Kazanan oyuncuyu ilan edin.</p>
+<h2 id="ilaveler">İlaveler</h2>
+<p>Bir AI (Yapay Zeka) rakibi yazabilir misiniz? Her turda rastgele bir sayı oynayan bir AI ile başlayıp daha sonra daha stratejik hamleler yapan bir AI geliştirebilirsiniz...</p>
+<p>Başka ilave edilebilecek fikirler:</p>
 <ul>
-<li>Make sure that if there is only one stone left, the last player may only remove one stone</li>
-<li>Give the user the option for the winner to be the player that doesn’t take the last stone, or the player that does take the last stone.</li>
-<li>Expand the game to let players take 1, 2, or 3, stones per turn.</li>
-<li>Divisible by 3 rule: if the number of stones remaining at the end of a player’s turn is divisible by 3, they must go again.</li>
-<li>Give the user the option to play against the computer and design a process for the computer to choose how many stone to remove.</li>
-<li>Come up with your own extension!</li>
+<li>Eğer ortada bir taş kaldıysa, sırası gelen oyuncunun ortadan sadece bir taş alabildiğini kontrol edin.</li>
+<li>Oyuncuya kazananın ortadan son taşı alan ya da almayan oyuncu olma opsiyonunu sunarak oyunun kurallarını değiştirebilmesini sağlayın.</li>
+<li>Oyunu oyuncuların her turde 1, 2 ya da 3 taş almalarını destekleyecek şekilde genişletin.</li>
+<li>3'e bölünebilme kuralı: eğer oyuncunun sırası geçmeden önce ortada kalan taş sayısı 3'e bölünebilirse, tekrar oynamalarını sağlayın.</li>
+<li>Kullanıcıya bilgisayara karşı oynama opsiyonu sunun ve bilgisayarın ortadan kaç taş alması gerektiğine karar veren bir algoritma tasarlayın.</li>
+<li>Ya da kendi fikirlerinizi deneyerek projenin kapsamını genişletin!</li>
 </ul>
 	</div>
 </div>

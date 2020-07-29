@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Optical Illusion</title>
+<title>CS Bridge  | Optik İllüzyon</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -86,6 +86,8 @@
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="../../tr/resources/install.html">PyCharm Kurulumu</a></li>
               <li><a href="../../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
+              <li class="divider" />
+              <li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../tr/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -438,46 +440,49 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Optical Illusion
+		Optik İllüzyon
 	</h1>
 
 		<p>
-			Hazırlayan: Based on an idea by Steve Cooper. Written by Chris Piech.
+			Hazırlayan: Chris Piech (Steve Cooper&#039;ın bir fikri üzerine oluşturulmuştur)
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan ve Ahmet Uysal
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../en/handouts/graphics.html">Graphics Reference</a><br/>
-File: <code>illusion1.py</code></p>
-<p>Sometimes repeating patterns can cause our eyes to see things that aren't there. Look at the picture below. Can you see little gray squares in the intersections of the white lines? Write a GraphicsProgram that create the optical illusion:</p>
+		<p>Ders Notları: <a href="../../tr/resources/graphics.html">Grafik Referansı</a><br/>
+Dosya: <code>illusion1.py</code></p>
+<p>Bazen örüntülerin tekrar etmesi, gözlerimizin olmayan şeyleri görmesine yol açar. Aşağıdaki resme bakın. Beyaz çizgilerin kesişimlerindeki küçük gri kareleri görebiliyor musunuz? Optik illüzyon yaratan bir GraphicsProgram yazın:</p>
 <p><center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/illusion/illusion1.png">
 </center></p>
-<h1 id="constants">Constants</h1>
-<p>You may notice that the starter code for this project has the lines:</p>
+<h1 id="sabitler">Sabitler</h1>
+<p>Bu projenin başlangıç kodunda aşağıdaki satırların varlığı dikkatinizi çekmiş olabilir:</p>
 <pre><code>SIZE = 100
 GAP = 10
 </code></pre>
 
-<p>which are written outside the main() method. These lines define constants: variables whose values never change. Since they are defined outside all methods, you can read their values at any point in the program. Though you could write this optical illusion using the numbers 100 and 10 directly wherever you need them, using constants makes your program much easier to read.</p>
-<h2 id="double-for-loop">Double for loop</h2>
-<p>This problem requires using a for-loop inside a for-loop. Remember to use a different iterator variable for the inner loop. For example, if your outer loop is of the form:</p>
+<p>Bu satırlar <code>main()</code> fonksiyonunun dışında yazılmışlar ve değişkenler (variables) tamamen büyük harflerle isimlendirilmiş. Bu satırlar sabitleri, yani değerleri hiç değişmeyen değişkenleri, tanımlar. Bu değişkenler tüm fonksiyonların dışında tanımlanmış olduğu için onların değerini programınızın herhangi bir noktasında okuyabilirsiniz. Sabit değerleri direkt olarak kullanmak yerine (10 ve 100 sayılarını programınızda doğrudan kullanmak) sabit değişkenler yaratmak programınızın okunurluğunu artırır ve değişiklik yapmanızı kolaylaştırır.</p>
+<h2 id="cift-for-dongusu">Çift for döngüsü</h2>
+<p>Bu problem for döngüsü içinde for döngüsü kullanmanızı gerektirir. İçerideki döngü için farklı bir döngü değişkeni kullanmayı unutmayın. Örneğin, eğer dışarıdaki döngünüz şu şekildeyse:</p>
 <pre><code>for i in range(100):
-  ... inner loop here ...
+  ... iç for döngüsü ...
 </code></pre>
 
-<p>The inner loop (the loop in the body) must iterate through a variable other than <code>i</code>.</p>
-<h2 id="extension">Extension</h2>
-<p>File: <code>illusion2.py</code></p>
-<p>If you have time, try creating this optical illusion! Note that all the squares are the same size and all lines are horizontal! Think about how to decompose your solution.</p>
+<p>Onun içindeki for döngüsü <code>i</code>' den başka bir döngü değişkeni kullanmalı.</p>
+<h2 id="eklemeler">Eklemeler</h2>
+<p>Dosya: <code>illusion2.py</code></p>
+<p>Vaktiniz olursa, bu optik illüzyonu yaratmayı deneyin! Tüm karelerin aynı boyutta ve tüm çizgilerin yatay olduğuna dikkat edin! Çözümünüzü nasıl parçalara ayıracağınız üzerine düşünün.</p>
 <p><center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/illusion/illusion2.png">
 </center></p>
-<p>If you are stuck, try drawing each row with the first black square always starting at x = 0. Then try to figure out how to create the offset pattern.</p>
+<p>Eğer takılırsanız, her bir satırı ilk siyah karesi x = 0'da başlayacak şekilde çizmeyi deneyin. Ardından her satırın başındaki fazlalığın örüntüsünü nasıl oluşturabileceğinizi bulmaya çalışın.</p>
 	</div>
 </div>
 

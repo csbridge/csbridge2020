@@ -24,6 +24,23 @@
 	
 <br />
 
+<%
+import os
+import csv
+with open("templates/announcements/times.csv", 'r') as f:
+  reader = csv.reader(f, delimiter=',')
+  header = next(reader)
+%>
+
+% for row in reader:
+  % datetime_start, datetime_end, alert_type, fname = row
+  <div class="alert {{alert_type}} visible-during" data-visible-start="{{datetime_start}}" data-visible-end="{{datetime_end}}">
+    % with open(os.path.join("templates", "announcements", fname), 'r') as f:
+        {{!f.read()}}   
+    % end
+  </div>
+% end
+
 
 <!-- <div class="alert alert-success">
 	<b>Who are you?</b> Fill in the <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">class survey</a>.

@@ -80,3 +80,18 @@ Suppose we are working on Hospital Karel and we think we have gotten our code to
 <!--
 ## Debug
 -->
+
+## Open Project Opens
+
+There are several options when opening a project.
+* This Window: Replaces the current project in your current window with the new project, closing the current project.
+* New Window: Opens the new project in a new, separate window, keeping your current project in the original window.
+* Attach: Adds the new project folder to your current window, keeping the old and new projects separate but both open.
+* Cancel: Don't open the new project.
+
+<center>
+  <img style="width:60%" src="{{pathToRoot}}img/resources/pycharm-how-to/pycharm_open.png">
+</center>
+
+
+
