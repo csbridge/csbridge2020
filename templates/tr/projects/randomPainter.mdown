@@ -32,7 +32,7 @@ Parantez içindeki değer, programlama dilleri terminolojisinde argüman (argume
 <code><span style="color:cyan;">CYAN</span></code>,
 <code><span style="color:blue">BLUE</span></code>,
 <code><span style="color:magenta;">MAGENTA</span></code>,
-ve dahası. Yani `paint_corner(RED)` metodunu çağırarak Karel'ın üzerine bulunduğu köşeyi kırmızıya boyamasını sağlayabilirsiiz.
+ve dahası. Yani `paint_corner(RED)` fonksiyonunu çağırarak Karel'ın üzerine bulunduğu köşeyi kırmızıya boyamasını sağlayabilirsiiz.
 
 Daha sonra rastgelelik hakkında konuşacağız, ancak şimdilik iki renkten birini çizmek istediğimizi biliyoruz ve bunu Karel'da rastgele yapmamız gerekiyor. Karel yeni koşulu `random(0.5)`, zamanın yarısında doğru (`True`) yarısında (`False`) dönüyor, ama tahmin edilemez bir şekilde. Bozuk para atmak gibi. Örneğin aşağıdaki kod:
 

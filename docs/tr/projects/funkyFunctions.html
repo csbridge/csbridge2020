@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Funky Functions</title>
+<title>CS Bridge  | Fırlama Fonksiyonlar</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -440,13 +440,16 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Funky Functions
+		Fırlama Fonksiyonlar
 	</h1>
 
 		<p>
-			Hazırlayanlar: Written by Chris, Bryce, and Lisa
+			Hazırlayanlar: Chris, Bryce, Lisa
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
@@ -454,35 +457,35 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<h2 id="1-mad-max">1. Mad Max</h2>
-<p>Example: <a href="../../tr/projects/averageMethod.html}}">Average Method</a> <br/>
-File: <code>mad_max.py</code></p>
-<p>Complete the program by filling in the <code>mad_max</code> function that returns the largest of three numbers:</p>
+<p>Örnek: <a href="../../tr/projects/averageMethod.html}}">Ortalama Fonksiyonu</a> <br/>
+Dosya: <code>mad_max.py</code></p>
+<p>Programı, üç sayının maksimumunu döndüren <code>mad_max</code> fonksiyonunu yazarak tamamlayın.</p>
 <pre><code>def mad_max(x, y, z):
-    # your code here
+    # kodunuzu buraya yazın
 </code></pre>
 
-<p>The <code>main</code> function has already been written for you:</p>
+<p><code>main</code> fonksiyonu sizin için yazılmış durumda:</p>
 <pre><code>def main():
-    print(&quot;The max of 4, 5, and 6 is:&quot;, mad_max(4, 5, 6))
-    print(&quot;The max of -4, 4, and 0 is:&quot;, mad_max(-4, 4, 0))
-    print(&quot;The max of 3, 2, and 1 is:&quot;, mad_max(3, 2, 1))
-    print(&quot;The max of 0, 0, and 0 is:&quot;, mad_max(0, 0, 0))
+    print(&quot;4, 5, ve 6 sayılarının maksimumu:&quot;, mad_max(4, 5, 6))
+    print(&quot;-4, 4, ve 0 sayılarının maksimumu:&quot;, mad_max(-4, 4, 0))
+    print(&quot;3, 2, ve 1 sayılarının maksimumu:&quot;, mad_max(3, 2, 1))
+    print(&quot;0, 0, ve 0 sayılarının maksimumu:&quot;, mad_max(0, 0, 0))
 </code></pre>
 
-<p>Your output should look like this:</p>
-<pre><code>The max of 4, 5, and 6 is: 6
-The max of -4, 4, and 0 is: 4
-The max of 3, 2, and 1 is: 3
-The max of 0, 0, and 0 is: 0
+<p>Çıktınız şöyle görünmeli:</p>
+<pre><code>4, 5, ve 6 sayılarının maksimumu: 6
+-4, 4, ve 0 sayılarının maksimumu: 4
+3, 2, ve 1 sayılarının maksimumu:
+0, 0, ve 0 sayılarının maksimumu:: 0
 </code></pre>
 
-<h2 id="2-draw-trees">2. Draw Trees</h2>
-<p>Handouts: <a href="../../tr/handouts/graphics.html">Graphics Reference</a><br/>
-Example: <a href="../../tr/projects/drawpeople.html}}">Draw People</a>,
+<h2 id="2-agaclar-ciz">2. Ağaçlar Çiz</h2>
+<p>Ders Notları: <a href="../../tr/handouts/graphics.html">Graphics Reference</a><br/>
+Örnekler: <a href="../../tr/projects/drawpeople.html}}">Draw People</a>,
 <a href="../../tr/projects/halfgreen.html}}">Half Green</a><br/>
-File: <code>draw_trees.py</code></p>
-<p>Fill in the <code>draw_tree</code> function that draws a tree with the <em><em>base</em></em> of its trunk centered at the provided <code>(x, y)</code> position.</p>
-<p>The <code>main</code> function has already been written for you:</p>
+Dosya: <code>draw_trees.py</code></p>
+<p><code>draw_tree</code> fonksiyonunu doldurun. Bu fonksiyon verilen <code>(x, y)</code> koordinatlarında <em><em>tabanı</em></em> ortalanmış bir ağaç çizer:</p>
+<p><code>main</code> fonksiyonu sizin için yazılmış durumda:</p>
 <pre><code>def main():
     draw_tree(50, 150)
     draw_tree(100, 300)
@@ -492,7 +495,7 @@ File: <code>draw_trees.py</code></p>
 
 </code></pre>
 
-<p>Each tree should have a trunk with a width of 20 pixels (<code>TRUNK_WIDTH</code>) and a height of 80 pixels (<code>TRUNK_HEIGHT</code>). The leaves should have a radius of 30 pixels (<code>LEAVES_RADIUS</code>). Your output should look like this:</p>
+<p>Her ağacın gövdesi 20 piksel (<code>TRUNK_WIDTH</code>) genişliğinde ve 80 piksel <code>TRUNK_HEIGHT</code>) yüksekliğinde olmalıdır. Yaprakların yarıçapları 30 piksel (<code>LEAVES_RADIUS</code>) olmalıdır. Çıktınız aşağıdakine benzer olmalıdır:</p>
 <p><center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/madmethods/demo.png">
 </center></p>

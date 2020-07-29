@@ -27,7 +27,7 @@ Karel dünyaya dair aşağıda listelenen gerçeklere güvenebilir:
 _ Karel yüzü doğuya bakar şekilde 1. Bulvar ve 1. Cadde'de başlar.
 _ Sütunlar birbirlerinden tam olarak dört kareyle, 1., 5., 9. ve 13. Bulvar'da, ayrılmış haldeler. \* Karel sütunların beş birim yükseklikte olduğunu varsayabilir.
 
-Program birkaç satır olmasına rağmen, problemi küçük parçalara ayırmaya az da olsa hala değer. Örneğin, bir `build_column` metoduna sahip olmak mantıklı.
+Program birkaç satır olmasına rağmen, problemi küçük parçalara ayırmaya az da olsa hala değer. Örneğin, bir `build_column` fonksiyonuna sahip olmak mantıklı.
 
 ## For Döngüleri
 
