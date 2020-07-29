@@ -6,3 +6,4 @@ template: templates/teach/template.ptl
 * Section Leader Training slides: [Google Slides](https://docs.google.com/presentation/d/1JlR7af_nbQlzY-cj73lZvPm87S7nhFd2AUz0nxXsxLI/edit)
 * Section Leader Frequently Asked Questions (FAQs): [\[Section Leader\] FAQs]({{pathToRoot}}en/resources/sectionleader-faq.html)
 * How to use Zoom: [Zoom Guide]({{pathToRoot}}en/resources/zoom-info.pdf)
+* How to open submissions on Ed: [Submission Overview]({{pathToRoot}}en/resources/submission-sl.html)

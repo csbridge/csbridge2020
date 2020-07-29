@@ -19,6 +19,9 @@
 <script src="{{pathToRoot}}karel/ace/ace.js" type="text/javascript"></script>
 <script type="text/javascript" src="{{pathToRoot}}js/moment.min.js"></script>
 <script type="text/javascript" src="{{pathToRoot}}js/index.js"></script>
+%  if get('title', None) == "Home":
+    <script type="text/javascript" src="{{pathToRoot}}js/time-schedule.js"></script>
+% end
 <script type="text/javascript" src="{{pathToRoot}}plugins/d3.v3/d3.v3.min.js"></script>
 
 
