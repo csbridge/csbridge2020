@@ -41,7 +41,7 @@ Ders Notları: [Graphics Reference]({{pathToRoot}}tr/handouts/graphics.html)<br/
 [Half Green]({{pathToRoot}}tr/projects/halfgreen.html}})<br/>
 Dosya: `draw_trees.py`
 
-`draw_tree` metodunu doldurun. Bu metot verilen `(x, y)` koordinatlarında _*tabanı*_ ortalanmış bir ağaç çizer:
+`draw_tree` fonksiyonunu doldurun. Bu fonksiyon verilen `(x, y)` koordinatlarında _*tabanı*_ ortalanmış bir ağaç çizer:
 
 `main` fonksiyonu sizin için yazılmış durumda:
 
