@@ -1,9 +1,9 @@
 datetime_start,datetime_end,alert_type,category,location
 20200728 7:00,20200728 8:00,alert-info,lecture-am.ptl
-20200729 7:00,20200729 10:30,alert-info,lecture-am.ptl
+20200730 7:00,20200730 10:30,alert-info,lecture-am.ptl
 20200730 7:00,20200730 8:00,alert-info,lecture-am.ptl
 20200731 7:00,20200731 8:00,alert-info,lecture-am.ptl
-20200728 17:32,20200729 17:37,alert-info,nothing.ptl
+20200728 17:32,20200730 17:37,alert-info,nothing.ptl
 20200728 17:32,20200728 17:37,alert-warning,lecture-am.ptl
 20200728 17:32,20200728 17:37,alert-success,lecture-am.ptl
-20200728 17:32,20200831 17:37,alert-info,lecture-am.ptl
+20200730 17:32,20200831 17:37,alert-info,lecture-am.ptl
