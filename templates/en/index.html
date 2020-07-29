@@ -25,6 +25,7 @@
 <br />
 
 <%
+import os
 import csv
 with open("templates/announcements/times.csv", 'r') as f:
   reader = csv.reader(f, delimiter=',')
@@ -32,14 +33,10 @@ with open("templates/announcements/times.csv", 'r') as f:
 %>
 
 % for row in reader:
-  % datetime_start, datetime_end, alert_type, category, location = row
+  % datetime_start, datetime_end, alert_type, fname = row
   <div class="alert {{alert_type}} visible-during" data-visible-start="{{datetime_start}}" data-visible-end="{{datetime_end}}">
-    At this time, you should be in <b>{{category}}</b>
-    % if len(location):
-        at <a href="{{location}}" target="_blank">this link</a>. 
-        Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
-    % else:
-        . Have fun!
+    % with open(os.path.join("templates", "announcements", fname), 'r') as f:
+        {{!f.read()}}   
     % end
   </div>
 % end
