@@ -34,8 +34,13 @@ with open("templates/announcements/times.csv", 'r') as f:
 % for row in reader:
   % datetime_start, datetime_end, alert_type, category, location = row
   <div class="alert {{alert_type}} visible-during" data-visible-start="{{datetime_start}}" data-visible-end="{{datetime_end}}">
-    At this time, you should be in <b>{{category}}</b> at <a href="{{location}}">this link</a>. 
-    Password is on <a href="https://us.edstem.org/courses/968/discussion/96933">Ed!</a>
+    At this time, you should be in <b>{{category}}</b>
+    % if len(location):
+        at <a href="{{location}}" target="_blank">this link</a>. 
+        Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+    % else:
+        . Have fun!
+    % end
   </div>
 % end
 
