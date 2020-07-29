@@ -1,72 +1,74 @@
-template: templates/en/resources/faqTemplate.ptl
-title: Submission/Office Hours
+template: templates/tr/resources/faqTemplate.ptl
+title: Çalışmalarınızı Sisteme Yükleme/Ofis Saatleri
 
 [TOC]
 
-## Submission
+## Çalışmalarınızı Sisteme Yükleme
 
-Twice a day, you will submit your work from the session via Ed. **It is okay if you don't finish everything, or if you are still working.** We just want to know that you are keeping up with the material.
+Çalışmalarınızı günde iki kere Ed üzerinden yükleyeceksiniz. **Her şeyi bitirmediyseniz ya da hala çalışıyorsanız önemli değil.** Ders materyalini takip edebildiğinizden emin olmak adına kodunuzu sisteme yüklemenizi istiyoruz.
 
-You will also need to submit your code if you attend office hours and are looking for debugging help. Section Leaders can then download your code and help you faster.
+Ayrıca, eğer ofis saatlerine katılırsanız ve debugging (hata ayıklama) için yardım isteyecekseniz de kodunuzu sisteme yüklemeniz gerekecek. Böylece, Group Liderleri kodunuzu indirip size daha hızlı yardım edebilecekler.
 
-You can submit as many times as you want. You may want to submit multiple times if you attend office hours multiple times for debugging.
+Sisteme istediğiniz kadar yükleme yapabilirsiniz. Eğer debugging (hata ayıklama) için birkaç ofis saatine katılırsanız birkaç kere yükleme yapmak isteyebilirsiniz.
 
-### How to submit
+### Sisteme çalışmalarınızı nasıl yükleyeceksiniz?
 
-#### 1. Go to Lessons in Ed
+#### 1. Ed üzerinden Lessons'a (Dersler) gidin
 
-Navigate to [Ed](https://us.edstem.org/courses/968/discussion/) Lessons, where you will submit your code.
+Kodunuzu sisteme yükleyeceğiniz [Ed](https://us.edstem.org/courses/968/discussion/) Lessons sayfasına gidin.
 
 <center>
   <img style="width:60%" src="{{pathToRoot}}img/resources/submission-oh/lessons1.png">
-  <p style="text-align:center"><b>Ed Lessons</b>: In the main CS Bridge class (not your Section), select the Lessons icon (looks like a book).</p>
+  <p style="text-align:center"><b>Ed Lessons</b>: Ana CS Bridge sınıfında (grubunuzda değil), kitaba benzeyen Lessons (Dersler) ikonunu seçin.</p>
 </center>
 
-#### 2. Select Submission
+#### 2. Submission'ı (Teslim) seçin
 
-Click on the correct session that you would like to submit for (correct day and correct time, morning or evening). For example, for the first day, click on "Day 1 PM".
+Çalışmasını yüklemek istediğiniz doğru çalışma oturumunu seçin (doğru gün ve saat, sabah ya da akşam). Örneğin, birinci gün için "Day 1 PM"e (Gün 1 Akşam) tıklayın. Not: İngilizcede AM öğleden önce, PM de öğleden sonra/akşam anlamına gelir.
+
 
 <center>
   <img style="width:60%" src="{{pathToRoot}}img/resources/submission-oh/lessons2.png">
-  <p style="text-align:center"><b>Submit portal</b>: On the Lessons page, click on the session you would like to submit for.</p>
+  <p style="text-align:center"><b>Submit portalı</b>: Lessons sayfasında, çalışmasını yüklemek istedğiniz çalışma oturumunu seçin.</p>
 </center>
 
-#### 3. Upload
+#### 3. Yükleme
 
-For each file you have, copy it from PyCharm using Select All (Mac OS X: ⌘-A, Windows: Ctrl-A) and then paste into the Ed editor (see the below images). **Do this for each file you want to submit** by clicking on the tabs.
+Yükleyeceğiniz her dosyayı PyCharm'dan Hepsini Seç (Mac OS X: ⌘-A, Windows: Ctrl-A)  kullanarak kopyalayın ve Ed kod düzenleyicisine yapıştırın. **Bu işlemi sisteme yüklemek istemek istediğiniz bütün dosyalar için sekme değiştirerek tekrarlayın.**
 
-You can also click on the plus (`+`) button in the Ed editor and directly upload your Python or Karel file into the editor.
+Ed kod düzenleyicisindeki artı işaretine (`+`) tıklayıp Python ya da Karel dosyanızı direkt de yükleyebilirsiniz.
+
 <center>
   <img style="width:45%" src="{{pathToRoot}}img/resources/submission-oh/selectall.png">
   <img style="width:45%" src="{{pathToRoot}}img/resources/submission-oh/selectall-paste.png">
-  <p style="text-align:center"><b>Upload</b>: (1) Left: Copy from PyCharm. (2) Right: Select correct tab and paste into Ed.</p>
+  <p style="text-align:center"><b>Yükleme</b>: (1) Sol: PyCharm'dan kopyalayın. (2) Sağ: Doğru sekmeyi seçin ve Ed'e yapıştırın.</p>
 </center>
 
-#### 4. Submit
-Finally, click on "Submit" in the bottom-right corner to submit via Ed. You can submit multiple times, and Ed will save your work.
+#### 4. Gönder
+Ed üzerinden çalışmalarınızı göndermek için son olarak sağ alt köşedeki "Submit" (gönder) butonuna tıklayın. Çalışmalarınızı birkaç kere sisteme yükleyebilirsiniz, Ed çalışmanızı kaydeder.
 
 <center>
   <img style="width:45%" src="{{pathToRoot}}img/resources/submission-oh/submit-button.png">
   <img style="width:45%" src="{{pathToRoot}}img/resources/submission-oh/submit-complete.png">
-  <p style="text-align:center"><b>Submission</b>: (1) Left: Hit Submit in the bottom-right corner. (2) Right: Submission done!</p>
+  <p style="text-align:center"><b>Submission</b>: (1) Sol: Sağ alt köşedeki Submit butonuna tıklayın. (2) Sağ: Çalışmanızı başarıyla yüklediniz!</p>
 </center>
 
-## Office Hours
+## Ofis Saatleri
 
-Go to the office hour Zoom link (there are two different ones for morning and evening). Type your name and what help you are looking for. Choose from one of the following categories:
+Ofis saati Zoom linkine (sabah ve akşam için iki farklı link var) girin. İsminizi ve ne tür bir yardım istediğinizi yazın:
 
-* **Concepts**
+* **Temel Kavramlar (Concepts)**
 
-    If you would like a Section Leader to go over certain concepts (e.g., variables)
+    Eğer bir Grup Lideri'nin belli kavramlar (değişkenler gibi) üzerinden geçmesini istiyorsanız
 
-* **Approach**
+* **Yaklaşım (Approach)**
 
-    If you are working on an activity or project and would like tips on how to approach the problem. 
+    Bir aktivite ya da proje üzerinde çalışıyorsanız ve probleme yaklaşımınız konusunda ipuçları istiyorsanız
+    
+* **Hata ayıklama (Debugging)**
 
-* **Debugging**
+    Bir aktivite ya da proje üzerinde çalışıyorsanız ve bir Grup Lideri'nin kodunuza bakmasını istiyorsanız. **Hata ayıklama konusunda yardım isteyecekseniz önce kodunuzu Ed üzerinden yüklemelisiniz.**
 
-    If you are working on an activity or project and would like a Section Leader to look directly at your code. **If you are looking for debugging help, you must submit your code via Ed first.**
+Ana Zoom odasındaki Grup Lider'leri sizi bir Grup Lider'i ile Breakout odasına yönlendirecek.
 
-The Section Leaders in the main Zoom room will then move you into a Breakout room with a Section Leader.
-
-Happy debugging!
+Mutlu hata ayıklamalar!
