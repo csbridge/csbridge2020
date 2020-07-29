@@ -1,0 +1,9 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Kendi Projenizi Yaratın
+credit: Siz
+translation: Serhat Arslan, Gül Sena Altıntaş
+
+Final projesi olarak ne isterseniz onu yapan bir program tasarlayabilirsiniz.
+
+
+Başlamadan önce fikrinizi öğretmenlerinizden birine onaylatmalısınız! Fikrinizin çok zor ya da kolay olabileceği ihtimaline karşı, birkaç tane fikir düşünün.

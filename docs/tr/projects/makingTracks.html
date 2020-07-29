@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Creative Graphics</title>
+<title>CS Bridge  | İz Çıkartmaca</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -440,28 +440,48 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Creative Graphics
+		İz Çıkartmaca
 	</h1>
 
 		<p>
-			Hazırlayan: Lisa Yan
+			Hazırlayan: Eric Roberts and Mehran Sahami
 		</p>
 
+		<p>
+			Çeviren: Ahmet Uysal
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>This is a bonus program!</p>
-<p>Write a graphics program that does anything you want!!! Here is an example of something you can make.</p>
+		<p>Ders Notları: <a href="../../tr/resources/graphics.html">Grafik Referansı</a><br/>
+Çözümlü Örnekler: <a href="../../tr/projects/stampTool.html">Damga Makinesi</a><br/>
+Dosya: <code>making_tracks.py</code></p>
+<p>Kullanıcının tıkladığı yerlere resim çizen bir program yazın.</p>
 <p><center>
-  <img style="width:400px; border: 1px solid black;" src="../../img/projects/creativeGraphics/example.gif">
+  <img style="width:500px;border: 1px solid #000000" src="../../img/projects/makingTracks/demo.png">
 </center></p>
-<p>Here is a Karel to help you out.</p>
-<p><center>
-  <img src="../../img/projects/creativeGraphics/karel.png">
-</center></p>
+<h2 id="resimler">Resimler</h2>
+<p>Bu resimleri içeren ilk projemiz!</p>
+<p>Bu proje için <code>Pillow</code> adında resimleri modifiye etmek ve ekran üzerinde çizmek için kullanılan bir paket indirmeniz gerekiyor.
+<code>Pillow</code>'u indirmek için bir terminal penceresi açın (PyCharm'ın içindeki Terminal sekmesini kullanabilirsiniz) ve aşağıdaki komutu girin:</p>
+<p><strong>Not:</strong> Windows kullanıyorsanız <code>python3</code> yerine <code>py</code> komutunu kullanın.
+<strong>Not2:</strong> Python'da paket adları büyük/küçük harfe duyarlıdır. <code>Pillow</code>'u yazarken ilk harfin büyük olmasına dikkat edin.</p>
+<pre><code>&gt; python3 -m pip install Pillow
+... konsole'a yazılan kurulumla ilgili bilgiler ...
+Successfully installed Pillow-7.1.1
+</code></pre>
+
+<p>Yukarıda verilenden farklı bir versiyon numarası görebilirsiniz. Bu bir sorun değildir ve projenizi etkilemeyecektir.</p>
+<p>Bir resim dosyası kullanarak Graphics objesi oluşturmak için alttakine benzer bir kod kullanabilirsiniz:</p>
+<pre><code>stamp = canvas.create_image(x, y, &quot;images/simba-sm.jpg&quot;)
+</code></pre>
+
+<p>Bu fonksiyon'u çağırmak PyCharm projesi içinde <code>images</code> klasöründe bulunan <code>simba-sm.jpg</code> resim dosyasını yükler ve <code>(x, y)</code> konumu üzerine bu resmi çizer.
+Bu resmi (her Graphics objesi için geçerli olduğu gibi) modifiye etmek ve ekranda hareket ettirmek için <code>canvas.moveto(stamp, new_x, new_y)</code> gibi canvas fonksiyonlarını kullanabilirsiniz. </p>
+<p>Resimler hakkında daha fazla bilgi almak için <a href="../../tr/resources/graphics.html">Grafik Referansı</a>'nı inceleyebilirsiniz.</p>
 	</div>
 </div>
 

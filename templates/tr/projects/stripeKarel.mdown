@@ -18,7 +18,7 @@ Aşağıdaki varsayımları kabul edebilirsiniz:
 * Karel dünyanın sol alt köşesinde, doğuya (east) bakarak başlıyor.
 * Toplamda tek sayıda satır var (böylece Karel beeper'ları 1., 3., 5. ... satırlara yerleştirmiş oluyor).
 
-Programınız farklı büyüklüklerdeki dünyalar için de çalışmalı. Örneğin AYNI programı biraz daha büyük bir dünyada çalıştırırsak Karel beeper'ları doğru şekilde yerleştirebilmeli. Bu demek oluyor ki `for` döngüsü kullanamayız, çünkü programın çalıştırılacağı dünyanın büyüklüğünü önceden bilemeyiz.
+Programınız farklı büyüklüklerdeki dünyalar için de çalışmalı. Örneğin AYNI programı biraz daha büyük bir dünyada çalıştırırsak Karel beeper'ları doğru şekilde yerleştirebilmeli. Bu demek oluyor ki `for` döngüsü kullanamayız, çünkü programın çalıştırılacağı dünyanın büyüklüğünü önceden bilmiyoruz.
 
 
 <center>
