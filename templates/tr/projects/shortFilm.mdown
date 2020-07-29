@@ -1,56 +1,59 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Short Film
-credit: Written by Chris Piech and Keith Schwarz.
+title: Kısa Film
+credit: Chris Piech, Keith Schwarz.
+translation: Ceren Kocaoğullar
 
-Handouts: [Graphics Reference]({{pathToRoot}}tr/handouts/graphics.html)<br/>
-Worked Example: [Half Green]({{pathToRoot}}tr/projects/halfgreen.html),
-[Target]({{pathToRoot}}tr/projects/target.html)<br/>
-File: `short_film.py`
+Ders Notları: [Grafikler Referansı]({{pathToRoot}}en/resources/graphics.html)<br/>
+Çözümlü Örnek: [Yarı Yeşil]({{pathToRoot}}en/projects/halfgreen.html),
+[Hedef Tahtası]({{pathToRoot}}en/projects/target.html)<br/>
+Dosya: `short_film.py`
 
-Did you know that animated movies like <i>Toy Story</i>, <i>Up</i>, and <i>Frozen</i> are made using computer programs? In this assignment you are going to use a program to create a short film.
+<i>Oyuncak Hikayesi</i>, <i>Yukarı Bak (Up)</i> ve <i>Frozen</i> gibi animasyon filmlerinin bilgisayar programları kullanılarak yapıldığını biliyor muydunuz? Bu ödevde kısa bir film oluşturmak için bir program kullanacaksınız.
 
-## Display Message Method
+## Mesaj Görüntüleme Fonksiyonu
 
-Every movie has a beginning and an end. Sometimes it will start "Once Upon a Time...", sometimes it will start with a title, sometimes it will start with something sillier. At the end of the movie it sometimes says "The end."
+Her filmin bir başlangıcı ve bir sonu vardır. Bazen "Bir Zamanlar ..." diye, bazen bir başlık ile, bazense daha komik bir şeyle başlarlar. Filmin sonunda ise bazen "Son" yazar.
 
-Add a function to your program that will draw a message on the screen (on a black background) and leave the message for two seconds.
+Programınıza ekranda bir mesaj çizecek bir fonksiyon ekleyin (siyah arka plan üzerine) ve mesajı iki saniye ekranda görüntüleyin.
 
 ```
 def display_message(canvas, message):
   ...
 ```
 
-The start message should look like the screen below.
+Başlangıç mesajı, aşağıdaki ekranda olduğu gibi görünmelidir.
 
 <center>
   <img style="width:500px" src="{{pathToRoot}}img/projects/shortfilm/onceUpon.png">
 </center>
 
-The font (and font size) that we used was:
+Burada kullandığımız font (ve font büyüklüğü) şunlardır:
 
 ```
 canvas.set_font(label, "Papyrus", 40)
 ```
 
-After two seconds you should remove the rectangle that is the background and the text that is the message. To do so you can use the `delete` method (which takes an object that was on the canvas and removes it).
+İki saniye sonra arka plan olan dikdörtgeni ve ileti olan metni kaldırmalısınız. Bunu yapmak için `delete` fonksiyonunu kullanabilirsiniz (Bu fonksiyon tuval üzerinde bulunan bir nesneyi parametre olarak alır ve ekrandan kaldırır).
 
 ```
 canvas.delete(your_object)
 ```
 
-Of course, you can use this method as much as you want to tell your story!
+Tabii ki, bu fonksiyonu hikayenizi anlatmak için istediğiniz kadar kullanabilirsiniz!
 
-## Setting Sun
+## Güneşi Batırmak
 
-Your movie must have one scene to start: A setting sun. draw the sky, the earth and a sun. Then, slowly animate the sun descending. The sky should take up the top half of the canvas, and the earth should take up the second half. Considering the following images from the start of the program, and the program after a few seconds.
+Filminizin başlaması için bir sahne olmalı: Gün batımı. Bunu yapmak için önce gökyüzünü, dünyayı ve güneşi çizin. Ardından, yavaş yavaş güneşin inişi animasyonunu gerçekleştirin. Gökyüzü tuvalin üst yarısını ve yer ise ikinci yarıyı kaplamalıdır. Programın başlangıcından ve birkaç saniye sonrasından alınmış aşağıdaki kareleri göz önünde bulundurun.
 
 <center>
   <img style="width:100%" src="{{pathToRoot}}img/projects/shortfilm/animation.png">
 </center>
 
-## `get_sun_color` Method
+## `get_sun_color` Fonksiyonu
 
-Write a method that takes some parameter, and returns the color of the sun. You should specify the parameter of this method: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.
+Write a function that takes some parameter, and returns the color of the sun. You should specify the parameter of this function: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.
+
+Bazı parametreleri alan ve güneşin rengini döndüren bir fonksiyon yazın. Bu fonksiyonun parametresini belirtmelisiniz: örneğin, zaman (filmin başlangıcından bu yana kare sayısı olarak) veya güneşin y konumu veya Güneş'in doğru rengini elde etmek için yararlı olacağını düşündüğünüz herhangi bir şey olabilir.
 
 ```
 def getSunColor(...):
@@ -58,25 +61,25 @@ def getSunColor(...):
   return color
 ```
 
-Have the method return "yellow", "orange", or "red" based on how many iterations have passed.
+Fonkisyonun, kaç yineleme geçtiğine göre "ye", "turuncu" veya "kırmızı" renklerinden birini döndürmesini sağlayın.
 
-## Finishing up
+## Son Dokunuşlar
 
-After your movie ends, display a finishing message using your `display_message()` method defined earlier. The end message should look like the screen below.
+Filminiz bittikten sonra, daha önce tanımlanan `display_message()` fonksiyonunuzu kullanarak bir bitirme mesajı görüntüleyin. Bitiş mesajı aşağıdaki ekrana benzemelidir.
 
 <center>
   <img style="width:500px" src="{{pathToRoot}}img/projects/shortfilm/theEnd.png">
 </center>
 
-# Make It Better
+# Daha da İyileştir
 
-Do anything you want to make your story more captivating than just a setting sun. Can you tell a tale of love or action? Don't forget to use methods to make your life easier.
+Hikayenizi batan bir güneşten daha büyüleyici hale getirmek için istediğiniz her şeyi yapın. Bir aşk veya aksiyon hikayesi anlatabilir misiniz? Hayatınızı kolaylaştırmak için fonksiyonları kullanmayı unutmayın.
 
 <center>
   <img style="width:500px" src="{{pathToRoot}}img/projects/shortfilm/poster.jpg">
 </center>
 
-You can also add more objects to make your scene more captivating. Add a rainbow (or a double rainbow)? Do you have an idea about what sunsets have always been missing? How about a lit up Bosphorus Bridge or Charles Bridge?
+Sahnenizi daha büyüleyici hale getirmek için daha fazla nesne de ekleyebilirsiniz. Bir gökkuşağı (veya çift gökkuşağı) nasıl olur? Gün batımlarının her zaman nesinin eksik olduğu hakkında bir fikriniz var mı? Yanan Boğaz Köprüsü'ne veya Charles Köprüsü'ne ne dersiniz?
 
 <div class="row">
   <div class="col-md-12 col-lg-6">
