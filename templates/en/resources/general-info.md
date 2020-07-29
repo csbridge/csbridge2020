@@ -95,10 +95,10 @@ This is when you'll be able to ask for individual help on your code.
 
 #### E. <u>Projects</u>
 
-There will be two programming projects that you will work on each day. The core assignment questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away” (see the <a href='#Honor'>learning with honor section</a>).
+There will be two programming projects that you will work on each day. The core assignment questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away” (see <a href="#C5">Learning with Honor</a>).
 
 - You will be expected to submit the first project by 13:00 (Czech Republic), 14:00 (Turkey) each day and the second project by the end of the Office Hours/Work session in the evening.
-- <span style="color:red;">Instructions for completing and submitting assignments will be posted ON ED?? EDIT once know.</span>
+- Instructions for completing and submitting assignments will be posted on Ed.
 
 <!-- F. Social Activities -->
 
@@ -125,7 +125,7 @@ We want you to learn a lot in this course but we also really want you to have **
     You should regularly check the class website for handouts, announcements and other information, including the most up-to-date information on assignments.
 </p>
 <!-- B. Class Discussion Forum -->
-#### B. <u>Class Discussion Forum</u>
+#### B. <h2 id="C4">Class Discussion Forum</h2> 
 <p>
     Our class discussion forum is hosted on Ed here: <a href='https://us.edstem.org/'>https://us.edstem.org/</a><br>
     All communication with the teaching team and students will take place in Ed. <b>Do not share personal contact information with anyone in the course.</b>
@@ -161,7 +161,7 @@ Here are some tips:
 <!-- Whom to Contact About What -->
 ### Whom to Contact About What
 <p>
-    This class is taking place across three time zones so it is important that you know who to contact for what and how so that you can get help in a timely manner. Please use the Ed platform (<a href='#Communications'>described above</a>) where the Section Leaders and other students can help you. Some guidelines:
+    This class is taking place across three time zones so it is important that you know who to contact for what and how so that you can get help in a timely manner. Please use the Ed platform (<a href="#C4">Class Discussion Forum</a>) where the Section Leaders and other students can help you. Some guidelines:
 </p>
 
 - For logistical questions, conceptual and technical questions, or general course conversation</b>, please post a public question on our CS Bridge Ed forum.</li>
@@ -179,7 +179,7 @@ Here are some tips:
 
 <hr />
 <!-- Learning with Honor -->
-### Learning With Honor
+### <h2 id="C5">Learning With Honor</h2>
 <p>
     Value your own personal integrity -- it is of more importance than anything we learn in this class. We expect every student to engage honestly and fully in the course. Some guidelines:
 </p>
