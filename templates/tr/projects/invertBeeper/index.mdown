@@ -1,12 +1,14 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Invert Beeper (with solution)
-credit: Based on a handout by Eric Roberts
+title: Ters Çevir (ve çözümü)
+credit: Eric Roberts'ın ders notları
+translation: Serhat Arslan, Gül Sena Altıntaş
 solution: soln.py
+
 
 Handouts: [Karel Reference]({{pathToRoot}}en/resources/karel.html)<br/>
 File: `invert_beeper.py`<br/>
 
-For a world of any size, with any configuration of beepers (no square will have more than one), invert all the beepers so that, where there was a beeper previously there is no beeper... and where there was no beeper previously, there is a beeper. Consider the following example.
+Beeper'ların -her karede en fazla bir tane olacak şekilde- rastgele dağıtıldığı herhangi boyuttaki bir dünyadaki beeper'ları tersine çevirin. Yani, daha önceden beeper olan bir yerde artık beeper olmasın ve önceden beeper olmayan bir karede artık beeper olsun. Aşağıdaki örneği göz önünde bulundurun.
 
 <center>
 <img style="width:600px" src="{{pathToRoot}}img/projects/invert/invert.png">	
