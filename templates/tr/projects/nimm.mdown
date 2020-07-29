@@ -3,18 +3,19 @@ title: Antik Nimm Oyunu
 credit: Danielle Kain and Chris Piech
 translation: Gül Sena Altıntaş
 
-Worked Examples: 
+Worked Examples:
 <a href="{{pathToRoot}}tr/projects/emc2.html">E=MC2</a>,
 <a href="{{pathToRoot}}tr/projects/fibb.html">Fibbonacci</a>
 <br/>
 File: `nimm.py`
 
-Nimm "almak" anlamına gelen eski bir Almanca kelimenin ardından isimlendirilmiş antik bir strateji oyunudur. Batı Afrika'da *Tiouk Tiouk* ve Çin'de *Tsynshidzi* olarak da adlandırılır. Oyuncular ortada hiç taş kalmayana kadar sırayla ortadan taş alırlar. Nimm oyunu şu şekilde ilerler:
+Nimm "almak" anlamına gelen eski bir Almanca kelimenin ardından isimlendirilmiş antik bir strateji oyunudur. Batı Afrika'da _Tiouk Tiouk_ ve Çin'de _Tsynshidzi_ olarak da adlandırılır. Oyuncular ortada hiç taş kalmayana kadar sırayla ortadan taş alırlar. Nimm oyunu şu şekilde ilerler:
 
 1. Oyun ortada 20 taşla başlar
-+ İki oyuncu sırayla hamle yapar
-+ Belirli bir turda, bir oyuncu ortadaki taşlardan 1 ya da 2 tane alabilir
-+ Oyuncular ortadaki taşlar bitene kadar devam eder
+
+- İki oyuncu sırayla hamle yapar
+- Belirli bir turda, bir oyuncu ortadaki taşlardan 1 ya da 2 tane alabilir
+- Oyuncular ortadaki taşlar bitene kadar devam eder
 
 Ortadan son taş alan oyuncu oyunu kaybeder. Aşağıda örnek bir oyunun işleyişini görebilirsiniz:
 
@@ -79,6 +80,7 @@ Oyunu kaybettiniz
 ```
 
 ## <span>2.</span> Kilometre Taşı
+
 Hangi oyuncunun sırası olduğunu takip etmek için bir integer (tamsayı) değişkeni oluşturun (unutmayın, toplamda iki oyuncu var). Kullanıcıya hangi oyuncunun sırası olduğunu söyleyin. Ortadan taş alındığında kullanıcı sayısını değiştirin.
 
 ```
@@ -98,6 +100,7 @@ Oyunu kaybettiniz
 ```
 
 ## <span>3.</span> Kilometre Taşı
+
 Her turda sadece bir ya da iki taşın alındığından emin olun. Kullanıcıdan kaç taş almak istediklerini (kullanıcı girdisi) okuduktan sonra taş sayısının geçerli olup olmadığını kontrol etmek ve kullanıcı geçerli bir değer girene kadar sormaya devam etmek için şu şekilde bir yapı kullanabilirsiniz:
 
 ```
@@ -106,16 +109,18 @@ while kullanici_girdisi gecersizken:
 ```
 
 ## <span>4.</span> Kilometre Taşı
+
 Kazanan oyuncuyu ilan edin.
 
-## İlaveler
+## Eklemeler
+
 Bir AI (Yapay Zeka) rakibi yazabilir misiniz? Her turda rastgele bir sayı oynayan bir AI ile başlayıp daha sonra daha stratejik hamleler yapan bir AI geliştirebilirsiniz...
 
 Başka ilave edilebilecek fikirler:
 
-+ Eğer ortada bir taş kaldıysa, sırası gelen oyuncunun ortadan sadece bir taş alabildiğini kontrol edin.
-+ Oyuncuya kazananın ortadan son taşı alan ya da almayan oyuncu olma opsiyonunu sunarak oyunun kurallarını değiştirebilmesini sağlayın.
-+ Oyunu oyuncuların her turde 1, 2 ya da 3 taş almalarını destekleyecek şekilde genişletin.
-+ 3'e bölünebilme kuralı: eğer oyuncunun sırası geçmeden önce ortada kalan taş sayısı 3'e bölünebilirse, tekrar oynamalarını sağlayın.
-+ Kullanıcıya bilgisayara karşı oynama opsiyonu sunun ve bilgisayarın ortadan kaç taş alması gerektiğine karar veren bir algoritma tasarlayın.
-+ Ya da kendi fikirlerinizi deneyerek projenin kapsamını genişletin!
+- Eğer ortada bir taş kaldıysa, sırası gelen oyuncunun ortadan sadece bir taş alabildiğini kontrol edin.
+- Oyuncuya kazananın ortadan son taşı alan ya da almayan oyuncu olma opsiyonunu sunarak oyunun kurallarını değiştirebilmesini sağlayın.
+- Oyunu oyuncuların her turde 1, 2 ya da 3 taş almalarını destekleyecek şekilde genişletin.
+- 3'e bölünebilme kuralı: eğer oyuncunun sırası geçmeden önce ortada kalan taş sayısı 3'e bölünebilirse, tekrar oynamalarını sağlayın.
+- Kullanıcıya bilgisayara karşı oynama opsiyonu sunun ve bilgisayarın ortadan kaç taş alması gerektiğine karar veren bir algoritma tasarlayın.
+- Ya da kendi fikirlerinizi deneyerek projenin kapsamını genişletin!
