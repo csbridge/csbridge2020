@@ -16,7 +16,8 @@ Göreviniz Karel'in dünyasının sınırlarını aşağıda görebileceğiniz r
 Programınızı yazarken bu varsayımları yapabilirsiniz:
 
 - Programın başında Karel dünyanın sol alt tarafındaki karede, güneye dönüktür.
-- Karel'in dünyası dikdörtgen şeklindedir. Karenin de özel bir dikdörtgen olduğunu unutmayın.
+- Karel'in dünyası kare şeklindedir. Aynı sayıda satır ve sütuna sahiptir.
+- Karel'in dünyası 1x1 boyutlarında değildir.
 
 Yazdığınız program yukarıdaki varsayımlara uygun farklı boyutlardaki dünyalarda da çalışabilmeli. Alternatif bir dünyayı aşağıda görebilirsiniz:
 
@@ -24,7 +25,7 @@ Yazdığınız program yukarıdaki varsayımlara uygun farklı boyutlardaki dün
 	<img style="width:600px"  src="{{pathToRoot}}img/projects/placeSquare/world2.png">	
 </center>
 
-## İnsanlar İçin Kod Yazmak
+## Anlaşılır Kod Yazmak
 
 Bilgisayarın anlayıp çalıştırabildiği bir program yazmak etkileyici bir başarı. Fakat asıl hedeflemen gereken insanların da kolaylıkla anlayabileceği programlar yazmak.
 
@@ -41,9 +42,11 @@ Eğer kullanmadıysan programını `for` döngüsü kullanacak şekilde düzenle
 
 ## Bonus Görev
 
-Bu aşamaya kadar geldiğin için tebrik ederiz! Eğer erken bitirdiysen programının 1x1 boyutundaki dünyada da çalıştığını kontrol et.
+Great job so far!  There is one more topic, called <code>if</code> statements, that you will learn soon.  Once you have learned that, you can optionally revisit this problem if you have extra time, and try to modify your program using everything you've learned, including <code>if</code> statements, to make Karel draw the following square, where all beepers in the square outline do not border any walls. This means that 1x1 and 2x2 worlds will not have any beepers in them.  The world could also be any size, including non-square.
 
-Daha sonra programını Karel'e aşağıda gördüğün beeper'ların sınıra bir birim daha uzak olduğu kareyi yerleştirecek şekilde güncelle. Bu Karel'in 1x1 ve 2x2 boyutundaki dünyalara hiç beeper yerleştirmeyeceği anlamına da geliyor.
+Bu aşamaya kadar geldiğin için tebrik ederiz! Yakın zamanda <code>if</code> ifadesini kullanarak nasıl şartlara bağlı ifadeler yazabileceğini öğreneceksin. <code>if</code> ifadelerini öğrendikten sonra istersen bu problemi tekrar ziyaret edebilir ve aşağıdaki bonus görevi tamamlayabilirsin.
+
+Programını Karel'e aşağıda gördüğün beeper'ların sınıra bir birim daha uzak olduğu kareyi yerleştirecek şekilde güncelle. Bu Karel'in 1x1 ve 2x2 boyutundaki dünyalara hiç beeper yerleştirmeyeceği anlamına da geliyor. Bu sefer Karel'in dünyası kare olmak zorunda değil, herhangi bir dikdörtgen boyutlarında olabilir.
 
 Bonus görevi yapmak tamamen isteğe bağlıdır, zorunlu değildir.
 
