@@ -4,7 +4,7 @@ credit: Lisa Yan
 translation: Ahmet Uysal
 
 Ders Notları: [Karel Referansı]({{pathToRoot}}tr/handouts/karel.html)<br/>
-Çalışılan Örnekler: [Beeper Hattı]({{pathToRoot}}tr/projects/beeperLine/index.html)<br/>
+Çözümlü Örnekler: [Beeper Hattı]({{pathToRoot}}tr/projects/beeperLine/index.html)<br/>
 Dosya: `square_karel.py`
 
 Göreviniz Karel'in dünyasının sınırlarını aşağıda görebileceğiniz resimdeki gibi beeper'larla donatmak.
