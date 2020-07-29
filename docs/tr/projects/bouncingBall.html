@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Bouncing Ball</title>
+<title>CS Bridge  | Zıp Zıp Top</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -440,48 +440,51 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Bouncing Ball
+		Zıp Zıp Top
 	</h1>
 
 		<p>
-			Hazırlayan: Based on an example by Mehran Sahami
+			Hazırlayan: Mehran Sahami&#039;nin bir örneği temel alınmıştır.
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>File: <code>bouncingball.py</code></p>
-<p>Write a graphics program that creates a ball and makes it bounce around the screen. Ignore gravity and have a collision with the right or left wall reflect the x direction of the ball, and have a collision with the top or bottom wall change the y direction of the ball.</p>
-<p>The figure below shows a ball moving through a bounce with the bottom wall.</p>
+		<p>Dosya: <code>bouncingball.py</code></p>
+<p>Bir top oluşturan ve ekranın etrafında onu zıplatan bir grafik programı yazın. Yerçekimini göz ardı edin. Top sol ve sağ duvara çarptığında x eksenindeki yönünü, üst ya da alt duvara çarptığında ise y eksenindeki yönünü değiştirin.</p>
+<p>Aşağıdaki şekil alt duvardan sekerek hareket eden bir topu gösteriyor.</p>
 <p><center>
   <img style="width:600px;" src="../../img/projects/bouncingBall/demo.png">
 </center></p>
-<h2 id="milestone-1-create-a-ball">Milestone 1: Create a Ball</h2>
-<p>It can be any size.</p>
-<h2 id="milestone-2-make-it-move">Milestone 2: Make it move</h2>
-<p>Loop forever and in the loop update the ball and pause.  You can pause by adding <code>import time</code> to the top of your program and doing the following:</p>
+<h2 id="asama-1-bir-top-yarat">Aşama 1: Bir Top Yarat</h2>
+<p>Top herhangi bir boyutta olabilir.</p>
+<h2 id="asama-2-topu-hareket-ettir">Aşama 2: Topu Hareket Ettir</h2>
+<p>Sonsuza kadar çalışan bir döngü yazın. Döngünün içinde topun konumunu güncelleyin ve durdurun. Programınızın en yukarısına <code>import time</code> satırını ekleyerek ve aşağıdakini yaparak topu durdurabilirsiniz:</p>
 <pre><code>time.sleep(seconds)
 </code></pre>
 
-<p>If you don't pause, the computer will animate faster than the human eye can see the movement!</p>
-<p>There is also a method to move a graphical shape on the canvas:</p>
+<p>Eğer durdurmazsanız bilgisayar insan gözünün hareketi görebileceğinden çok hızlı olarak animasyonu oynatır!</p>
+<p>Tuval üzerinde grafik bir şekil taşıma fonksiyonu vardır:</p>
 <pre><code>canvas.move(object, dx, dy)
 </code></pre>
 
-<p><em>dx</em> is the number of pixels the object will move in the x direction.<BR>
-<em>dy</em> is the number of pixels the object will move in the y direction.</p>
-<h2 id="milestone-3-bounce">Milestone 3: Bounce</h2>
-<p>Now, before you update the position of the ball, you should check if the ball has collided with the wall and if so you should update the direction it is moving.</p>
-<p>Reflections should follow the rule "the angle of incidence equals the angle of reflection". This turns out to be simple to implement. You simply flip the x direction if you hit a left or right wall and flip the y direction if you hit a bottom or top wall.ß</p>
-<p>How do you figure out the position of the ball? You can use the methods:</p>
+<p><em>dx</em>, nesnenin x yönünde hareket edeceği piksel sayısıdır. <BR>
+<em>dy</em>, nesnenin y yönünde hareket edeceği piksel sayısıdır. <BR></p>
+<h2 id="asama-3-topu-sektir">Aşama 3: Topu Sektir</h2>
+<p>Şimdi, topun konumunu güncellemeden önce, top duvara çarpmış mı diye kontrol etmeli ve çarptıysa, hareket ettiği yönü güncellemelisiniz.</p>
+<p>Yansımalar, "gelen açı yansıyan açıya eşittir" kuralına uymalı. Ve bunu kod olarak yazması gayet kolay. Top sol ya da sağ duvara çarparsa x doğrultusundaki yönünü, alt ya da üst duvara çarparsa y doğrultusundaki yönünü değiştirerek bunu başarabilirsiniz.</p>
+<p>Topun konumunu nasıl bulacaksınız? Şu fonksiyonları kullanabilirsiniz:</p>
 <pre><code>canvas.get_left_x(obj)
 canvas.get_top_y(obj)
 </code></pre>
 
-<p>A python function that may come in handy is <code>abs(val)</code> - it returns the absolute value of a number.</p>
+<p>İşinize yarayabilecek başka bir Python fonksiyonu ise <code>abs(val)</code> - bir sayının mutlak değerini döndürür.</p>
 	</div>
 </div>
 

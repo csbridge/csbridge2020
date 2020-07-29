@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Target</title>
+<title>CS Bridge  | Hedef Tahtası</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -440,35 +440,38 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Target
+		Hedef Tahtası
 	</h1>
 
 		<p>
-			Hazırlayan: Written by Eric Roberts and Mehran Sahami
+			Hazırlayanlar: Eric Roberts, Mehran Sahami
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../en/handouts/graphics.html">Graphics Reference</a><br/>
+		<p>Handouts: <a href="../../en/resources/graphics.html">Graphics Reference</a><br/>
 Worked Example: <a href="../../en/projects/drawpeople.html">Draw People</a><br/>
 File: <code>target.py</code></p>
-<p>Suppose that you've been hired to produce a program that draws an image of an archery target that looks like this:</p>
+<p>Farz edin ki, şunun gibi görünen bir okçuluk hedef tahtasının resmini çizdiren bir program ortaya koymanız için işe alındınız:</p>
 <p><center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/target/target.png">
 </center></p>
-<p>This figure is simply three ovals, two red and one white, drawn in the correct order. The outer circle should have a radius of 150 pixels, the white circle has a radius of 100 pixels, and the inner red circle has a radius of 50 pixels. The figure should be centered in the canvas.</p>
-<h1 id="constants">Constants</h1>
-<p>You may notice that the starter code for this project has the lines:</p>
+<p>Bu şekil sadece doğru sırayla çizilmiş üç ovalden oluşuyor, ikisi kırmızı ve biri beyaz. En dış çemberin yarıçapı 150 piksel, beyaz çemberin yarıçapı 100 piksel, ve en içteki kırmızı çemberin yarıçapı ise 50 piksel. Şekil pencereye göre ortalanmalı.</p>
+<h1 id="sabitler">Sabitler</h1>
+<p>Bu proje için başlangıç kodunun main() fonksiyonunun dışına yazılmış olan şu satırlara sahip olduğunu fark edebilirsiniz:</p>
 <pre><code>BIG_CIRCLE_RADIUS = 150
 MEDIUM_CIRCLE_RADIUS = 100
 SMALL_CIRCLE_RADIUS = 50
 </code></pre>
 
-<p>which are written outside the main() function. These lines define constants: variables whose values never change. Since they are defined outside all functions, you can read their values at any point in the program. Though you could write this program using the numbers 150, 100, and 10 directly wherever you need them, using constants makes your program much easier to read.</p>
+<p>Bu satırlar sabitleri tanımlar: yani değerleri asla değişmeyen değişkenler. Bunlar tüm fonksiyonların dışında tanımlandığından, değerlerini programın herhangi bir noktasında okuyabilirsiniz. Bu programı 150, 100 ve 10 sayılarını doğrudan ihtiyacınız olan her yerde kullanarak da yazabilirsiniz, ancak sabitleri kullanmak programınızın okunmasını çok daha kolay hale getirir.</p>
 	</div>
 </div>
 

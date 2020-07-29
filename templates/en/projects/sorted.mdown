@@ -44,7 +44,7 @@ To create a list of numbers use:
 my_list = []
 ```
 
-Recall that you can read an intenger from the user using:
+Recall that you can read an integer from the user using:
 
 ```
 number = int(input(prompt))

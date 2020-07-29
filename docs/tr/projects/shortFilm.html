@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Short Film</title>
+<title>CS Bridge  | Kısa Film</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -440,68 +440,72 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Short Film
+		Kısa Film
 	</h1>
 
 		<p>
-			Hazırlayan: Written by Chris Piech and Keith Schwarz.
+			Hazırlayanlar: Chris Piech, Keith Schwarz.
 		</p>
 
+		<p>
+			Çeviren: Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../tr/handouts/graphics.html">Graphics Reference</a><br/>
-Worked Example: <a href="../../tr/projects/halfgreen.html">Half Green</a>,
-<a href="../../tr/projects/target.html">Target</a><br/>
-File: <code>short_film.py</code></p>
-<p>Did you know that animated movies like <i>Toy Story</i>, <i>Up</i>, and <i>Frozen</i> are made using computer programs? In this assignment you are going to use a program to create a short film.</p>
-<h2 id="display-message-method">Display Message Method</h2>
-<p>Every movie has a beginning and an end. Sometimes it will start "Once Upon a Time...", sometimes it will start with a title, sometimes it will start with something sillier. At the end of the movie it sometimes says "The end."</p>
-<p>Add a function to your program that will draw a message on the screen (on a black background) and leave the message for two seconds.</p>
+		<p>Ders Notları: <a href="../../en/resources/graphics.html">Grafikler Referansı</a><br/>
+Çözümlü Örnek: <a href="../../en/projects/halfgreen.html">Yarı Yeşil</a>,
+<a href="../../en/projects/target.html">Hedef Tahtası</a><br/>
+Dosya: <code>short_film.py</code></p>
+<p><i>Oyuncak Hikayesi</i>, <i>Yukarı Bak (Up)</i> ve <i>Frozen</i> gibi animasyon filmlerinin bilgisayar programları kullanılarak yapıldığını biliyor muydunuz? Bu ödevde kısa bir film oluşturmak için bir program kullanacaksınız.</p>
+<h2 id="mesaj-goruntuleme-fonksiyonu">Mesaj Görüntüleme Fonksiyonu</h2>
+<p>Her filmin bir başlangıcı ve bir sonu vardır. Bazen "Bir Zamanlar ..." diye, bazen bir başlık ile, bazense daha komik bir şeyle başlarlar. Filmin sonunda ise bazen "Son" yazar.</p>
+<p>Programınıza ekranda bir mesaj çizecek bir fonksiyon ekleyin (siyah arka plan üzerine) ve mesajı iki saniye ekranda görüntüleyin.</p>
 <pre><code>def display_message(canvas, message):
   ...
 </code></pre>
 
-<p>The start message should look like the screen below.</p>
+<p>Başlangıç mesajı, aşağıdaki ekranda olduğu gibi görünmelidir.</p>
 <p><center>
   <img style="width:500px" src="../../img/projects/shortfilm/onceUpon.png">
 </center></p>
-<p>The font (and font size) that we used was:</p>
+<p>Burada kullandığımız font (ve font büyüklüğü) şunlardır:</p>
 <pre><code>canvas.set_font(label, &quot;Papyrus&quot;, 40)
 </code></pre>
 
-<p>After two seconds you should remove the rectangle that is the background and the text that is the message. To do so you can use the <code>delete</code> method (which takes an object that was on the canvas and removes it).</p>
+<p>İki saniye sonra arka plan olan dikdörtgeni ve ileti olan metni kaldırmalısınız. Bunu yapmak için <code>delete</code> fonksiyonunu kullanabilirsiniz (Bu fonksiyon tuval üzerinde bulunan bir nesneyi parametre olarak alır ve ekrandan kaldırır).</p>
 <pre><code>canvas.delete(your_object)
 </code></pre>
 
-<p>Of course, you can use this method as much as you want to tell your story!</p>
-<h2 id="setting-sun">Setting Sun</h2>
-<p>Your movie must have one scene to start: A setting sun. draw the sky, the earth and a sun. Then, slowly animate the sun descending. The sky should take up the top half of the canvas, and the earth should take up the second half. Considering the following images from the start of the program, and the program after a few seconds.</p>
+<p>Tabii ki, bu fonksiyonu hikayenizi anlatmak için istediğiniz kadar kullanabilirsiniz!</p>
+<h2 id="gunesi-batrmak">Güneşi Batırmak</h2>
+<p>Filminizin başlaması için bir sahne olmalı: Gün batımı. Bunu yapmak için önce gökyüzünü, dünyayı ve güneşi çizin. Ardından, yavaş yavaş güneşin inişi animasyonunu gerçekleştirin. Gökyüzü tuvalin üst yarısını ve yer ise ikinci yarıyı kaplamalıdır. Programın başlangıcından ve birkaç saniye sonrasından alınmış aşağıdaki kareleri göz önünde bulundurun.</p>
 <p><center>
   <img style="width:100%" src="../../img/projects/shortfilm/animation.png">
 </center></p>
-<h2 id="get_sun_color-method"><code>get_sun_color</code> Method</h2>
-<p>Write a method that takes some parameter, and returns the color of the sun. You should specify the parameter of this method: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.</p>
+<h2 id="get_sun_color-fonksiyonu"><code>get_sun_color</code> Fonksiyonu</h2>
+<p>Write a function that takes some parameter, and returns the color of the sun. You should specify the parameter of this function: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.</p>
+<p>Bazı parametreleri alan ve güneşin rengini döndüren bir fonksiyon yazın. Bu fonksiyonun parametresini belirtmelisiniz: örneğin, zaman (filmin başlangıcından bu yana kare sayısı olarak) veya güneşin y konumu veya Güneş'in doğru rengini elde etmek için yararlı olacağını düşündüğünüz herhangi bir şey olabilir.</p>
 <pre><code>def getSunColor(...):
   ...
   return color
 </code></pre>
 
-<p>Have the method return "yellow", "orange", or "red" based on how many iterations have passed.</p>
-<h2 id="finishing-up">Finishing up</h2>
-<p>After your movie ends, display a finishing message using your <code>display_message()</code> method defined earlier. The end message should look like the screen below.</p>
+<p>Fonkisyonun, kaç yineleme geçtiğine göre "ye", "turuncu" veya "kırmızı" renklerinden birini döndürmesini sağlayın.</p>
+<h2 id="son-dokunuslar">Son Dokunuşlar</h2>
+<p>Filminiz bittikten sonra, daha önce tanımlanan <code>display_message()</code> fonksiyonunuzu kullanarak bir bitirme mesajı görüntüleyin. Bitiş mesajı aşağıdaki ekrana benzemelidir.</p>
 <p><center>
   <img style="width:500px" src="../../img/projects/shortfilm/theEnd.png">
 </center></p>
-<h1 id="make-it-better">Make It Better</h1>
-<p>Do anything you want to make your story more captivating than just a setting sun. Can you tell a tale of love or action? Don't forget to use methods to make your life easier.</p>
+<h1 id="daha-da-iyilestir">Daha da İyileştir</h1>
+<p>Hikayenizi batan bir güneşten daha büyüleyici hale getirmek için istediğiniz her şeyi yapın. Bir aşk veya aksiyon hikayesi anlatabilir misiniz? Hayatınızı kolaylaştırmak için fonksiyonları kullanmayı unutmayın.</p>
 <p><center>
   <img style="width:500px" src="../../img/projects/shortfilm/poster.jpg">
 </center></p>
-<p>You can also add more objects to make your scene more captivating. Add a rainbow (or a double rainbow)? Do you have an idea about what sunsets have always been missing? How about a lit up Bosphorus Bridge or Charles Bridge?</p>
+<p>Sahnenizi daha büyüleyici hale getirmek için daha fazla nesne de ekleyebilirsiniz. Bir gökkuşağı (veya çift gökkuşağı) nasıl olur? Gün batımlarının her zaman nesinin eksik olduğu hakkında bir fikriniz var mı? Yanan Boğaz Köprüsü'ne veya Charles Köprüsü'ne ne dersiniz?</p>
 <div class="row">
   <div class="col-md-12 col-lg-6">
     <img style="width:100%" src="../../img/projects/shortfilm/sunsetTrees.png"></img>
