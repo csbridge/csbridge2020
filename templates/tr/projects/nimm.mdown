@@ -59,9 +59,9 @@ Oyuncu 2, ortadan 1 mi 2 taş mı almak istersiniz? 1
 Oyuncu 1, kazandı!
 ```
 
-Nimm oynamak için bir program yazın. İşinizi kolaylaştırmak için problemi daha küçük kilometre taşlarına ayırdık. Bu problemi çözmek için çok zamanınız var. Probleme yavaşça, parça parça yaklaşmaya çalışın.
+Nimm oynamak için bir program yazın. İşinizi kolaylaştırmak için problemi daha küçük aşamalara ayırdık. Bu problemi çözmek için çok zamanınız var. Probleme yavaşça, parça parça yaklaşmaya çalışın.
 
-## <span>1.</span> Kilometre Taşı
+## <span>1.</span> Aşama
 
 20 taşla başlayın. Ortadan taş alma işlemini ve ortada kalan toplam taş sayısını hiç taş kalmayana kadar tekrarlayın. Hangi oyuncunun sırası olduğuyla ilgili endişelenmeyin. Bu aşamada ortadan bir ya da iki taş alındığını kontrol etmenize de gerek yok. `input(mesaj)`fonksiyonunu kullanın, unutmayın bu fonksiyon `mesaj`ı yazdırıp kullanıcının konsola bir şey girmesini bekler.
 
@@ -78,7 +78,7 @@ Ortadan 1 mi 2 taş mı almak istersiniz? 3
 Oyunu kaybettiniz
 ```
 
-## <span>2.</span> Kilometre Taşı
+## <span>2.</span> Aşama
 Hangi oyuncunun sırası olduğunu takip etmek için bir integer (tamsayı) değişkeni oluşturun (unutmayın, toplamda iki oyuncu var). Kullanıcıya hangi oyuncunun sırası olduğunu söyleyin. Ortadan taş alındığında kullanıcı sayısını değiştirin.
 
 ```
@@ -97,7 +97,7 @@ Oyuncu 2, ortadan 1 mi 2 taş mı almak istersiniz? 1
 Oyunu kaybettiniz
 ```
 
-## <span>3.</span> Kilometre Taşı
+## <span>3.</span> Aşama
 Her turda sadece bir ya da iki taşın alındığından emin olun. Kullanıcıdan kaç taş almak istediklerini (kullanıcı girdisi) okuduktan sonra taş sayısının geçerli olup olmadığını kontrol etmek ve kullanıcı geçerli bir değer girene kadar sormaya devam etmek için şu şekilde bir yapı kullanabilirsiniz:
 
 ```
@@ -105,7 +105,7 @@ while kullanici_girdisi gecersizken:
    input = int(input("Lütfen 1 ya da 2 girin: "))
 ```
 
-## <span>4.</span> Kilometre Taşı
+## <span>4.</span> Aşama
 Kazanan oyuncuyu ilan edin.
 
 ## İlaveler
