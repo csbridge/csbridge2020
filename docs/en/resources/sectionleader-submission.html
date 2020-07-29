@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | How to use PyCharm</title>
+<title>CS Bridge  | Accessing Student Submissions</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -440,7 +440,7 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		How to use PyCharm
+		Accessing Student Submissions
 	</h1>
 
 </div>
@@ -451,102 +451,71 @@ filePath - the total path to the markdown file being rendered in this template
 	<div class="col-xs-12">
 		<div class="toc">
 <ul>
-<li><a href="#download-a-starter-project">Download a starter project</a></li>
-<li><a href="#import-a-project">Import a project</a></li>
-<li><a href="#edit-code">Edit code</a></li>
-<li><a href="#run-programs">Run programs</a><ul>
-<li><a href="#how-to-run-python-programs-in-pycharm">How to run Python programs in Pycharm</a></li>
-<li><a href="#how-to-run-karel-programs-in-pycharm">How to run Karel programs in Pycharm</a><ul>
-<li><a href="#running-karel-in-different-worlds">Running Karel in different worlds</a></li>
+<li><a href="#submission-overview">Submission Overview</a></li>
+<li><a href="#ed-lessons-view-student-submissions">Ed Lessons: View student submissions</a><ul>
+<li><a href="#how-to-submit">How to submit</a><ul>
+<li><a href="#1-go-to-lessons-in-ed">1. Go to Lessons in Ed</a></li>
+<li><a href="#2-select-submission">2. Select Submission</a></li>
+<li><a href="#3-upload">3. Upload</a></li>
+<li><a href="#4-submit">4. Submit</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#open-project-opens">Open Project Opens</a></li>
+<li><a href="#office-hours">Office Hours</a></li>
 </ul>
 </div>
-<p>Once you have downloaded a copy of PyCharm as described in the “Installing PyCharm” handout on the course website, your next task is to understand how to write and run Karel programs using PyCharm.</p>
-<h2 id="download-a-starter-project">Download a starter project</h2>
-<ol>
-<li>In the navigation bar above, go to the front page of the CS Bridge website and click on the morning or evening project you want to download. Suppose you download the starter code for Day 1 ("Morning project [here]").</li>
-<li>You will now have a folder called <code>Day1PM.zip</code>. Unzip it by double-clicking.<ul>
-<li>In some cases, the browser will also automatically unzip/extract the folder when you download it if you have the appropriate software for expanding files from a ZIP archive (extraction software is usually built in to Windows 7, 8, and 10 or macOS).</li>
-<li>The unzipped contents of the ZIP file will be a directory named Day1PM that contains the project.</li>
-<li><strong>Note</strong> If you are on a Windows computer, you may have a second Day1PM folder nested outside the outer Day1PM folder. <strong>Make sure to use the innermost Day1PM folder</strong>.</li>
-</ul>
-</li>
-<li>Move that folder to some place on your computer where you can keep track of it when you want to load the project.</li>
-</ol>
-<h2 id="import-a-project">Import a project</h2>
-<ol>
-<li>Open PyCharm (see Figure 1 below, left-hand side). Select the project you want to work on, or click "Open".</li>
-<li>If you already have PyCharm open with a different project, go to the top of the screen and click "File"-&gt;"Open".</li>
-<li>
-<p>Navigate to the Day1PM folder and open it. Open the <i><strong>folder</strong></i>, rather than a particular file you want to edit.</p>
-</li>
-<li>
-<p>If you already have another project open, PyCharm will prompt you to either open the project in your existing window or in a new window. You can select either.</p>
-</li>
-<li>
-<p>You should see a view shown in Figure 1 below, right-hand side.</p>
-</li>
-</ol>
+<h2 id="submission-overview">Submission Overview</h2>
+<p>Students submit their code to Edstem twice a day. <strong>It is okay if they don't finish everything, or if they are still working.</strong> We just want to know that they are keeping up with the material. Please be sure to give this messaging to your session <u>in the first tea time</u>. </p>
+<p>They will also need to submit their code for office hours and debugging help. They do not need to submit if they have onceptual questions or are looking for general problem-solving approaches. They can resubmit as many times as they want.</p>
+<p><a href="../../en/resources/submission-oh.html">Click here</a> for the Student submission process.</p>
+<h2 id="ed-lessons-view-student-submissions">Ed Lessons: View student submissions</h2>
+<p>Once a student submits their code, you will be able to view their code and try it out in your own PyCharm application. The code is available via Lessons on <a href="https://us.edstem.org/courses/968/discussion/">Ed</a>.</p>
 <p><center>
-  <img style="width:100%" src="../../img/resources/pycharm-how-to/import.png">
-  <p style="text-align:center"><b>Figure 1</b>: The first window that opens when you start PyCharm (left) should have an Open option for you to select a project. After opening a project, you should see the default PyCharm landing view (right).</p>
+  <img style="width:60%" src="../../img/resources/submission-sl/lessons1.png">
+  <p style="text-align:center"><b>Ed Lessons</b>: In the main CS Bridge class (not your Section), select the Lessons icon (looks like a book).</p>
 </center></p>
-<h2 id="edit-code">Edit code</h2>
-<p>The <strong>Project toolbar</strong> on the left (Figure 1, right) shows the current project we are working on (Day1PM) as well as all of its contents: folders, Python files, etc. For Karel programs, you do not need to inspect or edit any files in the <strong>karel</strong> or <strong>worlds</strong> folders.</p>
-<p>Double-click on a program (say, <code>newspaper_karel.py</code>) and it will open up a text editor view in the main window of PyCharm.</p>
-<p>It's time to code! <!--Check out the <a href="../../en/resources/pycharm-how-to.html#debug">debugging tips</a> section below for tips and tricks when programming.--></p>
-<h2 id="run-programs">Run programs</h2>
-<h3 id="how-to-run-python-programs-in-pycharm">How to run Python programs in Pycharm</h3>
+<h3 id="how-to-submit">How to submit</h3>
+<h4 id="1-go-to-lessons-in-ed">1. Go to Lessons in Ed</h4>
+<h4 id="2-select-submission">2. Select Submission</h4>
+<p>Click on the correct session that you would like to submit for (correct day and correct time, morning or evening). For example, for the first day, click on "Day 1 PM".</p>
 <p><center>
-  <img style="width:50%" src="../../img/resources/pycharm-how-to/terminal.png">
-  <p style="text-align:center"><b>Figure 2</b>: The PyCharm terminal used to run Python programs.</p>
+  <img style="width:60%" src="../../img/resources/submission-oh/lessons2.png">
+  <p style="text-align:center"><b>Submit portal</b>: On the Lessons page, click on the session you would like to submit for.</p>
 </center></p>
-<p>To run a program in PyCharm, click the "Terminal" option at the bottom of the screen. To run any program, all you have to do is type the following command into the Terminal and hit "Enter":</p>
+<h4 id="3-upload">3. Upload</h4>
+<p>For each file you have, copy it from PyCharm using Select All (Mac OS X: ⌘-A, Windows: Ctrl-A) and then paste into the Ed editor (see the below images). <strong>Do this for each file you want to submit</strong> by clicking on the tabs.</p>
+<p>You can also click on the plus (<code>+</code>) button in the Ed editor and directly upload your Python or Karel file into the editor.
+<center>
+  <img style="width:45%" src="../../img/resources/submission-oh/selectall.png">
+  <img style="width:45%" src="../../img/resources/submission-oh/selectall-paste.png">
+  <p style="text-align:center"><b>Upload</b>: (1) Left: Copy from PyCharm. (2) Right: Select correct tab and paste into Ed.</p>
+</center></p>
+<h4 id="4-submit">4. Submit</h4>
+<p>Finally, click on "Submit" in the bottom-right corner to submit via Ed. You can submit multiple times, and Ed will save your work.</p>
+<p><center>
+  <img style="width:45%" src="../../img/resources/submission-oh/submit-button.png">
+  <img style="width:45%" src="../../img/resources/submission-oh/submit-complete.png">
+  <p style="text-align:center"><b>Submission</b>: (1) Left: Hit Submit in the bottom-right corner. (2) Right: Submission done!</p>
+</center></p>
+<h2 id="office-hours">Office Hours</h2>
+<p>Go to the office hour Zoom link (there are two different ones for morning and evening). Type your name and what help you are looking for. Choose from one of the following categories:</p>
 <ul>
-<li><strong>Mac Users</strong>: <code>python3 insert_name_here.py</code></li>
-<li><strong>PC Users</strong>: <code>py insert_name_here.py</code></li>
+<li>
+<p><strong>Concepts</strong></p>
+<p>If you would like a Section Leader to go over certain concepts (e.g., variables)</p>
+</li>
+<li>
+<p><strong>Approach</strong></p>
+<p>If you are working on an activity or project and would like tips on how to approach the problem. </p>
+</li>
+<li>
+<p><strong>Debugging</strong></p>
+<p>If you are working on an activity or project and would like a Section Leader to look directly at your code. <strong>If you are looking for debugging help, you must submit your code via Ed first.</strong></p>
+</li>
 </ul>
-<p>The terminal (also known as a <strong>console</strong>) will then print output and accept user text input, depending on how you write your program.</p>
-<p>As a side note, in many handouts we might use the Mac convention of running programs by using the command <b><code>python3 &lt;program name&gt;</code></b>. If you are a PC user, you should instead use the command <b><code>py &lt;program name&gt;</code></b>. Just by convention on the PC, you run the Python interpreter using the command <b><code>py</code></b> (as opposed to <b><code>python3</code></b> on the Mac).</p>
-<h3 id="how-to-run-karel-programs-in-pycharm">How to run Karel programs in Pycharm</h3>
-<p>Karel programs are also Python programs!</p>
-<ol>
-<li>Follow the steps above to run the Karel program. You should then see something like this:</li>
-</ol>
-<p><center>
-  <img style="width:60%" src="../../img/resources/pycharm-how-to/newspaper_karel.png">
-  <p style="text-align:center"><b>Figure 3</b>: The Karel display that appears when running <code>newspaper_karel.py</code>, including Karel’s world, a Run Program button, and a Load World button</p>
-</center></p>
-<ol>
-<li>
-<p>If you then press the <b>Run Program</b> button, Karel will go through the steps in the <b>`main()</b> function that you wrote.</p>
-</li>
-<li>
-<p>Use the scroll bar to speed Karel up.</p>
-</li>
-<li>
-<p><b>Exit out of the window when you are done</b>. The next time you run any Karel program from the PyCharm Terminal (even if it's the same program), it will create a new Karel window.</p>
-</li>
-</ol>
-<h4 id="running-karel-in-different-worlds">Running Karel in different worlds</h4>
-<p>Suppose we are working on Hospital Karel and we think we have gotten our code to work in the default world. Press the <b>Load World</b> button and select and open the world in which you want to run Karel. You can then test Karel in this new world by clicking on the <b>Run Program</b> button.</p>
-<!--
-## Debug
--->
-
-<h2 id="open-project-opens">Open Project Opens</h2>
-<p>There are several options when opening a project.
-* This Window: Replaces the current project in your current window with the new project, closing the current project.
-* New Window: Opens the new project in a new, separate window, keeping your current project in the original window.
-* Attach: Adds the new project folder to your current window, keeping the old and new projects separate but both open.
-* Cancel: Don't open the new project.</p>
-<p><center>
-  <img style="width:60%" src="../../img/resources/pycharm-how-to/pycharm_open.png">
-</center></p>
+<p>The Section Leaders in the main Zoom room will then move you into a Breakout room with a Section Leader.</p>
+<p>Happy debugging!</p>
 	</div>
 </div>
 
