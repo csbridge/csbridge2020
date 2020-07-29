@@ -1,6 +1,6 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Funky Functions
-credit: Written by Chris, Bryce, and Lisa
+title: Fırlama Fonksiyonlar
+credit: Chris, Bryce, Lisa
 translation: Serhat Arslan, Ceren Kocaoğullar
 
 ## 1. Mad Max
