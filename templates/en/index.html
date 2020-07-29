@@ -24,6 +24,21 @@
 	
 <br />
 
+<%
+import csv
+with open("templates/announcements/times.csv", 'r') as f:
+  reader = csv.reader(f, delimiter=',')
+  header = next(reader)
+%>
+
+% for row in reader:
+  % datetime_start, datetime_end, alert_type, category, location = row
+  <div class="alert {{alert_type}} visible-during" data-visible-start="{{datetime_start}}" data-visible-end="{{datetime_end}}">
+    At this time, you should be in <b>{{category}}</b> at <a href="{{location}}">this link</a>. 
+    Password is on <a href="https://us.edstem.org/courses/968/discussion/96933">Ed!</a>
+  </div>
+% end
+
 
 <!-- <div class="alert alert-success">
 	<b>Who are you?</b> Fill in the <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">class survey</a>.

@@ -1,0 +1,5 @@
+datetime_start,datetime_end,alert_type,category,location
+20200728 17:32,20200728 17:37,alert-success,Morning Lecture,https://stanford.zoom.us/j/96577560446
+20200728 17:32,20200728 17:37,alert-info,Morning Quick Start,https://stanford.zoom.us/j/96577560446
+20200728 17:32,20200728 17:37,alert-info,Section,https://stanford.zoom.us/j/96577560446
+20200728 17:32,20200728 17:37,alert-warning,Morning Office Hours,https://stanford.zoom.us/j/96577560446
