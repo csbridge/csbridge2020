@@ -1,5 +1,5 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Robot Face
+title: Robot Yüzü
 credit: Eric Roberts tarafından yazılmış, Chris Piech ve Lisa Yan tarafından güncellenmiştir.
 solution: soln.py
 translation: Serhat Arslan, Ceren Kocaoğullar
