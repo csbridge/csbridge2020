@@ -1,44 +1,49 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: That's Some Sum!
+title: Toplama Diye Buna Derim!
 credit: Bryce C-R, Julia Lee, Chris Piech, and TY Huang
+tr_title: Biraz Toplama!
+çeviren: Kazim Okan Akgül
+Dosya: `some_sum.py`
 
-File: `some_sum.py`
-
-Write a program that reads in 10 integers from the user and then outputs the sum of the entered values.  Here's what the output of the program should look like:
+Kullanıcıdan 10 integer okuyan ve sonra girilen değerlerin toplamını veren bir program yazın. Programın çıktısı aşağıdaki gibi olmalıdır:
 
 ```
-Enter 10 nums. I will show you the sum!
-Please enter integer number 1: 1
-Please enter integer number 2: 3
-Please enter integer number 3: 5
-Please enter integer number 4: 7
-Please enter integer number 5: 9
-Please enter integer number 6: 2
-Please enter integer number 7: 4
-Please enter integer number 8: 6
-Please enter integer number 9: 8
-Please enter integer number 10: 10
-The sum is: 55
+10 sayı girin. Size toplamı göstereceğim!
+Lütfen bir integer girin 1: 1
+Lütfen bir integer girin 2: 3
+Lütfen bir integer girin 3: 5
+Lütfen bir integer girin 4: 7
+Lütfen bir integer girin 5: 9
+Lütfen bir integer girin 6: 2
+Lütfen bir integer girin 7: 4
+Lütfen bir integer girin 8: 6
+Lütfen bir integer girin 9: 8
+Lütfen bir integer girin 10: 10
+Toplam: 55
 ```
 
-## Loop indices
-Remember that for a `for` loop:
+## Döngü belirteci
+
+`for` döngüsü kalıbı:
+
 ```
 for i in range(15):
-    # some code...
+    # kod parçası...
 ```
 
-The counter variable `i` will always start at 0 and increase each iteration until it gets to 14, so the for loop runs a total of 15 times.
+Sayaç değişkeni `i` her zaman 0'dan başlar ve 14'e ulaşana kadar birer birer artar, böylece for döngüsü toplam 15 kez çalışır.
 
-## Printing variables, continued
-Remember that you can print values to the user in a string like this:
+## Değişken yazdırma, devam
+
+Kullanıcılara böyle bir string değeri yazdırabileceğinizi unutmayın:
 
 ```
-"The number is " + str(variable_name) + "!!"
+"Sayınız " + str(değişken_ismi) + "!!"
 ```
 
-You can also print out values to the user when requesting user input:
+Kullanıcı girdisi isterken de değerleri yazdırabilirsiniz:
+
 ```
 x = 5
-value = input("Please enter the number + str(x) + ": ")
+değer = input("Lütfen sayıyı giriniz + str(x) + ": ")
 ```
