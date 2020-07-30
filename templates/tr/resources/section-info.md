@@ -1,5 +1,5 @@
 template: templates/tr/resources/faqTemplate.ptl
-title: Grup Buluşmalarında Öğrencilerden Beklediklerimiz
+title: Grup Buluşmalarından Beklentiler
 
 <div align="right"><i>Burada yer alan bütün zaman bilgileri Pasifik Standart Zamanı'na göredir.</i></div>
 
