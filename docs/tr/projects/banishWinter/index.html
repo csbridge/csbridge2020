@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Banish Winter (with solution)</title>
+<title>CS Bridge  | Kışa Veda (ve çözümü)</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -440,13 +440,16 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Banish Winter (with solution)
+		Kışa Veda (ve çözümü)
 	</h1>
 
 		<p>
-			Hazırlayanlar: Based on a handout by Eric Roberts, with updates by Zach Birnholz and Lisa Yan
+			Hazırlayanlar: Eric Roberts&#039;ın ders notlarını temel alır, Zach Birnholz ve Lisa Yan tarafından güncellenmiştir
 		</p>
 
+		<p>
+			Çeviren: Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
@@ -455,15 +458,15 @@ filePath - the total path to the markdown file being rendered in this template
 	<div class="col-xs-12">
 		<p>Handouts: <a href="../../../en/resources/karel.html">Karel Reference</a><br/>
 File: <code>banish_winter.py</code><br/></p>
-<p>Karel wants to walk across Stanford/CTU/Koç campus and spruce it up a bit for Spring. Spring has sprung, but the campus trees haven't gotten the memo and are still leafless. Karel needs to walk across campus from west to east, adorning all trees with artificial leaves and transforming the campus as follows:</p>
+<p>Karel, Stanford / CTU / Koç kampüsünde yürümek ve bahar için biraz bahçe işleri yapmak istiyor. Bahar başladı, ancak kampüs ağaçları henüz bunu fark edemedi ve hala yapraksızlar. Karel, batıdan doğuya doğru kampüs boyunca yürümeli, tüm ağaçları yapay yapraklarla süslemeli ve kampüsü şu şekilde dönüştürmeli:</p>
 <p><center>
 <img style="width:800px" src="../../../img/projects/banishWinter/banishWinter1.png">
 </center></p>
-<p>The problem is complicated because Karel doesn't know how tall each tree is, nor does she know the distances between trees. She does know, however, that she has just enough beepers in her beeper bag starting out to decorate all of the trees, and that the world (the CTU campus) is 9 spaces wide. Try to intuit the program requirement by looking at the two snapshots above (the world is called <code>banish_winter.w</code>. Your program must therefore also work for the following configuration (<code>banish_winter2.w</code>):</p>
+<p>Sorun karmaşık çünkü Karel her ağacın ne kadar uzun olduğunu ya da ağaçlar arasındaki mesafeleri bilmiyor. Ancak beeper çantasında tüm ağaçları süslemeye başlayan yeterince beeper olduğunu ve dünyanın (CTU kampüsü) 9 boşluk genişliğinde olduğunu biliyor. Yukarıdaki iki anlık görüntüye bakarak program gereksinimini anlamaya çalışın (dünya dosyasının adı <code>banish_winter.w</code>.) Programınız yalnızca bu dünyada değil, aşağıdaki dünya için de çalışmalıdır (<code>banish_winter2.w</code>):</p>
 <p><center>
 <img style="width:800px" src="../../../img/projects/banishWinter/banishWinter2.png">
 </center></p>
-<p>How can we write a program that works in any world that satisfies the above requirements?</p>
+<p>Yukarıdaki gereksinimleri karşılayan <strong>herhangi bir dünyada</strong> çalışan bir programı nasıl yazabiliriz?</p>
 	</div>
 </div>
 
