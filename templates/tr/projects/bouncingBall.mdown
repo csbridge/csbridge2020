@@ -1,50 +1,52 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Bouncing Ball
-credit: Based on an example by Mehran Sahami
+title: Zıp Zıp Top
+credit: Mehran Sahami'nin bir örneği temel alınmıştır.
+translation: Serhat Arslan, Ceren Kocaoğullar
 
-File: `bouncingball.py`
+Dosya: `bouncingball.py`
 
-Write a graphics program that creates a ball and makes it bounce around the screen. Ignore gravity and have a collision with the right or left wall reflect the x direction of the ball, and have a collision with the top or bottom wall change the y direction of the ball.
+Bir top oluşturan ve ekranın etrafında onu zıplatan bir grafik programı yazın. Yerçekimini göz ardı edin. Top sol ve sağ duvara çarptığında x eksenindeki yönünü, üst ya da alt duvara çarptığında ise y eksenindeki yönünü değiştirin.
 
-The figure below shows a ball moving through a bounce with the bottom wall.
+Aşağıdaki şekil alt duvardan sekerek hareket eden bir topu gösteriyor.
 
 <center>
   <img style="width:600px;" src="{{pathToRoot}}img/projects/bouncingBall/demo.png">
 </center>
 
-## Milestone 1: Create a Ball
-It can be any size.
+## Aşama 1: Bir Top Yarat
 
-## Milestone 2: Make it move
-Loop forever and in the loop update the ball and pause.  You can pause by adding `import time` to the top of your program and doing the following:
+Top herhangi bir boyutta olabilir.
+
+## Aşama 2: Topu Hareket Ettir
+
+Sonsuza kadar çalışan bir döngü yazın. Döngünün içinde topun konumunu güncelleyin ve durdurun. Programınızın en yukarısına `import time` satırını ekleyerek ve aşağıdakini yaparak topu durdurabilirsiniz:
 
 ```
 time.sleep(seconds)
 ```
 
-If you don't pause, the computer will animate faster than the human eye can see the movement!
+Eğer durdurmazsanız bilgisayar insan gözünün hareketi görebileceğinden çok hızlı olarak animasyonu oynatır!
 
-There is also a method to move a graphical shape on the canvas:
+Tuval üzerinde grafik bir şekil taşıma fonksiyonu vardır:
 
 ```
 canvas.move(object, dx, dy)
 ```
 
-_dx_ is the number of pixels the object will move in the x direction.<BR>
-_dy_ is the number of pixels the object will move in the y direction.
+_dx_, nesnenin x yönünde hareket edeceği piksel sayısıdır. <BR>
+_dy_, nesnenin y yönünde hareket edeceği piksel sayısıdır. <BR>
 
-## Milestone 3: Bounce
+## Aşama 3: Topu Sektir
 
-Now, before you update the position of the ball, you should check if the ball has collided with the wall and if so you should update the direction it is moving.
+Şimdi, topun konumunu güncellemeden önce, top duvara çarpmış mı diye kontrol etmeli ve çarptıysa, hareket ettiği yönü güncellemelisiniz.
 
-Reflections should follow the rule "the angle of incidence equals the angle of reflection". This turns out to be simple to implement. You simply flip the x direction if you hit a left or right wall and flip the y direction if you hit a bottom or top wall.ß
+Yansımalar, "gelen açı yansıyan açıya eşittir" kuralına uymalı. Ve bunu kod olarak yazması gayet kolay. Top sol ya da sağ duvara çarparsa x doğrultusundaki yönünü, alt ya da üst duvara çarparsa y doğrultusundaki yönünü değiştirerek bunu başarabilirsiniz.
 
-How do you figure out the position of the ball? You can use the methods:
+Topun konumunu nasıl bulacaksınız? Şu fonksiyonları kullanabilirsiniz:
 
 ```
 canvas.get_left_x(obj)
 canvas.get_top_y(obj)
 ```
 
-A python function that may come in handy is `abs(val)` - it returns the absolute value of a number.
-
+İşinize yarayabilecek başka bir Python fonksiyonu ise `abs(val)` - bir sayının mutlak değerini döndürür.

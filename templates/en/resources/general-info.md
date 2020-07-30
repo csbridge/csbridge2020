@@ -125,7 +125,7 @@ We want you to learn a lot in this course but we also really want you to have **
     You should regularly check the class website for handouts, announcements and other information, including the most up-to-date information on assignments.
 </p>
 <!-- B. Class Discussion Forum -->
-#### B. <h2 id="C4">Class Discussion Forum</h2> 
+#### B. <u>Class Discussion Forum</u>
 <p>
     Our class discussion forum is hosted on Ed here: <a href='https://us.edstem.org/'>https://us.edstem.org/</a><br>
     All communication with the teaching team and students will take place in Ed. <b>Do not share personal contact information with anyone in the course.</b>

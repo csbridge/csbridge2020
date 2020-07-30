@@ -1,8 +1,9 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Sorted Numbers
+title: Sıralayıcı
 credit: Chris Piech
+translation: Serhat Arslan, Ceren Kocaoğullar
 
-Ask the user to enter 10 numbers, then print thoses numbers in sorted order.  Here's example output:
+Kullanıcıdan 10 sayı vermesini isteyin ve bu sayıları sıralı olarak yazdırın. İşte size bir örnek çıktı:
 
 ```
 > 9
@@ -27,50 +28,51 @@ Ask the user to enter 10 numbers, then print thoses numbers in sorted order.  He
 34
 ```
 
-Store the numbers that the user entered in a list. You can sort the content of a list using:
+Kullanıcının verdiği sayıları listede saklayın. Bir liste içinde bulunan sayıları sıralamak için iu fonksiyonu kullanabilirsiniz:
 
 ```
 my_list.sort()
 ```
 
-Calling sort re-orders the elements in the specified list. For example, calling sort on the following list has the given result:
+"sort" fonksiyonunu çağırmak, verilen liste içindeki sayıları yeniden sıralar. Örnek olarak aşağıdaki listenin sıralanmasını inceleyebilirsiniz:
 
 ![Image of list of numbers before and after sorting - afterwards the list is in ascending order]({{pathToRoot}}img/projects/sorted/sorting.png){: style="width: 400px"}
 
-## Hints
-To create a list of numbers use:
+## İpuçları
+
+Sayılardan oluşan bir liste yaratmak için:
 
 ```
 my_list = []
 ```
 
-Recall that you can read an intenger from the user using:
+Kullanıcıdan bir integer (tamsayı) almak için şunu yapabileceğinizi hatırlayın:
 
 ```
 number = int(input(prompt))
 ```
 
-To add an element to a list:
+Listeye bir eleman eklemek için:
 
 ```
 my_list.append(newValue)
 ```
 
-To get an element from a list:
+Listedeki bir elemanı almak için:
 
 ```
 my_list[index]
 ```
 
-To loop over all elements in a list:
+Listedeki tüm elemanlar üzerinde gezmek için:
 
 ```
 for i in range(len(my_list)):
-    # do something with my_list[i]
+    # my_list[i] ile bir şeyler yap
 }
 
 -- OR --
 
 for elem in my_list:
-	# do something with elem
+	# elem ile bir şey yap
 ```

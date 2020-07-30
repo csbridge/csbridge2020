@@ -3,7 +3,7 @@ title: Snow
 credit: Chris Piech
 
 Examples: [Rockets]({{pathToRoot}}en/projects/rocketShip.html)<br/>
-File: snow.py
+File: `snow.py`
 
 Animate circles (snow) falling down from the sky and piling up on the ground.
 
@@ -12,6 +12,7 @@ Animate circles (snow) falling down from the sky and piling up on the ground.
 Use an animation loop. Each time through the loop:
 
 1. Animate all snow flakes not on the ground
-+ Generate a new snow flake at the top of the screen with 10% probability, at a random horizontal location
-+ call `update()` on the canvas
-+ Pause for 10 milliseconds
+
+- Generate a new snow flake at the top of the screen with 10% probability, at a random horizontal location
+- Call `update()` on the canvas
+- Pause for 10 milliseconds

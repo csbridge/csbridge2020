@@ -36,7 +36,7 @@ Bu ödevdeki başarı, sorunu yönetilebilir parçalara ayırmaya ve bir sonraki
 
 ## 1. Tuğlaları oluştur
 
-Oyuna başlamadan önce, problemin çeşitli parçalarını kurmalısınız. Bu sebeple, run metodunu biri oyun parçalarının kurulumunu yapan, diğeriyse oyunu oynatan iki metot çağrısı olarak kodlamak muhtemelen mantıklı olacaktır. Kurulumun önemli bir parçası aşağıdaki gibi ekranın üst tarafındaki tuğla sıralarını oluşturmaktan ibarettir:
+Oyuna başlamadan önce, problemin çeşitli parçalarını kurmalısınız. Bu sebeple, run fonksiyonunu biri oyun parçalarının kurulumunu yapan, diğeriyse oyunu oynatan iki fonksiyon çağrısı olarak kodlamak muhtemelen mantıklı olacaktır. Kurulumun önemli bir parçası aşağıdaki gibi ekranın üst tarafındaki tuğla sıralarını oluşturmaktan ibarettir:
 
 <center>
 <img style="padding:10px;max-width:100%" src="{{pathToRoot}}img/projects/breakout/breakoutBricks.png"></img>

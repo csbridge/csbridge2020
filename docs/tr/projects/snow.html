@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Snow</title>
+<title>CS Bridge  | Karlar Düşer</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -201,7 +201,7 @@
 	            	<a href="../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../tr/projects/sunset.html">Kısa Film</a>
+	          		<a href="../../tr/projects/shortFilm.html">Kısa Film</a>
 	          	</li>
 
         <!-- Day 7 -->
@@ -440,29 +440,36 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Snow
+		Karlar Düşer
 	</h1>
 
 		<p>
 			Hazırlayan: Chris Piech
 		</p>
 
+		<p>
+			Çeviren: Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Examples: <a href="../../tr/projects/rocketShip.html">Rockets</a><br/>
-File: snow.py</p>
-<p>Animate circles (snow) falling down from the sky and piling up on the ground.</p>
+		<p>Çözümlü Örnekler: <a href="../../tr/projects/rocketShip.html">Roketler</a><br/>
+Dosya: <code>snow.py</code></p>
+<p>Daireleri (kar) gökyüzünden düşecek ve yerde birikecek şekilde hareket ettirin.</p>
 <p><img src="../../img/projects/snow/snow.png" alt="a screenshot of the snow program with snow falling and stopping at the bottom of the screen" class="center" style="width: 90%" /></p>
-<p>Use an animation loop. Each time through the loop:</p>
+<p>Bir animasyon döngüsü kullanın. Her döngüde:</p>
 <ol>
-<li>Animate all snow flakes not on the ground</li>
-<li>Generate a new snow flake at the top of the screen with 10% probability, at a random horizontal location</li>
-<li>call <code>update()</code> on the canvas</li>
-<li>Pause for 10 milliseconds</li>
+<li>
+<p>Yerde olmayan tüm kar tanelerini hareketlendirin</p>
+</li>
+<li>
+<p>Ekranın en üstünde rastgele yatay bir yerde %10 olasılıkla yeni bir kar tanesi oluşturun</p>
+</li>
+<li>Kanvas üzerinde <code>update()</code> fonksiyonunu çağırın</li>
+<li>10 milisaniye boyunca duraklatın</li>
 </ol>
 	</div>
 </div>
