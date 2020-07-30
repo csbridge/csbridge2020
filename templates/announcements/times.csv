@@ -93,4 +93,3 @@ datetime_start,datetime_end,alert_type,category,location
 20200812 07:00, 20200812 08:00,alert-info,social-activity.ptl
 20200820 10:30, 20200807 12:00,alert-info,social-activity.ptl
 20200731 12:00, 20200804 10:00,alert-warning,installation.ptl
-20200729 16:31, 20200729 17:05,alert-warning,installation.ptl
