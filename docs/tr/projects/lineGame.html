@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Line Game</title>
+<title>CS Bridge  | Çizgi Oyunu</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -201,7 +201,7 @@
 	            	<a href="../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../tr/projects/sunset.html">Kısa Film</a>
+	          		<a href="../../tr/projects/shortFilm.html">Kısa Film</a>
 	          	</li>
 
         <!-- Day 7 -->
@@ -440,29 +440,32 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Line Game
+		Çizgi Oyunu
 	</h1>
 
 		<p>
 			Hazırlayan: Chris Piech
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Write a game where the user can use the mouse to move a ball. A path animates coming down the screen and if the ball hits a barrier the game ends.</p>
+		<p>Kullanıcının ekranın altında bulunan topu mouse ile hareket ettirebildiği bir oyun yazın. Oyunda bir patika ekranda aşağıya doğru ilerlemeli ve eğer top kenarlara değerse oyun bitmeli.</p>
 <p><img src="../../img/projects/lineGame/screenshot.png" alt="a screenshot of the line game with a white path on a black background and the user's dot showing in blue that they must keep within the white path." class="center" style="width: 400px" /></p>
-<p>The general approach we recommend you follow is:</p>
+<p>Aşağıdaki adımları uygulamak size yardımcı olabilir:</p>
 <ul>
-<li>make the background black,</li>
-<li>add white rectangles (the path)</li>
-<li>make sure that all corners of the user's ball are always colliding with something :)</li>
+<li>Arka planı siyah yapın,</li>
+<li>Beyaz dikdörtgenler ekleyin (patika)</li>
+<li>Topun tüm köşelerinin sürekli olarak bir obje ile üst üste geldiğinden emin olun :).</li>
 </ul>
-<p>You can either generate all the rectangles before the user starts playing (meaning the path will eventually end), or you can add them just when they need to become visible (meaning the path can continue forever).  In both cases, you should store the rectangles you need to animate in a list, and then every frame move those rectangles down, and then make sure that list is still up to date.</p>
-<p>You can also experiment with different variations.  For instance, in the screenshot above, all the path blocks are the same size.  You could experiment with them having random widths (left / first image), or have more than one block added at a time (right / second image), or other variations.  Design up whatever you'd like!</p>
+<p>Tüm dikdörtgenleri kullanıcı oynamaya başlamadan önce oluşturabilirsiniz (bu şekilde yol eninde sonunda biter) veya sadece görünür hale gelmeleri gerektiğinde ekleyebilirsiniz (yani yol sonsuza kadar devam edebilir). Her iki durumda da, hareketlendirmeniz gereken dikdörtgenleri bir listede saklamalı ve ardından her adımda bu dikdörtgenleri aşağı taşımalı ve listenin hala güncel olduğundan emin olmalısınız.</p>
+<p>Farklı varyasyonlarla da deney yapabilirsiniz. Örneğin, yukarıdaki ekran görüntüsünde, tüm yol blokları aynı boyuttadır. Rastgele genişliklere (sol / ilk görüntü) sahip dikdörtgenler oluşturabilir, bir kerede birden fazla blok ekleyebilir (sağ / ikinci görüntü) veya diğer varyasyonları deneyebilirsiniz. İstediğinizi tasarlayın!</p>
 <div class="row">
     <div class="col-md-12 col-lg-6">
         <img src="../../img/projects/lineGame/refined.png" alt="a screenshot of the line game with a white path on a black background and the user's dot showing in blue that they must keep within the white path.  This implementation has random width blocks." class="center" style="width: 400px" />
@@ -472,7 +475,7 @@ filePath - the total path to the markdown file being rendered in this template
     </div>
 </div>
 
-<p>You could also implement an alternative game where the user must dodge randomly created dropping blocks.</p>
+<p>Ayrıca, kullanıcının rasgele oluşturulmuş düşen bloklarını atlatması gereken alternatif bir oyun da yazabilirsiniz.</p>
 <p><img src="../../img/projects/lineGame/alt.png" alt="a screenshot of a game where a user must move the mouse to move a dot to dodge random falling blocks." class="center" style="width: 400px" /></p>
 	</div>
 </div>

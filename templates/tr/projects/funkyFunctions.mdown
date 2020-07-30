@@ -1,45 +1,50 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Funky Functions
-credit: Written by Chris, Bryce, and Lisa
+title: Fırlama Fonksiyonlar
+credit: Chris, Bryce, Lisa
+translation: Serhat Arslan, Ceren Kocaoğullar
 
 ## 1. Mad Max
 
-Example: [Average Method]({{pathToRoot}}tr/projects/averageMethod.html}}) <br/>
-File: `mad_max.py`
+Örnek: [Ortalama Fonksiyonu]({{pathToRoot}}tr/projects/averageMethod.html}}) <br/>
+Dosya: `mad_max.py`
 
-Complete the program by filling in the `mad_max` function that returns the largest of three numbers:
+Programı, üç sayının maksimumunu döndüren `mad_max` fonksiyonunu yazarak tamamlayın.
 
 ```
 def mad_max(x, y, z):
-    # your code here
+    # kodunuzu buraya yazın
 ```
-The `main` function has already been written for you:
+
+`main` fonksiyonu sizin için yazılmış durumda:
+
 ```
 def main():
-    print("The max of 4, 5, and 6 is:", mad_max(4, 5, 6))
-    print("The max of -4, 4, and 0 is:", mad_max(-4, 4, 0))
-    print("The max of 3, 2, and 1 is:", mad_max(3, 2, 1))
-    print("The max of 0, 0, and 0 is:", mad_max(0, 0, 0))
+    print("4, 5, ve 6 sayılarının maksimumu:", mad_max(4, 5, 6))
+    print("-4, 4, ve 0 sayılarının maksimumu:", mad_max(-4, 4, 0))
+    print("3, 2, ve 1 sayılarının maksimumu:", mad_max(3, 2, 1))
+    print("0, 0, ve 0 sayılarının maksimumu:", mad_max(0, 0, 0))
 ```
 
-Your output should look like this:
+Çıktınız şöyle görünmeli:
+
 ```
-The max of 4, 5, and 6 is: 6
-The max of -4, 4, and 0 is: 4
-The max of 3, 2, and 1 is: 3
-The max of 0, 0, and 0 is: 0
+4, 5, ve 6 sayılarının maksimumu: 6
+-4, 4, ve 0 sayılarının maksimumu: 4
+3, 2, ve 1 sayılarının maksimumu:
+0, 0, ve 0 sayılarının maksimumu:: 0
 ```
 
-## 2. Draw Trees
-Handouts: [Graphics Reference]({{pathToRoot}}tr/handouts/graphics.html)<br/>
-Example: [Draw People]({{pathToRoot}}tr/projects/drawpeople.html}}),
+## 2. Ağaçlar Çiz
+
+Ders Notları: [Graphics Reference]({{pathToRoot}}tr/handouts/graphics.html)<br/>
+Örnekler: [Draw People]({{pathToRoot}}tr/projects/drawpeople.html}}),
 [Half Green]({{pathToRoot}}tr/projects/halfgreen.html}})<br/>
-File: `draw_trees.py`
+Dosya: `draw_trees.py`
 
+`draw_tree` fonksiyonunu doldurun. Bu fonksiyon verilen `(x, y)` koordinatlarında _*tabanı*_ ortalanmış bir ağaç çizer:
 
-Fill in the `draw_tree` function that draws a tree with the _*base*_ of its trunk centered at the provided `(x, y)` position.
+`main` fonksiyonu sizin için yazılmış durumda:
 
-The `main` function has already been written for you:
 ```
 def main():
     draw_tree(50, 150)
@@ -50,7 +55,7 @@ def main():
 
 ```
 
-Each tree should have a trunk with a width of 20 pixels (`TRUNK_WIDTH`) and a height of 80 pixels (`TRUNK_HEIGHT`). The leaves should have a radius of 30 pixels (`LEAVES_RADIUS`). Your output should look like this:
+Her ağacın gövdesi 20 piksel (`TRUNK_WIDTH`) genişliğinde ve 80 piksel `TRUNK_HEIGHT`) yüksekliğinde olmalıdır. Yaprakların yarıçapları 30 piksel (`LEAVES_RADIUS`) olmalıdır. Çıktınız aşağıdakine benzer olmalıdır:
 
 <center>
   <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/madmethods/demo.png">

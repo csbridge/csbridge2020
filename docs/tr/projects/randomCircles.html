@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Random Circles</title>
+<title>CS Bridge  | Rastgele Daireler</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -201,7 +201,7 @@
 	            	<a href="../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../tr/projects/sunset.html">Kısa Film</a>
+	          		<a href="../../tr/projects/shortFilm.html">Kısa Film</a>
 	          	</li>
 
         <!-- Day 7 -->
@@ -440,35 +440,38 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Random Circles
+		Rastgele Daireler
 	</h1>
 
 		<p>
-			Hazırlayan: Based on a handout by Eric Roberts
+			Hazırlayan: Eric Roberts&#039;ın ders notları
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Gül Sena Altıntaş
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Write a graphics program that draws a set of ten circles with different sizes, positions, and colors. Each circle should have a randomly chosen color, a randomly chosen radius between 70 and 200 pixels, and a randomly chosen position on the canvas, subject to the condition that the entire circle must fit inside the canvas without extending past the edge. The following sample run shows one possible outcome:</p>
+		<p>Farklı boyutlarda, konumlarda ve renklerde on daire çizen bir grafik programı yazın. Her dairenin rastgele seçilmiş bir rengi, 70 ile 200 piksel arasından rastgele seçilmiş yarıçapı, ve kanvas üzerinde rastgele seçilmiş bir pozisyonu olmalı. Seçilen bu pozisyona göre dairenin tamamı kenarlardan taşmayacak şekilde kanvasın içine sığmalı. Aşağıda programın örnek bir sonucunu görebilirsiniz:</p>
 <p><center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/randomCircles/demo1.png">
 </center></p>
-<p>On some runs of this program you might not see ten circles. Why?</p>
-<p>To generate random numbers, <code>import random</code> at the top of your program.  You can then use it to generate random numbers like this:</p>
-<pre><code># generates a random int in the range (min, max) 
+<p>Programı her çalıştırdığınızda on daire görmeyebilirsiniz. Sizce neden?</p>
+<p>Rastgele sayılar üretmek için, programınızın başına <code>import random</code> satırını ekleyin. Daha sonra aşağıdaki şekilde rastgele sayılar elde edebilirsiniz:</p>
+<pre><code># (min, max) aralığında rastgele bir int (tamsayı) üretir
 random.randint(min, max)
 </code></pre>
 
-<p>You can generate random colors using the canvas:</p>
-<pre><code># generates a random color name
+<p>Canvas'ı kullanarak rastgele renkler elde edebilirsiniz:</p>
+<pre><code># rastgele renk ismi üretir
 canvas.get_random_color()
 </code></pre>
 
-<p>If you finish early, consider making random doughnuts.</p>
+<p>Erken bitirirseniz, rastgele tatlı çörekler (doughnut) yapmayı deneyebilirsiniz.</p>
 	</div>
 </div>
 

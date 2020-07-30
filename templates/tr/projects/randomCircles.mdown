@@ -1,27 +1,27 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Random Circles
-credit: Based on a handout by Eric Roberts
+title: Rastgele Daireler
+credit: Eric Roberts'ın ders notları
+translation: Serhat Arslan, Gül Sena Altıntaş
 
-Write a graphics program that draws a set of ten circles with different sizes, positions, and colors. Each circle should have a randomly chosen color, a randomly chosen radius between 70 and 200 pixels, and a randomly chosen position on the canvas, subject to the condition that the entire circle must fit inside the canvas without extending past the edge. The following sample run shows one possible outcome:
+Farklı boyutlarda, konumlarda ve renklerde on daire çizen bir grafik programı yazın. Her dairenin rastgele seçilmiş bir rengi, 70 ile 200 piksel arasından rastgele seçilmiş yarıçapı, ve kanvas üzerinde rastgele seçilmiş bir pozisyonu olmalı. Seçilen bu pozisyona göre dairenin tamamı kenarlardan taşmayacak şekilde kanvasın içine sığmalı. Aşağıda programın örnek bir sonucunu görebilirsiniz:
 
 <center>
   <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/randomCircles/demo1.png">
 </center>
 
-On some runs of this program you might not see ten circles. Why?
+Programı her çalıştırdığınızda on daire görmeyebilirsiniz. Sizce neden?
 
-To generate random numbers, `import random` at the top of your program.  You can then use it to generate random numbers like this:
+Rastgele sayılar üretmek için, programınızın başına `import random` satırını ekleyin. Daha sonra aşağıdaki şekilde rastgele sayılar elde edebilirsiniz:
 
 ```
-# generates a random int in the range (min, max) 
+# (min, max) aralığında rastgele bir int (tamsayı) üretir
 random.randint(min, max)
 ```
-
-You can generate random colors using the canvas:
+Canvas'ı kullanarak rastgele renkler elde edebilirsiniz:
 
 ```
-# generates a random color name
+# rastgele renk ismi üretir
 canvas.get_random_color()
 ```
 
-If you finish early, consider making random doughnuts.
+Erken bitirirseniz, rastgele tatlı çörekler (doughnut) yapmayı deneyebilirsiniz.

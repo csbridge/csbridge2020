@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | String Art</title>
+<title>CS Bridge  | Çizgi Sanatı</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -201,7 +201,7 @@
 	            	<a href="../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../tr/projects/sunset.html">Kısa Film</a>
+	          		<a href="../../tr/projects/shortFilm.html">Kısa Film</a>
 	          	</li>
 
         <!-- Day 7 -->
@@ -440,25 +440,44 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		String Art
+		Çizgi Sanatı
 	</h1>
 
 		<p>
-			Hazırlayan: Based on a demonstration by Eric Roberts
+			Hazırlayan: Eric Roberts&#039;ın bir gösterimi temel alınmıştır.
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../en/handouts/graphics.html">Graphics Reference</a><br/></p>
-<p>By repeatedly drawing lines, we can make a curved looking shape. Consider the example below where we imagine dots evenly space along the bottom and the left of a canvas. If we connect the topmost dot on the left edge to the left most dot on the right edge, we would be a line like the picture of the far left. If we then connect the next 10 dots we get a picture in the middle and if we connect all dots we get the picture on the right.</p>
+		<p>Ders Notları: <a href="../../en/resources/graphics.html">Grafik Referansı</a><br/></p>
+<p>Tekrar tekrar çizgiler çizerek, kavisli görünen bir şekil yaratabiliriz. Kanvasın (canvas) altı ve solu boyunca eşit aralıklarla ayrılmış noktaları hayal ettiğimiz aşağıdaki örneğe bakalım. Eğer sol kenarda en üstteki nokta ile alt kenarda en soldaki noktayı birleştirirsek, soldaki resimdeki doğru oluşur. Eğer sıradaki 10 noktayı da aynı şekilde birleştirirsek ortadaki resmi ve bütün noktaları birleştirirsek sağdaki resmi elde ederiz.</p>
 <p><center>
   <img style="width:600px;" src="../../img/projects/stringArt/startToEnd.png">
 </center></p>
-<p>Write a program that creates the "curve" in the above right image using straight lines.</p>
+<p>Doğruları kullanarak üstte sağdaki resimdeki "eğriyi" yaratan bir program yazın.</p>
+<h2 id="ipuclar">İpuçları</h2>
+<ul>
+<li>Bir <code>for</code> döngüsünün döngü değişkenini kullanabileceğinizi unutmayın:<pre><code>for i in range(NUM_LINES):
+    ... some code that uses i here to draw lines...
+</code></pre>
+</li>
+</ul>
+<p>Bu program, döngü değişkeni <code>i</code> kullanılan tek bir<code>for</code> döngüsü ile tamamlanabilir. Nasıl olduğunu görüyor musunuz? (İpucu: Sol kenardaki en üstteki noktanın <em>yalnızca</em> alt kenardaki en soldaki noktaya bağlanabileceğini biliyoruz. Diyelim ki bu <code>i = 0</code> olduğunda çizdiğimiz çizgi. <code>i = 1</code> olduğunda neler olur? Sol kenarın üstündeki ikinci nokta, alt kenardaki yalnızca belirli bir noktaya bağlanabilir! Ve bu şekilde devam eder...)</p>
+<ul>
+<li>
+<p><a href="../../en/resources/graphics.html">Grafik Referansı</a> ("Show/Hide Quick Reference" butonuna basın) kanvas üzerine nasıl çizgi çizileceği konusunda işinize yarayabilir.</p>
+</li>
+<li>
+<p>Fikrinizi çizmek için bir kalem ve kağıt kullanın! Bilgisayarı kullanarak kod yazmamıza rağmen, bazen ilk önce ne olduğunu düşündüğünüzü çizmek ve sonra kodu yazmak yararlı olabilir.</p>
+</li>
+</ul>
 	</div>
 </div>
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Sorted Numbers</title>
+<title>CS Bridge  | Sıralayıcı</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -201,7 +201,7 @@
 	            	<a href="../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../tr/projects/sunset.html">Kısa Film</a>
+	          		<a href="../../tr/projects/shortFilm.html">Kısa Film</a>
 	          	</li>
 
         <!-- Day 7 -->
@@ -440,20 +440,23 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Sorted Numbers
+		Sıralayıcı
 	</h1>
 
 		<p>
 			Hazırlayan: Chris Piech
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Ask the user to enter 10 numbers, then print thoses numbers in sorted order.  Here's example output:</p>
+		<p>Kullanıcıdan 10 sayı vermesini isteyin ve bu sayıları sıralı olarak yazdırın. İşte size bir örnek çıktı:</p>
 <pre><code>&gt; 9
 &gt; 2
 &gt; 12
@@ -476,38 +479,38 @@ filePath - the total path to the markdown file being rendered in this template
 34
 </code></pre>
 
-<p>Store the numbers that the user entered in a list. You can sort the content of a list using:</p>
+<p>Kullanıcının verdiği sayıları listede saklayın. Bir liste içinde bulunan sayıları sıralamak için iu fonksiyonu kullanabilirsiniz:</p>
 <pre><code>my_list.sort()
 </code></pre>
 
-<p>Calling sort re-orders the elements in the specified list. For example, calling sort on the following list has the given result:</p>
+<p>"sort" fonksiyonunu çağırmak, verilen liste içindeki sayıları yeniden sıralar. Örnek olarak aşağıdaki listenin sıralanmasını inceleyebilirsiniz:</p>
 <p><img alt="Image of list of numbers before and after sorting - afterwards the list is in ascending order" src="../../img/projects/sorted/sorting.png" style="width: 400px" /></p>
-<h2 id="hints">Hints</h2>
-<p>To create a list of numbers use:</p>
+<h2 id="ipuclar">İpuçları</h2>
+<p>Sayılardan oluşan bir liste yaratmak için:</p>
 <pre><code>my_list = []
 </code></pre>
 
-<p>Recall that you can read an intenger from the user using:</p>
+<p>Kullanıcıdan bir integer (tamsayı) almak için şunu yapabileceğinizi hatırlayın:</p>
 <pre><code>number = int(input(prompt))
 </code></pre>
 
-<p>To add an element to a list:</p>
+<p>Listeye bir eleman eklemek için:</p>
 <pre><code>my_list.append(newValue)
 </code></pre>
 
-<p>To get an element from a list:</p>
+<p>Listedeki bir elemanı almak için:</p>
 <pre><code>my_list[index]
 </code></pre>
 
-<p>To loop over all elements in a list:</p>
+<p>Listedeki tüm elemanlar üzerinde gezmek için:</p>
 <pre><code>for i in range(len(my_list)):
-    # do something with my_list[i]
+    # my_list[i] ile bir şeyler yap
 }
 
 -- OR --
 
 for elem in my_list:
-    # do something with elem
+    # elem ile bir şey yap
 </code></pre>
 	</div>
 </div>

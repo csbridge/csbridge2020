@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Beeper Line</title>
+<title>CS Bridge  | Beeper Hattı</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -201,7 +201,7 @@
 	            	<a href="../../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../../tr/projects/sunset.html">Kısa Film</a>
+	          		<a href="../../../tr/projects/shortFilm.html">Kısa Film</a>
 	          	</li>
 
         <!-- Day 7 -->
@@ -440,13 +440,16 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Beeper Line
+		Beeper Hattı
 	</h1>
 
 		<p>
 			Hazırlayan: Written by Chris Piech
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Gül Sena Altıntaş
+		</p>
 </div>
 <hr/>
 
@@ -455,11 +458,11 @@ filePath - the total path to the markdown file being rendered in this template
 	<div class="col-xs-12">
 		<p>Handouts: <a href="../../../en/handouts/karel.html">Karel Reference</a><br/>
 File: <code>beeper_line.py</code></p>
-<p>Your goal is to fill the first row of Karel's world with beepers. You can assume that Karel starts in the bottom left corner, facing east. For example, if you ran your program on the world on the left, it should produce the world on the right.</p>
+<p>Hedefiniz Karel'ın dünyasının ilk satırını beeper'larla doldurmak. Karel'ın doğuya (east) dönük bir şekilde sol alt köşede başladığını varsayabilirsiniz.  Örneğin, programınızı soldaki dünyada çalıştırırsanız, sağdaki dünyayı üretmeli.</p>
 <p><center>
     <img style="width:600px"  src="../../../img/projects/beeperLine/beeperLine1.png"> <br />
-</center></p>
-<p>Your program should also work for worlds of different sizes. For example if we run the EXACT same program on this slightly larger world, Karel should still be able to place a full line of beepers without crashing. This means we can't use a for loop. We don't know before hand how big the world is going to be!</p>
+</center>
+Programınız farklı büyüklüklerdeki dünyalar için de çalışmalı. Örneğin AYNI programı biraz daha büyük bir dünyada çalıştırırsak Karel beeper'ları doğru şekilde yerleştirebilmeli. Bu demek oluyor ki <code>for</code> döngüsü kullanamayız, çünkü programın çalıştırılacağı dünyanın büyüklüğünü önceden bilmiyoruz.</p>
 <p><center>
     <img style="width:700px"  src="../../../img/projects/beeperLine/beeperLine2.png"> <br />
 </center></p>
