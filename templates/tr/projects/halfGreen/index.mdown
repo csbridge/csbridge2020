@@ -1,18 +1,20 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Half Green
-credit: Problem written by Chris Piech
+title: Yarısı Yeşil
+credit: Chris Piech
 solution: soln.py
+translation: Serhat Arslan, Ceren Kocaoğullar
 
-Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
+Ders Notları: [Grafikler Referansı]({{pathToRoot}}en/resources/graphics.html)<br/>
 
-We are going to create 1000 circles in random positions on the screen. Circles closer to the bottom-left corner will be blue and circles closer to the top-right corner will be green. This is an example of return values.
+
+Ekranda rastgele konumlarda 1000 adet daire oluşturacağız. Sol alt köşeye daha yakın olan daireler mavi olurken sağ üste yakın olanlar yeşil olacak. Bu örnek döndürülen (return) değerlere dair bir örnek.
 
 <center>
 <img style="width:500px" src="{{pathToRoot}}img/projects/halfGreen/halfGreen.png">	
 </center>
 
-* Each circle is 20 pixels by 20 pixels.
+* Her daire 20 piksele 20 piksel.
 
-* Note every circle is drawn fully on the canvas.
+* Her dairenin tam olarak tuval üzerine çizildiğine dikkat edin.
 
-* The `time.sleep(0.002)` function call waits 2 milliseconds between drawing circles.
+* `time.sleep(0.002)` fonksiyon çağrısı daireler çizerken her seferinde 2 milisaniye bekliyor.
