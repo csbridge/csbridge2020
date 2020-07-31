@@ -1,10 +1,10 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Hole Puncher
+title: Delgeç
 credit: Problem written by Chris Piech.
+translation: Serhat Arslan, Demet Tümkaya
 solution: soln.py
 
-This example lets you treat your computer like a piece of paper and your mouse like a hole puncher. The user should be able to click anywhere on the window and create holes (ovals). 
-
+Bu örnek, bilgisayarınızı bir kağıt ve farenizi bir delgeç gibi kullanmanıza izin verir. Kullanıcı ekranda herhangi bir yere tıklayabilmeli ve orada delikler (ovaller) oluşturabilmelidir.
 <center>
   <!--<img style="width:500px;border:1px solid #000000"
           alt = "Hole puncher demo"
@@ -13,4 +13,4 @@ This example lets you treat your computer like a piece of paper and your mouse l
   <img style="width:500px;border:1px solid #000000" src="demo.gif">
 </center>
 
-The constant `HOLE_RADIUS` describes the radius of each hole you will punch. 10 is a good size for this.
+`HOLE_RADIUS` sabiti, delinecek olan her deliğin yarıçapını temsil eder. 10, bunun için iyi bir boyuttur.
