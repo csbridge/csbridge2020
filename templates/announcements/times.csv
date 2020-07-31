@@ -1,4 +1,7 @@
 datetime_start,datetime_end,alert_type,category,location
+20200731 17:00, 20200804 10:00,alert-warning,installation.ptl
+20200803 14:00, 20200804 10:00,alert-warning,Day1.ptl
+20200729 14:37, 20200731 17:00,alert-warning,default.ptl
 20200804 10:00, 20200804 10:45,alert-danger,lecture-pm.ptl
 20200805 10:00, 20200805 10:45,alert-danger,lecture-pm.ptl
 20200806 10:00, 20200806 10:45,alert-danger,lecture-pm.ptl
