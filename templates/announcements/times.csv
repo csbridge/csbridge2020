@@ -1,5 +1,4 @@
 datetime_start,datetime_end,alert_type,category,location
-20200729 14:37,20200731 12:00,alert-warning,pre-program.ptl
 20200804 10:00, 20200804 10:30,alert-danger,lecture-pm.ptl
 20200805 10:00, 20200805 10:30,alert-danger,lecture-pm.ptl
 20200806 10:00, 20200806 10:30,alert-danger,lecture-pm.ptl

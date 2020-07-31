@@ -47,15 +47,23 @@ $(document).ready(function(){
 	});
 
 
+  var removeDefault = false;
 	// only show certain content if between the specified timestamps
 	$(".visible-during").each(function(i) {
 	    var dateStrStart = $(this).attr("data-visible-start");
 	    var dateStrEnd = $(this).attr("data-visible-end");
 	    var releaseDateStart = moment(dateStrStart, "YYYYMMDD HH:mm");
 	    var releaseDateEnd = moment(dateStrEnd, "YYYYMMDD HH:mm");
-      	var currentDate = moment();
-      	if (!currentDate.isBetween(releaseDateStart, releaseDateEnd)) {
-	    	$(this).remove();
-	    }
+      var currentDate = moment();
+      if (!currentDate.isBetween(releaseDateStart, releaseDateEnd)) {
+	        $(this).remove();
+	    } else{
+          removeDefault = true;
+      }
 	});
+  $(".visible-default").each(function(i) {
+      if (removeDefault) {
+          $(this).remove();
+      }
+  });
 });
