@@ -4,7 +4,7 @@ credit: Problem written by a mystery CS106A Lecturer.
 translation: Serhat Arslan, Demet Tümkaya
 solution: soln.py
 
-Mavi bir dikdörtgenin (damgayı temsil eder) kullanıcının faresini takip ettiği bir program yaz. Program; kullanıcı tıkladığında, imleci merkez alarak bir dikdörtgen çizebilmelidir.
+Mavi bir dikdörtgenin (damgayı temsil eder) kullanıcının faresini takip ettiği bir program yazın. Program; kullanıcı tıkladığında, imleci merkez alarak bir dikdörtgen çizebilmelidir.
 
 <center>
   <img style="width:500px"

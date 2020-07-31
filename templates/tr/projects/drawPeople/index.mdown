@@ -4,7 +4,7 @@ credit: Written by Chris, Bryce, and Julia
 translation: Serhat Arslan, Demet Tümkaya
 solution: soln.py
 
-Der Notları: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
+Ders Notları: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 
 Bu örnek, ayaklarını referans alarak belirtilen (x,y) konumuna insan çizen basit bir fonksiyonu gösterir.
 

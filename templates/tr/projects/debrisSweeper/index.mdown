@@ -1,29 +1,30 @@
 template: templates/en/projects/projectTemplate.ptl
-title: Debris Sweeper (with solution)
+title: Enkazı Kaldır (çözümlü)
 credit: Written by Chris Piech and Mystery CS106A people.
+translation: Serhat Arslan, Demet Tümkaya
 solution: soln.py
 
-The goal of this example is to write a program that fills the screen with a random collection of debris (ovals) and then allows the user to click and remove debris pieces. This program lets you practice so many techniques that we learned in the first week of class. You will be using functions, for loops, graphics, random numbers, mouse listeners, and maybe even more!
+Bu örneğin hedefi, ekranı rastgele yerleşmiş enkazlarla (ovallerle) dolduracak bir program yazmaktır ve sonrasında kullanıcıya tıkladığı yerdeki enkaz parçalarını kaldırmasına izin vermelidir. Bu program, sizlerin dersin ilk haftasında öğrediğiniz birçok tekniği pratik yapmanızı sağlar. Fonksiyonları, for döngülerini, grafikleri, rastgele (random) sayıları, fare takipçilerini ve belki de daha fazlasını kullanıyor olacaksınız!
 
-The first step is to make the debris. Create constants that set limits for how large the debris pieces can be and how many pieces the screen will contain. For every piece, create a new oval with a random size, position, and color (within the limits you have set). Remember, this should work with any size screen. Perhaps you want to split this into a few functions to make your code easy to read!
+İlk adım, enkazı oluşturmak. Enkaz parçalarının ne kadar büyük olabileceğine ve ekranda kaç parça bulunabileceğine dair limitleri sabitlerle oluşturun. Her parça için, rastgele (random) bir boyuta, konuma ve renge sahip (oluşturduğunuz lmitler içerisinde) yeni bir oval oluşturun. Bunun her boyutta ekran için çalışması gerektiğini unutmayın. Kodunuzu daha kolay okunabilir yapmak için bunu birkaç fonksiyona bölmek isteyebilirsiniz!
 
 <center>
 <img style="width:500px" src="{{pathToRoot}}img/projects/debrisSweeper/demo.png">   
 </center>
 
-Next, we need to let users remove debris from the screen. Add an infinite loop and check if the user has clicked on an object. If they have, clean that debris up (remove it from the screen)!
+Sonrasında, kullanıcıların enkazı ekrandan kaldırmalarını sağlamalıyız. Sonsuz bir döngü ekle ve kullanıcı bir objenin üstüne tıklayıp tıklamadığını kontrol edin. Eğer tıkladılarsa, o enkazı temizleyin (ekrandan kaldırın)!
 
-## Getting a clicked object
+## Tıklana objeyi almak
 
-The canvas function `canvas.find_closest(x, y)` will get the object that is closest to the provided `(x, y)` argument. If there is no object, it will return `None`. To perform some actions on an object (if it exists), you could write something like below:
+Kanvas fonksiyonu, `canvas.find_closest(x, y)`, belirtilen (x,y) konumuna en yakın objeyi alacaktır. Eğer hiç obje yoksa, `None` olarak geri dönecektir. Bir obje üzerine bazı eylemler gerçekleştirmek için (eğer varsa), aşağıdaki gibi bir şey yazabilirsiniz:
 
 ```
-object = canvas.find_closest(x, y)    # x and y are some coordinates
+object = canvas.find_closest(x, y)    # x ve y koordinatlardır
 if object is not None:
-    print("Object found at (" + str(x) + ", " + str(y) + ")")
+    print("Object found at (" + str(x) + ", " + str(y) + ")")  #Obje (x,y) koordinatlarında bulundu
 else:
-    print("Object not found")
+    print("Object not found")  #Obje bulunamadı
 ```
 
 ## Bonus!
-If you want, as a bonus, you could add a way to check if all the debris is clear. When it is, tell the user congratulations and thank them for cleaning up the screen!
+Eğer isterseniz bonus olarak, tüm ekranın enkazdan temizlenmiş olduğu kontrol edecek bir yol ekleyebilirsiniz. Eğer öyleyse, kullanıcıya tebrikler de ve ekranı temizledikleri için teşekkür edin!

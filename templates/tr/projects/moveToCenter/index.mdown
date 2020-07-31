@@ -6,7 +6,7 @@ solution: soln.py
 
 Ders Notları: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 
-Bu program, bir kareyi ekranın merkezine ulaşana kadar hareket ettirir. Kare, harekete sol taraftan başlar.
+Bu program, bir kareyi ekranın merkezine ulaşana kadar hareket ettirir. Kare, sol taraftan başlar.
 
 
 <center>

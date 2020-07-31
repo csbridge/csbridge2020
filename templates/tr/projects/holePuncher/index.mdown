@@ -5,6 +5,7 @@ translation: Serhat Arslan, Demet Tümkaya
 solution: soln.py
 
 Bu örnek, bilgisayarınızı bir kağıt ve farenizi bir delgeç gibi kullanmanıza izin verir. Kullanıcı ekranda herhangi bir yere tıklayabilmeli ve orada delikler (ovaller) oluşturabilmelidir.
+
 <center>
   <!--<img style="width:500px;border:1px solid #000000"
           alt = "Hole puncher demo"
