@@ -1,18 +1,19 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: UN Karel (with solution)
-credit: Based on a handout by Eric Roberts
+title: İnsani Yardım Karel'ı (ve çözümü)
+credit: Eric Roberts'ın ders notlarından esinlenilmiştir
 solution: soln.py
+translation: Serhat Arslan, Ceren Kocaoğullar
 
 Handouts: [Karel Reference]({{pathToRoot}}tr/resources/karel.html)<br/>
 File: `un_karel.py`<br/>
 
-Karel has been hired by the UN to come and help build houses. The day needs saving and Karel is clearly the best robot for the job. Your goal is to have Karel walk along the bottom row and build a house like the following:
+Karel evlerin inşa edilmesinde yardımcı olması için BM (Birleşmiş Milletler) tarafından işe alınmıştır. Bir kurtarıcıya ihtiyaç vardır ve Karel da şüphesiz bu görev için en iyi robottur. Hedefiniz Karel'ın en alt sıra boyunca yürümesi ve aşağıdaki gibi bir ev inşa etmesi:
 
 <center>
 <img style="width:150px" src="{{pathToRoot}}img/projects/unKarel/house.png">	
 </center>
 
-Every time Karel finds a beeper. The below images show what Karel should do for two example worlds. You can assume that no houses will overlap and that all houses will fit inside the world. You can't assume the size of the world or the number of houses!
+Karel bir beeper bulduğu her zaman. Aşağıdaki resimler iki örnek dünya için Karel'ın yapması gerekeni gösteriyor. Hiçbir evin çakışmayacağını ve tüm evlerin dünyanın içine sığacağını varsayabilirsiniz. Dünyanın büyüklüğüne veya evlerin sayısına dair varsayımda bulunamazsınız!
 
 <center>
 <img style="width:700px" src="{{pathToRoot}}img/projects/unKarel/un1.png">	
