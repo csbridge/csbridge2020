@@ -53,8 +53,8 @@ $(document).ready(function(){
 	    var dateStrEnd = $(this).attr("data-visible-end");
 	    var releaseDateStart = moment(dateStrStart, "YYYYMMDD HH:mm");
 	    var releaseDateEnd = moment(dateStrEnd, "YYYYMMDD HH:mm");
-      var currentDate = moment();
-      if (!currentDate.isBetween(releaseDateStart, releaseDateEnd)) {
+      	var currentDate = moment();
+      	if (!currentDate.isBetween(releaseDateStart, releaseDateEnd)) {
 	    	$(this).remove();
 	    }
 	});
