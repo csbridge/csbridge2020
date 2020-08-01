@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Run, Sum, Run!</title>
+<title>CS Bridge  | Topla ve Biriktir</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -24,8 +24,12 @@
 
 <script src="../../karel/ace/ace.js" type="text/javascript"></script>
 <script type="text/javascript" src="../../js/moment.min.js"></script>
-<script type="text/javascript" src="../../js/index.js"></script>
+<script type="text/javascript" src="../../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../../js/time.js"></script>
+
+<!--
 <script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
+-->
 
 
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -440,12 +444,9 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Run, Sum, Run!
+		Topla ve Biriktir
 	</h1>
 
-		<p>
-			Hazırlayan: Lisa Yan
-		</p>
 
 </div>
 <hr/>
@@ -453,51 +454,43 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>File: <code>running_sum.py</code></p>
-<p>Write a program that reads in integers from the user and then outputs the current
-sum of the entered values. Here's what the output of the program should look like:</p>
-<pre><code>Enter integers, one at a time. I will show you the sum!
-Please enter an integer: 3
-The current sum is: 3 (1 integers entered)
-Please enter an integer: 4
-The current sum is: 7 (2 integers entered)
-Please enter an integer: 5
-The current sum is: 12 (3 integers entered)
-Please enter an integer: 10
-The current sum is: 22 (4 integers entered)
-Please enter an integer: 3
-The current sum is: 25 (5 integers entered)
-Please enter an integer: 4
-The current sum is: 29 (6 integers entered)
-Please enter an integer: 1
-The current sum is: 30 (7 integers entered)
-Please enter an integer:
+		<p>Hazırlayan: Lisa Yan
+Çeviren: Kazim Okan Akgül</p>
+<p>Dosya: <code>running_sum.py</code></p>
+<p>Kullanıcının girdiği tamsayıları okuyup bunların toplam değerini veren bir program yazınız. Programın çıktısı şöyle görünmelidir:</p>
+<pre><code>Tamsayıları birer birer girin. Size toplamı göstereceğim!
+Lütfen bir tamsayı girin: 3
+Toplam: 3
+Lütfen bir tamsayı girin: 4
+Toplam: 7
+Lütfen bir tamsayı girin: 5
+Toplam: 12
+Lütfen bir tamsayı girin: 10
+Toplam: 22
+Lütfen bir tamsayı girin: 3
+Toplam: 25
+Lütfen bir tamsayı girin: 4
+Toplam: 29
+Lütfen bir tamsayı girin: 1
+Toplam: 30
+Lütfen bir tamsayı girin: ...
 </code></pre>
 
-<h2 id="an-infinite-loop">An infinite loop</h2>
-<p>Remember in Karel, we wrote while loops that executed code until some particular condition is true? In Python, we can extend this idea to write a loop that executes <em>forever</em> (an infinite number of times). The basic structure looks like the below code, which will print "Hello" to the console an infinite number of times—one "Hello" on each line:</p>
-<pre><code>while True:
-    print(&quot;Hello&quot;)
+<h2 id="programdan-cks">Programdan Çıkış</h2>
+<p>Programınızı çalıştırmak için Pycharm Terminaline bunu yazmanız yeterlidir: <code>python3 runningsum.py</code> (Eğer Mac kullanıcısıysanız)
+or <code>py runningsum.py</code> (Eğer PC kullanıcısıysanız). Ancak bu program sonsuza kadar çalışır!</p>
+<p>Sonsuza kadar çalışan bir programdan çıkmak için Terminal'deyken klavyenizdeki <code>Ctrl-C</code> tuşlarına basın. Daha sonra programınızı tekrar çalıştırmak isterseniz Terminale <code>python3 runningsum.py</code> veya <code>py runningsum.py</code> yazarak bu işlemi gerçekleştirebilirsiniz.</p>
+<h2 id="degiskenleri-yazdrma">Değişkenleri yazdırma</h2>
+<p>Genellikle konsol programlarında, kullanıcıya bir string değeri yazdırmak gerekir. Yukarıdaki örneği incelersek:</p>
+<pre><code>Toplam: 55
 </code></pre>
 
-<p>Because your program will just keep adding up user input until the end of time, your program should use an infinite loop.</p>
-<p><strong>Caution</strong>: Note that you need to keep track of some information that needs to stay somewhere between loop iterations (like the total sum so far). You can declare these variables <em>before</em> the infinite loop starts.</p>
-<h2 id="quitting-your-program">Quitting your program</h2>
-<p>Remember that you can run your program in Pycharm's Terminal by typing <code>python3 runningsum.py</code> (if you are on Mac)
-or <code>py runningsum.py</code> (if you are on PC). However, this program runs forever!</p>
-<p>To exit a program that runs forever, hit <code>Ctrl-C</code> on your keyboard while in the Terminal. You should then be able
-to run your program via the <code>python3 runningsum.py</code> or <code>py runningsum.py</code> again.</p>
-<h2 id="printing-variables">Printing variables</h2>
-<p>Often in console programs it is necessary to print out values to the user in a string. Suppose you have a variable <code>total</code> that stores the number 55 and you want to output it. In your program, you should write:</p>
-<pre><code>print(&quot;The sum is: &quot; + str(total))
+<p>Eğer programı yukarıdaki girdi ile çalıştırırsanız, 55 toplamı veren değişkende saklanan değer olur. Eğer bu değişken <code>sum</code>, olarak adlandırılırsa, değeri yazdırmak için şunu yazabilirsiniz:</p>
+<pre><code>print(&quot;Toplam: &quot; + str(toplam))
 </code></pre>
 
-<p>If you run your program with the above input, the program will output the following to the console:</p>
-<pre><code>The sum is: 55
-</code></pre>
-
-<p>A more general form for printing out variables in code is:</p>
-<pre><code>&quot;String message&quot; + str(variable_name) + &quot;more string message&quot;
+<p>Daha genel formu:</p>
+<pre><code>&quot;String mesajı&quot; + str(değişken_ismi) + &quot;daha fazla string mesajı&quot;
 </code></pre>
 	</div>
 </div>

@@ -1,12 +1,13 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Fibonacci (with solution)
-credit: Eric Roberts
-solution: soln.py
+title: Fibonacci (Çözümlü)
+hazırlayan: Eric Roberts
+çözüm: soln.py
+çeviren: Kazim Okan Akgül
 
-In the 13th century, the Italian mathematician Leonardo Fibonacci, as a way to explain the geometric growth of a population of rabbits, devised a mathematical sequence that now bears his name.  The first two terms in this sequence, Fib(0) and Fib(1), are 0 and 1, and every subsequent term is the sum of the preceding two.  Thus, the first several terms in the Fibonacci sequence look like this:
+İtalyan matematikçi Leonardo Fibonacci 13. yüzyılda tavşan popülasyonunun geometrik büyümesini açıklamanın bir yolu olarak, şuanda adını taşıyan bir matematik dizisi tasarladı. Dizideki ilk iki terim Fib(0) ve Fib(1) dir ve bunların değeri 0 ve 1 dir. Sonraki her terim, önceki ikisinin toplamıdır. Bu yüzden, Fibonacci serisindeki ilk bi rkaç terim şu şekildedir:
 
 <p style="padding-left:2em">
-					Fib(0)	=	0
+	Fib(0)	=	0
 	<br/>Fib(1)	=	1
 	<br/>Fib(2)	=	1	(0 + 1)
 	<br/>Fib(3)	=	2	(1 + 1)
@@ -14,17 +15,17 @@ In the 13th century, the Italian mathematician Leonardo Fibonacci, as a way to e
 	<br/>Fib(5)	=	5	(2 + 3)
 </p>
 
-Write a program that displays the terms in the Fibonacci sequence, starting with Fib(0) and continuing as long as the terms are less than 10,000.  Thus, your program should produce the following sample run:
+Fib(0) dan başlayarak terimleri yazdıran ve terimler 10,000 den küçük olduğu sürece çalışmaya devam eden bir program yazınız. Program aşağıdaki gibi bir çıktı üretmelidir:
 
 <center>
 <img style="width:400px" src="{{pathToRoot}}img/projects/fib/demo.png">	
 </center>
 
-This program should continue as long as the value of the term is less than the maximum value. To do this, you should use a while loop, presumably with a header line that looks like this:
+Bu program terimlerin değeri maksimum değerden küçük olduğu sürece çalışmaya devam eder. Bunu sağlamak için, aşağıdaki kalıbı kullanarak bir while döngüsü kullanmalısınız:
 
 ```
 while term <= MAX_TERM_VALUE:
-    ... your code here ...
+    ... kodunuz buraya ...
 ```
 
-Note that the maximum term value is specified with a named constant.
+Maksimum terim değerinin isimlendirilmiş bir sabitle belirtildiğini unutmayın.

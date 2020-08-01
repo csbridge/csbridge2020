@@ -1,11 +1,11 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Average Function
+title: Ortalama Fonksiyonu
 credit: Chris Piech ve Mehran Sahami
 solution: soln.py
 
-This demo shows a function that takes in two inputs and returns the average:
+Aşağıdaki demoda iki girdi alan ve bunların ortalamasını döndüren bir fonksiyon gösterilmektedir:
 
 ```
 def average(a, b):
-    # ... returns the average of a and b ...
+    # ... a ve b'nin ortalamasını döndürür ...
 ```

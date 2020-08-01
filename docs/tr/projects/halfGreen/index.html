@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Half Green</title>
+<title>CS Bridge  | Yarısı Yeşil</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -24,8 +24,12 @@
 
 <script src="../../../karel/ace/ace.js" type="text/javascript"></script>
 <script type="text/javascript" src="../../../js/moment.min.js"></script>
-<script type="text/javascript" src="../../../js/index.js"></script>
+<script type="text/javascript" src="../../../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../../../js/time.js"></script>
+
+<!--
 <script type="text/javascript" src="../../../plugins/d3.v3/d3.v3.min.js"></script>
+-->
 
 
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -440,33 +444,36 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Half Green
+		Yarısı Yeşil
 	</h1>
 
 		<p>
-			Hazırlayan: Problem written by Chris Piech
+			Hazırlayan: Chris Piech
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../../en/resources/graphics.html">Graphics Reference</a><br/></p>
-<p>We are going to create 1000 circles in random positions on the screen. Circles closer to the bottom-left corner will be blue and circles closer to the top-right corner will be green. This is an example of return values.</p>
+		<p>Ders Notları: <a href="../../../en/resources/graphics.html">Grafikler Referansı</a><br/></p>
+<p>Ekranda rastgele konumlarda 1000 adet daire oluşturacağız. Sol alt köşeye daha yakın olan daireler mavi olurken sağ üste yakın olanlar yeşil olacak. Bu örnek döndürülen (return) değerlere dair bir örnek.</p>
 <p><center>
 <img style="width:500px" src="../../../img/projects/halfGreen/halfGreen.png"> <br />
 </center></p>
 <ul>
 <li>
-<p>Each circle is 20 pixels by 20 pixels.</p>
+<p>Her daire 20 piksele 20 piksel.</p>
 </li>
 <li>
-<p>Note every circle is drawn fully on the canvas.</p>
+<p>Her dairenin tam olarak tuval üzerine çizildiğine dikkat edin.</p>
 </li>
 <li>
-<p>The <code>time.sleep(0.002)</code> function call waits 2 milliseconds between drawing circles.</p>
+<p><code>time.sleep(0.002)</code> fonksiyon çağrısı daireler çizerken her seferinde 2 milisaniye bekliyor.</p>
 </li>
 </ul>
 	</div>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Find Pi (with solution)</title>
+<title>CS Bridge  | Pi&#039;yi Bul (ve çözümü)</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -24,8 +24,12 @@
 
 <script src="../../../karel/ace/ace.js" type="text/javascript"></script>
 <script type="text/javascript" src="../../../js/moment.min.js"></script>
-<script type="text/javascript" src="../../../js/index.js"></script>
+<script type="text/javascript" src="../../../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../../../js/time.js"></script>
+
+<!--
 <script type="text/javascript" src="../../../plugins/d3.v3/d3.v3.min.js"></script>
+-->
 
 
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -440,30 +444,33 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Find Pi (with solution)
+		Pi&#039;yi Bul (ve çözümü)
 	</h1>
 
 		<p>
 			Hazırlayan: Eric Roberts
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Pi (&pi;) is a mathematical thing of true beauty. It comes up in many equations, most notably in the equation for the area of a circle, the p.d.f. of a normal distribution and finally, and oh so wonderously, in <a href="http://en.wikipedia.org/wiki/Euler's_identity">Euler's Identity</a></p>
-<p>But how do we know that the value of &pi; is 3.14159265359...? There are several ways to calculate pi. In this problem we show how to do it using darts.</p>
+		<p>Pi (&pi;) gerçek güzelliğin matematiksel halidir. Birçok denklemde karşımıza çıkar. Özellikle de dairesel hesaplar yaparken, çan eğrisi hesaplarken ve son olarak da, inanılmaz bir şekilde, <a href="https://tr.0wikipedia.org/wiki/Euler_%C3%B6zde%C5%9Fli%C4%9Fi">Euler Özdeşliği'nde</a>.</p>
+<p>Peki &pi; değerinin 3.14159265359... olduğunu nereden bliyoruz? Pi sayısını hesaplamanın birçok yöntemi var. Bu egzersiz ile pi sayısını dart tahtasını kullanarak hesaplamayı öğreneceğiz.</p>
 <p><center>
 <img style="width:500px" src="../../../img/projects/findPi/lifeOfPi.jpg"> <br />
-<p style="text-align:center"><i>This boy's name is also Pi. This problem is unrelated (other than name) to him.</i></p>
+<p style="text-align:center"><i>Bu arkadaşın adı da Pi. Ama bu problem onunla alakasız (ismi dışında).</i></p>
 </center></p>
-<p>Imagine throwing darts at the yellow circle bellow to the left. If you randomly throw a series of darts at the dartboard, some will land inside the yellow circle and some in the gray area outside it. If you count both the number of darts that fall inside the circle and the number that fall anywhere inside the square, the ratio of those numbers should be proportional to the relative area of the two figures.</p>
+<p>Aşağıdaki (sol) sarı daireye bir dart oku attığınızı hayal edin. Eğer rastgele bir şekilde birçok ok atarsanız, bazıları sarı bölgenin içine bazıları da dışarıdaki gri alana isabet edecektir. Eğer hem içerideki daireye hem de dışarıdaki kareye denk gelen okları sayacak olursanız, bu toplamların oranı iki şeklin alanları oranına eşit olmalıdır.</p>
 <p><center>
 <img style="width:700px" src="../../../img/projects/findPi/darts.png"><br />
 </center></p>
-<p>Because the area of the circle is &pi; and that of the square is 4, the fraction that falls inside the circle should approach &pi; / 4.</p>
+<p>Dairenin alanı &pi; ve karenin alanı 4 olduğuna göre, dairenin içine isabet eden okların oranı &pi; / 4 civarında olmalıdır.</p>
 	</div>
 </div>
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Fibonacci (with solution)</title>
+<title>CS Bridge  | Fibonacci (Çözümlü)</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -24,8 +24,12 @@
 
 <script src="../../../karel/ace/ace.js" type="text/javascript"></script>
 <script type="text/javascript" src="../../../js/moment.min.js"></script>
-<script type="text/javascript" src="../../../js/index.js"></script>
+<script type="text/javascript" src="../../../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../../../js/time.js"></script>
+
+<!--
 <script type="text/javascript" src="../../../plugins/d3.v3/d3.v3.min.js"></script>
+-->
 
 
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -440,12 +444,9 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Fibonacci (with solution)
+		Fibonacci (Çözümlü)
 	</h1>
 
-		<p>
-			Hazırlayan: Eric Roberts
-		</p>
 
 </div>
 <hr/>
@@ -453,9 +454,12 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>In the 13th century, the Italian mathematician Leonardo Fibonacci, as a way to explain the geometric growth of a population of rabbits, devised a mathematical sequence that now bears his name.  The first two terms in this sequence, Fib(0) and Fib(1), are 0 and 1, and every subsequent term is the sum of the preceding two.  Thus, the first several terms in the Fibonacci sequence look like this:</p>
+		<p>hazırlayan: Eric Roberts
+çözüm: soln.py
+çeviren: Kazim Okan Akgül</p>
+<p>İtalyan matematikçi Leonardo Fibonacci 13. yüzyılda tavşan popülasyonunun geometrik büyümesini açıklamanın bir yolu olarak, şuanda adını taşıyan bir matematik dizisi tasarladı. Dizideki ilk iki terim Fib(0) ve Fib(1) dir ve bunların değeri 0 ve 1 dir. Sonraki her terim, önceki ikisinin toplamıdır. Bu yüzden, Fibonacci serisindeki ilk bi rkaç terim şu şekildedir:</p>
 <p style="padding-left:2em">
-                    Fib(0)  =   0
+    Fib(0)  =   0
     <br/>Fib(1) =   1
     <br/>Fib(2) =   1   (0 + 1)
     <br/>Fib(3) =   2   (1 + 1)
@@ -463,75 +467,20 @@ filePath - the total path to the markdown file being rendered in this template
     <br/>Fib(5) =   5   (2 + 3)
 </p>
 
-<p>Write a program that displays the terms in the Fibonacci sequence, starting with Fib(0) and continuing as long as the terms are less than 10,000.  Thus, your program should produce the following sample run:</p>
+<p>Fib(0) dan başlayarak terimleri yazdıran ve terimler 10,000 den küçük olduğu sürece çalışmaya devam eden bir program yazınız. Program aşağıdaki gibi bir çıktı üretmelidir:</p>
 <p><center>
 <img style="width:400px" src="../../../img/projects/fib/demo.png"><br />
 </center></p>
-<p>This program should continue as long as the value of the term is less than the maximum value. To do this, you should use a while loop, presumably with a header line that looks like this:</p>
+<p>Bu program terimlerin değeri maksimum değerden küçük olduğu sürece çalışmaya devam eder. Bunu sağlamak için, aşağıdaki kalıbı kullanarak bir while döngüsü kullanmalısınız:</p>
 <pre><code>while term &lt;= MAX_TERM_VALUE:
-    ... your code here ...
+    ... kodunuz buraya ...
 </code></pre>
 
-<p>Note that the maximum term value is specified with a named constant.</p>
+<p>Maksimum terim değerinin isimlendirilmiş bir sabitle belirtildiğini unutmayın.</p>
 	</div>
 </div>
 
 <!-- Solution (if included) -->
-	<h2>Çözüm</h2>
-    <p>
-    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
-    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
-    		aria-controls="Collapse">
-    		Çözümü Göster
-    	</a>
-    </p>
-    <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:480.0px">&quot;&quot;&quot;
-File: Fibonacci
---------------------
-This program lists the terms in the Fibonacci sequence up to
-a constant MAX_TERM_VALUE, which is the largest Fibonacci term
-the program will display.
-&quot;&quot;&quot;
-
-# Defines the largest term to display
-MAX_TERM_VALUE = 10000
-
-def main():
-    print(&quot;This program lists the Fibonacci sequence.&quot;)
-    t1 = 0
-    t2 = 1
-    while t1 &lt;= MAX_TERM_VALUE:
-        print(t1)
-        t3 = t1 + t2
-        t1 = t2
-        t2 = t3
-
-if __name__ == &#039;__main__&#039;:
-    main()
-</pre>
-    </div>
-
-    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        var editor = ace.edit("editor");
-       editor.setTheme('ace/theme/eclipse');
-       editor.getSession().setMode("ace/mode/python");
-       editor.setReadOnly(true);
-       editor.setShowPrintMargin(false);
-       editor.renderer.setShowGutter(false); 
-    </script>
-
-    <script>
-    	function toggleButtonText() {
-    		var elem = document.getElementById("soln-btn");
-    		if (elem.innerHTML.trim() === "Çözümü Göster") {
-    			elem.innerHTML = "Çözümü Gizle";
-    		} else {
-    			elem.innerHTML = "Çözümü Göster";
-    		}
-    	}
-    </script>
 
   			
   	<!-- Footer -->
