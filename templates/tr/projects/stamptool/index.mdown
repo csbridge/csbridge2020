@@ -1,9 +1,10 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Stamp Tool
+title: Damga Makinesi
 credit: Problem written by a mystery CS106A Lecturer.
+translation: Serhat Arslan, Demet Tümkaya
 solution: soln.py
 
-Write a program where a blue rectangle (which represents a stamp) follows a user's mouse around. Your program should draw a rectangle on the screen centered around the mouse when the user clicks.
+Mavi bir dikdörtgenin (damgayı temsil eder) kullanıcının faresini takip ettiği bir program yazın. Program; kullanıcı tıkladığında, imleci merkez alarak bir dikdörtgen çizebilmelidir.
 
 <center>
   <img style="width:500px"

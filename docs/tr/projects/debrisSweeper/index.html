@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Debris Sweeper (with solution)</title>
+<title>CS Bridge  | Enkazı Kaldır (çözümlü)</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -446,7 +446,7 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Debris Sweeper (with solution)
+		Enkazı Kaldır (çözümlü)
 	</h1>
 
 		<p>
@@ -458,23 +458,23 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>The goal of this example is to write a program that fills the screen with a random collection of debris (ovals) and then allows the user to click and remove debris pieces. This program lets you practice so many techniques that we learned in the first week of class. You will be using functions, for loops, graphics, random numbers, mouse listeners, and maybe even more!</p>
-<p>The first step is to make the debris. Create constants that set limits for how large the debris pieces can be and how many pieces the screen will contain. For every piece, create a new oval with a random size, position, and color (within the limits you have set). Remember, this should work with any size screen. Perhaps you want to split this into a few functions to make your code easy to read!</p>
+		<p>Bu örneğin hedefi, ekranı rastgele yerleşmiş enkazlarla (ovallerle) dolduracak bir program yazmaktır ve sonrasında kullanıcıya tıkladığı yerdeki enkaz parçalarını kaldırmasına izin vermelidir. Bu program, sizlerin dersin ilk haftasında öğrediğiniz birçok tekniği pratik yapmanızı sağlar. Fonksiyonları, for döngülerini, grafikleri, rastgele (random) sayıları, fare takipçilerini ve belki de daha fazlasını kullanıyor olacaksınız!</p>
+<p>İlk adım, enkazı oluşturmak. Enkaz parçalarının ne kadar büyük olabileceğine ve ekranda kaç parça bulunabileceğine dair limitleri sabitlerle oluşturun. Her parça için, rastgele (random) bir boyuta, konuma ve renge sahip (oluşturduğunuz lmitler içerisinde) yeni bir oval oluşturun. Bunun her boyutta ekran için çalışması gerektiğini unutmayın. Kodunuzu daha kolay okunabilir yapmak için bunu birkaç fonksiyona bölmek isteyebilirsiniz!</p>
 <p><center>
 <img style="width:500px" src="../../../img/projects/debrisSweeper/demo.png"> <br />
 </center></p>
-<p>Next, we need to let users remove debris from the screen. Add an infinite loop and check if the user has clicked on an object. If they have, clean that debris up (remove it from the screen)!</p>
-<h2 id="getting-a-clicked-object">Getting a clicked object</h2>
-<p>The canvas function <code>canvas.find_closest(x, y)</code> will get the object that is closest to the provided <code>(x, y)</code> argument. If there is no object, it will return <code>None</code>. To perform some actions on an object (if it exists), you could write something like below:</p>
-<pre><code>object = canvas.find_closest(x, y)    # x and y are some coordinates
+<p>Sonrasında, kullanıcıların enkazı ekrandan kaldırmalarını sağlamalıyız. Sonsuz bir döngü ekle ve kullanıcı bir objenin üstüne tıklayıp tıklamadığını kontrol edin. Eğer tıkladılarsa, o enkazı temizleyin (ekrandan kaldırın)!</p>
+<h2 id="tklana-objeyi-almak">Tıklana objeyi almak</h2>
+<p>Kanvas fonksiyonu, <code>canvas.find_closest(x, y)</code>, belirtilen (x,y) konumuna en yakın objeyi alacaktır. Eğer hiç obje yoksa, <code>None</code> olarak geri dönecektir. Bir obje üzerine bazı eylemler gerçekleştirmek için (eğer varsa), aşağıdaki gibi bir şey yazabilirsiniz:</p>
+<pre><code>object = canvas.find_closest(x, y)    # x ve y koordinatlardır
 if object is not None:
-    print(&quot;Object found at (&quot; + str(x) + &quot;, &quot; + str(y) + &quot;)&quot;)
+    print(&quot;Object found at (&quot; + str(x) + &quot;, &quot; + str(y) + &quot;)&quot;)  #Obje (x,y) koordinatlarında bulundu
 else:
-    print(&quot;Object not found&quot;)
+    print(&quot;Object not found&quot;)  #Obje bulunamadı
 </code></pre>
 
 <h2 id="bonus">Bonus!</h2>
-<p>If you want, as a bonus, you could add a way to check if all the debris is clear. When it is, tell the user congratulations and thank them for cleaning up the screen!</p>
+<p>Eğer isterseniz bonus olarak, tüm ekranın enkazdan temizlenmiş olduğu kontrol edecek bir yol ekleyebilirsiniz. Eğer öyleyse, kullanıcıya tebrikler de ve ekranı temizledikleri için teşekkür edin!</p>
 	</div>
 </div>
 
