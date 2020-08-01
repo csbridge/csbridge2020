@@ -1,17 +1,18 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Creative String Art
+title: Yaratıcı Çizgi Sanatı
 credit: Lisa Yan
+translation: Serhat Arslan, Demet Tümkaya
 
-This is a bonus program!
+Bu bir bonus program!
 
-Write a graphics program that extends the String Art you wrote in String Art. This time, add four curves to the canvas.
+Yazdığınız "Çizgi Sanatı" programında, Çizgi Sanatı için yaptıklarınızı geliştiren bir grafik programı yazın. Bu defa, kanvasa 4 eğri ekleyin.
 
 <center>
   <img style="width:400px; border: 1px solid black;" src="{{pathToRoot}}img/projects/creativeStringArt/corners.png">
 </center>
 
-## Extension
-Make your own cool string art!!!
+## Eklemeler
+Kendi havalı string sanatınızı yapın!!!
 
 <center>
   <img style="width:400px; border: 1px solid black" src="{{pathToRoot}}img/projects/creativeStringArt/customfancy.png">

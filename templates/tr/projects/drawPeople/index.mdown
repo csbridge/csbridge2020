@@ -1,6 +1,6 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: İnsan Çiz
-credit: Written by Chris, Bryce, and Julia
+credit: Chris, Bryce ve Julia tarafından yazıldı.
 translation: Serhat Arslan, Demet Tümkaya
 solution: soln.py
 
