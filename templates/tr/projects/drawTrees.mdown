@@ -1,12 +1,13 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Draw Trees
-credit: Written by Chris, Bryce, and Julia
+title: Ağaç Çiz
+credit: Chris, Bryce ve Julia tarafından yazıldı.
+translation: Serhat Arslan, Demet Tümkaya
 
-Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
+Ders Notları: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 
-Fill in the `draw_tree` function that draws a tree with the base of its trunk centered at the provided `(x, y)` position.
+Gövdesinin tabanı verilen `(x, y)` pozisyonunu merkez kabul eden bir ağaç çizmek için `draw_tree` fonksiyonunu doldurun.
 
-The `main` method has already been written for you:
+`main` fonksiyonu sizler için önceden yazıldı:
 
 ```
 def main():
@@ -17,7 +18,7 @@ def main():
     draw_tree(700, 310)
 ```
 
-Each tree should have a trunk with a width of 20 pixels (`TRUNK_WIDTH`) and a height of 80 pixels (`TRUNK_HEIGHT`). The leaves should have a radius of 30 pixels (`LEAVES_RADIUS`). Your output should look like this:
+Her ağacın gövdesinin genişliği (`TRUNK_WIDTH`) 20 piksel ve uzunluğu (`TRUNK_HEIGHT`) 80 piksel olmalıdır. Yapraklar ise 30 piksel yarıçapa (`LEAVES_RADIUS`) sahip olmalıdır. Çıktınız bu şekilde gözükmelidir:
 
 <center>
 <img style="width:500px" src="{{pathToRoot}}img/projects/madmethods/demo.png">	

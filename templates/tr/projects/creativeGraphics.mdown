@@ -1,16 +1,17 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Creative Graphics
+title: Yaratıcı Grafikler
 credit: Lisa Yan
+translation: Serhat Arslan, Demet Tümkaya
 
-This is a bonus program!
+Bu bir bonus program!
 
-Write a graphics program that does anything you want!!! Here is an example of something you can make.
+İstediniz her şeyi yapabilecek bir grafik programı yazın!!! Aşağıda yapabileceklerinize bir örnek bulunuyor:
 
 <center>
   <img style="width:400px; border: 1px solid black;" src="{{pathToRoot}}img/projects/creativeGraphics/example.gif">
 </center>
 
-Here is a Karel to help you out.
+İşte bu da size yardım edebilecek bir Karel.
 
 <center>
   <img src="{{pathToRoot}}img/projects/creativeGraphics/karel.png">

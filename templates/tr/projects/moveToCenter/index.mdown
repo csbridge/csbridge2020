@@ -1,6 +1,6 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Merkeze Git
-credit: Problem written by Chris and Julia
+credit: Chris ve Julia tarafından yazıldı.
 translation: Serhat Arslan, Demet Tümkaya
 solution: soln.py
 
