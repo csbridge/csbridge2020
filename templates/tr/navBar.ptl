@@ -298,9 +298,7 @@
 	          	<li><a href="{{pathToRoot}}slides/Welcome.pdf">Karel</a></li>
 	          	<li><a href="{{pathToRoot}}slides/ControlFlow.pdf">Control Flow Slides)</a></li>
 	          	<li><a href="{{pathToRoot}}starter/ControlFlow.zip">Control Flow (Code)</a></li>
-	          	<li><a href="{{pathToRoot}}slides/Variables.pdf">Değişkenler</a></li>
-			<li><a href="{{pathToRoot}}slides/Variables2.pdf">Değişkenler 2</a></li>
-	          	
+	          	<li><a href="{{pathToRoot}}slides/IntroPython_Variable_Math_RandomNumbers.pdf">Değişkenler</a></li>	
 	          	<li><a href="{{pathToRoot}}slides/Graphics.pdf">Grafikler (Slides)</a></li>
 	          	<li><a href="{{pathToRoot}}starter/Graphics.zip">Grafikler (Code)</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Animation.pdf">Animasyon</a></li>
