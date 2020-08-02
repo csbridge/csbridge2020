@@ -163,5 +163,33 @@
         "title_en": "Variables",
         "title_tr": "Değişkenler",
         "visible_after": "2020080600"
+    },
+    {
+        "morning": {
+            "programs": [
+                {
+                    "imageURL": "img/icons/someSum.png",
+                    "title_en": "That's Some Sum",
+                    "title_tr": "Toplama Diye Buna Derim!",
+                    "topic_en": "Loop variables",
+                    "topic_tr": "Döngü değişkenleri",
+                    "type": "quickstart",
+                    "url": "projects/someSum.html"
+                },
+                {
+                    "imageURL": "img/icons/carbonDating.jpg",
+                    "title_en": "Carbon Dating",
+                    "title_tr": "Carbon Dating",
+                    "topic_en": "Loop variables",
+                    "topic_tr": "Döngü değişkenleri",
+                    "type": "project",
+                    "url": "projects/carbonDating.html"
+                }
+            ],
+            "projectURL": "starter/Day4AM.zip"
+        },
+        "title_en": "For loops, deconstructed",
+        "title_tr": "For döngüsü ve analizi",
+        "visible_after": "2020080700"
     }
 ]
