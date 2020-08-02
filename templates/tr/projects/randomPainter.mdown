@@ -1,44 +1,55 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Random Painter
+title: Deli Ressam
 credit: Chris Piech
+translation: Serhat Arslan, Ceren Kocaoğullar
 
-Handouts: [KarelReference]({{pathToRoot}}en/handouts/karel.html)<br/>
-Worked Examples: [Invert]({{pathToRoot}}en/projects/invert/index.html), [UN Karel]({{pathToRoot}}en/projects/unkarel/index.html)<br/>
-Day1: `random_painter_karel.py`
+Ders Notları: [KarelReference]({{pathToRoot}}en/resources/karel.html)<br/>
+Çözümlü Örnekler: [Invert]({{pathToRoot}}en/projects/invert/index.html), [UN Karel]({{pathToRoot}}en/projects/unkarel/index.html)<br/>
+Dosya: `random_painter_karel.py`
 
 ## Problem
-Karel is starting to find her world too black and white. Help her fill it with color.
+
+Karel, dünyasını çok siyah beyaz bulmaya başlıyor. Renkle doldurmasına yardım edin.
+
 <p>
 <center>
 	<img style="width:100%"  src="{{pathToRoot}}img/projects/randomPainter/long.png">	
 </center>
 </p>
-## Paint and Random
-Karel has a few commands up her sleeve. She can paint the corner on which she is standing using the instruction
+
+## Boyama ve Rastgelelik
+
+Karel'ın sakladığı birkaç komutu var. Üzerinde durduğu köşeyi şu yönergeyi kullanarak boyayabilir:
+
 ```
 paint_corner(color)
 ```
-The value enclosed in the parentheses is called an argument in the terminology of programming languages, and it may be any one of 
-<code><span style="color:red;">RED</span></code>, 
-<code><span style="color:orange;">ORANGE</span></code>, 
-<code><span style="color:green;">GREEN</span></code>, 
-<code><span style="color:cyan;">CYAN</span></code>, 
-<code><span style="color:blue">BLUE</span></code>, 
-<code><span style="color:magenta;">MAGENTA</span></code>,
-and so on. So you can call `paint_corner(RED)` to paint the square that Karel is standing on into a red square.
 
-We'll talk about randomness later, but for now know that we want to draw one of two colors, and we need to do so randomly in Karel. The new condition `random(0.5)` is a condition that is True half of the time, but in an unpredictable (random) way. Like flipping a coin, sometimes this condition is `True` and sometimes it is `False. For example, the code
+Parantez içindeki değer, programlama dilleri terminolojisinde argüman (argument) olarak geçer ve burada aşağıdakilerden herhangi biri olabilir:
+<code><span style="color:red;">RED</span></code>,
+<code><span style="color:orange;">ORANGE</span></code>,
+<code><span style="color:green;">GREEN</span></code>,
+<code><span style="color:cyan;">CYAN</span></code>,
+<code><span style="color:blue">BLUE</span></code>,
+<code><span style="color:magenta;">MAGENTA</span></code>,
+ve dahası. Yani `paint_corner(RED)` fonksiyonunu çağırarak Karel'ın üzerine bulunduğu köşeyi kırmızıya boyamasını sağlayabilirsiiz.
+
+Daha sonra rastgelelik hakkında konuşacağız, ancak şimdilik iki renkten birini çizmek istediğimizi biliyoruz ve bunu Karel'da rastgele yapmamız gerekiyor. Karel yeni koşulu `random(0.5)`, zamanın yarısında doğru (`True`) yarısında (`False`) dönüyor, ama tahmin edilemez bir şekilde. Bozuk para atmak gibi. Örneğin aşağıdaki kod:
 
 ```
 if random(0.5):
     put_beeper()
 ```
-will place a beeper (or will not) with equal probability. If you wanted, say, on average 75% of the time to have a beeper (instead of 50%), you could change the condition to `random(0.75).
 
-## Painter
-Use these new abilities to have karel randomly paint each corner of a world one of two colors. You can chose any two colors you would like; we chose green and blue.
+eşit ihtimalle bir beeper yerleştirecek ya da yerleştirmeyecek.
 
-Below are three executions of the same program that randomly paints any sized world green and blue executed on a 10x10 world. Note that because of the random condition, the pattern of green and blue is different on each run!
+will place a beeper (or will not) with equal probability. Diyelim ki 75% olasılıkla beeper yerleştirmek istiyorsunuz (50% yerine), bu durumda koşulu `random(0.75)` olarak değiştirebilirsiniz.
+
+## Ressam
+
+Bu yeni yetenekleri, Karel'a bir dünyanın her bir köşesini rastgele iki renkten birisiyle boyatmak için kullanın. İstediğiniz iki rengi seçebilirsiniz, biz yeşil ve maviyi seçtik.
+
+Aşağıda herhangi bir dünyayı rastgele yeşil ve maviye boyayan bir programın 10x10'luk bir dünya üzerindeki üçer adet çalışması var. Rastgele sonuç veren random koşulundan ötürü, her çalıştırmamızda yeşil ve mavi desenleri farklı olduğuna dikkat edin!
 
 <p>
 	<center>
@@ -46,4 +57,4 @@ Below are three executions of the same program that randomly paints any sized wo
 	</center>
 </p>
 
-As always, remember to decompose your solution! Your program should work on a world of any size.
+Her zaman olduğu gibi, çözümünüzü parçalara ayırmayı unutmayın! Programınız herhangi bir boyuttaki dünyada çalışmalı.

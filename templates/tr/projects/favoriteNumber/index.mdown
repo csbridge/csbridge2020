@@ -1,26 +1,27 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Favorite Number (with solution)
-credit: Chris P., Bryce C-R and Julia L.
-solution: soln.py
+hazırlayan: Chris P., Bryce C-R and Julia L.
+çözüm: soln.py
+çeviren: Kazim Okan Akgül
 
-First think of your favorite integer between 0 and 100. Write a program that stores your favorite number as a variable and repeatedly asks the user to try and guess it. Let the user know if their last guess was too low or too high.
+Öncelikle 0 ve 100 arasında favori integerını düşün. Favori integerını değişken olarak saklayan ve kullanıcıdan sürekli bu sayıyı tahmin etmesini isteyen, verilen cevaba göre çok düşük veya çok yüksek şeklinde geri bildirim yapan bir program yazın
 
-For example my favorite number is 88. Here is a demo of a user trying to guess that number:
+Örneğin,en sevdiğim sayı 88 olsun. Program aşağıdaki gibi görünmelidir:
 
 ```
-Try and guess my favorite number (between 0 and 100)
-Guess: 50
-Too low
-Guess: 75
-Too low
-Guess: 87
-Too low
-Guess: 92
-Too high
-Guess: 90
-Too high
-Guess: 89
-Too high
-Guess: 88
-Good job!
+Favori sayımı tahmin et (0 ile 100 arasında)
+Tahmin: 50
+Çok düşük
+Tahmin: 75
+Çok düşük
+Tahmin: 87
+Çok düşük
+Tahmin: 92
+Çok yüksek
+Tahmin: 90
+Çok yüksek
+Tahmin: 89
+Çok yüksek
+Tahmin: 88
+İyi iş çıkardın!
 ```

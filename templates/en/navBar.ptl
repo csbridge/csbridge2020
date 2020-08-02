@@ -28,15 +28,16 @@
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="{{pathToRoot}}en/resources/graphics.html">Graphics Reference</a>
               % # begin Yosefa's part
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li class="dropdown-header">Course information</li>
               <li><a href="{{pathToRoot}}en/resources/general-info.html">General Info</a></li>
               <li><a href="{{pathToRoot}}en/resources/student-faq.html">[Student] Course FAQs</a></li>
-              <li><a href="{{pathToRoot}}en/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
               <li><a href="{{pathToRoot}}en/resources/section-info.html">Section Info</a></li>
-              <li><a href="{{pathToRoot}}en/resources/zoom-info.pdf">Zoom Guide</a></li>
               % # end Yosefa's part
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="{{pathToRoot}}en/resources/install.html">Install PyCharm</a></li>
               <li><a href="{{pathToRoot}}en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+              <li class="divider" />
+              <li><a href="{{pathToRoot}}en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="{{pathToRoot}}en/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -132,7 +133,7 @@
 
 				<!-- Day 5 -->
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
           		    <li class="visible-after" data-visible-after="2019071109">
@@ -143,7 +144,7 @@
 	          	    </li>
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="{{pathToRoot}}en/projects/madMethods.html">Mad Methods</a>
+	          	    	<a href="{{pathToRoot}}en/projects/funkyFunctions.html">Funky Functions</a>
 	          	    </li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
 	          	    	<a href="{{pathToRoot}}en/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -269,12 +270,13 @@
                 </ul>
               </li>
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
 	          	    <li><a href="{{pathToRoot}}en/projects/robotFace/index.html">Robot Face</a></li>
 	          	    <li><a href="{{pathToRoot}}en/projects/halfGreen/index.html">Half Green</a></li>
                   <!-- Used to be a main course component -->
-	          	    <li><a href="{{pathToRoot}}en/projects/average/index.html">Average Method</a></li>
+	          	    <li><a href="{{pathToRoot}}en/projects/average/index.html">Average Function</a></li>
+	          	    <li><a href="{{pathToRoot}}en/projects/divisible/index.html">Division Functions</a></li>
 	          	    <li><a href="{{pathToRoot}}en/projects/drawPeople/index.html">Draw People</a></li>
 	          	    <li><a href="{{pathToRoot}}en/projects/medicine/index.html">Counterfeit Medicine</a></li>
                 </ul>
@@ -312,7 +314,7 @@
 	          	<li><a href="{{pathToRoot}}slides/Graphics.pdf">Graphics (Slides)</a></li>
 	          	<li><a href="{{pathToRoot}}starter/Graphics.zip">Graphics (Code)</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Animation.pdf">Animation</a></li>
-	          	<li><a href="{{pathToRoot}}slides/Methods.pdf">Methods</a></li>
+	          	<li><a href="{{pathToRoot}}slides/Methods.pdf">Functions</a></li>
 	          	<li><a href="{{pathToRoot}}slides/NestedLoops.pdf">Nested Loops</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Events.pdf">Events (Slides)</a></li>
 	          	<li><a href="{{pathToRoot}}starter/Events.zip">Events (Code)</a></li>
@@ -345,7 +347,7 @@
 	        <!-- TA Link -->
 	        % if get('taMode', False):
 		        <ul class="nav navbar-nav navbar-right">
-		            <li><a href="{{pathToRoot}}tas">TA Page</a></li>
+		            <li><a href="{{pathToRoot}}teach">SL Page</a></li>
 		        </ul>
 		    % end
 

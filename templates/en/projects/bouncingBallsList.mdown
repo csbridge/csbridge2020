@@ -30,7 +30,7 @@
         x and y velocities for each ball. 
         These velocities should be random. Importantly, we will store the balls and 
         velocities in three ArrayLists. 
-        We can decompose all of this into a method.
+        We can decompose all of this into a function.
         </p>
 
 					<center>

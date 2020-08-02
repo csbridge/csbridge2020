@@ -1,0 +1,62 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Fırlama Fonksiyonlar
+credit: Chris, Bryce, Lisa
+translation: Serhat Arslan, Ceren Kocaoğullar
+
+## 1. Mad Max
+
+Örnek: [Ortalama Fonksiyonu]({{pathToRoot}}tr/projects/averageMethod.html}}) <br/>
+Dosya: `mad_max.py`
+
+Programı, üç sayının maksimumunu döndüren `mad_max` fonksiyonunu yazarak tamamlayın.
+
+```
+def mad_max(x, y, z):
+    # kodunuzu buraya yazın
+```
+
+`main` fonksiyonu sizin için yazılmış durumda:
+
+```
+def main():
+    print("4, 5, ve 6 sayılarının maksimumu:", mad_max(4, 5, 6))
+    print("-4, 4, ve 0 sayılarının maksimumu:", mad_max(-4, 4, 0))
+    print("3, 2, ve 1 sayılarının maksimumu:", mad_max(3, 2, 1))
+    print("0, 0, ve 0 sayılarının maksimumu:", mad_max(0, 0, 0))
+```
+
+Çıktınız şöyle görünmeli:
+
+```
+4, 5, ve 6 sayılarının maksimumu: 6
+-4, 4, ve 0 sayılarının maksimumu: 4
+3, 2, ve 1 sayılarının maksimumu:
+0, 0, ve 0 sayılarının maksimumu:: 0
+```
+
+## 2. Ağaçlar Çiz
+
+Ders Notları: [Graphics Reference]({{pathToRoot}}tr/handouts/graphics.html)<br/>
+Örnekler: [Draw People]({{pathToRoot}}tr/projects/drawpeople.html}}),
+[Half Green]({{pathToRoot}}tr/projects/halfgreen.html}})<br/>
+Dosya: `draw_trees.py`
+
+`draw_tree` fonksiyonunu doldurun. Bu fonksiyon verilen `(x, y)` koordinatlarında _*tabanı*_ ortalanmış bir ağaç çizer:
+
+`main` fonksiyonu sizin için yazılmış durumda:
+
+```
+def main():
+    draw_tree(50, 150)
+    draw_tree(100, 300)
+    draw_tree(500, 200)
+    draw_tree(300, 250)
+    draw_tree(700, 310)
+
+```
+
+Her ağacın gövdesi 20 piksel (`TRUNK_WIDTH`) genişliğinde ve 80 piksel `TRUNK_HEIGHT`) yüksekliğinde olmalıdır. Yaprakların yarıçapları 30 piksel (`LEAVES_RADIUS`) olmalıdır. Çıktınız aşağıdakine benzer olmalıdır:
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/madmethods/demo.png">
+</center>

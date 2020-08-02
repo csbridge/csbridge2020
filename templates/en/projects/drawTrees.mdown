@@ -1,0 +1,24 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Draw Trees
+credit: Written by Chris, Bryce, and Julia
+
+Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
+
+Fill in the `draw_tree` method that draws a tree with the base of its trunk centered at the provided `(x, y)` position.
+
+The `main` method has already been written for you:
+
+```
+def main():
+    draw_tree(50, 150)
+    draw_tree(100, 300)
+    draw_tree(500, 200)
+    draw_tree(300, 250)
+    draw_tree(700, 310)
+```
+
+Each tree should have a trunk with a width of 20 pixels (`TRUNK_WIDTH`) and a height of 80 pixels (`TRUNK_HEIGHT`). The leaves should have a radius of 30 pixels (`LEAVES_RADIUS`). Your output should look like this:
+
+<center>
+<img style="width:500px" src="{{pathToRoot}}img/projects/madmethods/demo.png">	
+</center>

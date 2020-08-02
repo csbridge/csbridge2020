@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Random Painter</title>
+<title>CS Bridge  | Deli Ressam</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -24,8 +24,12 @@
 
 <script src="../../karel/ace/ace.js" type="text/javascript"></script>
 <script type="text/javascript" src="../../js/moment.min.js"></script>
-<script type="text/javascript" src="../../js/index.js"></script>
+<script type="text/javascript" src="../../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../../js/time.js"></script>
+
+<!--
 <script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
+-->
 
 
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -69,24 +73,25 @@
 	      <ul class="nav navbar-nav">
 	        <!--<li ><a href="#">Link</a></li>-->
 	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kaynaklar<b class="caret"></b></a>
 
             <ul class="dropdown-menu">
-	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
-	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/tr/intro.html">Karel Okuyucu</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/tr/intro/">Python Okuyucu</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../tr/resources/quick-python.html">Python Referansı</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../tr/resources/graphics.html">Grafik Referansı</a>
-				      <li><a class="visible-after" data-visible-after="2019071509" href="../../tr/resources/animation.html">Animation Reference</a></li>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../tr/resources/animation.html">Animasyon Referansı</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
-              <li><a href="../../tr/resources/general-info.html">General Info</a></li>
-              <li><a href="../../tr/resources/student-faq.html">[Student] Course FAQs</a></li>
-              <li><a href="../../tr/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
-              <li><a href="../../tr/resources/section-info.html">Section Info</a></li>
-              <li><a href="../../tr/resources/zoom-info.pdf">Zoom Guide</a></li>
+              <li class="dropdown-header">Course information</li>
+              <li><a href="../../tr/resources/general-info.html">Genel Bilgiler</a></li>
+              <li><a href="../../tr/resources/student-faq.html">Sıkça Sorulan Sorular</a></li>
+              <li><a href="../../tr/resources/section-info.html">Grup Bilgisi</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
-              <li><a href="../../tr/resources/install.html">Install PyCharm</a></li>
-              <li><a href="../../tr/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+              <li><a href="../../tr/resources/install.html">PyCharm Kurulumu</a></li>
+              <li><a href="../../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
+              <li class="divider" />
+              <li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../tr/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -171,7 +176,7 @@
 	          	</li>
           		<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün Evening</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
-	          		<a href="../../tr/projects/madMethods.html">Mad Methods</a>
+	          		<a href="../../tr/projects/funkyFuncions.html">Funky Functions</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
 	          		<a href="../../tr/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -200,7 +205,7 @@
 	            	<a href="../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../tr/projects/sunset.html">Kısa Film</a>
+	          		<a href="../../tr/projects/shortFilm.html">Kısa Film</a>
 	          	</li>
 
         <!-- Day 7 -->
@@ -304,8 +309,9 @@
 				      <li class="divider visible-after" data-visible-after="2019071209" />
 				      <li class="dropdown-header visible-after" data-visible-after="2019071209">4. Gün</li>
 				      <li class="visible-after" data-visible-after="2019071209">
-				      	<a href="../../tr/projects/average.html">Ortalama Metodu</a>
+				      	<a href="../../tr/projects/average.html">Average Function</a>
 				      </li>	
+	          	<li><a href="../../tr/projects/divisible/index.html">Division Functions</a></li>
 				      <li class="visible-after" data-visible-after="2019071209">
 				      	<a href="../../tr/projects/drawPeople.html">İnsan Çizme</a>
 				      </li>	
@@ -322,7 +328,7 @@
 	          		<a href="../../tr/projects/holePuncher.html">Delgeç</a>
 	          	</li>	
 	          	<li class="visible-after" data-visible-after="2019071509">
-	          		<a href="../../tr/projects/debrisSweeper.html">Enkazı Kaldır</a>
+	          		<a href="../../tr/projects/debrisSweeper/index.html">Enkazı Kaldır</a>
 	          	</li>	
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../tr/projects/suchADrag.html">Ne Kaydırma Ama<</a>
@@ -380,7 +386,7 @@
 			
 	        <!-- Bonus button -->
 	        <ul class="nav navbar-nav">
-	            <li><a href="../../tr/old/bonus-index.html">Bonus</a></li>
+	            <li><a href="../../tr/bonus-index.html">Bonus</a></li>
 	        </ul>
 			
 	        <!-- Old/New button -->
@@ -428,6 +434,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -437,11 +444,15 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Random Painter
+		Deli Ressam
 	</h1>
 
 		<p>
-			Credit: Chris Piech
+			Hazırlayan: Chris Piech
+		</p>
+
+		<p>
+			Çevirenler: Serhat Arslan, Ceren Kocaoğullar
 		</p>
 </div>
 <hr/>
@@ -449,45 +460,47 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../en/handouts/karel.html">KarelReference</a><br/>
-Worked Examples: <a href="../../en/projects/invert/index.html">Invert</a>, <a href="../../en/projects/unkarel/index.html">UN Karel</a><br/>
-Day1: <code>random_painter_karel.py</code></p>
+		<p>Ders Notları: <a href="../../en/resources/karel.html">KarelReference</a><br/>
+Çözümlü Örnekler: <a href="../../en/projects/invert/index.html">Invert</a>, <a href="../../en/projects/unkarel/index.html">UN Karel</a><br/>
+Dosya: <code>random_painter_karel.py</code></p>
 <h2 id="problem">Problem</h2>
-<p>Karel is starting to find her world too black and white. Help her fill it with color.
+<p>Karel, dünyasını çok siyah beyaz bulmaya başlıyor. Renkle doldurmasına yardım edin.</p>
 <p>
 <center>
-    <img style="width:100%"  src="../../img/projects/randomPainter/long.png"> <br />
+    <img style="width:100%"  src="../../img/projects/randomPainter/long.png">   
 </center>
-</p></p>
-<h2 id="paint-and-random">Paint and Random</h2>
-<p>Karel has a few commands up her sleeve. She can paint the corner on which she is standing using the instruction</p>
+</p>
+
+<h2 id="boyama-ve-rastgelelik">Boyama ve Rastgelelik</h2>
+<p>Karel'ın sakladığı birkaç komutu var. Üzerinde durduğu köşeyi şu yönergeyi kullanarak boyayabilir:</p>
 <pre><code>paint_corner(color)
 </code></pre>
 
-<p>The value enclosed in the parentheses is called an argument in the terminology of programming languages, and it may be any one of 
-<code><span style="color:red;">RED</span></code>, 
-<code><span style="color:orange;">ORANGE</span></code>, 
-<code><span style="color:green;">GREEN</span></code>, 
-<code><span style="color:cyan;">CYAN</span></code>, 
-<code><span style="color:blue">BLUE</span></code>, 
+<p>Parantez içindeki değer, programlama dilleri terminolojisinde argüman (argument) olarak geçer ve burada aşağıdakilerden herhangi biri olabilir:
+<code><span style="color:red;">RED</span></code>,
+<code><span style="color:orange;">ORANGE</span></code>,
+<code><span style="color:green;">GREEN</span></code>,
+<code><span style="color:cyan;">CYAN</span></code>,
+<code><span style="color:blue">BLUE</span></code>,
 <code><span style="color:magenta;">MAGENTA</span></code>,
-and so on. So you can call <code>paint_corner(RED)</code> to paint the square that Karel is standing on into a red square.</p>
-<p>We'll talk about randomness later, but for now know that we want to draw one of two colors, and we need to do so randomly in Karel. The new condition <code>random(0.5)</code> is a condition that is True half of the time, but in an unpredictable (random) way. Like flipping a coin, sometimes this condition is <code>True</code> and sometimes it is `False. For example, the code</p>
+ve dahası. Yani <code>paint_corner(RED)</code> fonksiyonunu çağırarak Karel'ın üzerine bulunduğu köşeyi kırmızıya boyamasını sağlayabilirsiiz.</p>
+<p>Daha sonra rastgelelik hakkında konuşacağız, ancak şimdilik iki renkten birini çizmek istediğimizi biliyoruz ve bunu Karel'da rastgele yapmamız gerekiyor. Karel yeni koşulu <code>random(0.5)</code>, zamanın yarısında doğru (<code>True</code>) yarısında (<code>False</code>) dönüyor, ama tahmin edilemez bir şekilde. Bozuk para atmak gibi. Örneğin aşağıdaki kod:</p>
 <pre><code>if random(0.5):
     put_beeper()
 </code></pre>
 
-<p>will place a beeper (or will not) with equal probability. If you wanted, say, on average 75% of the time to have a beeper (instead of 50%), you could change the condition to `random(0.75).</p>
-<h2 id="painter">Painter</h2>
-<p>Use these new abilities to have karel randomly paint each corner of a world one of two colors. You can chose any two colors you would like; we chose green and blue.</p>
-<p>Below are three executions of the same program that randomly paints any sized world green and blue executed on a 10x10 world. Note that because of the random condition, the pattern of green and blue is different on each run!</p>
+<p>eşit ihtimalle bir beeper yerleştirecek ya da yerleştirmeyecek.</p>
+<p>will place a beeper (or will not) with equal probability. Diyelim ki 75% olasılıkla beeper yerleştirmek istiyorsunuz (50% yerine), bu durumda koşulu <code>random(0.75)</code> olarak değiştirebilirsiniz.</p>
+<h2 id="ressam">Ressam</h2>
+<p>Bu yeni yetenekleri, Karel'a bir dünyanın her bir köşesini rastgele iki renkten birisiyle boyatmak için kullanın. İstediğiniz iki rengi seçebilirsiniz, biz yeşil ve maviyi seçtik.</p>
+<p>Aşağıda herhangi bir dünyayı rastgele yeşil ve maviye boyayan bir programın 10x10'luk bir dünya üzerindeki üçer adet çalışması var. Rastgele sonuç veren random koşulundan ötürü, her çalıştırmamızda yeşil ve mavi desenleri farklı olduğuna dikkat edin!</p>
 <p>
     <center>
         <img style="width:100%"  src="../../img/projects/randomPainter/randoms.png">    
     </center>
 </p>
 
-<p>As always, remember to decompose your solution! Your program should work on a world of any size.</p>
+<p>Her zaman olduğu gibi, çözümünüzü parçalara ayırmayı unutmayın! Programınız herhangi bir boyuttaki dünyada çalışmalı.</p>
 	</div>
 </div>
 

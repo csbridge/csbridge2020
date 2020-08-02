@@ -1,45 +1,47 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Optical Illusion
-credit: Based on an idea by Steve Cooper. Written by Chris Piech.
+title: Optik İllüzyon
+credit: Chris Piech (Steve Cooper'ın bir fikri üzerine oluşturulmuştur)
+translation: Serhat Arslan ve Ahmet Uysal
 
-Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
-File: `illusion1.py`
+Ders Notları: [Grafik Referansı]({{pathToRoot}}tr/resources/graphics.html)<br/>
+Dosya: `illusion1.py`
 
-Sometimes repeating patterns can cause our eyes to see things that aren't there. Look at the picture below. Can you see little gray squares in the intersections of the white lines? Write a GraphicsProgram that create the optical illusion:
+Bazen örüntülerin tekrar etmesi, gözlerimizin olmayan şeyleri görmesine yol açar. Aşağıdaki resme bakın. Beyaz çizgilerin kesişimlerindeki küçük gri kareleri görebiliyor musunuz? Optik illüzyon yaratan bir GraphicsProgram yazın:
 
 <center>
   <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/illusion/illusion1.png">
 </center>
 
-# Constants
-You may notice that the starter code for this project has the lines:
+# Sabitler
+
+Bu projenin başlangıç kodunda aşağıdaki satırların varlığı dikkatinizi çekmiş olabilir:
 
 ```
 SIZE = 100
 GAP = 10
 ```
 
-which are written outside the main() method. These lines define constants: variables whose values never change. Since they are defined outside all methods, you can read their values at any point in the program. Though you could write this optical illusion using the numbers 100 and 10 directly wherever you need them, using constants makes your program much easier to read.
+Bu satırlar <code>main()</code> fonksiyonunun dışında yazılmışlar ve değişkenler (variables) tamamen büyük harflerle isimlendirilmiş. Bu satırlar sabitleri, yani değerleri hiç değişmeyen değişkenleri, tanımlar. Bu değişkenler tüm fonksiyonların dışında tanımlanmış olduğu için onların değerini programınızın herhangi bir noktasında okuyabilirsiniz. Sabit değerleri direkt olarak kullanmak yerine (10 ve 100 sayılarını programınızda doğrudan kullanmak) sabit değişkenler yaratmak programınızın okunurluğunu artırır ve değişiklik yapmanızı kolaylaştırır.
 
-## Double for loop
+## Çift for döngüsü
 
-This problem requires using a for-loop inside a for-loop. Remember to use a different iterator variable for the inner loop. For example, if your outer loop is of the form:
+Bu problem for döngüsü içinde for döngüsü kullanmanızı gerektirir. İçerideki döngü için farklı bir döngü değişkeni kullanmayı unutmayın. Örneğin, eğer dışarıdaki döngünüz şu şekildeyse:
 
 ```
 for i in range(100):
-  ... inner loop here ...
+  ... iç for döngüsü ...
 ```
 
-The inner loop (the loop in the body) must iterate through a variable other than `i`.
+Onun içindeki for döngüsü <code>i</code>' den başka bir döngü değişkeni kullanmalı.
 
-## Extension
+## Eklemeler
 
-File: `illusion2.py`
+Dosya: `illusion2.py`
 
-If you have time, try creating this optical illusion! Note that all the squares are the same size and all lines are horizontal! Think about how to decompose your solution.
+Vaktiniz olursa, bu optik illüzyonu yaratmayı deneyin! Tüm karelerin aynı boyutta ve tüm çizgilerin yatay olduğuna dikkat edin! Çözümünüzü nasıl parçalara ayıracağınız üzerine düşünün.
 
 <center>
   <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/illusion/illusion2.png">
 </center>
 
-If you are stuck, try drawing each row with the first black square always starting at x = 0. Then try to figure out how to create the offset pattern.
+Eğer takılırsanız, her bir satırı ilk siyah karesi x = 0'da başlayacak şekilde çizmeyi deneyin. Ardından her satırın başındaki fazlalığın örüntüsünü nasıl oluşturabileceğinizi bulmaya çalışın.

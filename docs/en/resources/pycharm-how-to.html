@@ -24,8 +24,12 @@
 
 <script src="../../karel/ace/ace.js" type="text/javascript"></script>
 <script type="text/javascript" src="../../js/moment.min.js"></script>
-<script type="text/javascript" src="../../js/index.js"></script>
+<script type="text/javascript" src="../../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../../js/time.js"></script>
+
+<!--
 <script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
+-->
 
 
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -79,14 +83,15 @@
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li class="dropdown-header">Course information</li>
               <li><a href="../../en/resources/general-info.html">General Info</a></li>
               <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
-              <li><a href="../../en/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
               <li><a href="../../en/resources/section-info.html">Section Info</a></li>
-              <li><a href="../../en/resources/zoom-info.pdf">Zoom Guide</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
               <li><a href="../../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+              <li class="divider" />
+              <li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -182,7 +187,7 @@
 
 				<!-- Day 5 -->
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
           		    <li class="visible-after" data-visible-after="2019071109">
@@ -193,7 +198,7 @@
 	          	    </li>
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="../../en/projects/madMethods.html">Mad Methods</a>
+	          	    	<a href="../../en/projects/funkyFunctions.html">Funky Functions</a>
 	          	    </li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
 	          	    	<a href="../../en/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -319,12 +324,13 @@
                 </ul>
               </li>
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
 	          	    <li><a href="../../en/projects/robotFace/index.html">Robot Face</a></li>
 	          	    <li><a href="../../en/projects/halfGreen/index.html">Half Green</a></li>
                   <!-- Used to be a main course component -->
-	          	    <li><a href="../../en/projects/average/index.html">Average Method</a></li>
+	          	    <li><a href="../../en/projects/average/index.html">Average Function</a></li>
+	          	    <li><a href="../../en/projects/divisible/index.html">Division Functions</a></li>
 	          	    <li><a href="../../en/projects/drawPeople/index.html">Draw People</a></li>
 	          	    <li><a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a></li>
                 </ul>
@@ -362,7 +368,7 @@
 	          	<li><a href="../../slides/Graphics.pdf">Graphics (Slides)</a></li>
 	          	<li><a href="../../starter/Graphics.zip">Graphics (Code)</a></li>
 	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
-	          	<li><a href="../../slides/Methods.pdf">Methods</a></li>
+	          	<li><a href="../../slides/Methods.pdf">Functions</a></li>
 	          	<li><a href="../../slides/NestedLoops.pdf">Nested Loops</a></li>
 	          	<li><a href="../../slides/Events.pdf">Events (Slides)</a></li>
 	          	<li><a href="../../starter/Events.zip">Events (Code)</a></li>
@@ -460,6 +466,7 @@ filePath - the total path to the markdown file being rendered in this template
 </li>
 </ul>
 </li>
+<li><a href="#open-project-opens">Open Project Opens</a></li>
 </ul>
 </div>
 <p>Once you have downloaded a copy of PyCharm as described in the “Installing PyCharm” handout on the course website, your next task is to understand how to write and run Karel programs using PyCharm.</p>
@@ -480,9 +487,9 @@ filePath - the total path to the markdown file being rendered in this template
 <li>If you already have PyCharm open with a different project, go to the top of the screen and click "File"-&gt;"Open".</li>
 <li>
 <p>Navigate to the Day1PM folder and open it. Open the <i><strong>folder</strong></i>, rather than a particular file you want to edit.</p>
-<ul>
-<li>If you already have another project open, PyCharm will prompt you to either open the project in your existing window or in a new window. You can select either.</li>
-</ul>
+</li>
+<li>
+<p>If you already have another project open, PyCharm will prompt you to either open the project in your existing window or in a new window. You can select either.</p>
 </li>
 <li>
 <p>You should see a view shown in Figure 1 below, right-hand side.</p>
@@ -493,14 +500,14 @@ filePath - the total path to the markdown file being rendered in this template
   <p style="text-align:center"><b>Figure 1</b>: The first window that opens when you start PyCharm (left) should have an Open option for you to select a project. After opening a project, you should see the default PyCharm landing view (right).</p>
 </center></p>
 <h2 id="edit-code">Edit code</h2>
-<p>The <strong>Project toolbar</strong> on the left (Figure 2) shows the current project we are working on (Day1PM) as well as all of its contents: folders, Python files, etc. For Karel programs, you do not need to inspect or edit any files in the <strong>karel</strong> or <strong>worlds</strong> folders.</p>
+<p>The <strong>Project toolbar</strong> on the left (Figure 1, right) shows the current project we are working on (Day1PM) as well as all of its contents: folders, Python files, etc. For Karel programs, you do not need to inspect or edit any files in the <strong>karel</strong> or <strong>worlds</strong> folders.</p>
 <p>Double-click on a program (say, <code>newspaper_karel.py</code>) and it will open up a text editor view in the main window of PyCharm.</p>
 <p>It's time to code! <!--Check out the <a href="../../en/resources/pycharm-how-to.html#debug">debugging tips</a> section below for tips and tricks when programming.--></p>
 <h2 id="run-programs">Run programs</h2>
 <h3 id="how-to-run-python-programs-in-pycharm">How to run Python programs in Pycharm</h3>
 <p><center>
   <img style="width:50%" src="../../img/resources/pycharm-how-to/terminal.png">
-  <p style="text-align:center">The PyCharm terminal used to run Python programs.</p>
+  <p style="text-align:center"><b>Figure 2</b>: The PyCharm terminal used to run Python programs.</p>
 </center></p>
 <p>To run a program in PyCharm, click the "Terminal" option at the bottom of the screen. To run any program, all you have to do is type the following command into the Terminal and hit "Enter":</p>
 <ul>
@@ -508,7 +515,7 @@ filePath - the total path to the markdown file being rendered in this template
 <li><strong>PC Users</strong>: <code>py insert_name_here.py</code></li>
 </ul>
 <p>The terminal (also known as a <strong>console</strong>) will then print output and accept user text input, depending on how you write your program.</p>
-<p>As a side note, in many handouts we might use the Mac convention of running programs by using the command <b><code>python3 &lt;program name&gt;</code></b>.  If you are a PC user, you should instead use the command <b><code>py &lt;program name&gt;</code></b>.  Just by convention on the PC, you run the Python interpreter using the command <b><code>py</code></b> (as opposed to <b><code>python3</code></b> on the Mac).</p>
+<p>As a side note, in many handouts we might use the Mac convention of running programs by using the command <b><code>python3 &lt;program name&gt;</code></b>. If you are a PC user, you should instead use the command <b><code>py &lt;program name&gt;</code></b>. Just by convention on the PC, you run the Python interpreter using the command <b><code>py</code></b> (as opposed to <b><code>python3</code></b> on the Mac).</p>
 <h3 id="how-to-run-karel-programs-in-pycharm">How to run Karel programs in Pycharm</h3>
 <p>Karel programs are also Python programs!</p>
 <ol>
@@ -516,7 +523,7 @@ filePath - the total path to the markdown file being rendered in this template
 </ol>
 <p><center>
   <img style="width:60%" src="../../img/resources/pycharm-how-to/newspaper_karel.png">
-  <p style="text-align:center">The Karel display that appears when running <code>newspaper_karel.py</code>, including Karel’s world, a Run Program button, and a Load World button</p>
+  <p style="text-align:center"><b>Figure 3</b>: The Karel display that appears when running <code>newspaper_karel.py</code>, including Karel’s world, a Run Program button, and a Load World button</p>
 </center></p>
 <ol>
 <li>
@@ -534,6 +541,16 @@ filePath - the total path to the markdown file being rendered in this template
 <!--
 ## Debug
 -->
+
+<h2 id="open-project-opens">Open Project Opens</h2>
+<p>There are several options when opening a project.
+* This Window: Replaces the current project in your current window with the new project, closing the current project.
+* New Window: Opens the new project in a new, separate window, keeping your current project in the original window.
+* Attach: Adds the new project folder to your current window, keeping the old and new projects separate but both open.
+* Cancel: Don't open the new project.</p>
+<p><center>
+  <img style="width:60%" src="../../img/resources/pycharm-how-to/pycharm_open.png">
+</center></p>
 	</div>
 </div>
 

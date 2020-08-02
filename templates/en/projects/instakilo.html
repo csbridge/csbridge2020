@@ -51,7 +51,7 @@
 			<div class="col-md-12">
 				<h2>Milestone 1: Welcome</h2>
 
-				<p>As a warm-up to displaying a profile with images, you should first implement a method <code><b>displayMessage</b></code> that takes a string as a parameter and displays it to the user in the center of the screen. This method will be useful for displaying the welcome message on application start, as well as later when you respond to user input via the interactors. The message should be centered and be given the font MESSAGE_FONT defined in IKConstants. In other words, the method should look something like the following:</p>
+				<p>As a warm-up to displaying a profile with images, you should first implement a function<code><b>displayMessage</b></code> that takes a string as a parameter and displays it to the user in the center of the screen. This function will be useful for displaying the welcome message on application start, as well as later when you respond to user input via the interactors. The message should be centered and be given the font MESSAGE_FONT defined in IKConstants. In other words, the function should look something like the following:</p>
 
 <div class="well"><code>
 private void displayMessage(String message) {
@@ -63,7 +63,7 @@ private void displayMessage(String message) {
 </code></div>
 
 <p>
-As a reminder you can use <code>getWidth()</code> to get the width of the applicaiton window. Now call this method to display "Welcome to Instakilo!" when the application starts.<p>
+As a reminder you can use <code>getWidth()</code> to get the width of the applicaiton window. Now call this function to display "Welcome to Instakilo!" when the application starts.<p>
 
 				<p>
 					<center>
@@ -90,7 +90,7 @@ As a reminder you can use <code>getWidth()</code> to get the width of the applic
 					<br/>
 				</p>
 
-				<p>Next we want to make sure that we can respond to button clicks. To test that your iteractors are connected correctly display a message, using the <code><b>displayMessage</b></code> method you wrote in the first milestone when a user clicks a button. For now show this message when someone hits the "display" button:
+				<p>Next we want to make sure that we can respond to button clicks. To test that your iteractors are connected correctly display a message, using the <code><b>displayMessage</b></code> function you wrote in the first milestone when a user clicks a button. For now show this message when someone hits the "display" button:
 					<div class="well"><code>
 						"display profile: <i>profileName</i>"
 					</code></div>
@@ -152,7 +152,7 @@ As a reminder you can use <code>getWidth()</code> to get the width of the applic
 					<div class="well"><code>GImage <i>myImage</i> = new GImage(<i>fileName</i>);</code></div>
 
 				<h3>Scaling images</h3>
-				<p>The images you display should all be of the height ROW_HEIGHT, but when you load them from file, they could be any size! In order to make them the right size you are going to have to use the GImage scale method. 
+				<p>The images you display should all be of the height ROW_HEIGHT, but when you load them from file, they could be any size! In order to make them the right size you are going to have to use the GImage scale function. 
 					<div class="well"><code><i>image</i>.scale(<i>fraction</i>);</code></div>
 				For example if you wrote <code>image.scale(0.5)</code> it would make both the width and the heigh of your image half the size. You can get the height of your image using <code><i>image</i>.getHeight();</code> How much should you scale your image by so that it is ROW_HEIGHT?
 				</p>
@@ -182,7 +182,7 @@ As a reminder you can use <code>getWidth()</code> to get the width of the applic
 
 				<p>To post a new photo on the current profile, the user will enter an image name in the lower text area (labeled "New photo name:"") and click "Post".
 				1) If no profile is currently displayed, then display the message "Please select a profile before posting a picture"
-				2) If a profile is displayed, first check that an image exists with the given name using the provided method FileSystem.imageFileExists. If true, add the photo name to the ArrayList of photos associated with that profile, redisplay the current profile.
+				2) If a profile is displayed, first check that an image exists with the given name using the provided function FileSystem.imageFileExists. If true, add the photo name to the ArrayList of photos associated with that profile, redisplay the current profile.
 				</p>
 
 				<p>If we post the photo julia1.jpg to Julia's profile, it should get displayed!</p>
@@ -201,11 +201,11 @@ As a reminder you can use <code>getWidth()</code> to get the width of the applic
 			<div class="col-md-12">
 				<h2>Milestone 6: Load and Save</h2>
 
-				<p>You can save your HashMap to file using the method:
+				<p>You can save your HashMap to file using the function:
 					<div class="well"><code>
 						FileSystem.saveMap(<i>myMap</i>, <i>fileName</i>);
 						</code></div>
-					And you can load a hash map from file using the method:
+					And you can load a hash map from file using the function:
 					<div class="well"><code>HashMap&lt;String, &lt;ArrayList&lt;String&gt;&gt; <i>myMap = </i>FileSystem.loadMap(<i>fileName</i>);</code></div>
 					If no hashMap exists with the given fileName, loadMap will return null.
 				</p>

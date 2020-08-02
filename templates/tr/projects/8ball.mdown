@@ -1,82 +1,86 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: 8-Ball
+title: 8 Numaralı Top
 credit: Chris Piech, with modifications by Lisa Yan
+translation: Serhat Arslan, Ceren Kocaoğullar
 
 File: `8ball.py`
 
-The idea behind an 8-Ball is very simple. You ask the eight ball a yes or no question, and it tells you the answer.
+8 Top'un arkasındaki fikir çok basit. Topa bir evet hayır sorusu soruyorsunuz ve o da size cevabı söylüyor.
 
-Except, that the answer it choses is randomly selected from a set of prefabricated responses.</p>
+Elbette, cevabın önceden hazırlanmış cevaplardan rastgele seçiliyor olması haricinde doğru cevabı söylüyor. :)</p>
 
 <center>
 	<img style="width:300px" src="{{pathToRoot}}img/projects/8Ball/real.gif">	
 	<p style="text-align:center"><i>A real life 8-Ball</i></p>
 </center>
 
-Write a program that continuously prompts the user for a yes or no question, and then randomly selects from 5 canned answers:
-* Without a doubt.
-* Yes.
-* Ask again later.
-* No.
-* Karel thinks so.
+Sürekli olarak kullanıcıdan bir evet hayır sorusu bekleyen ve sonrasında da önceden hazırlanmış 5 cevaptan birini rastgele olarak seçen bir program yazın:
 
-Here is an example run of the program.
+- Şüphesiz.
+- Evet.
+- Daha sonra tekrar sorun.
+- Hayır.
+- Karel öyle düşünüyor.
+
+Programın örnek bir çıktısını burada görebilirsiniz.
+
 <center>
 	  <img style="width:700px" src="{{pathToRoot}}img/projects/8Ball/sampleRun.png">	
 </center>
 
-## Infinite loop
+## Sonsuz döngü
 
-We've implemented part of this program for you---specifically, the **infinite loop** part which continuously asks for user input). We've left you the job of getting the program to answer with the 5 canned answers above.
+Bu programın bir bölümünü sizin için yazdık (spesifik olarak, sürekli kullanıcı girişi isteyen **sonsuz döngü** bölümü). Size, soruları yukarıdaki 5 hazır cevapla yanıtlama işini bıraktık.
 
-Take a look at what we've implemented below. If you run this code as-is, **what does this program do?** Try it out in PyCharm by running the file `8ball.py`!
-Remember that you can run your program in Pycharm's Terminal by typing `python3 8ball.py` (if you are on Mac)
-or `py 8ball.py` (if you are on PC).
+Aşağıda neler yazdığımıza bir göz atın. Bu kodu olduğu gibi çalıştırırsanız, **bu program ne işe yarar?** PyCharm'da `8ball.py` dosyasını çalıştırarak deneyin!
+Mac'te iseniz `Python3 8ball.py` veya PC'deyseniz `py 8ball.py` yazarak programınızı PyCharm Terminalinde çalıştırabileceğinizi unutmayın.
 
 ```
 def main():
     while True:
         input("Ask a yes or no question: ")
 
-        # remember, this is a comment
-        # BEGIN YOUR CODE
-        
+        # unutmayın, bu bir 'comment'
+        # KODUNUZ BURADA BAŞLASIN
 
-        # END YOUR CODE
+
+        # KODUNUZ BURADA BİTSİN
 ```
 
-## Quitting an infinite loop
-This program runs forever!
-To exit a program that runs forever, hit `Ctrl-C` on your keyboard while in the Terminal. You should then be able
-to run your program via the `python3 runningsum.py` or `py runningsum.py` again.
+## Sonsuz döngüden çıkmak
 
-## Choices and random numbers
+Bu program sonsuza dek çalışıyor!
+Sonsuza dek çalışan bir programdan çıkmak için, Terminal'deyken klavyenizdeki `Ctrl-C` tuşlarına basın. Böylece programı tekrar `python3 runningsum.py` veya `py runningsum.py` komutuyla çalıştırabilirsiniz.
 
-One way to choose randomly between 5 answers is to associate each answer with a number and make use of Python's ability to randomly pick numbers.
-Then, depending on which number is picked, you can use **conditional statements** (`if`, `else`) to print out the selected answer.
+## Seçimler ve rastgele sayılar
 
-To generate a random integer, you can do the following:
+5 cevap arasında rasgele seçim yapmanın bir yolu, her cevabı bir numara ile ilişkilendirmek ve Python'un rasgele sayı seçme yeteneğinden faydalanmaktır.
+Ardından, hangi sayının seçildiğine bağlı olarak, seçilen yanıtı yazdırmak için **koşullu ifadeler** (`if`,`else`) kullanabilirsiniz.
+
+Rastgele bir tamsayı (integer) oluşturmak için aşağıdakileri yapabilirsiniz:
 
 ```
 num = random.randint(min, max)
 ```
 
-`min` and `max` are the minimum and maximum integers, respectively that the variable `num` can take on. For example:
+`min` and `max`, sırasıyla `num` değişkeninin alabileceği minimum ve maksimum tamsayılardır. Örneğin:
+
 ```
 num = random.randint(10, 20)
 ```
-will store a random number between 10 and 20, inclusive, in the variable `num`.
 
-## Bonus: extension
+`num` değişkenine 10 ile 20 arasında rastgele bir sayı kaydeder.
 
-Your current program runs forever. How would you change the while loop conditional (currently `True`) to exit when the user types nothing (just presses Enter)?
+## Bonus: ekleme
 
-Hint: Here's a program that outputs "nothing entered" when the user types in nothing (just presses Enter). Otherwise the program prints the user input. How can you use a similar idea and apply it to the while loop?
+Mevcut programınız sonsuza dek çalışır. Kullanıcı hiçbir şey yazmadığında (yalnızca Enter tuşuna bastığında), şu anda `True` olan while döngüsü koşulunu nasıl değiştirirsiniz?
+
+İpucu: İşte size kullanıcı hiçbir şey yazdığında (yalnızca Enter tuşuna basarsa) ekrana "Hiçbir şey girilmedi." yazan bir program. Bu program aksi takdirde program kullanıcı girişini yazdırır. Benzer bir fikri nasıl kullanabilir ve while döngüsüne uygulayabilirsiniz?
 
 ```
-statement = input("Type in something: ")
+statement = input("Bir şeyler yazın: ")
 if statement == "":
-    print("nothing entered")
+    print("Hiçbir şey girilmedi.")
 else:
     print(statement)
 ```

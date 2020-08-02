@@ -1,0 +1,30 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Enkazı Kaldır (çözümlü)
+credit: Written by Chris Piech and Mystery CS106A people.
+translation: Serhat Arslan, Demet Tümkaya
+solution: soln.py
+
+Bu örneğin hedefi, ekranı rastgele yerleşmiş enkazlarla (ovallerle) dolduracak bir program yazmaktır ve sonrasında kullanıcıya tıkladığı yerdeki enkaz parçalarını kaldırmasına izin vermelidir. Bu program, sizlerin dersin ilk haftasında öğrediğiniz birçok tekniği pratik yapmanızı sağlar. Fonksiyonları, for döngülerini, grafikleri, rastgele (random) sayıları, fare takipçilerini ve belki de daha fazlasını kullanıyor olacaksınız!
+
+İlk adım, enkazı oluşturmak. Enkaz parçalarının ne kadar büyük olabileceğine ve ekranda kaç parça bulunabileceğine dair limitleri sabitlerle oluşturun. Her parça için, rastgele (random) bir boyuta, konuma ve renge sahip (oluşturduğunuz lmitler içerisinde) yeni bir oval oluşturun. Bunun her boyutta ekran için çalışması gerektiğini unutmayın. Kodunuzu daha kolay okunabilir yapmak için bunu birkaç fonksiyona bölmek isteyebilirsiniz!
+
+<center>
+<img style="width:500px" src="{{pathToRoot}}img/projects/debrisSweeper/demo.png">   
+</center>
+
+Sonrasında, kullanıcıların enkazı ekrandan kaldırmalarını sağlamalıyız. Sonsuz bir döngü ekle ve kullanıcı bir objenin üstüne tıklayıp tıklamadığını kontrol edin. Eğer tıkladılarsa, o enkazı temizleyin (ekrandan kaldırın)!
+
+## Tıklana objeyi almak
+
+Kanvas fonksiyonu, `canvas.find_closest(x, y)`, belirtilen (x,y) konumuna en yakın objeyi alacaktır. Eğer hiç obje yoksa, `None` olarak geri dönecektir. Bir obje üzerine bazı eylemler gerçekleştirmek için (eğer varsa), aşağıdaki gibi bir şey yazabilirsiniz:
+
+```
+object = canvas.find_closest(x, y)    # x ve y koordinatlardır
+if object is not None:
+    print("Object found at (" + str(x) + ", " + str(y) + ")")  #Obje (x,y) koordinatlarında bulundu
+else:
+    print("Object not found")  #Obje bulunamadı
+```
+
+## Bonus!
+Eğer isterseniz bonus olarak, tüm ekranın enkazdan temizlenmiş olduğu kontrol edecek bir yol ekleyebilirsiniz. Eğer öyleyse, kullanıcıya tebrikler de ve ekranı temizledikleri için teşekkür edin!

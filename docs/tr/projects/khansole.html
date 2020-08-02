@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Khansole Academy</title>
+<title>CS Bridge  | Khansole Akademi</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -24,8 +24,12 @@
 
 <script src="../../karel/ace/ace.js" type="text/javascript"></script>
 <script type="text/javascript" src="../../js/moment.min.js"></script>
-<script type="text/javascript" src="../../js/index.js"></script>
+<script type="text/javascript" src="../../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../../js/time.js"></script>
+
+<!--
 <script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
+-->
 
 
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -69,24 +73,25 @@
 	      <ul class="nav navbar-nav">
 	        <!--<li ><a href="#">Link</a></li>-->
 	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kaynaklar<b class="caret"></b></a>
 
             <ul class="dropdown-menu">
-	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
-	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/tr/intro.html">Karel Okuyucu</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/tr/intro/">Python Okuyucu</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../tr/resources/quick-python.html">Python Referansı</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../tr/resources/graphics.html">Grafik Referansı</a>
-				      <li><a class="visible-after" data-visible-after="2019071509" href="../../tr/resources/animation.html">Animation Reference</a></li>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../tr/resources/animation.html">Animasyon Referansı</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
-              <li><a href="../../tr/resources/general-info.html">General Info</a></li>
-              <li><a href="../../tr/resources/student-faq.html">[Student] Course FAQs</a></li>
-              <li><a href="../../tr/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
-              <li><a href="../../tr/resources/section-info.html">Section Info</a></li>
-              <li><a href="../../tr/resources/zoom-info.pdf">Zoom Guide</a></li>
+              <li class="dropdown-header">Course information</li>
+              <li><a href="../../tr/resources/general-info.html">Genel Bilgiler</a></li>
+              <li><a href="../../tr/resources/student-faq.html">Sıkça Sorulan Sorular</a></li>
+              <li><a href="../../tr/resources/section-info.html">Grup Bilgisi</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
-              <li><a href="../../tr/resources/install.html">Install PyCharm</a></li>
-              <li><a href="../../tr/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+              <li><a href="../../tr/resources/install.html">PyCharm Kurulumu</a></li>
+              <li><a href="../../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
+              <li class="divider" />
+              <li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../tr/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -171,7 +176,7 @@
 	          	</li>
           		<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün Evening</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
-	          		<a href="../../tr/projects/madMethods.html">Mad Methods</a>
+	          		<a href="../../tr/projects/funkyFuncions.html">Funky Functions</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
 	          		<a href="../../tr/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -200,7 +205,7 @@
 	            	<a href="../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../tr/projects/sunset.html">Kısa Film</a>
+	          		<a href="../../tr/projects/shortFilm.html">Kısa Film</a>
 	          	</li>
 
         <!-- Day 7 -->
@@ -304,8 +309,9 @@
 				      <li class="divider visible-after" data-visible-after="2019071209" />
 				      <li class="dropdown-header visible-after" data-visible-after="2019071209">4. Gün</li>
 				      <li class="visible-after" data-visible-after="2019071209">
-				      	<a href="../../tr/projects/average.html">Ortalama Metodu</a>
+				      	<a href="../../tr/projects/average.html">Average Function</a>
 				      </li>	
+	          	<li><a href="../../tr/projects/divisible/index.html">Division Functions</a></li>
 				      <li class="visible-after" data-visible-after="2019071209">
 				      	<a href="../../tr/projects/drawPeople.html">İnsan Çizme</a>
 				      </li>	
@@ -322,7 +328,7 @@
 	          		<a href="../../tr/projects/holePuncher.html">Delgeç</a>
 	          	</li>	
 	          	<li class="visible-after" data-visible-after="2019071509">
-	          		<a href="../../tr/projects/debrisSweeper.html">Enkazı Kaldır</a>
+	          		<a href="../../tr/projects/debrisSweeper/index.html">Enkazı Kaldır</a>
 	          	</li>	
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../tr/projects/suchADrag.html">Ne Kaydırma Ama<</a>
@@ -380,7 +386,7 @@
 			
 	        <!-- Bonus button -->
 	        <ul class="nav navbar-nav">
-	            <li><a href="../../tr/old/bonus-index.html">Bonus</a></li>
+	            <li><a href="../../tr/bonus-index.html">Bonus</a></li>
 	        </ul>
 			
 	        <!-- Old/New button -->
@@ -428,6 +434,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -437,11 +444,15 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Khansole Academy
+		Khansole Akademi
 	</h1>
 
 		<p>
-			Credit: Nick Parlante
+			Hazırlayan: Nick Parlante
+		</p>
+
+		<p>
+			Çeviren: Gül Sena Altıntaş
 		</p>
 </div>
 <hr/>
@@ -450,54 +461,55 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<p>File: <code>khansole.py</code></p>
-<p>Now that you’ve seen how programming can help us in a number of different areas, it’s
-time for you to implement Khan-sole Academy—a program that helps other people learn!
-In this problem, you’ll write a program in the file <code>khansole_academy.py</code> that randomly
-generates simple addition problems for the user, reads in the answer from the user, and then
-checks to see if they got it right or wrong, until the user appears to have mastered the
-material. Note that <strong>“console”</strong> is another name for “terminal” :-).</p>
-<p>More specifically, your program should be able to generate simple addition problems that
-involve adding two 2-digit integers (i.e., the numbers 10 through 99). The user should be
-asked for an answer to each problem. Your program should determine if the answer was
-correct or not, and give the user an appropriate message to let them know. Your program
-should keep giving the user problems until the user has gotten 3 problems <u><strong>correct in a row</strong></u>.
-(Note: the number of problems the user needs to get correctly in a row to complete the
-program is just one example of a good place to specify a constant in your program).
-A sample run of the program is shown below (user input is in bold).</p>
+<p>Artık programlamanın bize farklı alanlarda nasıl yardım edebildiğini gördüğünüze göre
+başkalarının öğrenmesine yardımcı olan Khan-sole Akademi programını uygulamaya koyma
+vaktiniz geldi! Bu problem için <code>khansole_academy.py</code> isimli dosyaya yazacağınız program
+kullanıcı için rastgele basit toplama işlemleri üretecek, kullanıcının cevabını alıp
+doğruluğunu kontrol edecek ve kullanıcının materyalde uzmanlaştığından emin olana kadar
+bu aşamaları tekrar edecek. Unutmayın, <strong>"konsol"</strong> "terminal" için kullandığımız başka
+bir isim :-).</p>
+<p>Daha detaylı anlatmak gerekirse, programınız iki tane 2 basamaklı (10 ila 99 arasındaki sayılar)
+sayının toplama işlemini üretebilmeli. Kullanıcıya her işlem için cevabı sorulmalı. Daha sonra,
+programınız kullanıcının cevabının doğru olup olmadığına karar verip kullanıcıyı sonucu
+açıklayan bir mesajla bilgilendirmeli. Programınız kullanıcı 3 problemi <u><strong>art arda</strong></u>
+doğru cevaplayana kadar soru sormaya devam etmeli. (Not: kullanıcının programı tamamlamak için
+üst üste doğru cevaplaması gereken problem sayısı constant (sabit değişken) tanımlamak için
+verebileceğimiz güzel bir örnek). Pogramın örnek bir çalıştırılması aşağıda gösterilmiştir
+(kullanıcı girdileri kalın karakterlerle gösterilmiştir).</p>
 <p><hr/>
 <code>
-What is 51 + 79?<br/>
-Your answer: <b style="color:blue">120</b><br/>
-Incorrect. The expected answer is 130<br/>
-What is 33 + 19?<br/>
-Your answer: <b style="color:blue">42</b><br/>
-Incorrect. The expected answer is 52<br/>
-What is 55 + 11?<br/>
-Your answer: <b style="color:blue">66</b><br/>
-Correct! You've gotten 1 correct in a row.<br/>
-What is 84 + 25?<br/>
-Your answer: <b style="color:blue">109</b><br/>
-Correct! You've gotten 2 correct in a row.<br/>
-What is 26 + 58?<br/>
-Your answer: <b style="color:blue">74</b><br/>
-Incorrect. The expected answer is 84<br/>
-What is 98 + 85?<br/>
-Your answer: <b style="color:blue">183</b><br/>
-Correct! You've gotten 1 correct in a row.<br/>
-What is 79 + 66?<br/>
-Your answer: <b style="color:blue">145</b><br/>
-Correct! You've gotten 2 correct in a row.<br/>
-What is 97 + 20?<br/>
-Your answer: <b style="color:blue">117</b><br/>
-Correct! You've gotten 3 correct in a row.<br/>
-Congratulations! You mastered addition.<br/>
+51 + 79 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">120</b><br/>
+Maalesef. Doğru cevap 130 idi<br/>
+33 + 19 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">42</b><br/>
+Maalesef. Doğru cevap 52 idi<br/>
+55 + 11 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">66</b><br/>
+Doğru! Bu art arda verdiğiniz 1. doğru cevap.<br/>
+84 + 25 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">109</b><br/>
+Doğru! Bu art arda verdiğiniz 2. doğru cevap.<br/>
+26 + 58 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">74</b><br/>
+Maalesef. Doğru cevap 84 idi<br/>
+98 + 85 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">183</b><br/>
+Doğru! Bu art arda verdiğiniz 1. doğru cevap.<br/>
+79 + 66 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">145</b><br/>
+Doğru! Bu art arda verdiğiniz 2. doğru cevap.<br/>
+97 + 20 işleminin sonucu nedir?<br/>
+Cevabınız: <b style="color:blue">117</b><br/>
+Doğru! Bu art arda verdiğiniz 3. doğru cevap.<br/>
+Tebrikler! Toplama işleminde uzmansınız.<br/>
 </code>
 <hr/></p>
-<p>As a side note, one of the earliest programs one of the instructors of CS106A, Mehran, wrote (with his friend Matthew) when
-he was first learning how to program was very similar to Khan-Sole Academy and it was
-called “M&amp;M’s Math Puzzles”. It was written in a language named BASIC, on a computer
-that had 4K of memory (that’s 4 Kilobytes) and used cassette tapes (the same kind used for
-music in the 1970’s) to store information. Yeah, Mehran is old.</p>
+<p>İlginç bir bilgi: CS106A'nın eğitmenlerinden biri olan Mehran'ın programlama öğrenmeye başladığında
+(arkadaşı Matthew ile birlikte) yazdığı ilk programlardan biri Khan-Sole Akademi'ye çok benziyordu ve
+"M&amp;M's Matematik Bulmacalarını" adındaydı. Bu program BASIC isimli bir programlama dilinde
+yazılmıştı ve 4K hafızası (4 Kilobyte) olan ve bilgi tutmak için kaset (1970'lerde müzik dinlemek
+için kullanılanlar gibi) kullanan bir bilgisayar kullanılmıştı.</p>
 	</div>
 </div>
 

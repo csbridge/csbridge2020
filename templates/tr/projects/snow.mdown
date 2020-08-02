@@ -1,17 +1,19 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Snow
+title: Karlar Düşer
 credit: Chris Piech
+translation: Ceren Kocaoğullar
 
-Examples: [Rockets]({{pathToRoot}}tr/projects/rocketShip.html)<br/>
-File: snow.py
+Çözümlü Örnekler: [Roketler]({{pathToRoot}}tr/projects/rocketShip.html)<br/>
+Dosya: `snow.py`
 
-Animate circles (snow) falling down from the sky and piling up on the ground.
+Daireleri (kar) gökyüzünden düşecek ve yerde birikecek şekilde hareket ettirin.
 
 <img src="{{pathToRoot}}img/projects/snow/snow.png" alt="a screenshot of the snow program with snow falling and stopping at the bottom of the screen" class="center" style="width: 90%" />
 
-Use an animation loop. Each time through the loop:
+Bir animasyon döngüsü kullanın. Her döngüde:
 
-1. Animate all snow flakes not on the ground
-+ Generate a new snow flake at the top of the screen with 10% probability, at a random horizontal location
-+ call `update()` on the canvas
-+ Pause for 10 milliseconds
+1. Yerde olmayan tüm kar tanelerini hareketlendirin
+
+- Ekranın en üstünde rastgele yatay bir yerde %10 olasılıkla yeni bir kar tanesi oluşturun
+- Kanvas üzerinde `update()` fonksiyonunu çağırın
+- 10 milisaniye boyunca duraklatın

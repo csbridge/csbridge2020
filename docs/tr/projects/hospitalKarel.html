@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Hospital Karel</title>
+<title>CS Bridge  | Hastaneci Karel</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -24,8 +24,12 @@
 
 <script src="../../karel/ace/ace.js" type="text/javascript"></script>
 <script type="text/javascript" src="../../js/moment.min.js"></script>
-<script type="text/javascript" src="../../js/index.js"></script>
+<script type="text/javascript" src="../../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../../js/time.js"></script>
+
+<!--
 <script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
+-->
 
 
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -69,24 +73,25 @@
 	      <ul class="nav navbar-nav">
 	        <!--<li ><a href="#">Link</a></li>-->
 	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kaynaklar<b class="caret"></b></a>
 
             <ul class="dropdown-menu">
-	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
-	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/tr/intro.html">Karel Okuyucu</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/tr/intro/">Python Okuyucu</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../tr/resources/quick-python.html">Python Referansı</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../tr/resources/graphics.html">Grafik Referansı</a>
-				      <li><a class="visible-after" data-visible-after="2019071509" href="../../tr/resources/animation.html">Animation Reference</a></li>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../tr/resources/animation.html">Animasyon Referansı</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
-              <li><a href="../../tr/resources/general-info.html">General Info</a></li>
-              <li><a href="../../tr/resources/student-faq.html">[Student] Course FAQs</a></li>
-              <li><a href="../../tr/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
-              <li><a href="../../tr/resources/section-info.html">Section Info</a></li>
-              <li><a href="../../tr/resources/zoom-info.pdf">Zoom Guide</a></li>
+              <li class="dropdown-header">Course information</li>
+              <li><a href="../../tr/resources/general-info.html">Genel Bilgiler</a></li>
+              <li><a href="../../tr/resources/student-faq.html">Sıkça Sorulan Sorular</a></li>
+              <li><a href="../../tr/resources/section-info.html">Grup Bilgisi</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
-              <li><a href="../../tr/resources/install.html">Install PyCharm</a></li>
-              <li><a href="../../tr/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+              <li><a href="../../tr/resources/install.html">PyCharm Kurulumu</a></li>
+              <li><a href="../../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
+              <li class="divider" />
+              <li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../tr/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -171,7 +176,7 @@
 	          	</li>
           		<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün Evening</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
-	          		<a href="../../tr/projects/madMethods.html">Mad Methods</a>
+	          		<a href="../../tr/projects/funkyFuncions.html">Funky Functions</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
 	          		<a href="../../tr/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -200,7 +205,7 @@
 	            	<a href="../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../tr/projects/sunset.html">Kısa Film</a>
+	          		<a href="../../tr/projects/shortFilm.html">Kısa Film</a>
 	          	</li>
 
         <!-- Day 7 -->
@@ -304,8 +309,9 @@
 				      <li class="divider visible-after" data-visible-after="2019071209" />
 				      <li class="dropdown-header visible-after" data-visible-after="2019071209">4. Gün</li>
 				      <li class="visible-after" data-visible-after="2019071209">
-				      	<a href="../../tr/projects/average.html">Ortalama Metodu</a>
+				      	<a href="../../tr/projects/average.html">Average Function</a>
 				      </li>	
+	          	<li><a href="../../tr/projects/divisible/index.html">Division Functions</a></li>
 				      <li class="visible-after" data-visible-after="2019071209">
 				      	<a href="../../tr/projects/drawPeople.html">İnsan Çizme</a>
 				      </li>	
@@ -322,7 +328,7 @@
 	          		<a href="../../tr/projects/holePuncher.html">Delgeç</a>
 	          	</li>	
 	          	<li class="visible-after" data-visible-after="2019071509">
-	          		<a href="../../tr/projects/debrisSweeper.html">Enkazı Kaldır</a>
+	          		<a href="../../tr/projects/debrisSweeper/index.html">Enkazı Kaldır</a>
 	          	</li>	
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../tr/projects/suchADrag.html">Ne Kaydırma Ama<</a>
@@ -380,7 +386,7 @@
 			
 	        <!-- Bonus button -->
 	        <ul class="nav navbar-nav">
-	            <li><a href="../../tr/old/bonus-index.html">Bonus</a></li>
+	            <li><a href="../../tr/bonus-index.html">Bonus</a></li>
 	        </ul>
 			
 	        <!-- Old/New button -->
@@ -428,6 +434,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -437,11 +444,15 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Hospital Karel
+		Hastaneci Karel
 	</h1>
 
 		<p>
-			Credit: Chris Piech
+			Hazırlayan: Chris Piech
+		</p>
+
+		<p>
+			Çeviren: Gül Sena Altıntaş
 		</p>
 </div>
 <hr/>
@@ -449,47 +460,47 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../tr/handouts/karel.html">KarelReference</a><br/>
-Worked Examples: <a href="../../tr/projects/invert.html">Invert</a>, <a href="../../tr/projects/unkarel/index.html">UN Karel</a><br/>
+		<p>Handouts: <a href="../../en/resources/karel.html">KarelReference</a><br/>
+Worked Examples: <a href="../../en/projects/unKarel/index.html">UN Karel</a>, <a href="../../en/projects/banishWinter/index.html">Banish Winter</a><br/>
 Day1: <code>hospital_karel.py</code></p>
-<p>Countries around the world are dispatching hospital-building robots to make sure anyone who
-gets sick can be treated. They have decided to enlist Karel robots. Your job is to program those
-robots.</p>
-<p>Karel begins at the left end of a row that might look like this:</p>
+<p>Dünyanın dört bir tarafındaki ülkeler, hastalanan herkesin tedavi gördüğünden emin olmak için
+hastane inşa eden robotları görevlendiriyor. Bu görev için Karel robotları seçildi. Sizin
+göreviniz de bu robotları programlamak.</p>
+<p>Karel programa satırın solunda aşağıdaki gibi başlıyor:</p>
 <p>
 <center>
     <img style="width:100%"  src="../../img/projects/hospitalkarel/hospitalstart.png">
 </center>
 </p>
 
-<p>Each beeper in the figure represents a pile of supplies. Karel’s job is to walk along
-the row and build a new hospital in the places marked by each beeper. Each hospital
-should look exactly like the picture below (two columns of three beepers):</p>
+<p>Fotoğraftaki her beeper bir malzeme yığınını temsil ediyor. Karel'ın görevi satır boyunca
+yürüyüp beeper'la işaretlenmiş yerlere hastane inşa etmek. Her hastane aşağıdaki fotoğraftaki
+gibi gözükmeli (üçer beeper'dan oluşan iki sütun):</p>
 <p>
 <center>
     <img style="width:50px"  src="../../img/projects/hospitalkarel/supplies.png">
 </center>
 </p>
 
-<p>The new hospital should have their corner at the point at which the pile of supplies was left. At
-the end of the run, Karel should be at the end of the row having created a set of hospitals. For the
-initial conditions shown, the result would look like this:</p>
+<p>Yeni hastanenin köşesi malzeme yığınının bırakıldığı köşede bulunmalı. Program tamamlandığında, Karel
+gerekli hastaneleri yaratmış ve satırın sonunda olmalı. Yukarıda gösterilen başlangıç koşulları için
+sonuç şu şekilde gözükmelidir:</p>
 <p>
 <center>
     <img style="width:100%"  src="../../img/projects/hospitalkarel/hospitalend.png">
 </center>
 </p>
 
-<p>Keep in mind the following information about the world:</p>
+<p>Dünya hakkında aşağıdaki bigileri unutmayın:</p>
 <ul>
-<li>Karel starts facing east at (1, 1) with an infinite number of beepers in its beeper bag.</li>
-<li>The beepers indicating the positions at which hospitals should be built will be spaced so
-that there is room to build the hospitals without overlapping or hitting walls.</li>
-<li>There will be no supplies left on the last column.</li>
-<li>Karel should not run into a wall if it builds a hospital that extends into that final corner.</li>
+<li>Karel doğuya (east) bakarak (1, 1) koordinatlarında çantasında sonsuz sayıda beeper'la başlar.</li>
+<li>Hastanelerin yerlerini gösteren beeper'lar yeterli sayıda hastaneyi üst üste gelmeyecek ya da
+duvarlarla çakışmayacak şekilde yerleştirileceğinden emin olabilirsiniz.</li>
+<li>Son sütunda malzeme olmayacak.</li>
+<li>Karel son sütunu da kapsayan bir hastane inşa ederse bitişte duvara çarpmamalı.</li>
 </ul>
-<p>Write a program to implement the Hospital Building Karel project. Remember that your program
-should work for any world that meets the above conditions.</p>
+<p>Hastane İnşa Eden Karel projesini gerçekleştiren bir program yazın. Unutmayın, programınız
+yukarıdaki koşulları sağlayan tüm dünyalarda çalışmalıdır.</p>
 	</div>
 </div>
 

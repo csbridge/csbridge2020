@@ -1,23 +1,23 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Robot Face
-credit: Problem written by Eric Roberts. Updated by Chris Piech and Lisa Yan.
+title: Robot Yüzü
+credit: Eric Roberts tarafından yazılmış, Chris Piech ve Lisa Yan tarafından güncellenmiştir.
 solution: soln.py
+translation: Serhat Arslan, Ceren Kocaoğullar
 
-
-Write a program that draws this picture. You should use the constants provided, but feel free to change them (or recolor any part of the face).</p>
+Bu resmi çizdiren bir program yazın. Verilmiş sabitleri (constant) kullanmalısınız, ama değerlerini (veya yüzün herhangi bir kısmının rengini) değiştirmekten çekinmeyin. </p>
 
 <center>
 	<img style="width:500px;border:1px solid #000000" src="{{pathToRoot}}img/projects/robotFace/face.jpg">
 </center>
 
 ```
-FACE_WIDTH = 300      # The width of the robot face
-FACE_HEIGHT = 350     # The height of the robot face
-EYE_DIAMETER = 70     # The diameter of each robot eye
-EYE_Y_OFFSET = 40     # The distance from the top of the head to the top of the eyes
-EYE_X_SEPARATION = 40 # The distance between the left eye and right eye
-MOUTH_WIDTH = 150     # The width of the mouth
-MOUTH_HEIGHT = 30     # The height of the mouth
-MOUTH_Y_OFFSET = 200   # The distance from the top of the head to the top of the mouth
-LABEL_Y = 40          # The distance from the top of the screen to the center of the text
+FACE_WIDTH = 300      # Robot yüzünün genişliği
+FACE_HEIGHT = 350     # Robot yüzünün yüksekliği
+EYE_DIAMETER = 70     # Robot gözünün çapı
+EYE_Y_OFFSET = 40     # Başın tepesinden gözlerin tepesine kadar olan uzaklık
+EYE_X_SEPARATION = 40 # Sağ ve sol göz arasındaki uzaklık
+MOUTH_WIDTH = 150     # Ağzın genişliği
+MOUTH_HEIGHT = 30     # Ağzın yüksekliği
+MOUTH_Y_OFFSET = 200   # Başın tepesinden ağzın tepesine kadar olan uzaklık
+LABEL_Y = 40          # Ekranın tepesinden yazının merkezine kadar olan uzaklık
 ```

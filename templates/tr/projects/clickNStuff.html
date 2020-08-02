@@ -58,7 +58,7 @@
                 System.out.println((int) 'A'); // returns 65
 			</code></div>
             <p>Likewise, the numeric representation of <code>Z</code> is <code>65 + 26 - 1 = 90</code>. The <code>char</code> to <code>int</code> mapping is decided by the <a href ="http://ascii.cl/">ASCII Codes</a>.</p>
-            <p>Use this insight to devise a method for looping through the letters A through Z, then loop back to A again.
+            <p>Use this insight to devise a function for looping through the letters A through Z, then loop back to A again.
 
             <h3>Event Flags</h3>
             <p>Add a mouse listener so that when a user clicks, the counter temporarily stops incrementing, and "pausing..." sign shows up at the location that the user clicked. After one second, the "pausing..." sign should go away and the counter should continue incrementing.</p>
@@ -66,7 +66,7 @@
 				<img style="width:300px" src="{{pathToRoot}}img/projects/clickNStuff/pauseCharacter.png">	
 			</center>
             <br>
-            <p><b>It will be difficult to implement this all in <code>mouseClicked()</code>!!!</b> You cannot pause inside a listener method like <code>mouseClicked()</code> or <code>mouseMoved()</code>, because these methods are designed to act quickly. Instead, you need to use <i>Event Flags</i>.</p>
+            <p><b>It will be difficult to implement this all in <code>mouseClicked()</code>!!!</b> You cannot pause inside a listener function like <code>mouseClicked()</code> or <code>mouseMoved()</code>, because these functions are designed to act quickly. Instead, you need to use <i>Event Flags</i>.</p>
 
             <p>A <b>flag</b> is a boolean variable that the programmer sets to <code>true</code> when an event happens, and is set back to <code>false</code> when the event ends. In practice, a programmer sets event flags to true in mouse listeners, checks if they are true in the main animation loop, and then does some action after it sees the flag is turned on. Here is an example of a main animation loop that also checks a flag:</p>
 

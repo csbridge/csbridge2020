@@ -24,8 +24,12 @@
 
 <script src="../../karel/ace/ace.js" type="text/javascript"></script>
 <script type="text/javascript" src="../../js/moment.min.js"></script>
-<script type="text/javascript" src="../../js/index.js"></script>
+<script type="text/javascript" src="../../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../../js/time.js"></script>
+
+<!--
 <script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
+-->
 
 
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -69,24 +73,25 @@
 	      <ul class="nav navbar-nav">
 	        <!--<li ><a href="#">Link</a></li>-->
 	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kaynaklar<b class="caret"></b></a>
 
             <ul class="dropdown-menu">
-	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
-	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/tr/intro.html">Karel Okuyucu</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/tr/intro/">Python Okuyucu</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../tr/resources/quick-python.html">Python Referansı</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../tr/resources/graphics.html">Grafik Referansı</a>
-				      <li><a class="visible-after" data-visible-after="2019071509" href="../../tr/resources/animation.html">Animation Reference</a></li>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../tr/resources/animation.html">Animasyon Referansı</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
-              <li><a href="../../tr/resources/general-info.html">General Info</a></li>
-              <li><a href="../../tr/resources/student-faq.html">[Student] Course FAQs</a></li>
-              <li><a href="../../tr/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
-              <li><a href="../../tr/resources/section-info.html">Section Info</a></li>
-              <li><a href="../../tr/resources/zoom-info.pdf">Zoom Guide</a></li>
+              <li class="dropdown-header">Course information</li>
+              <li><a href="../../tr/resources/general-info.html">Genel Bilgiler</a></li>
+              <li><a href="../../tr/resources/student-faq.html">Sıkça Sorulan Sorular</a></li>
+              <li><a href="../../tr/resources/section-info.html">Grup Bilgisi</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
-              <li><a href="../../tr/resources/install.html">Install PyCharm</a></li>
-              <li><a href="../../tr/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+              <li><a href="../../tr/resources/install.html">PyCharm Kurulumu</a></li>
+              <li><a href="../../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
+              <li class="divider" />
+              <li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../tr/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -171,7 +176,7 @@
 	          	</li>
           		<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün Evening</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
-	          		<a href="../../tr/projects/madMethods.html">Mad Methods</a>
+	          		<a href="../../tr/projects/funkyFuncions.html">Funky Functions</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
 	          		<a href="../../tr/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -200,7 +205,7 @@
 	            	<a href="../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../tr/projects/sunset.html">Kısa Film</a>
+	          		<a href="../../tr/projects/shortFilm.html">Kısa Film</a>
 	          	</li>
 
         <!-- Day 7 -->
@@ -304,8 +309,9 @@
 				      <li class="divider visible-after" data-visible-after="2019071209" />
 				      <li class="dropdown-header visible-after" data-visible-after="2019071209">4. Gün</li>
 				      <li class="visible-after" data-visible-after="2019071209">
-				      	<a href="../../tr/projects/average.html">Ortalama Metodu</a>
+				      	<a href="../../tr/projects/average.html">Average Function</a>
 				      </li>	
+	          	<li><a href="../../tr/projects/divisible/index.html">Division Functions</a></li>
 				      <li class="visible-after" data-visible-after="2019071209">
 				      	<a href="../../tr/projects/drawPeople.html">İnsan Çizme</a>
 				      </li>	
@@ -322,7 +328,7 @@
 	          		<a href="../../tr/projects/holePuncher.html">Delgeç</a>
 	          	</li>	
 	          	<li class="visible-after" data-visible-after="2019071509">
-	          		<a href="../../tr/projects/debrisSweeper.html">Enkazı Kaldır</a>
+	          		<a href="../../tr/projects/debrisSweeper/index.html">Enkazı Kaldır</a>
 	          	</li>	
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../tr/projects/suchADrag.html">Ne Kaydırma Ama<</a>
@@ -380,7 +386,7 @@
 			
 	        <!-- Bonus button -->
 	        <ul class="nav navbar-nav">
-	            <li><a href="../../tr/old/bonus-index.html">Bonus</a></li>
+	            <li><a href="../../tr/bonus-index.html">Bonus</a></li>
 	        </ul>
 			
 	        <!-- Old/New button -->
@@ -428,6 +434,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -441,7 +448,11 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Problemi Yazan: Lisa Yan
+			Hazırlayan: Lisa Yan
+		</p>
+
+		<p>
+			Çeviren: Ahmet Uysal
 		</p>
 </div>
 <hr/>
@@ -450,7 +461,7 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<p>Ders Notları: <a href="../../tr/handouts/karel.html">Karel Referansı</a><br/>
-Çalışılan Örnekler: <a href="../../tr/projects/beeperLine/index.html">Beeper Hattı</a><br/>
+Çözümlü Örnekler: <a href="../../tr/projects/beeperLine/index.html">Beeper Hattı</a><br/>
 Dosya: <code>square_karel.py</code></p>
 <p>Göreviniz Karel'in dünyasının sınırlarını aşağıda görebileceğiniz resimdeki gibi beeper'larla donatmak.</p>
 <p><center>
@@ -459,13 +470,14 @@ Dosya: <code>square_karel.py</code></p>
 <p>Programınızı yazarken bu varsayımları yapabilirsiniz:</p>
 <ul>
 <li>Programın başında Karel dünyanın sol alt tarafındaki karede, güneye dönüktür.</li>
-<li>Karel'in dünyası dikdörtgen şeklindedir. Karenin de özel bir dikdörtgen olduğunu unutmayın.</li>
+<li>Karel'in dünyası kare şeklindedir. Aynı sayıda satır ve sütuna sahiptir.</li>
+<li>Karel'in dünyası 1x1 boyutlarında değildir.</li>
 </ul>
 <p>Yazdığınız program yukarıdaki varsayımlara uygun farklı boyutlardaki dünyalarda da çalışabilmeli. Alternatif bir dünyayı aşağıda görebilirsiniz:</p>
 <p><center>
     <img style="width:600px"  src="../../img/projects/placeSquare/world2.png"><br />
 </center></p>
-<h2 id="insanlar-icin-kod-yazmak">İnsanlar İçin Kod Yazmak</h2>
+<h2 id="anlaslr-kod-yazmak">Anlaşılır Kod Yazmak</h2>
 <p>Bilgisayarın anlayıp çalıştırabildiği bir program yazmak etkileyici bir başarı. Fakat asıl hedeflemen gereken insanların da kolaylıkla anlayabileceği programlar yazmak.</p>
 <p><strong>Ayrıştırma (Decomposition)</strong>. Fonksiyonlar yaratarak programını küçük parçalara bölebileceğini ve bu fonksiyonlara anlamlı isimler vererek onları gerekli yerlerde kullanabileceğini unutma. <a href="../../tr/projects/beeperLine/index.html">Beeper Hattı</a> örneğini fonksiyon oluşturma konusunda fikir almak için inceleyebilirsin. Bu örneği bir başlangıç noktası olarak al ve neleri değiştirmen gerektiğini anlamaya çalış.</p>
 <p><strong>Döngüleri kullanmak</strong>. Programında aşağıdaki gibi bir <code>for</code> döngüsünü kullandın mı?</p>
@@ -475,8 +487,9 @@ Dosya: <code>square_karel.py</code></p>
 
 <p>Eğer kullanmadıysan programını <code>for</code> döngüsü kullanacak şekilde düzenlemelisin. Bunu yapman kodunu çok daha iyi organize edebilmeni sağlayacak, söz veriyoruz :-)</p>
 <h2 id="bonus-gorev">Bonus Görev</h2>
-<p>Bu aşamaya kadar geldiğin için tebrik ederiz! Eğer erken bitirdiysen programının 1x1 boyutundaki dünyada da çalıştığını kontrol et.</p>
-<p>Daha sonra programını Karel'e aşağıda gördüğün beeper'ların sınıra bir birim daha uzak olduğu kareyi yerleştirecek şekilde güncelle. Bu Karel'in 1x1 ve 2x2 boyutundaki dünyalara hiç beeper yerleştirmeyeceği anlamına da geliyor.</p>
+<p>Great job so far!  There is one more topic, called <code>if</code> statements, that you will learn soon.  Once you have learned that, you can optionally revisit this problem if you have extra time, and try to modify your program using everything you've learned, including <code>if</code> statements, to make Karel draw the following square, where all beepers in the square outline do not border any walls. This means that 1x1 and 2x2 worlds will not have any beepers in them.  The world could also be any size, including non-square.</p>
+<p>Bu aşamaya kadar geldiğin için tebrik ederiz! Yakın zamanda <code>if</code> ifadesini kullanarak nasıl şartlara bağlı ifadeler yazabileceğini öğreneceksin. <code>if</code> ifadelerini öğrendikten sonra istersen bu problemi tekrar ziyaret edebilir ve aşağıdaki bonus görevi tamamlayabilirsin.</p>
+<p>Programını Karel'e aşağıda gördüğün beeper'ların sınıra bir birim daha uzak olduğu kareyi yerleştirecek şekilde güncelle. Bu Karel'in 1x1 ve 2x2 boyutundaki dünyalara hiç beeper yerleştirmeyeceği anlamına da geliyor. Bu sefer Karel'in dünyası kare olmak zorunda değil, herhangi bir dikdörtgen boyutlarında olabilir.</p>
 <p>Bonus görevi yapmak tamamen isteğe bağlıdır, zorunlu değildir.</p>
 <p><center>
     <img style="width:600px"  src="../../img/projects/placeSquare/bonus.png"> <br />

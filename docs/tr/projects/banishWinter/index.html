@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Banish Winter (with solution)</title>
+<title>CS Bridge  | Kışa Veda (ve çözümü)</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -24,8 +24,12 @@
 
 <script src="../../../karel/ace/ace.js" type="text/javascript"></script>
 <script type="text/javascript" src="../../../js/moment.min.js"></script>
-<script type="text/javascript" src="../../../js/index.js"></script>
+<script type="text/javascript" src="../../../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../../../js/time.js"></script>
+
+<!--
 <script type="text/javascript" src="../../../plugins/d3.v3/d3.v3.min.js"></script>
+-->
 
 
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -69,24 +73,25 @@
 	      <ul class="nav navbar-nav">
 	        <!--<li ><a href="#">Link</a></li>-->
 	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kaynaklar<b class="caret"></b></a>
 
             <ul class="dropdown-menu">
-	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
-	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/tr/intro.html">Karel Okuyucu</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/tr/intro/">Python Okuyucu</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../../tr/resources/quick-python.html">Python Referansı</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../../tr/resources/graphics.html">Grafik Referansı</a>
-				      <li><a class="visible-after" data-visible-after="2019071509" href="../../../tr/resources/animation.html">Animation Reference</a></li>
+				      <li><a class="visible-after" data-visible-after="2019071509" href="../../../tr/resources/animation.html">Animasyon Referansı</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
-              <li><a href="../../../tr/resources/general-info.html">General Info</a></li>
-              <li><a href="../../../tr/resources/student-faq.html">[Student] Course FAQs</a></li>
-              <li><a href="../../../tr/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
-              <li><a href="../../../tr/resources/section-info.html">Section Info</a></li>
-              <li><a href="../../../tr/resources/zoom-info.pdf">Zoom Guide</a></li>
+              <li class="dropdown-header">Course information</li>
+              <li><a href="../../../tr/resources/general-info.html">Genel Bilgiler</a></li>
+              <li><a href="../../../tr/resources/student-faq.html">Sıkça Sorulan Sorular</a></li>
+              <li><a href="../../../tr/resources/section-info.html">Grup Bilgisi</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
-              <li><a href="../../../tr/resources/install.html">Install PyCharm</a></li>
-              <li><a href="../../../tr/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+              <li><a href="../../../tr/resources/install.html">PyCharm Kurulumu</a></li>
+              <li><a href="../../../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
+              <li class="divider" />
+              <li><a href="../../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../../tr/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -171,7 +176,7 @@
 	          	</li>
           		<li class="dropdown-header visible-after" data-visible-after="2019071509">5. Gün Evening</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
-	          		<a href="../../../tr/projects/madMethods.html">Mad Methods</a>
+	          		<a href="../../../tr/projects/funkyFuncions.html">Funky Functions</a>
 	          	</li>
 	          	<li class="visible-after" data-visible-after="2019071113">
 	          		<a href="../../../tr/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -200,7 +205,7 @@
 	            	<a href="../../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
 	            </li>
 	          	<li class="visible-after" data-visible-after="2019071213">
-	          		<a href="../../../tr/projects/sunset.html">Kısa Film</a>
+	          		<a href="../../../tr/projects/shortFilm.html">Kısa Film</a>
 	          	</li>
 
         <!-- Day 7 -->
@@ -304,8 +309,9 @@
 				      <li class="divider visible-after" data-visible-after="2019071209" />
 				      <li class="dropdown-header visible-after" data-visible-after="2019071209">4. Gün</li>
 				      <li class="visible-after" data-visible-after="2019071209">
-				      	<a href="../../../tr/projects/average.html">Ortalama Metodu</a>
+				      	<a href="../../../tr/projects/average.html">Average Function</a>
 				      </li>	
+	          	<li><a href="../../../tr/projects/divisible/index.html">Division Functions</a></li>
 				      <li class="visible-after" data-visible-after="2019071209">
 				      	<a href="../../../tr/projects/drawPeople.html">İnsan Çizme</a>
 				      </li>	
@@ -322,7 +328,7 @@
 	          		<a href="../../../tr/projects/holePuncher.html">Delgeç</a>
 	          	</li>	
 	          	<li class="visible-after" data-visible-after="2019071509">
-	          		<a href="../../../tr/projects/debrisSweeper.html">Enkazı Kaldır</a>
+	          		<a href="../../../tr/projects/debrisSweeper/index.html">Enkazı Kaldır</a>
 	          	</li>	
 	          	<li class="visible-after" data-visible-after="2019071509">
 	          		<a href="../../../tr/projects/suchADrag.html">Ne Kaydırma Ama<</a>
@@ -380,7 +386,7 @@
 			
 	        <!-- Bonus button -->
 	        <ul class="nav navbar-nav">
-	            <li><a href="../../../tr/old/bonus-index.html">Bonus</a></li>
+	            <li><a href="../../../tr/bonus-index.html">Bonus</a></li>
 	        </ul>
 			
 	        <!-- Old/New button -->
@@ -428,6 +434,7 @@ the following properties passed in:
 
 title - problem title
 credit - problem credit (optional)
+translation - translation credit (optional)
 solution - problem solution python filename (optional)
 base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
@@ -437,11 +444,15 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Banish Winter (with solution)
+		Kışa Veda (ve çözümü)
 	</h1>
 
 		<p>
-			Credit: Based on a handout by Eric Roberts, with updates by Zach Birnholz and Lisa Yan
+			Hazırlayanlar: Eric Roberts&#039;ın ders notlarını temel alır, Zach Birnholz ve Lisa Yan tarafından güncellenmiştir
+		</p>
+
+		<p>
+			Çeviren: Ceren Kocaoğullar
 		</p>
 </div>
 <hr/>
@@ -451,25 +462,25 @@ filePath - the total path to the markdown file being rendered in this template
 	<div class="col-xs-12">
 		<p>Handouts: <a href="../../../en/resources/karel.html">Karel Reference</a><br/>
 File: <code>banish_winter.py</code><br/></p>
-<p>Karel wants to walk across Stanford/CTU/Koç campus and spruce it up a bit for Spring. Spring has sprung, but the campus trees haven't gotten the memo and are still leafless. Karel needs to walk across campus from west to east, adorning all trees with artificial leaves and transforming the campus as follows:</p>
+<p>Karel, Stanford / CTU / Koç kampüsünde yürümek ve bahar için biraz bahçe işleri yapmak istiyor. Bahar başladı, ancak kampüs ağaçları henüz bunu fark edemedi ve hala yapraksızlar. Karel, batıdan doğuya doğru kampüs boyunca yürümeli, tüm ağaçları yapay yapraklarla süslemeli ve kampüsü şu şekilde dönüştürmeli:</p>
 <p><center>
 <img style="width:800px" src="../../../img/projects/banishWinter/banishWinter1.png">
 </center></p>
-<p>The problem is complicated because Karel doesn't know how tall each tree is, nor does she know the distances between trees. She does know, however, that she has just enough beepers in her beeper bag starting out to decorate all of the trees, and that the world (the CTU campus) is 9 spaces wide. Try to intuit the program requirement by looking at the two snapshots above (the world is called <code>banish_winter.w</code>. Your program must therefore also work for the following configuration (<code>banish_winter2.w</code>):</p>
+<p>Sorun karmaşık çünkü Karel her ağacın ne kadar uzun olduğunu ya da ağaçlar arasındaki mesafeleri bilmiyor. Ancak beeper çantasında tüm ağaçları süslemeye başlayan yeterince beeper olduğunu ve dünyanın (CTU kampüsü) 9 boşluk genişliğinde olduğunu biliyor. Yukarıdaki iki anlık görüntüye bakarak program gereksinimini anlamaya çalışın (dünya dosyasının adı <code>banish_winter.w</code>.) Programınız yalnızca bu dünyada değil, aşağıdaki dünya için de çalışmalıdır (<code>banish_winter2.w</code>):</p>
 <p><center>
 <img style="width:800px" src="../../../img/projects/banishWinter/banishWinter2.png">
 </center></p>
-<p>How can we write a program that works in any world that satisfies the above requirements?</p>
+<p>Yukarıdaki gereksinimleri karşılayan <strong>herhangi bir dünyada</strong> çalışan bir programı nasıl yazabiliriz?</p>
 	</div>
 </div>
 
 <!-- Solution (if included) -->
-	<h2>Solution</h2>
+	<h2>Çözüm</h2>
     <p>
     	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
     		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
     		aria-controls="Collapse">
-    		Show Solution
+    		Çözümü Göster
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
@@ -494,8 +505,8 @@ def main():
 def fix_tree():
     &quot;&quot;&quot;
     Climbs to the top of one tree, adds leaves, and descends
-    other side of tree.  When this method is called, Karel is assumed to
-    be facing east at the bottom of the tree to fix, and when the method
+    other side of tree.  When this function is called, Karel is assumed to
+    be facing east at the bottom of the tree to fix, and when the function 
     is done Karel will be facing east immediately after the tree which has
     now been fixed.
     &quot;&quot;&quot;
@@ -556,10 +567,10 @@ if __name__ == &quot;__main__&quot;:
     <script>
     	function toggleButtonText() {
     		var elem = document.getElementById("soln-btn");
-    		if (elem.innerHTML.trim() === "Show Solution") {
-    			elem.innerHTML = "Hide Solution";
+    		if (elem.innerHTML.trim() === "Çözümü Göster") {
+    			elem.innerHTML = "Çözümü Gizle";
     		} else {
-    			elem.innerHTML = "Show Solution";
+    			elem.innerHTML = "Çözümü Göster";
     		}
     	}
     </script>

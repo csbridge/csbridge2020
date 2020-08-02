@@ -24,8 +24,12 @@
 
 <script src="../../../karel/ace/ace.js" type="text/javascript"></script>
 <script type="text/javascript" src="../../../js/moment.min.js"></script>
-<script type="text/javascript" src="../../../js/index.js"></script>
+<script type="text/javascript" src="../../../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../../../js/time.js"></script>
+
+<!--
 <script type="text/javascript" src="../../../plugins/d3.v3/d3.v3.min.js"></script>
+-->
 
 
 <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -79,14 +83,15 @@
           		<li><a class="visible-after" data-visible-after="2019071009" href="../../../en/resources/quick-python.html">Python Reference</a></li>
 	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../../en/resources/graphics.html">Graphics Reference</a>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li class="dropdown-header">Course information</li>
               <li><a href="../../../en/resources/general-info.html">General Info</a></li>
               <li><a href="../../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
-              <li><a href="../../../en/resources/sectionleader-faq.html">[Section Leader] FAQs</a></li>
               <li><a href="../../../en/resources/section-info.html">Section Info</a></li>
-              <li><a href="../../../en/resources/zoom-info.pdf">Zoom Guide</a></li>
 	          	<li class="divider visible-after" data-visible-after="2019071009" />
               <li><a href="../../../en/resources/install.html">Install PyCharm</a></li>
               <li><a href="../../../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+              <li class="divider" />
+              <li><a href="../../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 
               <!-- Not used nor visible -->
 				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../../en/resources/jar.html">Exporting Projects as JARs</a>-->
@@ -182,7 +187,7 @@
 
 				<!-- Day 5 -->
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
           		    <li class="visible-after" data-visible-after="2019071109">
@@ -193,7 +198,7 @@
 	          	    </li>
           		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="../../../en/projects/madMethods.html">Mad Methods</a>
+	          	    	<a href="../../../en/projects/funkyFunctions.html">Funky Functions</a>
 	          	    </li>
 	          	    <li class="visible-after" data-visible-after="2019071113">
 	          	    	<a href="../../../en/projects/fizzbuzz.html">Fizzbuzz</a>
@@ -319,12 +324,13 @@
                 </ul>
               </li>
               <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Methods</a>
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
                 <ul class="dropdown-menu">
 	          	    <li><a href="../../../en/projects/robotFace/index.html">Robot Face</a></li>
 	          	    <li><a href="../../../en/projects/halfGreen/index.html">Half Green</a></li>
                   <!-- Used to be a main course component -->
-	          	    <li><a href="../../../en/projects/average/index.html">Average Method</a></li>
+	          	    <li><a href="../../../en/projects/average/index.html">Average Function</a></li>
+	          	    <li><a href="../../../en/projects/divisible/index.html">Division Functions</a></li>
 	          	    <li><a href="../../../en/projects/drawPeople/index.html">Draw People</a></li>
 	          	    <li><a href="../../../en/projects/medicine/index.html">Counterfeit Medicine</a></li>
                 </ul>
@@ -362,7 +368,7 @@
 	          	<li><a href="../../../slides/Graphics.pdf">Graphics (Slides)</a></li>
 	          	<li><a href="../../../starter/Graphics.zip">Graphics (Code)</a></li>
 	          	<li><a href="../../../slides/Animation.pdf">Animation</a></li>
-	          	<li><a href="../../../slides/Methods.pdf">Methods</a></li>
+	          	<li><a href="../../../slides/Methods.pdf">Functions</a></li>
 	          	<li><a href="../../../slides/NestedLoops.pdf">Nested Loops</a></li>
 	          	<li><a href="../../../slides/Events.pdf">Events (Slides)</a></li>
 	          	<li><a href="../../../starter/Events.zip">Events (Code)</a></li>
@@ -454,9 +460,9 @@ filePath - the total path to the markdown file being rendered in this template
 	<div class="col-xs-12">
 		<p>Handouts: <a href="../../../en/resources/karel.html">Karel Reference</a><br/>
 File: <code>place_100.py</code><br/></p>
-<p>Your goal is to have Karel create a pile of 100 beepers on square infront of where she starts. Please!!! Do not type out putBeeper 100 times in a row! (hint: use a <code>for</code> loop.) </p>
+<p>Your goal is to have Karel create a pile of 100 beepers on square infront of where she starts. Please!!! Do not type out putBeeper 100 times in a row! (hint: use a <code>for</code> loop.)</p>
 <p><center>
-<img style="width:700px" src="../../../img/projects/place100/place100.png"> 
+<img style="width:700px" src="../../../img/projects/place100/place100.png">
 </center></p>
 	</div>
 </div>

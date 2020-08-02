@@ -7,14 +7,15 @@ Worked Examples: [Invert]({{pathToRoot}}en/projects/invert/index.html), [UN Kare
 Day1: `random_painter_karel.py`
 
 ## Problem
-Karel is starting to find her world too black and white. Help her fill it with color.
+Karel is starting to find its world too black and white. Help it fill it with color.
 <p>
 <center>
 	<img style="width:100%"  src="{{pathToRoot}}img/projects/randomPainter/long.png">	
 </center>
 </p>
+
 ## Paint and Random
-Karel has a few commands up her sleeve. She can paint the corner on which she is standing using the instruction
+Karel has a few commands up its sleeve. It can paint the corner on which it is standing using the instruction
 ```
 paint_corner(color)
 ```
@@ -27,16 +28,16 @@ The value enclosed in the parentheses is called an argument in the terminology o
 <code><span style="color:magenta;">MAGENTA</span></code>,
 and so on. So you can call `paint_corner(RED)` to paint the square that Karel is standing on into a red square.
 
-We'll talk about randomness later, but for now know that we want to draw one of two colors, and we need to do so randomly in Karel. The new condition `random(0.5)` is a condition that is True half of the time, but in an unpredictable (random) way. Like flipping a coin, sometimes this condition is `True` and sometimes it is `False. For example, the code
+We'll talk about randomness later, but for now know that we want to draw one of two colors, and we need to do so randomly in Karel. The new condition `random(0.5)` is a condition that is True half of the time, but in an unpredictable (random) way. Like flipping a coin, sometimes this condition is `True` and sometimes it is `False`. For example, the code
 
 ```
 if random(0.5):
     put_beeper()
 ```
-will place a beeper (or will not) with equal probability. If you wanted, say, on average 75% of the time to have a beeper (instead of 50%), you could change the condition to `random(0.75).
+will place a beeper (or will not) with equal probability. If you wanted, say, on average 75% of the time to have a beeper (instead of 50%), you could change the condition to `random(0.75).`
 
 ## Painter
-Use these new abilities to have karel randomly paint each corner of a world one of two colors. You can chose any two colors you would like; we chose green and blue.
+Use these new abilities to have Karel randomly paint each corner of a world one of two colors. You can chose any two colors you would like; we chose green and blue.
 
 Below are three executions of the same program that randomly paints any sized world green and blue executed on a 10x10 world. Note that because of the random condition, the pattern of green and blue is different on each run!
 

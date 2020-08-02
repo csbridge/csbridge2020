@@ -1,8 +1,9 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Mystery Square
-credit: Problem written by a mystery CS106A professor
+title: Gizemli Kare
+credit: Gizemli bir CS106A profesörü.
+translation: Serhat Arslan
 
-Draw a square (100 pixels by 100 pixels) in the center of the screen and change its color every second.
+Ekranın tam ortasında (100'e 100 piksellik) bir kare çizin ve her saniye rengini değiştirin.
 
 <center>
   <img style="width:600px; border: 1px solid black;" src="{{pathToRoot}}img/projects/mysterySquare/mysterySquare.gif">

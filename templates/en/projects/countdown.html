@@ -38,7 +38,7 @@
                 private int countdown; // actual timer value
 			</code></div>
             <p>
-            Choose a large font for your timer, and start by displaying the starting time (TOTAL_TIME) on the screen. You can convert integers to strings by adding the following method to your code:
+            Choose a large font for your timer, and start by displaying the starting time (TOTAL_TIME) on the screen. You can convert integers to strings by adding the following function to your code:
             </p>
 <pre>public String formatIntToString(int x) {
     return "" + x;
@@ -52,7 +52,7 @@
             <h2>Implement the countdown</h2>
             <p>
             Write your animation loop which updates both the logical and visual countdown representations every second.<br>
-            Do not add new GLabels! Just keep changing the text of the old one using GLabel's method <code>setLabel()</code>.
+            Do not add new GLabels! Just keep changing the text of the old one using GLabel's function <code>setLabel()</code>.
             </p>
 			<div class="well"><code>
             // Sets countdownLabel's text to be "hello world"<br>
@@ -89,7 +89,7 @@
             </p>
             <ul>
                 <li>Try to keep a <i>single variable</i> that records your remaining time in seconds. Avoid tracking minutes and seconds separately.</li>
-                <li>Separate your single variable into minutes and seconds when you display the counter. Consider defining methods to make your logic very clear.</li>
+                <li>Separate your single variable into minutes and seconds when you display the counter. Consider defining functions to make your logic very clear.</li>
                 <li>To debug quickly, speed up your timer by reducing the pause time.</li>
                 <li>Remember the "mod" function! Example: <code>5 % 2 = 1</code></li>
             </ul>

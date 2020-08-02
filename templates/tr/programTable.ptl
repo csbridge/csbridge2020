@@ -38,10 +38,10 @@
 
 %>
 
-<!-- Final Project -->
+<!-- Final Projesi -->
 <table class="table table-striped">
 
-		<!-- Day 7 -->
+		<!-- 11. Gün ve Sonrası -->
 
 		<thead
       % if not get('taMode', False):
@@ -50,7 +50,7 @@
     >
 			<tr><th colspan = "6">
 					<br/>
-						<h4>Day 7-8: Final Project</h4></b></th>
+						<h4>11. Gün: Final Projesi</h4></b></th>
 			  </th>
       </tr>
 		</thead>
@@ -61,14 +61,14 @@
 		>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/project.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/project.html">Kendi Projenizi Yaratın</a>
-            <br/><span class="label label-success">Project</span>
+				<td><a href="{{pathToRoot}}en/projects/project.html">Kendi Projenizi Yaratın</a>
+            <br/><span class="label label-success">Tüm Konular</span>
         </td>
-				<td>All</td>
+				<td>Tüm Konular</td>
 			</tr>
 		</tbody>
 
-<!-- Days 10: Dictionaries -->
+<!-- 10. Gün: Dictionary'ler -->
 		<thead
 		% if not get('taMode', False):
 			class="visible-after" data-visible-after="{{breakout}}"
@@ -77,7 +77,7 @@
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-            <h4>Days 10: Dictionaries</h4>
+            <h4>10. Gün: Dictionary'ler</h4>
             </b>
 			</tr>
 		</thead>
@@ -87,22 +87,22 @@
 			% end
 		>
 			<tr>
-      <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day10AM.zip">here</a>]</h4></center></td>
+      <td colspan="6"><center><h4>Sabah Projesi [<a href="{{pathToRoot}}starter/Day10AM.zip">burada</a>]</h4></center></td>
       </tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/phonebook.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/phonebook.html">Phone Book</a>
-        <br/><span class="label label-success">Project</span>
+				<td><a href="{{pathToRoot}}en/projects/phonebook.html">Telefon Rehberi</a>
+        <br/><span class="label label-success">Proje</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/phonebook.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/phonebook.html">TA Solution</a>
 					% end
 				</td>
-				<td>Dictionaries</td>
+				<td>Dictionary'ler</td>
 			</tr>
 		</tbody>
 
 
-<!-- Days 8-9: Breakout -->
+<!-- 8-9. Günler: Breakout -->
 		<thead
 		% if not get('taMode', False):
 			class="visible-after" data-visible-after="{{breakout}}"
@@ -111,7 +111,7 @@
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-						<h4>Days 8-9: Breakout</h4>
+						<h4>8-9. Günler: Breakout</h4>
             </b>
 			</tr>
 		</thead>
@@ -121,21 +121,21 @@
 			% end
 		>
 			<tr>
-      <td colspan="6"><center><h4>Project [<a href="{{pathToRoot}}starter/Breakout.zip">here</a>]</h4></center></td>
+      <td colspan="6"><center><h4>Proje [<a href="{{pathToRoot}}starter/Breakout.zip">burada</a>]</h4></center></td>
       </tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/breakout.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/breakout.html">Breakout!</a>
-        <br/><span class="label label-success">Project</span>
+				<td><a href="{{pathToRoot}}en/projects/breakout.html">Breakout!</a>
+        <br/><span class="label label-success">Proje</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/breakout.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/breakout.html">TA Solution</a>
 					% end
 				</td>
-				<td>Interactors</td>
+				<td>Etkileşimciler</td>
 			</tr>
 		</tbody>
 
-<!-- Day 7 -->
+<!-- 7. Gün -->
 		<thead
 			% if not get('taMode', False):
 				class="visible-after" data-visible-after="{{eventsStart}}"
@@ -144,7 +144,7 @@
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-						<h4>Day 7: Mouse and Lists</h4></b></th>
+						<h4>7. Gün: Mouse ve Listeler</h4></b></th>
 			</tr>
 		</thead>
 		<tbody
@@ -153,27 +153,27 @@
 			% end
 		>
 			<tr>
-      <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day7AM.zip">here</a>]</h4></center></td>
+      <td colspan="6"><center><h4>Sabah Projesi [<a href="{{pathToRoot}}starter/Day7AM.zip">burada</a>]</h4></center></td>
       </tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mouseLocation.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/mouseLocation.html">Mouse Location (Lab)</a>
-          <br/><span class="label label-default">Quickstart</span>
+				<td><a href="{{pathToRoot}}en/projects/mouseLocation.html">Mouse Location (Lab)</a>
+          <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/mouseLocation.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/mouseLocation.html">TA Solution</a>
 					% end
 				</td>
-				<td>Interactors</td>
+				<td>Etkileşimciler</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/makingTracks.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/makingTracks.html">İz Çıkartmaca</a>
+				<td><a href="{{pathToRoot}}en/projects/makingTracks.html">Making Tracks (Lab)</a>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/makingTracks.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/makingTracks.html">TA Solution</a>
 					% end
-        <br/><span class="label label-success">Project</span>
+        <br/><span class="label label-success">Proje</span>
 				</td>
-				<td>Interactors</td>
+				<td>Etkileşimciler</td>
 			</tr>
     </tbody>
     <tbody
@@ -182,63 +182,63 @@
 			% end
     >
 			<tr>
-      <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day7PM.zip">here</a>]</h4></center></td>
+      <td colspan="6"><center><h4>Akşam Projesi [<a href="{{pathToRoot}}starter/Day7PM.zip">burada</a>]</h4></center></td>
       </tr>
       </tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/isAscending.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/isAscending.html">Is Ascending</a>
-          <br/><span class="label label-default">Quickstart</span>
+				<td><a href="{{pathToRoot}}en/projects/isAscending.html">Is Ascending</a>
+          <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/isAscending.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/isAscending.html">TA Solution</a>
 					% end
 				</td>
-				<td>Lists</td>
+				<td>Listeler</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sorted.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/sorted.html">Sorted Numbers</a>
-          <br/><span class="label label-default">Quickstart</span>
+				<td><a href="{{pathToRoot}}en/projects/sorted.html">Sorted Numbers</a>
+          <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/sorted.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/sorted.html">TA Solution</a>
 					% end
 				</td>
-				<td>Lists</td>
+				<td>Listeler</td>
 			</tr>
       <tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/snow.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/snow.html">Kar</a>
-        <br/><span class="label label-primary">Section</span>
+				<td><a href="{{pathToRoot}}en/projects/snow.html">Snow</a>
+        <br/><span class="label label-primary">Grup</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/snow.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/snow.html">TA Solution</a>
 					% end
 				</td>
-				<td>Lists</td>
+				<td>Listeler</td>
 			</tr>
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/catchMeIfYouCan.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/catchMeIfYouCan.html">Yakala Yakalayabilirsen</a>
-          <br/><span class="label label-success">Project</span>
+				<td><a href="{{pathToRoot}}en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+          <br/><span class="label label-success">Proje</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/catchMeIfYouCan.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/catchMeIfYouCan.html">TA Solution</a>
 					% end
 				</td>
-				<td>Mouse and Lists</td>
+				<td>Mouse ve Listeler</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/lineGame.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/lineGame.html">[old, Opsiyonel] Patika</a>
+				<td><a href="{{pathToRoot}}en/projects/lineGame.html">[old, Optional] The Line</a>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/lineGame.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/lineGame.html">TA Solution</a>
 					% end
-          <br/><span class="label label-success">Project</span>
+          <br/><span class="label label-success">Proje</span>
           </td>
-				<td>Lists</td>
+				<td>Listeler</td>
 			</tr>
 		</tbody>
 
-<!-- Day 6 -->
+<!-- 6. Gün -->
 		<thead
 			% if not get('taMode', False):
 				class="visible-after" data-visible-after="{{animationStart}}"
@@ -247,7 +247,7 @@
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-						<h4>Day 6: Animation</h4></b>
+						<h4>6. Gün: Döngüler ve Animasyon</h4></b>
         </th>
 			</tr>
 		</thead>
@@ -257,27 +257,27 @@
 			% end
 		>
 			<tr>
-      <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day6AM.zip">here</a>]</h4></center></td>
+      <td colspan="6"><center><h4>Sabah Projesi [<a href="{{pathToRoot}}starter/Day6AM.zip">burada</a>]</h4></center></td>
       </tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/indexCounter.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/indexCounter.html">Index counter</a>
-          <br/><span class="label label-default">Quickstart</span>
+				<td><a href="{{pathToRoot}}en/projects/indexCounter.html">Index counter</a>
+          <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/indexCounter.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/indexCounter.html">TA Solution</a>
 					% end
 				</td>
-				<td>For Loops</td>
+				<td>For Döngüleri</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/illusion.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/illusion.html">Optik İllüzyon</a>
-          <br/><span class="label label-success">Project</span>
+				<td><a href="{{pathToRoot}}en/projects/illusion.html">Optical Illusion</a>
+          <br/><span class="label label-success">Proje</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/illusion.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/illusion.html">TA Solution</a>
 					% end
 				</td>
-				<td>For Loops</td>
+				<td>For Döngüleri</td>
 			</tr>
     </tbody>
     <tbody
@@ -286,42 +286,42 @@
 			% end
     >
 			<tr>
-      <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day6PM.zip">here</a>]</h4></center></td>
+      <td colspan="6"><center><h4>Akşam Projesi [<a href="{{pathToRoot}}starter/Day6PM.zip">burada</a>]</h4></center></td>
       </tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mysterySquare.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/mysterySquare.html">Gizemli Kare</a>
-          <br/><span class="label label-default">Quickstart</span>
+				<td><a href="{{pathToRoot}}en/projects/mysterySquare.html">Mystery Square</a>
+          <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/mysterySquare.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/mysterySquare.html">TA Solution</a>
 					% end
 				</td>
 				<td>Animation</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/bouncing.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/bouncingBall.html">Zıp Zıp Top</a>
+				<td><a href="{{pathToRoot}}en/projects/bouncingBall.html">Bouncing Ball</a>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/bouncingBall.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/bouncingBall.html">TA Solution</a>
 					% end
-          <br/><span class="label label-primary">Section</span>
+          <br/><span class="label label-primary">Grup</span>
 				</td>
 				<td>Animation</td>
 			</tr>
 			<tr 
 			>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sunset.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/shortFilm.html">Kısa Film</a>
-          <br/><span class="label label-success">Project</span>
+				<td><a href="{{pathToRoot}}en/projects/shortFilm.html">Short Film</a>
+          <br/><span class="label label-success">Proje</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/shortFilm.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/shortFilm.html">TA Solution</a>
 					% end
 				</td>
 				<td>Animation</td>
 			</tr>
 		</tbody>
 
-<!-- Day 5 -->
+<!-- 5. Gün -->
 		<thead
 			% if not get('taMode', False):
 				class="visible-after" data-visible-after="{{graphicsStart}}"
@@ -330,7 +330,7 @@
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-						<h4>Day 5: Graphics and Methods</h4></b>
+						<h4>5. Gün: Grafikler ve Functions</h4></b>
 			</tr>
 		</thead>
 		<tbody
@@ -339,27 +339,27 @@
 			% end
 		>
 			<tr>
-      <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day5AM.zip">here</a>]</h4></center></td>
+      <td colspan="6"><center><h4>Sabah Projesi [<a href="{{pathToRoot}}starter/Day5AM.zip">burada</a>]</h4></center></td>
       </tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/awesome.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/programmingIsAwesome.html">Programcılık Bir Harika</a>a>
-          <br/><span class="label label-default">Quickstart</span>
+				<td><a href="{{pathToRoot}}en/projects/programmingIsAwesome.html">Programing is Awesome</a>
+          <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/programmingIsAwesome.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/programmingIsAwesome.html">TA Solution</a>
 					% end
 				</td>
-				<td>Graphics</td>
+				<td>Grafikler</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomCircles.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/randomCircles.html">Random Circles</a>
-          <br/><span class="label label-success">Project</span>
+				<td><a href="{{pathToRoot}}en/projects/randomCircles.html">Random Circles</a>
+          <br/><span class="label label-success">Proje</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/randomCircles.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/randomCircles.html">TA Solution</a>
 					% end
 				</td>
-				<td>Graphics and Randomness</td>
+				<td>Grafikler ve Rastgelelik</td>
 			</tr>
     </tbody>
     <tbody
@@ -368,53 +368,53 @@
 			% end
     >
 			<tr>
-      <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day5PM.zip">here</a>]</h4></center></td>
+      <td colspan="6"><center><h4>Akşam Projesi [<a href="{{pathToRoot}}starter/Day5PM.zip">burada</a>]</h4></center></td>
       </tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/madMethods.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/madMethods.html">Mad Methods</a>
-          <br/><span class="label label-default">Quickstart</span>
+				<td><a href="{{pathToRoot}}en/projects/funkyFunctions.html">Funky Functions</a>
+          <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/dogYears.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/dogYears.html">TA Solution</a>
 					% end
 				</td>
-				<td>Params and Returns</td>
+				<td>Parametreler ve Return'ler</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/fizzbuzz.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/fizzbuzz.html">Fizzbuzz</a>
-          <br/><span class="label label-primary">Section</span>
+				<td><a href="{{pathToRoot}}en/projects/fizzbuzz.html">Fizzbuzz</a>
+          <br/><span class="label label-primary">Grup</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/fizzbuzz.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/fizzbuzz.html">TA Solution</a>
 					% end
 				</td>
-				<td>Params and Returns</td>
+				<td>Parametreler ve Return'ler</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/target.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/target.html">Hedef Tahtası</a>
-          <br/><span class="label label-primary">Section</span>
+				<td><a href="{{pathToRoot}}en/projects/target.html">Target</a>
+          <br/><span class="label label-primary">Grup</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/target.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/target.html">TA Solution</a>
 					% end
 				</td>
-				<td>Parameters</td>
+				<td>Parametreler</td>
 			</tr>
 
 	    <tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/stringArt.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/stringArt.html">String Sanatı</a>
-          <br/><span class="label label-success">Project</span>
+				<td><a href="{{pathToRoot}}en/projects/stringArt.html">String Art</a>
+          <br/><span class="label label-success">Proje</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/stringArt.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/stringArt.html">TA Solution</a>
 					% end
 				</td>
-				<td>For Loops</td>
+				<td>For Döngüleri</td>
 			</tr>
 
 		</tbody>
 
-<!-- Day 4 -->
+<!-- 4. Gün -->
 		<thead
 			% if not get('taMode', False):
 				class="visible-after" data-visible-after="{{varsStart2}}"
@@ -423,7 +423,7 @@
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-						<h4>Day 4: For loops, deconstructed</h4></b>
+						<h4>4. Gün: For döngüsü ve analizi</h4></b>
         </th>
 			</tr>
 		</thead>
@@ -433,34 +433,34 @@
 			% end
 		>
 			<tr>
-      <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day4AM.zip">here</a>]</h4></center></td>
+      <td colspan="6"><center><h4>Sabah Projesi [<a href="{{pathToRoot}}starter/Day4AM.zip">burada</a>]</h4></center></td>
       </tr>
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/someSum.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/someSum.html">Üç Aşağı Beş Yukarı</a>
-          <br/><span class="label label-default">Quickstart</span>
+				<td><a href="{{pathToRoot}}en/projects/someSum.html">That's Some Sum</a>
+          <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/someSum.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/someSum.html">TA Solution</a>
 					% end
 				</td>
-				<td>Loop variables</td>
+				<td>Döngü değişkenleri</td>
 			</tr>
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/carbonDating.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/carbonDating.html">Karbon Tarihi Saptama</a>
-          <br/><span class="label label-success">Project</span>
+				<td><a href="{{pathToRoot}}en/projects/carbonDating.html">Carbon Dating</a>
+          <br/><span class="label label-success">Proje</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/carbonDating.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/carbonDating.html">TA Solution</a>
 					% end
 				</td>
-				<td>Loop variables</td>
+				<td>Döngü değişkenleri</td>
 			</tr>
     </tbody>
 
 
-<!-- Day 3 -->
+<!-- 3. Gün -->
 		<thead
 			% if not get('taMode', False):
 				class="visible-after" data-visible-after="{{varsStart}}"
@@ -469,7 +469,7 @@
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-						<h4>Day 3: Variables</h4></b>
+						<h4>3. Gün: Değişkenler</h4></b>
         </th>
 			</tr>
 		</thead>
@@ -479,27 +479,27 @@
 			% end
 		>
 			<tr>
-      <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day3AM.zip">here</a>]</h4></center></td>
+      <td colspan="6"><center><h4>Sabah Projesi [<a href="{{pathToRoot}}starter/Day3AM.zip">burada</a>]</h4></center></td>
       </tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/sandcastle.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/sandcastles.html">Kumdan Kaleler</a>
-          <br/><span class="label label-default">Quickstart</span>
+				<td><a href="{{pathToRoot}}en/projects/sandcastles.html">Sandcastles</a>
+          <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/sandcastles.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/sandcastles.html">TA Solution</a>
 					% end
 				</td>
-				<td>Variables</td>
+				<td>Değişkenler</td>
 			</tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/subtractNum.jpg"></img></td>
-        <td><a href="{{pathToRoot}}tr/projects/subtractNum.html">Subtract Numbers</a>
-          <br/><span class="label label-success">Project</span>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/runningSum.png"></img></td>
+				<td><a href="{{pathToRoot}}en/projects/runningSum.html">Run, Sum, Run</a>
+          <br/><span class="label label-success">Proje</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/subtractNum.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/runningSum.html">TA Solution</a>
 					% end
 				</td>
-				<td>Variables</td>
+				<td>Değişkenler</td>
 			</tr>
     </tbody>
 
@@ -509,56 +509,56 @@
 			% end
     >
 			<tr>
-      <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day3PM.zip">here</a>]</h4></center></td>
+      <td colspan="6"><center><h4>Akşam Projesi [<a href="{{pathToRoot}}starter/Day3PM.zip">burada</a>]</h4></center></td>
       </tr>
 			<tr>
-				<td><img class="projectImg" src="{{pathToRoot}}img/icons/runningSum.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/runningSum.html">Run, Sum, Run</a>
-          <br/><span class="label label-default">Quickstart<span>
+				<td><img class="projectImg" src="{{pathToRoot}}img/icons/areaCalculator.jpg"></img></td>
+        <td><a href="{{pathToRoot}}en/projects/areaCalculator.html">Subtract Numbers</a>
+          <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/runningSum.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/areaCalculator.html">TA Solution</a>
 					% end
 				</td>
-				<td>Variables</td>
+				<td>Değişkenler</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/8ball.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/8ball.html">8 Numaralı Top</a>
-          <br/><span class="label label-primary">Section</span>
+				<td><a href="{{pathToRoot}}en/projects/8ball.html">8 Ball</a>
+          <br/><span class="label label-primary">Grup</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/8ball.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/8ball.html">TA Solution</a>
 					% end
 				</td>
-				<td>Conditionals</td>
+				<td>Conditional'lar</td>
 			</tr>
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/viralVideo.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/viralVideo.html">Viral Video</a>
-          <br/><span class="label label-primary">Section</span>
+				<td><a href="{{pathToRoot}}en/projects/viralVideo.html">Viral Video</a>
+          <br/><span class="label label-primary">Grup</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/viralVideo.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/viralVideo.html">TA Solution</a>
 					% end
 				</td>
-				<td>Conditionals</td>
+				<td>Conditional'lar</td>
 			</tr>
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/khansole.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/khansole.html">Khansole Academy</a>
-          <br/><span class="label label-success">Project</span>
+				<td><a href="{{pathToRoot}}en/projects/khansole.html">Khansole Academy</a>
+          <br/><span class="label label-success">Proje</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/khansole.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/khansole.html">TA Solution</a>
 					% end
 				</td>
-				<td>Conditionals</td>
+				<td>Conditional'lar</td>
 			</tr>
 
 		</tbody>
 
 
 
-<!-- Day 2 -->
+<!-- 2. Gün -->
 		<thead
 		  % if not get('taMode', False):
 		  	class="visible-after" data-visible-after="{{karelStart2}}"
@@ -567,7 +567,7 @@
 		<tr>
 			<th colspan = "6"><b>
 				<br/>
-					<h4>Day 2: Karel and Control Flow</h4></b></th>
+					<h4>2. Gün: Karel ve Kontrol Akışı</h4></b></th>
 		</tr>
 		</thead>
 		<tbody
@@ -576,29 +576,33 @@
 		  % end
 		>
 			<tr>
-      <td colspan="6"><center><h4>Morning project [<a href="{{pathToRoot}}starter/Day2AM.zip">here</a>]</h4></center></td>
+      <td colspan="6"><center><h4>Sabah Projesi [<a href="{{pathToRoot}}starter/Day2AM.zip">burada</a>]</h4></center></td>
       </tr>
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/placeSquare.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/placeSquare.html">Place Square</a>
-          <br/><span class="label label-default">Quickstart</span>
+				<td><a href="{{pathToRoot}}en/projects/placeSquare.html">Place Square</a>
+          <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/placeSquare.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/placeSquare.html">TA Solution</a>
 					% end
 				</td>
-				<td>While loops</td>
+				<td>While Döngüsü</td>
 			</tr>
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/mountain.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/mountain.html">Dağcı Karel</a>
-          <br/><span class="label label-success">Project</span>
+				<td><a href="{{pathToRoot}}en/projects/mountain.html">Mountain Karel</a>
+          <br/><span class="label label-success">Proje</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/mountain.html">TA Solution</a>
+<<<<<<< Updated upstream
+						<br><a href="{{pathToRoot}}teach/notes/mountain.html">TA Solution</a>
+=======
+						<br><a href="{{pathToRoot}}tas/notes/mountain.html">TA Notes</a>
+>>>>>>> Stashed changes
 					% end
 				</td>
-				<td>While Loops</td>
+				<td>While Döngüsü</td>
 			</tr>
 
       <tbody
@@ -607,50 +611,53 @@
 				% end
       >
 			<tr>
-      <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day2PM.zip">here</a>]</h4></center></td>
+      <td colspan="6"><center><h4>Akşam Projesi [<a href="{{pathToRoot}}starter/Day2PM.zip">burada</a>]</h4></center></td>
       </tr>
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/stripeKarel.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/stripeKarel.html">Stripe Karel</a>
-          <br/><span class="label label-default">Quickstart</span>
+				<td><a href="{{pathToRoot}}en/projects/stripeKarel.html">Stripe Karel</a>
+          <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/stripeKarel.html">TA Solution</a>
+<<<<<<< Updated upstream
+						<br><a href="{{pathToRoot}}teach/notes/stripeKarel.html">TA Solution</a>
+=======
+						<br><a href="{{pathToRoot}}tas/notes/stripeKarel.html">TA Notes</a>
+>>>>>>> Stashed changes
 					% end
 				</td>
-				<td>Nested Loops</td>
+				<td>İç İçe Döngüler</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/hospitalKarel.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/hospitalKarel.html">Hospital Karel</a>
-          <br/><span class="label label-primary">Section</span>
+				<td><a href="{{pathToRoot}}en/projects/hospitalKarel.html">Hospital Karel</a>
+          <br/><span class="label label-primary">Grup</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/hospitalKarel.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/hospitalKarel.html">TA Solution</a>
 					% end
 				</td>
-				<td>Nested loops</td>
+				<td>İç İçe Döngüler</td>
 			</tr>
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/randomPainter2.png"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/randomPainter.html">Deli Ressam</a>
-          <br/><span class="label label-success">Project</span>
+				<td><a href="{{pathToRoot}}en/projects/randomPainter.html">Random Painter</a>
+          <br/><span class="label label-success">Proje</span>
 
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/randomPainter.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/randomPainter.html">TA Solution</a>
 					% end
 				</td>
-				<td>If Statements</td>
+				<td>If İfadeleri</td>
 			</tr>
 			<tr>
-        <td><img class="projectImg" src="{{pathToRoot}}img/icons/midpoint.png"></img></a></td>
-				<td><a href="{{pathToRoot}}en/bonus-index.html">[Opsiyonal] Orta Nokta veya Dama Tahtası</a></td>
-        Midpoint or Checkerboard</a></td>
+        		<td><img class="projectImg" src="{{pathToRoot}}img/icons/midpoint.png"></img></td>
+				<td><a href="{{pathToRoot}}en/bonus-index.html">[Optional] Midpoint or Checkerboard</a>
 
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/randomPainter.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/randomPainter.html">TA Solution</a>
 					% end
 				</td>
-				<td>Control Flow</td>
+				<td>Kontrol Akışı</td>
 			</tr>
     </tbody>
 
@@ -658,7 +665,7 @@
 			<tr>
 				<th colspan = "6"><b>
 					<br/>
-						<h4>Day 1: Karel</h4></b></th>
+						<h4>1. Gün: Karel</h4></b></th>
 			</tr>
 		</thead>
 		<tbody
@@ -667,28 +674,28 @@
 			% end
 		>
       <tr>
-      <td colspan="6"><center><h4>Evening project [<a href="{{pathToRoot}}starter/Day1PM.zip">here</a>]</h4></center></td>
+      <td colspan="6"><center><h4>Akşam Projesi [<a href="{{pathToRoot}}starter/Day1PM.zip">burada</a>]</h4></center></td>
       </tr>
 			<tr>
         <td><img class="projectImg" src="{{pathToRoot}}img/icons/newspaper.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/collectNewspaper.html">Gazete Alma</a>
-          <br/><span class="label label-default">Quickstart</span>
+				<td><a href="{{pathToRoot}}en/projects/collectNewspaper.html">Collect Newspaper</a>
+          <br/><span class="label label-default">Hızlı Başlangıç</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/collectNewspaper.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/collectNewspaper.html">TA Solution</a>
 					% end
 				</td>
-				<td>Methods</td>
+				<td>Functions</td>
 			</tr>
 
 			<tr>
 				<td><img class="projectImg" src="{{pathToRoot}}img/icons/charles.jpg"></img></td>
-				<td><a href="{{pathToRoot}}tr/projects/arches.html">Arches Karel</a>
-          <br/><span class="label label-primary">Section</span>
+				<td><a href="{{pathToRoot}}en/projects/arches.html">Arches Karel</a>
+          <br/><span class="label label-primary">Grup</span>
 					% if get('taMode', False):
-						<br><a href="{{pathToRoot}}tas/notes/arches.html">TA Solution</a>
+						<br><a href="{{pathToRoot}}teach/notes/arches.html">TA Solution</a>
 					% end
 				</td>
-				<td>For Loops</td>
+				<td>For Döngüleri</td>
 			</tr>
 		</tbody>
 </table>
