@@ -1,0 +1,167 @@
+[
+	{
+		"title_en": "Karel",
+		"title_tr": "Karel",
+		"evening": {
+			"projectURL": "starter/Day1PM.zip",
+			"programs": [
+				{
+					"title_en": "Collect Newspaper",
+					"title_tr": "Gazete Alma",
+					"topic_en": "Functions",
+					"topic_tr": "Functions",
+					"type": "quickstart",
+					"url": "projects/collectNewspaper.html",
+					"teachURL": "teach/notes/collectNewspaper.html",
+					"imageURL": "img/icons/newspaper.jpg"
+				},
+				{
+					"title_en": "Arches Karel",
+					"title_tr": "Sütun Tamircisi",
+					"topic_en": "For Loops",
+					"topic_tr": "For Döngüleri",
+					"type": "section",
+					"url": "projects/arches.html",
+					"teachURL": "teach/notes/arches.html",
+					"imageURL": "img/icons/charles.jpg"
+				}
+			]
+		}
+	},
+	{
+		"title_en": "Karel and Control Flow",
+		"title_tr": "Karel ve Kontrol Akışı",
+		"visible_after": "2020080500",
+		"morning": {
+			"projectURL": "starter/Day2AM.zip",
+			"programs": [
+				{
+					"title_en": "Place Square",
+					"title_tr": "Kare Yerleştir",
+					"topic_en": "While Loops",
+					"topic_tr": "While Döngüsü",
+					"type": "quickstart",
+					"url": "projects/placeSquare.html",
+					"teachURL": "teach/notes/placeSquare.html",
+					"imageURL": "img/icons/placeSquare.png"
+				},
+				{
+					"title_en": "Mountain Karel",
+					"title_tr": "Dağcı Karel",
+					"topic_en": "While Loops",
+					"topic_tr": "While Döngüsü",
+					"type": "project",
+					"url": "projects/mountain.html",
+					"teachURL": "teach/notes/mountain.html",
+					"imageURL": "img/icons/mountain.png"
+				}
+			]
+		},
+		"evening": {
+			"visible_after": "2020080509",
+			"projectURL": "starter/Day2PM.zip",
+			"programs": [
+				{
+					"title_en": "Stripe Karel",
+					"title_tr": "Şerit Karel",
+					"topic_en": "Nested Loops",
+					"topic_tr": "İç İçe Döngüler",
+					"type": "quickstart",
+					"url": "projects/stripeKarel.html",
+					"teachURL": "teach/notes/stripeKarel.html",
+					"imageURL": "img/icons/stripeKarel.png"
+				},
+				{
+					"title_en": "Hospital Karel",
+					"title_tr": "Hastaneci Karel",
+					"topic_en": "Nested Loops",
+					"topic_tr": "İç İçe Döngüler",
+					"type": "section",
+					"url": "projects/hospitalKarel.html",
+					"teachURL": "teach/notes/hospitalKarel.html",
+					"imageURL": "img/icons/hospitalKarel.png"
+				},
+				{
+					"title_en": "Random Painter",
+					"title_tr": "Deli Ressam",
+					"topic_en": "If Statements",
+					"topic_tr": "If İfadeleri",
+					"type": "project",
+					"url": "projects/randomPainter.html",
+					"teachURL": "teach/notes/randomPainter.html",
+					"imageURL": "img/icons/randomPainter2.png"
+				}
+			]
+		}
+	},
+	{
+		"title_en": "Variables",
+		"title_tr": "Değişkenler",
+		"visible_after": "2020080600",
+		"morning": {
+			"projectURL": "starter/Day3AM.zip",
+			"programs": [
+				{
+					"title_en": "Sandcastles",
+					"title_tr": "Kumdan Kaleler",
+					"topic_en": "Variables",
+					"topic_tr": "Değişkenler",
+					"type": "quickstart",
+					"url": "projects/sandcastles.html",
+					"imageURL": "img/icons/sandcastle.jpg"
+				},
+				{
+					"title_en": "Run, Sum, Run",
+					"title_tr": "Topla ve Biriktir",
+					"topic_en": "Variables",
+					"topic_tr": "Değişkenler",
+					"type": "project",
+					"url": "projects/runningSum.html",
+					"imageURL": "img/icons/runningSum.png"
+				}
+			]
+		},
+		"evening": {
+			"visible_after": "2020080609",
+			"projectURL": "starter/Day3PM.zip",
+			"programs": [
+				{
+					"title_en": "Area Calculator",
+					"title_tr": "Area Calculator",
+					"topic_en": "Variables",
+					"topic_tr": "Değişkenler",
+					"type": "quickstart",
+					"url": "projects/areaCalculator.html",
+					"imageURL": "img/icons/areaCalculator.png"
+				},
+				{
+					"title_en": "8 Ball",
+					"title_tr": "8 Ball",
+					"topic_en": "Conditionals",
+					"topic_tr": "Conditional'lar",
+					"type": "section",
+					"url": "projects/8ball.html",
+					"imageURL": "img/icons/8ball.png"
+				},
+				{
+					"title_en": "Viral Video",
+					"title_tr": "Viral Video",
+					"topic_en": "Conditionals",
+					"topic_tr": "Conditional'lar",
+					"type": "section",
+					"url": "projects/viralVideo.html",
+					"imageURL": "img/icons/viralVideo.png"
+				},
+				{
+					"title_en": "Khansole Academy",
+					"title_tr": "Khansole Akademi",
+					"topic_en": "Conditionals",
+					"topic_tr": "Conditional'lar",
+					"type": "project",
+					"url": "projects/khansole.html",
+					"imageURL": "img/icons/khansole.png"
+				}
+			]
+		}
+	}
+]
