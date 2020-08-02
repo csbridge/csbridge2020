@@ -300,19 +300,12 @@
 	          	<li><a href="{{pathToRoot}}starter/ControlFlow.zip">Control Flow (Code)</a></li>
 	          	<li><a href="{{pathToRoot}}slides/IntroPython_Variable_Math_RandomNumbers.pdf">Değişkenler</a></li>	
 	          	<li><a href="{{pathToRoot}}slides/Graphics.pdf">Grafikler (Slides)</a></li>
-	          	<li><a href="{{pathToRoot}}starter/Graphics.zip">Grafikler (Code)</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Animation.pdf">Animasyon</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Methods.pdf">Metotlar</a></li>
 	          	<li><a href="{{pathToRoot}}slides/NestedLoops.pdf">Nested Loops</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Events.pdf">Events (Slides)</a></li>
 	          	<li><a href="{{pathToRoot}}starter/Events.zip">Events (Code)</a></li>
 	          	<li><a href="{{pathToRoot}}slides/Breakout.pdf">Breakout</a></li>
-	          	<li><a href="{{pathToRoot}}slides/AI.pdf">AI (Yapay Zeka)</a></li>
-	          	<li><a href="{{pathToRoot}}slides/ArrayLists.pdf">Dizi Listeleri (ArrayLists)</a></li>
-	          	<li><a href="{{pathToRoot}}slides/HashMaps.pdf">HashMaps</a></li>
-	         	<li><a href="{{pathToRoot}}slides/Internet.pdf">The Internet (Slides)</a></li>
-	         	<li><a href="{{pathToRoot}}starter/Internet.zip">The Internet (Code)</a></li>
-	         	<li><a href="{{pathToRoot}}slides/Beyond-CSBridge.pdf">Beyond CSBridge</a></li>
 	          </ul>
 	        </li>
 
