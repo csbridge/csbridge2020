@@ -461,7 +461,7 @@ filePath - the total path to the markdown file being rendered in this template
 </figure>
 </center></p>
 <p>When an organism is alive, its matter will have a constant amount of a special type of carbon called carbon-14 (c14). It turns out that all living things have the same fraction: wood, mammoths, your body right now... small cats... they all have the same amount.</p>
-<p>An important property of c14 is that it dissapears at a constant rate: every 5,700 years the amount of c14 is halfed (its half life is 5,700 years). For example, if one starts with 100% of the natural occurence of c14:</p>
+<p>An important property of c14 is that it disappears at a constant rate: every 5,700 years the amount of c14 is halfed (its half life is 5,700 years). For example, if one starts with 100% of the natural occurence of c14:</p>
 <pre><code>In 5,700 years we expect there will only be 50% left. 
 In 11,400 years we would expect there will only have 25% left. 
 And so on...
@@ -495,8 +495,9 @@ Percent C-14 Remaining: years passed
 0.00019073486328125%: 108300 years
 </code></pre>
 
+<p><strong>Hint:</strong> we know how many times we must print out this information, so a <code>for</code> loop is a good idea.  How can we know, based on the value of <code>i</code> inside the loop, what to print out?</p>
 <h2 id="milestone-2-interactive-mode">Milestone 2: Interactive Mode</h2>
-<p>For scientists it will be much more useful for them to input the percent of natural c14 that they measured, and have the program tell them the age. Repeatedly ask the user to enter a percent of natural c14 remaining and then output the age of their sample.</p>
+<p>For scientists it will be much more useful for them to input the percent of natural c14 that they measured, and have the program tell them the age. Repeatedly ask the user to enter a percent of natural c14 remaining and then output the age of their sample.  If they enter -1, end the program.</p>
 <pre><code>What percent of natural carbon-14 does your sample have? 99
 99.0 carbon-14...
 Your sample is 82.64754726215602 years old.
@@ -520,8 +521,8 @@ What percent of natural carbon-14 does your sample have? -1
 <pre><code>math.log(value)
 </code></pre>
 
-<h2 id="final-product">Final product</h2>
-<p>Overall, your program should look like the following.  If the user enters -1 as the percent, end the program.</p>
+<h2 id="final-product">Final Product</h2>
+<p>Overall, your program should look like the following.</p>
 <pre><code>Carbon Dating Lookup Table
 Percent C-14 Remaining: years passed
 --------------------------
