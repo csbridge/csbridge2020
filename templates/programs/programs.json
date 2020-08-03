@@ -169,7 +169,7 @@
             "programs": [
                 {
                     "imageURL": "img/icons/someSum.png",
-                    "title_en": "That's Some Sum",
+                    "title_en": "That's Some Sum!",
                     "title_tr": "Toplama Diye Buna Derim!",
                     "topic_en": "Loop variables",
                     "topic_tr": "Döngü değişkenleri",
