@@ -94,10 +94,10 @@ Bu, kodunuz hakkında bireysel yardım isteyebileceğiniz zamandır.
 
 #### E. <u> Projeler </u>
 
-Her gün üzerinde çalışacağınız iki programlama projesi olacak. Temel ödev soruları ayrı ayrı yapılacak şekilde tasarlanmıştır, ancak birbirinize öğretmenizi öneririz - bu, akranlarınıza “cevabı vermeden" onları cevaba yönlendirmeyi de içerir (detaylar için onurlu öğrenme <a href='#Onur'> bölümüne bakın. </a>).
+Her gün üzerinde çalışacağınız iki programlama projesi olacak. Temel ödev soruları ayrı ayrı yapılacak şekilde tasarlanmıştır, ancak birbirinize öğretmenizi öneririz - bu, akranlarınıza “cevabı vermeden" onları cevaba yönlendirmeyi de içerir (detaylar için onurlu öğrenme <a href='#C5'> bölümüne bakın. </a>).
 
 - İlk projeyi her gün 13:00 (Çek Cumhuriyeti), 14:00 (Türkiye) saatine kadar, ikinci projeyi ise akşam Ofis Saatleri / Çalışma oturumunun sonuna kadar sunmanız beklenmektedir.
-- <span style = "color: red;"> Ödevleri tamamlama ve gönderme ile ilgili talimatlar Ed'de yayınlanacaktır. </span>
+- Ödevleri tamamlama ve gönderme ile ilgili talimatlar Ed'de yayınlanacaktır.
 
 <!-- F. Sosyal Etkinlikler -->
 
@@ -153,7 +153,7 @@ Bu programda çok şey öğrenmenizi ama aynı zamanda **EĞLENMENİZİ** ve far
 ### Kiminle Ne Hakkında İletişim Kurmalı?
 
 <p>
-    Bu sınıf üç zaman diliminde gerçekleşir, bu yüzden zamanında ve nasıl yardım alabileceğiniz için kiminle ve nasıl iletişim kuracağınızı bilmeniz önemlidir. Lütfen Bölüm Liderlerinin ve diğer öğrencilerin size yardımcı olabileceği Ed platformunu (yukarıda açıklanan <a href='#İletişim'> </a>) kullanın. Bazı yönergeler:
+    Bu sınıf üç zaman diliminde gerçekleşir, bu yüzden zamanında ve nasıl yardım alabileceğiniz için kiminle ve nasıl iletişim kuracağınızı bilmeniz önemlidir. Lütfen Bölüm Liderlerinin ve diğer öğrencilerin size yardımcı olabileceği Ed platformunu (yukarıda açıklanan <a href='#C4'> </a>) kullanın. Bazı yönergeler:
 </p>
 
 - Lojistik sorular, kavramsal ve teknik sorular veya genel program sohbeti </b> için lütfen CS Bridge Ed forumumuza herkese açık bir soru gönderin. </li>
