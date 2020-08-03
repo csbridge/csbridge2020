@@ -53,11 +53,7 @@
 	      						 		segment_translation = "Akşam Projesi"
 	      						 	end
 	      						elif lang == "en":
-	      							if segment == "morning":
-	      								segment_translation = "Morning Project"
-	      							elif segment == "evening":
-	      								segment_translation = "Evening Project"
-	      							end
+	      							segment_translation = segment.capitalize()
 	      						end
 
 	      						link_translation = "NO TRANSLATION"

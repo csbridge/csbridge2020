@@ -1,0 +1,64 @@
+<ul class="dropdown-menu">
+
+	<%
+		import json
+		with open("templates/programs/programs.json", "r", encoding="utf8") as programs_file:
+	  		data = json.load(programs_file)
+	%>
+
+	% for i, day_info in enumerate(data):
+		<li 
+			% if not get('taMode', False) and "visible_after" in day_info:
+				class="dropdown-submenu visible-after" data-visible-after="{{day_info["visible_after"]}}"
+			% else:
+				class="dropdown-submenu"
+			% end
+		>
+			<a tabindex="-1" href="#">{{i + 1}}: {{day_info["title_" + lang]}}</a>
+
+			<ul class="dropdown-menu">
+				% for segment in ["morning", "evening"]:
+					% if segment in day_info:
+						<li 
+							% if not get('taMode', False) and segment == "morning" and "visible_after" in day_info:
+								class="dropdown-header visible-after" data-visible-after="{{day_info['visible_after']}}"
+							% elif not get('taMode', False) and segment == "evening" and ("visible_after" in day_info or "visible_after" in day_info[segment]):
+								% visible_after = day_info[segment]["visible_after"] if "visible_after" in day_info[segment] else day_info["visible_after"]
+								class="dropdown-header visible-after" data-visible-after="{{visible_after}}"
+							% else:
+								class="dropdown-header"
+							% end
+						>
+							<%
+								segment_translation = "NO TRANSLATION"
+	      						if lang == "tr":
+	      							if segment == "morning":
+	      						 		segment_translation = "Sabah"
+	      						 	elif segment == "evening":
+	      						 		segment_translation = "Akşam"
+	      						 	end
+	      						elif lang == "en":
+	      							segment_translation = segment.capitalize()
+	      						end
+	      					%>
+							{{segment_translation}}
+						</li>
+
+						% for program in day_info[segment]["programs"]:
+							<li
+								% if not get('taMode', False) and segment == "morning" and "visible_after" in day_info:
+									class="visible-after" data-visible-after="{{day_info['visible_after']}}"
+								% elif not get('taMode', False) and segment == "evening" and ("visible_after" in day_info or "visible_after" in day_info[segment]):
+									% visible_after = day_info[segment]["visible_after"] if "visible_after" in day_info[segment] else day_info["visible_after"]
+									class="visible-after" data-visible-after="{{visible_after}}"
+								% end
+							>
+								<a href="{{pathToRoot}}{{lang}}/{{program['url']}}">{{program["title_" + lang]}}</a>
+							</li>
+						% end
+					% end
+				% end
+			</ul>
+		</li>
+	% end
+</ul>
