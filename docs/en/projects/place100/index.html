@@ -454,7 +454,7 @@ filePath - the total path to the markdown file being rendered in this template
 	<div class="col-xs-12">
 		<p>Handouts: <a href="../../../en/resources/karel.html">Karel Reference</a><br/>
 File: <code>place_100.py</code><br/></p>
-<p>Your goal is to have Karel create a pile of 100 beepers on square infront of where she starts. Please!!! Do not type out putBeeper 100 times in a row! (hint: use a <code>for</code> loop.)</p>
+<p>Your goal is to have Karel create a pile of 100 beepers on the square in front of where it starts.  Do not type out <code>put_beeper</code> 100 times in a row!! (hint: use a <code>for</code> loop!)</p>
 <p><center>
 <img style="width:700px" src="../../../img/projects/place100/place100.png">
 </center></p>
@@ -471,22 +471,27 @@ File: <code>place_100.py</code><br/></p>
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:380.0px">from karel.stanfordkarel import *
+		<pre class="console" id="editor" style="height:480.0px">from karel.stanfordkarel import *
 
 &quot;&quot;&quot;
 File: place_100.py
 ------------------------
-This program makes karel place a pile of 100 beepers. Good times.
+This program makes Karel place a pile of 100 beepers. Good times.
 &quot;&quot;&quot;
+
 
 def main():
     move()
+
     # This for loop will repeat the code inside 100 times.
     for i in range(100):
         put_beeper()
+
     move()
 
+
 # There is no need to edit code beyond this point
+
 if __name__ == &quot;__main__&quot;:
     run_karel_program()
 </pre>
