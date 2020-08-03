@@ -454,11 +454,33 @@ filePath - the total path to the markdown file being rendered in this template
 	<div class="col-xs-12">
 		<p>One of the exciting human discoveries is that mass and energy are interchangable and are related by the equation E = M &times; C <sup>2</sup>. This relationship was uncovered by Albert Einstein almost 100 years ago and we now know that the sun produces its heat by transforming small amounts of mass into large amounts of energy.</p>
 <p>Write a program that continually reads in mass from the user and then outputs the amount of energy. Show your work in the following way:</p>
-<p><center>
-<img style="width:400px" src="../../../img/projects/emc2/demo.png"> 
-</center></p>
+<pre><code>Enter kilos of mass: 27
+E = m * C^2 ...
+m = 27.0 kg
+C = 299792458m/s
+2.4266389825894077e+18 joules of energy!
+
+Enter kilos of mass: 15
+E = m * C^2 ...
+m = 15.0 kg
+C = 299792458m/s
+1.3481327681052265e+18 joules of energy!
+
+Enter kilos of mass: 2
+E = m * C^2 ...
+m = 2.0 kg
+C = 299792458m/s
+1.7975103574736352e+17 joules of energy!
+
+Enter kilos of mass: 0.00000001
+E = m * C^2 ...
+m = 1e-08 kg
+C = 299792458m/s
+898755178.7368177 joules of energy!
+</code></pre>
+
 <p>If you ask the user to input kilograms, and you use speed of light equals 299792458 (which is in meters per second) the result of calculating E = M &times; C <sup>2</sup> will be in Joules.</p>
-<p>Note that 3.0E8 is scientific notation for 3.0 &times; 10 <sup>8</sup>... which is 300,000,000. You don't need to do anything for java to print doubles in scientific notation. It will automatically do so when numbers get big enough.</p>
+<p>Note that 3.0E8 is scientific notation for 3.0 &times; 10 <sup>8</sup>... which is 300,000,000. You don't need to do anything to print doubles in scientific notation. It will automatically do so when numbers get big enough.</p>
 <p>Since the speed of light will never change, it makes sense to declare it as a constant.</p>
 	</div>
 </div>
@@ -473,18 +495,19 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:580.0px">&quot;&quot;&quot;
-File: EMC2
+		<pre class="console" id="editor" style="height:620.0px">&quot;&quot;&quot;
+File: emc2.py
 -------------------
 This program helps users calculate how much energy they could
 get if they transformed their mass. Thanks Einstein!
 &quot;&quot;&quot;
 
-# This declares a constant... it can never change value.
-# Speed of light in m/s
-C = 299792458;
+# This declares a constant for the speed of light in meters per second.
+C = 299792458
+
 
 def main():
+    # Loop forever
     while True:
         # Read the mass in from the user.
         mass_in_kg = float(input(&quot;Enter kilos of mass: &quot;))
@@ -498,6 +521,7 @@ def main():
         print(&quot;C = &quot; + str(C) + &quot;m/s&quot;)
         print(str(energy_in_joules) + &quot; joules of energy!&quot;)
         print()
+
 
 if __name__ == &#039;__main__&#039;:
     main()

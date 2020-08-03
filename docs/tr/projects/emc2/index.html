@@ -459,9 +459,31 @@ filePath - the total path to the markdown file being rendered in this template
 	<div class="col-xs-12">
 		<p>Heyecan verici insan keşiflerinden biri de, kütle ve enerjinin değiştirilebilir ve E = M &times; C <sup>2</sup> denklemi ile ilişkili olmasıdır. Bu ilişki neredeyse 100 yıl önce Albert Einstein tarafından ortaya çıkarıldı ve artık güneşin az miktarda kütleyi büyük miktarlarda enerjiye dönüştürerek ısısını ürettiğini biliyoruz.</p>
 <p>Kullanıcıdan düzenli olarak kütleyi alan ve ortaya çıkan enerji miktarını yazdıran bir program yazın. Çalışmanızı aşağıdaki şekilde gösterin:</p>
-<p><center>
-<img style="width:400px" src="../../../img/projects/emc2/demo.png"> 
-</center></p>
+<pre><code>Enter kilos of mass: 27
+E = m * C^2 ...
+m = 27.0 kg
+C = 299792458m/s
+2.4266389825894077e+18 joules of energy!
+
+Enter kilos of mass: 15
+E = m * C^2 ...
+m = 15.0 kg
+C = 299792458m/s
+1.3481327681052265e+18 joules of energy!
+
+Enter kilos of mass: 2
+E = m * C^2 ...
+m = 2.0 kg
+C = 299792458m/s
+1.7975103574736352e+17 joules of energy!
+
+Enter kilos of mass: 0.00000001
+E = m * C^2 ...
+m = 1e-08 kg
+C = 299792458m/s
+898755178.7368177 joules of energy!
+</code></pre>
+
 <p>Eğer kullanıcıdan kilogram girmesini ister ve ışık hızını 299792458 (metre/saniye) olarak alırsanız, E = M &times; C <sup>2</sup> denkleminin sonucunu Jul cinsinden bulursunuz.</p>
 <p>3.0E8, 3.0 &times; 10 <sup>8</sup> ' in - 300,000,000 - bilimsel gösterimidir. Java'nın double'ları bilimsel gösterimle yazdırması için herhangi bir şey yapmanıza gerek yoktur. Sayılar yeterince büyüdüğünde bunu otomatik olarak yapar.</p>
 <p>Işık hızı asla değişmeyeceğinden, onu sabit olarak belirlemek mantıklıdır.</p>
@@ -478,18 +500,19 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:580.0px">&quot;&quot;&quot;
-File: EMC2
+		<pre class="console" id="editor" style="height:620.0px">&quot;&quot;&quot;
+File: emc2.py
 -------------------
 This program helps users calculate how much energy they could
 get if they transformed their mass. Thanks Einstein!
 &quot;&quot;&quot;
 
-# This declares a constant... it can never change value.
-# Speed of light in m/s
-C = 299792458;
+# This declares a constant for the speed of light in meters per second.
+C = 299792458
+
 
 def main():
+    # Loop forever
     while True:
         # Read the mass in from the user.
         mass_in_kg = float(input(&quot;Enter kilos of mass: &quot;))
@@ -503,6 +526,7 @@ def main():
         print(&quot;C = &quot; + str(C) + &quot;m/s&quot;)
         print(str(energy_in_joules) + &quot; joules of energy!&quot;)
         print()
+
 
 if __name__ == &#039;__main__&#039;:
     main()
