@@ -1,8 +1,8 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Fibonacci (Çözümlü)
-hazırlayan: Eric Roberts
-çözüm: soln.py
-çeviren: Kazim Okan Akgül
+credit: Eric Roberts
+solution: soln.py
+translation: Kazim Okan Akgül
 
 İtalyan matematikçi Leonardo Fibonacci 13. yüzyılda tavşan popülasyonunun geometrik büyümesini açıklamanın bir yolu olarak, şuanda adını taşıyan bir matematik dizisi tasarladı. Dizideki ilk iki terim Fib(0) ve Fib(1) dir ve bunların değeri 0 ve 1 dir. Sonraki her terim, önceki ikisinin toplamıdır. Bu yüzden, Fibonacci serisindeki ilk bi rkaç terim şu şekildedir:
 

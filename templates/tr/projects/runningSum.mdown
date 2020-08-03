@@ -1,7 +1,7 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Topla ve Biriktir
-Hazırlayan: Lisa Yan
-Çeviren: Kazim Okan Akgül
+credit: Lisa Yan
+translation: Kazim Okan Akgül
 
 Dosya: `running_sum.py`
 
