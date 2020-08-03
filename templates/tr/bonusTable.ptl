@@ -1,4 +1,4 @@
-    <!-- Bonus Program Table-->
+    <!-- Bonus Program Tablosu-->
 <table class="table table-hover">
 				<thead>
 					<tr>
@@ -86,20 +86,20 @@
 
 					<tr class="table-bordered table-striped">
 						<td><img style="width:auto;max-height:100px;max-width:150px;border:1px solid grey" class="projectImg" src="{{pathToRoot}}img/icons/bouncingMultiple.png"></img></td>
-						<td><a href="{{pathToRoot}}tr/projects/multipleBalls.html">Birkaç Top</a></td>
+						<td><a href="{{pathToRoot}}tr/projects/multipleBalls.html">Zıplayan Toplar</a></td>
 						<td>&#9733;&#9734;&#9734;</td>
 						<td><a href="{{pathToRoot}}starter/BonusGraphics.zip">BonusGraphics.zip</a></td>
 					</tr>
 
 					<tr class="table-bordered table-striped">
 						<td><img style="width:auto;max-height:100px;max-width:150px;border:1px solid grey" class="projectImg" src="{{pathToRoot}}img/icons/creativeGraphics.jpg"></img></td>
-						<td><a href="{{pathToRoot}}tr/projects/creativeGraphics.html">Yaratıcı Grafik</a></td>
+						<td><a href="{{pathToRoot}}tr/projects/creativeGraphics.html">Yaratıcı Grafikler</a></td>
 						<td>&#9733;&#9734;&#9734;</td>
 						<td><a href="{{pathToRoot}}starter/BonusGraphics.zip">BonusGraphics.zip</a></td>
 					</tr>
 					<tr class="table-bordered table-striped">
 						<td ><img style="width:auto;max-height:100px" class="projectImg" src="{{pathToRoot}}img/icons/creativeStringArt.png"></img></td>
-						<td><a href="{{pathToRoot}}tr/projects/creativeStringArt.html">Yaratıcı String Sanatı</a></td>
+						<td><a href="{{pathToRoot}}tr/projects/creativeStringArt.html">Yaratıcı Çizgi Sanatı</a></td>
 						<td>&#9733;&#9734;&#9734;</td>
 						<td><a href="{{pathToRoot}}starter/BonusGraphics.zip">BonusGraphics.zip</a></td>
 					</tr>
@@ -117,14 +117,14 @@
 			    <tr>
 			    			<td><img style="width:auto;max-height:100px;max-width:150px" class="projectImg" src="{{pathToRoot}}img/icons/madMethods.jpg"></img></td>
                 <!-- Used to be a main course component -->
-			    			<td><a href="{{pathToRoot}}en/projects/drawTrees.html">Draw Trees</a></td>
+			    			<td><a href="{{pathToRoot}}en/projects/drawTrees.html">Ağaç Çiz</a></td>
 			    			<td>&#9733;&#9734;&#9734;</td>
 			    			<td><a href="{{pathToRoot}}starter/BonusMethods.zip">BonusMethods.zip</a></td>
 			    </tr>
 
 					<tr class="table-bordered table-striped">
 						<td><img style="width:auto;max-height:100px;max-width:150px" class="projectImg" src="{{pathToRoot}}img/icons/moreMethods.png"></img></td>
-						<td><a href="{{pathToRoot}}tr/projects/moreFunctions.html">Daha Fazla Metotlar</a></td>
+						<td><a href="{{pathToRoot}}tr/projects/moreFunctions.html">Daha Fazla Fonksiyon</a></td>
 						<td>&#9733;&#9734;&#9734;</td>
 						<td><a href="{{pathToRoot}}starter/BonusMethods.zip">BonusMethods.zip</a></td>
 					</tr>
@@ -160,7 +160,7 @@
 
 					<tr class="table-bordered table-striped">
 						<td><img style="width:auto;max-height:100px;max-width:150px" class="projectImg" src="{{pathToRoot}}img/icons/duplicateShape.jpg"></img></td>
-						<td><a href="{{pathToRoot}}tr/projects/duplicatingShapes.html">Şekilleri Çoklama</a></td>
+						<td><a href="{{pathToRoot}}tr/projects/duplicatingShapes.html">Şekilleri Çoğaltma</a></td>
 						<td>&#9733;&#9734;&#9734;</td>
 						<td><a href="{{pathToRoot}}starter/BonusEvents.zip">BonusEvents.zip</a></td>
 					</tr>
@@ -183,7 +183,7 @@
 					</tr>
 					<tr class="table-bordered table-striped">
 						<td><img class="projectImg" src="{{pathToRoot}}img/icons/borderSnake.png"></img></td>
-						<td><a href="{{pathToRoot}}tr/projects/borderSnake.html">Sınırdaki yılan</a></td>
+						<td><a href="{{pathToRoot}}tr/projects/borderSnake.html">Sınırdaki Yılan</a></td>
 						<td>&#9733;&#9733;&#9733;</td>
 						<td><a href="{{pathToRoot}}starter/BonusArrays.zip">BonusArrays.zip</a></td>
 					</tr>

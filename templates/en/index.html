@@ -35,14 +35,14 @@ with open("templates/announcements/times.csv", 'r') as f:
 % for row in reader:
   % datetime_start, datetime_end, alert_type, fname = row
   <div class="alert {{alert_type}} visible-during" data-visible-start="{{datetime_start}}" data-visible-end="{{datetime_end}}">
-    % with open(os.path.join("templates", "announcements", fname), 'r') as f:
+    % with open(os.path.join("templates", "announcements", "en", fname), 'r') as f:
         {{!f.read()}}   
     % end
   </div>
 % end
 
 <div class="alert alert-warning visible-default">
-  % with open(os.path.join("templates", "announcements", "default.ptl"), 'r') as f:
+  % with open(os.path.join("templates", "announcements", "en", "default.ptl"), 'r') as f:
       {{!f.read()}}
   % end
 </div>

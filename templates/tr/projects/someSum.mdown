@@ -1,9 +1,8 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Toplama Diye Buna Derim!
 credit: Bryce C-R, Julia Lee, Chris Piech, and TY Huang
-tr_title: Biraz Toplama!
-çeviren: Kazim Okan Akgül
-Dosya: `some_sum.py`
+translation: Kazim Okan Akgül
+File: `some_sum.py`
 
 Kullanıcıdan 10 integer okuyan ve sonra girilen değerlerin toplamını veren bir program yazın. Programın çıktısı aşağıdaki gibi olmalıdır:
 
