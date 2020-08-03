@@ -4,8 +4,7 @@ credit: Lisa Yan
 
 File: `area_calculator.py`
 
-Write a program that reads in a float radius from the user and then prints out the associated
-area of the circle. If the radius is invalid (negative or zero), print an error. Here are three example runs of the program:
+Write a program that reads in a float radius from the user and then prints out the associated area of the circle. If the radius is invalid (negative or zero), print an error. Here are three example runs of the program:
 
 ```
 Please enter a circle radius: 5
@@ -32,7 +31,7 @@ Given the radius `r` of a circle, the area of the circle is π times r-squared (
 
 Python has a pretty good approximation of the number π (pi) in the math library, which we've already included for you with the `import math` line above. Don't delete this line.
 
-To access π inside your `main()` function, you can call `math.pi`. For example, if we wanted to print out π to the console:
+To access π inside your `main()` function, you can use `math.pi`. For example, if we wanted to print out π to the console:
 
 ```
 def main():
@@ -41,4 +40,4 @@ def main():
 
 ## Keep going!
 
-Once you finish this exercise, you can either start the 8-Ball section exercise or you can extend your program to compute the diameter of a circle.
+Once you finish this exercise, you can optionally extend your program to compute the diameter of a circle.
