@@ -4,16 +4,15 @@ credit: Chris Piech, with modifications by Lisa Yan
 
 File: `8ball.py`
 
-The idea behind an 8-Ball is very simple. You ask the eight ball a yes or no question, and it tells you the answer.
-
-Except, that the answer it choses is randomly selected from a set of prefabricated responses.</p>
+The idea behind an 8-Ball is you ask the eight ball a yes or no question, and it tells you the answer.  Except that the answer it chooses is randomly selected from a set of prefabricated responses.
 
 <center>
 	<img style="width:300px" src="{{pathToRoot}}img/projects/8Ball/real.gif">	
 	<p style="text-align:center"><i>A real life 8-Ball</i></p>
 </center>
 
-Write a program that continuously prompts the user for a yes or no question, and then randomly selects from 5 canned answers:
+Write a program that continuously prompts the user for a yes or no question, and then randomly selects from 5 predetermined answers:
+
 * Without a doubt.
 * Yes.
 * Ask again later.
@@ -21,11 +20,24 @@ Write a program that continuously prompts the user for a yes or no question, and
 * Karel thinks so.
 
 Here is an example run of the program.
-<center>
-	  <img style="width:700px" src="{{pathToRoot}}img/projects/8Ball/sampleRun.png">	
-</center>
 
-## Infinite loop
+```
+Ask a yes or no question: Will Ghana win the world cup?
+only Karel knows
+
+Ask a yes or no question: Is Karel married?
+good question!
+
+Ask a yes or no question: Is my real name Nick
+Without a doubt
+
+Ask a yes or no question: 8-Ball, are you using random numbers?
+yes
+
+Ask a yes or no question: 
+```
+
+## Infinite Loop
 
 We've implemented part of this program for you---specifically, the **infinite loop** part which continuously asks for user input). We've left you the job of getting the program to answer with the 5 canned answers above.
 
@@ -53,7 +65,7 @@ to run your program via the `python3 runningsum.py` or `py runningsum.py` again.
 ## Choices and random numbers
 
 One way to choose randomly between 5 answers is to associate each answer with a number and make use of Python's ability to randomly pick numbers.
-Then, depending on which number is picked, you can use **conditional statements** (`if`, `else`) to print out the selected answer.
+Then, depending on which number is picked, you can use **conditional statements** (`if`, `else`, `elif`) to print out the selected answer.
 
 To generate a random integer, you can do the following:
 
@@ -67,11 +79,11 @@ num = random.randint(10, 20)
 ```
 will store a random number between 10 and 20, inclusive, in the variable `num`.
 
-## Bonus: extension
+## Bonus: Extension
 
-Your current program runs forever. How would you change the while loop conditional (currently `True`) to exit when the user types nothing (just presses Enter)?
+Your current program runs forever. How would you change the `while` loop conditional (currently `True`) to exit when the user types nothing (just presses Enter)?
 
-Hint: Here's a program that outputs "nothing entered" when the user types in nothing (just presses Enter). Otherwise the program prints the user input. How can you use a similar idea and apply it to the while loop?
+Hint: Here's a program that outputs "nothing entered" when the user types in nothing (just presses Enter). Otherwise the program prints the user input. How can you use a similar idea and apply it to the `while` loop?
 
 ```
 statement = input("Type in something: ")
