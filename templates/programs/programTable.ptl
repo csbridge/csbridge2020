@@ -1,0 +1,94 @@
+<%
+	import json
+	with open("templates/programs/programs.json", "r") as programs_file:
+  		data = json.load(programs_file)
+%>
+
+
+<!-- Final Project -->
+<table class="table table-striped">
+
+	% for i in range(len(data) - 1, -1, -1):
+		% day_info = data[i]
+		<thead
+			% if not get('taMode', False) and "visible_after" in day_info:
+				class="visible-after" data-visible-after="{{day_info["visible_after"]}}"
+			% end
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+						% if lang == "tr":
+							<h4>{{i + 1}}. Gün: {{day_info["title_tr"]}}</h4>
+						% elif lang == "en":
+							<h4>Day {{i + 1}}: {{day_info["title_en"]}}</h4>
+						% else:
+							<h4>NO TRANSLATION</h4>
+						% end
+					</b>
+				</th>
+			</tr>
+		</thead>
+		% for segment in ["morning", "evening"]:
+			% if segment in day_info:
+				<tr 
+					% if not get('taMode', False) and segment == "morning" and "visible_after" in day_info:
+						class="info visible-after" data-visible-after="{{day_info['visible_after']}}"
+					% elif not get('taMode', False) and segment == "evening" and ("visible_after" in day_info or "visible_after" in day_info[segment]):
+						% visible_after = day_info[segment]["visible_after"] if "visible_after" in day_info[segment] else day_info["visible_after"]
+						class="info visible-after" data-visible-after="{{visible_after}}"
+					% else:
+						class="info"
+					% end
+				>
+	      			<td colspan = "6">
+	      				<center>
+	      					<% 
+	      						segment_translation = "NO TRANSLATION"
+	      						if lang == "tr":
+	      							if segment == "morning":
+	      						 		segment_translation = "Sabah Projesi"
+	      						 	elif segment == "evening":
+	      						 		segment_translation = "Akşam Projesi"
+	      						 	end
+	      						elif lang == "en":
+	      							if segment == "morning":
+	      								segment_translation = "Morning Project"
+	      							elif segment == "evening":
+	      								segment_translation = "Evening Project"
+	      							end
+	      						end
+
+	      						link_translation = "NO TRANSLATION"
+	      						if lang == "tr":
+	      							link_translation = "burada"
+	      						elif lang == "en":
+	      							link_translation = "here"
+	      						end
+
+	      					%>
+	      					<h4>{{segment_translation}} [<a href="{{pathToRoot}}{{day_info[segment]['projectURL']}}">{{link_translation}}</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<tbody
+	      			% if not get('taMode', False) and segment == "morning" and "visible_after" in day_info:
+						class="visible-after" data-visible-after="{{day_info['visible_after']}}"
+					% elif not get('taMode', False) and segment == "evening" and ("visible_after" in day_info or "visible_after" in day_info[segment]):
+						% visible_after = day_info[segment]["visible_after"] if "visible_after" in day_info[segment] else day_info["visible_after"]
+						class="visible-after" data-visible-after="{{visible_after}}"
+					% end
+	      		>
+		      		% for program in day_info[segment]["programs"]:
+		      			<tr>
+		      				% include("templates/programs/programRow.ptl", program=program, lang=lang)
+		      			</tr>
+		      		% end
+		      	</tbody>
+			% end
+		% end
+	% end
+
+</table>

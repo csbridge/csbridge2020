@@ -1,6 +1,6 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Delgeç
-credit: Problem written by Chris Piech.
+credit: Chris Piech tarafından yazıldı.
 translation: Serhat Arslan, Demet Tümkaya
 solution: soln.py
 

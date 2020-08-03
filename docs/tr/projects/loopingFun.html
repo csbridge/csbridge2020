@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Looping Fun</title>
+<title>CS Bridge  | Eğlenceli Döngüler</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -351,26 +351,18 @@
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slaytlar  <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
-	          	<li><a href="../../slides/Welcome.pdf">Karel</a></li>
-	          	<li><a href="../../slides/ControlFlow.pdf">Control Flow Slides)</a></li>
-	          	<li><a href="../../starter/ControlFlow.zip">Control Flow (Code)</a></li>
-	          	<li><a href="../../slides/Variables.pdf">Değişkenler</a></li>
-			<li><a href="../../slides/Variables2.pdf">Değişkenler 2</a></li>
-	          	
+	          	<li><a href="../../slides/Welcome.pdf">1. Karel</a></li>
+	          	<li><a href="../../slides/ControlFlow.pdf">2. Control Flow Slides)</a></li>
+	          	<li><a href="../../starter/ControlFlow.zip">2. Control Flow (Code)</a></li>
+	          	<li><a href="../../slides/IntroPython_Variable_Math_RandomNumbers.pdf">3. Değişkenler Slayt</a></li>
+			<li><a href="../../starter/Day3-Variables.zip">3. Değişkenler (Kod)</a></li>	
 	          	<li><a href="../../slides/Graphics.pdf">Grafikler (Slides)</a></li>
-	          	<li><a href="../../starter/Graphics.zip">Grafikler (Code)</a></li>
 	          	<li><a href="../../slides/Animation.pdf">Animasyon</a></li>
 	          	<li><a href="../../slides/Methods.pdf">Metotlar</a></li>
 	          	<li><a href="../../slides/NestedLoops.pdf">Nested Loops</a></li>
 	          	<li><a href="../../slides/Events.pdf">Events (Slides)</a></li>
 	          	<li><a href="../../starter/Events.zip">Events (Code)</a></li>
 	          	<li><a href="../../slides/Breakout.pdf">Breakout</a></li>
-	          	<li><a href="../../slides/AI.pdf">AI (Yapay Zeka)</a></li>
-	          	<li><a href="../../slides/ArrayLists.pdf">Dizi Listeleri (ArrayLists)</a></li>
-	          	<li><a href="../../slides/HashMaps.pdf">HashMaps</a></li>
-	         	<li><a href="../../slides/Internet.pdf">The Internet (Slides)</a></li>
-	         	<li><a href="../../starter/Internet.zip">The Internet (Code)</a></li>
-	         	<li><a href="../../slides/Beyond-CSBridge.pdf">Beyond CSBridge</a></li>
 	          </ul>
 	        </li>
 
@@ -444,50 +436,53 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Looping Fun
+		Eğlenceli Döngüler
 	</h1>
 
 		<p>
 			Hazırlayan: Lisa Yan
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Demet Tümkaya
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>These are practice programs to help you get familiar with loops in Python. They are ordered from easiest to hardest.</p>
-<h2 id="loop-refresher">Loop Refresher</h2>
-<p>Recall the general structure of a <code>for</code> loop:</p>
+		<p>Bu programlar Python'da döngülere alışmanız için pratiklerdir. Kolaydan zora doğru sıralanmışlardır.</p>
+<h2 id="dongu-hatrlatmalar">Döngü Hatırlatmaları</h2>
+<p><code>for</code> döngüsünün genel özelliklerini hatırlayalım:</p>
 <pre><code>for i in range(15):
     # some code...
 </code></pre>
 
-<p>The loop above runs for 15 iterations. You can parse the meaning of a <code>for</code> loop from the first line:</p>
+<p>Yukarıdaki döngü 15 tekrar yapar. Bir <code>for</code> döngüsünün anlamını ilk satırdan çözebilirsiniz:</p>
 <ul>
-<li>Create a counter variable <code>i</code></li>
-<li>Every iteration of the loop, assign <code>i</code> to be the next number in the range 0 to 15, exclusive.  In other words, the first loop iteration, <code>i</code> is 0, the next time <code>i</code> is 1, and so on, and the last iteration, <code>i</code> is 14.</li>
-<li>For each value of <code>i</code>, run the code inside the loop. While running the loop code, you can use the value of <code>i</code>. So for example, the first time the loop runs, the value of <code>i</code> is zero.</li>
-<li>Note that even if you change <code>i</code> within the loop body, <code>i</code> will still be the next value in the range the next time through the loop.  For example:</li>
+<li>Bir sayaç değişkeni 'i' tanımlayın</li>
+<li>Döngünün her tekrarında, i'yi 0 ile 15 aralığında (15 hariç) bulunan bir sonraki sayı olarak atayın. Bir başka deyişle, ilk tekrarda 'i' 0'a eşittir, bir sonrakinde 'i' 1'dir, ve bu şekilde devam eder, son tekrarda ise 'i' 14 olacaktır.</li>
+<li>'i' nin her değeri için, döngünün içindeki kod çalışacaktır. Döngü kodunu çalıştırırken, i'nin değerinin kullanabilirsiniz. Örneğin, döngünün ilk çalışmasında, 'i'nin değeri 0'dır.</li>
+<li>Siz 'i'yi döngü içinde değiştirseniz bile, bir sonraki tekrarda 'i' yine belirtilen aralıkta bulunan bir sonraki sayıya eşit olacaktır. Örnek olarak:</li>
 </ul>
 <pre><code>for i in range(10):
     i += 2
     print(i)
 </code></pre>
 
-<p>The first time through this loop, <code>i</code> will be 0, and it will print out 2.  However, the second time through the loop, <code>i</code> will be 1.  Think about it as each loop iteration, regardless of what <code>i</code> currently is, <code>i</code> is re-assigned the next value in the specified range.</p>
+<p>Bu döngünün ilkinde, 'i' 0 olacaktır, ve 2 sayısı yazdırılacaktır. Fakat, döngünün ikinci tekrarında <code>i</code> 1 olacaktır. Her döngü tekrarında bunu düşününün, 'i'nin değerinin güncel olarak ne olduğundan bağımsız olarak; <code>i</code>, belirtilen aralıkta bulunan bir sonraki sayıya tekrar atanacaktır.</p>
 <p>That being said, it may be easier to follow if you create another variable instead of changing the loop variable:</p>
 <pre><code>for i in range(10):
-    j = i + 2 # does not change the value of i
+    j = i + 2  # i'nin değerini değiştirmez
     print(j)
 </code></pre>
 
-<p>The following exercises are all about using the <code>for</code> loop counter <code>i</code>.</p>
-<p class="alert alert-info"><strong>Tip:</strong> when approaching looping problems, think about how a value of the loop counter can tell you what to do.  For instance, in problem 1 below, we might consider, "when <code>i</code> is 0, I want to print 1; when <code>i</code> is 1, I want to print 3, when <code>i</code> is 2, I want to print 5, etc.".</p>
-<h2 id="looping-fun-1">Looping Fun 1</h2>
-<p>Try to produce the following output with a <code>for</code> loop. Print the first ten odd numbers, starting from 1.</p>
-<pre><code>Print the first ten odd numbers, starting from 1.
+<p>Aşağıdaki örnek, sayaç 'i'yi 'for' döngüsü içinde kullanmakla ilgilidir:</p>
+<p class="alert alert-info"><strong>İpucu:</strong> Döngü problemlerinde, bir döngü sayacının değerinin, size neyi yapmanızı söylediğini düşünün. Mesela, aşağıdaki ilk problemde,"i, 0 olduğunda, 1 sayısını yazdırmak istiyorum; i,1 olduğunda, 3 sayısını yazdırmak istiyorum; i, 2 olduğunda, 5 sayısını yazdırmak istiyorum vb." gibi düşünebiliriz.</p>
+<h2 id="eglenceli-donguler-1">Eğlenceli Döngüler 1</h2>
+<p>Aşağıdaki çıktıyı bir 'for' döngüsü ile elde etmeyi deneyin. 1'den başlayarak ilk 10 tek sayıyı yazdırın.</p>
+<pre><code>1'den başlayarak ilk 10 tek sayıyı yazdıralım.
 1
 3
 5
@@ -500,10 +495,10 @@ filePath - the total path to the markdown file being rendered in this template
 19
 </code></pre>
 
-<p>Extension: Now try to print the first ten even numbers, starting from 0.</p>
-<h2 id="looping-fun-2">Looping Fun 2</h2>
-<p>Try to produce the following output with a <code>for</code> loop. Print the first ten even numbers in decreasing order.</p>
-<pre><code>Print the first ten numbers in decreasing order, starting from 20 and ending with 2.
+<p>Ekleme: Şimdi 0'dan başlarak ilk 10 çift sayıyı yazdırmayı deneyin.</p>
+<h2 id="eglenceli-donguler-2">Eğlenceli Döngüler 2</h2>
+<p>Aşağıdaki çıktıyı bir 'for' döngüsü ile elde etmeyi deneyin. İlk 10 çift sayıyı azalan sırayla yazdırın.</p>
+<pre><code>20'den başlayıp 2'ye kadar, ilk 10 çift sayıyı azalan sırayla yazdıralım.
 20
 18
 16
@@ -516,27 +511,27 @@ filePath - the total path to the markdown file being rendered in this template
 2
 </code></pre>
 
-<p>Can you solve this problem without changing the loop condition from the previous problem? That is, start from the following <code>for</code> loop code:</p>
+<p>Bu problemi, önceki problemdeki döngü şartını değiştirmeden çözebilir misiniz? Aşağıdaki, 'for' döngüsü kodunu yazarak başlayın:</p>
 <pre><code>for i in range(10):
     # some code...
 </code></pre>
 
-<p>How would you solve the problem by using the following loop?</p>
+<p>Bu problemi aşağıdaki döngüyü kullanarak nasıl çözerdiniz?</p>
 <pre><code>for i in range(20):
     # some code...
 </code></pre>
 
-<h2 id="looping-fun-3">Looping Fun 3</h2>
-<p>Use a <code>for</code> loop, but print out everything on a single line. Using <code>print()</code> automatically adds a line break/new line after what is printed.  To tell it not to do this, add <code>end=''</code> right before the closing parentheses.  For instance, <code>print("some text or variables")</code> adds a line break/new line, whereas <code>print("some text or variables", end='')</code> does not.</p>
-<p>Print out the squares, starting from 1.</p>
-<pre><code>Print the first ten square numbers on a single line, starting from 1.
+<h2 id="eglenceli-donguler-3">Eğlenceli Döngüler 3</h2>
+<p>'for' döngüsü kullanın, fakat her şeyi tek bir satıra yazdırın. <code>print()</code> kullanırsanız herhangi bir yeni yazdırmada otomatik olarak diğer satıra geçecektir. Bu şekilde yapmamak için, parantezleri kapatmadan hemen önce <code>end=''</code> ekleyin. Örneğin, <code>print("yazılar veya değişkenler...")</code> yeni bir satır eklerken, <code>print("yazılar veya değişkenler...", end='')</code> eklemez.</p>
+<p>1'den başlayarak tam kare sayıları yazdırın.</p>
+<pre><code>1'den başlayarak, ilk 10 tam kare sayıyı tek bir satıra yazdıralım.
 1, 4, 9, 16, 25, 36, 49, 64, 81, 100
 </code></pre>
 
-<p>Try avoiding a comma at the end of the last square!</p>
-<h2 id="looping-fun-4">Looping Fun 4</h2>
-<p>Time for nested <code>for</code> loops!  Print out the coordinates of a 5x5 grid.</p>
-<pre><code>Print the coordinates of a 5x5 grid, row by row.
+<p>En sondaki tam sayıdan sonra virgül eklemektan kaçının!</p>
+<h2 id="eglenceli-donguler-4">Eğlenceli Döngüler 4</h2>
+<p>İç içe 'for' döngüleri zamanı! 5*5'lik bir kareli kağıdın (grid) üzerindeki koordinatları yazdırın.</p>
+<pre><code>Satır satır 5*5'lik bir kareli kağıdın koordinatlarını yazdıralım.
 (0,0), (1,0), (2,0), (3,0), (4,0)
 (0,1), (1,1), (2,1), (3,1), (4,1)
 (0,2), (1,2), (2,2), (3,2), (4,2)
@@ -544,14 +539,14 @@ filePath - the total path to the markdown file being rendered in this template
 (0,4), (1,4), (2,4), (3,4), (4,4)
 </code></pre>
 
-<p>Hint: try the following code structure:</p>
+<p>İpucu: Aşağıdaki kod yapısını deneyin:</p>
 <pre><code>for i in range(5):
     for j in range(5):
         # some code...
 </code></pre>
 
-<h2 id="additional-practice-while-loops">Additional Practice: <code>while</code> Loops</h2>
-<p>Want more practice with <code>while</code> loops? Do all the above exercises with a <code>while</code> loop instead of a <code>for</code> loop. Good luck!</p>
+<h2 id="ek-calsmalar-while-donguleri">Ek Çalışmalar: <code>while</code> Döngüleri</h2>
+<p>'while' döngüleriyle ilgili daha çok pratik mi istiyorsunuz? Yukarıdaki tüm alıştırmaları, 'for' yerine 'while' döngüsü ile yapmayı deneyin. Bol şans!</p>
 	</div>
 </div>
 

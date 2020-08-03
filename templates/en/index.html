@@ -88,7 +88,7 @@ with open("templates/announcements/times.csv", 'r') as f:
 	  Here are instructions for how to work on the programs below during labs: <a href="{{pathToRoot}}en/handouts/eclipse.html">click here</a>.
 	</div>
   -->
-	%include templates/en/programTable.ptl
+	%include("templates/programs/programTable.ptl", lang="en")
 </div>
 
 <hr/>
@@ -108,41 +108,45 @@ with open("templates/announcements/times.csv", 'r') as f:
 	      ("Ayca", "Ayca.jpg"),
 	      ("Chris", "chris.jpg"),
 	      ("Nick M.", "nickm.jpg"),
-	      ("Josef", "Josef.jpg")
+	      ("Josef", "Josef.jpg"),
 		],
 		[
 	      ("Yosefa", "Yosefa.JPG"),
 	      ("Burcu", "default.jpg"),
-	      ("Lisa", "lisa.jpg"),
+		  ("Lisa", "lisa.jpg"),
+		  ("Ceren", "ceren.PNG"),
 	      ("Ahmet", "Ahmet.png"),
 		  ("Anna", "Anna.jpg"),
-		  ("Demet", "Demet.jpeg")
 		],
 		[
+		("Demet", "Demet.jpeg"),
 	      ("Eddie", "Eddie.jpg"),
 		  ("Eliška", "Eliška.jpg"),
 	      ("Emilia", "Emilia.jpg"),
 		  ("Emirhan", "Emirhan.jpg"),
 	      ("Eren", "Eren.jpeg"),
-		  ("Ezgi", "Ezgi.jpg")
+		  
 		],
 		[
+		("Ezgi", "Ezgi.jpg"),
 	      ("Gaby", "Gaby.jpeg"),
 	      ("Gül Sena", "Gül Sena.JPG"),
 	      ("Honza", "Honza.jpeg"),
 	      ("Jan", "Jan.jpg"),
-	      ("Jaroslav", "default.jpg"),
-	      ("Jillian", "default.jpg")
+	      ("Jaroslav", "jaroslav.jpg"),
+	      
 		],
-	    [
+		[
+		("Jillian", "jillian.jpg"),
 	      ("Julie", "Julie.jpeg"),
 		  ("Melis", "Melis.jpg"),
 	      ("Necla", "Necla.jpg"),
 	      ("Okan", "Okan.png"),
 	      ("Oya", "Oya.jpg"),
-	      ("Ozan", "Ozan.jpg")
+	      
 		],
-	    [
+		[
+		("Ozan", "Ozan.jpg"),
 	      ("Pinar", "Pinar.jpeg"),
 		  ("Radek", "Radek.jpg")
 	    ],

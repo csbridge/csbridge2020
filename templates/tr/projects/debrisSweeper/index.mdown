@@ -1,6 +1,6 @@
 template: templates/en/projects/projectTemplate.ptl
 title: Enkazı Kaldır (çözümlü)
-credit: Written by Chris Piech and Mystery CS106A people.
+credit: Chris Piech ve gizemli CS106A ekibi tarafından yazıldı.
 translation: Serhat Arslan, Demet Tümkaya
 solution: soln.py
 
@@ -14,7 +14,7 @@ Bu örneğin hedefi, ekranı rastgele yerleşmiş enkazlarla (ovallerle) doldura
 
 Sonrasında, kullanıcıların enkazı ekrandan kaldırmalarını sağlamalıyız. Sonsuz bir döngü ekle ve kullanıcı bir objenin üstüne tıklayıp tıklamadığını kontrol edin. Eğer tıkladılarsa, o enkazı temizleyin (ekrandan kaldırın)!
 
-## Tıklana objeyi almak
+## Tıklanan objeyi almak
 
 Kanvas fonksiyonu, `canvas.find_closest(x, y)`, belirtilen (x,y) konumuna en yakın objeyi alacaktır. Eğer hiç obje yoksa, `None` olarak geri dönecektir. Bir obje üzerine bazı eylemler gerçekleştirmek için (eğer varsa), aşağıdaki gibi bir şey yazabilirsiniz:
 

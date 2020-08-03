@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Draw Trees</title>
+<title>CS Bridge  | Ağaç Çiz</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -351,26 +351,18 @@
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slaytlar  <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
-	          	<li><a href="../../slides/Welcome.pdf">Karel</a></li>
-	          	<li><a href="../../slides/ControlFlow.pdf">Control Flow Slides)</a></li>
-	          	<li><a href="../../starter/ControlFlow.zip">Control Flow (Code)</a></li>
-	          	<li><a href="../../slides/Variables.pdf">Değişkenler</a></li>
-			<li><a href="../../slides/Variables2.pdf">Değişkenler 2</a></li>
-	          	
+	          	<li><a href="../../slides/Welcome.pdf">1. Karel</a></li>
+	          	<li><a href="../../slides/ControlFlow.pdf">2. Control Flow Slides)</a></li>
+	          	<li><a href="../../starter/ControlFlow.zip">2. Control Flow (Code)</a></li>
+	          	<li><a href="../../slides/IntroPython_Variable_Math_RandomNumbers.pdf">3. Değişkenler Slayt</a></li>
+			<li><a href="../../starter/Day3-Variables.zip">3. Değişkenler (Kod)</a></li>	
 	          	<li><a href="../../slides/Graphics.pdf">Grafikler (Slides)</a></li>
-	          	<li><a href="../../starter/Graphics.zip">Grafikler (Code)</a></li>
 	          	<li><a href="../../slides/Animation.pdf">Animasyon</a></li>
 	          	<li><a href="../../slides/Methods.pdf">Metotlar</a></li>
 	          	<li><a href="../../slides/NestedLoops.pdf">Nested Loops</a></li>
 	          	<li><a href="../../slides/Events.pdf">Events (Slides)</a></li>
 	          	<li><a href="../../starter/Events.zip">Events (Code)</a></li>
 	          	<li><a href="../../slides/Breakout.pdf">Breakout</a></li>
-	          	<li><a href="../../slides/AI.pdf">AI (Yapay Zeka)</a></li>
-	          	<li><a href="../../slides/ArrayLists.pdf">Dizi Listeleri (ArrayLists)</a></li>
-	          	<li><a href="../../slides/HashMaps.pdf">HashMaps</a></li>
-	         	<li><a href="../../slides/Internet.pdf">The Internet (Slides)</a></li>
-	         	<li><a href="../../starter/Internet.zip">The Internet (Code)</a></li>
-	         	<li><a href="../../slides/Beyond-CSBridge.pdf">Beyond CSBridge</a></li>
 	          </ul>
 	        </li>
 
@@ -444,22 +436,25 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Draw Trees
+		Ağaç Çiz
 	</h1>
 
 		<p>
-			Hazırlayanlar: Written by Chris, Bryce, and Julia
+			Hazırlayanlar: Chris, Bryce ve Julia tarafından yazıldı.
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Demet Tümkaya
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../en/resources/graphics.html">Graphics Reference</a><br/></p>
-<p>Fill in the <code>draw_tree</code> function that draws a tree with the base of its trunk centered at the provided <code>(x, y)</code> position.</p>
-<p>The <code>main</code> method has already been written for you:</p>
+		<p>Ders Notları: <a href="../../en/resources/graphics.html">Graphics Reference</a><br/></p>
+<p>Gövdesinin tabanı verilen <code>(x, y)</code> pozisyonunu merkez kabul eden bir ağaç çizmek için <code>draw_tree</code> fonksiyonunu doldurun.</p>
+<p><code>main</code> fonksiyonu sizler için önceden yazıldı:</p>
 <pre><code>def main():
     draw_tree(50, 150)
     draw_tree(100, 300)
@@ -468,7 +463,7 @@ filePath - the total path to the markdown file being rendered in this template
     draw_tree(700, 310)
 </code></pre>
 
-<p>Each tree should have a trunk with a width of 20 pixels (<code>TRUNK_WIDTH</code>) and a height of 80 pixels (<code>TRUNK_HEIGHT</code>). The leaves should have a radius of 30 pixels (<code>LEAVES_RADIUS</code>). Your output should look like this:</p>
+<p>Her ağacın gövdesinin genişliği (<code>TRUNK_WIDTH</code>) 20 piksel ve uzunluğu (<code>TRUNK_HEIGHT</code>) 80 piksel olmalıdır. Yapraklar ise 30 piksel yarıçapa (<code>LEAVES_RADIUS</code>) sahip olmalıdır. Çıktınız bu şekilde gözükmelidir:</p>
 <p><center>
 <img style="width:500px" src="../../img/projects/madmethods/demo.png"><br />
 </center></p>

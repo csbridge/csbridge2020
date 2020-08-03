@@ -1,6 +1,6 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Seken Top
-credit: Problem written by Chris.
+credit: Chris tarafında yazıldı.
 translation: Serhat Arslan, Demet Tümkaya
 solution: soln.py
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Hailstone</title>
+<title>CS Bridge  | Dolu Tanesi</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -351,26 +351,18 @@
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slaytlar  <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
-	          	<li><a href="../../slides/Welcome.pdf">Karel</a></li>
-	          	<li><a href="../../slides/ControlFlow.pdf">Control Flow Slides)</a></li>
-	          	<li><a href="../../starter/ControlFlow.zip">Control Flow (Code)</a></li>
-	          	<li><a href="../../slides/Variables.pdf">Değişkenler</a></li>
-			<li><a href="../../slides/Variables2.pdf">Değişkenler 2</a></li>
-	          	
+	          	<li><a href="../../slides/Welcome.pdf">1. Karel</a></li>
+	          	<li><a href="../../slides/ControlFlow.pdf">2. Control Flow Slides)</a></li>
+	          	<li><a href="../../starter/ControlFlow.zip">2. Control Flow (Code)</a></li>
+	          	<li><a href="../../slides/IntroPython_Variable_Math_RandomNumbers.pdf">3. Değişkenler Slayt</a></li>
+			<li><a href="../../starter/Day3-Variables.zip">3. Değişkenler (Kod)</a></li>	
 	          	<li><a href="../../slides/Graphics.pdf">Grafikler (Slides)</a></li>
-	          	<li><a href="../../starter/Graphics.zip">Grafikler (Code)</a></li>
 	          	<li><a href="../../slides/Animation.pdf">Animasyon</a></li>
 	          	<li><a href="../../slides/Methods.pdf">Metotlar</a></li>
 	          	<li><a href="../../slides/NestedLoops.pdf">Nested Loops</a></li>
 	          	<li><a href="../../slides/Events.pdf">Events (Slides)</a></li>
 	          	<li><a href="../../starter/Events.zip">Events (Code)</a></li>
 	          	<li><a href="../../slides/Breakout.pdf">Breakout</a></li>
-	          	<li><a href="../../slides/AI.pdf">AI (Yapay Zeka)</a></li>
-	          	<li><a href="../../slides/ArrayLists.pdf">Dizi Listeleri (ArrayLists)</a></li>
-	          	<li><a href="../../slides/HashMaps.pdf">HashMaps</a></li>
-	         	<li><a href="../../slides/Internet.pdf">The Internet (Slides)</a></li>
-	         	<li><a href="../../starter/Internet.zip">The Internet (Code)</a></li>
-	         	<li><a href="../../slides/Beyond-CSBridge.pdf">Beyond CSBridge</a></li>
 	          </ul>
 	        </li>
 
@@ -444,76 +436,79 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Hailstone
+		Dolu Tanesi
 	</h1>
 
 		<p>
 			Hazırlayan: Eric Roberts
 		</p>
 
+		<p>
+			Çevirenler: Serhat Arslan, Demet Tümkaya
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Our world contains many interesting mathematical puzzles, many of which can be expressed in the form of computer programs. One such wonderful problem that is well within the scope of what we have learned is the hailstone problem.</p>
-<p>The problem can be expressed as follows:</p>
+		<p>Dünyamız ilginç matematik bulmacalarına sahiptir, birçoğu da bilgisayar programları ile ifade edilebilir. Öğrendiklerimizi güzelce kapsayan muhteşem bir problem ise dolu tanesi problemi.</p>
+<p>Bu problem aşağıdaki gibi ifade edilebilir:</p>
 <blockquote>
-<p>Pick some positive integer and call it n. 
-If n is even, divide it by two. 
-If n is odd, multiply it by three and add one. 
-Continue this process until n is equal to one.</p>
+<p>Pozitif bir tam sayı seçin ve ona n diyin.
+n çiftse, onu ikiye bölün.
+n tekse, onu 3 ile çarpıp 1 ekleyin.
+Bu uygulamayı n 1'e eşit olana kadar devam ettirin.</p>
 </blockquote>
-<p>The following example, starting with the number 15, illustrates this process:</p>
-<pre><code>15 is odd, so I make 3n+1: 46 
-46 is even, so I take half: 23 
-23 is odd, so I make 3n+1: 70 
-70 is even, so I take half: 35 
-35 is odd, so I make 3n+1: 106 
-106 is even, so I take half: 53 
-53 is odd, so I make 3n+1: 160 
-160 is even, so I take half: 80 
-80 is even, so I take half: 40 
-40 is even, so I take half: 20 
-20 is even, so I take half: 10 
-10 is even, so I take half: 5 
-5 is odd, so I make 3n+1: 16 
-16 is even, so I take half: 8 
-8 is even, so I take half: 4 
-4 is even, so I take half: 2 
-2 is even, so I take half: 1
+<p>Aşağıdaki örnek, 15 sayısı ile başlar ve 1'e ulaşma sürecini gösterir:</p>
+<pre><code>15 tek sayıdır, bu yüzden 3n+1 yapıyorum: 46
+46 çift sayıdır, bu yüzden yarısını alıyorum: 23
+23 tek sayıdır, bu yüzden 3n+1 yapıyorum: 70
+70 çift sayıdır, bu yüzden yarısını alıyorum 35
+35 tek sayıdır, bu yüzden 3n+1 yapıyorum: 106
+106 çift sayıdır, bu yüzden yarısını alıyorum 53
+53 tek sayıdır, bu yüzden 3n+1 yapıyorum: 160
+160 çift sayıdır, bu yüzden yarısını alıyorum 80
+80 çift sayıdır, bu yüzden yarısını alıyorum 40
+40 çift sayıdır, bu yüzden yarısını alıyorum 20
+20 çift sayıdır, bu yüzden yarısını alıyorum 10
+10 çift sayıdır, bu yüzden yarısını alıyorum: 5
+5 tek sayıdır, bu yüzden 3n+1 yapıyorum: 16
+16 çift sayıdır, bu yüzden yarısını alıyorum: 8
+8 çift sayıdır, bu yüzden yarısını alıyorum: 4
+4 çift sayıdır, bu yüzden yarısını alıyorum: 2
+2 çift sayıdır, bu yüzden yarısını alıyorum: 1
 </code></pre>
 
-<p>As you can see from this example, the numbers go up and down, but eventually, at least for all numbers that have ever been tried, comes down to end in 1. In some respects, this process is reminiscent of the formation of hailstones, which get carried upward by the winds over and over again before they finally descend to the ground. Because of this analogy, this sequence of numbers is usually called the Hailstone sequence, although it goes by many other names as well.</p>
-<p>Write a program that reads in a number from the user and then displays the Hailstone sequence for that number, followed by a line showing the number of steps taken to reach 1. For example, your program should be able to produce a sample run that looks like this:</p>
-<pre><code>Enter a number: 17
-17 is odd, so I make 3n + 1: 52
-52 is even, so I take half: 26
-26 is even, so I take half: 13
-13 is odd, so I make 3n + 1: 40
-40 is even, so I take half: 20
-20 is even, so I take half: 10
-10 is even, so I take half: 5
-5 is odd, so I make 3n + 1: 16
-16 is even, so I take half: 8
-8 is even, so I take half: 4
-4 is even, so I take half: 2
-2 is even, so I take half: 1
+<p>Bu örnekte gördüğünüz gibi, sayılar artar ve azalır, fakat sonunda, en azından denenen har sayıda 1'e ulaşarak süreç sonlandı. Bazı açılardan, bu süreç, toprağa düşene kadar sürekli rüzgarla yukarı taşınan dolu tanelerinin oluşumunu andırır. Bu benzetmeden dolayı, bu sayı dizisi genellike Dolu Tanesi dizisi olarak adlandırılır, tabii başka adları da vardır.</p>
+<p>Kullanıcıdan bir sayı alan, sonrasında bu sayının Dolu Tanesi dizisini ve 1'e ulaşana kadar kaç adım geçtiğini sırayla gösteren bir program yazın. Örneğin, programınız aşağıdaki gibi gözüken bir çıktı üretmelidir:</p>
+<pre><code>Bir sayı girin: 17
+17 tek sayıdır, bu yüzden 3n+1 yapıyorum: 52
+52 çift sayıdır, bu yüzden yarısını alıyorum: 26
+26 çift sayıdır, bu yüzden yarısını alıyorum: 13
+13 tek sayıdır, bu yüzden 3n+1 yapıyorum: 40
+40 çift sayıdır, bu yüzden yarısını alıyorum: 20
+20 çift sayıdır, bu yüzden yarısını alıyorum: 10
+10 çift sayıdır, bu yüzden yarısını alıyorum: 5
+5 tek sayıdır, bu yüzden 3n+1 yapıyorum: 16
+16 çift sayıdır, bu yüzden yarısını alıyorum: 8
+8 çift sayıdır, bu yüzden yarısını alıyorum: 4
+4 çift sayıdır, bu yüzden yarısını alıyorum: 2
+2 çift sayıdır, bu yüzden yarısını alıyorum: 1
 </code></pre>
 
-<p>The fascinating thing about this problem is that no one has yet been able to prove that it always stops. The number of steps in the process can certainly get very large. How many steps, for example, does your program take when n is 27?</p>
-<p class="alert alert-info"><strong>Tip:</strong> when performing division with <code>/</code> in Python, the result will always be represented as a real number, even if the number is an integer.  For hailstone, this means that calculated numbers may print out with a <code>.0</code> at the end.  To avoid this, try converting the divided value to be an <code>int</code>, like this: <code>int(num / 2)</code>.  Then you can print that value out, or store it into a variable, e.g. <code>num = int(num / 2)</code>.</p>
-<h2 id="checking-even-or-odd">Checking Even or Odd</h2>
-<p>In order to solve the hailstone problem, we are going to need as way to determine if an integer is even or odd. In addition to the regular operators that you know and love (like +, -, *, and /) programming languages provide a remainder operator: %.  </p>
+<p>Bu problem hakkında büyüleyici olan ise kimsenin şimdiye kadar her zaman duracağını kanıtlayamamasıdır. Süreçteki adımların sayısı çok büyüyebilir. Örneğin kullanıcıdan 27 sayısı alan program için ne kadar adım gerekir?</p>
+<p class="alert alert-info"><strong>İpucu:</strong> Python ile bölme yaparken '/' kullanmak, sonuç olarak her zaman gerçek bir sayı verir, bu sayı tam sayı olsa da. Bu program için, hesaplanan sayıları sonunda <code>.0</code> ile yazdırması anlamına gelir. Bunu önlemek için, bölümü 'int'e (tamsayı) çevirmeyi deneyin, <code>int(num / 2)</code> gibi. Sonrasında bu değeri yazırabilirsiniz veya bir değişken içinde depolayabilirsiniz, örneğin: <code>num = int(num / 2)</code>.</p>
+<h2 id="tekligi-veya-ciftligi-kontrol-etmek">Tekliği veya Çiftliği Kontrol Etmek</h2>
+<p>Bu problemi çözebilmek için, bir tamsayının tek veya çift olduğuna karar vermeliyiz. Bildiğiniz ve sevdiğiniz operatörlerin dışında (+, -, *, ve / gibi), programlama dilleri bir 'kalan' operatörüne sahiptir: %.</p>
 <pre><code>a % b
 </code></pre>
 
-<p>returns the value remaining when you divide a by b. For example, 10 % 3 is 1 because when you divide 10 by 3 you get 3 with 1 left over.  When you divide any number by 2, the remainder is 0 if the number is even and 1 if the number is odd. Thus, </p>
+<p>a'yı b'ye böldüğünüzde kalan sayıyı döndürür. Örneğin, 10 % 3, 1'e eşittir çünkü 10'u 3'e böldüğünüzde kalan 1 olacaktır. Herhangi bir sayıyı 2'ye böldüğünüzde, eğer sayı çiftse kalan 0 ve sayı tekse kalan 1'dir. Böylelikle,</p>
 <pre><code>n % 2 == 0
 </code></pre>
 
-<p>is a test of whether <code>n</code> is even!</p>
+<p>n'in çift olup olmadığına dair bir testtir.</p>
 	</div>
 </div>
 
