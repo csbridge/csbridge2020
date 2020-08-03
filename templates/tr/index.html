@@ -41,7 +41,7 @@ with open("templates/announcements/times.csv", 'r') as f:
 % end
 
 <div class="alert alert-warning visible-default">
-  % with open(os.path.join("templates", "announcements", "tr", "default.ptl"), 'r') as f:
+  % with open(os.path.join("templates", "announcements", "tr", "default.ptl"), 'r', encoding="utf8") as f:
       {{!f.read()}}
   % end
 </div>
