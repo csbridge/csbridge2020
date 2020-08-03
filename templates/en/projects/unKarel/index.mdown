@@ -6,13 +6,13 @@ solution: soln.py
 Handouts: [Karel Reference]({{pathToRoot}}en/resources/karel.html)<br/>
 File: `un_karel.py`<br/>
 
-Karel has been hired by the UN to come and help build houses. The day needs saving and Karel is clearly the best robot for the job. Your goal is to have Karel walk along the bottom row and build a house like the following:
+Karel has been hired by the UN to come and help build houses. The day needs saving and Karel is clearly the best robot for the job. Your goal is to have Karel walk along the bottom row and build a house like the following every time Karel finds a beeper:
 
 <center>
 <img style="width:150px" src="{{pathToRoot}}img/projects/unKarel/house.png">	
 </center>
 
-Every time Karel finds a beeper. The below images show what Karel should do for two example worlds. You can assume that no houses will overlap and that all houses will fit inside the world. You can't assume the size of the world or the number of houses!
+The below images show what Karel should do for two example worlds. You can assume that no houses will overlap and that all houses will fit inside the world. You can't assume the size of the world or the number of houses!
 
 <center>
 <img style="width:700px" src="{{pathToRoot}}img/projects/unKarel/un1.png">	

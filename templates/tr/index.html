@@ -21,48 +21,52 @@
   </div>
 </div>
 
-<!-- Main Content -->
-<div class="container">
-  <div class="section" id="information">
-    <br />
-    <!--
-		<div class="alert alert-info">
-      <b>Fill in the exit survey</b> after you finish your final project!!! The final survey can be found at <a href="https://tiny.cc/finish2019koc">tiny.cc/finish2019koc</a>.
-    </div>
-		<div class="alert alert-success">
-      <p>Looking for life after CSBridge? Check out the <a href="{{pathToRoot}}en/handouts/whatsNext.html">What's Next</a> page!</p>
-    </div>
-    -->
+<br />
+
+<%
+import os
+import csv
+with open("templates/announcements/times.csv", 'r') as f:
+  reader = csv.reader(f, delimiter=',')
+  header = next(reader)
+%>
+
+% for row in reader:
+  % datetime_start, datetime_end, alert_type, fname = row
+  <div class="alert {{alert_type}} visible-during" data-visible-start="{{datetime_start}}" data-visible-end="{{datetime_end}}">
+    % with open(os.path.join("templates", "announcements", "tr", fname), 'r', encoding="utf8") as f:
+        {{!f.read()}}
+    % end
   </div>
+% end
 
-  <!--<div class="alert alert-success">
-      Gerekli tüm bağlantılara (Lab için giriş yapma, çalışmaları teslim etme) 'Formlar' sekmesi altından ulaşabilirsiniz.
-		</div>
-    -->
-  <!--
-		<div class="alert alert-success">
-			<b> We want your feedback</b>. Fill in the class survey here: <a href="https://www.surveymonkey.com/r/VCVVD8N">https://www.surveymonkey.com/r/VCVVD8N</a>.
-		</div>
-
-		<div class="alert alert-success">
-			<b> Submit your work</b>. Use the submission process: <a href="{{pathToRoot}}en/handouts/submission.html">submission handout</a>.
-		</div>
-
-		<div class="alert alert-info">
-			Sign in to lab <a href="https://docs.google.com/forms/d/e/1FAIpQLSffsKTNU3mu-21-ZjZFJ3d-fPdvw6uQcvhAjbpXhux43_3gpg/viewform?usp=sf_link">here</a>.
-		</div>
-
-    <div class="alert alert-info">
-      Fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtHJpQ4Ksu3pWmPuCT5sC8m2WAvlOcr453P9UtsFFC-HCBdw/viewform">this survey</a> during the first lab.
-    </div>
+<div class="alert alert-warning visible-default">
+  % with open(os.path.join("templates", "announcements", "tr", "default.ptl"), 'r') as f:
+      {{!f.read()}}
+  % end
+</div>
 
 
-		<div class="alert alert-info">
-			Add to the class playlist here: <a href="https://open.spotify.com/user/1251835474/playlist/2E1ccnzfMTqDv2D1JEoFF3">Spotify Playlist</a>
-		</div>
-		-->
+<!-- <div class="alert alert-success">
+	<b>Kimsiniz?</b> <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Sınıf anketini</a> doldurun.
+</div> -->
 
-  <div>
+<!--
+<div class="alert alert-info">
+	Programın Spotify çalma listesine şarkı ekleyin: <a href="https://open.spotify.com/user/1251835474/playlist/2E1ccnzfMTqDv2D1JEoFF3">Spotify Çalma Listesi</a>
+</div>
+-->
+
+<div>
+<!-- <center>
+	<img style="width: 100%;" src="{{pathToRoot}}img/fun/classPhoto.jpg"></img>
+</center> -->
+
+<!--
+	<div class="alert alert-success">
+	  Final projenizi bitiriyor musunuz?  CS Bridge programının sonuna geliyoruz, lütfen bu formu doldurun: <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_9QQCN0ZyMq3Ly3r">form linki</a>.
+	</div>
+-->
     <h2>
       Bu Dersin Amacı
     </h2>
@@ -75,15 +79,15 @@
       Bilgisayar Bilimine Giriş dersinde kullanılan materyeller üzerinden
       öğreneceksiniz.
     </p>
-  </div>
 </div>
 </hr>
 
+<!-- Daily schedule / list of programs -->
 <div class="section" id="schedule">
 	<h2>Programlar</h2>
   <!--
 	<div class="alert alert-info">
-	  Here are instructions for how to work on the programs below during labs: <a href="{{pathToRoot}}en/handouts/eclipse.html">click here</a>.
+	  Buradan lablar sırasında programlar üzerinde nasıl çalışacağınıza bakabilirsiniz: <a href="{{pathToRoot}}en/handouts/eclipse.html">buraya tıklayın</a>.
 	</div>
   -->
 	%include("templates/programs/programTable.ptl", lang="tr")
@@ -172,12 +176,12 @@
 
 <!--<div class="section" id="playWithKarel">
 	<h2>
-		Play With Karel
+		Karel'la oynayın
 	</h2>
 
-	<p>Meet Karel, The Java Robot that Stanford uses to introduce university students to programming. </p>
+	<p>Stanford'un üniversite öğrencilerini programlama ile tanıştırmak için kullandığı robot, Karel'la tanışın.</p>
 
-	<p>Use Karel's commands to get her to move the beeper to the top of the ledge. Normally you will write your programs in an application called Eclipse, but to get you started we made a mini-eclipse for our website:
+	<p>Karel'ın komutlarını kullanarak beeper'ı çıkıntının üstüne taşıtın. Normalde programınızı PyCharm isimli bir uygulamada yazacaksınız ama başlangıç için sitemize küçük bir arayüz yaptık:
 	</p>
 
 	%include templates/parts/playWithKarel.ptl

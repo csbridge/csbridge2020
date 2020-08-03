@@ -6,14 +6,14 @@ title: CS Bridge SSS
 <!-- Table of Contents -->
 [TOC]
 
-## Schedule
+## Program
 
 <div class="panel-group" id="accordion">
   <div class="panel panel-danger">
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-        Timezone: Turkey</a>
+        Saat dilimi: Türkiye</a>
       </h4>
     </div>
     <div id="collapse2" class="panel-collapse collapse in">
@@ -24,7 +24,7 @@ title: CS Bridge SSS
   </div>
 </div>
 
-## Frequently Asked Questions
+## Sıkça Sorulan Sorular
 
 
 ### Bu program notlandırılıyor mu?

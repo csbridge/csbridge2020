@@ -6,7 +6,7 @@ solution: soln.py
 Handouts: [Karel Reference]({{pathToRoot}}en/resources/karel.html)<br/>
 File: `place_100.py`<br/>
 
-Your goal is to have Karel create a pile of 100 beepers on square infront of where she starts. Please!!! Do not type out putBeeper 100 times in a row! (hint: use a `for` loop.)
+Your goal is to have Karel create a pile of 100 beepers on the square in front of where it starts.  Do not type out `put_beeper` 100 times in a row!! (hint: use a `for` loop!)
 
 <center>
 <img style="width:700px" src="{{pathToRoot}}img/projects/place100/place100.png">

@@ -43,16 +43,51 @@ This is the Integrated Development Environment (IDE) that everyone will be using
 
 ## Schedule
 
-This is a snapshot of the schedule that shows a regular day and a day with a social activity.
+Below is the calendar for the program. The Section Leader Team Meeting is NOT on the below calendar but it will occur 1hr before the evening lecture each day (9am in CA/7pm in Prague/8pm in Istanbul) and you're required to attend.
+Click on one of the three buttons below to set the calendar to your timezone.
 
-<center>
-<img
- src="{{pathToRoot}}img/Schedule.png"
- class="img-fluid mx-auto d-block"
- alt="A screenshot of the CS Bridge schedule with times in different time zones and blocks of times with titles for each block."
- style="width: 80%;"
-/>
-</center>
+<div class="panel-group" id="accordion">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        Timezone: Czech</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FPrague&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;showTabs=1&amp;mode=WEEK" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-danger">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        Timezone: Turkey</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FIstanbul&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;mode=WEEK&amp;hl=tr" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        Timezone: USA (California)</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FSanFrancisco&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;mode=WEEK" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### What will **lectures** look like? 
 Lectures will be held twice a day - there will be one 30 minute lecture at the start of the day and one 30 minute lecture in the evening. The morning lectures will be taught by a lecturer from either Koç University or Czech Technical University and the evening lecture will be taught by a lecturer from Stanford University. This is where students will learn the core concepts of the class.

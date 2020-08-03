@@ -1,8 +1,8 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: E = MC2 (ve çözümü)
-hazırlayan: Problem Chris Piech tarafından yazılmış, Einstein tarafından keşfedilmiştir
-çözüm: soln.py
-çeviren: Kazim Okan Akgül
+credit: Problem Chris Piech tarafından yazılmış, Einstein tarafından keşfedilmiştir
+solution: soln.py
+translation: Kazim Okan Akgül
 
 Heyecan verici insan keşiflerinden biri de, kütle ve enerjinin değiştirilebilir ve E = M &times; C <sup>2</sup> denklemi ile ilişkili olmasıdır. Bu ilişki neredeyse 100 yıl önce Albert Einstein tarafından ortaya çıkarıldı ve artık güneşin az miktarda kütleyi büyük miktarlarda enerjiye dönüştürerek ısısını ürettiğini biliyoruz.
 

@@ -6,13 +6,13 @@ solution: soln.py
 Handouts: [Karel Reference]({{pathToRoot}}en/resources/karel.html)<br/>
 File: `banish_winter.py`<br/>
 
-Karel wants to walk across Stanford/CTU/Koç campus and spruce it up a bit for Spring. Spring has sprung, but the campus trees haven't gotten the memo and are still leafless. Karel needs to walk across campus from west to east, adorning all trees with artificial leaves and transforming the campus as follows:
+Karel wants to walk across the Stanford/CTU/Koç campus and spruce it up a bit for Spring. Spring has sprung, but the campus trees haven't gotten the memo and are still leafless. Karel needs to walk across campus from west to east, adorning all trees with artificial leaves and transforming the campus as follows:
 
 <center>
 <img style="width:800px" src="{{pathToRoot}}img/projects/banishWinter/banishWinter1.png">
 </center>
 
-The problem is complicated because Karel doesn't know how tall each tree is, nor does she know the distances between trees. She does know, however, that she has just enough beepers in her beeper bag starting out to decorate all of the trees, and that the world (the CTU campus) is 9 spaces wide. Try to intuit the program requirement by looking at the two snapshots above (the world is called `banish_winter.w`. Your program must therefore also work for the following configuration (`banish_winter2.w`):
+The problem is complicated because Karel doesn't know how tall each tree is, nor does it know the distances between trees. Karel does know, however, that it has just enough beepers in its beeper bag starting out to decorate all of the trees, and that the world (the CTU campus) is 9 spaces wide. Try to intuit the program requirement by looking at the two snapshots here (the world above is called `banish_winter.w`. Your program must also work for the configuration below (`banish_winter2.w`):
 
 <center>
 <img style="width:800px" src="{{pathToRoot}}img/projects/banishWinter/banishWinter2.png">
