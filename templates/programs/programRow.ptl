@@ -1,0 +1,39 @@
+<td>
+	<img class="projectImg" src="{{pathToRoot}}{{program['imageURL']}}" />
+</td>
+<td>
+	<a href="{{pathToRoot}}{{lang}}/{{program['url']}}">{{program["title_" + lang]}}</a>
+    <br/>
+
+    <%
+    	label_class = ""
+    	label_text = "NOT TRANSLATED"
+    	if program["type"] == "quickstart":
+    		label_class = "label-default"
+    		if lang == "tr":
+    			label_text = "Hızlı Başlangıç"
+    		elif lang == "en":
+    			label_text = "Quickstart"
+    		end
+    	elif program["type"] == "section":
+    		label_class = "label-primary"
+    		if lang == "tr":
+    			label_text = "Grup"
+    		elif lang == "en":
+    			label_text = "Section"
+    		end
+    	elif program["type"] == "project":
+    		label_class = "label-success"
+    		if lang == "tr":
+    			label_text = "Proje"
+    		elif lang == "en":
+    			label_text = "Project"
+    		end
+    	end
+    %>
+    <span class="label {{label_class}}">{{label_text}}</span>	
+    % if get('taMode', False) and "teachURL" in program:
+    	<br><a href="{{pathToRoot}}{{program['teachURL']}}">SL Notes</a>
+    % end				
+</td>
+<td>{{program["topic_" + lang]}}</td>
