@@ -1,6 +1,6 @@
 <%
 	import json
-	with open("templates/programs/programs.json", "r") as programs_file:
+	with open("templates/programs/programs.json", "r", encoding="utf8") as programs_file:
   		data = json.load(programs_file)
 %>
 
