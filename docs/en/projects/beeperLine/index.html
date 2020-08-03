@@ -302,8 +302,8 @@
                 <a tabindex"-1" href="#">2. Control Flow</a>
                 <ul class="dropdown-menu">
 	          	    <li><a href="../../../en/projects/beeperLine/index.html">Beeper Line</a></li>
-	          	    <li><a href="../../../en/projects/invertBeeper/index.html">Invert Beeper</a></li>
 	          	    <li><a href="../../../en/projects/unKarel/index.html">UN Karel</a></li>
+	          	    <li><a href="../../../en/projects/invertBeeper/index.html">Invert Beeper</a></li>
 	          	    <li><a href="../../../en/projects/banishWinter/index.html">Banish Winter</a></li>
                 </ul>
               </li>
@@ -458,7 +458,7 @@ File: <code>beeper_line.py</code></p>
 <p><center>
     <img style="width:600px"  src="../../../img/projects/beeperLine/beeperLine1.png"> <br />
 </center></p>
-<p>Your program should also work for worlds of different sizes. For example if we run the EXACT same program on this slightly larger world, Karel should still be able to place a full line of beepers without crashing. This means we can't use a for loop. We don't know before hand how big the world is going to be!</p>
+<p>Your program should also work for worlds of different sizes. For example if we run the EXACT same program on this slightly larger world, Karel should still be able to place a full line of beepers without crashing. This means we can't use a <code>for</code> loop. We don't know beforehand how big the world is going to be!</p>
 <p><center>
     <img style="width:700px"  src="../../../img/projects/beeperLine/beeperLine2.png"> <br />
 </center></p>
@@ -475,10 +475,10 @@ File: <code>beeper_line.py</code></p>
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:500.0px">from karel.stanfordkarel import *
+		<pre class="console" id="editor" style="height:580.0px">from karel.stanfordkarel import *
 
 &quot;&quot;&quot;
-File: beeper_line_karel.py
+File: beeper_line.py
 ------------------------------
 Places a row of beepers on the bottom row of Karel&#039;s world.
 Works with any size world.
@@ -490,15 +490,19 @@ def main():
         put_beeper()
         move()
 
-    # the line below is necessary to place the final beeper.
-    # the number of times Karel moves is one less than the number
-    # of times Karel places a beeper (if the world is five squares
-    # wide, we place 5 beepers, but only move 4 times).
+    &quot;&quot;&quot;
+    the line below is necessary to place the final beeper.
+    the number of times Karel moves is one less than the number
+    of times Karel places a beeper (if the world is five squares
+    wide, we place 5 beepers, but only move 4 times).
+    &quot;&quot;&quot;
     put_beeper()
+
+
+# There is no need to edit code beyond this point
 
 if __name__ == &quot;__main__&quot;:
     run_karel_program()
-
 </pre>
     </div>
 
