@@ -20,3 +20,19 @@ Imagine throwing darts at the yellow circle bellow to the left. If you randomly 
 
 
 Because the area of the circle is &pi; and that of the square is 4, the fraction that falls inside the circle should approach &pi; / 4.
+
+Write a program that simulates this dart-throwing exercise to approximate &pi;.  As a hint, to generate a random number, you can use `random.uniform` like this:
+
+```
+# gets a random number between -1 and 1 and stores it in y
+y = random.uniform(-1, 1)
+```
+
+We can also calculate the square root of a number using `math.sqrt`, like this:
+
+```
+# calculates the square root of x and stores it in dist
+dist = math.sqrt(x)
+```
+
+The program you write may take 15-30 seconds to run - that's expected!
