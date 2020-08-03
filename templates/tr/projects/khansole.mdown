@@ -3,7 +3,7 @@ title: Khansole Akademi
 credit: Nick Parlante
 translation: Gül Sena Altıntaş
 
-File: `khansole.py`
+File: `khansole_academy.py`
 
 Artık programlamanın bize farklı alanlarda nasıl yardım edebildiğini gördüğünüze göre
 başkalarının öğrenmesine yardımcı olan Khan-sole Akademi programını uygulamaya koyma
