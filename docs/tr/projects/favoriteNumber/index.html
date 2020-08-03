@@ -488,33 +488,37 @@ Tahmin: 88
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:540.0px">&quot;&quot;&quot;
-File: favoritenumber.py
+		<pre class="console" id="editor" style="height:620.0px">&quot;&quot;&quot;
+File: favorite_number.py
 -------------------
-This program prompts the user to guess its secret
-random number and gives the user hints until it guesses
-it correctly.
+This program prompts the user to guess its secret number and gives the user
+hints until they guess it correctly.
 &quot;&quot;&quot;
 
+# The number the user must guess
 FAVORITE_NUMBER = 88
 
+
 def main():
-    print(&quot;Try and guess my favorite number (between 0 and 100)&quot;);
-	
+    print(&quot;Try and guess my favorite number (between 0 and 100)&quot;)
+
     guess = int(input(&quot;Guess: &quot;))
     while guess != FAVORITE_NUMBER:
+
+        # Give them feedback on whether their guess was too low or too high
         if guess &lt; FAVORITE_NUMBER:
             print(&quot;Too low&quot;)
         else:
             print(&quot;Too high&quot;)
-            
+
         guess = int(input(&quot;Guess: &quot;))
 
     print(&quot;Good job!&quot;)
 
 
 if __name__ == &#039;__main__&#039;:
-    main()</pre>
+    main()
+</pre>
     </div>
 
     <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
