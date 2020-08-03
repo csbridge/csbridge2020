@@ -4,8 +4,7 @@ credit: Lisa Yan
 
 File: `running_sum.py`
 
-Write a program that reads in integers from the user and then outputs the current
-sum of the entered values. Here's what the output of the program should look like:
+Write a program that reads in integers from the user and then outputs the current sum of the entered values. Here's what the output of the program should look like:
 
 ```
 Enter integers, one at a time. I will show you the sum!
