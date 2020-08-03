@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Stripe Karel
 credit: Written by Lisa Yan
 
-Handouts: [Karel Reference]({{pathToRoot}}en/resources/karel.html)<br/>
+Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
 Worked Examples: [Invert Beeper]({{pathToRoot}}en/projects/invertBeeper/index.html)<br/>
 File: `stripe_karel.py`
 

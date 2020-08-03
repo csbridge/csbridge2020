@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Mountain Karel
 credit: Chris Piech
 
-Handouts: [KarelReference]({{pathToRoot}}en/resources/karel.html)<br/>
+Handouts: [KarelReference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
 Worked Examples: [UN Karel]({{pathToRoot}}en/projects/unKarel/index.html)<br/>
 File: `mountain_karel.py`
 

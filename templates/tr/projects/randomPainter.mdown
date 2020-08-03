@@ -3,8 +3,8 @@ title: Deli Ressam
 credit: Chris Piech
 translation: Serhat Arslan, Ceren Kocaoğullar
 
-Ders Notları: [KarelReference]({{pathToRoot}}en/resources/karel.html)<br/>
-Çözümlü Örnekler: [Invert]({{pathToRoot}}en/projects/invert/index.html), [UN Karel]({{pathToRoot}}en/projects/unkarel/index.html)<br/>
+Ders Notları: [KarelReference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+Çözümlü Örnekler: [Invert]({{pathToRoot}}tr/projects/invertBeeper/), [UN Karel]({{pathToRoot}}tr/projects/unkarel/index.html)<br/>
 Dosya: `random_painter_karel.py`
 
 ## Problem

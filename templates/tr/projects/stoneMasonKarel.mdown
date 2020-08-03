@@ -2,8 +2,8 @@ template: templates/tr/projects/projectTemplate.ptl
 title: Stone Mason Karel
 credit: Lisa Yan
 
-Handouts: [KarelReference]({{pathToRoot}}tr/handouts/karel.html)<br/>
-Worked Example: [Place100]({{pathToRoot}}tr/projects/place100.html)<br/>
+Handouts: [KarelReference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+Worked Example: [Place100]({{pathToRoot}}tr/projects/place100/)<br/>
 Day1: `stone_mason_karel.py`
 
 This program is a bonus program. It is an extension of [Arches Karel]({{pathToRoot}}en/projects/arches.html). Re-implement the problem, but now make

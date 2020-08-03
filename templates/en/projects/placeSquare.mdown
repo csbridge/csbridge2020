@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Place Square
 credit: Written by Lisa Yan
 
-Handouts: [Karel Reference]({{pathToRoot}}en/resources/karel.html)<br/>
+Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
 Worked Examples: [Beeper Line]({{pathToRoot}}en/projects/beeperLine/index.html)<br/>
 File: `square_karel.py`
 

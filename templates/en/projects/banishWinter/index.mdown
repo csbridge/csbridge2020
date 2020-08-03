@@ -3,7 +3,7 @@ title: Banish Winter (with solution)
 credit: Based on a handout by Eric Roberts, with updates by Zach Birnholz and Lisa Yan
 solution: soln.py
 
-Handouts: [Karel Reference]({{pathToRoot}}en/resources/karel.html)<br/>
+Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
 File: `banish_winter.py`<br/>
 
 Karel wants to walk across the Stanford/CTU/Koç campus and spruce it up a bit for Spring. Spring has sprung, but the campus trees haven't gotten the memo and are still leafless. Karel needs to walk across campus from west to east, adorning all trees with artificial leaves and transforming the campus as follows:
