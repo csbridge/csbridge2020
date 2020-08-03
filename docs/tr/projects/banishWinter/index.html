@@ -481,7 +481,7 @@ File: <code>banish_winter.py</code><br/></p>
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:1360.0px">from karel.stanfordkarel import *
+		<pre class="console" id="editor" style="height:1720.0px">from karel.stanfordkarel import *
 
 &quot;&quot;&quot;
 File: banish_winter.py
@@ -492,18 +492,21 @@ The world is of width 9, but it may have any number of trees
 of any height.
 &quot;&quot;&quot;
 
+
 def main():
-    for i in range(8):      # world is 9 spaces wide, we start on 1
+    # world is 9 spaces wide, we start on 1
+    for i in range(8):
         if front_is_clear():
             move()
         else:
             fix_tree()
 
+
 def fix_tree():
     &quot;&quot;&quot;
-    Climbs to the top of one tree, adds leaves, and descends
+    Karel climbs to the top of one tree, adds leaves, and descends the
     other side of tree.  When this function is called, Karel is assumed to
-    be facing east at the bottom of the tree to fix, and when the function 
+    be facing east towards the bottom of the tree to fix, and when the function 
     is done Karel will be facing east immediately after the tree which has
     now been fixed.
     &quot;&quot;&quot;
@@ -512,27 +515,36 @@ def fix_tree():
     turn_right()
     place_leaves()
     turn_right()
-    move_to_bottom()
+    move_to_wall()
     turn_left()
 
-def move_to_bottom():
+
+def move_to_wall():
     &quot;&quot;&quot;
-    Moves in a straight line in the direction Karel is facing up to a wall.
-    Used for moving from the top to the bottom of a tree.
+    Moves in a straight line in the direction Karel is facing until a wall.
     &quot;&quot;&quot;
     while front_is_clear():
         move()
 
+
 def climb_tree():
     &quot;&quot;&quot;
-    Move up to and one space past the end of a wall/tree trunk.
+    Karel climbs a tree by moving as long as its right is blocked.
+    After this function finishes, Karel will be facing the same direction
+    as it was originally, but will be one space past the last square where
+    its right was blocked.
     &quot;&quot;&quot;
     while right_is_blocked():
         move()
 
+
 def place_leaves():
     &quot;&quot;&quot;
-    Adds four leaves, in the required pattern to the top of a tree.
+    Adds four leaves, in a square pattern to the top of a tree.
+    Assumes Karel is facing east in the bottom left corner of the square
+    it wants to make with beepers.  When the function finishes, Karel
+    will be one square to the east facing east, standing on the bottom right
+    corner of a newly-created square of beepers.
     &quot;&quot;&quot;
     for i in range(4):
         put_beeper()
@@ -540,12 +552,18 @@ def place_leaves():
         turn_left()
     move()
 
+
 def turn_right():
-    turn_left()
-    turn_left()
-    turn_left()
+    &quot;&quot;&quot;
+    Karel turns right - e.g. if Karel is facing east, now Karel will face
+    south.  If Karel is facing north, Karel will now face east.
+    &quot;&quot;&quot;
+    for i in range(3):
+        turn_left()
+
 
 # There is no need to edit code beyond this point
+
 if __name__ == &quot;__main__&quot;:
     run_karel_program()
 </pre>
