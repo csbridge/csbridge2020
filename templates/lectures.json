@@ -8,19 +8,19 @@
 	},
 	{
 		"title_en": "Karel and Control Flow",
-		"title_tr": "",
+		"title_tr": "Karel ve Kontrol Akışı",
 		"slidesURL": "slides/Lecture2.pdf",
 		"visible_after": "2020080500"
 	},
 	{
-		"title_en": "Karel and More Control Flow",
-		"title_tr": "",
+		"title_en": "Karel and Control Flow 2",
+		"title_tr": "Karel ve Kontrol Akışı 2",
 		"slidesURL": "slides/Lecture3.pdf",
 		"codeURL": "starter/lectures/Lecture3.zip",
 		"visible_after": "2020080509"
 	},
 	{
-		"title_en": "Variable",
+		"title_en": "Variables",
 		"title_tr": "Değişkenler",
 		"slidesURL": "slides/IntroPython_Variables.pdf",
 		"codeURL": "starter/lectures/Lecture4.zip",

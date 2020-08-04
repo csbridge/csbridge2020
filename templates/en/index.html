@@ -48,30 +48,8 @@ with open("templates/announcements/times.csv", 'r') as f:
 </div>
 
 
-<!-- <div class="alert alert-success">
-	<b>Who are you?</b> Fill in the <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">class survey</a>.
-</div> -->
-
-<!--
-<div class="alert alert-info">
-	Add to the class playlist here: <a href="https://open.spotify.com/user/1251835474/playlist/2E1ccnzfMTqDv2D1JEoFF3">Spotify Playlist</a>
-</div>
--->
-
 <div>
-<!-- <center>
-	<img style="width: 100%;" src="{{pathToRoot}}img/fun/classPhoto.jpg"></img>
-</center> -->
-
-<!--
-	<div class="alert alert-success">
-	  Finishing up your final project?  Please fill out this survey as we reach the end of CS Bridge: <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_9QQCN0ZyMq3Ly3r">click here</a>.
-	</div>
--->
-
-	<h2>
-		The Idea of the Course
-	</h2>
+	<h2>The Idea of the Course</h2>
 
 	<p>The point of this three week course is to teach you the fundamentals of computer programming to the point where you can go and learn on your own. It is taught by a collaboration of instructors from Stanford University, CTU, and Koç. You will learn to program using material for Stanford's Introduction to Computer Science course.</p>
 </div>
@@ -83,11 +61,6 @@ with open("templates/announcements/times.csv", 'r') as f:
 <!-- Daily schedule / list of programs -->
 <div class="section" id="schedule">
 	<h2>Programs</h2>
-  <!--
-	<div class="alert alert-info">
-	  Here are instructions for how to work on the programs below during labs: <a href="{{pathToRoot}}en/handouts/eclipse.html">click here</a>.
-	</div>
-  -->
 	%include("templates/programs/projectsTable.ptl", lang="en")
 </div>
 

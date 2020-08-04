@@ -37,7 +37,7 @@ this element would be visible only 7/9/19 5:12pm - 5:13pm.
 $(document).ready(function(){
 	moment.tz.setDefault("America/Los_Angeles");
 
-	// only show certain content if it's after teh specified timestamp
+	// only show certain content if it's after the specified timestamp
 	$(".visible-after").each(function(i) {
 	    var dateStr = $(this).attr("data-visible-after");
 	    var releaseDate = moment(dateStr, "YYYYMMDDHH");
@@ -47,23 +47,24 @@ $(document).ready(function(){
 	});
 
 
-  var removeDefault = false;
+  	var removeDefault = false;
+
 	// only show certain content if between the specified timestamps
 	$(".visible-during").each(function(i) {
 	    var dateStrStart = $(this).attr("data-visible-start");
 	    var dateStrEnd = $(this).attr("data-visible-end");
 	    var releaseDateStart = moment(dateStrStart, "YYYYMMDD HH:mm");
 	    var releaseDateEnd = moment(dateStrEnd, "YYYYMMDD HH:mm");
-      var currentDate = moment();
-      if (!currentDate.isBetween(releaseDateStart, releaseDateEnd)) {
+      	if (!moment().isBetween(releaseDateStart, releaseDateEnd)) {
 	        $(this).remove();
-	    } else{
-          removeDefault = true;
-      }
+	    } else {
+          	removeDefault = true;
+      	}
 	});
-  $(".visible-default").each(function(i) {
-      if (removeDefault) {
-          $(this).remove();
-      }
-  });
+
+  	$(".visible-default").each(function(i) {
+      	if (removeDefault) {
+          	$(this).remove();
+      	}
+  	});
 });
