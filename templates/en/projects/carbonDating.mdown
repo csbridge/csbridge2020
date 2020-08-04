@@ -15,7 +15,7 @@ Carbon dating is a way of determining the age of certain archaeological artifact
 
 When an organism is alive, its matter will have a constant amount of a special type of carbon called carbon-14 (c14). It turns out that all living things have the same fraction: wood, mammoths, your body right now... small cats... they all have the same amount.
 
-An important property of c14 is that it dissapears at a constant rate: every 5,700 years the amount of c14 is halfed (its half life is 5,700 years). For example, if one starts with 100% of the natural occurence of c14:
+An important property of c14 is that it disappears at a constant rate: every 5,700 years the amount of c14 is halfed (its half life is 5,700 years). For example, if one starts with 100% of the natural occurence of c14:
 
 ```
 In 5,700 years we expect there will only be 50% left. 
@@ -54,9 +54,11 @@ Percent C-14 Remaining: years passed
 0.00019073486328125%: 108300 years
 ```
 
+**Hint:** we know how many times we must print out this information, so a `for` loop is a good idea.  How can we know, based on the value of `i` inside the loop, what to print out?
+
 ## Milestone 2: Interactive Mode
 
-For scientists it will be much more useful for them to input the percent of natural c14 that they measured, and have the program tell them the age. Repeatedly ask the user to enter a percent of natural c14 remaining and then output the age of their sample.
+For scientists it will be much more useful for them to input the percent of natural c14 that they measured, and have the program tell them the age. Repeatedly ask the user to enter a percent of natural c14 remaining and then output the age of their sample.  If they enter -1, end the program.
 
 ```
 What percent of natural carbon-14 does your sample have? 99
@@ -86,8 +88,8 @@ To take the natural log of a number (the ln function), add `import math` at the 
 math.log(value)
 ```
 
-## Final product
-Overall, your program should look like the following.  If the user enters -1 as the percent, end the program.
+## Final Product
+Overall, your program should look like the following.
 
 ```
 Carbon Dating Lookup Table
@@ -128,6 +130,5 @@ Your sample is 94674.95070428983 years old.
 
 What percent of natural carbon-14 does your sample have? -1
 ```
-
 
 All the best, and ask questions if you don't understand something (or want to know more about the archaeology).

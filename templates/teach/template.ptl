@@ -16,6 +16,11 @@
 
 <div class="row">
   <div class="col-xs-12">
-    % include('templates/programs/programTable.ptl', lang="en", taMode=True)
+  	<h2>Projects</h2>
+    % include('templates/programs/projectsTable.ptl', lang="en", taMode=True)
+  </div>
+  <div class="col-xs-12">
+  	<h2>Bonus Projects</h2>
+    % include('templates/programs/bonusProjectsTable.ptl', lang="en", taMode=True)
   </div>
 </div>

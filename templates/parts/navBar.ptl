@@ -1,0 +1,189 @@
+<%
+"""
+This is a unified navbar template for all languages.  All displayed text should be translated before displaying.  To do this, for each piece of text you want to display, make sure there is an entry for it below in the translation_dictionary.  The translation dictionary should map a word or phrase to a dictionary containing translations for it in all supported languages.  For example, if you need to display the word "Hello" on the page, you would add a line below like this:
+
+translation_dictionary["Hello"] = {"en": "Hello", "tr": "Merhaba"}
+
+Then, to have this automatically translated to the proper language on the website, instead of writing in "Hello" where you want to display the text, use the translation_dictionary.  In other words, instead of doing something like this:
+
+<h1>Hello</h1>
+
+Do this:
+
+<h1>{{translation_dictionary["Hello"][lang]}}</h1>
+
+The "lang" variable will automatically be populated to be the language to display.  Currently, the following languages are supported:
+
+"en": English
+"tr": Turkish
+
+To add support for additional languages, add an additional entry to each translation.  For instance, if you wanted to go back and add support for Czech, you would update the line above to be:
+
+translation_dictionary["Hello"] = {"en": "Hello", "tr": "Merhaba", "cz": "Ahoj"}
+
+Note: when adding support for additional languages, also make sure to add the ability to toggle between those languages.  See the "Language toggle button" comment for where to update the HTML.
+"""
+%>
+
+<%
+	translation_dictionary = {}
+	translation_dictionary["Resources"] = {"en": "Resources", "tr": "Kaynaklar"}
+	translation_dictionary["Karel Reader"] = {"en": "Karel Reader", "tr": "Karel Okuyucu"}
+	translation_dictionary["Python Reader"] = {"en": "Python Reader", "tr": "Python Okuyucu"}
+	translation_dictionary["Karel Reference"] = {"en": "Karel Reference", "tr": "Karel Referansı"}
+	translation_dictionary["Python Reference"] = {"en": "Python Reference", "tr": "Python Referansı"}
+	translation_dictionary["Graphics Reference"] = {"en": "Graphics Reference", "tr": "Grafikler Referansı"}
+	translation_dictionary["Course Information"] = {"en": "Course Information", "tr": "Program Bilgileri"}
+	translation_dictionary["General Info"] = {"en": "General Info", "tr": "Genel Bilgiler"}
+	translation_dictionary["[Student] Course FAQs"] = {"en": "[Student] Course FAQs", "tr": "[Öğrenciler] Sıkça Sorulan Sorular"}
+	translation_dictionary["Section Info"] = {"en": "Section Info", "tr": "Grup Bilgileri"}
+	translation_dictionary["Install PyCharm"] = {"en": "Install PyCharm", "tr": "PyCharm Kurulumu"}
+	translation_dictionary["How to use PyCharm"] = {"en": "How to use PyCharm", "tr": "Nasıl PyCharm Kullanırım?"}
+	translation_dictionary["Submission/Office Hours"] = {"en": "Submission/Office Hours", "tr": "Çalışmalarınızı Sisteme Yükleme/Ofis Saatleri"}
+	translation_dictionary["Projects"] = {"en": "Projects", "tr": "Projeler"}
+	translation_dictionary["Examples"] = {"en": "Examples", "tr": "Örnekler"}
+	translation_dictionary["Lectures"] = {"en": "Lectures", "tr": "Ders"}
+	translation_dictionary["Bonus"] = {"en": "Bonus", "tr": "Bonus"}
+	translation_dictionary["SL Page"] = {"en": "SL Page", "tr": "SL Sayfası"}
+%>
+
+<nav class="navbar-inverse navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="container">
+
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{{pathToRoot}}{{lang}}/index.html">CS Bridge</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+
+					<!-- Resources dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{translation_dictionary["Resources"][lang]}}<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">{{translation_dictionary["Karel Reader"][lang]}}</a></li>
+							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">{{translation_dictionary["Karel Reference"][lang]}}</a></li>
+
+							<!-- Divider only visible once Python resources visible -->
+							<li 
+								% if not get('taMode', False):
+									class="divider visible-after" data-visible-after="2020080600"
+								% else:
+									class="divider"
+								% end
+							/>
+
+							<!-- Python reader visible later -->
+							<li
+								% if not get('taMode', False):
+									class="visible-after" data-visible-after="2020080600"
+								% end
+							>
+								<a href="https://codeinplace2020.github.io/pythonreader/en/intro/">{{translation_dictionary["Python Reader"][lang]}}</a>
+							</li>
+
+							<!-- Python reference visible later -->
+							<li
+								% if not get('taMode', False):
+									class="visible-after" data-visible-after="2020080600"
+								% end
+							>
+								<a href="{{pathToRoot}}{{lang}}/resources/quick-python.html">{{translation_dictionary["Python Reference"][lang]}}</a>
+							</li>
+
+							<!-- Graphics reference visible later -->
+							<li
+								% if not get('taMode', False):
+									class="visible-after" data-visible-after="2020081000"
+								% end
+							>
+								<a href="{{pathToRoot}}{{lang}}/resources/graphics.html">{{translation_dictionary["Graphics Reference"][lang]}}</a>
+							</li>
+
+							<li class="divider" />
+
+							<!-- Yosefa's Part -->
+							<li class="dropdown-header">{{translation_dictionary["Course Information"][lang]}}</li>
+							<li><a href="{{pathToRoot}}{{lang}}/resources/general-info.html">{{translation_dictionary["General Info"][lang]}}</a></li>
+							<li><a href="{{pathToRoot}}{{lang}}/resources/student-faq.html">{{translation_dictionary["[Student] Course FAQs"][lang]}}</a></li>
+							<li><a href="{{pathToRoot}}{{lang}}/resources/section-info.html">{{translation_dictionary["Section Info"][lang]}}</a></li>
+							<!-- End Yosefa's Part -->
+
+							<li class="divider" />
+
+							<li><a href="{{pathToRoot}}{{lang}}/resources/install.html">{{translation_dictionary["Install PyCharm"][lang]}}</a></li>
+							<li><a href="{{pathToRoot}}{{lang}}/resources/pycharm-how-to.html">{{translation_dictionary["How to use PyCharm"][lang]}}</a></li>
+							<li class="divider" />
+							<li><a href="{{pathToRoot}}{{lang}}/resources/submission-oh.html">{{translation_dictionary["Submission/Office Hours"][lang]}}</a></li>
+						</ul>
+					</li>
+
+					<!-- Projects dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{translation_dictionary["Projects"][lang]}} <b class="caret"></b></a>
+						% include('templates/programs/projectsDropdown.ptl', lang=lang)
+					</li>
+
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{translation_dictionary["Examples"][lang]}} <b class="caret"></b></a>
+						% include('templates/programs/examplesDropdown.ptl', lang=lang)
+					</li>
+
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{translation_dictionary["Lectures"][lang]}} <b class="caret"></b></a>
+						% include('templates/parts/lecturesDropdown.ptl', lang=lang)
+					</li>
+					
+					<!-- Bonus -->
+					<ul class="nav navbar-nav">
+						<li><a href="{{pathToRoot}}{{lang}}/bonus-index.html">{{translation_dictionary["Bonus"][lang]}}</a></li>
+					</ul>
+
+					<!-- TA Link -->
+					% if get('taMode', False):
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="{{pathToRoot}}teach/">{{translation_dictionary["SL Page"][lang]}}</a></li>
+						</ul>
+					% end
+
+				</ul>
+
+				<!-- Language toggle button -->
+				<ul class="nav navbar-nav navbar-right">
+					% if lang == "en":
+						<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="{{pathToRoot}}img/turkish_flag.png"></img></a></li>
+					% elif lang == "tr":
+						<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="{{pathToRoot}}img/english_flag.png"></img></a></li>
+					% end
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</nav>
+
+<!-- Script to toggle between languages -->
+<script>
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+	
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+</script>

@@ -3,9 +3,9 @@ title: Kısa Film
 credit: Chris Piech, Keith Schwarz.
 translation: Ceren Kocaoğullar
 
-Ders Notları: [Grafikler Referansı]({{pathToRoot}}en/resources/graphics.html)<br/>
-Çözümlü Örnek: [Yarı Yeşil]({{pathToRoot}}en/projects/halfgreen.html),
-[Hedef Tahtası]({{pathToRoot}}en/projects/target.html)<br/>
+Ders Notları: [Grafikler Referansı]({{pathToRoot}}tr/resources/graphics.html)<br/>
+Çözümlü Örnek: [Yarı Yeşil]({{pathToRoot}}tr/projects/halfgreen.html),
+[Hedef Tahtası]({{pathToRoot}}tr/projects/target.html)<br/>
 Dosya: `short_film.py`
 
 <i>Oyuncak Hikayesi</i>, <i>Yukarı Bak (Up)</i> ve <i>Frozen</i> gibi animasyon filmlerinin bilgisayar programları kullanılarak yapıldığını biliyor muydunuz? Bu ödevde kısa bir film oluşturmak için bir program kullanacaksınız.

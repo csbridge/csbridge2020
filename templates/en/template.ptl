@@ -4,7 +4,7 @@
 % rebase('templates/template.ptl', title=title, taMode=get('taMode', False))
 
 <!-- Navigation Bar -->
-% include('templates/en/navBar.ptl', taMode=get('taMode', False))
+% include('templates/parts/navBar.ptl', lang="en", taMode=get('taMode', False))
 
 <div class="container">
 	

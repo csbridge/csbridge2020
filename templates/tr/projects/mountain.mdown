@@ -3,8 +3,8 @@ title: Dağcı Karel
 credit: Chris Piech
 translation: Serhat Arslan, Ceren Kocaoğullar
 
-Ders Notları: [KarelReference]({{pathToRoot}}en/resources/karel.html)<br/>
-Çözümlü Örnek: [UN Karel]({{pathToRoot}}en/projects/unKarel/index.html)<br/>
+Ders Notları: [KarelReference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+Çözümlü Örnek: [UN Karel]({{pathToRoot}}tr/projects/unKarel/index.html)<br/>
 Dosya: `mountain_karel.py`
 
 Karel dağlara tırmanmanın hayalini kuruyor. Ona herhangi bir yükseklikteki bir dağın zirvesine çıkmayı öğretin. Mesela, aşağıdaki dağın:

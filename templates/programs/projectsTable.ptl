@@ -1,0 +1,129 @@
+<%
+"""
+This template renders a table of projects based on the programs.json file.
+See the README for an in-depth description of the expected format of that file.
+
+This template expects one provided parameter, "lang", which should be the language
+code to display the content in.  Currently "en" (English) and "tr" (Turkish) are supported.
+"""
+%>
+
+<%
+	# Read the data from the JSON file
+	import json
+	with open("templates/programs/programs.json", "r", encoding="utf8") as programs_file:
+  		data = json.load(programs_file)
+%>
+
+<table class="table table-striped">
+
+	% # Display the days in reverse order (day 1 at the bottom, day 2 above it, etc.)
+	% for i in range(len(data) - 1, -1, -1):
+		% day_info = data[i]
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+			% if not get('taMode', False) and "visible_after" in day_info:
+				class="visible-after" data-visible-after="{{day_info["visible_after"]}}"
+			% end
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+						% if lang == "tr":
+							<h4>{{i + 1}}. Gün: {{day_info["title_tr"]}}</h4>
+						% elif lang == "en":
+							<h4>Day {{i + 1}}: {{day_info["title_en"]}}</h4>
+						% else:
+							<h4>NO TRANSLATION</h4>
+						% end
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+		% # Below that, show lists for each of the morning and evening (if present)
+		% for segment in ["morning", "evening"]:
+			% if segment in day_info:
+				<tr 
+					% if not get('taMode', False) and segment == "morning" and "visible_after" in day_info:
+						class="info visible-after" data-visible-after="{{day_info['visible_after']}}"
+					% elif not get('taMode', False) and segment == "evening" and ("visible_after" in day_info or "visible_after" in day_info[segment]):
+						% visible_after = day_info[segment]["visible_after"] if "visible_after" in day_info[segment] else day_info["visible_after"]
+						class="info visible-after" data-visible-after="{{visible_after}}"
+					% else:
+						class="info"
+					% end
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<% 
+	      						segment_translation = "NO TRANSLATION"
+	      						if lang == "tr":
+	      							if segment == "morning":
+	      						 		segment_translation = "Sabah Projesi"
+	      						 	elif segment == "evening":
+	      						 		segment_translation = "Akşam Projesi"
+	      						 	end
+	      						elif lang == "en":
+	      							segment_translation = segment.capitalize()
+	      						end
+
+	      						link_translation = "NO TRANSLATION"
+	      						if lang == "tr":
+	      							link_translation = "burada"
+	      						elif lang == "en":
+	      							link_translation = "here"
+	      						end
+
+	      					%>
+	      					<h4>{{segment_translation}} [<a href="{{pathToRoot}}{{day_info[segment]['projectURL']}}">{{link_translation}}</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+	      			% if not get('taMode', False) and segment == "morning" and "visible_after" in day_info:
+						class="visible-after" data-visible-after="{{day_info['visible_after']}}"
+					% elif not get('taMode', False) and segment == "evening" and ("visible_after" in day_info or "visible_after" in day_info[segment]):
+						% visible_after = day_info[segment]["visible_after"] if "visible_after" in day_info[segment] else day_info["visible_after"]
+						class="visible-after" data-visible-after="{{visible_after}}"
+					% end
+	      		>
+		      		% for project in day_info[segment]["projects"]:
+		      			<tr>
+		      				% include("templates/programs/projectRow.ptl", project=project, lang=lang)
+		      			</tr>
+		      		% end
+		      	</tbody>
+			% end
+		% end
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+	  	% if ("bonus" in day_info and day_info["bonus"]) or "bonus" not in day_info:
+  		  	<tr 
+  		  		% if not get('taMode', False) and "visible_after" in day_info:
+  		  			class="active visible-after" data-visible-after="{{day_info['visible_after']}}"
+  		  		% else:
+  		  			class="active"
+  		  		% end
+  		  	>
+  				<td colspan = "6">
+  					<center>
+  						% if lang == "en":
+  							Looking for more?  Check out the optional <a href="{{pathToRoot}}{{lang}}/bonus-index.html">bonus problems!</a>
+  						% elif lang == "tr":
+  							Daha fazlasını mı arıyorsunuz?  <a href="{{pathToRoot}}{{lang}}/bonus-index.html">Bonus problemlerini deneyin!</a>
+  						% else:
+  							NO TRANSLATION
+  						% end
+  					</center>
+  				</td>
+  			</tr>
+	  	% end
+	% end
+
+</table>

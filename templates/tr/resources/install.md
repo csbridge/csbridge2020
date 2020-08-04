@@ -1,104 +1,79 @@
 template: templates/tr/resources/faqTemplate.ptl
-title: PyCharm Kurulumu
+title: Installing PyCharm
 
-[TOC]
+<p id="osspiel" class="alert alert-warning"></p>
 
-<div class="alert alert-warning">
-    <p id="osspiel"></p>
-</div>
 
-<!--
-<div class="alert alert-info">
-    <p>
-        <b>Running into issues?</b> Post on
-        <a href="https://us.edstem.org/join/KPUYZn">ed</a>. Please make your post visible to all so that other students can learn from the answer.
-    </p>
-</div>
--->
+You will be writing your code on your computer using an application called [PyCharm](https://www.jetbrains.com/pycharm/). PyCharm is what is known as an IDE, or _Integrated Development Environment_, which means that it allows us to edit our code, browse our files, run our programs and debug them, all in the same place. It's one of the most popular Python IDEs in the world, and used extremely commonly in industry. This handout is intended to take you through installing PyCharm on your own computer.
 
-<p>
-    CS Bridge boyunca kod yazmak için <a href="https://www.jetbrains.com/pycharm/"> PyCharm</a> 
-    adında bir uygulama kullanacaksınız. PyCharm IDE, veya <i>Bütünleşik Geliştirme Ortamı (Integrated Development Environment)</i>, 
-    türünde bir uygulamadır. Yani PyCharm kullanarak kod dosyalarınızı inceleyebilir, değiştirebilir, programlarınızı çalıştırabilir ve hata ayıklama (debugging) arayüzünü kullanarak programlarınız nasıl çalıştığını kolaylıkla inceleyebilirsiniz. PyCharm Python için geliştirilmiş en popüler IDElerden biridir ve endüstride yaygın olarak kullanılır. Bu dökümanı PyCharm kurulumunda size yol göstermek için oluşturduk. 
-</p>
 
-<h2>Python Kurulumu</h2>
-<p>
-    Bilgisayarınızda Python programları çalıştırabilmek için öncelikle 
-    <i>Python Yorumlayıcısı (Interpreter)</i> yüklemeniz gerekiyor. Python 
-    Yorumlayıcısı <code>.py</code> türündeki Python kod dosyalarını okuyup 
-    onları bilgisayarınızın uygulayabileceği komutlara dönüştürmekten sorumlu
-    bir programdır. Python'u aşağıda işletim sisteminize uygun linkten indirebilirsiniz:
-</p>
+## Installing Python
+In order to be able to run Python programs on your computer, with or without PyCharm, you first need to install a _Python Interpreter_. An interpreter is a program that is capable of reading a _.py_ file that you have written, and translating the Python code in that file to instructions that your computer can easily execute.  When downloading this on Mac and Windows, this also automatically includes the _Tkinter_ library, which allows us to draw graphics, and which we'll be learning about later in the course.  Begin by downloading Python:
+
 <ul>
     <li class="maconly">
         <a href="https://www.python.org/ftp/python/3.8.1/python-3.8.1-macosx10.9.pkg">
-            MacOS
+            Mac Installer
         </a>
     </li>
     <li class="winonly">
         <a href="https://www.python.org/ftp/python/3.8.1/python-3.8.1-amd64.exe">
-            Windows 64-bit
+            Windows 64-bit installer
         </a>
-        (Windows'unuzun 32-bit mi yoksa 64-bit mi olduğunu bilmiyorsanız 
-        <a href="https://support.microsoft.com/tr-tr/help/15056/windows-32-64-bit-faq">bu sayfayı</a> ziyaret edebilirsiniz.)
+        (If you're using a relatively new Windows computer, download this
+        file)
     </li>
     <li class="winonly">
         <a href="https://www.python.org/ftp/python/3.8.1/python-3.8.1.exe">
-            Windows 32-bit
+            Windows 32-bit installer
         </a>
-        (Windows'unuzun 32-bit mi yoksa 64-bit mi olduğunu bilmiyorsanız 
-        <a href="https://support.microsoft.com/tr-tr/help/15056/windows-32-64-bit-faq">bu sayfayı</a> ziyaret edebilirsiniz.)
+        (If you're using an older Windows computer, download this file)
     </li>
 </ul>
-<h3 class="maconly" data-toc-skip>Mac için Python Kurulumu</h3>
+
+<h3 class="maconly" data-toc-skip>Installing Python on a Mac</h3>
 <p class="note maconly">
-    Tüm mac bilgisayarlar Python'un eski bir versiyonunu içerirler. Fakat CS Bridge'de 
-    Python'un en yeni versiyonunu kullanacağız. Bu yüzden zaten bilgisayarınızda Python 
-    olduğunu düşünüyorsanız bile bu talimatları uygulayın.
-    Python'u Mac'inize kurmak için basitçe indirdiğiniz kurulum dosyasını çalıştırın ve 
-    talimatları uygulayın. Kurulum boyunca varsayılan ayarları kullanabilirsiniz. 
+    Macs come with a version of Python already installed, but this is an older version of Python. We use the newest version of Python, so make sure to follow these instructions even if you think you already have Python installed.  To install Python, simply open the downloaded installer file 
+    and follow the default instructions.
 </p>
-<h3 class="winonly" data-toc-skip>Windows İçin Python Kurulumu</h3>
+
+<h3 class="winonly" data-toc-skip>Installing Python on Windows</h3>
 <p class="winonly">
-    İndirdiğiniz kurulum dosyasını açın. Kuruluma başlamadan önce "Add Python 3.8 to PATH" 
-    yazan seçeneği işaretleyin. Bu seçeneği işaretlemeniz Python'u kolaylıkla çalıştırmanız 
-    için önemlidir ve seçmediğiniz durumda sorunlara neden olacaktır. <b>Bu seçeneğin işaretli 
-    olduğundan emin olduktan sonra</b> kuruluma normal şekilde devam edebilirsiniz.
+    Open the downloaded file. Before installing, there should be an option that says "Add Python 3.8 in PATH". <b>Make sure to check this box.</b> Then, continue installing normally.
 </p>
 
-<hr />
+---
 
-<h2> PyCharm Kurulumu ve Kontrolü </h2>
+## Installing and Testing PyCharm
 
-<h3> Kurulum </h3>
+### Installation
 
-<p>
-    Öncelikle PyCharm Community versiyonunun en son versiyonunu indirin ve kurun.
-</p>
+To get started, download and install the community version of PyCharm:
+
 <ul>
     <li class="maconly">
-        <a href="https://download.jetbrains.com/python/pycharm-community-2019.3.4.dmg">
-            MacOs
+        <a href="https://download.jetbrains.com/python/pycharm-community-2020.1.4.dmg">
+            Mac Download
         </a>
-        (İndirdiğiniz <code>.dmg</code> dosyasını açın ve PyCharm programını Uygulamalar klasörüne sürekleyin)
-    </li> <!-- TODO old mac download -->
+        (Open the downloaded <code>.dmg</code> file and drag PyCharm into
+        your Applications folder)
+    </li> 
     <li class="winonly">
-        <a href="https://download.jetbrains.com/python/pycharm-community-2019.3.4.exe">
-            Windows
+        <a href="https://download.jetbrains.com/python/pycharm-community-2020.1.4.exe">
+            Windows Download
         </a>
-        (İndirdiğiniz <code>.exe</code> dosyasını çalıştırın ve PyCharm kurulumunu varsayılan seçenekleri kullanarak tamamlayın.)
+        (Open the downloaded <code>.exe</code> file and install PyCharm,
+        using all the default options.)
     </li>
 </ul>
 
-<p>
-    Pycharm kurulumunu tamamladıktan sonra aşağıdaki gibi gözüken bir ekranla karşılaşacaksınız:
-</p>
+Once PyCharm finishes installing, go ahead and run the program.  Once the program launches, you will be taken to a welcome screen that looks like this (note: if it first walks you through customizing PyCharm, just click "Skip Remaining and Set Defaults" in the bottom-left corner):
+
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <img 
-            src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/welcomescreen.png" 
+            src="{{pathToRoot}}img/pycharm/welcomescreen.png" 
             style="width:100%"
             alt="PyCharm Welcome Screen"
         />
@@ -106,195 +81,173 @@ title: PyCharm Kurulumu
 </div>
 <br />
 
-<p id="configure_interpreter">'Configure' butonuna tıklayın ve PyCharm'ın ayarlarını açın, buna benzer bir pencere görmelisiniz: </p>
+Click 'Configure' and then open PyCharm's settings, like so:
+{: #configure_interpreter}
 
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img 
-            src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/welcomescreen-config.png"
-            style="width:100%"
-            alt="PyCharm Welcome Screen, with 'Configure->Preferences' highlighted"
-        />
+        <div class="maconly">
+            <img 
+                src="{{pathToRoot}}img/pycharm/welcomescreen-config.png"
+                style="width:100%"
+                alt="PyCharm Welcome Screen, with 'Configure->Preferences' highlighted"
+            />
+        </div>
+        <div class="winonly">
+            <img 
+                src="{{pathToRoot}}img/pycharm/welcomescreen-config-win.png"
+                style="width:100%"
+                alt="PyCharm Welcome Screen, with 'Configure->Preferences' highlighted"
+            />
+        </div>
     </div>
 </div>
 <br />
 
-<p id="setinterpreter">
-    'Preferences' penceresinde, 'Project Interpreter' bölümünü seçin, seçeneklerin bulunduğu aşağıya doğru açılan menüye tıklayın, 
-    'Show All' yazan seçeneği seçin:
-</p>
+In the Preferences window, click 'Project Interpreter', open the dropdown menu, and click 'Show All':
+{: #setinterpreter}
 
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <img 
-            src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/preferences-showinterpreters.png"
+            src="{{pathToRoot}}img/pycharm/preferences-showinterpreters.png"
             style="width:100%"
             alt="PyCharm Preferences Window, in the 'Project Interpreter' Pane, with 'Show All' highlighted in the dropdown menu" />
     </div>
 </div>
 <br />
 
-<p>
-    Açılan pencerede sağ üst köşede bulunan artı ikonuna tıklayın:
-</p>
+In the following window, click the plus icon:
 
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/addnewinterpreter.png"
+        <div class="maconly">
+            <img src="{{pathToRoot}}img/pycharm/addnewinterpreter.png"
+                style="width:100%"
+                alt="PyCharm Interpreter List, with the plus button in the bottom left circled" />
+        </div>
+        <div class="winonly">
+            <img src="{{pathToRoot}}img/pycharm/addnewinterpreter-win.png"
             style="width:100%"
-            alt="PyCharm Interpreter List, with the plus button in the bottom left highlighted" />
+            alt="PyCharm Interpreter List, with the plus button in the top right circled" />
+        </div>
     </div>
 </div>
 <br />
 
-<p>
-    Açılan 'Add Python Interpreter' penceresinde sağdaki seçeneklerden 'System Interpreter' yazanı seçin. Bilgisayarınızda Python'un
-    başka versiyonları yüklü değilse Python 3.8 zaten seçili olabilir. Eğer seçili değilse veya başka bir Python versiyonu seçiliyse 
-    menüden Python 3.8'i seçin ve 'OK' butonuna tıklayın. Daha sonra tekrar 'OK' butonuna tıklayın.
-</p>
+Click 'System Interpreter' in the sidebar. Depending on whether you've installed other versions of Python before, Python 3.8 may already be selected in the dropdown menu. If not, select Python 3.8 and then click 'OK' and 'OK' again:
 
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/addsysteminterpreter.png"
+        <img src="{{pathToRoot}}img/pycharm/addsysteminterpreter.png"
             style="width:100%"
             alt="Adding the system interpreter in PyCharm" />
     </div>
 </div>
 <br />
 
-<p>
-    Bu şekilde görünen bir pencerede olmalısınız (listenin içerikleri değişiklik gösterebilir):
-</p>
+You should now be on a window that looks like this (although the contents of your list might look different):
 
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/interpreterafterselection.png"
+        <img src="{{pathToRoot}}img/pycharm/interpreterafterselection.png"
             style="width:100%"
             alt="Interpreter window after selecting system interpreter" />
     </div>
 </div>
 <br />
 
-<p>
-    Tekrar 'OK' butonuna tıklayın. Yeniden ilk karşılaştığınız ekranda olmasınız. Artık PyCharm kurulumunu test etmeye hazırsınız!
-</p>
 
-<hr />
+Click 'OK' again to be taken back to the welcome page. You're now ready to test PyCharm!
 
-<h3> PyCharm Kurulumunu Test Etmek </h3>
+---
 
-<p>
-    PyCharm Python programlarını projeler olarak modeller. Her proje bir veya birden fazla Python (<code>.py</code>) 
-    dosyası ve programınızda kullanmak istediğiniz resim, metin dosyası gibi ekstra dosyaları içerir. PyCharm proje yapısına 
-    alışmanıza yardımcı olmak ve Python projelerinizi nasıl çalıştırabileceğinizi göstermek için örnek bir proje hazırladık. 
-    Bu projeyi <a href="{{pathToRoot}}starter/pycharm_intro.zip">buradan</a> indirebilirsiniz.
-    PyCharm çalışmaya başlamak için bu projeyi indirin <span style="display: inline-block;" class="winonly">(Windows 
-    kullanıyorsanız önce indirdiğiniz sıkıştırılmış projeyi açmanız gerekiyor. Bunun için dosya gezgininden indirdiğiniz projeyi bulun ve sağ tıklayıp 'Tümünü Ayıkla' seçeneğini seçin)</span> ve indirdiğiniz projeyi PyCharm ile açın. Projeyi açmak için 
-    gördüğünüz ilk ekranda 'Open' seçeneğini seçin ve indirdiğiniz dosya konumunu <span style="display: inline-block;" class="winonly">(Windows kullanıyorsanız projeyi ayıkladığınız konumu)</span> seçin. <b>PyCharm ile proje açarken sadece 
-    değişiklik yapmak istediğiniz dosyayı açmak yerine her zaman <i>değişiklik yapmak istediğiniz dosyaları içen klasörü</i> 
-    açın.</b> Projeyi açtıktan sonra aşağıda gördüğünüz gibi bir pencereyle karşılaşacaksınız:
-</p>
+### Testing PyCharm
+
+PyCharm models a program as a 'project', which consists of one or more Python files, as well as any additional resources like images or text files. To get you familiar with working with and running programs in PyCharm, we've provided a sample project, which you can download [here]({{pathToRoot}}starter/pycharm_intro.zip). To test out this project, and to gain familiarity with the PyCharm environment, download the sample project <span style="display: inline-block;" class="winonly">(on Windows, you'll need to manually unzip it by opening it in Windows Explorer and selecting 'Extract All')</span> and open it in PyCharm (using the 'open' option on the first screen). **Whenever you open projects in PyCharm, open the folder directly _containing the files you want to edit_ as opposed to just the files themselves.**  For instance, in this case make sure to select the folder "pycharm_intro" to open in PyCharm.  Upon opening the project, you should be greeted by a window that looks like this:
 
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/pycharmblank.png"
+        <img src="{{pathToRoot}}img/pycharm/pycharmblank.png"
             style="width:100%"
             alt="Blank PyCharm Window" />
     </div>
 </div>
 <br />
 
-<p>
-    Sol üstten 'Project' menüsünü açın veya 
-    <span style="display: inline-block;" class="winonly"><code><span id="modifier">Alt</span> + 1</code></span>
-    <span style="display: inline-block;" class="maconly"><code><span id="modifier">Command</span> + 1</code></span>
-    kısayolunu kullanın. Açılan dosya gezginini kullanarak <code>intro.py</code> dosyasını açın:
-</p>
+Click 'Project' in the top left to open the file explorer, and open `intro.py` to pull up the editor:
 
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/pycharmeditor.png"
+        <img src="{{pathToRoot}}img/pycharm/pycharmeditor.png"
             style="width:100%"
             alt="PyCharm Editor" />
     </div>
 </div>
 <br />
 
-<p>
-    Editörde gördüğünüz kodu henüz okumak veya anlamak zorunda değilsiniz (CS Bridge'den sonra bunu kolaylıkla yapabileceksiniz!).
-    Program boyunca kod yazmak için bu editörü kullanacaksınız. Programı çalıştırmak için sol alt köşedeki 
-    'Terminal' butonuna tıklayın. Bu butona tıkladığınızda editörünüzün altında bir terminal penceresi açılacak:
-</p>
+You aren't required to read or understand this code (although you will be able to by the end of the course!) but note that this editor is where you'll be writing all your code for the class. Now, to run your program, click 'Terminal' in the bottom left corner, which will pull up a new terminal pane in your PyCharm window:
 
 <div class="row">
-<div class="col-md-2"></div>
-<div class="col-md-8">
-    <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/pycharmterminal.png" 
-            style="width:100%"
-        alt="PyCharm Terminal" />
-</div>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <img src="{{pathToRoot}}img/pycharm/pycharmterminal.png" 
+             style="width:100%"
+             alt="PyCharm Terminal" />
+    </div>
 </div>
 <br />
 
-<p>
-    Terminallerin ne olduğundan program boyunca daha detaylı bahsedeceğiz, şimdilik Python programlarını 
-    terminal kullanarak çalıştırabileceğinizi bilmeniz yeterli. İlk Python programınızı çalıştırmak için 
-    aşağıda gördüğünüz komutu terminalize yazın ve enter'a basın:
-</p>
+We'll talk more about the terminal later in the course, but for now, know that the terminal is how you'll be running your Python programs throughout the course. To run your first Python program, type this into the terminal and press enter:
 
 <div class="text-center">
     <code><span class="launcher">python3</span> intro.py</code>
 </div>
 <br />
 
-<p>
-    Aşağıdakine benzer bir çıktı görmelisiniz:
-</p>
+You should see output that looks like this:
 
-<div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-        <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/firstrun.png"
-            style="width:100%"
-            alt="First run output" />
-    </div>
+<div class="maconly">
+    <img src="{{pathToRoot}}img/pycharm/firstrun.png"
+        style="width:100%"
+        alt="First run output" />
+</div>
+<div class="winonly">
+    <img src="{{pathToRoot}}img/pycharm/firstrun-win.png"
+        style="width:100%"
+        alt="First run output" />
 </div>
 <br />
 
-<p>
-    Şimdi terminale aşağıda gördüğün komutu yaz ve çalıştır:
-</p>
+Now, type the following command into the terminal:
 
 <div class="text-center">
-    <code><span class="launcher">python3</span> intro.py &lt;SENIN ADIN&gt; </code>
+    <code><span class="launcher">python3</span> intro.py &lt;YOUR NAME HERE&gt; </code>
 </div>
 <br />
 
-<p>
-    Örneğin adın Papatya ise terminale <code><span class="launcher">python3</span> intro.py Papatya</code> yazmalısın.
-    Eğer istersen tam adını da yazabilirsin. Aşağıdakine benzer bir çıktı görmelisin:
-</p>
+For example, if your name is Nick, you'd type <code><span class="launcher">python3</span> intro.py Nick</code>. You can type your full name if you'd prefer. You should now see output like this:
 
-<div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-        <img src="http://web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/secondrun.png"
-            style="width:100%"
-            alt="Second run output" />
-    </div>
+<div class="maconly">
+    <img src="{{pathToRoot}}img/pycharm/secondrun.png"
+        style="width:100%"
+        alt="Second run output" />
+</div>
+<div class="winonly">
+    <img src="{{pathToRoot}}img/pycharm/secondrun-win.png"
+        style="width:100%"
+        alt="Second run output" />
 </div>
 <br />
 
-<p>
-    Tebrikler! Başarıyla Python ve PyCharm kurulumunu tamamladın.
-</p>
+Congratulations! Your PyCharm installation is working so far!
 
 ### Installing Graphics
 The graphics library that we will be using for the course should have automatically been installed for you when you installed Python.  However, it relies on one other tool that you'll need to install, called "Pillow", which contains code to manipulate images. In order for be able to work with images, you need to install Pillow on your machine.  To install Pillow, you should first open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following command below into the Terminal. (Note that "Pillow" starts with an uppercase P.):
@@ -306,89 +259,53 @@ The graphics library that we will be using for the course should have automatica
 
 If it prints a bunch of output followed by "Successfully installed Pillow-7.1.1" at the end, your installation should be complete.  You're ready to program!
 
-<hr />
+---
 
-<h2>
-    Sıkça Sorulan Sorular
-</h2>
+## Frequently Asked Questions
 
-<h3>
-    Başka bir Python versiyonu kullanabilir miyim?
-</h3>
-<p>
-    Python 3.8 kullanmanızı ısrarla öneriyoruz. Eğer zaten başka bir Python versiyonuna sahipsen Python 3.8'i de paralel olarak bilgisayarına yükleyebilirsin. Program boyunca kullancağımız örnek ve çözümler Python 3.8 kullandığınızı varsayarak hazırlandı. Örnekleri çalıştırabilmek için en azından Python 3.6 ve sonrası versiyonlarından birini yüklemen gerekiyor.
-</p>
+### Can I use another version of Python?
+Our strong recommendation is to use Python 3.8, which can be installed in parallel with other versions of Python. This is the only version of Python we'll be supporting in this class.
 
-<h3>
-    PyCharm harici başka bir editör kullanabilir miyim?
-</h3>
-<p>
-    Eğer hali hazırda zaten kullandığın ve hakim olduğun bir editör varsa onu tercih edebilirsin. 
-    Fakat ekibimiz sadece PyCharm konusunda karşılaştığınız sorunlarda sizlere destek olacak. 
-    Hangi editörü kullanırsan kullan projelerde bulundan konfigürasyon dosyalarında değişiklik yapmamalısın. 
-</p>
+### Can I use an editor that isn't PyCharm?
+If there's another environment that you're more comfortable with, you may use it, but the course staff will only provide support for issues in PyCharm. You must not modify any configuration files provided in assignment starter code. 
 
 <h3 data-toc-text="Can't open file">
-    Kodumu çalıştırmaya çalıştığımda <code>can't open file intro.py: No such file or directory</code> hatası alıyorum. Bu ne anlama geliyor?
+    When I try to run my code, I'm getting an error saying <code>can't open file intro.py: No such file or directory</code>! What does this mean?
 </h3>
-<p>
-    Bu hatanın nedeni genellikle PyCharm ile yanlış dosya veya klasörü açmak. 
-    Öncelikle <code>intro.py</code> dosyasını içinde bulunduran <code>pycharm_intro</code> klasörünü açtığından emin ol.
-    Direkt olarak <code>intro.py</code> dosyasını veya <code>pycharm_intro</code> klasörünü içeren başka bir klasör açmadığını 
-    kontrol et. 
-</p>
-<p>
-    Bu hatayı düzeltmek için PyCharm'da sol üst köşedeki 'File' menüsünü aç ve 'Open' seçeğine tıkla. 
-    Sonra açılan dosya gezgini üstünden doğru <code>pycharm_intro</code> klasörünü bul ve aç.
-</p>
-<p>
-    Doğru klasörü açtığını kontrol etmek için terminale 
-    <span class="maconly"><code>ls</code> (ilk harf küçük 'L' harfi)</span>
-    <span class="winonly"><code>dir</code></span> 
-    komutunu yaz ve çalıştır. Bu komut sana bulunduğun klasörde bulunan tüm dosya ve klasörleri listeyelecek.
-    <code>intro.py</code> dosyasının komutun çıktıları içinde bulunduğunu kontrol et.
-</p>
+
+This most often happens when you open the incorrect file or folder in PyCharm. In this case, make sure to open the `pycharm_intro` folder that _directly_ contains `intro.py`, rather than `intro.py` itself or a folder containing `pycharm_intro`. On a Windows computer, you may have a folder called `pycharm_intro` with another folder inside it called `pycharm_intro`. Make sure to open the inner folder.
+
+To correct this error, open the 'File' menu and click 'Open'. Then, navigate to the correct `pycharm_intro` folder and open it. 
+
+To verify that you are in the correct folder, type <span class="maconly"><code>ls</code> (that's a lowercase 'L')</span> <span class="winonly"><code>dir</code></span> into your terminal (the same place you type <code><span class="launcher">python3</span> intro.py &lt; YOUR NAME HERE &gt; </code>).  This will show you a list of all the files in that folder, and <code>intro.py</code> should be in this list.
 
 <h3 data-toc-text="No Python Interpeter Configured">
-    Editörü açtığımda 'No Python Interpreter configured for the project' mesajı alıyorum. Ne yapmalıyım?
+    I'm getting a 'No Python Interpreter configured for the project' message when I open a file! What should I do?
 </h3>
-<p>
-    Bu muhtemelen PyCharm'da Python Yorumlayıcısı (Interpreter) seçerken bir sorun yaşadığın anlamına geliyor. 
-    Bunu düzeltmek için çıkan mesajdaki 'Configure Python Interpreter' seçeneğine tıkla ve <a href="#setinterpreter">burada anlatılan</a> adımları izle. 'PyCharm Kurulumunu Test Etmek' bölümüne gelene kadar tüm adımları gerçekleştirmelisin.
-</p>
+
+This is likely caused by an issue with how you set up the interpreter.  To fix this, click 'Configure Python Interpreter', and set up the interpreter by following <a href="#setinterpreter">these steps</a> until the 'Testing Pycharm' section.
 
 <h3 data-toc-text="The default interactive shell is now zsh">
-    Mac kullanıyorum ve terminali açtığımda <code>The default interactive shell is now zsh.
-    To update your account to use zsh, please run `chsh -s /bin/zsh</code> mesajıyla karşılaşıyorum.
-    Ne yapmalıyım? 
+    I'm on a Mac and I'm getting a message saying <code>The default interactive shell is now zsh.
+    To update your account to use zsh, please run `chsh -s /bin/zsh</code>. What should I do?
 </h3>
-<p>
-    Bu zararsız bir bilgilendirme mesajı. Herhangi bir şey yapmana gerek yok, bu mesajı görmezden gelebilirsin.
-</p>
+
+That's just an innocuous message, don't worry about it!
 
 <h3 data-toc-text="PyCharm won't open on a Mac">
-    Mac kullanıyorum ve PyCharm'ı çalıştıramıyorum. Ne yapmalıyım?
+    I'm on a Mac and PyCharm won't open! What should I do?
 </h3>
-<p>
-    MacOS'un eski bir versiyonunu kullanıyor olabilirsin. PyCharm'ın <a href="https://download.jetbrains.com/python/pycharm-community-2018.3.7.dmg?_ga=2.154013245.444478522.1586284244-1193515711.1586109339">bu versiyonunu</a> indirmeyi dene.
-</p>
+
+You might be using a slightly older version of MacOS. Try installing [this version](https://download.jetbrains.com/python/pycharm-community-2018.3.7.dmg") of PyCharm instead.
 
 <h3 data-toc-text="JetBrains Runtime 11 & Windows 32-bit">
-    "This installation contains JetBrains Runtime 11 which does not support Microsoft Windows 32-bit version" hatası alıyorum. 
-    Ne yapmalıyım?
+    I'm getting an error window saying "This installation contains JetBrains Runtime 11
+    which does not support Microsoft Windows 32-bit version"! What should I do?
 </h3>
-<p>
-    <p>
-        PyCharm'ın 
-        <a href="https://download.jetbrains.com/python/pycharm-community-2018.3.7.exe?_ga=2.144731825.444478522.1586284244-1193515711.1586109339">bu versiyonunu</a> indirmeyi dene.
-    </p>
-</p>
 
-<p>
-    <i>
-        Sıkça sorulan sorular sizden gelen sorular doğrultusunda güncellenecektir.
-    </i>
-</p>
+Try installing [this version](https://download.jetbrains.com/python/pycharm-community-2018.3.7.exe) of PyCharm instead.
+
+__Course FAQs will be continually updated as we receive questions.__
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -398,17 +315,12 @@ If it prints a bunch of output followed by "Successfully installed Pillow-7.1.1"
 
   ga('create', 'UA-74362126-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 
 <script>
     function setWindows() {
         toggle("maconly", "none");
         toggle("winonly", "inline-block");
-        const images = document.getElementsByTagName('img');
-        for (let i = 0; i < images.length; i++) {
-            images[i].src = images[i].src.replace("macos/", "win/")
-        }
         
         const launchers = document.getElementsByClassName("launcher");
         for (let i = 0; i < launchers.length; i++) {
@@ -416,19 +328,12 @@ If it prints a bunch of output followed by "Successfully installed Pillow-7.1.1"
         }
 
         const osSpiel = document.getElementById('osspiel');
-        osSpiel.innerHTML = "Windows işletim sistemi kullandığınızı tespit ettik. &nbsp; &nbsp; <a href='#' onclick='setMacOS()'> Mac kullanıyorum </a>."
-
-        const modifier = document.getElementById('modifier');
-        modifier.innerHTML = "Alt";  
+        osSpiel.innerHTML = "We've detected you're using a Windows computer. &nbsp; &nbsp; <a href='#' onclick='setMacOS()'>I'm using a Mac</a>."
     }
 
     function setMacOS() {
         toggle("maconly", "inline-block");
         toggle("winonly", "none");
-        const images = document.getElementsByTagName('img');
-        for (let i = 0; i < images.length; i++) {
-            images[i].src = images[i].src.replace("win/", "macos/")
-        }
 
         const launchers = document.getElementsByClassName("launcher");
         for (let i = 0; i < launchers.length; i++) {
@@ -436,18 +341,15 @@ If it prints a bunch of output followed by "Successfully installed Pillow-7.1.1"
         }
 
         const osSpiel = document.getElementById('osspiel');
-        osSpiel.innerHTML = "Mac kullandığınızı tespit ettik. &nbsp; &nbsp; <a href='#' onclick='setWindows()'> Windows işletim sistemi kullanıyorum </a>.";  
-
-        const modifier = document.getElementById('modifier');
-        modifier.innerHTML = "Command";       
+        osSpiel.innerHTML = "We've detected you're using a Mac. &nbsp; &nbsp; <a href='#' onclick='setWindows()'>I'm using a Windows Machine</a>.";   
     }
 
     function setUnknownOS() {
        const osSpiel = document.getElementById('osspiel'); 
        osSpiel.innerHTML = `
-        Hangi işletim sistemini kullandığınızı tespit edemedik.
-        Eğer MacOS kullanıyorsanız <a href="#" onclick="setMacOS()"> buraya tıklayın </a>, 
-        eğer Windows kullanıyorsanız <a href="#" onclick="setWindows()">  buraya tıklayın </a>.
+        We weren't able to detect what operating system you're using. Click 
+        <a href="#" onclick="setMacOS()"> here </a> if you're using a Mac and 
+        <a href="#" onclick="setWindows()"> here </a> if you're using a Windows machine.
        `
     }
 
@@ -472,9 +374,5 @@ If it prints a bunch of output followed by "Successfully installed Pillow-7.1.1"
         }
     }
 
-
     window.onload = setOS;
-
 </script>
-
-</body>

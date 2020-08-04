@@ -54,375 +54,409 @@
 -->
 
 <!-- Navigation Bar -->
+
+
 <nav class="navbar-inverse navbar-default" role="navigation">
-  <div class="container-fluid">
-  	<div class="container">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="../../en/index.html">CS Bridge</a>
-	    </div>
+	<div class="container-fluid">
+		<div class="container">
 
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav">
-	        <!--<li ><a href="#">Link</a></li>-->
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../en/index.html">CS Bridge</a>
+			</div>
 
-            <ul class="dropdown-menu">
-	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
-	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
-	          	<li class="divider visible-after" data-visible-after="2019071009" />
-          		<li><a class="visible-after" data-visible-after="2019071009" href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></li>
-          		<li><a class="visible-after" data-visible-after="2019071009" href="../../en/resources/quick-python.html">Python Reference</a></li>
-	          	<li><a class="visible-after" data-visible-after="2019071109" href="../../en/resources/graphics.html">Graphics Reference</a>
-	          	<li class="divider visible-after" data-visible-after="2019071009" />
-              <li class="dropdown-header">Course information</li>
-              <li><a href="../../en/resources/general-info.html">General Info</a></li>
-              <li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
-              <li><a href="../../en/resources/section-info.html">Section Info</a></li>
-	          	<li class="divider visible-after" data-visible-after="2019071009" />
-              <li><a href="../../en/resources/install.html">Install PyCharm</a></li>
-              <li><a href="../../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
-              <li class="divider" />
-              <li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
 
-              <!-- Not used nor visible -->
-				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../en/resources/jar.html">Exporting Projects as JARs</a>-->
-	          	<!--<a class="visible-after" href="../../en/resources/sections.html">Sections</a>-->
-	          </ul>
-	        </li>
+					<!-- Resources dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></li>
+
+							<!-- Divider only visible once Python resources visible -->
+							<li 
+									class="divider visible-after" data-visible-after="2020080600"
+							/>
+
+							<!-- Python reader visible later -->
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a>
+							</li>
+
+							<!-- Python reference visible later -->
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../en/resources/quick-python.html">Python Reference</a>
+							</li>
+
+							<!-- Graphics reference visible later -->
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../../en/resources/graphics.html">Graphics Reference</a>
+							</li>
+
+							<li class="divider" />
+
+							<!-- Yosefa's Part -->
+							<li class="dropdown-header">Course Information</li>
+							<li><a href="../../en/resources/general-info.html">General Info</a></li>
+							<li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
+							<li><a href="../../en/resources/section-info.html">Section Info</a></li>
+							<!-- End Yosefa's Part -->
+
+							<li class="divider" />
+
+							<li><a href="../../en/resources/install.html">Install PyCharm</a></li>
+							<li><a href="../../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+							<li class="divider" />
+							<li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
+						</ul>
+					</li>
+
+					<!-- Projects dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+
+<ul class="dropdown-menu">
 
 
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
-	          <ul class="dropdown-menu">
+	<!-- This dropdown should display one element for each day of projects -->
+		<li 
+				class="dropdown-submenu"
+		>
+			<a tabindex="-1" href="#">1: Karel</a>
 
-	        <!-- Day 1 -->
-              <li class="dropdown-submenu">
-                <a tabindex"-1" href="#">1. Karel</a>
-                <ul class="dropdown-menu">
-	                <li>
-	                	<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
-	                </li>
-	          	    <li class="visible-after" data-visible-after="2019070912">
-	          	    	<a href="../../en/projects/arches.html">Arches Karel</a>
-	          	    </li>
-                </ul>
-              </li>
+			<!-- For each of morning/evening, add a "side popup" -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header"
+						>
+							Evening
+						</li>
 
-	          	
-	        <!-- Day 2 -->
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">2. Control Flow</a>
-                <ul class="dropdown-menu">
-	          	    <li class="dropdown-header visible-after" data-visible-after="2019071009">Morning</li>
-	          	    <li class="visible-after" data-visible-after="2019070913">
-	          	    	<a href="../../en/projects/placeSquare.html">Place Square</a>
-	          	    </li>
-	          	    <li class="visible-after" data-visible-after="2019070913">
-	          	    	<a href="../../en/projects/mountain.html">Mountain Karel</a>
-	          	    </li>
-	          	    <li class="divider visible-after" data-visible-after="2019071009" />
-	          	    <li class="dropdown-header visible-after" data-visible-after="2019071009">Evening</li>
-	          	    <li class="visible-after" data-visible-after="2019070913">
-	          	    	<a href="../../en/projects/stripeKarel.html">Stripe Karel</a>
-	          	    </li>
-	          	    <li class="visible-after" data-visible-after="2019070913">
-	          	    	<a href="../../en/projects/hospitalKarel.html">Hospital Karel</a>
-	          	    </li>
-	          	    <li class="visible-after" data-visible-after="2019070913">
-	          	    	<a href="../../en/projects/randomPainter.html">Random Painter</a>
-	          	    </li>
-                </ul>
-              </li>
-	          	
-	        <!-- Day 3 -->
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">3. Variables</a>
-                <ul class="dropdown-menu">
-	          	    <li class="dropdown-header visible-after" data-visible-after="2019071109">Morning</li>
-          		    <li class="visible-after" data-visible-after="2019071009">
-          		    	<a href="../../en/projects/sandcastles.html">Sandcastles</a>
-          		    </li>
-          		    <li class="visible-after" data-visible-after="2019071009">
-          		    	<a href="../../en/projects/subtractNum.html">Subtract Numbers</a>
-          		    </li>
-	          	    <li class="divider visible-after" data-visible-after="2019071109" />
-	          	    <li class="dropdown-header visible-after" data-visible-after="2019071109">Evening</li>
-          		    <li class="visible-after" data-visible-after="2019071009">
-          		    	<a href="../../en/projects/runningSum.html">Run, Sum, Rum</a>
-          		    </li>
-          		    <li class="visible-after" data-visible-after="2019071009">
-          		    	<a href="../../en/projects/8ball.html">8 Ball</a>
-          		    </li>
-          		    <li class="visible-after" data-visible-after="2019071009">
-          		    	<a href="../../en/projects/viralVideo.html">Viral Video</a>
-          		    </li>
-	          	    <li class="visible-after" data-visible-after="2019071013">
-	          	    	<a href="../../en/projects/khansole.html">Khansole Academy</a>
-	          	    </li>
-                </ul>
-              </li>
+							<li
+							>
+								<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
+							</li>
+							<li
+							>
+								<a href="../../en/projects/arches.html">Arches Karel</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080500"
+		>
+			<a tabindex="-1" href="#">2: Karel and Control Flow</a>
 
-	        <!-- Day 4 -->
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">4. For loops</a>
-                <ul class="dropdown-menu">
-				          <li class="dropdown-header visible-after" data-visible-after="2019071209">Morning</li>
-	          	    <li class="visible-after" data-visible-after="2019071013">
-	          	    	<a href="../../en/projects/someSum.html">Some Sum</a>
-	          	    </li>
-	          	    <li class="visible-after" data-visible-after="2019071013">
-	          	    	<a href="../../en/projects/nimm.html">Nimm</a>
-	          	    </li>
-                </ul>
-              </li>
+			<!-- For each of morning/evening, add a "side popup" -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080500"
+						>
+							Morning
+						</li>
 
-				<!-- Day 5 -->
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Functions</a>
-                <ul class="dropdown-menu">
-          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
-          		    <li class="visible-after" data-visible-after="2019071109">
-          		    	<a href="../../en/projects/awesome.html">Programming is Awesome</a>
-          		    </li>
-	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="../../en/projects/randomCircles.html">Random Circles</a>
-	          	    </li>
-          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
-	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="../../en/projects/funkyFunctions.html">Funky Functions</a>
-	          	    </li>
-	          	    <li class="visible-after" data-visible-after="2019071113">
-	          	    	<a href="../../en/projects/fizzbuzz.html">Fizzbuzz</a>
-	          	    </li>
-	          	    <li class="visible-after" data-visible-after="2019071212">
-	          	    	<a href="../../en/projects/target.html">Target</a>
-	          	    </li>
-	          	    <li class="visible-after" data-visible-after="2019071112">
-	          	    	<a href="../../en/projects/stringArt.html">String Art</a>
-	          	    </li>
-                </ul>
-              </li>
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../../en/projects/placeSquare.html">Place Square</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../../en/projects/mountain.html">Mountain Karel</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080509"
+						>
+							Evening
+						</li>
 
-				<!-- Day 6 -->
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">6. Loops/Animation</a>
-                <ul class="dropdown-menu">
-          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
-	          	    <li class="visible-after" data-visible-after="2019071112">
-	          	    	<a href="../../en/projects/indexCounter.html">Index Counter</a>
-	          	    </li>
-	          	    <li class="visible-after" data-visible-after="2019071213">
-	          	    	<a href="../../en/projects/illusion.html">Optical Illusion</a>
-	          	    </li>
-          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
-	          	    <li class="visible-after" data-visible-after="2019071112">
-	          	    	<a href="../../en/projects/mysterySquare.html">Mystery Square</a>
-	          	    </li>
-	                <li class="visible-after" data-visible-after="2019071113">
-	                	<a href="../../en/projects/bouncingBall.html">Bouncing Ball</a>
-	                </li>
-	          	    <li class="visible-after" data-visible-after="2019071213">
-	          	    	<a href="../../en/projects/sunset.html">Short Film</a>
-	          	    </li>
-                </ul>
-              </li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../en/projects/stripeKarel.html">Stripe Karel</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../en/projects/hospitalKarel.html">Hospital Karel</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../en/projects/randomPainter.html">Random Painter</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080600"
+		>
+			<a tabindex="-1" href="#">3: Variables</a>
 
-				<!-- Day 7 -->
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">7. Mouse/Lists</a>
-                <ul class="dropdown-menu">
-          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
-          		    <li class="visible-after" data-visible-after="2019071509">
-          		    	<a href="../../en/projects/mouseLocation.html">Mouse Location</a>
-          		    </li>
-          		    <li class="visible-after" data-visible-after="2019071509">
-          		    	<a href="../../en/projects/makingTracks.html">Making Tracks</a>
-          		    </li>
-          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
-	          	    <li class="visible-after" data-visible-after="2019071512">
-	          	    	<a href="../../en/projects/isAscending.html">Is Ascending</a>
-	          	    </li>
-	          	    <li class="visible-after" data-visible-after="2019071512">
-	          	    	<a href="../../en/projects/sorted.html">Sorted</a>
-	          	    </li>
-	          	    <li class="visible-after" data-visible-after="2019071712">
-	          	    	<a href="../../en/projects/snow.html">Snow</a>
-	          	    </li>
-	          	    <li class="visible-after" data-visible-after="2019071712">
-	          	    	<a href="../../en/projects/mouseGame.html">[Optional] The Line</a>
-	          	    </li>
-	          	    <li class="visible-after" data-visible-after="2019071712">
-	          	    	<a href="../../en/projects/music.html">[Optional] Waves of Sound</a>
-	          	    </li>
-                </ul>
-              </li>
+			<!-- For each of morning/evening, add a "side popup" -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080600"
+						>
+							Morning
+						</li>
 
-				<!-- Day 8-9 -->
-          		<li class="visible-after" data-visible-after="2019071513">
-                <a href="../../en/projects/breakout.html">Breakout</a>
-          		</li>
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../en/projects/sandcastles.html">Sandcastles</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../en/projects/runningSum.html">Run, Sum, Run!</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080609"
+						>
+							Evening
+						</li>
 
-				<!-- Day 10 -->
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">10. Dictionaries</a>
-                <ul class="dropdown-menu">
-          		    <li class="visible-after" data-visible-after="2019071513">
-          		    	<a href="../../en/projects/phoneBook.html">Phone Book</a>
-          		    </li>
-                </ul>
-              </li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../en/projects/areaCalculator.html">Area Calculator</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../en/projects/8ball.html">8 Ball</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../en/projects/viralVideo.html">Viral Video</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../en/projects/khansole.html">Khansole Academy</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080700"
+		>
+			<a tabindex="-1" href="#">4: For loops, deconstructed</a>
 
-				<!-- Day end -->
-          		<li class="visible-after" data-visible-after="2019071513">
-                <a href="../../en/projects/project.html">Make Your Own</a>
-          		</li>
-	          </ul>
-	        </li>
+			<!-- For each of morning/evening, add a "side popup" -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080700"
+						>
+							Morning
+						</li>
 
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
-	          <ul class="dropdown-menu">
-              <li class="dropdown-submenu">
-                <a tabindex"-1" href="#">1. Karel</a>
-                <ul class="dropdown-menu">
-	          	    <li><a href="../../en/projects/stepUp/index.html">Step Up</a></li>
-	          	    <li><a href="../../en/projects/place100/index.html">Place 100</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">2. Control Flow</a>
-                <ul class="dropdown-menu">
-	          	    <li><a href="../../en/projects/beeperLine/index.html">Beeper Line</a></li>
-	          	    <li><a href="../../en/projects/invertBeeper/index.html">Invert Beeper</a></li>
-	          	    <li><a href="../../en/projects/unKarel/index.html">UN Karel</a></li>
-	          	    <li><a href="../../en/projects/banishWinter/index.html">Banish Winter</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">3. Variables</a>
-                <ul class="dropdown-menu">
-	          	    <li><a href="../../en/projects/emc2/index.html">E=MC<sup>2</sup></a></li>
-	          	    <li><a href="../../en/projects/fibonacci/index.html">Fibonacci</a></li>
-	          	    <li><a href="../../en/projects/findPi/index.html">Find Pi</a></li>
-                  <!-- Used to be a main course component -->
-	          	    <li><a href="../../en/projects/favoriteNumber/index.html">Favorite Number</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">4. For loops</a>
-                <ul class="dropdown-menu">
-                  <li><a>Stay tuned!</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Functions</a>
-                <ul class="dropdown-menu">
-	          	    <li><a href="../../en/projects/robotFace/index.html">Robot Face</a></li>
-	          	    <li><a href="../../en/projects/halfGreen/index.html">Half Green</a></li>
-                  <!-- Used to be a main course component -->
-	          	    <li><a href="../../en/projects/average/index.html">Average Function</a></li>
-	          	    <li><a href="../../en/projects/divisible/index.html">Division Functions</a></li>
-	          	    <li><a href="../../en/projects/drawPeople/index.html">Draw People</a></li>
-	          	    <li><a href="../../en/projects/medicine/index.html">Counterfeit Medicine</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">6. Loops/Animation</a>
-                <ul class="dropdown-menu">
-	          	    <li><a href="../../en/projects/moveToCenter/index.html">Move to Center</a></li>
-	          	    <li><a href="../../en/projects/gravityBall/index.html">Gravity Ball</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">7. Mouse/Lists</a>
-                <ul class="dropdown-menu">
-	          	    <li><a href="../../en/projects/stampTool/index.html">Stamp Tool</a></li>
-	          	    <li><a href="../../en/projects/holePuncher/index.html">Hole Puncher</a></li>
-	          	    <li><a href="../../en/projects/debrisSweeper/index.html">Debris Sweeper</a></li>
-	          	    <li><a href="../../en/projects/suchADrag/index.html">Such a Drag</a></li>
-	          	    <li><a href="../../en/projects/keyboardKarel/index.html">Keyboard Karel</a></li>
-	          	    <li><a href="../../en/projects/rocketPaddle/index.html">Rocket Paddle</a></li>
-                </ul>
-              </li>
-	        </ul>
-	        </li>
+							<li
+									class="visible-after" data-visible-after="2020080700"
+							>
+								<a href="../../en/projects/someSum.html">That&#039;s Some Sum!</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080700"
+							>
+								<a href="../../en/projects/carbonDating.html">Carbon Dating</a>
+							</li>
+			</ul>
+		</li>
+</ul>					</li>
 
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
-	          <ul class="dropdown-menu">
-	          	<li><a href="../../slides/Welcome.pdf">1. Karel</a></li>
-	          	<li><a href="../../slides/ControlFlow.pdf">2. Control Flow Slides)</a></li>
-	          	<li><a href="../../starter/ControlFlow.zip">2. Control Flow (Code)</a></li>
-			<li><a href="../../slides/IntroPython_Variable_Math_RandomNumbers.pdf">3. Variables (Slide)</a></li>
-			<li><a href="../../starter/Day3-Variables.zip">3. Variables (Code)</a></li>
-	          	<li><a href="../../slides/Graphics.pdf">Graphics (Slides)</a></li>
-	          	<li><a href="../../starter/Graphics.zip">Graphics (Code)</a></li>
-	          	<li><a href="../../slides/Animation.pdf">Animation</a></li>
-	          	<li><a href="../../slides/Methods.pdf">Functions</a></li>
-	          	<li><a href="../../slides/NestedLoops.pdf">Nested Loops</a></li>
-	          	<li><a href="../../slides/Events.pdf">Events (Slides)</a></li>
-	          	<li><a href="../../starter/Events.zip">Events (Code)</a></li>
-	          	<li><a href="../../slides/Breakout.pdf">Breakout</a></li>
-	         	<li><a href="../../slides/Beyond-CSBridge.pdf">Beyond CSBridge</a></li>
-	          </ul>
-	        </li>
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
 
-          <!--
-	        <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forms <b class="caret"></b></a>
-	          <ul class="dropdown-menu">
-	          	<li><a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Survey</a></li>
-                <li><a href="https://forms.gle/eVsMyZb8HCSUETeV6">Sign in To Lab</a></li>
-	          </ul>
-	        </li>
-          -->
+<ul class="dropdown-menu">
 
-			
-	        <!-- Bonus button -->
-	        <ul class="nav navbar-nav">
-	            <li><a href="../../en/bonus-index.html">Bonus</a></li>
-	        </ul>
 
-	        <!-- TA Link -->
+	<!-- This dropdown should display one element for each day of worked examples -->
 
-	      </ul>
+		<li 
+				class="dropdown-submenu"
+		>
+			<a tabindex="-1" href="#">1: Karel</a>
 
-	      
-	      <ul class="nav navbar-nav navbar-right">
-	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/english_flag.png"></img></a></li>
-	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
-	        
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header"
+						>
+							Evening
+						</li>
+
+							<li
+							>
+								<a href="../../en/projects/stepUp/">Step Up</a>
+							</li>
+							<li
+							>
+								<a href="../../en/projects/place100/">Place 100</a>
+							</li>
+			</ul>
+		</li>
+
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080500"
+		>
+			<a tabindex="-1" href="#">2: Karel and Control Flow</a>
+
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080500"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../../en/projects/beeperLine/">Beeper Line</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080509"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../en/projects/invertBeeper/">Invert Beeper</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../en/projects/unKarel/">UN Karel</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../en/projects/banishWinter/">Banish Winter</a>
+							</li>
+			</ul>
+		</li>
+
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080600"
+		>
+			<a tabindex="-1" href="#">3: Variables</a>
+
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080600"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../en/projects/emc2/">E=MC²</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080609"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../en/projects/fibonacci/">Fibonacci</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../en/projects/findPi/">Find Pi</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../en/projects/favoriteNumber/">Favorite Number</a>
+							</li>
+			</ul>
+		</li>
+</ul>					</li>
+
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Lectures <b class="caret"></b></a>
+
+<ul class="dropdown-menu">
+
+
+	<!-- This dropdown should display one element for each lecture -->
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080309"
+		>
+			<a tabindex="-1" href="#">1: Variable</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/IntroPython_Variables.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../../starter/lectures/Lecture4.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+</ul>					</li>
+					
+					<!-- Bonus -->
+					<ul class="nav navbar-nav">
+						<li><a href="../../en/bonus-index.html">Bonus</a></li>
+					</ul>
+
+					<!-- TA Link -->
+
+				</ul>
+
+				<!-- Language toggle button -->
+				<ul class="nav navbar-nav navbar-right">
+						<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
+				</ul>
+
+			</div>
+		</div>
 	</div>
-  </div><!-- /.container-fluid -->
 </nav>
 
+<!-- Script to toggle between languages -->
 <script>
-
 	function changeToTurkish() {
 		var url = window.location.href;
 		url = url.replace("/en/", "/tr/");
 		window.location.href = url;
 	}
-
+	
 	function changeToEnglish() {
 		var url = window.location.href;
 		url = url.replace("/tr/", "/en/");
 		window.location.href = url;
 	}
-
 </script>
-
 <div class="container">
 	
 	<!--
@@ -452,8 +486,8 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../en/resources/karel.html">KarelReference</a><br/>
-Worked Examples: <a href="../../en/projects/invert/index.html">Invert</a>, <a href="../../en/projects/unkarel/index.html">UN Karel</a><br/>
+		<p>Handouts: <a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">KarelReference</a><br/>
+Worked Examples: <a href="../../en/projects/invertBeeper/">Invert</a>, <a href="../../en/projects/unkarel/index.html">UN Karel</a><br/>
 Day1: <code>random_painter_karel.py</code></p>
 <h2 id="problem">Problem</h2>
 <p>Karel is starting to find its world too black and white. Help it fill it with color.

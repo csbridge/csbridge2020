@@ -3,7 +3,8 @@ title: Şerit Karel
 credit: Chris Piech tarafından yazılmıştır
 translation: Gül Sena Altıntaş
 
-Handouts: [Karel Reference]({{pathToRoot}}en/handouts/karel.html)<br/>
+Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+Worked Examples: [Invert Beeper]({{pathToRoot}}tr/projects/invertBeeper/index.html)<br/>
 File: `stripe_karel.py`
 
 Amacınız Karel'ın dünyasındaki her tek sayılı satırı beeper'larla doldurmak.

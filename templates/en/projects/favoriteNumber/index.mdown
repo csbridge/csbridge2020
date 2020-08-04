@@ -3,9 +3,9 @@ title: Favorite Number (with solution)
 credit: Chris P., Bryce C-R and Julia L.
 solution: soln.py
 
-First think of your favorite integer between 0 and 100. Write a program that stores your favorite number as a variable and repeatedly asks the user to try and guess it. Let the user know if their last guess was too low or too high.
+First, think of your favorite integer between 0 and 100. Write a program that stores your favorite number as a variable and repeatedly asks the user to try and guess it. Let the user know if their last guess was too low or too high.
 
-For example my favorite number is 88. Here is a demo of a user trying to guess that number:
+For example, let's say your favorite number is 88. Here is a demo of a user trying to guess that number:
 
 ```
 Try and guess my favorite number (between 0 and 100)
@@ -24,3 +24,5 @@ Too high
 Guess: 88
 Good job!
 ```
+
+As an added bonus, try modifying the program to pick a different random favorite number each time.

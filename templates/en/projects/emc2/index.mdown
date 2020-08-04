@@ -7,12 +7,34 @@ One of the exciting human discoveries is that mass and energy are interchangable
 
 Write a program that continually reads in mass from the user and then outputs the amount of energy. Show your work in the following way:
 
-<center>
-<img style="width:400px" src="{{pathToRoot}}img/projects/emc2/demo.png">	
-</center>
+```
+Enter kilos of mass: 27
+E = m * C^2 ...
+m = 27.0 kg
+C = 299792458m/s
+2.4266389825894077e+18 joules of energy!
+
+Enter kilos of mass: 15
+E = m * C^2 ...
+m = 15.0 kg
+C = 299792458m/s
+1.3481327681052265e+18 joules of energy!
+
+Enter kilos of mass: 2
+E = m * C^2 ...
+m = 2.0 kg
+C = 299792458m/s
+1.7975103574736352e+17 joules of energy!
+
+Enter kilos of mass: 0.00000001
+E = m * C^2 ...
+m = 1e-08 kg
+C = 299792458m/s
+898755178.7368177 joules of energy!
+```
 
 If you ask the user to input kilograms, and you use speed of light equals 299792458 (which is in meters per second) the result of calculating E = M &times; C <sup>2</sup> will be in Joules.
 
-Note that 3.0E8 is scientific notation for 3.0 &times; 10 <sup>8</sup>... which is 300,000,000. You don't need to do anything for java to print doubles in scientific notation. It will automatically do so when numbers get big enough.
+Note that 3.0E8 is scientific notation for 3.0 &times; 10 <sup>8</sup>... which is 300,000,000. You don't need to do anything to print doubles in scientific notation. It will automatically do so when numbers get big enough.
 
 Since the speed of light will never change, it makes sense to declare it as a constant.

@@ -4,7 +4,7 @@ credit: Eric Roberts'ın ders notlarından esinlenilmiştir
 solution: soln.py
 translation: Serhat Arslan, Ceren Kocaoğullar
 
-Handouts: [Karel Reference]({{pathToRoot}}tr/resources/karel.html)<br/>
+Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
 File: `un_karel.py`<br/>
 
 Karel evlerin inşa edilmesinde yardımcı olması için BM (Birleşmiş Milletler) tarafından işe alınmıştır. Bir kurtarıcıya ihtiyaç vardır ve Karel da şüphesiz bu görev için en iyi robottur. Hedefiniz Karel'ın en alt sıra boyunca yürümesi ve aşağıdaki gibi bir ev inşa etmesi:

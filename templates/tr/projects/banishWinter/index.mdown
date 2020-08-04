@@ -4,7 +4,7 @@ credit: Eric Roberts'ın ders notlarını temel alır, Zach Birnholz ve Lisa Yan
 solution: soln.py
 translation: Ceren Kocaoğullar
 
-Handouts: [Karel Reference]({{pathToRoot}}en/resources/karel.html)<br/>
+Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
 File: `banish_winter.py`<br/>
 
 Karel, Stanford / CTU / Koç kampüsünde yürümek ve bahar için biraz bahçe işleri yapmak istiyor. Bahar başladı, ancak kampüs ağaçları henüz bunu fark edemedi ve hala yapraksızlar. Karel, batıdan doğuya doğru kampüs boyunca yürümeli, tüm ağaçları yapay yapraklarla süslemeli ve kampüsü şu şekilde dönüştürmeli:

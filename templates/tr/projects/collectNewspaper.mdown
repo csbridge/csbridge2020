@@ -3,8 +3,8 @@ title: Gazete Alma
 credit: Eric Roberts'ın bir ders notu temel alınmıştır.
 translation: Serhat Arslan, Ceren Kocaoğullar
 
-Ders Notları: [Karel Reference]({{pathToRoot}}en/resources/karel.html)<br/>
-Çözümlü Örnek: [StepUp]({{pathToRoot}}en/projects/stepUp.html)<br/>
+Ders Notları: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+Çözümlü Örnek: [StepUp]({{pathToRoot}}tr/projects/stepUp)<br/>
 Dosya: `newspaper_karel.py`
 
 İlk göreviniz Karel'ın dünyasında basit bir hikaye problemini çözmek. Varsayın ki, Karel evine, aşağıdaki şemanın merkezindeki kare alana, yerleşmiş olsun:

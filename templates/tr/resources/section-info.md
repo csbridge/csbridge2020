@@ -127,5 +127,5 @@ Sonuç olarak, bu durumun kurs boyunca kimse için gerçekleşmemesini umarken, 
 #### <u>Diğer Sorular</u>
 <p>
     Sorularınız geldikçe bunları cevaplıyor olacağız. <br />
-    Lütfen göz atın: <a href='http://online.csbridge.org/en/resources/student-faq.html'>http://online.csbridge.org/en/resources/student-faq.html</a>
+    Lütfen göz atın: <a href='http://online.csbridge.org/tr/resources/student-faq.html'>http://online.csbridge.org/tr/resources/student-faq.html</a>
 </p>

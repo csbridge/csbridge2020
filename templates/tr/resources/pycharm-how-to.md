@@ -1,4 +1,4 @@
-template: templates/en/resources/faqTemplate.ptl
+template: templates/tr/resources/faqTemplate.ptl
 title: Nasıl PyCharm Kullanırım?
 credit: Chris Piech, Mehran Sahami, Brahm Capoor, and Lisa Yan
 

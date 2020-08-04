@@ -4,7 +4,7 @@ credit: Written by Chris Piech
 translation: Serhat Arslan, Gül Sena Altıntaş
 solution: soln.py
 
-Handouts: [Karel Reference]({{pathToRoot}}en/handouts/karel.html)<br/>
+Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
 File: `beeper_line.py`
 
 Hedefiniz Karel'ın dünyasının ilk satırını beeper'larla doldurmak. Karel'ın doğuya (east) dönük bir şekilde sol alt köşede başladığını varsayabilirsiniz.  Örneğin, programınızı soldaki dünyada çalıştırırsanız, sağdaki dünyayı üretmeli.

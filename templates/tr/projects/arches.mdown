@@ -3,8 +3,8 @@ title: Sütun Tamircisi
 credit: Lisa Yan
 translation: Serhat Arslan, Ceren Kocaoğullar
 
-Ders Notları: [KarelReference]({{pathToRoot}}en/resources/karel.html)<br/>
-Çözümlü Örnek: [Place100]({{pathToRoot}}en/projects/place100.html)<br/>
+Ders Notları: [KarelReference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+Çözümlü Örnek: [Place100]({{pathToRoot}}tr/projects/place100)<br/>
 Birinci Gün: `arches_karel.py`
 
 Karel, Stanford Ana Avlusundaki 1989 Loma Prieta depreminde zarar gören sütunları inşa etmek için tutuldu, veya hayalgücünüzü kullanın ve başka bir yerdeki sütunları tamir ettiğinizi düşünün! Karel Charles Köprüsünün veya Efes'taki Artemis tapınağını tamir etmek için tutulmuş olabilir! Özellikle aşağıda belirtildiği şekilde, kendilerini destekleyen sütunlarda (tabii ki, beeper'lar tarafından temsil edilen) taşların eksik olduğu süt	ünlar var:
@@ -50,6 +50,6 @@ for i in range(10):
     move()
 ```
 
-Başka bir örnek için [100 Koymak]({{pathToRoot}}en/projects/place100/) programını inceleyebilirsiniz.
+Başka bir örnek için [100 Koymak]({{pathToRoot}}tr/projects/place100/) programını inceleyebilirsiniz.
 
 Eğer for döngülerini kullanırsanız, programınızı yazması ve okuması çok daha kolay olacak. Bu problemde for döngüleri kullanmanın birçok avantajı var!

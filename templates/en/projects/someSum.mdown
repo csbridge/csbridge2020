@@ -28,7 +28,7 @@ for i in range(15):
     # some code...
 ```
 
-The counter variable `i` will always start at 0 and increase each iteration until it gets to 14, so the for loop runs a total of 15 times.
+The counter variable `i` will always start at 0 and increase each iteration until it gets to 14, so the `for` loop runs a total of 15 times.
 
 ## Printing variables, continued
 Remember that you can print values to the user in a string like this:
