@@ -7,7 +7,7 @@ base - the HTML body for this template
 filePath - the total path to the markdown file being rendered in this template
 -->
 
-% rebase('templates/en/template.ptl', title=title)
+% rebase('templates/en/template.ptl')
 
 <!-- Header -->
 <div id="pageHeader">
