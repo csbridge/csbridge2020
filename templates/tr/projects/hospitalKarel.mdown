@@ -3,8 +3,8 @@ title: Hastaneci Karel
 credit: Chris Piech
 translation: Gül Sena Altıntaş
 
-Handouts: [KarelReference]({{pathToRoot}}en/resources/karel.html)<br/>
-Worked Examples: [UN Karel]({{pathToRoot}}en/projects/unKarel/index.html), [Banish Winter]({{pathToRoot}}en/projects/banishWinter/index.html)<br/>
+Handouts: [KarelReference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+Worked Examples: [UN Karel]({{pathToRoot}}tr/projects/unKarel/index.html), [Banish Winter]({{pathToRoot}}tr/projects/banishWinter/index.html)<br/>
 Day1: `hospital_karel.py`
 
 Dünyanın dört bir tarafındaki ülkeler, hastalanan herkesin tedavi gördüğünden emin olmak için

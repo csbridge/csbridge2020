@@ -54,375 +54,409 @@
 -->
 
   <!-- Navigation Bar -->
+
+
 <nav class="navbar-inverse navbar-default" role="navigation">
-<div class="container-fluid">
-<div class="container">
-<!-- Brand and toggle get grouped for better mobile display -->
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="../../../tr/index.html">CS Bridge</a>
-</div>
+	<div class="container-fluid">
+		<div class="container">
 
-<!-- Collect the nav links, forms, and other content for toggling -->
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<ul class="nav navbar-nav">
-<!--<li ><a href="#">Link</a></li>-->
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Kaynaklar<b class="caret"></b></a>
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../../tr/index.html">CS Bridge</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+
+					<!-- Resources dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Kaynaklar<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Okuyucu</a></li>
+							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Referansı</a></li>
+
+							<!-- Divider only visible once Python resources visible -->
+							<li 
+									class="divider visible-after" data-visible-after="2020080600"
+							/>
+
+							<!-- Python reader visible later -->
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Okuyucu</a>
+							</li>
+
+							<!-- Python reference visible later -->
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../../tr/resources/quick-python.html">Python Referansı</a>
+							</li>
+
+							<!-- Graphics reference visible later -->
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../../../tr/resources/graphics.html">Grafikler Referansı</a>
+							</li>
+
+							<li class="divider" />
+
+							<!-- Yosefa's Part -->
+							<li class="dropdown-header">Program Bilgileri</li>
+							<li><a href="../../../tr/resources/general-info.html">Genel Bilgiler</a></li>
+							<li><a href="../../../tr/resources/student-faq.html">[Öğrenciler] Sıkça Sorulan Sorular</a></li>
+							<li><a href="../../../tr/resources/section-info.html">Grup Bilgileri</a></li>
+							<!-- End Yosefa's Part -->
+
+							<li class="divider" />
+
+							<li><a href="../../../tr/resources/install.html">PyCharm Kurulumu</a></li>
+							<li><a href="../../../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
+							<li class="divider" />
+							<li><a href="../../../tr/resources/submission-oh.html">Çalışmalarınızı Sisteme Yükleme/Ofis Saatleri</a></li>
+						</ul>
+					</li>
+
+					<!-- Projects dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projeler <b class="caret"></b></a>
 
 <ul class="dropdown-menu">
-<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Okuyucu</a></li>
-<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Okuyucu</a></li>
-<li class="divider visible-after" data-visible-after="2019071009" />
-<li><a class="visible-after" data-visible-after="2019071009" href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Referansı</a></li>
-<li><a class="visible-after" data-visible-after="2019071009" href="../../../tr/resources/quick-python.html">Python Referansı</a></li>
-<li><a class="visible-after" data-visible-after="2019071109" href="../../../tr/resources/graphics.html">Grafikler Referansı</a>
-<li class="divider visible-after" data-visible-after="2019071009" />
-<li class="dropdown-header">Program Bilgileri</li>
-<li><a href="../../../tr/resources/general-info.html">Genel Bilgiler</a></li>
-<li><a href="../../../tr/resources/student-faq.html">[Öğrenciler] Sıkça Sorulan Sorular</a></li>
-<li><a href="../../../tr/resources/section-info.html">Grup Bilgileri</a></li>
-<li class="divider visible-after" data-visible-after="2019071009" />
-<li><a href="../../../tr/resources/install.html">PyCharm Kurulumu</a></li>
-<li><a href="../../../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
-<li class="divider" />
-<li><a href="../../../tr/resources/submission-oh.html">Çalışmalarınızı Sisteme Yükleme/Ofis Saatleri</a></li>
-
-<!-- Not used nor visible -->
-<!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../../tr/resources/jar.html">Exporting Projects as JARs</a>-->
-<!--<a class="visible-after" href="../../../tr/resources/sections.html">Sections</a>-->
-</ul>
-</li>
 
 
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projeler<b class="caret"></b></a>
+	<!-- This dropdown should display one element for each day of projects -->
+		<li 
+				class="dropdown-submenu"
+		>
+			<a tabindex="-1" href="#">1: Karel</a>
+
+			<!-- For each of morning/evening, add a "side popup" -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header"
+						>
+							Akşam
+						</li>
+
+							<li
+							>
+								<a href="../../../tr/projects/collectNewspaper.html">Gazete Alma</a>
+							</li>
+							<li
+							>
+								<a href="../../../tr/projects/arches.html">Sütun Tamircisi</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080500"
+		>
+			<a tabindex="-1" href="#">2: Karel ve Kontrol Akışı</a>
+
+			<!-- For each of morning/evening, add a "side popup" -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080500"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../../../tr/projects/placeSquare.html">Kare Yerleştir</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../../../tr/projects/mountain.html">Dağcı Karel</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080509"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../../tr/projects/stripeKarel.html">Şerit Karel</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../../tr/projects/hospitalKarel.html">Hastaneci Karel</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../../tr/projects/randomPainter.html">Deli Ressam</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080600"
+		>
+			<a tabindex="-1" href="#">3: Değişkenler</a>
+
+			<!-- For each of morning/evening, add a "side popup" -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080600"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../../tr/projects/sandcastles.html">Kumdan Kaleler</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../../tr/projects/runningSum.html">Topla ve Biriktir</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080609"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../../tr/projects/areaCalculator.html">Area Calculator</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../../tr/projects/8ball.html">8 Ball</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../../tr/projects/viralVideo.html">Viral Video</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../../tr/projects/khansole.html">Khansole Akademi</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080700"
+		>
+			<a tabindex="-1" href="#">4: For döngüsü ve analizi</a>
+
+			<!-- For each of morning/evening, add a "side popup" -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080700"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080700"
+							>
+								<a href="../../../tr/projects/someSum.html">Toplama Diye Buna Derim!</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080700"
+							>
+								<a href="../../../tr/projects/carbonDating.html">Carbon Dating</a>
+							</li>
+			</ul>
+		</li>
+</ul>					</li>
+
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Örnekler <b class="caret"></b></a>
+
 <ul class="dropdown-menu">
 
-<!-- Day 1 -->
-<li class="dropdown-submenu">
-<a tabindex"-1" href="#">1. Karel</a>
+
+	<!-- This dropdown should display one element for each day of worked examples -->
+
+		<li 
+				class="dropdown-submenu"
+		>
+			<a tabindex="-1" href="#">1: Karel</a>
+
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header"
+						>
+							Akşam
+						</li>
+
+							<li
+							>
+								<a href="../../../tr/projects/stepUp/">Öne Çık</a>
+							</li>
+							<li
+							>
+								<a href="../../../tr/projects/place100/">100 Tane Yerleştir</a>
+							</li>
+			</ul>
+		</li>
+
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080500"
+		>
+			<a tabindex="-1" href="#">2: Karel ve Kontrol Akışı</a>
+
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080500"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../../../tr/projects/beeperLine/">Beeper Hattı</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080509"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../../tr/projects/invertBeeper/">Ters Çevir</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../../tr/projects/unKarel/">İnsani Yardım Karel&#039;ı</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../../tr/projects/banishWinter/">Kışa Veda</a>
+							</li>
+			</ul>
+		</li>
+
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080600"
+		>
+			<a tabindex="-1" href="#">3: Değişkenler</a>
+
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080600"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../../tr/projects/emc2/">E=MC²</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080609"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../../tr/projects/fibonacci/">Fibonacci</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../../tr/projects/findPi/">Pi&#039;yi Bul</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../../tr/projects/favoriteNumber/">Favori Sayım</a>
+							</li>
+			</ul>
+		</li>
+</ul>					</li>
+
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ders <b class="caret"></b></a>
+
 <ul class="dropdown-menu">
-<li>
-<a href="../../../tr/projects/collectNewspaper.html">Gazete Alma</a>
-</li>
-<li class="visible-after" data-visible-after="2019070912">
-<a href="../../../tr/projects/arches.html">Sütun Tamircisi</a>
-</li>
-</ul>
-</li>
 
 
-<!-- Day 2 -->
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">2. Kontrol Akışı</a>
-<ul class="dropdown-menu">
-<li class="dropdown-header visible-after" data-visible-after="2019071009">Sabah</li>
-<li class="visible-after" data-visible-after="2019070913">
-<a href="../../../tr/projects/placeSquare.html">Kare Yerleştir</a>
-</li>
-<li class="visible-after" data-visible-after="2019070913">
-<a href="../../../tr/projects/mountain.html">Dağcı Karel</a>
-</li>
-<li class="divider visible-after" data-visible-after="2019071009" />
-<li class="dropdown-header visible-after" data-visible-after="2019071009">Akşam</li>
-<li class="visible-after" data-visible-after="2019070913">
-<a href="../../../tr/projects/stripeKarel.html">Şerit Karel</a>
-</li>
-<li class="visible-after" data-visible-after="2019070913">
-<a href="../../../tr/projects/hospitalKarel.html">Hastaneci Karel</a>
-</li>
-<li class="visible-after" data-visible-after="2019070913">
-<a href="../../../tr/projects/randomPainter.html">Deli Ressam</a>
-</li>
-</ul>
-</li>
+	<!-- This dropdown should display one element for each lecture -->
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080309"
+		>
+			<a tabindex="-1" href="#">1: Değişkenler</a>
 
-<!-- Day 3 -->
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">3. Değişkenler</a>
-<ul class="dropdown-menu">
-<li class="dropdown-header visible-after" data-visible-after="2019071109">Sabah</li>
-<li class="visible-after" data-visible-after="2019071009">
-<a href="../../../tr/projects/sandcastles.html">Kumdan Kaleler</a>
-</li>
-<li class="visible-after" data-visible-after="2019071009">
-<a href="../../../tr/projects/subtractNum.html">Subtract Numbers</a>
-</li>
-<li class="divider visible-after" data-visible-after="2019071109" />
-<li class="dropdown-header visible-after" data-visible-after="2019071109">Akşam</li>
-<li class="visible-after" data-visible-after="2019071009">
-<a href="../../../tr/projects/runningSum.html">Topla ve Biriktir</a>
-</li>
-<li class="visible-after" data-visible-after="2019071009">
-<a href="../../../tr/projects/8ball.html">8 Numaralı Top</a>
-</li>
-<li class="visible-after" data-visible-after="2019071009">
-<a href="../../../tr/projects/viralVideo.html">Viral Video</a>
-</li>
-<li class="visible-after" data-visible-after="2019071013">
-<a href="../../../tr/projects/khansole.html">Khansole Akademi</a>
-</li>
-</ul>
-</li>
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../../slides/IntroPython_Variables.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../../starter/lectures/Lecture4.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+</ul>					</li>
+					
+					<!-- Bonus -->
+					<ul class="nav navbar-nav">
+						<li><a href="../../../tr/bonus-index.html">Bonus</a></li>
+					</ul>
 
-<!-- Day 4 -->
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">4. For Döngüleri</a>
-<ul class="dropdown-menu">
-<li class="dropdown-header visible-after" data-visible-after="2019071209">Sabah</li>
-<li class="visible-after" data-visible-after="2019071013">
-<a href="../../../tr/projects/someSum.html">Toplama Diye Buna Derim</a>
-</li>
-<li class="visible-after" data-visible-after="2019071013">
-<a href="../../../tr/projects/nimm.html">Antik Nimm Oyunu</a>
-</li>
-</ul>
-</li>
+					<!-- TA Link -->
 
-<!-- Day 5 -->
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">5. Grafikler/Fonksiyonlar</a>
-<ul class="dropdown-menu">
-<li class="dropdown-header visible-after" data-visible-after="2019071509">Sabah</li>
-<li class="visible-after" data-visible-after="2019071109">
-<a href="../../../tr/projects/awesome.html">Programlamak Bir Harika</a>
-</li>
-<li class="visible-after" data-visible-after="2019071113">
-<a href="../../../tr/projects/randomCircles.html">Rastgele Daireler</a>
-</li>
-<li class="dropdown-header visible-after" data-visible-after="2019071509">Akşam</li>
-<li class="visible-after" data-visible-after="2019071113">
-<a href="../../../tr/projects/funkyFunctions.html">Fırlama Fonksiyonlar</a>
-</li>
-<li class="visible-after" data-visible-after="2019071113">
-<a href="../../../tr/projects/fizzbuzz.html">CızBız</a>
-</li>
-<li class="visible-after" data-visible-after="2019071212">
-<a href="../../../tr/projects/target.html">Hedef Tahtası</a>
-</li>
-<li class="visible-after" data-visible-after="2019071112">
-<a href="../../../tr/projects/stringArt.html">Çizgi Sanatı</a>
-</li>
-</ul>
-</li>
+				</ul>
 
-<!-- Day 6 -->
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">6. Döngüler/Animasyon</a>
-<ul class="dropdown-menu">
-<li class="dropdown-header visible-after" data-visible-after="2019071509">Sabah</li>
-<li class="visible-after" data-visible-after="2019071112">
-<a href="../../../tr/projects/indexCounter.html">İndeks Sayacı</a>
-</li>
-<li class="visible-after" data-visible-after="2019071213">
-<a href="../../../tr/projects/illusion.html">Optik İllüzyon</a>
-</li>
-<li class="dropdown-header visible-after" data-visible-after="2019071509">Akşam</li>
-<li class="visible-after" data-visible-after="2019071112">
-<a href="../../../tr/projects/mysterySquare.html">Gizemli Kare</a>
-</li>
-<li class="visible-after" data-visible-after="2019071113">
-<a href="../../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
-</li>
-<li class="visible-after" data-visible-after="2019071213">
-<a href="../../../tr/projects/sunset.html">Kısa Film</a>
-</li>
-</ul>
-</li>
+				<!-- Language toggle button -->
+				<ul class="nav navbar-nav navbar-right">
+						<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../../img/english_flag.png"></img></a></li>
+				</ul>
 
-<!-- Day 7 -->
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">7. Mouse/Listeler</a>
-<ul class="dropdown-menu">
-<li class="dropdown-header visible-after" data-visible-after="2019071509">Sabah</li>
-<li class="visible-after" data-visible-after="2019071509">
-<a href="../../../tr/projects/mouseLocation.html">Farenin Konumu</a>
-</li>
-<li class="visible-after" data-visible-after="2019071509">
-<a href="../../../tr/projects/makingTracks.html">İz Çıkartmaca</a>
-</li>
-<li class="dropdown-header visible-after" data-visible-after="2019071509">Akşam</li>
-<li class="visible-after" data-visible-after="2019071512">
-<a href="../../../tr/projects/isAscending.html">Yükseliyor</a>
-</li>
-<li class="visible-after" data-visible-after="2019071512">
-<a href="../../../tr/projects/sorted.html">Sıralayıcı</a>
-</li>
-<li class="visible-after" data-visible-after="2019071712">
-<a href="../../../tr/projects/snow.html">Karlar Düşer</a>
-</li>
-<li class="visible-after" data-visible-after="2019071712">
-<a href="../../../tr/projects/mouseGame.html">[İsteğe Bağlı] Çizgi Oyunu</a>
-</li>
-<li class="visible-after" data-visible-after="2019071712">
-<a href="../../../tr/projects/music.html">[İsteğe Bağlı] Ses Dalgaları</a>
-</li>
-</ul>
-</li>
-
-<!-- Day 8-9 -->
-<li class="visible-after" data-visible-after="2019071513">
-<a href="../../../tr/projects/breakout.html">Breakout</a>
-</li>
-
-<!-- Day 10 -->
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">10. Sözlük&#39;ler</a>
-<ul class="dropdown-menu">
-<li class="visible-after" data-visible-after="2019071513">
-<a href="../../../tr/projects/phoneBook.html">Telefon Rehberi</a>
-</li>
-</ul>
-</li>
-
-<!-- Day end -->
-<li class="visible-after" data-visible-after="2019071513">
-<a href="../../../tr/projects/project.html">Kendi Projenizi Yaratın</a>
-</li>
-</ul>
-</li>
-
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Örnekler <b class="caret"></b></a>
-<ul class="dropdown-menu">
-<li class="dropdown-submenu">
-<a tabindex"-1" href="#">1. Karel</a>
-<ul class="dropdown-menu">
-<li><a href="../../../tr/projects/stepUp/index.html">Öne Çık</a></li>
-<li><a href="../../../tr/projects/place100/index.html">100 Tane Yerleştir</a></li>
-</ul>
-</li>
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">2. Kontrol Akışı</a>
-<ul class="dropdown-menu">
-<li><a href="../../../tr/projects/beeperLine/index.html">Beeper Hattı</a></li>
-<li><a href="../../../tr/projects/invertBeeper/index.html">Ters Çevir</a></li>
-<li><a href="../../../tr/projects/unKarel/index.html">İnsani Yardım Karel&#39;ı</a></li>
-<li><a href="../../../tr/projects/banishWinter/index.html">Kışa Veda</a></li>
-</ul>
-</li>
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">3. Değişkenler</a>
-<ul class="dropdown-menu">
-<li><a href="../../../tr/projects/emc2/index.html">E=MC<sup>2</sup></a></li>
-<li><a href="../../../tr/projects/fibonacci/index.html">Fibonacci</a></li>
-<li><a href="../../../tr/projects/findPi/index.html">Pi&#39;yi Bul</a></li>
-<!-- Used to be a main course component -->
-<li><a href="../../../tr/projects/favoriteNumber/index.html">Favori Sayım</a></li>
-</ul>
-</li>
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">4. For döngüleri</a>
-<ul class="dropdown-menu">
-<li><a>Takipte Kalın!</a></li>
-</ul>
-</li>
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">5. Grafikler/Fonksiyonlar</a>
-<ul class="dropdown-menu">
-<li><a href="../../../tr/projects/robotFace/index.html">Robot Yüzü</a></li>
-<li><a href="../../../tr/projects/halfGretr/index.html">Yarısı Yeşil</a></li>
-<!-- Used to be a main course component -->
-<li><a href="../../../tr/projects/average/index.html">Ortalama Fonksiyonu</a></li>
-<li><a href="../../../tr/projects/divisible/index.html">Bölünebilirlik</a></li>
-<li><a href="../../../tr/projects/drawPeople/index.html">İnsan Çiz</a></li>
-<li><a href="../../../tr/projects/medicine/index.html">Sahte İlaç</a></li>
-</ul>
-</li>
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">6. Döngüler/Animasyon</a>
-<ul class="dropdown-menu">
-<li><a href="../../../tr/projects/moveToCenter/index.html">Merkeze Git</a></li>
-<li><a href="../../../tr/projects/gravityBall/index.html">Seken Top</a></li>
-</ul>
-</li>
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">7. Mouse/Listeler</a>
-<ul class="dropdown-menu">
-<li><a href="../../../tr/projects/stampTool/index.html">Damga Makinesi</a></li>
-<li><a href="../../../tr/projects/holePuncher/index.html">Delgeç</a></li>
-<li><a href="../../../tr/projects/debrisSweeper/index.html">Enkazı Kaldır</a></li>
-<li><a href="../../../tr/projects/suchADrag/index.html">Ne Kaydırma Ama</a></li>
-<li><a href="../../../tr/projects/keyboardKarel/index.html">Klavye Karel</a></li>
-<li><a href="../../../tr/projects/rocketPaddle/index.html">Roket Atar</a></li>
-</ul>
-</li>
-</ul>
-</li>
-
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sunumlar <b class="caret"></b></a>
-<ul class="dropdown-menu">
-<li><a href="../../../slides/Welcome.pdf">1. Karel</a></li>
-<li><a href="../../../slides/ControlFlow.pdf">2. Kontrol Akışı (Sunum)</a></li>
-<li><a href="../../../starter/ControlFlow.zip">2. Kontrol Akışı (Kod)</a></li>
-<li><a href="../../../slides/IntroPython_Variable_Math_RandomNumbers.pdf">3. Değişkenler (Sunum)</a></li>
-<li><a href="../../../starter/Day3-Variables.zip">3. Değişkenler (Kod)</a></li>
-<li><a href="../../../slides/Graphics.pdf">Grafikler (Sunum)</a></li>
-<li><a href="../../../starter/Graphics.zip">Grafikler (Kod)</a></li>
-<li><a href="../../../slides/Animation.pdf">Animasyon</a></li>
-<li><a href="../../../slides/Methods.pdf">Fonksiyonlar</a></li>
-<li><a href="../../../slides/NestedLoops.pdf">İç İçe Döngüler</a></li>
-<li><a href="../../../slides/Events.pdf">Event&#39;ler (Sunum)</a></li>
-<li><a href="../../../starter/Events.zip">Event&#39;ler (Kod)</a></li>
-<li><a href="../../../slides/Breakout.pdf">Breakout</a></li>
-<li><a href="../../../slides/Beyond-CSBridge.pdf">CSBridge&#39;in Ötesine!</a></li>
-</ul>
-</li>
-
-<!--
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Formlar <b class="caret"></b></a>
-<ul class="dropdown-menu">
-<li><a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Anket</a></li>
-<li><a href="https://forms.gle/eVsMyZb8HCSUETeV6">Laboratuvara Kaydol</a></li>
-</ul>
-</li>
--->
-
-
-<!-- Bonus button -->
-<ul class="nav navbar-nav">
-<li><a href="../../../tr/bonus-index.html">Bonus</a></li>
-</ul>
-
-<!-- TA Link -->
-
-</ul>
-
-
-<ul class="nav navbar-nav navbar-right">
-<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../../img/english_flag.png"></img></a></li>
-<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../../img/turkish_flag.png"></img></a></li>
-
-</ul>
-</div><!-- /.navbar-collapse -->
-</div>
-</div><!-- /.container-fluid -->
+			</div>
+		</div>
+	</div>
 </nav>
 
+<!-- Script to toggle between languages -->
 <script>
-
-function changeToTurkish() {
-    var url = window.location.href;
-    url = url.replace("/en/", "/tr/");
-    window.location.href = url;
-}
-
-function changeToEnglish() {
-    var url = window.location.href;
-    url = url.replace("/tr/", "/en/");
-    window.location.href = url;
-}
-
-</script>
-  
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+	
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+</script>  
   <div class="container">
   	
   	<!--
@@ -457,7 +491,7 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../../en/resources/karel.html">Karel Reference</a><br/>
+		<p>Handouts: <a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a><br/>
 File: <code>invert_beeper.py</code><br/></p>
 <p>Beeper'ların -her karede en fazla bir tane olacak şekilde- rastgele dağıtıldığı herhangi boyuttaki bir dünyadaki beeper'ları tersine çevirin. Yani, daha önceden beeper olan bir yerde artık beeper olmasın ve önceden beeper olmayan bir karede artık beeper olsun. Aşağıdaki örneği göz önünde bulundurabilirsiniz.</p>
 <p><center>

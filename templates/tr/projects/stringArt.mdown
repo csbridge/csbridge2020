@@ -3,7 +3,7 @@ title: Çizgi Sanatı
 credit: Eric Roberts'ın bir gösterimi temel alınmıştır.
 translation: Serhat Arslan, Ceren Kocaoğullar
 
-Ders Notları: [Grafik Referansı]({{pathToRoot}}en/resources/graphics.html)<br/>
+Ders Notları: [Grafik Referansı]({{pathToRoot}}tr/resources/graphics.html)<br/>
 
 Tekrar tekrar çizgiler çizerek, kavisli görünen bir şekil yaratabiliriz. Kanvasın (canvas) altı ve solu boyunca eşit aralıklarla ayrılmış noktaları hayal ettiğimiz aşağıdaki örneğe bakalım. Eğer sol kenarda en üstteki nokta ile alt kenarda en soldaki noktayı birleştirirsek, soldaki resimdeki doğru oluşur. Eğer sıradaki 10 noktayı da aynı şekilde birleştirirsek ortadaki resmi ve bütün noktaları birleştirirsek sağdaki resmi elde ederiz.
 
@@ -22,6 +22,6 @@ Doğruları kullanarak üstte sağdaki resimdeki "eğriyi" yaratan bir program y
 
   Bu program, döngü değişkeni `i` kullanılan tek bir`for` döngüsü ile tamamlanabilir. Nasıl olduğunu görüyor musunuz? (İpucu: Sol kenardaki en üstteki noktanın _yalnızca_ alt kenardaki en soldaki noktaya bağlanabileceğini biliyoruz. Diyelim ki bu `i = 0` olduğunda çizdiğimiz çizgi. `i = 1` olduğunda neler olur? Sol kenarın üstündeki ikinci nokta, alt kenardaki yalnızca belirli bir noktaya bağlanabilir! Ve bu şekilde devam eder...)
 
-- [Grafik Referansı]({{pathToRoot}}en/resources/graphics.html) ("Show/Hide Quick Reference" butonuna basın) kanvas üzerine nasıl çizgi çizileceği konusunda işinize yarayabilir.
+- [Grafik Referansı]({{pathToRoot}}tr/resources/graphics.html) ("Show/Hide Quick Reference" butonuna basın) kanvas üzerine nasıl çizgi çizileceği konusunda işinize yarayabilir.
 
 - Fikrinizi çizmek için bir kalem ve kağıt kullanın! Bilgisayarı kullanarak kod yazmamıza rağmen, bazen ilk önce ne olduğunu düşündüğünüzü çizmek ve sonra kodu yazmak yararlı olabilir.

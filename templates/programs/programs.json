@@ -1,7 +1,20 @@
 [
     {
         "evening": {
-            "programs": [
+            "examples": [
+                {
+                    "title_en": "Step Up",
+                    "title_tr": "Öne Çık",
+                    "url": "projects/stepUp/"
+                },
+                {
+                    "title_en": "Place 100",
+                    "title_tr": "100 Tane Yerleştir",
+                    "url": "projects/place100/"
+                }
+            ],
+            "projectURL": "starter/Day1PM.zip",
+            "projects": [
                 {
                     "imageURL": "img/icons/newspaper.jpg",
                     "teachURL": "teach/notes/collectNewspaper.html",
@@ -22,15 +35,33 @@
                     "type": "section",
                     "url": "projects/arches.html"
                 }
-            ],
-            "projectURL": "starter/Day1PM.zip"
+            ]
         },
         "title_en": "Karel",
-        "title_tr": "Karel"
+        "title_tr": "Karel",
+        "bonus": false
     },
     {
         "evening": {
-            "programs": [
+            "examples": [
+                {
+                    "title_en": "Invert Beeper",
+                    "title_tr": "Ters Çevir",
+                    "url": "projects/invertBeeper/"
+                },
+                {
+                    "title_en": "UN Karel",
+                    "title_tr": "İnsani Yardım Karel'ı",
+                    "url": "projects/unKarel/"
+                },
+                {
+                    "title_en": "Banish Winter",
+                    "title_tr": "Kışa Veda",
+                    "url": "projects/banishWinter/"
+                }
+            ],
+            "projectURL": "starter/Day2PM.zip",
+            "projects": [
                 {
                     "imageURL": "img/icons/stripeKarel.png",
                     "teachURL": "teach/notes/stripeKarel.html",
@@ -62,11 +93,18 @@
                     "url": "projects/randomPainter.html"
                 }
             ],
-            "projectURL": "starter/Day2PM.zip",
             "visible_after": "2020080509"
         },
         "morning": {
-            "programs": [
+            "examples": [
+                {
+                    "title_en": "Beeper Line",
+                    "title_tr": "Beeper Hattı",
+                    "url": "projects/beeperLine/"
+                }
+            ],
+            "projectURL": "starter/Day2AM.zip",
+            "projects": [
                 {
                     "imageURL": "img/icons/placeSquare.png",
                     "teachURL": "teach/notes/placeSquare.html",
@@ -87,8 +125,7 @@
                     "type": "project",
                     "url": "projects/mountain.html"
                 }
-            ],
-            "projectURL": "starter/Day2AM.zip"
+            ]
         },
         "title_en": "Karel and Control Flow",
         "title_tr": "Karel ve Kontrol Akışı",
@@ -96,7 +133,25 @@
     },
     {
         "evening": {
-            "programs": [
+            "examples": [
+                {
+                    "title_en": "Fibonacci",
+                    "title_tr": "Fibonacci",
+                    "url": "projects/fibonacci/"
+                },
+                {
+                    "title_en": "Find Pi",
+                    "title_tr": "Pi'yi Bul",
+                    "url": "projects/findPi/"
+                },
+                {
+                    "title_en": "Favorite Number",
+                    "title_tr": "Favori Sayım",
+                    "url": "projects/favoriteNumber/"
+                }
+            ],
+            "projectURL": "starter/Day3PM.zip",
+            "projects": [
                 {
                     "imageURL": "img/icons/areaCalculator.png",
                     "title_en": "Area Calculator",
@@ -134,11 +189,18 @@
                     "url": "projects/khansole.html"
                 }
             ],
-            "projectURL": "starter/Day3PM.zip",
             "visible_after": "2020080609"
         },
         "morning": {
-            "programs": [
+            "examples": [
+                {
+                    "title_en": "E=MC²",
+                    "title_tr": "E=MC²",
+                    "url": "projects/emc2/"
+                }
+            ],
+            "projectURL": "starter/Day3AM.zip",
+            "projects": [
                 {
                     "imageURL": "img/icons/sandcastle.jpg",
                     "title_en": "Sandcastles",
@@ -157,8 +219,7 @@
                     "type": "project",
                     "url": "projects/runningSum.html"
                 }
-            ],
-            "projectURL": "starter/Day3AM.zip"
+            ]
         },
         "title_en": "Variables",
         "title_tr": "Değişkenler",
@@ -166,10 +227,11 @@
     },
     {
         "morning": {
-            "programs": [
+            "projectURL": "starter/Day4AM.zip",
+            "projects": [
                 {
                     "imageURL": "img/icons/someSum.png",
-                    "title_en": "That's Some Sum",
+                    "title_en": "That's Some Sum!",
                     "title_tr": "Toplama Diye Buna Derim!",
                     "topic_en": "Loop variables",
                     "topic_tr": "Döngü değişkenleri",
@@ -185,8 +247,7 @@
                     "type": "project",
                     "url": "projects/carbonDating.html"
                 }
-            ],
-            "projectURL": "starter/Day4AM.zip"
+            ]
         },
         "title_en": "For loops, deconstructed",
         "title_tr": "For döngüsü ve analizi",

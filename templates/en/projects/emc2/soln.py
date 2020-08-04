@@ -1,15 +1,16 @@
 """
-File: EMC2
+File: emc2.py
 -------------------
 This program helps users calculate how much energy they could
 get if they transformed their mass. Thanks Einstein!
 """
 
-# This declares a constant... it can never change value.
-# Speed of light in m/s
-C = 299792458;
+# This declares a constant for the speed of light in meters per second.
+C = 299792458
+
 
 def main():
+    # Loop forever
     while True:
         # Read the mass in from the user.
         mass_in_kg = float(input("Enter kilos of mass: "))
@@ -23,6 +24,7 @@ def main():
         print("C = " + str(C) + "m/s")
         print(str(energy_in_joules) + " joules of energy!")
         print()
+
 
 if __name__ == '__main__':
     main()

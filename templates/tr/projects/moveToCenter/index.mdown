@@ -4,7 +4,7 @@ credit: Chris ve Julia tarafından yazıldı.
 translation: Serhat Arslan, Demet Tümkaya
 solution: soln.py
 
-Ders Notları: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
+Ders Notları: [Graphics Reference]({{pathToRoot}}tr/resources/graphics.html)<br/>
 
 Bu program, bir kareyi ekranın merkezine ulaşana kadar hareket ettirir. Kare, sol taraftan başlar.
 

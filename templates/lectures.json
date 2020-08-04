@@ -1,0 +1,16 @@
+[
+	{
+		"title_en": "Karel",
+		"title_tr": "Karel",
+		"slidesURL": "slides/Lecture1.pdf",
+		"codeURL": "starter/lectures/Lecture1.zip",
+		"visible_after": "2020080409",
+
+		"title_en": "Variable",
+		"title_tr": "Değişkenler",
+		"slidesURL": "slides/IntroPython_Variables.pdf",
+		"codeURL": "starter/lectures/Lecture4.zip",
+		"visible_after": "2020080309"
+	}
+
+]

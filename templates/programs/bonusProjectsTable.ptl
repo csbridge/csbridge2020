@@ -1,0 +1,97 @@
+<%
+"""
+This template renders a table of bonus projects based on the bonusPrograms.json file.
+See the README for an in-depth description of the expected format of that file.
+
+This template expects one provided parameter, "lang", which should be the language
+code to display the content in.  Currently "en" (English) and "tr" (Turkish) are supported.
+"""
+%>
+
+<%
+	# Read the data from the JSON file
+	import json
+	with open("templates/programs/bonusPrograms.json", "r", encoding="utf8") as programs_file:
+  		data = json.load(programs_file)
+%>
+
+<table class="table table-striped">
+	% for topic_info in data:
+
+		<!-- The head of the table should show the topic title and starter code link -->
+		<thead
+			% if not get('taMode', False) and "visible_after" in topic_info:
+				class="visible-after" data-visible-after="{{topic_info["visible_after"]}}"
+			% end
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b><h4>{{topic_info["title_" + lang]}}
+					<% 
+						project_translation = "NO TRANSLATION"
+						if lang == "tr":
+							project_translation = "Projesi"
+						elif lang == "en":
+							project_translation = "Project"
+						end
+
+						link_translation = "NO TRANSLATION"
+						if lang == "tr":
+							link_translation = "burada"
+						elif lang == "en":
+							link_translation = "here"
+						end
+
+					%>
+					({{project_translation}} [<a href="{{pathToRoot}}{{topic_info['projectURL']}}">{{link_translation}}</a>])</h4>
+				</th>
+			</tr>
+
+			<tr>
+				<th>Picture</th>
+				<th>Name</th>
+				<th>Difficulty</th>
+			</tr>
+		</thead>
+
+  		<!-- Display the bonus projects for this topic -->
+  		<tbody
+  			% if not get('taMode', False) and "visible_after" in topic_info:
+				class="visible-after" data-visible-after="{{topic_info['visible_after']}}"
+			% end
+  		>
+      		% for project in topic_info["projects"]:
+      			<tr>
+      				<!-- Project image -->
+      			    <td>	
+      			    	<img class="projectImg" src="{{pathToRoot}}{{project['imageURL']}}" />
+      				</td>
+
+      				<!-- Project name and link -->
+      				<td>
+      					<a href="{{pathToRoot}}{{lang}}/{{project['url']}}">
+      						{{project['title_' + lang]}}
+      					</a>
+      					% if get('taMode', False) and "teachURL" in project:
+      						<br><a href="{{pathToRoot}}{{project['teachURL']}}">SL Notes</a>
+      					% end
+      				</td>
+
+      				<!-- Project difficulty -->
+      				<td>
+      					% for i in range(project["difficulty"]):
+      						<!-- Filled star -->
+      						&#9733;
+      					% end
+      					% for i in range(3 - project["difficulty"]):
+      						<!-- Empty star -->
+      						&#9734;
+      					% end
+      				</td>
+      			</tr>
+      		% end
+      	</tbody>
+	% end
+
+</table>

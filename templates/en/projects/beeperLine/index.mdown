@@ -3,7 +3,7 @@ title: Beeper Line
 credit: Written by Chris Piech
 solution: soln.py
 
-Handouts: [Karel Reference]({{pathToRoot}}en/handouts/karel.html)<br/>
+Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
 File: `beeper_line.py`
 
 Your goal is to fill the first row of Karel's world with beepers. You can assume that Karel starts in the bottom left corner, facing east. For example, if you ran your program on the world on the left, it should produce the world on the right.

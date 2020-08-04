@@ -2,8 +2,8 @@ template: templates/en/projects/projectTemplate.ptl
 title: Arches Karel
 credit: Lisa Yan
 
-Handouts: [KarelReference]({{pathToRoot}}en/resources/karel.html)<br/>
-Worked Example: [Place100]({{pathToRoot}}en/projects/place100.html)<br/>
+Handouts: [KarelReference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+Worked Example: [Place100]({{pathToRoot}}en/projects/place100)<br/>
 Day1: `arches_karel.py`
 
 Karel has been hired to build the arches done to the Stanford Main Quad in the 1989 Loma Prieta earthquake. Or use your imagination! Karel has been hired to build the columns of the Charles Bridge, or the columns in the Temple of Artemis in Efes. In particular, there are a set of arches where the stones (represented by beepers, of course) are missing as below:

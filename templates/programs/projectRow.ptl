@@ -1,0 +1,54 @@
+<%
+"""
+This template renders a single project in the project table.
+
+This template expects two provided parameters, "lang", which should be the language
+code to display the content in - currently "en" (English) and "tr" (Turkish) are supported,
+and "project", a Python object representing a single project.  See the README for an in-depth 
+description of the expected format of this project object.
+"""
+%>
+
+<td>
+	<img class="projectImg" src="{{pathToRoot}}{{project['imageURL']}}" />
+</td>
+<td>
+	<a href="{{pathToRoot}}{{lang}}/{{project['url']}}">{{project["title_" + lang]}}</a>
+    <br/>
+
+    <%
+        """
+        The type can be "quickstart", "section" or "project". Depending
+        on the type, render a different badge displaying its type, translated.
+        """
+    	label_class = ""
+    	label_text = "NOT TRANSLATED"
+    	if project["type"] == "quickstart":
+    		label_class = "label-default"
+    		if lang == "tr":
+    			label_text = "Hızlı Başlangıç"
+    		elif lang == "en":
+    			label_text = "Quickstart"
+    		end
+    	elif project["type"] == "section":
+    		label_class = "label-primary"
+    		if lang == "tr":
+    			label_text = "Grup"
+    		elif lang == "en":
+    			label_text = "Section"
+    		end
+    	elif project["type"] == "project":
+    		label_class = "label-success"
+    		if lang == "tr":
+    			label_text = "Proje"
+    		elif lang == "en":
+    			label_text = "Project"
+    		end
+    	end
+    %>
+    <span class="label {{label_class}}">{{label_text}}</span>	
+    % if get('taMode', False) and "teachURL" in project:
+    	<br><a href="{{pathToRoot}}{{project['teachURL']}}">SL Notes</a>
+    % end				
+</td>
+<td>{{project["topic_" + lang]}}</td>

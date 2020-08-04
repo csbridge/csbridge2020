@@ -1,0 +1,55 @@
+<%
+"""
+This template renders a list of lecture materials based on the lectures.json file.
+See the README for an in-depth description of the expected format of that file.
+
+This template expects one provided parameter, "lang", which should be the language
+code to display the content in.  Currently "en" (English) and "tr" (Turkish) are supported.
+"""
+%>
+
+<ul class="dropdown-menu">
+
+	<%
+		# Read the data from the JSON file
+		import json
+		with open("templates/lectures.json", "r", encoding="utf8") as lectures_file:
+	  		data = json.load(lectures_file)
+	%>
+
+	<!-- This dropdown should display one element for each lecture -->
+	% for i, lecture_info in enumerate(data):
+		<li 
+			% if "visible_after" in lecture_info:
+				class="dropdown-submenu visible-after" data-visible-after="{{lecture_info["visible_after"]}}"
+			% else:
+				class="dropdown-submenu"
+			% end
+		>
+			<a tabindex="-1" href="#">{{i + 1}}: {{lecture_info["title_" + lang]}}</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+				% for content_type in ["slides", "code"]:
+					% if (content_type + "URL") in lecture_info:
+						<li>
+							<%
+								translation = "NO TRANSLATION"
+	      						if lang == "tr":
+	      							if content_type == "slides":
+	      						 		translation = "Sunum"
+	      						 	elif content_type == "code":
+	      						 		translation = "Kod"
+	      						 	end
+	      						elif lang == "en":
+	      							translation = content_type.capitalize()
+	      						end
+	      					%>
+	      					<a href="{{pathToRoot}}{{lecture_info[content_type + 'URL']}}">{{translation}}</a>
+						</li>
+					% end
+				% end
+			</ul>
+		</li>
+	% end
+</ul>

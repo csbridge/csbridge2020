@@ -16,9 +16,30 @@ In the 13th century, the Italian mathematician Leonardo Fibonacci, as a way to e
 
 Write a program that displays the terms in the Fibonacci sequence, starting with Fib(0) and continuing as long as the terms are less than 10,000.  Thus, your program should produce the following sample run:
 
-<center>
-<img style="width:400px" src="{{pathToRoot}}img/projects/fib/demo.png">	
-</center>
+```
+This program lists the Fibonacci sequence.
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
+6765
+```
 
 This program should continue as long as the value of the term is less than the maximum value. To do this, you should use a while loop, presumably with a header line that looks like this:
 
