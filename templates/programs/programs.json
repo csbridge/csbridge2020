@@ -1,256 +1,256 @@
 [
-    {
-        "evening": {
-            "examples": [
-                {
-                    "title_en": "Step Up",
-                    "title_tr": "Öne Çık",
-                    "url": "projects/stepUp/"
-                },
-                {
-                    "title_en": "Place 100",
-                    "title_tr": "100 Tane Yerleştir",
-                    "url": "projects/place100/"
-                }
-            ],
-            "projectURL": "starter/Day1PM.zip",
-            "projects": [
-                {
-                    "imageURL": "img/icons/newspaper.jpg",
-                    "teachURL": "teach/notes/collectNewspaper.html",
-                    "title_en": "Collect Newspaper",
-                    "title_tr": "Gazete Alma",
-                    "topic_en": "Functions",
-                    "topic_tr": "Functions",
-                    "type": "quickstart",
-                    "url": "projects/collectNewspaper.html"
-                },
-                {
-                    "imageURL": "img/icons/charles.jpg",
-                    "teachURL": "teach/notes/arches.html",
-                    "title_en": "Arches Karel",
-                    "title_tr": "Sütun Tamircisi",
-                    "topic_en": "For Loops",
-                    "topic_tr": "For Döngüleri",
-                    "type": "section",
-                    "url": "projects/arches.html"
-                }
-            ]
+  {
+    "evening": {
+      "examples": [
+        {
+          "title_en": "Step Up",
+          "title_tr": "Öne Çık",
+          "url": "projects/stepUp/"
         },
-        "title_en": "Karel",
-        "title_tr": "Karel",
-        "bonus": false
+        {
+          "title_en": "Place 100",
+          "title_tr": "100 Tane Yerleştir",
+          "url": "projects/place100/"
+        }
+      ],
+      "projectURL": "starter/Day1PM.zip",
+      "projects": [
+        {
+          "imageURL": "img/icons/newspaper.jpg",
+          "teachURL": "teach/notes/collectNewspaper.html",
+          "title_en": "Collect Newspaper",
+          "title_tr": "Gazete Alma",
+          "topic_en": "Functions",
+          "topic_tr": "Fonksiyonlar",
+          "type": "quickstart",
+          "url": "projects/collectNewspaper.html"
+        },
+        {
+          "imageURL": "img/icons/charles.jpg",
+          "teachURL": "teach/notes/arches.html",
+          "title_en": "Arches Karel",
+          "title_tr": "Sütun Tamircisi",
+          "topic_en": "For Loops",
+          "topic_tr": "For Döngüleri",
+          "type": "section",
+          "url": "projects/arches.html"
+        }
+      ]
     },
-    {
-        "evening": {
-            "examples": [
-                {
-                    "title_en": "Invert Beeper",
-                    "title_tr": "Ters Çevir",
-                    "url": "projects/invertBeeper/"
-                },
-                {
-                    "title_en": "UN Karel",
-                    "title_tr": "İnsani Yardım Karel'ı",
-                    "url": "projects/unKarel/"
-                },
-                {
-                    "title_en": "Banish Winter",
-                    "title_tr": "Kışa Veda",
-                    "url": "projects/banishWinter/"
-                }
-            ],
-            "projectURL": "starter/Day2PM.zip",
-            "projects": [
-                {
-                    "imageURL": "img/icons/stripeKarel.png",
-                    "teachURL": "teach/notes/stripeKarel.html",
-                    "title_en": "Stripe Karel",
-                    "title_tr": "Şerit Karel",
-                    "topic_en": "Nested Loops",
-                    "topic_tr": "İç İçe Döngüler",
-                    "type": "quickstart",
-                    "url": "projects/stripeKarel.html"
-                },
-                {
-                    "imageURL": "img/icons/hospitalKarel.png",
-                    "teachURL": "teach/notes/hospitalKarel.html",
-                    "title_en": "Hospital Karel",
-                    "title_tr": "Hastaneci Karel",
-                    "topic_en": "Nested Loops",
-                    "topic_tr": "İç İçe Döngüler",
-                    "type": "section",
-                    "url": "projects/hospitalKarel.html"
-                },
-                {
-                    "imageURL": "img/icons/randomPainter2.png",
-                    "teachURL": "teach/notes/randomPainter.html",
-                    "title_en": "Random Painter",
-                    "title_tr": "Deli Ressam",
-                    "topic_en": "If Statements",
-                    "topic_tr": "If İfadeleri",
-                    "type": "project",
-                    "url": "projects/randomPainter.html"
-                }
-            ],
-            "visible_after": "2020080509"
+    "title_en": "Karel",
+    "title_tr": "Karel",
+    "bonus": false
+  },
+  {
+    "evening": {
+      "examples": [
+        {
+          "title_en": "Invert Beeper",
+          "title_tr": "Ters Çevir",
+          "url": "projects/invertBeeper/"
         },
-        "morning": {
-            "examples": [
-                {
-                    "title_en": "Beeper Line",
-                    "title_tr": "Beeper Hattı",
-                    "url": "projects/beeperLine/"
-                }
-            ],
-            "projectURL": "starter/Day2AM.zip",
-            "projects": [
-                {
-                    "imageURL": "img/icons/placeSquare.png",
-                    "teachURL": "teach/notes/placeSquare.html",
-                    "title_en": "Place Square",
-                    "title_tr": "Kare Yerleştir",
-                    "topic_en": "While Loops",
-                    "topic_tr": "While Döngüsü",
-                    "type": "quickstart",
-                    "url": "projects/placeSquare.html"
-                },
-                {
-                    "imageURL": "img/icons/mountain.png",
-                    "teachURL": "teach/notes/mountain.html",
-                    "title_en": "Mountain Karel",
-                    "title_tr": "Dağcı Karel",
-                    "topic_en": "While Loops",
-                    "topic_tr": "While Döngüsü",
-                    "type": "project",
-                    "url": "projects/mountain.html"
-                }
-            ]
+        {
+          "title_en": "UN Karel",
+          "title_tr": "İnsani Yardım Karel'ı",
+          "url": "projects/unKarel/"
         },
-        "title_en": "Karel and Control Flow",
-        "title_tr": "Karel ve Kontrol Akışı",
-        "visible_after": "2020080500"
+        {
+          "title_en": "Banish Winter",
+          "title_tr": "Kışa Veda",
+          "url": "projects/banishWinter/"
+        }
+      ],
+      "projectURL": "starter/Day2PM.zip",
+      "projects": [
+        {
+          "imageURL": "img/icons/stripeKarel.png",
+          "teachURL": "teach/notes/stripeKarel.html",
+          "title_en": "Stripe Karel",
+          "title_tr": "Şerit Karel",
+          "topic_en": "Nested Loops",
+          "topic_tr": "İç İçe Döngüler",
+          "type": "quickstart",
+          "url": "projects/stripeKarel.html"
+        },
+        {
+          "imageURL": "img/icons/hospitalKarel.png",
+          "teachURL": "teach/notes/hospitalKarel.html",
+          "title_en": "Hospital Karel",
+          "title_tr": "Hastaneci Karel",
+          "topic_en": "Nested Loops",
+          "topic_tr": "İç İçe Döngüler",
+          "type": "section",
+          "url": "projects/hospitalKarel.html"
+        },
+        {
+          "imageURL": "img/icons/randomPainter2.png",
+          "teachURL": "teach/notes/randomPainter.html",
+          "title_en": "Random Painter",
+          "title_tr": "Deli Ressam",
+          "topic_en": "If Statements",
+          "topic_tr": "If İfadeleri",
+          "type": "project",
+          "url": "projects/randomPainter.html"
+        }
+      ],
+      "visible_after": "2020080509"
     },
-    {
-        "evening": {
-            "examples": [
-                {
-                    "title_en": "Fibonacci",
-                    "title_tr": "Fibonacci",
-                    "url": "projects/fibonacci/"
-                },
-                {
-                    "title_en": "Find Pi",
-                    "title_tr": "Pi'yi Bul",
-                    "url": "projects/findPi/"
-                },
-                {
-                    "title_en": "Favorite Number",
-                    "title_tr": "Favori Sayım",
-                    "url": "projects/favoriteNumber/"
-                }
-            ],
-            "projectURL": "starter/Day3PM.zip",
-            "projects": [
-                {
-                    "imageURL": "img/icons/areaCalculator.png",
-                    "title_en": "Area Calculator",
-                    "title_tr": "Area Calculator",
-                    "topic_en": "Variables",
-                    "topic_tr": "Değişkenler",
-                    "type": "quickstart",
-                    "url": "projects/areaCalculator.html"
-                },
-                {
-                    "imageURL": "img/icons/8ball.png",
-                    "title_en": "8 Ball",
-                    "title_tr": "8 Ball",
-                    "topic_en": "Conditionals",
-                    "topic_tr": "Conditional'lar",
-                    "type": "section",
-                    "url": "projects/8ball.html"
-                },
-                {
-                    "imageURL": "img/icons/viralVideo.png",
-                    "title_en": "Viral Video",
-                    "title_tr": "Viral Video",
-                    "topic_en": "Conditionals",
-                    "topic_tr": "Conditional'lar",
-                    "type": "section",
-                    "url": "projects/viralVideo.html"
-                },
-                {
-                    "imageURL": "img/icons/khansole.png",
-                    "title_en": "Khansole Academy",
-                    "title_tr": "Khansole Akademi",
-                    "topic_en": "Conditionals",
-                    "topic_tr": "Conditional'lar",
-                    "type": "project",
-                    "url": "projects/khansole.html"
-                }
-            ],
-            "visible_after": "2020080609"
+    "morning": {
+      "examples": [
+        {
+          "title_en": "Beeper Line",
+          "title_tr": "Beeper Hattı",
+          "url": "projects/beeperLine/"
+        }
+      ],
+      "projectURL": "starter/Day2AM.zip",
+      "projects": [
+        {
+          "imageURL": "img/icons/placeSquare.png",
+          "teachURL": "teach/notes/placeSquare.html",
+          "title_en": "Place Square",
+          "title_tr": "Kare Yerleştir",
+          "topic_en": "While Loops",
+          "topic_tr": "While Döngüsü",
+          "type": "quickstart",
+          "url": "projects/placeSquare.html"
         },
-        "morning": {
-            "examples": [
-                {
-                    "title_en": "E=MC²",
-                    "title_tr": "E=MC²",
-                    "url": "projects/emc2/"
-                }
-            ],
-            "projectURL": "starter/Day3AM.zip",
-            "projects": [
-                {
-                    "imageURL": "img/icons/sandcastle.jpg",
-                    "title_en": "Sandcastles",
-                    "title_tr": "Kumdan Kaleler",
-                    "topic_en": "Variables",
-                    "topic_tr": "Değişkenler",
-                    "type": "quickstart",
-                    "url": "projects/sandcastles.html"
-                },
-                {
-                    "imageURL": "img/icons/runningSum.png",
-                    "title_en": "Run, Sum, Run!",
-                    "title_tr": "Topla ve Biriktir",
-                    "topic_en": "Variables",
-                    "topic_tr": "Değişkenler",
-                    "type": "project",
-                    "url": "projects/runningSum.html"
-                }
-            ]
-        },
-        "title_en": "Variables",
-        "title_tr": "Değişkenler",
-        "visible_after": "2020080600"
+        {
+          "imageURL": "img/icons/mountain.png",
+          "teachURL": "teach/notes/mountain.html",
+          "title_en": "Mountain Karel",
+          "title_tr": "Dağcı Karel",
+          "topic_en": "While Loops",
+          "topic_tr": "While Döngüsü",
+          "type": "project",
+          "url": "projects/mountain.html"
+        }
+      ]
     },
-    {
-        "morning": {
-            "projectURL": "starter/Day4AM.zip",
-            "projects": [
-                {
-                    "imageURL": "img/icons/someSum.png",
-                    "title_en": "That's Some Sum!",
-                    "title_tr": "Toplama Diye Buna Derim!",
-                    "topic_en": "Loop variables",
-                    "topic_tr": "Döngü değişkenleri",
-                    "type": "quickstart",
-                    "url": "projects/someSum.html"
-                },
-                {
-                    "imageURL": "img/icons/carbonDating.jpg",
-                    "title_en": "Carbon Dating",
-                    "title_tr": "Carbon Dating",
-                    "topic_en": "Loop variables",
-                    "topic_tr": "Döngü değişkenleri",
-                    "type": "project",
-                    "url": "projects/carbonDating.html"
-                }
-            ]
+    "title_en": "Karel and Control Flow",
+    "title_tr": "Karel ve Kontrol Akışı",
+    "visible_after": "2020080500"
+  },
+  {
+    "evening": {
+      "examples": [
+        {
+          "title_en": "Fibonacci",
+          "title_tr": "Fibonacci",
+          "url": "projects/fibonacci/"
         },
-        "title_en": "For loops, deconstructed",
-        "title_tr": "For döngüsü ve analizi",
-        "visible_after": "2020080700"
-    }
+        {
+          "title_en": "Find Pi",
+          "title_tr": "Pi'yi Bul",
+          "url": "projects/findPi/"
+        },
+        {
+          "title_en": "Favorite Number",
+          "title_tr": "Favori Sayım",
+          "url": "projects/favoriteNumber/"
+        }
+      ],
+      "projectURL": "starter/Day3PM.zip",
+      "projects": [
+        {
+          "imageURL": "img/icons/areaCalculator.png",
+          "title_en": "Area Calculator",
+          "title_tr": "Alan Hesaplayıcı",
+          "topic_en": "Variables",
+          "topic_tr": "Değişkenler",
+          "type": "quickstart",
+          "url": "projects/areaCalculator.html"
+        },
+        {
+          "imageURL": "img/icons/8ball.png",
+          "title_en": "8 Ball",
+          "title_tr": "8 Numaralı Top",
+          "topic_en": "Conditionals",
+          "topic_tr": "Conditional'lar",
+          "type": "section",
+          "url": "projects/8ball.html"
+        },
+        {
+          "imageURL": "img/icons/viralVideo.png",
+          "title_en": "Viral Video",
+          "title_tr": "Viral Video",
+          "topic_en": "Conditionals",
+          "topic_tr": "Conditional'lar",
+          "type": "section",
+          "url": "projects/viralVideo.html"
+        },
+        {
+          "imageURL": "img/icons/khansole.png",
+          "title_en": "Khansole Academy",
+          "title_tr": "Khansole Akademi",
+          "topic_en": "Conditionals",
+          "topic_tr": "Conditional'lar",
+          "type": "project",
+          "url": "projects/khansole.html"
+        }
+      ],
+      "visible_after": "2020080609"
+    },
+    "morning": {
+      "examples": [
+        {
+          "title_en": "E=MC²",
+          "title_tr": "E=MC²",
+          "url": "projects/emc2/"
+        }
+      ],
+      "projectURL": "starter/Day3AM.zip",
+      "projects": [
+        {
+          "imageURL": "img/icons/sandcastle.jpg",
+          "title_en": "Sandcastles",
+          "title_tr": "Kumdan Kaleler",
+          "topic_en": "Variables",
+          "topic_tr": "Değişkenler",
+          "type": "quickstart",
+          "url": "projects/sandcastles.html"
+        },
+        {
+          "imageURL": "img/icons/runningSum.png",
+          "title_en": "Run, Sum, Run!",
+          "title_tr": "Topla ve Biriktir",
+          "topic_en": "Variables",
+          "topic_tr": "Değişkenler",
+          "type": "project",
+          "url": "projects/runningSum.html"
+        }
+      ]
+    },
+    "title_en": "Variables",
+    "title_tr": "Değişkenler",
+    "visible_after": "2020080600"
+  },
+  {
+    "morning": {
+      "projectURL": "starter/Day4AM.zip",
+      "projects": [
+        {
+          "imageURL": "img/icons/someSum.png",
+          "title_en": "That's Some Sum!",
+          "title_tr": "Toplama Diye Buna Derim!",
+          "topic_en": "Loop variables",
+          "topic_tr": "Döngü değişkenleri",
+          "type": "quickstart",
+          "url": "projects/someSum.html"
+        },
+        {
+          "imageURL": "img/icons/carbonDating.jpg",
+          "title_en": "Carbon Dating",
+          "title_tr": "Carbon Dating",
+          "topic_en": "Loop variables",
+          "topic_tr": "Döngü değişkenleri",
+          "type": "project",
+          "url": "projects/carbonDating.html"
+        }
+      ]
+    },
+    "title_en": "For loops, deconstructed",
+    "title_tr": "For döngüsü ve analizi",
+    "visible_after": "2020080700"
+  }
 ]
