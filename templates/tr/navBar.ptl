@@ -53,70 +53,7 @@
 
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Örnekler <b class="caret"></b></a>
-<ul class="dropdown-menu">
-<li class="dropdown-submenu">
-<a tabindex"-1" href="#">1. Karel</a>
-<ul class="dropdown-menu">
-<li><a href="{{pathToRoot}}tr/projects/stepUp/index.html">Öne Çık</a></li>
-<li><a href="{{pathToRoot}}tr/projects/place100/index.html">100 Tane Yerleştir</a></li>
-</ul>
-</li>
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">2. Kontrol Akışı</a>
-<ul class="dropdown-menu">
-<li><a href="{{pathToRoot}}tr/projects/beeperLine/index.html">Beeper Hattı</a></li>
-<li><a href="{{pathToRoot}}tr/projects/invertBeeper/index.html">Ters Çevir</a></li>
-<li><a href="{{pathToRoot}}tr/projects/unKarel/index.html">İnsani Yardım Karel&#39;ı</a></li>
-<li><a href="{{pathToRoot}}tr/projects/banishWinter/index.html">Kışa Veda</a></li>
-</ul>
-</li>
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">3. Değişkenler</a>
-<ul class="dropdown-menu">
-<li><a href="{{pathToRoot}}tr/projects/emc2/index.html">E=MC<sup>2</sup></a></li>
-<li><a href="{{pathToRoot}}tr/projects/fibonacci/index.html">Fibonacci</a></li>
-<li><a href="{{pathToRoot}}tr/projects/findPi/index.html">Pi&#39;yi Bul</a></li>
-<!-- Used to be a main course component -->
-<li><a href="{{pathToRoot}}tr/projects/favoriteNumber/index.html">Favori Sayım</a></li>
-</ul>
-</li>
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">4. For döngüleri</a>
-<ul class="dropdown-menu">
-<li><a>Takipte Kalın!</a></li>
-</ul>
-</li>
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">5. Grafikler/Fonksiyonlar</a>
-<ul class="dropdown-menu">
-<li><a href="{{pathToRoot}}tr/projects/robotFace/index.html">Robot Yüzü</a></li>
-<li><a href="{{pathToRoot}}tr/projects/halfGretr/index.html">Yarısı Yeşil</a></li>
-<!-- Used to be a main course component -->
-<li><a href="{{pathToRoot}}tr/projects/average/index.html">Ortalama Fonksiyonu</a></li>
-<li><a href="{{pathToRoot}}tr/projects/divisible/index.html">Bölünebilirlik</a></li>
-<li><a href="{{pathToRoot}}tr/projects/drawPeople/index.html">İnsan Çiz</a></li>
-<li><a href="{{pathToRoot}}tr/projects/medicine/index.html">Sahte İlaç</a></li>
-</ul>
-</li>
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">6. Döngüler/Animasyon</a>
-<ul class="dropdown-menu">
-<li><a href="{{pathToRoot}}tr/projects/moveToCenter/index.html">Merkeze Git</a></li>
-<li><a href="{{pathToRoot}}tr/projects/gravityBall/index.html">Seken Top</a></li>
-</ul>
-</li>
-<li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-<a tabindex"-1" href="#">7. Mouse/Listeler</a>
-<ul class="dropdown-menu">
-<li><a href="{{pathToRoot}}tr/projects/stampTool/index.html">Damga Makinesi</a></li>
-<li><a href="{{pathToRoot}}tr/projects/holePuncher/index.html">Delgeç</a></li>
-<li><a href="{{pathToRoot}}tr/projects/debrisSweeper/index.html">Enkazı Kaldır</a></li>
-<li><a href="{{pathToRoot}}tr/projects/suchADrag/index.html">Ne Kaydırma Ama</a></li>
-<li><a href="{{pathToRoot}}tr/projects/keyboardKarel/index.html">Klavye Karel</a></li>
-<li><a href="{{pathToRoot}}tr/projects/rocketPaddle/index.html">Roket Atar</a></li>
-</ul>
-</li>
-</ul>
+% include('templates/programs/examplesDropdown.ptl', lang='tr')
 </li>
 
 <li class="dropdown">

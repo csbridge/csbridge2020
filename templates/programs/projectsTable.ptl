@@ -85,6 +85,26 @@
 		      	</tbody>
 			% end
 		% end
+
+	  	<tr 
+	  		% if not get('taMode', False) and "visible_after" in day_info:
+	  			class="active visible-after" data-visible-after="{{day_info['visible_after']}}"
+	  		% else:
+	  			class="active"
+	  		% end
+	  	>
+			<td colspan = "6">
+				<center>
+					% if lang == "en":
+						Looking for more?  Check out the optional <a href="{{pathToRoot}}{{lang}}/bonus-index.html">bonus problems!</a>
+					% elif lang == "tr":
+						Daha fazlasını mı arıyorsunuz?  <a href="{{pathToRoot}}{{lang}}/bonus-index.html">Bonus problemlerini deneyin!</a>
+					% else:
+						NO TRANSLATION
+					% end
+				</center>
+			</td>
+		</tr>
 	% end
 
 </table>

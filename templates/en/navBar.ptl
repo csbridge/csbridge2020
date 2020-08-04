@@ -53,70 +53,7 @@
 
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
-	          <ul class="dropdown-menu">
-              <li class="dropdown-submenu">
-                <a tabindex"-1" href="#">1. Karel</a>
-                <ul class="dropdown-menu">
-	          	    <li><a href="{{pathToRoot}}en/projects/stepUp/index.html">Step Up</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/place100/index.html">Place 100</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">2. Control Flow</a>
-                <ul class="dropdown-menu">
-	          	    <li><a href="{{pathToRoot}}en/projects/beeperLine/index.html">Beeper Line</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/invertBeeper/index.html">Invert Beeper</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/unKarel/index.html">UN Karel</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/banishWinter/index.html">Banish Winter</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">3. Variables</a>
-                <ul class="dropdown-menu">
-	          	    <li><a href="{{pathToRoot}}en/projects/emc2/index.html">E=MC<sup>2</sup></a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/fibonacci/index.html">Fibonacci</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/findPi/index.html">Find Pi</a></li>
-                  <!-- Used to be a main course component -->
-	          	    <li><a href="{{pathToRoot}}en/projects/favoriteNumber/index.html">Favorite Number</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">4. For loops</a>
-                <ul class="dropdown-menu">
-                  <li><a>Stay tuned!</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">5. Graphics/Functions</a>
-                <ul class="dropdown-menu">
-	          	    <li><a href="{{pathToRoot}}en/projects/robotFace/index.html">Robot Face</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/halfGreen/index.html">Half Green</a></li>
-                  <!-- Used to be a main course component -->
-	          	    <li><a href="{{pathToRoot}}en/projects/average/index.html">Average Function</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/divisible/index.html">Division Functions</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/drawPeople/index.html">Draw People</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/medicine/index.html">Counterfeit Medicine</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">6. Loops/Animation</a>
-                <ul class="dropdown-menu">
-	          	    <li><a href="{{pathToRoot}}en/projects/moveToCenter/index.html">Move to Center</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/gravityBall/index.html">Gravity Ball</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
-                <a tabindex"-1" href="#">7. Mouse/Lists</a>
-                <ul class="dropdown-menu">
-	          	    <li><a href="{{pathToRoot}}en/projects/stampTool/index.html">Stamp Tool</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/holePuncher/index.html">Hole Puncher</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/debrisSweeper/index.html">Debris Sweeper</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/suchADrag/index.html">Such a Drag</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/keyboardKarel/index.html">Keyboard Karel</a></li>
-	          	    <li><a href="{{pathToRoot}}en/projects/rocketPaddle/index.html">Rocket Paddle</a></li>
-                </ul>
-              </li>
-	        </ul>
+	          % include('templates/programs/examplesDropdown.ptl', lang='en')
 	        </li>
 
 	        <li class="dropdown">

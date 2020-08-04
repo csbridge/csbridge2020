@@ -1,6 +1,18 @@
 [
     {
         "evening": {
+            "examples": [
+                {
+                    "title_en": "Step Up",
+                    "title_tr": "Öne Çık",
+                    "url": "projects/stepUp/"
+                },
+                {
+                    "title_en": "Place 100",
+                    "title_tr": "100 Tane Yerleştir",
+                    "url": "projects/place100/"
+                }
+            ],
             "projects": [
                 {
                     "imageURL": "img/icons/newspaper.jpg",
@@ -30,6 +42,23 @@
     },
     {
         "evening": {
+            "examples": [
+                {
+                    "title_en": "Invert Beeper",
+                    "title_tr": "Ters Çevir",
+                    "url": "projects/invertBeeper/"
+                },
+                {
+                    "title_en": "UN Karel",
+                    "title_tr": "İnsani Yardım Karel'ı",
+                    "url": "projects/unKarel/"
+                },
+                {
+                    "title_en": "Banish Winter",
+                    "title_tr": "Kışa Veda",
+                    "url": "projects/banishWinter/"
+                }
+            ],
             "projects": [
                 {
                     "imageURL": "img/icons/stripeKarel.png",
@@ -66,6 +95,13 @@
             "visible_after": "2020080509"
         },
         "morning": {
+            "examples": [
+                {
+                    "title_en": "Beeper Line",
+                    "title_tr": "Beeper Hattı",
+                    "url": "projects/beeperLine/"
+                }
+            ],
             "projects": [
                 {
                     "imageURL": "img/icons/placeSquare.png",
@@ -96,6 +132,23 @@
     },
     {
         "evening": {
+            "examples": [
+                {
+                    "title_en": "Fibonacci",
+                    "title_tr": "Fibonacci",
+                    "url": "projects/fibonacci/"
+                },
+                {
+                    "title_en": "Find Pi",
+                    "title_tr": "Pi'yi Bul",
+                    "url": "projects/findPi/"
+                },
+                {
+                    "title_en": "Favorite Number",
+                    "title_tr": "Favori Sayım",
+                    "url": "projects/favoriteNumber/"
+                }
+            ],
             "projects": [
                 {
                     "imageURL": "img/icons/areaCalculator.png",
@@ -138,6 +191,13 @@
             "visible_after": "2020080609"
         },
         "morning": {
+            "examples": [
+                {
+                    "title_en": "E=MC²",
+                    "title_tr": "E=MC²",
+                    "url": "projects/emc2/"
+                }
+            ],
             "projects": [
                 {
                     "imageURL": "img/icons/sandcastle.jpg",
