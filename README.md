@@ -169,8 +169,6 @@ Break times in the afternoon are a great time to get students out of lab and do 
 
 
 ## Todos
-- [ ] Refactor bonus problems table in `templates/en/bonus-index.html` to match the main table style in `programTable.ptl` in that it is a single table using date variables at the top, and only includes `visible-after` for non-TA mode.
-- [ ] Include a TA version of the bonus table on the `/tas` page so TAs can see all bonus problems.  This should be a shared version of the table across `/tas` and `/bonus-index` so changes once are propagated everywhere.
 - [ ] Look into adding Google Timezone API access to front-page alert notifications telling students where they need to be. Needs one API key and Google Timezone API enabled, as well as reading JSON. We probably don't need timezones if we can just get the current Pacific Time. Current alert info is in `templates/en/index.html` and CSV lookup is in `templates/announcements/times.csv`, JavaScript is in `docs/js/time.js`. Using Google API avoids faulty local computer timezone issues.
 
 
