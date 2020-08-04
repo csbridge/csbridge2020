@@ -70,7 +70,12 @@ code to display the content in.  Currently "en" (English) and "tr" (Turkish) are
 
       				<!-- Project name and link -->
       				<td>
-      					<a href="{{pathToRoot}}{{lang}}/{{project['url']}}">{{project['title_' + lang]}}</a>
+      					<a href="{{pathToRoot}}{{lang}}/{{project['url']}}">
+      						{{project['title_' + lang]}}
+      					</a>
+      					% if get('taMode', False) and "teachURL" in project:
+      						<br><a href="{{pathToRoot}}{{project['teachURL']}}">SL Notes</a>
+      					% end
       				</td>
 
       				<!-- Project difficulty -->
