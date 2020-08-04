@@ -1,12 +1,19 @@
 <!--
-	A template used for every page - contains the header.
+	A template used for every page - contains the header, nav bar, a container div, and the footer.
 -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		%include templates/parts/header.ptl
+		% include('templates/parts/header.ptl')
 	</head>
 	<body>
-		{{!base}}
+		% include('templates/parts/navBar.ptl')
+
+		<div class="container">
+			{{!base}}
+					
+			% include('templates/' + lang + '/footer.ptl')
+		</div>
+
 	</body>
 </html>

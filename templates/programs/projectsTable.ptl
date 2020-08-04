@@ -95,7 +95,7 @@ code to display the content in.  Currently "en" (English) and "tr" (Turkish) are
 	      		>
 		      		% for project in day_info[segment]["projects"]:
 		      			<tr>
-		      				% include("templates/programs/projectRow.ptl", project=project, lang=lang)
+		      				% include("templates/programs/projectRow.ptl", project=project)
 		      			</tr>
 		      		% end
 		      	</tbody>
