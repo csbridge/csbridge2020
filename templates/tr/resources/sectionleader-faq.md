@@ -37,7 +37,7 @@ This is where you will find all information related to the curriculum - handouts
 
 ### Zoom
 
-We'll be using Zoom to host all live interactions. You will be provided instructions for logging into Zoom by the Program Administrator at hour host university. If you have not already been provided details for your Zoom account, you will receive that information from someone at your university soon. We'll go through a short Zoom tutorial during the Section Leader training and you can find a [Zoom tutorial here](http://online.csbridge.org/en/resources/zoom-info.pdf)
+We'll be using Zoom to host all live interactions. You will be provided instructions for logging into Zoom by the Program Administrator at hour host university. If you have not already been provided details for your Zoom account, you will receive that information from someone at your university soon. We'll go through a short Zoom tutorial during the Section Leader training and you can find a [Zoom tutorial here](https://docs.google.com/document/d/1HxcSiTCcBfV1iPx7dTMYASN0Ba6QpjCpp3TPKr2dDys/edit?usp=sharing)
 
 ### PyCharm
 
