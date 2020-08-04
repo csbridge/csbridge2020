@@ -87,7 +87,7 @@ In addition to two lectures per day, <b>you will also be attending a daily discu
 
 This is when you'll be able to ask for individual help on your code.
 
-- If you need help, you'll join the Office Hours Nook community and Section Leaders will be there to answer your questions.
+- If you need help, you'll join the Office Hours Nooks community and Section Leaders will be there to answer your questions.
 - You may have to wait in the Nook community until a Section Leader is free to help you.
 - If you don't have questions, this is the time that you'll spend working on your assignments.
 
