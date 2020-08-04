@@ -1,8 +1,8 @@
 % rebase('templates/en/template.ptl', title="Home")
 
-<div class="page-header" style="backgroud-color:#cdbfe3">
+<div class="page-header">
 	<div class="container">
-			<div>
+		<div>
         	<div id="logo">
 				<img id="logoImg" src="{{pathToRoot}}img/logo.png"/>
 			</div>
@@ -17,36 +17,13 @@
 					August 4th to August 20th, online
 				</div>
 			</div>
-          
         </div>
 	</div>
 </div>
 	
 <br />
 
-<%
-import os
-import csv
-with open("templates/announcements/times.csv", 'r') as f:
-  reader = csv.reader(f, delimiter=',')
-  header = next(reader)
-%>
-
-% for row in reader:
-  % datetime_start, datetime_end, alert_type, fname = row
-  <div class="alert {{alert_type}} visible-during" data-visible-start="{{datetime_start}}" data-visible-end="{{datetime_end}}">
-    % with open(os.path.join("templates", "announcements", "en", fname), 'r') as f:
-        {{!f.read()}}   
-    % end
-  </div>
-% end
-
-<div class="alert alert-warning visible-default">
-  % with open(os.path.join("templates", "announcements", "en", "default.ptl"), 'r') as f:
-      {{!f.read()}}
-  % end
-</div>
-
+% include('templates/announcements/announcements.ptl', lang='en')
 
 <div>
 	<h2>The Idea of the Course</h2>

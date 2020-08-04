@@ -1,0 +1,34 @@
+<%
+"""
+This is a unified announcements renderer for all languages.  It displays any announcements from the times.csv file on the homepage at their specified times.  If no announcements are set to
+be displayed at a given time, the default announcement will be displayed instead.
+
+This file expects one argument, "lang", which is the language to display announcements in.  Currently "en" (English) and "tr" (Turkish) are supported.  To add additional support, make sure that there is a folder in announcements for that language's announcement translations.
+"""
+%>
+
+<%
+# Read from the announcement times file
+import os
+import csv
+with open("templates/announcements/times.csv", 'r') as f:
+  reader = csv.reader(f, delimiter=',')
+  header = next(reader)
+%>
+
+% # Render each announcement on the page, visible only during its specified time
+% for row in reader:
+  % datetime_start, datetime_end, alert_type, fname = row
+  <div class="alert {{alert_type}} visible-during" data-visible-start="{{datetime_start}}" data-visible-end="{{datetime_end}}">
+    % with open(os.path.join("templates", "announcements", lang, fname), 'r') as f:
+        {{!f.read()}}   
+    % end
+  </div>
+% end
+
+<!-- Display the default announcement.  It will be removed (see times.js) if any announcements are visible above. -->
+<div class="alert alert-warning visible-default">
+  % with open(os.path.join("templates", "announcements", lang, "default.ptl"), 'r') as f:
+      {{!f.read()}}
+  % end
+</div>

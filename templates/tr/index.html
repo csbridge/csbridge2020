@@ -1,6 +1,6 @@
 % rebase('templates/tr/template.ptl', title="Home")
 
-<div class="page-header" style="backgroud-color: #cdbfe3;">
+<div class="page-header">
   <div class="container">
     <div>
       <div id="logo">
@@ -23,50 +23,9 @@
 
 <br />
 
-<%
-import os
-import csv
-with open("templates/announcements/times.csv", 'r') as f:
-  reader = csv.reader(f, delimiter=',')
-  header = next(reader)
-%>
-
-% for row in reader:
-  % datetime_start, datetime_end, alert_type, fname = row
-  <div class="alert {{alert_type}} visible-during" data-visible-start="{{datetime_start}}" data-visible-end="{{datetime_end}}">
-    % with open(os.path.join("templates", "announcements", "tr", fname), 'r', encoding="utf8") as f:
-        {{!f.read()}}
-    % end
-  </div>
-% end
-
-<div class="alert alert-warning visible-default">
-  % with open(os.path.join("templates", "announcements", "tr", "default.ptl"), 'r', encoding="utf8") as f:
-      {{!f.read()}}
-  % end
-</div>
-
-
-<!-- <div class="alert alert-success">
-	<b>Kimsiniz?</b> <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Sınıf anketini</a> doldurun.
-</div> -->
-
-<!--
-<div class="alert alert-info">
-	Programın Spotify çalma listesine şarkı ekleyin: <a href="https://open.spotify.com/user/1251835474/playlist/2E1ccnzfMTqDv2D1JEoFF3">Spotify Çalma Listesi</a>
-</div>
--->
+% include('templates/announcements/announcements.ptl', lang='tr')
 
 <div>
-<!-- <center>
-	<img style="width: 100%;" src="{{pathToRoot}}img/fun/classPhoto.jpg"></img>
-</center> -->
-
-<!--
-	<div class="alert alert-success">
-	  Final projenizi bitiriyor musunuz?  CS Bridge programının sonuna geliyoruz, lütfen bu formu doldurun: <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_9QQCN0ZyMq3Ly3r">form linki</a>.
-	</div>
--->
     <h2>
       Bu Dersin Amacı
     </h2>

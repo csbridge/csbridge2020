@@ -62,6 +62,7 @@ $(document).ready(function(){
       	}
 	});
 
+	// If any of the other posts are visible, remove the defualt post.
   	$(".visible-default").each(function(i) {
       	if (removeDefault) {
           	$(this).remove();
