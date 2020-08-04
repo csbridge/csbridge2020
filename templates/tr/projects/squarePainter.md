@@ -1,21 +1,22 @@
 template: templates/en/projects/projectTemplate.ptl
-title: Square Painter Karel
-credit: Written by Lisa Yan
+title: Kare Boyayan Karel
+credit: Lisa Yan
+translation: Ceren Kocaoğullar, Serhat Arslan
 
-Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
-File: `square_painter.py`
+Ders Notları: [Karel Referansı](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+Dosya: `square_painter.py`
 
-This is a bonus program. It's meant to be a bit challenging!
+Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır!
 
-Remember to use ***functions*** to organize your code!
-				
-Karel wants to make some real art. Help it fill in any rectangular world with alternating squares of blue and green.
+Kodunuzun düzenli kalması için **_fonksiyonları_** kullanmayı ihmal etmeyin!
+
+Karel'in biraz sanat yapası gelmiş. Kendisine mavi ve yeşil renkler arasında gidip gelen karelerin olduğu dikdörtgen bir dünya yaratmasında yardım edin.
 
 <center>
 	<img style="width:300px" src="{{pathToRoot}}img/projects/squarePainter/5x5.png">	
 </center>
 
-To check the opposite of any conditional, use `not`:
+Herhangi bir koşulun tersini kontrol etmek için `not` kullanın:
 
 ```
 # checks that the corner you are on is NOT a certain color
@@ -23,16 +24,16 @@ if not corner_color_is(color):
     ...
 ```
 
-Karel should be able to paint any type of rectangular world:
+Karel her türlü dikdörtgen dünyayı boyayabilmelidir:
 
 <center>
 	<img style="width:300px" src="{{pathToRoot}}img/projects/squarePainter/8x8.png">	
 </center>
 
-Even non-square rectangles are within Karel's realm of artistic talent:
+Kare olmayan dikdörtgenler bile Karel'in sanatsal yetenek alanındadır:
 
 <center>
 	<img style="width:400px" src="{{pathToRoot}}img/projects/squarePainter/16x20.png">	
 </center>
 
-It doesn't matter where Karel ends up once it's finished; Karel just wants to maximize its artistic expression.
+Tamamlandığında Karel'in nerede bittiği önemli değil; Karel sadece sanatsal ifadesini en üst düzeye çıkarmak istiyor.
