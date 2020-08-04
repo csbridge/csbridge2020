@@ -53,7 +53,7 @@ Finally, click on "Submit" in the bottom-right corner to submit via Ed. You can 
 
 ## Office Hours
 
-Go to the office hour Zoom link (there are two different ones for morning and evening). Type your name and what help you are looking for. Choose from one of the following categories:
+Go to the office hour Nooks link on Ed. Type your name and what help you are looking for. Choose from one of the following categories:
 
 * **Concepts**
 
@@ -67,6 +67,6 @@ Go to the office hour Zoom link (there are two different ones for morning and ev
 
     If you are working on an activity or project and would like a Section Leader to look directly at your code. **If you are looking for debugging help, you must submit your code via Ed first.**
 
-The Section Leaders in the main Zoom room will then move you into a Breakout room with a Section Leader.
+The Section Leaders in the main room will then move you into a Breakout room with a Section Leader.
 
 Happy debugging!

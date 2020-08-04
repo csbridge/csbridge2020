@@ -68,7 +68,7 @@ code to display the content in.  Currently "en" (English) and "tr" (Turkish) are
 	      						 		segment_translation = "Akşam Projesi"
 	      						 	end
 	      						elif lang == "en":
-	      							segment_translation = segment.capitalize()
+	      							segment_translation = segment.capitalize() + " Project"
 	      						end
 
 	      						link_translation = "NO TRANSLATION"

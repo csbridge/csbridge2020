@@ -82,13 +82,13 @@ Günde iki konferansa ek olarak, <b> Grup Lideriniz önderliğindeki küçük gr
 
 <!-- D. Görüşme Saatleri/Çalışma -->
 
-#### D. <u> Ofis Saatleri/Çalışma </u>
+#### D. <u>Office Hours/Work</u>
 
-Bu, kodunuz hakkında bireysel yardım isteyebileceğiniz zamandır.
+This is when you'll be able to ask for individual help on your code.
 
-- Yardıma ihtiyacınız olursa, Office Hours Zoom linkine katılabilirsiniz. Grup Liderleri sorularınızı yanıtlamak için orada olacaktır.
-- Grup Lideri size yardım etmek için özgür olana kadar beklemeniz gerekebilir.
-- Sorularınız yoksa, bu zaman aralığında ödevleriniz üzerinde çalışabilirsiniz.
+- If you need help, you'll join the Office Hours Nooks community and Section Leaders will be there to answer your questions.
+- You may have to wait in the Nook community until a Section Leader is free to help you.
+- If you don't have questions, this is the time that you'll spend working on your assignments.
 
 <!-- E. Projeler -->
 
