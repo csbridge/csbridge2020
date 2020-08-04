@@ -53,22 +53,22 @@ Ed üzerinden çalışmalarınızı göndermek için son olarak sağ alt köşed
   <p style="text-align:center"><b>Submission</b>: (1) Sol: Sağ alt köşedeki Submit butonuna tıklayın. (2) Sağ: Çalışmanızı başarıyla yüklediniz!</p>
 </center>
 
-## Ofis Saatleri
+## Office Hours
 
-Ofis saati Zoom linkine (sabah ve akşam için iki farklı link var) girin. İsminizi ve ne tür bir yardım istediğinizi yazın:
+Go to the office hour Nooks link on Ed. Type your name and what help you are looking for. Choose from one of the following categories:
 
-* **Temel Kavramlar (Concepts)**
+* **Concepts**
 
-    Eğer bir Grup Lideri'nin belli kavramlar (değişkenler gibi) üzerinden geçmesini istiyorsanız
+    If you would like a Section Leader to go over certain concepts (e.g., variables)
 
-* **Yaklaşım (Approach)**
+* **Approach**
 
-    Bir aktivite ya da proje üzerinde çalışıyorsanız ve probleme yaklaşımınız konusunda ipuçları istiyorsanız
-    
-* **Hata ayıklama (Debugging)**
+    If you are working on an activity or project and would like tips on how to approach the problem. 
 
-    Bir aktivite ya da proje üzerinde çalışıyorsanız ve bir Grup Lideri'nin kodunuza bakmasını istiyorsanız. **Hata ayıklama konusunda yardım isteyecekseniz önce kodunuzu Ed üzerinden yüklemelisiniz.**
+* **Debugging**
 
-Ana Zoom odasındaki Grup Lider'leri sizi bir Grup Lider'i ile Breakout odasına yönlendirecek.
+    If you are working on an activity or project and would like a Section Leader to look directly at your code. **If you are looking for debugging help, you must submit your code via Ed first.**
 
-Mutlu hata ayıklamalar!
+The Section Leaders in the main room will then move you into a Breakout room with a Section Leader.
+
+Happy debugging!
