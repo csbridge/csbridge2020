@@ -1,26 +1,27 @@
-template: templates/en/projects/projectTemplate.ptl
-title: Checkerboard Karel
-credit: Written by Tyler Conklin, based on past editions of this assignment as created by Mehran Sahami, Keith Schwarz, Eric Roberts, and others.
+template: templates/tr/projects/projectTemplate.ptl
+title: Dama Oynayan Karel
+credit: Mehran Sahami, Keith Schwarz, Eric Roberts, ve diğerleri tarafından yazılan önceki versiyonlardan esinlenilmiştir.
+translation: Serhat Arslan, Ceren Kocaoğullar
 
-Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+Handouts: [Karel Referansı](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
 File: `checkerboard.py`
 
-This is a bonus program! It's meant to be challenging.
+Bu bir bonus programdır! Biraz zorlayıcı olması için hazırlanmıştır.
 
-Program Karel to create a checkerboard pattern of beepers inside an empty rectangular world. If Karel starts in a world as shown below...
-					
+Karel'i boş bir dikdörtgen dünyada bip tahtası deseni oluşturmak için programlayın. Karel aşağıda gösterildiği gibi bir dünyada başlarsa...
+
 <center>
 	<img style="width:300px" src="{{pathToRoot}}img/projects/checkerboardKarel/checkerboardKarelStart.png">	
 </center>
                     
-...then the world should end up looking like this:
+... o zaman dünya böyle görünmeli:
  					
 <center>
 	<img style="width:300px" src="{{pathToRoot}}img/projects/checkerboardKarel/checkerboardKarelFinish.png">	
 </center>
 
-Note that where Karel finishes, as well as which direction Karel is facing at the finish, does not matter.
-        
-Please ensure that your solution works with different sized worlds. For example, your solution should work for worlds with only one column or only one row. Your solution should also work for worlds that are not perfectly square.
+Karel'in bitişte nerede olduğu ve ne tarafa baktığı önemli değildir.
 
-Remember that you may only use Karel syntax and can not use Python variables. As you think about your solution, keep in mind all of the different sized worlds you could encounter. Be sure to test on these different worlds after you have completed your first attempt at a solution!
+Çözümünüzün farklı boyutlardaki dünnyalarda da çalışabileceğinden emin olun. Örneğin, çözümünüz tek satır veya tek sütundan oluşan dünyalarda ya da kare olmayan dünyalarda da çalışabilmelidir.
+
+Egzersiz sırasında sadece Karel komutlarını kullanabilirsiniz. Python değişkenleri kullanmamaya özen gösterin. Programınızı yazarken farklı boyutlardaki dünyaları da hesaba kattığınızdan emin olun. Çalışan bir program elde ettikten sonra programınızı farklı boyutlardaki dünyalarda test edebilirsiniz!

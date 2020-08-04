@@ -1,5 +1,5 @@
-template: templates/en/projects/projectTemplate.ptl
-title: Midpoint Karel
+template: templates/tr/projects/projectTemplate.ptl
+title: Orta Nokta
 credit: Geçmişte Mehran Sahami, Keith Schwarz, Eric Roberts ve diğerlerinin hazırladıkları egzersizden esinlenilmiştir.
 translation: Serhat Arslan, Ceren Kocaoğullar
 
