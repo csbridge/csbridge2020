@@ -69,6 +69,7 @@ The file itself should be an array of JSON objects, in order of days (e.g. day 1
 + `title_en` (string): the day's topic (English)
 + `title_tr` (string): the day's topic (Turkish)
 + `visible_after` (string): optional timestamp when the day should become visible
++ `bonus` (boolean): optional, set to false if you do not want to show a banner linking to the bonus page for more projects to work on
 
 At least one of "morning" or "evening" must be present.
 
@@ -97,6 +98,27 @@ Each of "morning" and "evening" is the same format - each is an object specifyin
 + `teachURL` (string): an optional URL to the SL guide for this project.  Same format as `url`.
 
 You'll notice that many of these objects have fields ending in `_en` or `_tr`.  These correspond to the language codes used by the site - currently, we use "en" for English and "tr" for Turkish.  Therefore, it is expected that these objects have a version of some of the fields above for each supported language.  If you wanted to add support for other languages, you should add additional fields for those languages alongside the Turkish and English versions.
+
+### Updating Bonus Projects
+The bonus project table on the bonus page is **generated automatically** based on the contents of the `templates/programs/bonusPrograms.json` file.  In other words, you should not modify the HTML file that represents the bonus table - it is reading from this JSON file to know what to display.  This makes translation and updating easier because all translations are in one file.  This file contains an array of JSON objects, one per bonus topic that should be displayed.  Each topic's information contains what projects should be listed for students for that topic, as well as when the problems should become visible to students.  See the file itself for an example of its structure.  Below, we specify in more detail the general format the file is expected to have.
+
+The file itself should be an array of JSON objects, in order of topics (e.g. topic 1, then topic 2, etc.).  Here are the fields the object can contain:
+
++ `title_en` (string): the topic (English)
++ `title_tr` (string): the topic (Turkish)
++ `visible_after` (string): optional timestamp when the topic should become visible
++ `projects` (array): info about bonus projects
++ `projectURL` (string): starter code URL.  Prepended with domain.   In other words, if the site is `online.csbridge.org`, the starter code would be assumed to have the URL `online.csbridge.org/[URL]`.
+
+"projects" is a list of bonus projects that should be displayed for that topic.  Here is the format each project should have (all fields required):
+
++ `imageURL` (string): the URL of the image to use in the table for this problem.  Prepended with domain.  In other words, if the site is `online.csbridge.org`, the image would be assumed to have the URL `online.csbridge.org/[URL]`.
++ `title_en` (string): the project title (English)
++ `title_tr` (string): the project title (Turkish)
++ `difficulty` (integer): a difficulty rating, 1 (easy), 2 (medium) or 3 (hard)
++ `url` (string): the project URL.  Prepended with domain and language.  In other words, if the site is `online.csbridge.org`, the english version of this project would be assumed to have the URL `online.csbridge.org/en/[URL]`.
+
+You'll notice that the title ends in `_en` or `_tr`.  These correspond to the language codes used by the site - currently, we use "en" for English and "tr" for Turkish.  Therefore, it is expected that these objects have a version of the title field for each supported language.  If you wanted to add support for other languages, you should add additional fields for those languages alongside the Turkish and English versions.
 
 ### Updating Lecture Materials
 The lectures dropdown in the navigation bar is **generated automatically** based on the contents of the `templates/lectures.json` file.  In other words, you should not modify the HTML file that represents the navbar dropdown for lecture materials - it is reading from this JSON file to know what to display.  This makes translation easier because all translations are in one file.  This file contains an array of JSON objects, one per lecture that should be displayed.  Each lecture's information contains the lecture title (including translations) and links to its slides and code (if applicable).  See the file itself for an example of its structure.  Below, we specify in more detail the general format the file is expected to have.

@@ -1,0 +1,31 @@
+[
+	{
+		"title_en": "Karel",
+		"title_tr": "Karel",
+		"projectURL": "starter/BonusKarel.zip",
+		"visible_after": "2020080300",
+		"projects": [
+			{
+				"title_en": "Midpoint",
+				"title_tr": "Orta Nokta",
+				"imageURL": "img/icons/midpoint.png",
+				"url": "projects/midpointKarel.html",
+				"difficulty": 3
+			},
+			{
+				"title_en": "Checkerboard",
+				"title_tr": "Dama Tahtası",
+				"imageURL": "img/icons/checkerboard.png",
+				"url": "projects/checkerBoard.html",
+				"difficulty": 2
+			},
+			{
+				"title_en": "Square Painter",
+				"title_tr": "Kare Boyama",
+				"imageURL": "img/icons/squarePainter.png",
+				"url": "projects/squarePainter.html",
+				"difficulty": 2
+			}
+		]
+	}
+]

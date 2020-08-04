@@ -102,26 +102,28 @@ code to display the content in.  Currently "en" (English) and "tr" (Turkish) are
 			% end
 		% end
 
-		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page -->
-	  	<tr 
-	  		% if not get('taMode', False) and "visible_after" in day_info:
-	  			class="active visible-after" data-visible-after="{{day_info['visible_after']}}"
-	  		% else:
-	  			class="active"
-	  		% end
-	  	>
-			<td colspan = "6">
-				<center>
-					% if lang == "en":
-						Looking for more?  Check out the optional <a href="{{pathToRoot}}{{lang}}/bonus-index.html">bonus problems!</a>
-					% elif lang == "tr":
-						Daha fazlasını mı arıyorsunuz?  <a href="{{pathToRoot}}{{lang}}/bonus-index.html">Bonus problemlerini deneyin!</a>
-					% else:
-						NO TRANSLATION
-					% end
-				</center>
-			</td>
-		</tr>
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+	  	% if ("bonus" in day_info and day_info["bonus"]) or "bonus" not in day_info:
+  		  	<tr 
+  		  		% if not get('taMode', False) and "visible_after" in day_info:
+  		  			class="active visible-after" data-visible-after="{{day_info['visible_after']}}"
+  		  		% else:
+  		  			class="active"
+  		  		% end
+  		  	>
+  				<td colspan = "6">
+  					<center>
+  						% if lang == "en":
+  							Looking for more?  Check out the optional <a href="{{pathToRoot}}{{lang}}/bonus-index.html">bonus problems!</a>
+  						% elif lang == "tr":
+  							Daha fazlasını mı arıyorsunuz?  <a href="{{pathToRoot}}{{lang}}/bonus-index.html">Bonus problemlerini deneyin!</a>
+  						% else:
+  							NO TRANSLATION
+  						% end
+  					</center>
+  				</td>
+  			</tr>
+	  	% end
 	% end
 
 </table>

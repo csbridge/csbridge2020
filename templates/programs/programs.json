@@ -38,7 +38,8 @@
             ]
         },
         "title_en": "Karel",
-        "title_tr": "Karel"
+        "title_tr": "Karel",
+        "bonus": false
     },
     {
         "evening": {
