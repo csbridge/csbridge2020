@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
-<title>CS Bridge  | Square Painter</title>
+<title>CS Bridge  | Square Painter Karel</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -459,67 +459,60 @@
 </script>
 <div class="container">
 	
-	
-	<!-- Main Content -->
-	<div class="container">
+	<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
 
-		<!-- Header -->
-		<div id="pageHeader">
-			<h1>
-                Square Painter
-			</h1>
-			<p>
-                Written by Lisa Yan
-			</p>
-      <p>
-      BonusKarel: <code>SquarePainter.java</code>
-      </p>
+title - problem title
+credit - problem credit (optional)
+solution - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
 
-		</div>
-		<hr/>
 
-		<div class="row">
-			<div class="col-md-12">
-				<p>
-                This is a bonus program. It's meant to be a bit challenging!
-				</p>
-                    <p>Remember to use <b><u>functions</u></b> to organize your code!</p>
-                    <h2></h2>
-                <p>
-                Karel wants to make some real art. Help her fill in any rectangular world with alternating squares of blue and green.
-                </p>
-					<center>
-						<img style="width:300px" src="../../img/projects/squarePainter/5x5.png">	
-					</center>
-                    <br>
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		Square Painter Karel
+	</h1>
 
-                <p><b><u>Note</u></b>: You might have to use some extra logic for this problem. You will learn more about this logic tomorrow.</p>
-                <p>To check the opposite of any conditional, use the "bang," commonly known as the exclamation point:</p>
-<pre>
-// checks that the corner you are on is NOT a certain color
-if (!cornerColorIs(color)) {
+		<p>
+			Credit: Written by Lisa Yan
+		</p>
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Handouts: <a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a><br/>
+File: <code>square_painter.py</code></p>
+<p>This is a bonus program. It's meant to be a bit challenging!</p>
+<p>Remember to use <strong><em>functions</em></strong> to organize your code!</p>
+<p>Karel wants to make some real art. Help it fill in any rectangular world with alternating squares of blue and green.</p>
+<p><center>
+    <img style="width:300px" src="../../img/projects/squarePainter/5x5.png">  <br />
+</center></p>
+<p>To check the opposite of any conditional, use <code>not</code>:</p>
+<pre><code># checks that the corner you are on is NOT a certain color
+if not corner_color_is(color):
     ...
-}
-</pre>
-<br>
+</code></pre>
 
-                <p>Karel should be able to paint any type of rectangular world:</p>
-					<center>
-						<img style="width:300px" src="../../img/projects/squarePainter/8x8.png">	
-					</center>
-                    <br>
-                    <p>Even non-square rectangles are within Karel's realm of artistic talent:</p>
-					<center>
-						<img style="width:400px" src="../../img/projects/squarePainter/16x20.png">	
-					</center>
-                    <br>
-                    <p>It doesn't matter where Karel ends up once she's finished; she just wants to maximize her artistic expression.</p>
+<p>Karel should be able to paint any type of rectangular world:</p>
+<p><center>
+    <img style="width:300px" src="../../img/projects/squarePainter/8x8.png">  <br />
+</center></p>
+<p>Even non-square rectangles are within Karel's realm of artistic talent:</p>
+<p><center>
+    <img style="width:400px" src="../../img/projects/squarePainter/16x20.png"><br />
+</center></p>
+<p>It doesn't matter where Karel ends up once it's finished; Karel just wants to maximize its artistic expression.</p>
+	</div>
+</div>
 
-
-
-
-			</div>
-		</div>
+<!-- Solution (if included) -->
 
 			
 	<!-- Footer -->
