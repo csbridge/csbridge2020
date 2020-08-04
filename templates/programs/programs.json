@@ -13,6 +13,7 @@
                     "url": "projects/place100/"
                 }
             ],
+            "projectURL": "starter/Day1PM.zip",
             "projects": [
                 {
                     "imageURL": "img/icons/newspaper.jpg",
@@ -34,8 +35,7 @@
                     "type": "section",
                     "url": "projects/arches.html"
                 }
-            ],
-            "projectURL": "starter/Day1PM.zip"
+            ]
         },
         "title_en": "Karel",
         "title_tr": "Karel"
@@ -59,6 +59,7 @@
                     "url": "projects/banishWinter/"
                 }
             ],
+            "projectURL": "starter/Day2PM.zip",
             "projects": [
                 {
                     "imageURL": "img/icons/stripeKarel.png",
@@ -91,7 +92,6 @@
                     "url": "projects/randomPainter.html"
                 }
             ],
-            "projectURL": "starter/Day2PM.zip",
             "visible_after": "2020080509"
         },
         "morning": {
@@ -102,6 +102,7 @@
                     "url": "projects/beeperLine/"
                 }
             ],
+            "projectURL": "starter/Day2AM.zip",
             "projects": [
                 {
                     "imageURL": "img/icons/placeSquare.png",
@@ -123,8 +124,7 @@
                     "type": "project",
                     "url": "projects/mountain.html"
                 }
-            ],
-            "projectURL": "starter/Day2AM.zip"
+            ]
         },
         "title_en": "Karel and Control Flow",
         "title_tr": "Karel ve Kontrol Akışı",
@@ -149,6 +149,7 @@
                     "url": "projects/favoriteNumber/"
                 }
             ],
+            "projectURL": "starter/Day3PM.zip",
             "projects": [
                 {
                     "imageURL": "img/icons/areaCalculator.png",
@@ -187,7 +188,6 @@
                     "url": "projects/khansole.html"
                 }
             ],
-            "projectURL": "starter/Day3PM.zip",
             "visible_after": "2020080609"
         },
         "morning": {
@@ -198,6 +198,7 @@
                     "url": "projects/emc2/"
                 }
             ],
+            "projectURL": "starter/Day3AM.zip",
             "projects": [
                 {
                     "imageURL": "img/icons/sandcastle.jpg",
@@ -217,8 +218,7 @@
                     "type": "project",
                     "url": "projects/runningSum.html"
                 }
-            ],
-            "projectURL": "starter/Day3AM.zip"
+            ]
         },
         "title_en": "Variables",
         "title_tr": "Değişkenler",
@@ -226,6 +226,7 @@
     },
     {
         "morning": {
+            "projectURL": "starter/Day4AM.zip",
             "projects": [
                 {
                     "imageURL": "img/icons/someSum.png",
@@ -245,8 +246,7 @@
                     "type": "project",
                     "url": "projects/carbonDating.html"
                 }
-            ],
-            "projectURL": "starter/Day4AM.zip"
+            ]
         },
         "title_en": "For loops, deconstructed",
         "title_tr": "For döngüsü ve analizi",

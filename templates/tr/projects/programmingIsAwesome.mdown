@@ -2,7 +2,7 @@ template: templates/tr/projects/projectTemplate.ptl
 title: Programlamak Bir Harika
 credit: Chris Piech ve Eric Roberts
 translation: Serhat Arslan, Gül Sena Altıntaş
-Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)<br/>
+Handouts: [Graphics Reference]({{pathToRoot}}tr/handouts/graphics.html)<br/>
 
 Bu programın amacı sizin ilk grafik programınızı oluşturmanızı sağlamak. Biri kırmızı, biri mavi ve biri sarı olmak üzere üç dikdörtgen çizmelisiniz ve ekranın merkezine "Programming is Awesome." ("Programlamak Bir Harika.") yazmalısınız. Dikdörtgenlerinizi herhangi bir boyutta yapabilirsiniz ve görülebilir olduğu sürece ekranda istediğiniz yere yerleştirebilirsiniz. Bizim programımızın görünüşü şu şekilde:
 

@@ -3,8 +3,8 @@ title: Hedef Tahtası
 credit: Eric Roberts, Mehran Sahami
 translation: Serhat Arslan, Ceren Kocaoğullar
 
-Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
-Worked Example: [Draw People]({{pathToRoot}}en/projects/drawpeople.html)<br/>
+Handouts: [Graphics Reference]({{pathToRoot}}tr/resources/graphics.html)<br/>
+Worked Example: [Draw People]({{pathToRoot}}tr/projects/drawpeople.html)<br/>
 File: `target.py`
 
 Farz edin ki, şunun gibi görünen bir okçuluk hedef tahtasının resmini çizdiren bir program ortaya koymanız için işe alındınız:

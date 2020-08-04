@@ -54,62 +54,92 @@
 -->
 
   <!-- Navigation Bar -->
+
+
 <nav class="navbar-inverse navbar-default" role="navigation">
-<div class="container-fluid">
-<div class="container">
-<!-- Brand and toggle get grouped for better mobile display -->
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="../../tr/index.html">CS Bridge</a>
-</div>
+	<div class="container-fluid">
+		<div class="container">
 
-<!-- Collect the nav links, forms, and other content for toggling -->
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<ul class="nav navbar-nav">
-<!--<li ><a href="#">Link</a></li>-->
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Kaynaklar<b class="caret"></b></a>
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../tr/index.html">CS Bridge</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+
+					<!-- Resources dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Kaynaklar<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Okuyucu</a></li>
+							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Referansı</a></li>
+
+							<!-- Divider only visible once Python resources visible -->
+							<li 
+									class="divider visible-after" data-visible-after="2020080600"
+							/>
+
+							<!-- Python reader visible later -->
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Okuyucu</a>
+							</li>
+
+							<!-- Python reference visible later -->
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../tr/resources/quick-python.html">Python Referansı</a>
+							</li>
+
+							<!-- Graphics reference visible later -->
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../../tr/resources/graphics.html">Grafikler Referansı</a>
+							</li>
+
+							<li class="divider" />
+
+							<!-- Yosefa's Part -->
+							<li class="dropdown-header">Program Bilgileri</li>
+							<li><a href="../../tr/resources/general-info.html">Genel Bilgiler</a></li>
+							<li><a href="../../tr/resources/student-faq.html">[Öğrenciler] Sıkça Sorulan Sorular</a></li>
+							<li><a href="../../tr/resources/section-info.html">Grup Bilgileri</a></li>
+							<!-- End Yosefa's Part -->
+
+							<li class="divider" />
+
+							<li><a href="../../tr/resources/install.html">PyCharm Kurulumu</a></li>
+							<li><a href="../../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
+							<li class="divider" />
+							<li><a href="../../tr/resources/submission-oh.html">Çalışmalarınızı Sisteme Yükleme/Ofis Saatleri</a></li>
+						</ul>
+					</li>
+
+					<!-- Projects dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projeler <b class="caret"></b></a>
 
 <ul class="dropdown-menu">
-<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Okuyucu</a></li>
-<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Okuyucu</a></li>
-<li class="divider visible-after" data-visible-after="2019071009" />
-<li><a class="visible-after" data-visible-after="2019071009" href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Referansı</a></li>
-<li><a class="visible-after" data-visible-after="2019071009" href="../../tr/resources/quick-python.html">Python Referansı</a></li>
-<li><a class="visible-after" data-visible-after="2019071109" href="../../tr/resources/graphics.html">Grafikler Referansı</a>
-<li class="divider visible-after" data-visible-after="2019071009" />
-<li class="dropdown-header">Program Bilgileri</li>
-<li><a href="../../tr/resources/general-info.html">Genel Bilgiler</a></li>
-<li><a href="../../tr/resources/student-faq.html">[Öğrenciler] Sıkça Sorulan Sorular</a></li>
-<li><a href="../../tr/resources/section-info.html">Grup Bilgileri</a></li>
-<li class="divider visible-after" data-visible-after="2019071009" />
-<li><a href="../../tr/resources/install.html">PyCharm Kurulumu</a></li>
-<li><a href="../../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
-<li class="divider" />
-<li><a href="../../tr/resources/submission-oh.html">Çalışmalarınızı Sisteme Yükleme/Ofis Saatleri</a></li>
-
-<!-- Not used nor visible -->
-<!--<a class="item visible-after" data-visible-after="2019071909"><a href="../../tr/resources/jar.html">Exporting Projects as JARs</a>-->
-<!--<a class="visible-after" href="../../tr/resources/sections.html">Sections</a>-->
-</ul>
-</li>
 
 
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projeler<b class="caret"></b></a>
-<ul class="dropdown-menu">
-
-
+	<!-- This dropdown should display one element for each day of projects -->
 		<li 
 				class="dropdown-submenu"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
+			<!-- For each of morning/evening, add a "side popup" -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -132,6 +162,7 @@
 		>
 			<a tabindex="-1" href="#">2: Karel ve Kontrol Akışı</a>
 
+			<!-- For each of morning/evening, add a "side popup" -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080500"
@@ -177,6 +208,7 @@
 		>
 			<a tabindex="-1" href="#">3: Değişkenler</a>
 
+			<!-- For each of morning/evening, add a "side popup" -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080600"
@@ -227,6 +259,7 @@
 		>
 			<a tabindex="-1" href="#">4: For döngüsü ve analizi</a>
 
+			<!-- For each of morning/evening, add a "side popup" -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080700"
@@ -246,18 +279,23 @@
 							</li>
 			</ul>
 		</li>
-</ul></li>
+</ul>					</li>
 
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Örnekler <b class="caret"></b></a>
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Örnekler <b class="caret"></b></a>
+
 <ul class="dropdown-menu">
 
+
+	<!-- This dropdown should display one element for each day of worked examples -->
 
 		<li 
 				class="dropdown-submenu"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -275,11 +313,13 @@
 							</li>
 			</ul>
 		</li>
+
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020080500"
 		>
 			<a tabindex="-1" href="#">2: Karel ve Kontrol Akışı</a>
 
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080500"
@@ -315,11 +355,13 @@
 							</li>
 			</ul>
 		</li>
+
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020080600"
 		>
 			<a tabindex="-1" href="#">3: Değişkenler</a>
 
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080600"
@@ -355,89 +397,187 @@
 							</li>
 			</ul>
 		</li>
-</ul></li>
+</ul>					</li>
 
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sunumlar <b class="caret"></b></a>
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ders <b class="caret"></b></a>
+
 <ul class="dropdown-menu">
-<li><a href="../../slides/Welcome.pdf">1. Karel</a></li>
-<li><a href="../../slides/ControlFlow.pdf">2. Kontrol Akışı (Sunum)</a></li>
-<li><a href="../../starter/ControlFlow.zip">2. Kontrol Akışı (Kod)</a></li>
-<li><a href="../../slides/IntroPython_Variable_Math_RandomNumbers.pdf">3. Değişkenler (Sunum)</a></li>
-<li><a href="../../starter/Day3-Variables.zip">3. Değişkenler (Kod)</a></li>
-<li><a href="../../slides/Graphics.pdf">Grafikler (Sunum)</a></li>
-<li><a href="../../starter/Graphics.zip">Grafikler (Kod)</a></li>
-<li><a href="../../slides/Animation.pdf">Animasyon</a></li>
-<li><a href="../../slides/Methods.pdf">Fonksiyonlar</a></li>
-<li><a href="../../slides/NestedLoops.pdf">İç İçe Döngüler</a></li>
-<li><a href="../../slides/Events.pdf">Event&#39;ler (Sunum)</a></li>
-<li><a href="../../starter/Events.zip">Event&#39;ler (Kod)</a></li>
-<li><a href="../../slides/Breakout.pdf">Breakout</a></li>
-<li><a href="../../slides/Beyond-CSBridge.pdf">CSBridge&#39;in Ötesine!</a></li>
-</ul>
-</li>
-
-<!--
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Formlar <b class="caret"></b></a>
-<ul class="dropdown-menu">
-<li><a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Anket</a></li>
-<li><a href="https://forms.gle/eVsMyZb8HCSUETeV6">Laboratuvara Kaydol</a></li>
-</ul>
-</li>
--->
 
 
-<!-- Bonus button -->
-<ul class="nav navbar-nav">
-<li><a href="../../tr/bonus-index.html">Bonus</a></li>
-</ul>
+	<!-- This dropdown should display one element for each lecture -->
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080409"
+		>
+			<a tabindex="-1" href="#">1: Karel</a>
 
-<!-- TA Link -->
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lecture1.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../starter/lectures/Lecture1.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+</ul>					</li>
+					
+					<!-- Bonus -->
+					<ul class="nav navbar-nav">
+						<li><a href="../../tr/bonus-index.html">Bonus</a></li>
+					</ul>
 
-</ul>
+					<!-- TA Link -->
 
+				</ul>
 
-<ul class="nav navbar-nav navbar-right">
-<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/english_flag.png"></img></a></li>
-<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
+				<!-- Language toggle button -->
+				<ul class="nav navbar-nav navbar-right">
+						<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/english_flag.png"></img></a></li>
+				</ul>
 
-</ul>
-</div><!-- /.navbar-collapse -->
-</div>
-</div><!-- /.container-fluid -->
+			</div>
+		</div>
+	</div>
 </nav>
 
+<!-- Script to toggle between languages -->
 <script>
-
-function changeToTurkish() {
-    var url = window.location.href;
-    url = url.replace("/en/", "/tr/");
-    window.location.href = url;
-}
-
-function changeToEnglish() {
-    var url = window.location.href;
-    url = url.replace("/tr/", "/en/");
-    window.location.href = url;
-}
-
-</script>
-  
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+	
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+</script>  
   <div class="container">
   	
-  	<h1 id="graphics-reference-in-progress">Graphics Reference (In Progress)</h1>
+  	<h1 id="graphics-reference">Graphics Reference</h1>
 <hr />
-<p>One of the most common libraries to create graphics in Python is
-called Tk (short for "tkinter"). Tk is a powerful graphics library, but some of the functions are hard to use.  For this reason, we provide our own small graphics library that is built on top of Tk and makes it easier to use.  However, it's not a replacement for Tk - it just adds new functions to make certain things like drawing text easier.  You can always explore the full Tk library if you're interested in seeing what else you can do!</p>
-<h2 id="installation">Installation</h2>
-<p>The graphics library itself comes pre-packaged with every graphical PyCharm project.  However, it relies on one other tool that you'll need to install, called "Pillow", which contains code to manipulate images. In order for graphics to work properly with images, you need to install Pillow on your machine.  To install Pillow, you should first open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following command shown in bold below into the Terminal. (Note that "Pillow" starts with an uppercase P.) On Windows, type “py” instead of “python3”):</p>
-<pre><code>&gt; python3 -m pip install Pillow
-...prints stuff...
-Successfully installed Pillow-7.1.1
-</code></pre>
+<div class="row">
+    <div class="col-xs-12">
+        <a class="btn btn-primary" role="button" data-toggle="collapse" href="#quickreference" aria-expanded="false" aria-controls="collapseExample">
+            Show/Hide Quick Reference
+        </a>
+        <a class="btn btn-primary" role="button" href="api-docs/graphics.html">
+            View Complete Reference Docs
+        </a>
+    </div>
+</div>
 
-<p>Now you should be able to add images to your graphics program canvases.  Woohoo!</p>
+<p><br />
+<div class="collapse" id="quickreference">
+    <h4>Create Graphical Objects</h4>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td>Method</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>create_line(x1, y1, x2, y2)</code></td>
+                <td>Creates a new line connecting <code>(x1, y1)</code> and <code>(x2, y2)</code>.</td>
+            </tr>
+            <tr>
+                <td><code>create_rectangle(x1, y1, x2, y2)</code></td>
+                <td>Creates a new rectangle on the canvas the size of this bounding box and returns it.</td>
+            </tr>
+            <tr>
+                <td><code>create_oval(x1, y1, x2, y2)</code></td>
+                <td>Creates a new oval on the canvas contained within this bounding box and returns it.</td>
+            </tr>
+            <tr>
+                <td><code>create_image(x, y, filepath)</code><br/><p>--OR--</p><code>create_image_with_size(x, y,<br /> width, height, filepath)</code></td>
+                <td>Creates a new image on the canvas from the specified file, with top-left corner at <code>(x, y)</code>.  You can also specify the width and height.</td>
+            </tr>
+            <tr>
+                <td><code>create_text(x, y, text)</code></td>
+                <td>Creates text on the canvas with the specified contents, centered at <code>(x, y)</code>.</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>Work With Graphical Objects</h4>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td>Method</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>get_width(obj)</code></td>
+                <td>Returns the width of <code>obj</code>.</td>
+            </tr>
+            <tr>
+                <td><code>get_height(obj)</code></td>
+                <td>Returns the height of <code>obj</code>.</td>
+            </tr>
+            <tr>
+                <td><code>get_left_x(obj)</code></td>
+                <td>Returns the leftmost x coordinate of <code>obj</code>.</td>
+            </tr>
+            <tr>
+                <td><code>get_top_y(obj)</code></td>
+                <td>Returns the topmost y coordinate of <code>obj</code>.</td>
+            </tr>
+            <tr>
+                <td><code>move(obj, dx, dy)</code></td>
+                <td>Moves <code>obj</code> using the displacements <code>dx</code> and <code>dy</code>.</td>
+            </tr>
+            <tr>
+                <td><code>moveto(obj, x, y)</code></td>
+                <td>Sets the location of <code>obj</code> to the specified coordinates.</td>
+            </tr>
+            <tr>
+                <td><code>set_outline_color(obj, color)</code></td>
+                <td>Sets the outline color (if applicable) of <code>obj</code>.</td>
+            </tr>
+            <tr>
+                <td><code>set_fill_color(obj, color)</code></td>
+                <td>Sets the fill color (if applicable) of <code>obj</code>.</td>
+            </tr>
+            <tr>
+                <td><code>set_font(obj, font, size)</code></td>
+                <td>Sets the font and font size for the text object <code>obj</code>.</td>
+            </tr>
+            <tr>
+                <td><code>delete(obj)</code></td>
+                <td>Removes <code>obj</code> from the canvas.</td>
+            </tr>
+        </tbody>
+    </table> <br />
+    <h4>Canvas Information</h4>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td>Method</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>get_canvas_width()</code></td>
+                <td>Returns the width of the canvas.</td>
+            </tr>
+            <tr>
+                <td><code>get_canvas_height()</code></td>
+                <td>Returns the height of the canvas.</td>
+            </tr>
+        </tbody>
+    </table>  <br />
+    <hr />
+</div></p>
+<p>One of the most common libraries to create graphics in Python is called Tk (short for "tkinter"). Tk is a powerful graphics library that should be automatically installed for Windows and Mac along with Python when you installed it.  But some of the functions are hard to use.  For this reason, we provide our own small graphics library that is built on top of Tk and makes it easier to use.  However, it's not a replacement for Tk - it just adds new functions to make certain things like drawing text easier.  You can always explore the full Tk library if you're interested in seeing what else you can do!</p>
 <h2 id="importing">Importing</h2>
 <p>To use our graphics library, you must first import it at the top of your program, like this:</p>
 <pre><code>from graphics import Canvas
@@ -451,51 +591,187 @@ Successfully installed Pillow-7.1.1
   style="width: 30%;"
   alt="A diagram of the canvas coordinate scheme. (0, 0) is the top left corner. An arrow extends downwards in the y direction and rightwards in the x direction"
 /></p>
-<p>When we want to draw shapes on a canvas, we call functions on that canvas that “create” the shape we want to draw. These shapes then appear on the canvas. In CSBridge, we will generally provide the code that creates the canvas for you, so all you need to worry about is adding shapes to that canvas. For the remainder of this handout, we will assume that an object named <code>canvas</code> has already been created, and it represents the canvas that you’ll be drawing on. Below we provide a brief tour of some of the different shapes you can draw in a canvas as well as highlight a few of the options you have with regard to how those shapes look.</p>
-<h2 id="canvas-properties">Canvas Properties</h2>
-<ul>
-<li><code>get_canvas_height</code></li>
-<li><code>get_canvas_width</code></li>
-<li><code>set_canvas_background_color</code></li>
-</ul>
+<p>When we want to draw shapes on a canvas, we call functions on that canvas that “create” the shape we want to draw. These shapes then appear on the canvas. We will generally provide the code that creates the canvas for you, so all you need to worry about is adding shapes to that canvas. For the remainder of this handout, we will assume that a variable named <code>canvas</code> has already been created, and it represents the canvas that you’ll be drawing on. Usually this will be done with the following provided code:</p>
+<pre><code>canvas = Canvas()  # create a new canvas
+canvas.set_canvas_title(&quot;My Program&quot;)  # sets the text in the window title bar
+
+# now we can use our canvas here!
+...
+
+# call this at the end of the program to make sure the window shows properly
+canvas.mainloop()
+</code></pre>
+
+<p>Below we provide a brief tour of some of the different shapes you can draw in a canvas as well as highlight a few of the options you have with regard to how those shapes look.  For a complete list of functions, check out the link at the top of this page to the full reference documentation.</p>
 <h2 id="drawing-lines">Drawing Lines</h2>
-<ul>
-<li><code>create_line</code></li>
-</ul>
+<p>To draw lines on the canvas, use <code>create_line</code> and specify the coordinates for the <strong>start</strong> and <strong>end</strong> points of the line.  For example, the following command would draw a line from location (10, 20) to (100, 50) on the canvas:</p>
+<pre><code>canvas.create_line(10, 20, 100, 50)
+</code></pre>
+
+<p>By default, all lines are drawn black.</p>
 <h2 id="drawing-rectangles">Drawing Rectangles</h2>
-<ul>
-<li><code>create_rectangle</code></li>
-</ul>
+<p>To draw a rectangle on the canvas, use <code>create_rectangle</code> and specify the coordinates for the <strong>top left corner</strong> and <strong>bottom right corner</strong> of the rectangle.  For example, the following command would draw a rectangle with upper left-hand corner at (5, 50) and lower right-hand corner at (100, 200) on the canvas:</p>
+<pre><code>canvas.create_rectangle(5, 50, 100, 200)
+</code></pre>
+
+<p>By default, all rectangles are drawn unfilled with black outlines.  Here's what this code would draw on the canvas:</p>
+<p><img
+  src="../../img/resources/graphics/create_rectangle.png"
+  class="img-fluid mx-auto d-block"
+  style="width: 30%; border: 1px solid black"
+  alt="A diagram of a canvas with a rectangle whose upper-left corner is at (5, 50) and bottom right corner at (100, 200)"
+/></p>
 <h2 id="drawing-ovals">Drawing Ovals</h2>
-<ul>
-<li><code>create_oval</code></li>
-</ul>
+<p>To draw an oval on the canvas, use <code>create_oval</code> and specify the coordinates for the <strong>top left corner</strong> and <strong>bottom right corner</strong> of the bounding box containing the oval you would like to draw.  In other words, the oval drawn will have its top, bottom, right, and left just touching the sides of the bounding box you specify.  For example, the following command would draw the oval that fits within an imaginary rectangle with upper left-hand corner at (5, 50) and lower right-hand corner at (100, 200) on the canvas:</p>
+<pre><code>canvas.create_oval(5, 50, 100, 200)
+</code></pre>
+
+<p>By default, all ovals are drawn unfilled with black outlines.  Here's what this code would draw on the canvas - note that we can think of this as an imaginary bounding box from (5, 50) to (100, 200), with an oval drawn inside it:</p>
+<p><img
+  src="../../img/resources/graphics/create_oval.png"
+  class="img-fluid mx-auto d-block"
+  style="width: 30%; border: 1px solid black"
+  alt="A diagram of a canvas with an oval whose bounding box upper-left corner is at (5, 50) and bounding box bottom right corner at (100, 200)"
+/></p>
+<p>To make clear the notion of a bounding box, below we draw an oval and an outline rectangle, where both the oval and rectangle have the same bounding box coordinates:</p>
+<pre><code>canvas.create_rectangle(10, 50, 260, 200)
+canvas.create_oval(10, 50, 260, 200)
+</code></pre>
+
+<p><img
+  src="../../img/resources/graphics/create_oval_bounding_box.png"
+  class="img-fluid mx-auto d-block"
+  style="width: 30%; border: 1px solid black"
+  alt="A diagram of a canvas with an oval whose bounding box upper-left corner is at (10, 50) and bounding box bottom right corner at (260, 200).  We also draw a rectangle for the bounding box itself from (10, 50) to (260, 200)"
+/></p>
 <h2 id="drawing-text">Drawing Text</h2>
-<ul>
-<li><code>create_text</code></li>
-<li><code>set_font</code></li>
-</ul>
+<p>To draw text on the canvas, use <code>create_text</code> and specify the coordinate for the <strong>center</strong> of the text label.  For example, the following command would add text to the canvas displaying "Hello, world!" <em>centered at</em> (50, 50):</p>
+<pre><code>canvas.create_text(50, 50, &quot;Hello, world!&quot;)
+</code></pre>
+
+<p>Note that while other graphical objects typically use their upper-left corner as their position, text uses its center point.  This is because often-times we wish to center text, such as in the middle of the screen.  We can do this easily using the dimensions of the canvas:</p>
+<pre><code>canvas.create_text(canvas.get_canvas_width() / 2, 
+                   canvas.get_canvas_height() / 2, 
+                   &quot;This is centered on the canvas!&quot;)
+</code></pre>
+
+<p>By default, all text is drawn in black in the system font.  Here's what this code for drawing a centered label would draw on the canvas:</p>
+<p><img
+  src="../../img/resources/graphics/create_text.png"
+  class="img-fluid mx-auto d-block"
+  style="width: 30%; border: 1px solid black"
+  alt="A diagram of a canvas with text drawn centered at (50, 50)"
+/></p>
+<p>If you'd like, you can change the font of drawn text using <code>set_font</code>, like this:</p>
+<pre><code>label = canvas.create_text(100, 100, &quot;Hello, world!&quot;)
+canvas.set_font(label, &quot;Times&quot;, 25)
+</code></pre>
+
 <h2 id="adding-images">Adding Images</h2>
-<ul>
-<li><code>create_image</code></li>
-<li><code>create_image_with_size</code></li>
-</ul>
+<p class="alert alert-info"><em>Note: if images do not work in your program, and instead give an error, you may not have installed the library necessary for images to work.  Make sure you followed the instructions in the <a href="../../tr/resources/install.html">installation guide</a> under "Installing Graphics".</em></p>
+<p>You can add image files to your canvas as well.  To do this, use <code>create_image</code> (if you want the image to be the same size on the canvas as the image file) or <code>create_image_with_size</code>) (if you want the image to be another size you specify).  Both require you to specify the x and y location of the <strong>upper-left corner</strong> of the image on the canvas, as well as the name of the image file.  <code>create_image_with_size</code> also requires a width and a height that the image should be.  Here's an example that adds a smiley-face image to the canvas with upper-left corner at (25, 30), assuming we have an image file named "smiley.jpg" in our PyCharm project:</p>
+<pre><code>canvas.create_image(25, 30, &quot;smiley.png&quot;)
+
+# or add with specific dimensions width = 100, height = 200
+canvas.create_image_with_size(25, 30, 100, 200, &quot;smiley.png&quot;)
+</code></pre>
+
+<p>Here's what this code would draw on the canvas - note that the larger smiley is the one from the <code>create_image</code> call, and the distorted one is the 100x200 smiley drawn with <code>create_image_with_size</code>:</p>
+<p><img
+  src="../../img/resources/graphics/create_image.png"
+  class="img-fluid mx-auto d-block"
+  style="width: 30%; border: 1px solid black"
+  alt="A diagram of a canvas with a full-size smiley drawn at (25, 30) and a smiley that is 100x200 drawn at (25, 30)"
+/></p>
+<p>One note about images is that they <em>cannot be resized after you create them</em>.  (Note: smiley image from <a href="https://simple.wikipedia.org/wiki/Smiley">here</a>)</p>
+<h2 id="removing-objects-from-the-canvas">Removing Objects From the Canvas</h2>
+<p>You can remove objects from the canvas using <code>delete</code>:</p>
+<pre><code>rect = canvas.create_rectangle(100, 200, 300, 400)
+...
+canvas.delete(rect)
+</code></pre>
+
+<p>Note that deleting an object is permanent - if you want to temporarily make an object hidden, for instance, use <code>set_hidden</code>.  You can pass in either <code>True</code> or <code>False</code> to set an object to be hidden or visible:</p>
+<pre><code>rect = canvas.create_rectangle(100, 200, 300, 400)
+canvas.set_hidden(rect, True)  # No longer visible
+...
+canvas.set_hidden(rect, False) # visible again
+</code></pre>
+
+<h2 id="object-ordering">Object Ordering</h2>
+<p>Objects are drawn on the canvas in the order in which they are created by your code. So, if you draw a red rectangle after a yellow circle, the red rectangle can potentially cover (occlude) part of the yellow circle. This is sometimes referred to as the z-order of the objects.</p>
+<p>As an example, below, we first draw a yellow rectangle, then draw an orange oval (which partly overlaps the rectangle), and then some text (that is on top of both the rectangle and the oval).</p>
+<pre><code>rect = canvas.create_rectangle(10, 50, 150, 200) 
+canvas.set_fill_color(rect, 'yellow')
+oval = canvas.create_oval(100, 100, 200, 220) 
+canvas.set_fill_color(oval, 'orange')
+label = canvas.create_text(70, 170, 'good times!')
+canvas.set_font(label, &quot;Times&quot;, 20)
+</code></pre>
+
+<p><img
+  src="../../img/resources/graphics/z_order.png"
+  class="img-fluid mx-auto d-block"
+  style="width: 30%; border: 1px solid black"
+  alt="A diagram of a canvas with a yellow rectangle, orange oval, and black text saying 'good times!'.  The rectangle is drawn first, so it is behind the other objects.  The orange oval partially overlaps on top of the rectangle, and the text is added last so it appears on top of both the rectangle and oval."
+/></p>
 <h2 id="getting-object-information">Getting Object Information</h2>
-<ul>
-<li><code>get_height</code></li>
-<li><code>get_width</code></li>
-<li><code>get_left_x</code></li>
-<li><code>get_top_y</code></li>
-</ul>
+<p>For all graphical objects, you can ask the canvas for information about them.  For instance, you can get their dimensions via <code>get_width</code> and <code>get_height</code>:</p>
+<pre><code>rect = canvas.create_rectangle(0, 0, 50, 100)
+print(canvas.get_width(rect))  # prints 50
+print(canvas.get_height(rect)) # prints 100
+</code></pre>
+
+<p>You can also ask the canvas for information about their location.  Specifically, you can get the leftmost x coordinate of the object, or the topmost y coordinate:</p>
+<pre><code>oval = canvas.create_oval(5, 10, 50, 100)
+print(canvas.get_left_x(oval))  # prints 5
+print(canvas.get_top_y(oval))   # prints 10
+</code></pre>
+
+<p>Note that for something like an oval, the dimensions and left corner are from the bounding box that contains it.</p>
 <h2 id="updating-graphical-objects">Updating Graphical Objects</h2>
-<ul>
-<li><code>delete</code></li>
-<li><code>move_to</code></li>
-<li><code>set_color</code></li>
-<li><code>set_fill_color</code></li>
-<li><code>set_outline_color</code></li>
-<li><code>set_size</code></li>
-</ul>
+<p>There are several helpful functions you can use to update the state of different graphical objects.</p>
+<h4 id="moving-objects">Moving Objects</h4>
+<p>You can change the location of an object using <code>moveto</code>.  You specify a new coordinate which will be the upper-left corner of the bounding box for the object (e.g. bounding box for an oval, bounding box for a line, etc.).  Here's how we would move a rect to have upper-left corner at (25, 50):</p>
+<pre><code>rect = canvas.create_rectangle(100, 200, 300, 400)
+canvas.moveto(rect, 25, 50)
+</code></pre>
+
+<p>You can also change the location of an object by specifying <em>how much</em> you would like to move it by, instead of specifying the new location.  The <code>move</code> function lets you specify the change in <code>x</code> and the change in <code>y</code> for the object.  For example, here's how we would move a rect 5 pixels to the right, and 10 pixels down:</p>
+<pre><code>rect = canvas.create_rectangle(100, 200, 300, 400)
+canvas.move(rect, 5, 10)
+</code></pre>
+
+<p>Thus, <code>rect</code>'s new top-left-corner coordinate would be (105, 210).</p>
+<h4 id="coloring">Coloring</h4>
+<p>You can change the colors of various objects, both their <em>outline</em> and their <em>fill</em>.  Objects like rectangles and ovals have both - their outline is the border around the shape, and their fill is the inside of the shape.  Lines have just a fill - it's the color of the line.  Text also has just a fill - it's the color of the text.  Images have neither a fill nor an outline.  You can change the fill color for relevant objects using <code>set_fill_color</code>, and the outline color using <code>set_outline_color</code>.  For instance, here's how we could make a rectangle with a red outline and yellow fill:</p>
+<pre><code>rect = canvas.create_rectangle(5, 5, 100, 100)
+canvas.set_outline_color(rect, 'red')
+canvas.set_fill_color(rect, 'yellow')
+</code></pre>
+
+<p>Here's what this would look like on the canvas:</p>
+<p><img
+  src="../../img/resources/graphics/coloring.png"
+  class="img-fluid mx-auto d-block"
+  style="width: 30%; border: 1px solid black"
+  alt="A diagram of a canvas with a rectangle from (5, 5) to (100, 100) drawn with a yellow fill and red outline"
+/></p>
+<p>If you pass in the empty string for the color, it sets the shape to have no fill or outline:</p>
+<pre><code>rect = canvas.create_rectangle(100, 200, 300, 400)
+canvas.set_outline_color(rect, '')    # no outline
+canvas.set_fill_color(rect, 'yellow') # yellow fill
+</code></pre>
+
+<p>There are a ton of different colors available to use - for a complete list, <a href="https://www.tcl.tk/man/tcl8.6/TkCmd/colors.htm">check out this website</a>.</p>
+<h2 id="canvas-information">Canvas Information</h2>
+<p>You can get the width and height of the canvas itself using <code>get_canvas_width</code> and <code>get_canvas_height</code>:</p>
+<pre><code>canvas_width = canvas.get_canvas_width()
+canvas_height = canvas.get_canvas_height()
+
+# Create centered text
+label = canvas.create_text(canvas_width / 2, canvas_height / 2, &quot;I'm centered!&quot;)
+</code></pre>
   			
   	<!-- Footer -->
 <hr>

@@ -1,4 +1,4 @@
-template: templates/en/projects/projectTemplate.ptl
+template: templates/tr/projects/projectTemplate.ptl
 title: Enkazı Kaldır (çözümlü)
 credit: Chris Piech ve gizemli CS106A ekibi tarafından yazıldı.
 translation: Serhat Arslan, Demet Tümkaya

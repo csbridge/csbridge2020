@@ -1,15 +1,27 @@
 <%
+"""
+This template renders a table of projects based on the programs.json file.
+See the README for an in-depth description of the expected format of that file.
+
+This template expects one provided parameter, "lang", which should be the language
+code to display the content in.  Currently "en" (English) and "tr" (Turkish) are supported.
+"""
+%>
+
+<%
+	# Read the data from the JSON file
 	import json
 	with open("templates/programs/programs.json", "r", encoding="utf8") as programs_file:
   		data = json.load(programs_file)
 %>
 
-
-<!-- Final Project -->
 <table class="table table-striped">
 
+	% # Display the days in reverse order (day 1 at the bottom, day 2 above it, etc.)
 	% for i in range(len(data) - 1, -1, -1):
 		% day_info = data[i]
+
+		<!-- The head of the table should show the day's topic title -->
 		<thead
 			% if not get('taMode', False) and "visible_after" in day_info:
 				class="visible-after" data-visible-after="{{day_info["visible_after"]}}"
@@ -30,6 +42,8 @@
 				</th>
 			</tr>
 		</thead>
+
+		% # Below that, show lists for each of the morning and evening (if present)
 		% for segment in ["morning", "evening"]:
 			% if segment in day_info:
 				<tr 
@@ -42,6 +56,7 @@
 						class="info"
 					% end
 				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
 	      			<td colspan = "6">
 	      				<center>
 	      					<% 
@@ -69,6 +84,7 @@
 	      			</td>
 	      		</tr>
 
+	      		<!-- Display the projects for this part of the day -->
 	      		<tbody
 	      			% if not get('taMode', False) and segment == "morning" and "visible_after" in day_info:
 						class="visible-after" data-visible-after="{{day_info['visible_after']}}"
@@ -86,6 +102,7 @@
 			% end
 		% end
 
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page -->
 	  	<tr 
 	  		% if not get('taMode', False) and "visible_after" in day_info:
 	  			class="active visible-after" data-visible-after="{{day_info['visible_after']}}"

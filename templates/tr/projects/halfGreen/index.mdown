@@ -4,7 +4,7 @@ credit: Chris Piech
 solution: soln.py
 translation: Serhat Arslan, Ceren Kocaoğullar
 
-Ders Notları: [Grafikler Referansı]({{pathToRoot}}en/resources/graphics.html)<br/>
+Ders Notları: [Grafikler Referansı]({{pathToRoot}}tr/resources/graphics.html)<br/>
 
 
 Ekranda rastgele konumlarda 1000 adet daire oluşturacağız. Sol alt köşeye daha yakın olan daireler mavi olurken sağ üste yakın olanlar yeşil olacak. Bu örnek döndürülen (return) değerlere dair bir örnek.

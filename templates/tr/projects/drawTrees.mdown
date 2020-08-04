@@ -3,7 +3,7 @@ title: Ağaç Çiz
 credit: Chris, Bryce ve Julia tarafından yazıldı.
 translation: Serhat Arslan, Demet Tümkaya
 
-Ders Notları: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
+Ders Notları: [Graphics Reference]({{pathToRoot}}tr/resources/graphics.html)<br/>
 
 Gövdesinin tabanı verilen `(x, y)` pozisyonunu merkez kabul eden bir ağaç çizmek için `draw_tree` fonksiyonunu doldurun.
 

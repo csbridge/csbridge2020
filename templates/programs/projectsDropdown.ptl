@@ -1,11 +1,23 @@
+<%
+"""
+This template renders a list of projects based on the programs.json file.
+See the README for an in-depth description of the expected format of that file.
+
+This template expects one provided parameter, "lang", which should be the language
+code to display the content in.  Currently "en" (English) and "tr" (Turkish) are supported.
+"""
+%>
+
 <ul class="dropdown-menu">
 
 	<%
+		# Read the data from the JSON file
 		import json
 		with open("templates/programs/programs.json", "r", encoding="utf8") as programs_file:
 	  		data = json.load(programs_file)
 	%>
 
+	<!-- This dropdown should display one element for each day of projects -->
 	% for i, day_info in enumerate(data):
 		<li 
 			% if not get('taMode', False) and "visible_after" in day_info:
@@ -16,6 +28,7 @@
 		>
 			<a tabindex="-1" href="#">{{i + 1}}: {{day_info["title_" + lang]}}</a>
 
+			<!-- For each of morning/evening, add a "side popup" -->
 			<ul class="dropdown-menu">
 				% for segment in ["morning", "evening"]:
 					% if segment in day_info and "projects" in day_info[segment]:
@@ -44,6 +57,7 @@
 							{{segment_translation}}
 						</li>
 
+						% # For each project in this segment of the day, add a row
 						% for project in day_info[segment]["projects"]:
 							<li
 								% if not get('taMode', False) and segment == "morning" and "visible_after" in day_info:

@@ -50,6 +50,6 @@ for i in range(10):
     move()
 ```
 
-Başka bir örnek için [100 Koymak]({{pathToRoot}}en/projects/place100/) programını inceleyebilirsiniz.
+Başka bir örnek için [100 Koymak]({{pathToRoot}}tr/projects/place100/) programını inceleyebilirsiniz.
 
 Eğer for döngülerini kullanırsanız, programınızı yazması ve okuması çok daha kolay olacak. Bu problemde for döngüleri kullanmanın birçok avantajı var!

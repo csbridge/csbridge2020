@@ -1,3 +1,14 @@
+<%
+"""
+This template renders a single project in the project table.
+
+This template expects two provided parameters, "lang", which should be the language
+code to display the content in - currently "en" (English) and "tr" (Turkish) are supported,
+and "project", a Python object representing a single project.  See the README for an in-depth 
+description of the expected format of this project object.
+"""
+%>
+
 <td>
 	<img class="projectImg" src="{{pathToRoot}}{{project['imageURL']}}" />
 </td>
@@ -6,6 +17,10 @@
     <br/>
 
     <%
+        """
+        The type can be "quickstart", "section" or "project". Depending
+        on the type, render a different badge displaying its type, translated.
+        """
     	label_class = ""
     	label_text = "NOT TRANSLATED"
     	if project["type"] == "quickstart":

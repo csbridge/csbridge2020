@@ -1,16 +1,31 @@
+<%
+"""
+This template renders a list of worked examples based on the programs.json file.
+See the README for an in-depth description of the expected format of that file.
+
+This template expects one provided parameter, "lang", which should be the language
+code to display the content in.  Currently "en" (English) and "tr" (Turkish) are supported.
+"""
+%>
+
 <ul class="dropdown-menu">
 
 	<%
+		# Read the data from the JSON file
 		import json
 		with open("templates/programs/programs.json", "r", encoding="utf8") as programs_file:
 	  		data = json.load(programs_file)
 	%>
 
+	<!-- This dropdown should display one element for each day of worked examples -->
 	% for i, day_info in enumerate(data):
-		<% if ("morning" in day_info and "examples" not in day_info["morning"]) or ("evening" in day_info and "examples" not in day_info["evening"]) or ("morning" not in day_info and "evening" not in day_info):
+		<% 
+			# Skip this day if it doesn't have any worked examples
+			if ("morning" in day_info and "examples" not in day_info["morning"]) or ("evening" in day_info and "examples" not in day_info["evening"]) or ("morning" not in day_info and "evening" not in day_info):
 				continue
 			end
 		%>
+
 		<li 
 			% if not get('taMode', False) and "visible_after" in day_info:
 				class="dropdown-submenu visible-after" data-visible-after="{{day_info["visible_after"]}}"
@@ -20,6 +35,7 @@
 		>
 			<a tabindex="-1" href="#">{{i + 1}}: {{day_info["title_" + lang]}}</a>
 
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
 			<ul class="dropdown-menu">
 				% for segment in ["morning", "evening"]:
 					% if segment in day_info and "examples" in day_info[segment]:
@@ -48,6 +64,7 @@
 							{{segment_translation}}
 						</li>
 
+						% # For each worked example in this segment of the day, add a row
 						% for example in day_info[segment]["examples"]:
 							<li
 								% if not get('taMode', False) and segment == "morning" and "visible_after" in day_info:

@@ -54,62 +54,89 @@
 -->
 
 <!-- Navigation Bar -->
+
+
 <nav class="navbar-inverse navbar-default" role="navigation">
-  <div class="container-fluid">
-  	<div class="container">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="../en/index.html">CS Bridge</a>
-	    </div>
+	<div class="container-fluid">
+		<div class="container">
 
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav">
-	        <!--<li ><a href="#">Link</a></li>-->
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../en/index.html">CS Bridge</a>
+			</div>
 
-            <ul class="dropdown-menu">
-	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
-	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
-	          	<li class="divider visible-after" data-visible-after="2019071009" />
-          		<li><a class="visible-after" data-visible-after="2019071009" href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></li>
-          		<li><a class="visible-after" data-visible-after="2019071009" href="../en/resources/quick-python.html">Python Reference</a></li>
-	          	<li><a class="visible-after" data-visible-after="2019071109" href="../en/resources/graphics.html">Graphics Reference</a>
-	          	<li class="divider visible-after" data-visible-after="2019071009" />
-              <li class="dropdown-header">Course information</li>
-              <li><a href="../en/resources/general-info.html">General Info</a></li>
-              <li><a href="../en/resources/student-faq.html">[Student] Course FAQs</a></li>
-              <li><a href="../en/resources/section-info.html">Section Info</a></li>
-	          	<li class="divider visible-after" data-visible-after="2019071009" />
-              <li><a href="../en/resources/install.html">Install PyCharm</a></li>
-              <li><a href="../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
-              <li class="divider" />
-              <li><a href="../en/resources/submission-oh.html">Submission/Office Hours</a></li>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
 
-              <!-- Not used nor visible -->
-				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../en/resources/jar.html">Exporting Projects as JARs</a>-->
-	          	<!--<a class="visible-after" href="../en/resources/sections.html">Sections</a>-->
-	          </ul>
-	        </li>
+					<!-- Resources dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></li>
 
+							<!-- Divider only visible once Python resources visible -->
+							<li 
+									class="divider"
+							/>
 
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+							<!-- Python reader visible later -->
+							<li
+							>
+								<a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a>
+							</li>
+
+							<!-- Python reference visible later -->
+							<li
+							>
+								<a href="../en/resources/quick-python.html">Python Reference</a>
+							</li>
+
+							<!-- Graphics reference visible later -->
+							<li
+							>
+								<a href="../en/resources/graphics.html">Graphics Reference</a>
+							</li>
+
+							<li class="divider" />
+
+							<!-- Yosefa's Part -->
+							<li class="dropdown-header">Course Information</li>
+							<li><a href="../en/resources/general-info.html">General Info</a></li>
+							<li><a href="../en/resources/student-faq.html">[Student] Course FAQs</a></li>
+							<li><a href="../en/resources/section-info.html">Section Info</a></li>
+							<!-- End Yosefa's Part -->
+
+							<li class="divider" />
+
+							<li><a href="../en/resources/install.html">Install PyCharm</a></li>
+							<li><a href="../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+							<li class="divider" />
+							<li><a href="../en/resources/submission-oh.html">Submission/Office Hours</a></li>
+						</ul>
+					</li>
+
+					<!-- Projects dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+
 <ul class="dropdown-menu">
 
 
+	<!-- This dropdown should display one element for each day of projects -->
 		<li 
 				class="dropdown-submenu"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
+			<!-- For each of morning/evening, add a "side popup" -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -132,6 +159,7 @@
 		>
 			<a tabindex="-1" href="#">2: Karel and Control Flow</a>
 
+			<!-- For each of morning/evening, add a "side popup" -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -172,6 +200,7 @@
 		>
 			<a tabindex="-1" href="#">3: Variables</a>
 
+			<!-- For each of morning/evening, add a "side popup" -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -216,6 +245,7 @@
 		>
 			<a tabindex="-1" href="#">4: For loops, deconstructed</a>
 
+			<!-- For each of morning/evening, add a "side popup" -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -233,18 +263,23 @@
 							</li>
 			</ul>
 		</li>
-</ul>	        </li>
+</ul>					</li>
 
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+
 <ul class="dropdown-menu">
 
+
+	<!-- This dropdown should display one element for each day of worked examples -->
 
 		<li 
 				class="dropdown-submenu"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -262,11 +297,13 @@
 							</li>
 			</ul>
 		</li>
+
 		<li 
 				class="dropdown-submenu"
 		>
 			<a tabindex="-1" href="#">2: Karel and Control Flow</a>
 
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -298,11 +335,13 @@
 							</li>
 			</ul>
 		</li>
+
 		<li 
 				class="dropdown-submenu"
 		>
 			<a tabindex="-1" href="#">3: Variables</a>
 
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -334,78 +373,69 @@
 							</li>
 			</ul>
 		</li>
-</ul>	        </li>
+</ul>					</li>
 
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
-	          <ul class="dropdown-menu">
-	          	<li><a href="../slides/Welcome.pdf">1. Karel</a></li>
-	          	<li><a href="../slides/ControlFlow.pdf">2. Control Flow Slides)</a></li>
-	          	<li><a href="../starter/ControlFlow.zip">2. Control Flow (Code)</a></li>
-			<li><a href="../slides/IntroPython_Variable_Math_RandomNumbers.pdf">3. Variables (Slide)</a></li>
-			<li><a href="../starter/Day3-Variables.zip">3. Variables (Code)</a></li>
-	          	<li><a href="../slides/Graphics.pdf">Graphics (Slides)</a></li>
-	          	<li><a href="../starter/Graphics.zip">Graphics (Code)</a></li>
-	          	<li><a href="../slides/Animation.pdf">Animation</a></li>
-	          	<li><a href="../slides/Methods.pdf">Functions</a></li>
-	          	<li><a href="../slides/NestedLoops.pdf">Nested Loops</a></li>
-	          	<li><a href="../slides/Events.pdf">Events (Slides)</a></li>
-	          	<li><a href="../starter/Events.zip">Events (Code)</a></li>
-	          	<li><a href="../slides/Breakout.pdf">Breakout</a></li>
-	         	<li><a href="../slides/Beyond-CSBridge.pdf">Beyond CSBridge</a></li>
-	          </ul>
-	        </li>
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Lectures <b class="caret"></b></a>
 
-          <!--
-	        <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forms <b class="caret"></b></a>
-	          <ul class="dropdown-menu">
-	          	<li><a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Survey</a></li>
-                <li><a href="https://forms.gle/eVsMyZb8HCSUETeV6">Sign in To Lab</a></li>
-	          </ul>
-	        </li>
-          -->
+<ul class="dropdown-menu">
 
-			
-	        <!-- Bonus button -->
-	        <ul class="nav navbar-nav">
-	            <li><a href="../en/bonus-index.html">Bonus</a></li>
-	        </ul>
 
-	        <!-- TA Link -->
-		        <ul class="nav navbar-nav navbar-right">
-		            <li><a href="../teach">SL Page</a></li>
-		        </ul>
+	<!-- This dropdown should display one element for each lecture -->
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080409"
+		>
+			<a tabindex="-1" href="#">1: Karel</a>
 
-	      </ul>
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../slides/Lecture1.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../starter/lectures/Lecture1.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+</ul>					</li>
+					
+					<!-- Bonus -->
+					<ul class="nav navbar-nav">
+						<li><a href="../en/bonus-index.html">Bonus</a></li>
+					</ul>
 
-	      
-	      <ul class="nav navbar-nav navbar-right">
-	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../img/english_flag.png"></img></a></li>
-	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../img/turkish_flag.png"></img></a></li>
-	        
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
+					<!-- TA Link -->
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="../teach/">SL Page</a></li>
+						</ul>
+
+				</ul>
+
+				<!-- Language toggle button -->
+				<ul class="nav navbar-nav navbar-right">
+						<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../img/turkish_flag.png"></img></a></li>
+				</ul>
+
+			</div>
+		</div>
 	</div>
-  </div><!-- /.container-fluid -->
 </nav>
 
+<!-- Script to toggle between languages -->
 <script>
-
 	function changeToTurkish() {
 		var url = window.location.href;
 		url = url.replace("/en/", "/tr/");
 		window.location.href = url;
 	}
-
+	
 	function changeToEnglish() {
 		var url = window.location.href;
 		url = url.replace("/tr/", "/en/");
 		window.location.href = url;
 	}
-
 </script>
-
 <div class="container">
 	
 	
@@ -435,9 +465,10 @@
   <div class="col-xs-12">
 
 
-<!-- Final Project -->
 <table class="table table-striped">
 
+
+		<!-- The head of the table should show the day's topic title -->
 		<thead
 		>
 			<tr>
@@ -449,9 +480,11 @@
 				</th>
 			</tr>
 		</thead>
+
 				<tr 
 						class="info"
 				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
 	      			<td colspan = "6">
 	      				<center>
 	      					<h4>Morning [<a href="../starter/Day4AM.zip">here</a>]</h4>
@@ -459,9 +492,11 @@
 	      			</td>
 	      		</tr>
 
+	      		<!-- Display the projects for this part of the day -->
 	      		<tbody
 	      		>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/someSum.png" />
 </td>
@@ -473,6 +508,7 @@
 </td>
 <td>Loop variables</td>		      			</tr>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/carbonDating.jpg" />
 </td>
@@ -485,6 +521,7 @@
 <td>Loop variables</td>		      			</tr>
 		      	</tbody>
 
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page -->
 	  	<tr 
 	  			class="active"
 	  	>
@@ -494,6 +531,8 @@
 				</center>
 			</td>
 		</tr>
+
+		<!-- The head of the table should show the day's topic title -->
 		<thead
 		>
 			<tr>
@@ -505,9 +544,11 @@
 				</th>
 			</tr>
 		</thead>
+
 				<tr 
 						class="info"
 				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
 	      			<td colspan = "6">
 	      				<center>
 	      					<h4>Morning [<a href="../starter/Day3AM.zip">here</a>]</h4>
@@ -515,9 +556,11 @@
 	      			</td>
 	      		</tr>
 
+	      		<!-- Display the projects for this part of the day -->
 	      		<tbody
 	      		>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/sandcastle.jpg" />
 </td>
@@ -529,6 +572,7 @@
 </td>
 <td>Variables</td>		      			</tr>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/runningSum.png" />
 </td>
@@ -543,6 +587,7 @@
 				<tr 
 						class="info"
 				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
 	      			<td colspan = "6">
 	      				<center>
 	      					<h4>Evening [<a href="../starter/Day3PM.zip">here</a>]</h4>
@@ -550,9 +595,11 @@
 	      			</td>
 	      		</tr>
 
+	      		<!-- Display the projects for this part of the day -->
 	      		<tbody
 	      		>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/areaCalculator.png" />
 </td>
@@ -564,6 +611,7 @@
 </td>
 <td>Variables</td>		      			</tr>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/8ball.png" />
 </td>
@@ -575,6 +623,7 @@
 </td>
 <td>Conditionals</td>		      			</tr>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/viralVideo.png" />
 </td>
@@ -586,6 +635,7 @@
 </td>
 <td>Conditionals</td>		      			</tr>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/khansole.png" />
 </td>
@@ -598,6 +648,7 @@
 <td>Conditionals</td>		      			</tr>
 		      	</tbody>
 
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page -->
 	  	<tr 
 	  			class="active"
 	  	>
@@ -607,6 +658,8 @@
 				</center>
 			</td>
 		</tr>
+
+		<!-- The head of the table should show the day's topic title -->
 		<thead
 		>
 			<tr>
@@ -618,9 +671,11 @@
 				</th>
 			</tr>
 		</thead>
+
 				<tr 
 						class="info"
 				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
 	      			<td colspan = "6">
 	      				<center>
 	      					<h4>Morning [<a href="../starter/Day2AM.zip">here</a>]</h4>
@@ -628,9 +683,11 @@
 	      			</td>
 	      		</tr>
 
+	      		<!-- Display the projects for this part of the day -->
 	      		<tbody
 	      		>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/placeSquare.png" />
 </td>
@@ -643,6 +700,7 @@
 </td>
 <td>While Loops</td>		      			</tr>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/mountain.png" />
 </td>
@@ -658,6 +716,7 @@
 				<tr 
 						class="info"
 				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
 	      			<td colspan = "6">
 	      				<center>
 	      					<h4>Evening [<a href="../starter/Day2PM.zip">here</a>]</h4>
@@ -665,9 +724,11 @@
 	      			</td>
 	      		</tr>
 
+	      		<!-- Display the projects for this part of the day -->
 	      		<tbody
 	      		>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/stripeKarel.png" />
 </td>
@@ -680,6 +741,7 @@
 </td>
 <td>Nested Loops</td>		      			</tr>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/hospitalKarel.png" />
 </td>
@@ -692,6 +754,7 @@
 </td>
 <td>Nested Loops</td>		      			</tr>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/randomPainter2.png" />
 </td>
@@ -705,6 +768,7 @@
 <td>If Statements</td>		      			</tr>
 		      	</tbody>
 
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page -->
 	  	<tr 
 	  			class="active"
 	  	>
@@ -714,6 +778,8 @@
 				</center>
 			</td>
 		</tr>
+
+		<!-- The head of the table should show the day's topic title -->
 		<thead
 		>
 			<tr>
@@ -725,9 +791,11 @@
 				</th>
 			</tr>
 		</thead>
+
 				<tr 
 						class="info"
 				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
 	      			<td colspan = "6">
 	      				<center>
 	      					<h4>Evening [<a href="../starter/Day1PM.zip">here</a>]</h4>
@@ -735,9 +803,11 @@
 	      			</td>
 	      		</tr>
 
+	      		<!-- Display the projects for this part of the day -->
 	      		<tbody
 	      		>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/newspaper.jpg" />
 </td>
@@ -750,6 +820,7 @@
 </td>
 <td>Functions</td>		      			</tr>
 		      			<tr>
+
 <td>
 	<img class="projectImg" src="../img/icons/charles.jpg" />
 </td>
@@ -763,6 +834,7 @@
 <td>For Loops</td>		      			</tr>
 		      	</tbody>
 
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page -->
 	  	<tr 
 	  			class="active"
 	  	>

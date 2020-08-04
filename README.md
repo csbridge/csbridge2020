@@ -12,7 +12,7 @@ pip3 install -r requirements.txt
 
 1. Change any file templates in ```templates/```
 
-2. ```python3 compile.py``` creates full html pages underneath the ```docs/``` folder.  Or use `./runLocal.sh` to compile and host a copy of the site at `localhost`.
+2. ```python3 compile.py``` creates full html pages underneath the ```docs/``` folder.  Or use `./runLocal.sh` to compile and host a copy of the site at `localhost:8000`.
 
 3. Any slides or starter code changed in the top directory are symlinked to change the actual files in ```docs/```.
 
@@ -26,18 +26,19 @@ Note: there is a special `{{pathToRoot}}` placeholder that you can use in all te
 <img src="{{pathToRoot}}img/projects/newspaper/newspaper.png">	
 ```
 
-#### Local Development
+### Local Development
 Run `./runLocal.sh` to compile and run a local copy of the website at `localhost:8000`.  The script is long-running, monitoring any changes to the `templates` folder and automatically recompiling whenever a file changes so that you can see modifications you make while you are working.  Enter `Ctl-c` to terminate the script.
 
-#### Templates Structure
+### Templates Structure
 
-+ `cz`: for Czech translations
-+ `tr`: for Turkish translations
++ `announcements`: helper files relating to showing timed announcements on the main page of the website
 + `en`: for English translations
 + `parts`: partials (partial HTML files included in other files, but not rendered on their own)
-+ `tas`: the TA sub-section of the site with TA-specific resources
++ `programs`: helper files relating to the programs (projects students complete, and provided examples) rendered on the site.  This folder contains the `programs.json` file where all the data is stored about the examples used for students, and that file is ultimately used to display the table of projects on the main page, as well as the contents of the navigation bar for the projects and examples.
++ `teach`: the TA sub-section of the site with TA-specific resources
++ `tr`: for Turkish translations
 
-#### Markdown Support
+### Markdown Support
 You can write a file to be rendered in either HTML or Markdown.  If you write in HTML, that HTML file will be rendered via Bottle SimpleTemplate and posted on the site.  If you write in Markdown, by default the file will be converted to HTML and posted on the site.  
 
 If you'd like, you can "rebase" the Markdown content just like you would with HTML content in Bottle.  Instead of adding a `rebase()` python call at the top of your template, however, include an _attribute_ at the top of the file to specify the template within which it should be rendered, such as:
@@ -52,14 +53,65 @@ If you include the `template` attribute, your Markdown will be converted to HTML
 
 You can include other Markdown attributes as well, and these will also be sent to the template you specify and accessible in that template.  Finally, the full path to the markdown file being rendered will also be passed to the template via the `filePath` property.
 
-For an example of a Markdown-written page, check out `templates/en/projects/piglet/`, which is a folder representing a problem.  It uses the template at `en/projects/projectTemplate.ptl` and is rendered at `en/projects/piglet/index.html`.  That template supports folders for each project where its writeup is in `index.mdown`, and that writeup should have the following attributes:
+For an example of a Markdown-written page, check out `templates/en/projects/piglet.mdown`, which is a Markdown file representing a problem.  It uses the template at `templates/en/projects/projectTemplate.ptl` and is rendered at `en/projects/piglet.html`.  That template supports the following attributes:
 
 + `title` - the title of the problem
-+ `credits` (optional) - name of the author(s) of this problem.  If included, in the output it is rendered under the title
++ `credit` (optional) - name of the author(s) of this problem.  If included, in the output it is rendered under the title
 + `solution` (optional) - relative path to the solution file for this problem.  If included, in the output it is rendered in a hidden code area at the bottom that the student can view.
 
+### Updating Projects or Examples
+The main project table on the course homepage, the project table on the SL page, and the content of the dropdowns in the navbar for Projects and Examples, are all **generated automatically** based on the contents of the `templates/programs/programs.json` file.  In other words, you should not modify the HTML file that represents the navbar - it is reading from this JSON file to know what to display.  This makes translation and updating easier because all translations and all program information is in one file for the entire site.  This file contains an array of JSON objects, one per day that should be displayed.  Each day's information contains what projects should be listed for students to complete that day, and what worked examples should be listed for that day, as well as when the problems should become visible to students.  See the file itself for an example of its structure.  Below, we specify in more detail the general format the file is expected to have.
+
+The file itself should be an array of JSON objects, in order of days (e.g. day 1, then day 2, etc.).  Here are the fields the object can contain:
+
++ `morning` (object): info about morning problems
++ `evening` (object): info about evening problems
++ `title_en` (string): the day's topic (English)
++ `title_tr` (string): the day's topic (Turkish)
++ `visible_after` (string): optional timestamp when the day should become visible
+
+At least one of "morning" or "evening" must be present.
+
+Each of "morning" and "evening" is the same format - each is an object specifying the content that should be displayed for that day's morning or evening.  Here are the fields the object can contain:
+
++ `examples` (array): optional info about worked examples
++ `projectURL` (string): starter code URL.  Prepended with domain.   In other words, if the site is `online.csbridge.org`, the starter code would be assumed to have the URL `online.csbridge.org/[URL]`.
++ `projects` (array): info about projects
++ `visible_after` (string): optional timestamp when this content should become visible.  Does not apply to morning problems - "morning" will always display when the day itself displays.
+
+"examples" is a list of worked examples that should be displayed for that day in the navigation bar.  Here is the format each worked example should have (all fields required):
+
++ `title_en` (string): the worked example title (English)
++ `title_tr` (string): the worked example title (Turkish)
++ `url` (string): the worked example URL.  Prepended with domain and language.  In other words, if the site is `online.csbridge.org`, the english version of this worked example would be assumed to have the URL `online.csbridge.org/en/[URL]`.
+
+"projects" is a list of projects that should be displayed for that day in the main project table and in the navigation bar.  Here is the format each project should have (all fields required):
+
++ `imageURL` (string): the URL of the image to use in the project table for this problem.  Prepended with domain.  In other words, if the site is `online.csbridge.org`, the image would be assumed to have the URL `online.csbridge.org/[URL]`.
++ `title_en` (string): the project title (English)
++ `title_tr` (string): the project title (Turkish)
++ `topic_en` (string): the project topic (English) - e.g. "While Loops"
++ `topic_tr` (string): the project topic (Turkish)
++ `type` (string): one of "quickstart", "project" or "section" - determines the badge displayed for this project in the project table
++ `url` (string): the project URL.  Prepended with domain and language.  In other words, if the site is `online.csbridge.org`, the english version of this project would be assumed to have the URL `online.csbridge.org/en/[URL]`.
++ `teachURL` (string): an optional URL to the SL guide for this project.  Same format as `url`.
+
+You'll notice that many of these objects have fields ending in `_en` or `_tr`.  These correspond to the language codes used by the site - currently, we use "en" for English and "tr" for Turkish.  Therefore, it is expected that these objects have a version of some of the fields above for each supported language.  If you wanted to add support for other languages, you should add additional fields for those languages alongside the Turkish and English versions.
+
+### Updating Lecture Materials
+The lectures dropdown in the navigation bar is **generated automatically** based on the contents of the `templates/lectures.json` file.  In other words, you should not modify the HTML file that represents the navbar dropdown for lecture materials - it is reading from this JSON file to know what to display.  This makes translation easier because all translations are in one file.  This file contains an array of JSON objects, one per lecture that should be displayed.  Each lecture's information contains the lecture title (including translations) and links to its slides and code (if applicable).  See the file itself for an example of its structure.  Below, we specify in more detail the general format the file is expected to have.
+
+The file itself should be an array of JSON objects, in order of lectures (e.g. lecture 1, then lecture 2, etc.).  Here are the fields the object can contain:
+
++ `title_en` (string): the lecture title (English)
++ `title_tr` (string): the lecture title (Turkish)
++ `slidesURL` (string): the URL for the slides.  Prepended with domain.  In other words, if the site is `online.csbridge.org`, the slides would be assumed to have the URL `online.csbridge.org/[URL]`.
++ `codeURL` (string): the URL for the code.  Prepended with domain.  In other words, if the site is `online.csbridge.org`, the code would be assumed to have the URL `online.csbridge.org/[URL]`.
++ `visible_after` (string): optional timestamp when this lecture content should become visible.
+
+
 ## Timed Release
-This website has the ability to make materials visible at specific dates/times without having to push a new version to GitHub.  To make an HTML element visible at a certain date/time, use the "visible-after" class, and add the timestamp as the value for the "data-visible-after" attribute.  For instance, to hide a div until July 7, 2019 at 5PM, you would add:
+This website has the ability to make materials visible at specific dates/times without having to push a new version to GitHub.  To make an HTML element visible after a certain date/time, use the "visible-after" class, and add the timestamp as the value for the "data-visible-after" attribute.  For instance, to hide a div until July 7, 2019 at 5PM PST, you would add:
 
 ```
 <div class="visible-after" data-visible-after="2019070717">
@@ -67,10 +119,22 @@ This website has the ability to make materials visible at specific dates/times w
 </div>
 ```
 
-The timestamps support the format `YYYYMMDDHH`.  The script that handles this hide/show functionality is in `docs/js/index.js`.
+"visible-after" supports timestamps in the format `YYYYMMDDHH`.
 
-## TA Resources
-TA resources can be found at the `/tas` URL.  In particular, it includes a special version of the navbar and programs table showing all projects and solutions.  It does this by passing an additional parameter to the template that says it is the TA page.
+You can also make an HTML element visible during a specific range of times.  To do this, use the "visible-during" class, and add the timestamps as data attributes.  For instance, to make a div visible between 7/9/19 5:12pm - 5:13pm, you would add:
+
+```
+<div class="visible-during" data-visible-start="20190709 17:12" data-visible-end="20190709 17:13">
+	...
+</div>
+```
+
+"visible-during" supports timestamps in the format "YYYYMMDD HH:mm".
+
+The timestamps are **all assumed to be timestamps in PST**.  The script that handles this hide/show functionality is in `docs/js/time.js`.
+
+## SL/Staff Resources
+Staff resources can be found at the `/teach` URL.  In particular, it includes a special version of the navbar and programs table showing all projects and solutions.  It does this by passing an additional parameter to the template that says it is the TA page.
 
 
 ## Break Activity Ideas
@@ -81,6 +145,12 @@ Break times in the afternoon are a great time to get students out of lab and do 
 - [Rock-paper-scissors](https://en.wikipedia.org/wiki/Rock–paper–scissors) tournament: each lab has students pair up and play a best-of-3 rock-paper-scissors.  The winner finds someone else to challenge, while the loser becomes a cheerleader for the winner and follows them to their next match.  Eventually, there should be just 1 winner per lab, with everyone else in that lab cheering them on.  This continues until their is just one student winner, and all students are cheerleaders for them.  This winner plays an instructor in a best-of-5 match.
 
 
+## Todos
+- [ ] Refactor bonus problems table in `templates/en/bonus-index.html` to match the main table style in `programTable.ptl` in that it is a single table using date variables at the top, and only includes `visible-after` for non-TA mode.
+- [ ] Include a TA version of the bonus table on the `/tas` page so TAs can see all bonus problems.  This should be a shared version of the table across `/tas` and `/bonus-index` so changes once are propagated everywhere.
+- [ ] Look into adding Google Timezone API access to front-page alert notifications telling students where they need to be. Needs one API key and Google Timezone API enabled, as well as reading JSON. We probably don't need timezones if we can just get the current Pacific Time. Current alert info is in `templates/en/index.html` and CSV lookup is in `templates/announcements/times.csv`, JavaScript is in `docs/js/time.js`. Using Google API avoids faulty local computer timezone issues.
+
+
 ## Ideas For Future Improvement
 
 - More incoporation of code reviews and pair programming.  Maybe supplying checklists at the start and having students do a self check-in for every project.  Or working with another student to co-develop a program, or have multiple students each work on one part of a program and build on each others' code to see firsthand the value of good style.
@@ -88,13 +158,6 @@ Break times in the afternoon are a great time to get students out of lab and do 
 - Some way for teaching team to provide feedback (maybe once?) for some code they submit?
 - 2 sections per day?
 - theme sections based on TA area of interest?
-
-
-## Todos
-- [ ] Write up Day 1 project TA solutions (code is currently in `templates/teach/soln/todo.html` but needs to be split into `.html` files for each problem and have writeups done for each)
-- [ ] Refactor bonus problems table in `templates/en/bonus-index.html` to match the main table style in `programTable.ptl` in that it is a single table using date variables at the top, and only includes `visible-after` for non-TA mode.
-- [ ] Include a TA version of the bonus table on the `/tas` page so TAs can see all bonus problems.  This should be a shared version of the table across `/tas` and `/bonus-index` so changes once are propagated everywhere.
-- [ ] Add Google Timezone API access to front-page alert notifications telling students where they need to be. Needs one API key and Google Timezone API enabled, as well as reading JSON. We probably don't need timezones if we can just get the current Pacific Time. Current alert info is in `templates/en/index.html` and CSV lookup is in `templates/announcements/times.csv`, JavaScript is in `docs/js/time-schedule.js`. Using Google API avoids moments.js upgrade, as well as faulty local computer timezone issues.
 
 
 ## Future Course Websites
