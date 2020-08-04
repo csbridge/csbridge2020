@@ -129,7 +129,7 @@ The file itself should be an array of JSON objects, in order of lectures (e.g. l
 + `title_en` (string): the lecture title (English)
 + `title_tr` (string): the lecture title (Turkish)
 + `slidesURL` (string): the URL for the slides.  Prepended with domain.  In other words, if the site is `online.csbridge.org`, the slides would be assumed to have the URL `online.csbridge.org/[URL]`.
-+ `codeURL` (string): the URL for the code.  Prepended with domain.  In other words, if the site is `online.csbridge.org`, the code would be assumed to have the URL `online.csbridge.org/[URL]`.
++ `codeURL` (string): the URL for the code.  Prepended with domain.  In other words, if the site is `online.csbridge.org`, the code would be assumed to have the URL `online.csbridge.org/[URL]`.  This is optional.
 + `visible_after` (string): optional timestamp when this lecture content should become visible.
 
 
