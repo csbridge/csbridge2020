@@ -19,6 +19,6 @@
       {{!base}}
           
       <!-- Footer -->
-      % include('templates/tr/footer.ptl', taMode=get('taMode', False))
+      % include('templates/tr/old/footer.ptl', taMode=get('taMode', False))
   </body>
 </html>

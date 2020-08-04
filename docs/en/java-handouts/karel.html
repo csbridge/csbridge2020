@@ -635,18 +635,20 @@
 	</div>
 </div>
 					
+
 <hr>
 
 <div class="footer">
 	<p class="pull-left">
-		&#169; Stanford 2020 &#124; Created by 
-		<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
-		Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
+
+		<!-- Start of content that must be translated -->
+			&#169; Stanford 2020 &#124; Created by 
+			<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
+			Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
+		<!-- End of content that must be translated -->
 	</p>
-	<!--<p class="pull-right">
-		<a href="../../fall12">Fall 2012</a>
-	</p>-->
 </div>
+
 <script type="text/javascript">
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-35433298-1']);
@@ -662,28 +664,24 @@
 </script>
 
 <script type="text/javascript">
-		console.log('got pubnub')
     var pubnubDemo = new PubNub({
         subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
     });
 
-		// Subscribe to the demo_tutorial channel
-		pubnubDemo.addListener({
-		    message: function(request) {
-		    	let msg = request['message']
-		    	console.log(msg)
-		    	let swalData = msg['swal'];
-		    	console.log(swalData)
-	        Swal.fire(swalData)
-		    }
-		})
+	// Subscribe to the demo_tutorial channel
+	pubnubDemo.addListener({
+	    message: function(request) {
+	    	let msg = request['message']
+	    	console.log(msg)
+	    	let swalData = msg['swal'];
+	    	console.log(swalData)
+        Swal.fire(swalData)
+	    }
+	})
 
-		pubnubDemo.subscribe({
-		    channels: ['csbridge_alert']
-		});
-		console.log('success')
-		
-
+	pubnubDemo.subscribe({
+	    channels: ['csbridge_alert']
+	});
 </script>
 		</div>
 

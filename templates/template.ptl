@@ -12,7 +12,7 @@
 		<div class="container">
 			{{!base}}
 					
-			% include('templates/' + lang + '/footer.ptl')
+			% include('templates/parts/footer.ptl')
 		</div>
 
 	</body>
