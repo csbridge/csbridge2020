@@ -4,13 +4,28 @@
 		"title_tr": "Karel",
 		"slidesURL": "slides/Lecture1.pdf",
 		"codeURL": "starter/lectures/Lecture1.zip",
-		"visible_after": "2020080409",
-
+		"visible_after": "2020080409"
+	},
+	{
+		"title_en": "Karel and Control Flow",
+		"title_tr": "",
+		"slidesURL": "slides/Lecture2.pdf",
+		"codeURL": "starter/lectures/Lecture2.zip",
+		"visible_after": "2020080500"
+	},
+	{
+		"title_en": "Karel and More Control Flow",
+		"title_tr": "",
+		"slidesURL": "slides/Lecture3.pdf",
+		"codeURL": "starter/lectures/Lecture3.zip",
+		"visible_after": "2020080509"
+	},
+	{
 		"title_en": "Variable",
 		"title_tr": "Değişkenler",
 		"slidesURL": "slides/IntroPython_Variables.pdf",
 		"codeURL": "starter/lectures/Lecture4.zip",
-		"visible_after": "2020080309"
+		"visible_after": "2020080600"
 	}
 
 ]
