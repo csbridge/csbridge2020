@@ -117,6 +117,7 @@ The file itself should be an array of JSON objects, in order of topics (e.g. top
 + `title_tr` (string): the project title (Turkish)
 + `difficulty` (integer): a difficulty rating, 1 (easy), 2 (medium) or 3 (hard)
 + `url` (string): the project URL.  Prepended with domain and language.  In other words, if the site is `online.csbridge.org`, the english version of this project would be assumed to have the URL `online.csbridge.org/en/[URL]`.
++ `teachURL` (string): an optional URL to the SL guide for this project.  Same format as `url`.
 
 You'll notice that the title ends in `_en` or `_tr`.  These correspond to the language codes used by the site - currently, we use "en" for English and "tr" for Turkish.  Therefore, it is expected that these objects have a version of the title field for each supported language.  If you wanted to add support for other languages, you should add additional fields for those languages alongside the Turkish and English versions.
 
