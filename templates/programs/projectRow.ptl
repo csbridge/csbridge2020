@@ -1,28 +1,28 @@
 <td>
-	<img class="projectImg" src="{{pathToRoot}}{{program['imageURL']}}" />
+	<img class="projectImg" src="{{pathToRoot}}{{project['imageURL']}}" />
 </td>
 <td>
-	<a href="{{pathToRoot}}{{lang}}/{{program['url']}}">{{program["title_" + lang]}}</a>
+	<a href="{{pathToRoot}}{{lang}}/{{project['url']}}">{{project["title_" + lang]}}</a>
     <br/>
 
     <%
     	label_class = ""
     	label_text = "NOT TRANSLATED"
-    	if program["type"] == "quickstart":
+    	if project["type"] == "quickstart":
     		label_class = "label-default"
     		if lang == "tr":
     			label_text = "Hızlı Başlangıç"
     		elif lang == "en":
     			label_text = "Quickstart"
     		end
-    	elif program["type"] == "section":
+    	elif project["type"] == "section":
     		label_class = "label-primary"
     		if lang == "tr":
     			label_text = "Grup"
     		elif lang == "en":
     			label_text = "Section"
     		end
-    	elif program["type"] == "project":
+    	elif project["type"] == "project":
     		label_class = "label-success"
     		if lang == "tr":
     			label_text = "Proje"
@@ -32,8 +32,8 @@
     	end
     %>
     <span class="label {{label_class}}">{{label_text}}</span>	
-    % if get('taMode', False) and "teachURL" in program:
-    	<br><a href="{{pathToRoot}}{{program['teachURL']}}">SL Notes</a>
+    % if get('taMode', False) and "teachURL" in project:
+    	<br><a href="{{pathToRoot}}{{project['teachURL']}}">SL Notes</a>
     % end				
 </td>
-<td>{{program["topic_" + lang]}}</td>
+<td>{{project["topic_" + lang]}}</td>

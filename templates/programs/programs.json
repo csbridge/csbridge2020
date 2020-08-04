@@ -1,7 +1,7 @@
 [
     {
         "evening": {
-            "programs": [
+            "projects": [
                 {
                     "imageURL": "img/icons/newspaper.jpg",
                     "teachURL": "teach/notes/collectNewspaper.html",
@@ -30,7 +30,7 @@
     },
     {
         "evening": {
-            "programs": [
+            "projects": [
                 {
                     "imageURL": "img/icons/stripeKarel.png",
                     "teachURL": "teach/notes/stripeKarel.html",
@@ -66,7 +66,7 @@
             "visible_after": "2020080509"
         },
         "morning": {
-            "programs": [
+            "projects": [
                 {
                     "imageURL": "img/icons/placeSquare.png",
                     "teachURL": "teach/notes/placeSquare.html",
@@ -96,7 +96,7 @@
     },
     {
         "evening": {
-            "programs": [
+            "projects": [
                 {
                     "imageURL": "img/icons/areaCalculator.png",
                     "title_en": "Area Calculator",
@@ -138,7 +138,7 @@
             "visible_after": "2020080609"
         },
         "morning": {
-            "programs": [
+            "projects": [
                 {
                     "imageURL": "img/icons/sandcastle.jpg",
                     "title_en": "Sandcastles",
@@ -166,7 +166,7 @@
     },
     {
         "morning": {
-            "programs": [
+            "projects": [
                 {
                     "imageURL": "img/icons/someSum.png",
                     "title_en": "That's Some Sum!",

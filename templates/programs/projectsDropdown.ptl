@@ -18,7 +18,7 @@
 
 			<ul class="dropdown-menu">
 				% for segment in ["morning", "evening"]:
-					% if segment in day_info:
+					% if segment in day_info and "projects" in day_info[segment]:
 						<li 
 							% if not get('taMode', False) and segment == "morning" and "visible_after" in day_info:
 								class="dropdown-header visible-after" data-visible-after="{{day_info['visible_after']}}"
@@ -44,7 +44,7 @@
 							{{segment_translation}}
 						</li>
 
-						% for program in day_info[segment]["programs"]:
+						% for project in day_info[segment]["projects"]:
 							<li
 								% if not get('taMode', False) and segment == "morning" and "visible_after" in day_info:
 									class="visible-after" data-visible-after="{{day_info['visible_after']}}"
@@ -53,7 +53,7 @@
 									class="visible-after" data-visible-after="{{visible_after}}"
 								% end
 							>
-								<a href="{{pathToRoot}}{{lang}}/{{program['url']}}">{{program["title_" + lang]}}</a>
+								<a href="{{pathToRoot}}{{lang}}/{{project['url']}}">{{project["title_" + lang]}}</a>
 							</li>
 						% end
 					% end

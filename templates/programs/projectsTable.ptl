@@ -77,9 +77,9 @@
 						class="visible-after" data-visible-after="{{visible_after}}"
 					% end
 	      		>
-		      		% for program in day_info[segment]["programs"]:
+		      		% for project in day_info[segment]["projects"]:
 		      			<tr>
-		      				% include("templates/programs/programRow.ptl", program=program, lang=lang)
+		      				% include("templates/programs/projectRow.ptl", project=project, lang=lang)
 		      			</tr>
 		      		% end
 		      	</tbody>
