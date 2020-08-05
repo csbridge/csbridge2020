@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
-<title>CS Bridge  | That&#039;s Some Sum (SL)</title>
+<title>CS Bridge  | Carbon Dating (SL)</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -480,7 +480,7 @@
 	<!-- Header -->
 	<div id="pageHeader">
 		<h1>
-            SL Notes: That&#039;s Some Sum
+            SL Notes: Carbon Dating
 		</h1>
     </div>
 
@@ -488,17 +488,38 @@
 
 	<div class="row">
 		<div class="col-xs-12">
-            <p>This is the first morning problem.  This problem combines control flow and variables in different scopes with user input and output, and using the <code>i</code> variable from the loop.  This problem is very similar to the "Run, Sum, Run" problem from the previous day, with two main differences:</p>
+            <p>This is the large project program for the morning.  It is the last problem for the day because there is no evening work time.</p>
+<p>This is a larger program that we hope will give students final practice with everything they have learned with Python so far:</p>
 <ul>
-<li>we know how many numbers the user should enter, so we can use a <code>for</code> loop instead of a <code>while</code> loop</li>
-<li>we want to encourage student to use the <code>i</code> variable in the for loop to print out the number we want from the user next (for example, "Integer number 1", "Integer number 2", etc.).</li>
+<li>variables</li>
+<li>printing</li>
+<li>user input</li>
+<li><code>while</code> and <code>for</code> loops and conditionals</li>
 </ul>
-<p>This is the first program where students get practice using <code>i</code>.  A good starting point might be for them to just print out the value of <code>i</code> inside the loop to see how it works for themselves:</p>
-<pre><code>for i in range(10):
-  print(i)
+<p>This problem also has more information than others in the problem description, so students may have general questions understanding the program and how to calculate different values.</p>
+<h2 id="milestone-1-lookup-table">Milestone 1: Lookup Table</h2>
+<p>This first part gives students practice with looping, calculating and printing out values.  Ultimately, we hope they will arrive at a solution that uses the <code>i</code> loop variable to print out the results.  One way to frame it to students is, "inside the loop, how can we use the current value of <code>i</code> to know what to do?  When <code>i</code> is 0, what do we want to do?  When <code>i</code> is 1, what do we want to do?"  It can help to write out the pattern:</p>
+<pre><code>When i is 0, we want to print out 100% and 0 years
+When i is 1, we want to print out 50% and 5700 years
+When i is 2, we want to print out 25% and 11,400 years
+...
 </code></pre>
 
-<p>Then they can build on this to print out a message to the user using <code>i</code>, and finally combine this with the ideas from Run, Sum, Run" to keep track of the total.  Pointing students to "Run, Sum, Run" may be helpful to get them oriented.</p>	
+<p>From here, we ask: "What does i represent?".  We can see the pattern that <code>i</code> represents the number of times we divide 100% by 2, and the number of copies of 5700 we add together.  In other words:</p>
+<pre><code>When i is some value, we want to print out 100% / (2 ** i) and i * 5700 years
+</code></pre>
+
+<p>(The percent pattern is tricky, so it's ok if they just use a percent variable and divide it by 2 each time)</p>
+<p>If students are having trouble working with <code>i</code>, you can suggest they start out by having variables outside the loop to keep track of percent and years, and update them each time inside the loop (e.g. divide percent by 2, add 5700 to years).  From here, it's easier to see what the pattern is.  Then, instead of making separate variables for the values, we can just calculate them directly.</p>
+<h2 id="milestone-2-interactive-mode">Milestone 2: Interactive Mode</h2>
+<p>This second part gives students practice with looping, user input and printing out values.  A problem that is similar is the Viral Video problem - like Viral Video, this part of the project relies on a variable outside a <code>while</code> loop and calculations inside the while loop.</p>
+<p>Here are some steps the students could take to approach this:</p>
+<ul>
+<li>Prompt the user for their c-14% once and print out the result</li>
+<li>Write the code to calculate the age of a sample (work through the math part with <code>math.log</code>)</li>
+<li>Add a <code>while</code> loop to repeat the calculation.  We have a fencepost problem because we need to prompt for user input both inside and outside the loop.  This is similar to the optional extension for the 8 ball program.</li>
+<li>Figure out what the condition should be to stop the loop when the user is finished.</li>
+</ul>	
 		</div>
 	</div>
 

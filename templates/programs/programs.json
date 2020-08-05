@@ -242,7 +242,8 @@
           "topic_en": "Loop variables",
           "topic_tr": "Döngü değişkenleri",
           "type": "quickstart",
-          "url": "projects/someSum.html"
+          "url": "projects/someSum.html",
+          "teachURL": "teach/notes/someSum.html"
         },
         {
           "imageURL": "img/icons/carbonDating.jpg",
@@ -251,7 +252,8 @@
           "topic_en": "Loop variables",
           "topic_tr": "Döngü değişkenleri",
           "type": "project",
-          "url": "projects/carbonDating.html"
+          "url": "projects/carbonDating.html",
+          "teachURL": "teach/notes/carbonDating.html"
         }
       ]
     },
