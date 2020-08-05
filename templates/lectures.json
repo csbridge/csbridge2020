@@ -22,7 +22,7 @@
 	{
 		"title_en": "Variables",
 		"title_tr": "Değişkenler",
-		"slidesURL": "slides/IntroPython_Variables.pdf",
+		"slidesURL": "slides/Lecture4_Variables.pdf",
 		"codeURL": "starter/lectures/Lecture4.zip",
 		"visible_after": "2020080600"
 	}
