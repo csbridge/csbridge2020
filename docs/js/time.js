@@ -33,6 +33,12 @@ must be set and should have time format YYYYMMDD HH:mm.  For example:
 </div>
 
 this element would be visible only 7/9/19 5:12pm - 5:13pm.
+
+visible-default
+---------------
+Elements with the class "visible-default" are only visible if no other elements
+on the page have class "visible-during".  Useful if you want to have certain elements
+appear at certain times, but when no elements are visible, show some default element.
 */
 $(document).ready(function(){
 	moment.tz.setDefault("America/Los_Angeles");

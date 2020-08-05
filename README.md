@@ -154,6 +154,10 @@ You can also make an HTML element visible during a specific range of times.  To 
 
 "visible-during" supports timestamps in the format "YYYYMMDD HH:mm".
 
+Elements with the class "visible-default" are only visible if no other elements
+on the page have class "visible-during".  Useful if you want to have certain elements
+appear at certain times, but when no elements are visible, show some default element.
+
 The timestamps are **all assumed to be timestamps in PST**.  The script that handles this hide/show functionality is in `docs/js/time.js`.
 
 ## SL/Staff Resources
