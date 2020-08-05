@@ -189,7 +189,8 @@
           "topic_en": "Conditionals",
           "topic_tr": "Conditional'lar",
           "type": "project",
-          "url": "projects/khansole.html"
+          "url": "projects/khansole.html",
+          "teachURL": "teach/notes/khansole.html"
         }
       ],
       "visible_after": "2020080609"
