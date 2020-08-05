@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
-<title>CS Bridge  | Hospital Karel (SL)</title>
+<title>CS Bridge  | 8 Ball (SL)</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -480,7 +480,7 @@
 	<!-- Header -->
 	<div id="pageHeader">
 		<h1>
-            SL Notes: Hospital Karel
+            SL Notes: 8 Ball
 		</h1>
     </div>
 
@@ -488,26 +488,26 @@
 
 	<div class="row">
 		<div class="col-xs-12">
-            <p>This is the section problem for day 1.  Students are learning about control flow and the very basics of coding. Specifically:</p>
+            <p>This is the first section problem for day 2.  Students are learning about control flow in Python, and how to write console programs with variables and printing.  Specifically:</p>
 <ul>
-<li>How to define helper functions</li>
-<li>While loops</li>
-<li>If statements</li>
-<li>For loops</li>
+<li>How to print to the terminal</li>
+<li>How to store information in variables</li>
+<li>How to get user input</li>
+<li>How to check conditions using <code>while</code> loops and <code>if</code> statements</li>
 </ul>
-<p>This section focuses on decomposition, control flow and will help prepare students to get started on Random Painter Karel.  You can review topics if it's helpful for students, but you should spend more time reviewing control flow topics rather than reviewing basic Karel commands.  Additionally, reviewing the motivation and technique of decomposition is important; students might have questions about what sorts of tasks should be decomposed, and this is a good time to help them build that intuition. </p>
-<h3 id="step-by-step-teaching-hospital-karel">Step-by-Step, Teaching Hospital Karel</h3>
+<p>Feel free to start with a review if you think it would be helpful for your students. </p>
+<h3 id="step-by-step-teaching-8-ball">Step-by-Step, Teaching 8 Ball</h3>
+<p>This is one possible way to approach teaching the problem.  You can cover the material however you feel most comfortable!</p>
 <ol>
-<li>Start with the assumption that a <code>build_hospital()</code> function exists. How do you solve the problem? This is the most interesting part of the section.<ul>
-<li>A common bug in students might make is excluding the second <code>if</code> statement in <code>main</code> that prevents Karel from crashing into the wall at the end of the program. If they do, don’t point it out before coding!  Let them make the error and then talk through why it happens. (This is an example of an off-by-one bug, or a fencepost error!)</li>
-<li>When talking through it, it’s important to emphasize that the <code>while</code> loop condition only gets tested at the top of the loop. A common misconception about while loops that students often have is that the condition is checked constantly.</li>
-<li>An alternative way to solve this fencepost error (although slightly more clunky) is to duplicate the <code>if beepers_present()</code> block above the <code>while</code> loop, and have the loop repeat <code>move</code> and then conditionally build hospital. If students solve the off-by-one bug this way, that’s also fine!  You can show them the solution code and explain why both solutions do the same thing.  The SL solution contains both approaches, one commented out.</li>
+<li>A good starting point is to pull up the starter code and ask students to think through what it does.  The provided code comes with just a <code>while</code> loop and a prompt for user input.  If you run that code, it will just prompt the user forever.</li>
+<li>Then, you can ask students how we might write code that prints out a random response.  You can start by explaining more about <code>random.randint</code>.  Then you can talk about how we can use that with <code>if/elif</code> statements to do different things depending on the random number value.  You can try starting with just an <code>if</code> statement that prints out something when a certain number, like 3, is chosen, and then expand it to include <code>elif</code> for other values.</li>
+<li>If you have time (best option is to move to the second problem, then come back to this later if you have more time), you can also work on how you might stop the program if the user doesn't enter a question.  The problem description gives a hint about code that checks if the user input is empty.  This is also a good chance to show an example of the fencepost problem!  We want to ask the user for input <code>N</code> times, but only print out responses <code>N-1</code> times (because the last time the user will enter nothing and the program will stop).<ul>
+<li>First we need to save the input into a variable so we can check it</li>
+<li>A common bug students might make is leaving the program as-is and just changing the condition to check if the input is empty.  This won't work because the variable is declared inside the loop.  So we need to have the variable declared outside the loop to check its value, but we need to repeat asking the user for input...</li>
+<li>This can lead to the final solution where you must declare the variable outside the loop and prompt the user for input outside of the loop, and then once again at the end of the loop body.</li>
 </ul>
 </li>
-<li>Code the <code>while</code> loop. Use <code>put_beeper()</code> in place of the body for <code>build_hospital()</code>. Run!</li>
-<li>Implement <code>build_hospital()</code>.</li>
-</ol>
-<p>See the additional notes from section 1 about other general tips related to pre- and post-conditions, answering student questions, and more.</p>	
+</ol>	
 		</div>
 	</div>
 

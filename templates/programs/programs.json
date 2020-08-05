@@ -159,7 +159,8 @@
           "topic_en": "Variables",
           "topic_tr": "Değişkenler",
           "type": "quickstart",
-          "url": "projects/areaCalculator.html"
+          "url": "projects/areaCalculator.html",
+          "teachURL": "teach/notes/areaCalculator.html"
         },
         {
           "imageURL": "img/icons/8ball.png",
@@ -168,7 +169,8 @@
           "topic_en": "Conditionals",
           "topic_tr": "Conditional'lar",
           "type": "section",
-          "url": "projects/8ball.html"
+          "url": "projects/8ball.html",
+          "teachURL": "teach/notes/8ball.html"
         },
         {
           "imageURL": "img/icons/viralVideo.png",
@@ -177,7 +179,8 @@
           "topic_en": "Conditionals",
           "topic_tr": "Conditional'lar",
           "type": "section",
-          "url": "projects/viralVideo.html"
+          "url": "projects/viralVideo.html",
+          "teachURL": "teach/notes/viralVideo.html"
         },
         {
           "imageURL": "img/icons/khansole.png",
