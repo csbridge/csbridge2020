@@ -208,7 +208,8 @@
           "topic_en": "Variables",
           "topic_tr": "Değişkenler",
           "type": "quickstart",
-          "url": "projects/sandcastles.html"
+          "url": "projects/sandcastles.html",
+          "teachURL": "teach/notes/sandcastles.html"
         },
         {
           "imageURL": "img/icons/runningSum.png",
@@ -217,7 +218,8 @@
           "topic_en": "Variables",
           "topic_tr": "Değişkenler",
           "type": "project",
-          "url": "projects/runningSum.html"
+          "url": "projects/runningSum.html",
+          "teachURL": "teach/notes/runningSum.html"
         }
       ]
     },
