@@ -27,5 +27,41 @@
 				"difficulty": 2
 			}
 		]
+	},
+	{
+		"title_en": "Variables",
+		"title_tr": "Değişkenler",
+		"projectURL": "starter/BonusVariables.zip",
+		"visible_after": "2020080609",
+		"projects": [
+			{
+				"title_en": "Console Bonus",
+				"title_tr": "Bonus Konsol Programları",
+				"imageURL": "img/icons/console.jpg",
+				"url": "projects/consoleBonus.html",
+				"difficulty": 1
+			},
+			{
+				"title_en": "Looping Fun",
+				"title_tr": "Eğlenceli Döngüler",
+				"imageURL": "img/icons/loopingfun.png",
+				"url": "projects/loopingFun.html",
+				"difficulty": 1
+			},
+			{
+				"title_en": "Hailstone",
+				"title_tr": "Dolu Tanesi",
+				"imageURL": "img/icons/hailstone.png",
+				"url": "projects/hailstone.html",
+				"difficulty": 2
+			},
+			{
+				"title_en": "Ancient Game of Nimm",
+				"title_tr": "Antik Nimm Oyunu",
+				"imageURL": "img/icons/nimm.jpg",
+				"url": "projects/nimm.html",
+				"difficulty": 2
+			}
+		]
 	}
 ]

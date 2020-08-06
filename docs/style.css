@@ -56,6 +56,11 @@ h1 {
   height:100px;
 }
 
+.projectImgContainer { 
+  height: 140px; 
+  width: 140px; 
+}
+
 #splashHeader{
   /*background-image:url('img/bg_ist2.jpg');*/
   width:100%;

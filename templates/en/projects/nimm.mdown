@@ -2,10 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Ancient Game of Nimm
 credit: Danielle Kain and Chris Piech
 
-Worked Examples: 
-<a href="{{pathToRoot}}en/projects/emc2.html">E=MC2</a>,
-<a href="{{pathToRoot}}en/projects/fibb.html">Fibbonacci</a>
-<br/>
+Worked Examples: [E=MC2]({{pathToRoot}}en/projects/emc2.html), [Fibonacci]({{pathToRoot}}en/projects/fibb.html)<br/>
 File: `nimm.py`
 
 Nimm is an ancient game of strategy that is named after the old German word for "take." It is also called Tiouk Tiouk in West Africa and Tsynshidzi in China. Players alternate taking stones until there are zero left. The game of Nimm goes as follows:

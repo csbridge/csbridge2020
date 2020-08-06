@@ -2,6 +2,8 @@ template: templates/en/projects/projectTemplate.ptl
 title: Hailstone
 credit: Eric Roberts
 
+File: `hailstone.py`
+
 Our world contains many interesting mathematical puzzles, many of which can be expressed in the form of computer programs. One such wonderful problem that is well within the scope of what we have learned is the hailstone problem.
 
 The problem can be expressed as follows:

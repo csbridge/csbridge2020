@@ -2,6 +2,8 @@ template: templates/en/projects/projectTemplate.ptl
 title: Looping Fun
 credit: Lisa Yan
 
+File: `looping_fun.py`
+
 These are practice programs to help you get familiar with loops in Python. They are ordered from easiest to hardest.
 
 ## Loop Refresher
