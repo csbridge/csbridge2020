@@ -47,6 +47,10 @@ Note: when adding support for additional languages, also make sure to add the ab
 	translation_dictionary["SL Page"] = {"en": "SL Page", "tr": "SL Sayfası"}
 %>
 
+<!-- The datetime editor, for testing -->
+% include('templates/parts/datetimeEditor.ptl')
+
+<!-- The navigation bar -->
 <nav class="navbar-inverse navbar-default" role="navigation">
 	<div class="container-fluid">
 		<div class="container">

@@ -1,0 +1,12 @@
+<div id="datetimeEditor">
+	CS Bridge
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var url = window.location.href;
+		if (!url.startsWith("http://localhost:")) {
+			$("#datetimeEditor").remove();
+		}
+	});
+</script>
