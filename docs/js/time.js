@@ -51,6 +51,8 @@ function showHideRelevantElementsForDate(date) {
 	    var releaseDate = moment(dateStr, "YYYYMMDDHH");
 	    if (!releaseDate.isSameOrBefore(date)) {
 	    	$(this).hide();
+	    } else {
+	    	$(this).show();
 	    }
 	});
 
@@ -66,6 +68,7 @@ function showHideRelevantElementsForDate(date) {
       	if (!date.isBetween(releaseDateStart, releaseDateEnd)) {
 	        $(this).hide();
 	    } else {
+	    	$(this).show();
           	removeDefault = true;
       	}
 	});
@@ -74,6 +77,8 @@ function showHideRelevantElementsForDate(date) {
   	$(".visible-default").each(function(i) {
       	if (removeDefault) {
           	$(this).hide();
+      	} else {
+      		$(this).show();
       	}
   	});
 }

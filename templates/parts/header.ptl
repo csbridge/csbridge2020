@@ -23,6 +23,11 @@
 <script type="text/javascript" src="{{pathToRoot}}js/moment-timezone-with-data-10-year-range.min.js"></script>
 <script type="text/javascript" src="{{pathToRoot}}js/time.js"></script>
 
+<!-- Date picker -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- Latex support -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
