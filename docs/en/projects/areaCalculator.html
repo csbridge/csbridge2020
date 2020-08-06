@@ -22,16 +22,17 @@
 <script src="../../plugins/jquery.min.js"></script>
 <script src="../../plugins/bootstrap-3.4.1/js/bootstrap.min.js"></script>
 
-<script src="../../karel/ace/ace.js" type="text/javascript"></script>
+<!--<script src="../../karel/ace/ace.js" type="text/javascript"></script>-->
 
 <!-- Moment.js -->
 <script type="text/javascript" src="../../js/moment.min.js"></script>
 <script type="text/javascript" src="../../js/moment-timezone-with-data-10-year-range.min.js"></script>
 <script type="text/javascript" src="../../js/time.js"></script>
 
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
-  </script>-->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
 
 <!--
 <script src="../karel/js/html/websiteImports.js"></script>
@@ -522,7 +523,7 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<p>File: <code>area_calculator.py</code></p>
-<p>Write a program that reads in a float radius from the user and then prints out the associated area of the circle. If the radius is invalid (negative or zero), print an error. Here are three example runs of the program:</p>
+<p>Write a program that reads in a float radius from the user and then prints out the associated area of the circle. <span class="blue">If the radius is invalid (negative or zero), print an error</span>. Here are three example runs of the program:</p>
 <pre><code>Please enter a circle radius: 5
 The area of your circle is: 78.53981633974483
 </code></pre>
@@ -535,19 +536,39 @@ Error! You entered an invalid radius.
 Error! You entered an invalid radius.
 </code></pre>
 
-<h2 id="computing-the-area-of-a-circle">Computing the area of a circle</h2>
-<p>Given the radius <code>r</code> of a circle, the area of the circle is π times r-squared (see <a href="https://en.wikipedia.org/wiki/Area_of_a_circle">Wikipedia</a>).</p>
-<p><center>
+<h2 id="milestone-1-computing-the-area-of-a-circle">Milestone #1: Computing the area of a circle</h2>
+<p>Write code that asks the user for a radius, and then outputs the area of the corresponding circle.</p>
+<p>Given the radius (sometimes called <code>r</code>) of a circle, you can calculate the area of the circle to be, π times the radius squared (see <a href="https://en.wikipedia.org/wiki/Area_of_a_circle">Wikipedia</a>).</p>
+<p>$$\text{Area} = \pi \cdot \text{radius} ^2$$
+<!-- <center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/areaCalculator/area.png">
-</center></p>
-<p>Python has a pretty good approximation of the number π (pi) in the math library, which we've already included for you with the <code>import math</code> line above. Don't delete this line.</p>
-<p>To access π inside your <code>main()</code> function, you can use <code>math.pi</code>. For example, if we wanted to print out π to the console:</p>
+</center> --></p>
+<p>What is pi? π (pi) is a mathematical constant which Python has stored in the math library. In your project we included the line <code>import math</code> which gets you access to the math library. Don't delete this line. To access π inside your <code>main()</code> function, you can use <code>math.pi</code>. For example, if we wanted to print out π to the console:</p>
 <pre><code>def main():
     print(math.pi)
 </code></pre>
 
-<h2 id="keep-going">Keep going!</h2>
-<p>Once you finish this exercise, you can optionally extend your program to compute the diameter of a circle.</p>
+<h2 id="milestone-2-making-sure-the-user-entered-a-valid-input">Milestone #2: Making sure the user entered a <span class="blue">valid input</span></h2>
+<p>The radius value which a user inputs should be positive. It doesn't make sense to calculate the area if the radius is zero or negative! If they enter an "invalid" radius print out "Error! You entered an invalid radius."</p>
+<h2 id="milestone-3-put-your-code-in-a-while-true-loop">Milestone #3: Put your code in a <span class="blue">while True</span> loop.</h2>
+<p>Try putting all of your code in a while True loop</p>
+<pre><code>while True:
+   # your code
+</code></pre>
+
+<p>so that your program repeatedly asks the user for a radius and repeatedly calculates the area. </p>
+<p>Here is an example run:</p>
+<pre><code>Please enter a circle radius: 5
+The area of your circle is: 78.53981633974483
+
+Please enter a circule radius -2
+Error! You entered an invalid radius.
+
+Please enter a circle radius: 9
+The area of your circle is: 254.4690049412345
+
+Please enter a circle radius:
+</code></pre>
 	</div>
 </div>
 
