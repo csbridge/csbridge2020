@@ -39,6 +39,7 @@
 				"title_tr": "Bonus Konsol Programları",
 				"imageURL": "img/icons/console.jpg",
 				"url": "projects/consoleBonus.html",
+				"teachURL": "teach/notes/consoleBonus.html",
 				"difficulty": 1
 			},
 			{
@@ -46,6 +47,7 @@
 				"title_tr": "Eğlenceli Döngüler",
 				"imageURL": "img/icons/loopingfun.png",
 				"url": "projects/loopingFun.html",
+				"teachURL": "teach/notes/loopingFun.html",
 				"difficulty": 1
 			},
 			{
@@ -53,6 +55,7 @@
 				"title_tr": "Dolu Tanesi",
 				"imageURL": "img/icons/hailstone.png",
 				"url": "projects/hailstone.html",
+				"teachURL": "teach/notes/hailstone.html",
 				"difficulty": 2
 			},
 			{
@@ -60,6 +63,7 @@
 				"title_tr": "Antik Nimm Oyunu",
 				"imageURL": "img/icons/nimm.jpg",
 				"url": "projects/nimm.html",
+				"teachURL": "teach/notes/nimm.html",
 				"difficulty": 2
 			}
 		]
