@@ -522,34 +522,54 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>File: <code>area_calculator.py</code></p>
-<p>Write a program that reads in a float radius from the user and then prints out the associated
-area of the circle. If the radius is invalid (negative or zero), print an error. Here are three example runs of the program:</p>
-<pre><code>Please enter a circle radius: 5
-The area of your circle is: 78.53981633974483
+		<p>Kullanıcıdan float türünde bir yarıçap okuyan ve daha sonra dairenin alanını yazdıran bir program yazın. <span class = "blue"> Yarıçap geçersizse (negatif veya sıfır) bir hata yazdırın </span>. İşte programın üç örnek çalışması:</p>
+<pre><code>Lütfen bir daire yarıçapı girin: 5
+Dairenizin alanı: 78.53981633974483
 </code></pre>
 
-<pre><code>Please enter a circle radius: -3
-Error! You entered an invalid radius.
+<pre><code>Lütfen bir daire yarıçapı girin: -3
+Hata! Geçersiz bir yarıçap girdiniz.
 </code></pre>
 
-<pre><code>Please enter a circle radius: 0
-Error! You entered an invalid radius.
+<pre><code>Lütfen bir daire yarıçapı girin: 0
+Hata! Geçersiz bir yarıçap girdiniz.
 </code></pre>
 
-<h2 id="computing-the-area-of-a-circle">Computing the area of a circle</h2>
-<p>Given the radius <code>r</code> of a circle, the area of the circle is π times r-squared (see <a href="https://en.wikipedia.org/wiki/Area_of_a_circle">Wikipedia</a>).</p>
-<p><center>
+<h2 id="gorev-1-dairenin-alann-hesaplamak">Görev #1: Dairenin alanını hesaplamak</h2>
+<p>Kullanıcıdan bir yarıçap isteyen bir kod yazın ve ardından karşılık gelen dairenin alanını ekrana basın.</p>
+<p>Bir dairenin yarıçapı (bazen <code>r</code> olarak da adlandırılır) göz önüne alındığında, dairenin alanını, yarıçapın karesi π katını hesaplayabilirsiniz (bkz. <a href="https://en.wikipedia.org/wiki/Area_of_a_circle">Wikipedia</a>).</p>
+<p>$$\text{Alan} = \pi \cdot \text{yarıçap} ^2$$</p>
+<!-- <center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/areaCalculator/area.png">
-</center></p>
-<p>Python has a pretty good approximation of the number π (pi) in the math library, which we've already included for you with the <code>import math</code> line above. Don't delete this line.</p>
-<p>To access π inside your <code>main()</code> function, you can call <code>math.pi</code>. For example, if we wanted to print out π to the console:</p>
+</center> -->
+
+<p>Pi nedir? π (pi), Python'un matematik kütüphanesinde sakladığı matematiksel bir sabittir. Projenizde, matematik kütüphanesine erişmenizi sağlayan <code>import math</code> satırını ekledik. Bu satırı silmeyin. <code>main()</code> fonksiyonunuzun içinde π'ye erişmek için <code>math.pi</code> kullanabilirsiniz. Örneğin, konsola π'yi basmak istiyorsak:</p>
 <pre><code>def main():
     print(math.pi)
 </code></pre>
 
-<h2 id="keep-going">Keep going!</h2>
-<p>Once you finish this exercise, you can either start the 8-Ball section exercise or you can extend your program to compute the diameter of a circle.</p>
+<h2 id="gorev-2-kullancnn-bir-gecerli-bir-say-girdiginden-emin-olun">Görev #2: Kullanıcının bir <span class = "blue"> geçerli bir sayı </span> girdiğinden emin olun</h2>
+<p>The radius value which a user inputs should be positive. It doesn't make sense to calculate the area if the radius is zero or negative! If they enter an "invalid" radius print out "Error! You entered an invalid radius."</p>
+<p>Bir kullanıcının girdiği yarıçap değeri pozitif olmalıdır. Yarıçap sıfır veya negatifse alanı hesaplamanın bir anlamı yoktur! Kullanıcılar "geçersiz" bir yarıçap değeri girerlerse ekrana "Hata! Geçersiz bir yarıçap girdiniz." mesajını bastırın.</p>
+<h2 id="gorev-3-kodunuzu-while-true-dongusune-sokun">Görev #3: Kodunuzu <span class="blue">while True</span> döngüsüne sokun</h2>
+<p>Bütün kodunuzu bir while True döngüsünün içine koymayı deneyin:</p>
+<pre><code>while True:
+   # sizin kodunuz
+</code></pre>
+
+<p>böylece programınız kullanıcıdan sürekli olarak bir yarıçap ister ve alanı tekrar tekrar hesaplar.</p>
+<p>İşte programın örnek bir çalışması:</p>
+<pre><code>Lütfen bir daire yarıçapı girin: 5
+Dairenizin alanı: 78.53981633974483
+
+Lütfen bir daire yarıçapı girin: -2
+Hata! Geçersiz bir yarıçap girdiniz.
+
+Lütfen bir daire yarıçapı girin: 9
+Dairenizin alanı: 254.4690049412345
+
+Lütfen bir daire yarıçapı girin:
+</code></pre>
 	</div>
 </div>
 
