@@ -32,6 +32,13 @@
 		"slidesURL": "slides/5-ControlFlowRevisited.pdf",
 		"codeURL": "starter/lectures/Lecture5.zip",
 		"visible_after": "2020080609"
+	},
+	{
+		"title_en": "For Loops, Deconstructed",
+		"title_tr": "",
+		"slidesURL": "slides/Lecture6.pdf",
+		"codeURL": "starter/lectures/Lecture6.zip",
+		"visible_after": "2020080700"
 	}
 
 ]
