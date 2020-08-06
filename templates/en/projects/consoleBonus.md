@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Console Bonus
 
 Handout: [Python Reader](https://codeinplace2020.github.io/pythonreader/en/intro/)<br/>
-Handout: [Python Reference](https://online.csbridge.org/en/resources/quick-python.html)<br/>
+Handout: [Python Reference]({{pathToRoot}}/en/resources/quick-python.html)<br/>
 
 This is a collection of bonus programs! They are meant to be challenging.  They are not listed in order of difficulty, so choose whichever programs sound interesting!
 
