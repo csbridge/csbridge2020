@@ -10,6 +10,7 @@
 				"title_tr": "Orta Nokta",
 				"imageURL": "img/icons/midpoint.png",
 				"url": "projects/midpointKarel.html",
+				"teachURL": "teach/notes/midpointKarel.html",
 				"difficulty": 3
 			},
 			{
@@ -17,6 +18,7 @@
 				"title_tr": "Dama Tahtası",
 				"imageURL": "img/icons/checkerboard.png",
 				"url": "projects/checkerBoard.html",
+				"teachURL": "teach/notes/checkerBoard.html",
 				"difficulty": 2
 			},
 			{
@@ -24,6 +26,7 @@
 				"title_tr": "Kare Boyama",
 				"imageURL": "img/icons/squarePainter.png",
 				"url": "projects/squarePainter.html",
+				"teachURL": "teach/notes/squarePainter.html",
 				"difficulty": 2
 			}
 		]
