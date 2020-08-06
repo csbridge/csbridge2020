@@ -4,9 +4,10 @@ title: Bonus Konsol Programları
 Handout: [Python Okuyucu](https://codeinplace2020.github.io/pythonreader/en/intro/)<br/>
 Handout: [Python Referansı]({{pathToRoot}}tr/resources/quick-python.html)<br/>
 
-This is a collection of bonus programs! They are meant to be challenging.  They are not listed in order of difficulty, so choose whichever programs sound interesting!
+Bu bonus programlarından oluşan bir koleksiyon! Zorlayıcı olmaları gerekiyor. Bu problemler zorluk sırasına göre listelenmediler, bu nedenle hangi programlar kulağa ilginç geliyorsa onu seçin!
 
 # Birim Çevirme
+
 credit: Mehran Sahami, Keith Schwarz, Eric Roberts, Marty Stepp ve diğerleri.<br />
 translation: Serhat Arslan, Demet Tümkaya<br />
 Dosya: `conversion.py`
@@ -26,45 +27,52 @@ Cm girin: -1
 
 Şimdi, istediğin türde birimleri birbirine çeviren bir program yazabilirsin!
 
-# FizzBuzz
-credit: Mehran Sahami, Keith Schwarz, Eric Roberts, Marty Stepp, and others.<br />
+# CızBız
+
+credit: Mehran Sahami, Keith Schwarz, Eric Roberts, Marty Stepp, and others.
+translation: Ceren Kocaoğullar
 file: `fizzbuzz.py`
 
-Fizzbuzz is a classic coding problem.
+CızBız oyununda oyuncular sırayla birden yukarıya doğru sayarlar. Bir oyuncunun sırası 3 ile bölünebilen bir sayıya inerse, sayı yerine “Cız” ve 5 ile bölünebilen bir sayıya inerse sayı yerine “Bız” demelidir. Sayı hem 3 hem de 5'in katlarıysa, sayı yerine "CızBız" demelidir. Bu belki bir seyirci sporu değil. Ancak, kontrol akışı ve parametre kullanımı için ilginç bir problem.
 
-In the game Fizz Buzz, players take turns counting up from one. If a player’s turn lands on a number that’s divisible by 3, they should say “Fizz” instead of the number, and if it lands on a number that’s divisible by 5, they should say “Buzz” instead of the number. If the number is both a multiple of 3 and of 5, they should say "Fizzbuzz" instead of the number. A spectator sport, it is not. What it is, however, is an interesting problem in control flow.
+n olarak adlandırılan bir integer'ı (tamsayı) parametre olarak kabul eden CızBız adlı bir fonksiyon yazın. Fonksiyon n'ye kadar ve n dahil olmak üzere yol boyunca doğru sayıları cızırtadarak ve bızırdatarak saymalıdır. Saymayı bitirdiği zaman, fonksiyon yol boyunca toplamda kaç kere cızırdadığını veya bızırdadığını dönmelidir.
 
-Write a program that counts up to and including 100, fizzing and buzzing the correct numbers along the way.  Here's part of a sample run of the program:
+Ardından, kullanıcıdan tamsayı olarak okunan ve sayı sayılana kadar CızBız oynayan bir main fonsiyonu yazarak programınızı tamamlayın. İşte programın örnek bir çıktısı (kullanıcı girişinin "17" olduğu bir durumda):
 
 ```
-FizzBuzz
+Kaça kadar saymalıyım: 17
 1
 2
-Fizz
+Cız
 4
-Buzz
-Fizz
+Bız
+Cız
 7
 8
-Fizz
-Buzz
+Cız
+Bız
 11
-Fizz
+Cız
 13
 14
-...
+CızBız
+16
+17
+7 sayı cızırdatıldı veya bızırdatıldı
 ```
 
-## Checking Multiples
-In order to solve the hailstone problem, we are going to need as way to determine if an integer is a multiple of another integer. In addition to the regular operators that you know and love (like +, -, \*, and /) programming languages provide a remainder operator: %.  
+## Katları Kontrol Et
+
+Dolu Tanesi problemini çözmek için, bir tamsayının başka bir tamsayının katı olup olmadığını belirlemenin bir yolu olarak ihtiyacımız olacak. Bildiğiniz ve sevdiğiniz normal operatörlere ek olarak (+, -, \ \* ve / gibi) programlama dilleri bir de kalan operatörü sağlar: %.
 
 ```
 a % b
 ```
 
-returns the value remaining when you divide a by b. For example, 10 % 3 is 1 because when you divide 10 by 3 you get 3 with 1 left over.  And when you divide any number by 2, the remainder is 0 if the number is even and 1 if the number is odd.  How can we use this to check if one number is a multiple of another?
+a'yı b'ye böldüğünüzde kalan değeri döndürür. Örneğin, 10 % 3, 1'dir, çünkü 10'u 3'e böldüğünüzde, kalan 1 ile 3 elde edersiniz. Ve herhangi bir sayıyı 2'ye böldüğünüzde, sayı çift ise geri kalan 0, tek sayı ise 1'dir. Bunu, bir sayının diğerinin katı olup olmadığını kontrol etmek için nasıl kullanabiliriz?
 
 # Piglet
+
 credit: Mehran Sahami, Keith Schwarz, Eric Roberts, Marty Stepp ve diğerleri.<br />
 translation: Serhat Arslan, Demet Tümkaya<br />
 Dosya: `piglet.py`
