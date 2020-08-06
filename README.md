@@ -29,6 +29,8 @@ Note: there is a special `{{pathToRoot}}` placeholder that you can use in all te
 ### Local Development
 Run `./runLocal.sh` to compile and run a local copy of the website at `localhost:8000`.  The script is long-running, monitoring any changes to the `templates` folder and automatically recompiling whenever a file changes so that you can see modifications you make while you are working.  Enter `Ctl-c` to terminate the script.
 
+The website relies on several CSS classes (see [Timed Release](#timed-release)) to make certain content appear at certain times.  To help with testing, when running _locally only_ (e.g. viewing via `localhost:` or `file://`), the site will show a bar at the top that allows you to preview what the site looks like at another time of day.  When running hosted somewhere, such as `online.csbridge.org`, this bar does not show.
+
 ### Templates Structure
 
 + `announcements`: helper files relating to showing timed announcements on the main page of the website
