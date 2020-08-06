@@ -25,6 +25,13 @@
 		"slidesURL": "slides/Lecture4_Variables.pdf",
 		"codeURL": "starter/lectures/Lecture4.zip",
 		"visible_after": "2020080500"
+	},
+	{
+		"title_en": "Control Flow Revisited",
+		"title_tr": "Kontrol Akışına Geri Dönüş",
+		"slidesURL": "slides/5-ControlFlowRevisited.pdf",
+		"codeURL": "starter/lectures/Lecture5.zip",
+		"visible_after": "2020080609"
 	}
 
 ]
