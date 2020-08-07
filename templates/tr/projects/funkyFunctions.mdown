@@ -3,9 +3,10 @@ title: Fırlama Fonksiyonlar
 credit: Chris, Bryce, Lisa
 translation: Serhat Arslan, Ceren Kocaoğullar
 
+Örnek: [Ortalama Fonksiyonu]({{pathToRoot}}tr/projects/average/) <br/>
+
 ## 1. Mad Max
 
-Örnek: [Ortalama Fonksiyonu]({{pathToRoot}}tr/projects/averageMethod.html}}) <br/>
 Dosya: `mad_max.py`
 
 Programı, üç sayının maksimumunu döndüren `mad_max` fonksiyonunu yazarak tamamlayın.
@@ -30,33 +31,43 @@ def main():
 ```
 4, 5, ve 6 sayılarının maksimumu: 6
 -4, 4, ve 0 sayılarının maksimumu: 4
-3, 2, ve 1 sayılarının maksimumu:
-0, 0, ve 0 sayılarının maksimumu:: 0
+3, 2, ve 1 sayılarının maksimumu: 3
+0, 0, ve 0 sayılarının maksimumu: 0
 ```
 
-## 2. Ağaçlar Çiz
+While there is a built-in `max` function in Python that we would normally use for this, for this problem you should not use it.  Instead, we want you to get practice implementing it with other things, like `if` and `elif` statements.
 
-Ders Notları: [Graphics Reference]({{pathToRoot}}tr/handouts/graphics.html)<br/>
-Örnekler: [Draw People]({{pathToRoot}}tr/projects/drawpeople.html}}),
-[Half Green]({{pathToRoot}}tr/projects/halfgreen.html}})<br/>
-Dosya: `draw_trees.py`
+## 2. Dog Years
 
-`draw_tree` fonksiyonunu doldurun. Bu fonksiyon verilen `(x, y)` koordinatlarında _*tabanı*_ ortalanmış bir ağaç çizer:
+Dosya: `dog_years.py`
 
-`main` fonksiyonu sizin için yazılmış durumda:
+Everyone knows that our furry friends age at a different rate to humans. Write a program that asks the user for a human age (expressed as a whole number) and prints the equivalent dog age using the fact that there are seven dog years per human year. Consider defining a constant `DOG_YEARS_PER_HUMAN_YEAR`. You can assume the user types in an integer age, but not necessarily that the integer is positive. If it isn't, print an error message.  If the user enters 0, the program should stop.
 
+Your program should define a function called `compute_dog_years` which accepts as a parameter an integer called `human_years`. The function should return the converted human age. You should then edit the `main` function to call this function.
+
+```
+def compute_dog_years(human_years):
+    ... your code here ...
+```
+
+The main function is already written for you, but it is missing the code that calls your `compute_dog_years` function and prints out the correct statement.
 ```
 def main():
-    draw_tree(50, 150)
-    draw_tree(100, 300)
-    draw_tree(500, 200)
-    draw_tree(300, 250)
-    draw_tree(700, 310)
-
+    user_input = int(input("Enter an age in human years: "))
+    while user_input != 0:
+        if user_input < 0:
+            print("Sorry, please enter a positive number or 0 to exit")
+        else:
+            ... your code here ...
+        user_input = int(input("Enter an age in human years: "))
 ```
 
-Her ağacın gövdesi 20 piksel (`TRUNK_WIDTH`) genişliğinde ve 80 piksel `TRUNK_HEIGHT`) yüksekliğinde olmalıdır. Yaprakların yarıçapları 30 piksel (`LEAVES_RADIUS`) olmalıdır. Çıktınız aşağıdakine benzer olmalıdır:
+Here is an example of what one run of your program should look like (user inputs -12, 13, and 0, in order):
 
-<center>
-  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/madmethods/demo.png">
-</center>
+```
+Enter an age in human years: -12
+Sorry, please enter a positive number or 0 to exit
+Enter an age in human years: 13
+The age in dog years is 91
+Enter an age in human years: 0
+```

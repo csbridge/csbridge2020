@@ -685,9 +685,9 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<h2 id="1-mad-max">1. Mad Max</h2>
-<p>Örnek: <a href="../../tr/projects/averageMethod.html}}">Ortalama Fonksiyonu</a> <br/>
-Dosya: <code>mad_max.py</code></p>
+		<p>Örnek: <a href="../../tr/projects/average/">Ortalama Fonksiyonu</a> <br/></p>
+<h2 id="1-mad-max">1. Mad Max</h2>
+<p>Dosya: <code>mad_max.py</code></p>
 <p>Programı, üç sayının maksimumunu döndüren <code>mad_max</code> fonksiyonunu yazarak tamamlayın.</p>
 <pre><code>def mad_max(x, y, z):
     # kodunuzu buraya yazın
@@ -704,30 +704,37 @@ Dosya: <code>mad_max.py</code></p>
 <p>Çıktınız şöyle görünmeli:</p>
 <pre><code>4, 5, ve 6 sayılarının maksimumu: 6
 -4, 4, ve 0 sayılarının maksimumu: 4
-3, 2, ve 1 sayılarının maksimumu:
-0, 0, ve 0 sayılarının maksimumu:: 0
+3, 2, ve 1 sayılarının maksimumu: 3
+0, 0, ve 0 sayılarının maksimumu: 0
 </code></pre>
 
-<h2 id="2-agaclar-ciz">2. Ağaçlar Çiz</h2>
-<p>Ders Notları: <a href="../../tr/handouts/graphics.html">Graphics Reference</a><br/>
-Örnekler: <a href="../../tr/projects/drawpeople.html}}">Draw People</a>,
-<a href="../../tr/projects/halfgreen.html}}">Half Green</a><br/>
-Dosya: <code>draw_trees.py</code></p>
-<p><code>draw_tree</code> fonksiyonunu doldurun. Bu fonksiyon verilen <code>(x, y)</code> koordinatlarında <em><em>tabanı</em></em> ortalanmış bir ağaç çizer:</p>
-<p><code>main</code> fonksiyonu sizin için yazılmış durumda:</p>
+<p>While there is a built-in <code>max</code> function in Python that we would normally use for this, for this problem you should not use it.  Instead, we want you to get practice implementing it with other things, like <code>if</code> and <code>elif</code> statements.</p>
+<h2 id="2-dog-years">2. Dog Years</h2>
+<p>Dosya: <code>dog_years.py</code></p>
+<p>Everyone knows that our furry friends age at a different rate to humans. Write a program that asks the user for a human age (expressed as a whole number) and prints the equivalent dog age using the fact that there are seven dog years per human year. Consider defining a constant <code>DOG_YEARS_PER_HUMAN_YEAR</code>. You can assume the user types in an integer age, but not necessarily that the integer is positive. If it isn't, print an error message.  If the user enters 0, the program should stop.</p>
+<p>Your program should define a function called <code>compute_dog_years</code> which accepts as a parameter an integer called <code>human_years</code>. The function should return the converted human age. You should then edit the <code>main</code> function to call this function.</p>
+<pre><code>def compute_dog_years(human_years):
+    ... your code here ...
+</code></pre>
+
+<p>The main function is already written for you, but it is missing the code that calls your <code>compute_dog_years</code> function and prints out the correct statement.</p>
 <pre><code>def main():
-    draw_tree(50, 150)
-    draw_tree(100, 300)
-    draw_tree(500, 200)
-    draw_tree(300, 250)
-    draw_tree(700, 310)
-
+    user_input = int(input(&quot;Enter an age in human years: &quot;))
+    while user_input != 0:
+        if user_input &lt; 0:
+            print(&quot;Sorry, please enter a positive number or 0 to exit&quot;)
+        else:
+            ... your code here ...
+        user_input = int(input(&quot;Enter an age in human years: &quot;))
 </code></pre>
 
-<p>Her ağacın gövdesi 20 piksel (<code>TRUNK_WIDTH</code>) genişliğinde ve 80 piksel <code>TRUNK_HEIGHT</code>) yüksekliğinde olmalıdır. Yaprakların yarıçapları 30 piksel (<code>LEAVES_RADIUS</code>) olmalıdır. Çıktınız aşağıdakine benzer olmalıdır:</p>
-<p><center>
-  <img style="width:500px;border: 1px solid #000000" src="../../img/projects/madmethods/demo.png">
-</center></p>
+<p>Here is an example of what one run of your program should look like (user inputs -12, 13, and 0, in order):</p>
+<pre><code>Enter an age in human years: -12
+Sorry, please enter a positive number or 0 to exit
+Enter an age in human years: 13
+The age in dog years is 91
+Enter an age in human years: 0
+</code></pre>
 	</div>
 </div>
 

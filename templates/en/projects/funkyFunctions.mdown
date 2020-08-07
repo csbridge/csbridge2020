@@ -5,6 +5,8 @@ credit: Written by Chris, Bryce, Brahm, and Lisa
 Example: [Average Function]({{pathToRoot}}en/projects/average/)
 
 ## 1. Mad Max
+File: `mad_max.py`
+
 Complete the program by filling in the `mad_max` function that returns the largest of three numbers:
 
 ```
@@ -33,6 +35,7 @@ While there is a built-in `max` function in Python that we would normally use fo
 
 
 ## 2. Dog Years
+File: `dog_years.py`
 
 Everyone knows that our furry friends age at a different rate to humans. Write a program that asks the user for a human age (expressed as a whole number) and prints the equivalent dog age using the fact that there are seven dog years per human year. Consider defining a constant `DOG_YEARS_PER_HUMAN_YEAR`. You can assume the user types in an integer age, but not necessarily that the integer is positive. If it isn't, print an error message.  If the user enters 0, the program should stop.
 
