@@ -275,7 +275,8 @@
           "topic_en": "Graphics",
           "topic_tr": "Grafik",
           "type": "quickstart",
-          "url": "projects/programmingIsAwesome.html"
+          "url": "projects/programmingIsAwesome.html",
+          "teachURL": "teach/notes/awesome.html"
         },
         {
           "imageURL": "img/icons/randomCircles.png",
@@ -284,7 +285,8 @@
           "topic_en": "Graphics and Randomness",
           "topic_tr": "Graphics and Randomness",
           "type": "project",
-          "url": "projects/randomCircles.html"
+          "url": "projects/randomCircles.html",
+          "teachURL": "teach/notes/randomCircles.html"
         }
       ]
     }
