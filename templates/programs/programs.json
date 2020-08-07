@@ -263,7 +263,7 @@
   },
   {
     "title_en": "Graphics and Functions",
-    "title_tr": "Graphics and Functions",
+    "title_tr": "Grafikler ve Functions",
     "visible_after": "2020081000",
     "morning": {
       "projectURL": "starter/Day5AM.zip",
@@ -287,6 +287,48 @@
           "type": "project",
           "url": "projects/randomCircles.html",
           "teachURL": "teach/notes/randomCircles.html"
+        }
+      ]
+    },
+    "evening": {
+      "projectURL": "starter/Day5PM.zip",
+      "visible_after": "2020081009",
+      "projects": [
+        {
+          "imageURL": "img/icons/console.jpg",
+          "title_en": "Funky Functions",
+          "title_tr": "Fırlama Fonksiyonlar",
+          "topic_en": "Params and Return",
+          "topic_tr": "Param ve Return",
+          "type": "quickstart",
+          "url": "projects/funkyFunctions.html"
+        },
+        {
+          "imageURL": "img/icons/console.jpg",
+          "title_en": "FizzBuzz",
+          "title_tr": "CızBız",
+          "topic_en": "Params and Return",
+          "topic_tr": "Param ve Return",
+          "type": "section",
+          "url": "projects/fizzbuzz-functions.html" 
+        },
+        {
+          "imageURL": "img/icons/target.png",
+          "title_en": "Target",
+          "title_tr": "Hedef Tahtası",
+          "topic_en": "Parameters",
+          "topic_tr": "Parametreler",
+          "type": "section",
+          "url": "projects/target.html" 
+        },
+        {
+          "imageURL": "img/icons/stringArt.png",
+          "title_en": "String Art",
+          "title_tr": "Çizgi Sanatı",
+          "topic_en": "For Loops",
+          "topic_tr": "For Döngüsü",
+          "type": "project",
+          "url": "projects/stringArt.html" 
         }
       ]
     }

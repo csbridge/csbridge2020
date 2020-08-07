@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Funky Functions
 credit: Written by Chris, Bryce, Brahm, and Lisa
 
-Example: [Average Function]({{pathToRoot}}en/projects/averageFunction.html}})
+Example: [Average Function]({{pathToRoot}}en/projects/average/)
 
 ## 1. Mad Max
 Complete the program by filling in the `mad_max` function that returns the largest of three numbers:
