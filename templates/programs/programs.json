@@ -260,5 +260,33 @@
     "title_en": "For loops, deconstructed",
     "title_tr": "For döngüsü ve analizi",
     "visible_after": "2020080700"
+  },
+  {
+    "title_en": "Graphics and Functions",
+    "title_tr": "Graphics and Functions",
+    "visible_after": "2020081000",
+    "morning": {
+      "projectURL": "starter/Day5AM.zip",
+      "projects": [
+        {
+          "imageURL": "img/icons/awesome.png",
+          "title_en": "Programming is Awesome",
+          "title_tr": "Programlamak Bir Harika",
+          "topic_en": "Graphics",
+          "topic_tr": "Grafik",
+          "type": "quickstart",
+          "url": "projects/programmingIsAwesome.html"
+        },
+        {
+          "imageURL": "img/icons/randomCircles.png",
+          "title_en": "Random Circles",
+          "title_tr": "Tesadüfi Daireler",
+          "topic_en": "Graphics and Randomness",
+          "topic_tr": "Graphics and Randomness",
+          "type": "project",
+          "url": "projects/randomCircles.html"
+        }
+      ]
+    }
   }
 ]

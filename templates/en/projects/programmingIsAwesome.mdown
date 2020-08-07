@@ -18,7 +18,7 @@ Very simple geometric art sometimes sells for huge amounts of money. For example
   <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/programmingIsAwesome//mondrian.jpg">
 </center>
 
-Your first task is to add three rectangles, one red, one blue, one yellow. You don't have to create the image above. You can put your rectangles anywhere on the screen that you want. If you sell your picture for millions of dollars... remember your teachers :). If you feel like adding more rectangles, thats cool. Just make sure to finish milestone #2 first.
+Your first task is to add three rectangles, one red, one blue, one yellow. You don't have to create the image above. You can put your rectangles anywhere on the screen that you want. If you sell your picture for millions of dollars... remember your teachers :). If you feel like adding more rectangles, that's cool. Just make sure to finish milestone #2 first.
 
 
 ## Milestone 2: Centered Text
