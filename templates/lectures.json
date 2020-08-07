@@ -35,7 +35,7 @@
 	},
 	{
 		"title_en": "For Loops, Deconstructed",
-		"title_tr": "For Loops, Deconstructed",
+		"title_tr": "Gün: For döngüsü ve analizi",
 		"slidesURL": "slides/Lecture6.pdf",
 		"codeURL": "starter/lectures/Lecture6.zip",
 		"visible_after": "2020080700"
