@@ -4,7 +4,7 @@ credit: Eric Roberts, Mehran Sahami
 translation: Serhat Arslan, Ceren Kocaoğullar
 
 Handouts: [Graphics Reference]({{pathToRoot}}tr/resources/graphics.html)<br/>
-Worked Example: [Draw People]({{pathToRoot}}tr/projects/drawpeople.html)<br/>
+Worked Example: [Draw People]({{pathToRoot}}tr/projects/drawPeople/)<br/>
 File: `target.py`
 
 Farz edin ki, şunun gibi görünen bir okçuluk hedef tahtasının resmini çizdiren bir program ortaya koymanız için işe alındınız:
@@ -25,4 +25,4 @@ MEDIUM_CIRCLE_RADIUS = 100
 SMALL_CIRCLE_RADIUS = 50
 ```
 
-Bu satırlar sabitleri tanımlar: yani değerleri asla değişmeyen değişkenler. Bunlar tüm fonksiyonların dışında tanımlandığından, değerlerini programın herhangi bir noktasında okuyabilirsiniz. Bu programı 150, 100 ve 10 sayılarını doğrudan ihtiyacınız olan her yerde kullanarak da yazabilirsiniz, ancak sabitleri kullanmak programınızın okunmasını çok daha kolay hale getirir.
+Bu satırlar sabitleri tanımlar: yani değerleri asla değişmeyen değişkenler. Bunlar tüm fonksiyonların dışında tanımlandığından, değerlerini programın herhangi bir noktasında okuyabilirsiniz. Bu programı 150, 100 ve 50 sayılarını doğrudan ihtiyacınız olan her yerde kullanarak da yazabilirsiniz, ancak sabitleri kullanmak programınızın okunmasını çok daha kolay hale getirir.

@@ -3,7 +3,7 @@ title: Target
 credit: Written by Eric Roberts and Mehran Sahami
 
 Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
-Worked Example: [Draw People]({{pathToRoot}}en/projects/drawpeople.html)<br/>
+Worked Example: [Draw People]({{pathToRoot}}en/projects/drawPeople/)<br/>
 File: `target.py`
 
 Suppose that you've been hired to produce a program that draws an image of an archery target that looks like this:
@@ -23,4 +23,4 @@ MEDIUM_CIRCLE_RADIUS = 100
 SMALL_CIRCLE_RADIUS = 50
 ```
 
-which are written outside the main() function. These lines define constants: variables whose values never change. Since they are defined outside all functions, you can read their values at any point in the program. Though you could write this program using the numbers 150, 100, and 10 directly wherever you need them, using constants makes your program much easier to read.
+which are written outside the `main()` function. These lines define constants: variables whose values never change. Since they are defined outside all functions, you can read their values at any point in the program. Though you could write this program using the numbers 150, 100, and 50 directly wherever you need them, using constants makes your program much easier to read.

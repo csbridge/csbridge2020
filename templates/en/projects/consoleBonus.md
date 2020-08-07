@@ -36,7 +36,6 @@ In the game Fizz Buzz, players take turns counting up from one. If a player’s 
 Write a program that counts up to and including 100, fizzing and buzzing the correct numbers along the way.  Here's part of a sample run of the program:
 
 ```
-FizzBuzz
 1
 2
 Fizz

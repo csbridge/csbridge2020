@@ -27,38 +27,32 @@ Cm girin: -1
 
 Şimdi, istediğin türde birimleri birbirine çeviren bir program yazabilirsin!
 
-# CızBız
-
-credit: Mehran Sahami, Keith Schwarz, Eric Roberts, Marty Stepp, and others.
-translation: Ceren Kocaoğullar
+# FizzBuzz
+credit: Mehran Sahami, Keith Schwarz, Eric Roberts, Marty Stepp, and others.<br />
 file: `fizzbuzz.py`
 
-CızBız oyununda oyuncular sırayla birden yukarıya doğru sayarlar. Bir oyuncunun sırası 3 ile bölünebilen bir sayıya inerse, sayı yerine “Cız” ve 5 ile bölünebilen bir sayıya inerse sayı yerine “Bız” demelidir. Sayı hem 3 hem de 5'in katlarıysa, sayı yerine "CızBız" demelidir. Bu belki bir seyirci sporu değil. Ancak, kontrol akışı ve parametre kullanımı için ilginç bir problem.
+Fizzbuzz is a classic coding problem.
 
-n olarak adlandırılan bir integer'ı (tamsayı) parametre olarak kabul eden CızBız adlı bir fonksiyon yazın. Fonksiyon n'ye kadar ve n dahil olmak üzere yol boyunca doğru sayıları cızırtadarak ve bızırdatarak saymalıdır. Saymayı bitirdiği zaman, fonksiyon yol boyunca toplamda kaç kere cızırdadığını veya bızırdadığını dönmelidir.
+In the game Fizz Buzz, players take turns counting up from one. If a player’s turn lands on a number that’s divisible by 3, they should say “Fizz” instead of the number, and if it lands on a number that’s divisible by 5, they should say “Buzz” instead of the number. If the number is both a multiple of 3 and of 5, they should say "Fizzbuzz" instead of the number. A spectator sport, it is not. What it is, however, is an interesting problem in control flow.
 
-Ardından, kullanıcıdan tamsayı olarak okunan ve sayı sayılana kadar CızBız oynayan bir main fonsiyonu yazarak programınızı tamamlayın. İşte programın örnek bir çıktısı (kullanıcı girişinin "17" olduğu bir durumda):
+Write a program that counts up to and including 100, fizzing and buzzing the correct numbers along the way.  Here's part of a sample run of the program:
 
 ```
-Kaça kadar saymalıyım: 17
 1
 2
-Cız
+Fizz
 4
-Bız
-Cız
+Buzz
+Fizz
 7
 8
-Cız
-Bız
+Fizz
+Buzz
 11
-Cız
+Fizz
 13
 14
-CızBız
-16
-17
-7 sayı cızırdatıldı veya bızırdatıldı
+...
 ```
 
 ## Katları Kontrol Et

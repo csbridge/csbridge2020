@@ -702,22 +702,9 @@ The max of 3, 2, and 1 is: 3
 The max of 0, 0, and 0 is: 0
 </code></pre>
 
-<p>Hint: There are several ways to write your <code>mad_max</code> function.</p>
-<ul>
-<li>
-<p>One approach uses if and if-else conditionals.</p>
-</li>
-<li>
-<p>Another approach uses the built-in Python function, <code>max</code>, which takes in two numbers and returns the maximum:</p>
-<pre><code>print(max(-3, 4)) # prints 4
-print(max(100, 5)) # prints 100
-</code></pre>
-<p>Since your function must return the max of 3 numbers, you will have to call the Python function <code>max</code> multiple times!</p>
-</li>
-</ul>
-<p>Try out both approaches if you have time!</p>
+<p>While there is a built-in <code>max</code> function in Python that we would normally use for this, for this problem you should not use it.  Instead, we want you to get practice implementing it with other things, like <code>if</code> and <code>elif</code> statements.</p>
 <h2 id="2-dog-years">2. Dog Years</h2>
-<p>Everyone knows that our furry friends age at a different rate to humans. Write a program that takes asks the user for a human age (expressed as a whole number) and prints the equivalent dog age using the fact that there are seven dog years per human year. Consider defining a constant <code>DOG_YEARS_PER_HUMAN_YEAR</code>. You can assume the user types in an integer age, but not necessarily that the integer is positive. If it isn't, print an error message.</p>
+<p>Everyone knows that our furry friends age at a different rate to humans. Write a program that asks the user for a human age (expressed as a whole number) and prints the equivalent dog age using the fact that there are seven dog years per human year. Consider defining a constant <code>DOG_YEARS_PER_HUMAN_YEAR</code>. You can assume the user types in an integer age, but not necessarily that the integer is positive. If it isn't, print an error message.  If the user enters 0, the program should stop.</p>
 <p>Your program should define a function called <code>compute_dog_years</code> which accepts as a parameter an integer called <code>human_years</code>. The function should return the converted human age. You should then edit the <code>main</code> function to call this function.</p>
 <pre><code>def compute_dog_years(human_years):
     ... your code here ...
