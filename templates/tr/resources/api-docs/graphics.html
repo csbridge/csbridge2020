@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.8.4" />
+<title>src.graphics API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>src.graphics</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="src.graphics.Canvas"><code class="flex name class">
+<span>class <span class="ident">Canvas</span></span>
+<span>(</span><span>width=754, height=492)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Canvas is a simplified interface on top of the tkinter Canvas to allow for easier manipulation of graphical objects.
+Canvas has a variety of functionality to create, modify and delete graphical objects, and also get information
+about the canvas contents.
+Canvas is a subclass of <code>tkinter.Canvas</code>, so all tkinter functionality is also available
+if needed.</p>
+<p>When creating a canvas, you can optionally specify a width and height.
+If no width and height are specified,
+the canvas is initialized with its default size.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>width</code></strong></dt>
+<dd>the width of the Canvas to create (or if not specified, uses <code><a title="src.graphics.Canvas.DEFAULT_WIDTH" href="#src.graphics.Canvas.DEFAULT_WIDTH">Canvas.DEFAULT_WIDTH</a></code>)</dd>
+<dt><strong><code>height</code></strong></dt>
+<dd>the height of the Canvas to create (or if not specified, uses <code><a title="src.graphics.Canvas.DEFAULT_HEIGHT" href="#src.graphics.Canvas.DEFAULT_HEIGHT">Canvas.DEFAULT_HEIGHT</a></code>)</dd>
+</dl></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Canvas</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+<li>tkinter.XView</li>
+<li>tkinter.YView</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="src.graphics.Canvas.COLORS"><code class="name">var <span class="ident">COLORS</span></code></dt>
+<dd>
+<div class="desc"><p>This is a list of names of all colors available to use for graphics on the Canvas.
+This list of Tkinter colors
+was taken from <a href="https://stackoverflow.com/questions/4969543/colour-chart-for-tkinter-and-tix.">https://stackoverflow.com/questions/4969543/colour-chart-for-tkinter-and-tix.</a></p></div>
+</dd>
+<dt id="src.graphics.Canvas.DEFAULT_HEIGHT"><code class="name">var <span class="ident">DEFAULT_HEIGHT</span></code></dt>
+<dd>
+<div class="desc"><p>The default height of the canvas is 492.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.DEFAULT_TITLE"><code class="name">var <span class="ident">DEFAULT_TITLE</span></code></dt>
+<dd>
+<div class="desc"><p>The default text shown in the canvas window titlebar is 'Canvas'.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.DEFAULT_WIDTH"><code class="name">var <span class="ident">DEFAULT_WIDTH</span></code></dt>
+<dd>
+<div class="desc"><p>The default width of the canvas is 754.</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="src.graphics.Canvas.create_image"><code class="name flex">
+<span>def <span class="ident">create_image</span></span>(<span>self, x, y, file_path, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Creates an image with the specified filename at the specified position on the canvas.
+The image
+will be the same size as the image file loaded in.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x</code></strong></dt>
+<dd>the x coordinate of the top-left corner of the image on the canvas</dd>
+<dt><strong><code>y</code></strong></dt>
+<dd>the y coordinate of the top-left corner of the image on the canvas</dd>
+<dt><strong><code>file_path</code></strong></dt>
+<dd>the path to the image file to load and display on the canvas</dd>
+<dt><strong><code>kwargs</code></strong></dt>
+<dd>other tkinter keyword args</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>the graphical image object that is displaying the specified image at the specified location.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.create_image_with_size"><code class="name flex">
+<span>def <span class="ident">create_image_with_size</span></span>(<span>self, x, y, width, height, file_path, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Creates an image with the specified filename at the specified position on the canvas, and resized
+to the specified width and height.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x</code></strong></dt>
+<dd>the x coordinate of the top-left corner of the image on the canvas</dd>
+<dt><strong><code>y</code></strong></dt>
+<dd>the y coordinate of the top-left corner of the image on the canvas</dd>
+<dt><strong><code>width</code></strong></dt>
+<dd>the width to set for the image</dd>
+<dt><strong><code>height</code></strong></dt>
+<dd>the height to set for the image</dd>
+<dt><strong><code>file_path</code></strong></dt>
+<dd>the path to the image file to load and display on the canvas</dd>
+<dt><strong><code>kwargs</code></strong></dt>
+<dd>other tkinter keyword args</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>the graphical image object that is displaying the specified image at the specified location with the
+specified size.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.create_line"><code class="name flex">
+<span>def <span class="ident">create_line</span></span>(<span>self, x1, y1, x2, y2, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Creates and returns a line graphical object on the screen from the specified point to the specified point.
+The line is drawn black.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x1</code></strong></dt>
+<dd>the starting x location of the line</dd>
+<dt><strong><code>y1</code></strong></dt>
+<dd>the starting y location of the line</dd>
+<dt><strong><code>x2</code></strong></dt>
+<dd>the ending x location of the line</dd>
+<dt><strong><code>y2</code></strong></dt>
+<dd>the ending y location of the line</dd>
+<dt><strong><code>args</code></strong></dt>
+<dd>you can optionally specify additional points on the line or shape</dd>
+<dt><strong><code>kwargs</code></strong></dt>
+<dd>other tkinter keyword args</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>the graphical line object between the two specified points.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.create_oval"><code class="name flex">
+<span>def <span class="ident">create_oval</span></span>(<span>self, x1, y1, x2, y2, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Creates and returns an oval graphical object on the screen contained within the bounding box whose top left
+corner is the first coordinate, and whose bottom right corner is the second coordinate.
+The oval is drawn
+unfilled with a black outline.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x1</code></strong></dt>
+<dd>the top-left x location of the bounding box</dd>
+<dt><strong><code>y1</code></strong></dt>
+<dd>the top-left y location of the bounding box</dd>
+<dt><strong><code>x2</code></strong></dt>
+<dd>the bottom-right x location of the bounding box</dd>
+<dt><strong><code>y2</code></strong></dt>
+<dd>the bottom-right y location of the bounding box</dd>
+<dt><strong><code>kwargs</code></strong></dt>
+<dd>other tkinter keyword args</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>the graphical oval object at the specified location.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.create_rectangle"><code class="name flex">
+<span>def <span class="ident">create_rectangle</span></span>(<span>self, x1, y1, x2, y2, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Creates and returns a rectangle graphical object on the screen with its top-left corner at the first coordinate
+and its bottom-right corner at the second coordinate.
+The rect is drawn unfilled with a black outline.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x1</code></strong></dt>
+<dd>the top-left x location of the rect</dd>
+<dt><strong><code>y1</code></strong></dt>
+<dd>the top-left y location of the rect</dd>
+<dt><strong><code>x2</code></strong></dt>
+<dd>the bottom-right x location of the rect</dd>
+<dt><strong><code>y2</code></strong></dt>
+<dd>the bottom-right y location of the rect</dd>
+<dt><strong><code>kwargs</code></strong></dt>
+<dd>other tkinter keyword args</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>the graphical rectangle object at the specified location.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.create_text"><code class="name flex">
+<span>def <span class="ident">create_text</span></span>(<span>self, x, y, text, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Creates and returns a text graphical object on the screen at the specified location with the specified text.
+The specified x and y location is for the center of the text.
+The text will be in size 13 font.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x</code></strong></dt>
+<dd>the x location of the center of the text</dd>
+<dt><strong><code>y</code></strong></dt>
+<dd>the y location of the center of the text</dd>
+<dt><strong><code>text</code></strong></dt>
+<dd>the text that should be displayed on the canvas at the given position</dd>
+<dt><strong><code>kwargs</code></strong></dt>
+<dd>other tkinter keyword args</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>the graphical text object that is displaying the specified text at the specified location.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.delete"><code class="name flex">
+<span>def <span class="ident">delete</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove the specified graphical object from the canvas.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the graphical object to remove from the canvas</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.find_closest"><code class="name flex">
+<span>def <span class="ident">find_closest</span></span>(<span>self, x, y)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Finds the closest object to this location</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x</code></strong></dt>
+<dd>the x coordinate of the location</dd>
+<dt><strong><code>y</code></strong></dt>
+<dd>the y coordinate of the location</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>the top-most graphical object on the canvas closest to this location (None otherwise)</p></div>
+</dd>
+<dt id="src.graphics.Canvas.find_overlapping"><code class="name flex">
+<span>def <span class="ident">find_overlapping</span></span>(<span>self, x1, y1, x2, y2)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get a list of graphical objects on the canvas that overlap with the specified bounding box.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x1</code></strong></dt>
+<dd>the x coordinate of the upper-left corner of the bounding box</dd>
+<dt><strong><code>y1</code></strong></dt>
+<dd>the y coordinate of the upper-left corner of the bounding box</dd>
+<dt><strong><code>x2</code></strong></dt>
+<dd>the x coordinate of the lower-right corner of the bounding box</dd>
+<dt><strong><code>y2</code></strong></dt>
+<dd>the y coordinate of the lower-right corner of the bounding box</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>a list of graphical objects on the canvas that overlap with this bounding box.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.get_canvas_height"><code class="name flex">
+<span>def <span class="ident">get_canvas_height</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the height of the canvas.</p>
+<h2 id="returns">Returns</h2>
+<p>the current height of the canvas.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.get_canvas_width"><code class="name flex">
+<span>def <span class="ident">get_canvas_width</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the width of the canvas.</p>
+<h2 id="returns">Returns</h2>
+<p>the current width of the canvas.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.get_height"><code class="name flex">
+<span>def <span class="ident">get_height</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the height of the specified graphical object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object for which to calculate the height</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>the height of the specified graphical object.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.get_left_x"><code class="name flex">
+<span>def <span class="ident">get_left_x</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the leftmost x coordinate of the specified graphical object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object for which to calculate the leftmost x coordinate</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>the leftmost x coordinate of the specified graphical object.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.get_mouse_x"><code class="name flex">
+<span>def <span class="ident">get_mouse_x</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the mouse's current X location on the canvas.</p>
+<h2 id="returns">Returns</h2>
+<p>the mouses's current X location on the canvas.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.get_mouse_y"><code class="name flex">
+<span>def <span class="ident">get_mouse_y</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the mouse's current Y location on the canvas.</p>
+<h2 id="returns">Returns</h2>
+<p>the mouse's current Y location on the canvas.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.get_new_mouse_clicks"><code class="name flex">
+<span>def <span class="ident">get_new_mouse_clicks</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a list of all mouse clicks that have occurred since the last call to this method or any registered
+mouse handler.</p>
+<h2 id="returns">Returns</h2>
+<p>a list of all mouse clicks that have occurred since the last call to this method or any registered
+mouse handler.
+Each mouse click contains x and y properties for the click location, e.g.
+clicks = canvas.get_new_mouse_clicks(); print(clicks[0].x).</p></div>
+</dd>
+<dt id="src.graphics.Canvas.get_random_color"><code class="name flex">
+<span>def <span class="ident">get_random_color</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a randomly-selected color.</p>
+<h2 id="returns">Returns</h2>
+<p>A randomly-selected color, as a string.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.get_text"><code class="name flex">
+<span>def <span class="ident">get_text</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the text displayed by the given text object.
+Cannot be used on any non-text graphical object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the text object for which to get the displayed text</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>the text currently displayed by this graphical object.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.get_top_y"><code class="name flex">
+<span>def <span class="ident">get_top_y</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the topmost y coordinate of the specified graphical object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object for which to calculate the topmost y coordinate</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>the topmost y coordinate of the specified graphical object.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.get_width"><code class="name flex">
+<span>def <span class="ident">get_width</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the width of the specified graphical object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object for which to calculate the width</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>the width of the specified graphical object.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.lower_behind"><code class="name flex">
+<span>def <span class="ident">lower_behind</span></span>(<span>self, obj, behind)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the first object to be directly behind the second object in Z-ordering on the canvas.
+In other words,
+the first object will now appear directly behind the second object and all objects in front of the
+second object, but in front of all objects that the second object is also in front of.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object to put in front of the second object</dd>
+<dt><strong><code>behind</code></strong></dt>
+<dd>the object to put the first object directly behind</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.lower_to_back"><code class="name flex">
+<span>def <span class="ident">lower_to_back</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sends the given object to be behind all the other objects on the canvas</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object to put behind all other objects on the canvas</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.mouse_is_on_canvas"><code class="name flex">
+<span>def <span class="ident">mouse_is_on_canvas</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns whether or not the mouse is currently on the canvas.</p>
+<h2 id="returns">Returns</h2>
+<p>True if the mouse is currently on the canvas, or False otherwise.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.move"><code class="name flex">
+<span>def <span class="ident">move</span></span>(<span>self, obj, dx, dy)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Moves the specified graphical object by the specified amounts in the x and y directions.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object to move</dd>
+<dt><strong><code>dx</code></strong></dt>
+<dd>the amount by which to change the object's x position</dd>
+<dt><strong><code>dy</code></strong></dt>
+<dd>the amount by which to change the object's y position</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.move_to"><code class="name flex">
+<span>def <span class="ident">move_to</span></span>(<span>self, obj, new_x, new_y)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Same as <code><a title="src.graphics.Canvas.moveto" href="#src.graphics.Canvas.moveto">Canvas.moveto()</a></code>.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.moveto"><code class="name flex">
+<span>def <span class="ident">moveto</span></span>(<span>self, obj, x='', y='')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Moves the specified graphical object to the specified location, which is its bounding box's
+new upper-left corner.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object to move</dd>
+<dt><strong><code>x</code></strong></dt>
+<dd>the new x coordinate of the upper-left corner for the object</dd>
+<dt><strong><code>y</code></strong></dt>
+<dd>the new y coordinate of the upper-left corner for the object</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.raise_in_front_of"><code class="name flex">
+<span>def <span class="ident">raise_in_front_of</span></span>(<span>self, obj, above)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the first object to be directly in front of the second object in Z-ordering on the canvas.
+In other words,
+the first object will now appear in front of the second object and all objects behind the second object,
+but behind all objects that the second object is also behind.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object to put in front of the second object</dd>
+<dt><strong><code>above</code></strong></dt>
+<dd>the object to put the first object directly in front of</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.raise_to_front"><code class="name flex">
+<span>def <span class="ident">raise_to_front</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sends the given object to the very front of all the other objects on the canvas.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object to bring to the front of the objects on the canvas</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_canvas_background_color"><code class="name flex">
+<span>def <span class="ident">set_canvas_background_color</span></span>(<span>self, color)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the background color of the canvas to the specified color string.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>color</code></strong></dt>
+<dd>the color (string) to make the background of the canvas.</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_canvas_size"><code class="name flex">
+<span>def <span class="ident">set_canvas_size</span></span>(<span>self, width, height)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the size of the canvas and its containing window to the specified width and height.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>width</code></strong></dt>
+<dd>the width to set for the canvas and containing window</dd>
+<dt><strong><code>height</code></strong></dt>
+<dd>the height to set for the canvas and containing window</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_canvas_title"><code class="name flex">
+<span>def <span class="ident">set_canvas_title</span></span>(<span>self, title)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the title text displayed in the Canvas's window title bar to be the specified text.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>title</code></strong></dt>
+<dd>the text to display in the title bar</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_color"><code class="name flex">
+<span>def <span class="ident">set_color</span></span>(<span>self, obj, color)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the fill and outline color of the specified graphical object.
+Cannot be used on objects that are
+either not fillable or not outline-able, such as images or text.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object for which to set the color</dd>
+<dt><strong><code>color</code></strong></dt>
+<dd>the color to set the fill and outline colors to be, as a string.
+If this is the empty string,
+the object will be set to be not filled and not outlined.</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_fill_color"><code class="name flex">
+<span>def <span class="ident">set_fill_color</span></span>(<span>self, obj, fill_color)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the fill color of the specified graphical object.
+Cannot be used to change the fill color
+of non-fillable objects such as images.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object for which to set the fill color</dd>
+<dt><strong><code>fill_color</code></strong></dt>
+<dd>the color to set the fill color to be, as a string.
+If this is the empty string,
+the object will be set to be not filled.</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_font"><code class="name flex">
+<span>def <span class="ident">set_font</span></span>(<span>self, obj, font, size)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the font and size for the text displayed by the given text object.
+Cannot be used on any non-text
+graphical object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the text object for which to set the font and size</dd>
+<dt><strong><code>font</code></strong></dt>
+<dd>the name of the font, as a string</dd>
+<dt><strong><code>size</code></strong></dt>
+<dd>the size of the font</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_hidden"><code class="name flex">
+<span>def <span class="ident">set_hidden</span></span>(<span>self, obj, hidden)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the given graphical object to be either hidden or visible on the canvas.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the graphical object to make hidden or visible on the canvas.</dd>
+<dt><strong><code>hidden</code></strong></dt>
+<dd>True if the object should be hidden, False if the object should be visible.</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_on_key_pressed"><code class="name flex">
+<span>def <span class="ident">set_on_key_pressed</span></span>(<span>self, callback)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the specified function to be called whenever a keyboard key is pressed.
+If this function is called
+multiple times, only the last specified function is called when a key is pressed.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>callback</code></strong></dt>
+<dd>a function to call whenever a key is pressed.
+Must take in one parameter, which
+is the text name of the key that was just pressed (e.g. 'a' for the a key, 'b' for the b key, etc).
+E.g. func(key_char).
+If this parameter is None, no function will be called when a key is pressed.</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_on_mouse_pressed"><code class="name flex">
+<span>def <span class="ident">set_on_mouse_pressed</span></span>(<span>self, callback)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the specified function to be called whenever the mouse is pressed.
+If this function is called
+multiple times, only the last specified function is called when the mouse is pressed.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>callback</code></strong></dt>
+<dd>a function to call whenever the mouse is pressed.
+Must take in two parameters, which
+are the x and y coordinates (in that order) of the mouse press that just occurred.
+E.g. func(x, y).
+If
+this parameter is None, no function will be called when the mouse is pressed.</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_on_mouse_released"><code class="name flex">
+<span>def <span class="ident">set_on_mouse_released</span></span>(<span>self, callback)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the specified function to be called whenever the mouse is released.
+If this function is called
+multiple times, only the last specified function is called when the mouse is released.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>callback</code></strong></dt>
+<dd>a function to call whenever the mouse is released.
+Must take in two parameters, which
+are the x and y coordinates (in that order) of the mouse release that just occurred.
+E.g. func(x, y).
+If this parameter is None, no function will be called when the mouse is released.</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_outline_color"><code class="name flex">
+<span>def <span class="ident">set_outline_color</span></span>(<span>self, obj, outline_color)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the outline color of the specified graphical object.
+Cannot be used to change the outline color
+of non-outlined objects such as images or text.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object for which to set the outline color</dd>
+<dt><strong><code>outline_color</code></strong></dt>
+<dd>the color to set the outline color to be, as a string.
+If this is the empty string,
+the object will be set to not have an outline.</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_outline_width"><code class="name flex">
+<span>def <span class="ident">set_outline_width</span></span>(<span>self, obj, width)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the thickness of the outline of the specified graphical object.
+Cannot be used on objects
+that are not outline-able, such as images or text.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object for which to set the outline width</dd>
+<dt><strong><code>width</code></strong></dt>
+<dd>the width to set the outline to be.</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_size"><code class="name flex">
+<span>def <span class="ident">set_size</span></span>(<span>self, obj, width, height)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the width and height of the specified graphical object.
+Cannot be used to change the size of an image.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object for which to set the width and height</dd>
+<dt><strong><code>width</code></strong></dt>
+<dd>the new width for the object</dd>
+<dt><strong><code>height</code></strong></dt>
+<dd>the new height for the object</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.set_text"><code class="name flex">
+<span>def <span class="ident">set_text</span></span>(<span>self, obj, text)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the text displayed by the given text object.
+Cannot be used on any non-text graphical object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the text object for which to set the displayed text</dd>
+<dt><strong><code>text</code></strong></dt>
+<dd>the new text for this graphical object to display</dd>
+</dl></div>
+</dd>
+<dt id="src.graphics.Canvas.wait_for_click"><code class="name flex">
+<span>def <span class="ident">wait_for_click</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Waits until a mouse click occurs, and then returns.</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="src" href="index.html">src</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="src.graphics.Canvas" href="#src.graphics.Canvas">Canvas</a></code></h4>
+<ul class="">
+<li><code><a title="src.graphics.Canvas.COLORS" href="#src.graphics.Canvas.COLORS">COLORS</a></code></li>
+<li><code><a title="src.graphics.Canvas.DEFAULT_HEIGHT" href="#src.graphics.Canvas.DEFAULT_HEIGHT">DEFAULT_HEIGHT</a></code></li>
+<li><code><a title="src.graphics.Canvas.DEFAULT_TITLE" href="#src.graphics.Canvas.DEFAULT_TITLE">DEFAULT_TITLE</a></code></li>
+<li><code><a title="src.graphics.Canvas.DEFAULT_WIDTH" href="#src.graphics.Canvas.DEFAULT_WIDTH">DEFAULT_WIDTH</a></code></li>
+<li><code><a title="src.graphics.Canvas.create_image" href="#src.graphics.Canvas.create_image">create_image</a></code></li>
+<li><code><a title="src.graphics.Canvas.create_image_with_size" href="#src.graphics.Canvas.create_image_with_size">create_image_with_size</a></code></li>
+<li><code><a title="src.graphics.Canvas.create_line" href="#src.graphics.Canvas.create_line">create_line</a></code></li>
+<li><code><a title="src.graphics.Canvas.create_oval" href="#src.graphics.Canvas.create_oval">create_oval</a></code></li>
+<li><code><a title="src.graphics.Canvas.create_rectangle" href="#src.graphics.Canvas.create_rectangle">create_rectangle</a></code></li>
+<li><code><a title="src.graphics.Canvas.create_text" href="#src.graphics.Canvas.create_text">create_text</a></code></li>
+<li><code><a title="src.graphics.Canvas.delete" href="#src.graphics.Canvas.delete">delete</a></code></li>
+<li><code><a title="src.graphics.Canvas.find_closest" href="#src.graphics.Canvas.find_closest">find_closest</a></code></li>
+<li><code><a title="src.graphics.Canvas.find_overlapping" href="#src.graphics.Canvas.find_overlapping">find_overlapping</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_canvas_height" href="#src.graphics.Canvas.get_canvas_height">get_canvas_height</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_canvas_width" href="#src.graphics.Canvas.get_canvas_width">get_canvas_width</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_height" href="#src.graphics.Canvas.get_height">get_height</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_left_x" href="#src.graphics.Canvas.get_left_x">get_left_x</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_mouse_x" href="#src.graphics.Canvas.get_mouse_x">get_mouse_x</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_mouse_y" href="#src.graphics.Canvas.get_mouse_y">get_mouse_y</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_new_mouse_clicks" href="#src.graphics.Canvas.get_new_mouse_clicks">get_new_mouse_clicks</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_random_color" href="#src.graphics.Canvas.get_random_color">get_random_color</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_text" href="#src.graphics.Canvas.get_text">get_text</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_top_y" href="#src.graphics.Canvas.get_top_y">get_top_y</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_width" href="#src.graphics.Canvas.get_width">get_width</a></code></li>
+<li><code><a title="src.graphics.Canvas.lower_behind" href="#src.graphics.Canvas.lower_behind">lower_behind</a></code></li>
+<li><code><a title="src.graphics.Canvas.lower_to_back" href="#src.graphics.Canvas.lower_to_back">lower_to_back</a></code></li>
+<li><code><a title="src.graphics.Canvas.mouse_is_on_canvas" href="#src.graphics.Canvas.mouse_is_on_canvas">mouse_is_on_canvas</a></code></li>
+<li><code><a title="src.graphics.Canvas.move" href="#src.graphics.Canvas.move">move</a></code></li>
+<li><code><a title="src.graphics.Canvas.move_to" href="#src.graphics.Canvas.move_to">move_to</a></code></li>
+<li><code><a title="src.graphics.Canvas.moveto" href="#src.graphics.Canvas.moveto">moveto</a></code></li>
+<li><code><a title="src.graphics.Canvas.raise_in_front_of" href="#src.graphics.Canvas.raise_in_front_of">raise_in_front_of</a></code></li>
+<li><code><a title="src.graphics.Canvas.raise_to_front" href="#src.graphics.Canvas.raise_to_front">raise_to_front</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_canvas_background_color" href="#src.graphics.Canvas.set_canvas_background_color">set_canvas_background_color</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_canvas_size" href="#src.graphics.Canvas.set_canvas_size">set_canvas_size</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_canvas_title" href="#src.graphics.Canvas.set_canvas_title">set_canvas_title</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_color" href="#src.graphics.Canvas.set_color">set_color</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_fill_color" href="#src.graphics.Canvas.set_fill_color">set_fill_color</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_font" href="#src.graphics.Canvas.set_font">set_font</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_hidden" href="#src.graphics.Canvas.set_hidden">set_hidden</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_on_key_pressed" href="#src.graphics.Canvas.set_on_key_pressed">set_on_key_pressed</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_on_mouse_pressed" href="#src.graphics.Canvas.set_on_mouse_pressed">set_on_mouse_pressed</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_on_mouse_released" href="#src.graphics.Canvas.set_on_mouse_released">set_on_mouse_released</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_outline_color" href="#src.graphics.Canvas.set_outline_color">set_outline_color</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_outline_width" href="#src.graphics.Canvas.set_outline_width">set_outline_width</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_size" href="#src.graphics.Canvas.set_size">set_size</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_text" href="#src.graphics.Canvas.set_text">set_text</a></code></li>
+<li><code><a title="src.graphics.Canvas.wait_for_click" href="#src.graphics.Canvas.wait_for_click">wait_for_click</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.8.4</a>.</p>
+</footer>
+</body>
+</html>
