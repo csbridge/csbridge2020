@@ -35,7 +35,7 @@ def main():
 0, 0, ve 0 sayılarının maksimumu: 0
 ```
 
-While there is a built-in `max` function in Python that we would normally use for this, for this problem you should not use it.  Instead, we want you to get practice implementing it with other things, like `if` and `elif` statements.
+While there is a built-in `max` function in Python that we would normally use for this, for this problem you should not use it.  Instead, we want you to get practice implementing it with other things, like `if`, `elif` and `else` statements.
 
 ## 2. Dog Years
 

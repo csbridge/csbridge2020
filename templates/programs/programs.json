@@ -301,7 +301,8 @@
           "topic_en": "Params and Return",
           "topic_tr": "Param ve Return",
           "type": "quickstart",
-          "url": "projects/funkyFunctions.html"
+          "url": "projects/funkyFunctions.html",
+          "teachURL": "teach/notes/funkyFunctions.html"
         },
         {
           "imageURL": "img/icons/console.jpg",

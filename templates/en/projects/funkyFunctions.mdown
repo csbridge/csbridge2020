@@ -31,7 +31,7 @@ The max of 3, 2, and 1 is: 3
 The max of 0, 0, and 0 is: 0
 ```
 
-While there is a built-in `max` function in Python that we would normally use for this, for this problem you should not use it.  Instead, we want you to get practice implementing it with other things, like `if` and `elif` statements.
+While there is a built-in `max` function in Python that we would normally use for this, for this problem you should not use it.  Instead, we want you to get practice implementing it with other things, like `if`, `elif` and `else` statements.
 
 
 ## 2. Dog Years
