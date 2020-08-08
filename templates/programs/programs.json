@@ -311,7 +311,8 @@
           "topic_en": "Params and Return",
           "topic_tr": "Param ve Return",
           "type": "section",
-          "url": "projects/fizzbuzz-functions.html" 
+          "url": "projects/fizzbuzz-functions.html",
+          "teachURL": "teach/notes/fizzbuzz-functions.html"
         },
         {
           "imageURL": "img/icons/target.png",
@@ -320,7 +321,8 @@
           "topic_en": "Parameters",
           "topic_tr": "Parametreler",
           "type": "section",
-          "url": "projects/target.html" 
+          "url": "projects/target.html",
+          "teachURL": "teach/notes/target.html"
         },
         {
           "imageURL": "img/icons/stringArt.png",
@@ -329,7 +331,8 @@
           "topic_en": "For Loops",
           "topic_tr": "For Döngüsü",
           "type": "project",
-          "url": "projects/stringArt.html" 
+          "url": "projects/stringArt.html",
+          "teachURL": "teach/notes/stringArt.html"
         }
       ]
     }

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
-<title>CS Bridge  | Target (SL)</title>
+<title>CS Bridge  | Fizz Buzz (SL)</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -633,7 +633,7 @@ visible-after, to ensure they display when you want them to.
 	<!-- Header -->
 	<div id="pageHeader">
 		<h1>
-            SL Notes: Target
+            SL Notes: Fizz Buzz
 		</h1>
     </div>
 
@@ -641,14 +641,21 @@ visible-after, to ensure they display when you want them to.
 
 	<div class="row">
 		<div class="col-xs-12">
-            <p>This is the second section problem for the evening.  See the first section problem for an overview of this section's topics.</p>
-<p>This problem gives students practice writing a program with functions and parameters, and also graphics.  You should emphasize making functions to reuse code and design "top-down", meaning you design your program by breaking it into smaller pieces until you can implement each piece with a little code.</p>
-<p>Teaching tips:</p>
+            <p>This is the first section problem for the evening.  Students are learning about graphics, parameters and return:</p>
 <ul>
-<li>Learning goal: functions, parameters and decomposition</li>
-<li>Milestone: draw one of the pieces - a single centered circle</li>
-<li>The key idea of this solution is making one function that can draw a circle, and then reusing this function.  Encourage students to consider what is in common and different across all operations in this problem - we are drawing three circles with the same center point and fill (true), but with different radii and colors.  Therefore, the things that differ each time should be the parameters.</li>
-</ul>	
+<li>How to write a graphics program with shapes and the canvas</li>
+<li>How to write a function that takes in parameters</li>
+<li>How to write a function that returns something</li>
+<li>How to call a function that takes parameters or returns something</li>
+</ul>
+<p>Some students struggle with the difference between returning and printing as well.</p>
+<p>Feel free to start with a review if you think it would be helpful for your students.</p>
+<h3 id="step-by-step-teaching-fizz-buzz">Step-by-Step, Teaching Fizz Buzz</h3>
+<p><strong>Note</strong>: there is a fizzbuzz bonus problem for variables, but it is slightly different.  That one does not use parameters or return or user input.</p>
+<ol>
+<li>There are many ways to teach this problem, so feel free to use any approach that seems best for your students.  One idea is to start by implementing <code>main()</code> <em>first</em>, and <code>fizzbuzz(n)</code> second.  This lets you motivate how the function will be used, which can help orient students when it's time to implement the function - they can look back at its use to remember what it must take in, what it must return, etc.  You can also feel free to go with the reverse approach - but it may be helpful to quickly outline what a call to the function might look like so that students understand its use.</li>
+<li>When implementing <code>fizzbuzz</code>, you might consider first approaching how to use the parameter input, and just implement the function to print out the required output.  After you are done with this, then you can go back and figure out how to add the variable that you ultimately return.</li>
+</ol>	
 		</div>
 	</div>
 
