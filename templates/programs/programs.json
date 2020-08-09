@@ -378,6 +378,16 @@
           "type": "quickstart",
           "url": "projects/mysterySquare.html",
           "teachURL": "teach/notes/mysterySquare.html"
+        },
+        {
+          "imageURL": "img/icons/bouncing.png",
+          "title_en": "Bouncing Ball",
+          "title_tr": "Zıp Zıp Top",
+          "topic_en": "Animation",
+          "topic_tr": "Animasyon",
+          "type": "section",
+          "url": "projects/bouncingBall.html",
+          "teachURL": "teach/notes/bouncingBall.html"
         }
       ]
     }

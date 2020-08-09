@@ -15,7 +15,7 @@ Aşağıdaki şekil alt duvardan sekerek hareket eden bir topu gösteriyor.
 
 ## Aşama 1: Bir Top Yarat
 
-Top herhangi bir boyutta olabilir.
+Top herhangi bir boyutta olabilir.  Make it start at a random onscreen location.
 
 ## Aşama 2: Topu Hareket Ettir
 
