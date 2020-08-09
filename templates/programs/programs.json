@@ -401,5 +401,25 @@
         }
       ]
     }
+  },
+  {
+    "title_en": "Mouse and Lists",
+    "title_tr": "Mouse and Lists",
+    "visible_after": "2020081200",
+    "morning": {
+      "projectURL": "starter/Day7AM.zip",
+      "projects": [
+        {
+          "imageURL": "img/icons/mouseLocation.png",
+          "title_en": "Mouse Location",
+          "title_tr": "Mouse Location",
+          "topic_en": "Mouse",
+          "topic_tr": "Mouse",
+          "type": "quickstart",
+          "url": "projects/mouseLocation.html",
+          "teachURL": "teach/notes/mouseLocation.html"
+        }
+      ]
+    }
   }
 ]

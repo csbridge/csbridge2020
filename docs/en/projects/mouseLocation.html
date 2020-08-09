@@ -448,6 +448,26 @@ visible-after, to ensure they display when you want them to.
 							</li>
 			</ul>
 		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">7: Mouse and Lists</a>
+
+			<!-- For each of morning/evening, add a "side popup" -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081200"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081200"
+							>
+								<a href="../../en/projects/mouseLocation.html">Mouse Location</a>
+							</li>
+			</ul>
+		</li>
 </ul>					</li>
 
 					<!-- Examples dropdown -->
@@ -699,46 +719,44 @@ visible-after, to ensure they display when you want them to.
 	}
 </script>
 		<div class="container">
-			
-  <!-- Main Content -->
-  <div class="container">
+			<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
 
-    <!-- Header -->
-    <div id="pageHeader">
-      <h1>
-        Mouse Location
-      </h1>
-      <p>
-        Problem by Chris Piech
-      </p>
+title - problem title
+credit - problem credit (optional)
+solution - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
 
-      <p>
-        Handouts:
-        <a href ="../../en/resources/graphics.html">Graphics Reference</a>, <a href ="../../en/resources/events.html">Events</a>
-      <br/>
-        Worked Examples: 
-        <a href="../../en/projects/stampTool.html">Stamp Tool</a>
-      <br/>
-        Day5: <code>MouseLocation.java</code>
-      </p>
 
-    </div>
-    <hr/>
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		Mouse Location
+	</h1>
 
-    <div class="row">
-      <div class="col-md-12">
-        <p>
-          Write a program with a label in the top-left corner of the screen that displays the current x and y coordinates of the mouse.  The label should update as the mouse moves around the screen.</p>
+		<p>
+			Credit: Chris Piech
+		</p>
+</div>
+<hr/>
 
-        <p>
-          <center>
-            <img style="width:500px" src="../../img/icons/mouseLocation-screenshot.png"> 
-          </center>
-        </p>
-        
-      </div>
-    </div>
-    
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>Worked Examples: <a href="../../en/projects/stampTool/">Stamp Tool</a></p>
+<p>File: <code>mouse_location.py</code></p>
+<p>Write a program with a label in the center of the screen that displays the current x and y coordinates of the mouse.  The label should update as the mouse moves around the screen.</p>
+<p><center>
+  <img style="width:500px; border: 1px solid black" src="../../img/projects/mouseLocation/screenshot.png"> 
+</center></p>
+<p>If you need to change the contents of an existing text label, check out <code>canvas.set_text()</code>.</p>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
 
 					
 
