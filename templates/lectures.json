@@ -39,6 +39,13 @@
 		"slidesURL": "slides/Lecture6.pdf",
 		"codeURL": "starter/lectures/Lecture6.zip",
 		"visible_after": "2020080700"
+	},
+	{
+		"title_en": "Graphics",
+		"title_tr": "Grafik",
+		"slidesURL": "slides/Lecture7_Graphics.pdf",
+		"codeURL": "starter/lectures/Lecture7.zip",
+		"visible_after": "2020080700"
 	}
 
 ]
