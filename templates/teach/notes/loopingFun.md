@@ -57,9 +57,4 @@ Here, we notice that the number we are squaring is `i` + 1.  Therefore, we want 
 
 To print all on the same line, we must use `end=''`, as mentioned in the problem.  We also want to print out commas between each number.  This is a fencepost problem!  We want to print 9 numbers, but 8 commas.  Therefore, we can print out 8 numbers followed by commas, and then the last number separately, or the first number separately, followed by 8 commas and numbers.
 
-## Looping Fun 4
-This problem gives practice with nested loops.  To start, it might be helpful for the student to print out what `i` and `j` are in the provided hint code within the inner loop.  They might notice a pattern!  Nested loops are very tricky, so students might have the most trouble understanding how `i` and `j` change.  Understanding this is the first step, ignoring the requirement to print some numbers on the same line.
-
-Then, we turn to printing each row on the same line.  They should think about - where do we want to go to the next line?  The comma requirement is similar to the previous problem and is a fencepost issue.
-
 ---

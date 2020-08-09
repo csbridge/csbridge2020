@@ -295,7 +295,7 @@
       "visible_after": "2020081009",
       "projects": [
         {
-          "imageURL": "img/icons/console.jpg",
+          "imageURL": "img/projects/funkyFunctions/logo.png",
           "title_en": "Funky Functions",
           "title_tr": "Fırlama Fonksiyonlar",
           "topic_en": "Params and Return",
@@ -333,6 +333,26 @@
           "type": "project",
           "url": "projects/stringArt.html",
           "teachURL": "teach/notes/stringArt.html"
+        }
+      ]
+    }
+  },
+  {
+    "title_en": "Loops and Animation",
+    "title_tr": "Loops and Animation",
+    "visible_after": "2020081100",
+    "morning": {
+      "projectURL": "starter/Day6AM.zip",
+      "projects": [
+        {
+          "imageURL": "img/projects/printIndices/logo.png",
+          "title_en": "Print Indices",
+          "title_tr": "Print Indices",
+          "topic_en": "For Loops",
+          "topic_tr": "For Döngüsü",
+          "type": "quickstart",
+          "url": "projects/printIndices.html",
+          "teachURL": "teach/notes/printIndices.html"
         }
       ]
     }
