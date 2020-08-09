@@ -21,7 +21,7 @@ SIZE = 100
 GAP = 10
 ```
 
-Bu satırlar <code>main()</code> fonksiyonunun dışında yazılmışlar ve değişkenler (variables) tamamen büyük harflerle isimlendirilmiş. Bu satırlar sabitleri, yani değerleri hiç değişmeyen değişkenleri, tanımlar. Bu değişkenler tüm fonksiyonların dışında tanımlanmış olduğu için onların değerini programınızın herhangi bir noktasında okuyabilirsiniz. Sabit değerleri direkt olarak kullanmak yerine (10 ve 100 sayılarını programınızda doğrudan kullanmak) sabit değişkenler yaratmak programınızın okunurluğunu artırır ve değişiklik yapmanızı kolaylaştırır.
+Bu satırlar `main()` fonksiyonunun dışında yazılmışlar ve değişkenler (variables) tamamen büyük harflerle isimlendirilmiş. Bu satırlar sabitleri, yani değerleri hiç değişmeyen değişkenleri, tanımlar. Bu değişkenler tüm fonksiyonların dışında tanımlanmış olduğu için onların değerini programınızın herhangi bir noktasında okuyabilirsiniz. Sabit değerleri direkt olarak kullanmak yerine (10 ve 100 sayılarını programınızda doğrudan kullanmak) sabit değişkenler yaratmak programınızın okunurluğunu artırır ve değişiklik yapmanızı kolaylaştırır.
 
 ## Çift for döngüsü
 
@@ -45,3 +45,5 @@ Vaktiniz olursa, bu optik illüzyonu yaratmayı deneyin! Tüm karelerin aynı bo
 </center>
 
 Eğer takılırsanız, her bir satırı ilk siyah karesi x = 0'da başlayacak şekilde çizmeyi deneyin. Ardından her satırın başındaki fazlalığın örüntüsünü nasıl oluşturabileceğinizi bulmaya çalışın.
+
+The top row is not offset, the row below it is offset 25% of the size of a square, the row below that is offset 50% the size of a square, the row below that is offset 25% of the size of a square, and this 4-row sequence repeats for the remaining rows.

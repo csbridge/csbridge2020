@@ -353,6 +353,16 @@
           "type": "quickstart",
           "url": "projects/printIndices.html",
           "teachURL": "teach/notes/printIndices.html"
+        },
+        {
+          "imageURL": "img/icons/illusion.png",
+          "title_en": "Optical Illusion",
+          "title_tr": "Optik İllüzyon",
+          "topic_en": "For Loops",
+          "topic_tr": "For Döngüsü",
+          "type": "project",
+          "url": "projects/illusion.html",
+          "teachURL": "teach/notes/illusion.html"
         }
       ]
     }

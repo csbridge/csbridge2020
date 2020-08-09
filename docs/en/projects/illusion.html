@@ -420,6 +420,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../en/projects/printIndices.html">Print Indices</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../../en/projects/illusion.html">Optical Illusion</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -702,17 +707,17 @@ filePath - the total path to the markdown file being rendered in this template
 	<div class="col-xs-12">
 		<p>Handouts: <a href="../../en/resources/graphics.html">Graphics Reference</a><br/>
 File: <code>illusion1.py</code></p>
-<p>Sometimes repeating patterns can cause our eyes to see things that aren't there. Look at the picture below. Can you see little gray squares in the intersections of the white lines? Write a GraphicsProgram that create the optical illusion:</p>
+<p>Sometimes repeating patterns can cause our eyes to see things that aren't there. Look at the picture below. Can you see little gray squares in the intersections of the white lines? Write a graphics program that creates the optical illusion:</p>
 <p><center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/illusion/illusion1.png">
 </center></p>
-<h1 id="constants">Constants</h1>
+<h2 id="constants">Constants</h2>
 <p>You may notice that the starter code for this project has the lines:</p>
 <pre><code>SIZE = 100
 GAP = 10
 </code></pre>
 
-<p>which are written outside the main() function. These lines define constants: variables whose values never change. Since they are defined outside all functions, you can read their values at any point in the program. Though you could write this optical illusion using the numbers 100 and 10 directly wherever you need them, using constants makes your program much easier to read.</p>
+<p>which are written outside the <code>main()</code> function. These lines define constants: variables whose values never change. Since they are defined outside all functions, you can read their values at any point in the program. Though you could write this optical illusion using the numbers 100 and 10 directly wherever you need them, using constants makes your program much easier to read.</p>
 <h2 id="double-for-loop">Double for loop</h2>
 <p>This problem requires using a for-loop inside a for-loop. Remember to use a different iterator variable for the inner loop. For example, if your outer loop is of the form:</p>
 <pre><code>for i in range(100):
@@ -720,13 +725,13 @@ GAP = 10
 </code></pre>
 
 <p>The inner loop (the loop in the body) must iterate through a variable other than <code>i</code>.</p>
-<h2 id="extension">Extension</h2>
+<h1 id="extension">Extension</h1>
 <p>File: <code>illusion2.py</code></p>
 <p>If you have time, try creating this optical illusion! Note that all the squares are the same size and all lines are horizontal! Think about how to decompose your solution.</p>
 <p><center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/illusion/illusion2.png">
 </center></p>
-<p>If you are stuck, try drawing each row with the first black square always starting at x = 0. Then try to figure out how to create the offset pattern.</p>
+<p>If you are stuck, try drawing each row with the first black square always starting at x = 0. Then try to figure out how to create the offset pattern.  The top row is not offset, the row below it is offset 25% of the size of a square, the row below that is offset 50% the size of a square, the row below that is offset 25% of the size of a square, and this 4-row sequence repeats for the remaining rows.</p>
 	</div>
 </div>
 
