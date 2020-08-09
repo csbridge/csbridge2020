@@ -388,6 +388,16 @@
           "type": "section",
           "url": "projects/bouncingBall.html",
           "teachURL": "teach/notes/bouncingBall.html"
+        },
+        {
+          "imageURL": "img/icons/sunset.png",
+          "title_en": "Short Film",
+          "title_tr": "Kısa Film",
+          "topic_en": "Animation",
+          "topic_tr": "Animasyon",
+          "type": "project",
+          "url": "projects/shortFilm.html",
+          "teachURL": "teach/notes/shortFilm.html"
         }
       ]
     }

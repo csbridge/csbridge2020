@@ -441,6 +441,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../en/projects/bouncingBall.html">Bouncing Ball</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../../en/projects/shortFilm.html">Short Film</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -713,7 +718,7 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Written by Chris Piech and Keith Schwarz.
+			Credit: Written by Chris Piech and Keith Schwarz
 		</p>
 </div>
 <hr/>
@@ -722,11 +727,11 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<p>Handouts: <a href="../../en/resources/graphics.html">Graphics Reference</a><br/>
-Worked Example: <a href="../../en/projects/halfgreen.html">Half Green</a>,
+Worked Example: <a href="../../en/projects/halfgreen/">Half Green</a>,
 <a href="../../en/projects/target.html">Target</a><br/>
 File: <code>short_film.py</code></p>
-<p>Did you know that animated movies like <i>Toy Story</i>, <i>Up</i>, and <i>Frozen</i> are made using computer programs? In this assignment you are going to use a program to create a short film.</p>
-<h2 id="display-message-method">Display Message Method</h2>
+<p>Did you know that animated movies like <em>Toy Story</em>, <em>Up</em>, and <em>Frozen</em> are made using computer programs? In this assignment you are going to use a program to create a short film.</p>
+<h2 id="display-message">Display Message</h2>
 <p>Every movie has a beginning and an end. Sometimes it will start "Once Upon a Time...", sometimes it will start with a title, sometimes it will start with something sillier. At the end of the movie it sometimes says "The end."</p>
 <p>Add a function to your program that will draw a message on the screen (on a black background) and leave the message for two seconds.</p>
 <pre><code>def display_message(canvas, message):
@@ -741,7 +746,7 @@ File: <code>short_film.py</code></p>
 <pre><code>canvas.set_font(label, &quot;Papyrus&quot;, 40)
 </code></pre>
 
-<p>After two seconds you should remove the rectangle that is the background and the text that is the message. To do so you can use the <code>delete</code> function (which takes an object that was on the canvas and removes it).</p>
+<p>Make sure to color the text white!  After two seconds you should remove the rectangle that is the background and the text that is the message. To do so you can use the <code>delete</code> function (which takes an object that was on the canvas and removes it).</p>
 <pre><code>canvas.delete(your_object)
 </code></pre>
 
@@ -751,20 +756,20 @@ File: <code>short_film.py</code></p>
 <p><center>
   <img style="width:100%" src="../../img/projects/shortfilm/animation.png">
 </center></p>
-<h2 id="get_sun_color-function"><code>get_sun_color</code> Function</h2>
+<h2 id="get_sun_color-function">get_sun_color Function</h2>
 <p>Write a function that takes some parameter, and returns the color of the sun. You should specify the parameter of this function: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.</p>
-<pre><code>def getSunColor(...):
+<pre><code>def get_sun_color(...):
   ...
   return color
 </code></pre>
 
 <p>Have the function return "yellow", "orange", or "red" based on how many iterations have passed.</p>
-<h2 id="finishing-up">Finishing up</h2>
+<h2 id="finishing-up">Finishing Up</h2>
 <p>After your movie ends, display a finishing message using your <code>display_message()</code> function defined earlier. The end message should look like the screen below.</p>
 <p><center>
   <img style="width:500px" src="../../img/projects/shortfilm/theEnd.png">
 </center></p>
-<h1 id="make-it-better">Make It Better</h1>
+<h2 id="make-it-better">Make It Better</h2>
 <p>Do anything you want to make your story more captivating than just a setting sun. Can you tell a tale of love or action? Don't forget to use functions to make your life easier.</p>
 <p><center>
   <img style="width:500px" src="../../img/projects/shortfilm/poster.jpg">

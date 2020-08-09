@@ -441,6 +441,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../../tr/projects/shortFilm.html">Kısa Film</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -731,7 +736,7 @@ filePath - the total path to the markdown file being rendered in this template
 <a href="../../tr/projects/target.html">Hedef Tahtası</a><br/>
 Dosya: <code>short_film.py</code></p>
 <p><i>Oyuncak Hikayesi</i>, <i>Yukarı Bak (Up)</i> ve <i>Frozen</i> gibi animasyon filmlerinin bilgisayar programları kullanılarak yapıldığını biliyor muydunuz? Bu ödevde kısa bir film oluşturmak için bir program kullanacaksınız.</p>
-<h2 id="mesaj-goruntuleme-fonksiyonu">Mesaj Görüntüleme Fonksiyonu</h2>
+<h2 id="mesaj-goruntuleme">Mesaj Görüntüleme</h2>
 <p>Her filmin bir başlangıcı ve bir sonu vardır. Bazen "Bir Zamanlar ..." diye, bazen bir başlık ile, bazense daha komik bir şeyle başlarlar. Filmin sonunda ise bazen "Son" yazar.</p>
 <p>Programınıza ekranda bir mesaj çizecek bir fonksiyon ekleyin (siyah arka plan üzerine) ve mesajı iki saniye ekranda görüntüleyin.</p>
 <pre><code>def display_message(canvas, message):
@@ -746,7 +751,7 @@ Dosya: <code>short_film.py</code></p>
 <pre><code>canvas.set_font(label, &quot;Papyrus&quot;, 40)
 </code></pre>
 
-<p>İki saniye sonra arka plan olan dikdörtgeni ve ileti olan metni kaldırmalısınız. Bunu yapmak için <code>delete</code> fonksiyonunu kullanabilirsiniz (Bu fonksiyon tuval üzerinde bulunan bir nesneyi parametre olarak alır ve ekrandan kaldırır).</p>
+<p>Make sure to color the text white!  İki saniye sonra arka plan olan dikdörtgeni ve ileti olan metni kaldırmalısınız. Bunu yapmak için <code>delete</code> fonksiyonunu kullanabilirsiniz (Bu fonksiyon tuval üzerinde bulunan bir nesneyi parametre olarak alır ve ekrandan kaldırır).</p>
 <pre><code>canvas.delete(your_object)
 </code></pre>
 
@@ -756,10 +761,10 @@ Dosya: <code>short_film.py</code></p>
 <p><center>
   <img style="width:100%" src="../../img/projects/shortfilm/animation.png">
 </center></p>
-<h2 id="get_sun_color-fonksiyonu"><code>get_sun_color</code> Fonksiyonu</h2>
+<h2 id="get_sun_color-fonksiyonu">get_sun_color Fonksiyonu</h2>
 <p>Write a function that takes some parameter, and returns the color of the sun. You should specify the parameter of this function: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.</p>
 <p>Bazı parametreleri alan ve güneşin rengini döndüren bir fonksiyon yazın. Bu fonksiyonun parametresini belirtmelisiniz: örneğin, zaman (filmin başlangıcından bu yana kare sayısı olarak) veya güneşin y konumu veya Güneş'in doğru rengini elde etmek için yararlı olacağını düşündüğünüz herhangi bir şey olabilir.</p>
-<pre><code>def getSunColor(...):
+<pre><code>def get_sun_color(...):
   ...
   return color
 </code></pre>
@@ -770,7 +775,7 @@ Dosya: <code>short_film.py</code></p>
 <p><center>
   <img style="width:500px" src="../../img/projects/shortfilm/theEnd.png">
 </center></p>
-<h1 id="daha-da-iyilestir">Daha da İyileştir</h1>
+<h2 id="daha-da-iyilestir">Daha da İyileştir</h2>
 <p>Hikayenizi batan bir güneşten daha büyüleyici hale getirmek için istediğiniz her şeyi yapın. Bir aşk veya aksiyon hikayesi anlatabilir misiniz? Hayatınızı kolaylaştırmak için fonksiyonları kullanmayı unutmayın.</p>
 <p><center>
   <img style="width:500px" src="../../img/projects/shortfilm/poster.jpg">
