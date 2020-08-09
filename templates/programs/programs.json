@@ -365,6 +365,21 @@
           "teachURL": "teach/notes/illusion.html"
         }
       ]
+    },
+    "evening": {
+      "projectURL": "starter/Day6PM.zip",
+      "projects": [
+        {
+          "imageURL": "img/icons/mysterySquare.png",
+          "title_en": "Mystery Square",
+          "title_tr": "Gizemli Kare",
+          "topic_en": "Animation",
+          "topic_tr": "Animasyon",
+          "type": "quickstart",
+          "url": "projects/mysterySquare.html",
+          "teachURL": "teach/notes/mysterySquare.html"
+        }
+      ]
     }
   }
 ]
