@@ -48,7 +48,7 @@
 			{
 				"title_en": "Looping Fun",
 				"title_tr": "Eğlenceli Döngüler",
-				"imageURL": "img/icons/loopingfun.png",
+				"imageURL": "img/projects/loopingFun/loopingfun.png",
 				"url": "projects/loopingFun.html",
 				"teachURL": "teach/notes/loopingFun.html",
 				"difficulty": 1

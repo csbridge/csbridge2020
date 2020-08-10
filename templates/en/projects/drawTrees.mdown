@@ -25,5 +25,5 @@ def main():
 Each tree should have a trunk with a width of 20 pixels (`TRUNK_WIDTH`) and a height of 80 pixels (`TRUNK_HEIGHT`). The leaves should have a radius of 30 pixels (`LEAVES_RADIUS`). Your output should look like this:
 
 <center>
-<img style="width:500px; border: 1px solid black" src="{{pathToRoot}}img/projects/madmethods/demo.png">	
+<img style="width:500px; border: 1px solid black" src="{{pathToRoot}}img/projects/drawTrees/demo.png">	
 </center>
