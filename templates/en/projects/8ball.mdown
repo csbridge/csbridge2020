@@ -7,7 +7,7 @@ File: `8ball.py`
 The idea behind an 8-Ball is you ask the eight ball a yes or no question, and it tells you the answer.  Except that the answer it chooses is randomly selected from a set of prefabricated responses.
 
 <center>
-	<img style="width:300px" src="{{pathToRoot}}img/projects/8Ball/real.gif">	
+	<img style="width:300px" src="{{pathToRoot}}img/projects/8Ball/8ball.png">	
 	<p style="text-align:center"><i>A real life 8-Ball</i></p>
 </center>
 
