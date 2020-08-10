@@ -40,7 +40,7 @@
 			{
 				"title_en": "Console Bonus",
 				"title_tr": "Bonus Konsol Programları",
-				"imageURL": "img/icons/console.jpg",
+				"imageURL": "img/projects/console/console.jpg",
 				"url": "projects/consoleBonus.html",
 				"teachURL": "teach/notes/consoleBonus.html",
 				"difficulty": 1
@@ -112,7 +112,7 @@
 			{
 				"title_en": "More Functions",
 				"title_tr": "More Functions",
-				"imageURL": "img/icons/console.jpg",
+				"imageURL": "img/projects/console/console.jpg",
 				"url": "projects/moreFunctions.html",
 				"teachURL": "teach/notes/moreFunctions.html",
 				"difficulty": 1
