@@ -5,9 +5,11 @@ translation: Ceren Kocaoğullar
 
 Example: [Division]({{pathToRoot}}tr/projects/division/)
 
-**Note** did you already complete the [FizzBuzz bonus problem?]({{pathToRoot}}tr/bonus-index.html)  If you did, awesome!  If not, no worries.  This version of FizzBuzz is different from the bonus problem - it is the same idea, but uses functions instead.  Both will give you practice with different core programming concepts!
+**Not** [FizzBuzz bonus problemini zaten tamamladınız mı?]({{pathToRoot}}tr/bonus-index.html) Yaptıysanız harika! Değilse endişelenme. FizzBuzz'ın bu sürümü bonus probleminden farklıdır - aynı fikirdir, ancak fonksiyonları kullanır. Her ikisi de size farklı temel programlama konseptleri ile pratik sağlayacaktır!
 
 ---
+
+CızBız (Fizzbuzz) klasik bir kodlama problemidir
 
 CızBız oyununda oyuncular sırayla birden yukarıya doğru sayarlar. Bir oyuncunun sırası 3 ile bölünebilen bir sayıya inerse, sayı yerine “Cız” ve 5 ile bölünebilen bir sayıya inerse sayı yerine “Bız” demelidir. Sayı hem 3 hem de 5'in katlarıysa, sayı yerine "CızBız" demelidir. Bu belki bir seyirci sporu değil. Ancak, kontrol akışı ve parametre kullanımı için ilginç bir problem.
 

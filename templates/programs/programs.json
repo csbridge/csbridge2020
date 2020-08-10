@@ -263,7 +263,7 @@
   },
   {
     "title_en": "Graphics and Functions",
-    "title_tr": "Grafikler ve Functions",
+    "title_tr": "Grafikler ve Fonksiyonlar",
     "visible_after": "2020081000",
     "morning": {
       "projectURL": "starter/Day5AM.zip",
@@ -283,7 +283,7 @@
           "title_en": "Random Circles",
           "title_tr": "Tesadüfi Daireler",
           "topic_en": "Graphics and Randomness",
-          "topic_tr": "Graphics and Randomness",
+          "topic_tr": "Grafikler ve Rastgelelik",
           "type": "project",
           "url": "projects/randomCircles.html",
           "teachURL": "teach/notes/randomCircles.html"

@@ -354,7 +354,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020081000"
 		>
-			<a tabindex="-1" href="#">5: Grafikler ve Functions</a>
+			<a tabindex="-1" href="#">5: Grafikler ve Fonksiyonlar</a>
 
 			<!-- For each of morning/evening, add a "side popup" -->
 			<ul class="dropdown-menu">
@@ -590,7 +590,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020081000"
 		>
-			<a tabindex="-1" href="#">5: Grafikler ve Functions</a>
+			<a tabindex="-1" href="#">5: Grafikler ve Fonksiyonlar</a>
 
 			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
 			<ul class="dropdown-menu">
@@ -799,7 +799,7 @@ filePath - the total path to the markdown file being rendered in this template
 		</p>
 
 		<p>
-			Çevirenler: Serhat Arslan, Ceren Kocaoğullar
+			Çevirenler: Ceren Kocaoğullar, Serhat Arslan
 		</p>
 </div>
 <hr/>
@@ -830,32 +830,32 @@ filePath - the total path to the markdown file being rendered in this template
 0, 0, ve 0 sayılarının maksimumu: 0
 </code></pre>
 
-<p>While there is a built-in <code>max</code> function in Python that we would normally use for this, for this problem you should not use it.  Instead, we want you to get practice implementing it with other things, like <code>if</code>, <code>elif</code> and <code>else</code> statements.</p>
+<p>Python'da normalde bunun için kullanacağımız yerleşik bir <code>max</code> fonksiyonu olmasına rağmen, bu problem için onu kullanmamalısınız. Bunun yerine, <code>if</code>, <code>elif</code> ve <code>else</code> ifadeleri gibi başka şeylerle uygulama pratiği yapmanızı istiyoruz.</p>
 <h2 id="2-dog-years">2. Dog Years</h2>
 <p>Dosya: <code>dog_years.py</code></p>
-<p>Everyone knows that our furry friends age at a different rate to humans. Write a program that asks the user for a human age (expressed as a whole number) and prints the equivalent dog age using the fact that there are seven dog years per human year. Consider defining a constant <code>DOG_YEARS_PER_HUMAN_YEAR</code>. You can assume the user types in an integer age, but not necessarily that the integer is positive. If it isn't, print an error message.  If the user enters 0, the program should stop.</p>
-<p>Your program should define a function called <code>compute_dog_years</code> which accepts as a parameter an integer called <code>human_years</code>. The function should return the converted human age. You should then edit the <code>main</code> function to call this function.</p>
+<p>Tüylü dostlarımızın insanlardan farklı bir oranda yaşlandığını herkes bilir. Kullanıcıdan bir insan yaşını (tam sayı olarak ifade edilir) soran ve insan yılı başına yedi köpek yılı olduğu gerçeğini kullanarak eşdeğer köpek yaşını yazdıran bir program yazın. Bir <code>DOG_YEARS_PER_HUMAN_YEAR</code> sabiti tanımlayın. Kullanıcıcının tamsayı girdiğini varsayabilirsiniz, ancak tam sayının pozitif olması şart değildir. Değilse, bir hata mesajı yazdırın. Kullanıcı 0 girerse, program durmalıdır.</p>
+<p>Programınız, <code>human_years</code> olarak adlandırılan bir tamsayıyı parametre olarak kabul eden <code>compute_dog_years</code> adlı bir fonksiyon tanımlamalıdır. Fonksiyon, dönüştürülmüş insan yaşını döndürmelidir. Daha sonra bu fonksiyonu çağırmak için <code>main</code> fonksiyonunu düzenlemelisiniz.</p>
 <pre><code>def compute_dog_years(human_years):
-    ... your code here ...
+    ... kodunuzu buraya yazın ...
 </code></pre>
 
-<p>The main function is already written for you, but it is missing the code that calls your <code>compute_dog_years</code> function and prints out the correct statement.</p>
+<p>Main fonksiyonu zaten sizin için yazılmıştır, ancak <code>compute_dog_years</code> fonksiyonunuzu çağıran ve doğru ifadeyi yazdıran kod eksik.</p>
 <pre><code>def main():
-    user_input = int(input(&quot;Enter an age in human years: &quot;))
+    user_input = int(input(&quot;İnsan yılıyla bir yaş girin: &quot;))
     while user_input != 0:
         if user_input &lt; 0:
-            print(&quot;Sorry, please enter a positive number or 0 to exit&quot;)
+            print(&quot;Üzgünüz, lütfen pozitif bir sayı veya çıkmak için 0 girin:&quot;)
         else:
-            ... your code here ...
-        user_input = int(input(&quot;Enter an age in human years: &quot;))
+            ... kodunuzu buraya yazın ...
+        user_input = int(input(&quot;İnsan yılıyla bir yaş girin: &quot;))
 </code></pre>
 
-<p>Here is an example of what one run of your program should look like (user inputs -12, 13, and 0, in order):</p>
-<pre><code>Enter an age in human years: -12
-Sorry, please enter a positive number or 0 to exit
-Enter an age in human years: 13
-The age in dog years is 91
-Enter an age in human years: 0
+<p>İşte programınızın bir çalıştırmasının nasıl görünmesi gerektiğine dair bir örnek (kullanıcı girdilerinin sırayla -12, 13 ve 0 olduğunu düşünürsek):</p>
+<pre><code>İnsan yılıyla bir yaş girin: -12
+Üzgünüz, lütfen pozitif bir sayı veya çıkmak için 0 girin
+İnsan yaşında bir yaş girin: 13
+Köpek yılıyla yaş 91
+İnsan yılıyla bir yaş girin: 0
 </code></pre>
 	</div>
 </div>
