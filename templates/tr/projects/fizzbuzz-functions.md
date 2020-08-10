@@ -3,7 +3,7 @@ title: CızBız
 credit: Mehran Sahami, Keith Schwarz, Eric Roberts, Marty Stepp, and others.
 translation: Ceren Kocaoğullar
 
-Example: [Divisible]({{pathToRoot}}tr/projects/divisible/)
+Example: [Division]({{pathToRoot}}tr/projects/division/)
 
 **Note** did you already complete the [FizzBuzz bonus problem?]({{pathToRoot}}tr/bonus-index.html)  If you did, awesome!  If not, no worries.  This version of FizzBuzz is different from the bonus problem - it is the same idea, but uses functions instead.  Both will give you practice with different core programming concepts!
 

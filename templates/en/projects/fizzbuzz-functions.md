@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Fizzbuzz With Functions
 credit: Mehran Sahami, Keith Schwarz, Eric Roberts, Marty Stepp, and others.
 
-Example: [Divisible]({{pathToRoot}}en/projects/divisible/)
+Example: [Division]({{pathToRoot}}en/projects/division/)
 
 **Note** did you already complete the [FizzBuzz bonus problem?]({{pathToRoot}}en/bonus-index.html)  If you did, awesome!  If not, no worries.  This version of FizzBuzz is different from the bonus problem - it is the same idea, but uses functions instead.  Both will give you practice with different core programming concepts!
 
