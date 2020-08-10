@@ -26,7 +26,7 @@
           "url": "projects/collectNewspaper.html"
         },
         {
-          "imageURL": "img/icons/charles.jpg",
+          "imageURL": "img/projects/efes/charles.jpg",
           "teachURL": "teach/notes/arches.html",
           "title_en": "Arches Karel",
           "title_tr": "Sütun Tamircisi",
@@ -332,7 +332,7 @@
           "teachURL": "teach/notes/funkyFunctions.html"
         },
         {
-          "imageURL": "img/icons/console.jpg",
+          "imageURL": "img/projects/fizzbuzz/fizzbuzz.png",
           "title_en": "FizzBuzz",
           "title_tr": "CızBız",
           "topic_en": "Params and Return",
