@@ -29,9 +29,6 @@ Given the radius (sometimes called `r`) of a circle, you can calculate the area 
 
 
 $$\text{Area} = \pi \cdot \text{radius} ^2$$
-<!-- <center>
-  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/areaCalculator/area.png">
-</center> -->
 
 What is pi? π (pi) is a mathematical constant which Python has stored in the math library. In your project we included the line `import math` which gets you access to the math library. Don't delete this line. To access π inside your `main()` function, you can use `math.pi`. For example, if we wanted to print out π to the console:
 

@@ -29,10 +29,6 @@ Bir dairenin yarıçapı (bazen `r` olarak da adlandırılır) göz önüne alı
 
 $$\text{Alan} = \pi \cdot \text{yarıçap} ^2$$
 
-<!-- <center>
-  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/areaCalculator/area.png">
-</center> -->
-
 Pi nedir? π (pi), Python'un matematik kütüphanesinde sakladığı matematiksel bir sabittir. Projenizde, matematik kütüphanesine erişmenizi sağlayan `import math` satırını ekledik. Bu satırı silmeyin. `main()` fonksiyonunuzun içinde π'ye erişmek için `math.pi` kullanabilirsiniz. Örneğin, konsola π'yi basmak istiyorsak:
 
 ```
