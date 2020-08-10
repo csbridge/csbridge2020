@@ -33,7 +33,7 @@ Burada kullandığımız font (ve font büyüklüğü) şunlardır:
 canvas.set_font(label, "Papyrus", 40)
 ```
 
-Make sure to color the text white!  İki saniye sonra arka plan olan dikdörtgeni ve ileti olan metni kaldırmalısınız. Bunu yapmak için `delete` fonksiyonunu kullanabilirsiniz (Bu fonksiyon tuval üzerinde bulunan bir nesneyi parametre olarak alır ve ekrandan kaldırır).
+Yazının rengini beyaz yaptığınızdan emin olun! İki saniye sonra arka plan olan dikdörtgeni ve ileti olan metni kaldırmalısınız. Bunu yapmak için `delete` fonksiyonunu kullanabilirsiniz (Bu fonksiyon tuval üzerinde bulunan bir nesneyi parametre olarak alır ve ekrandan kaldırır).
 
 ```
 canvas.delete(your_object)
