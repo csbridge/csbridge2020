@@ -70,5 +70,48 @@
 				"difficulty": 2
 			}
 		]
+	},
+	{
+		"title_en": "Graphics, Parameters and Return",
+		"title_tr": "Graphics, Parameters and Return",
+		"projectURL": "starter/BonusGraphics.zip",
+		"visible_after": "2020081009",
+		"projects": [
+			{
+				"title_en": "Bouncing Balls",
+				"title_tr": "Zıplayan Toplar",
+				"imageURL": "img/icons/bouncingMultiple.png",
+				"url": "projects/bouncingBalls.html",
+				"difficulty": 1
+			},
+			{
+				"title_en": "Creative Graphics",
+				"title_tr": "Yaratıcı Grafikler",
+				"imageURL": "img/icons/creativeGraphics.jpg",
+				"url": "projects/creativeGraphics.html",
+				"difficulty": 1
+			},
+			{
+				"title_en": "Creative String Art",
+				"title_tr": "Yaratıcı Çizgi Sanatı",
+				"imageURL": "img/icons/creativeStringArt.png",
+				"url": "projects/creativeStringArt.html",
+				"difficulty": 1
+			},
+			{
+				"title_en": "Draw Trees",
+				"title_tr": "Ağaç Çiz",
+				"imageURL": "img/projects/drawTrees/icon.png",
+				"url": "projects/drawTrees.html",
+				"difficulty": 1
+			},
+			{
+				"title_en": "More Functions",
+				"title_tr": "More Functions",
+				"imageURL": "img/icons/console.jpg",
+				"url": "projects/moreFunctions.html",
+				"difficulty": 1
+			}
+		]
 	}
 ]

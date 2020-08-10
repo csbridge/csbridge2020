@@ -21,5 +21,5 @@ def main():
 Her ağacın gövdesinin genişliği (`TRUNK_WIDTH`) 20 piksel ve uzunluğu (`TRUNK_HEIGHT`) 80 piksel olmalıdır. Yapraklar ise 30 piksel yarıçapa (`LEAVES_RADIUS`) sahip olmalıdır. Çıktınız bu şekilde gözükmelidir:
 
 <center>
-<img style="width:500px" src="{{pathToRoot}}img/projects/madmethods/demo.png">	
+<img style="width:500px; border: 1px solid black" src="{{pathToRoot}}img/projects/madmethods/demo.png">	
 </center>
