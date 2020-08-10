@@ -26,7 +26,7 @@
           "url": "projects/collectNewspaper.html"
         },
         {
-          "imageURL": "img/icons/charles.jpg",
+          "imageURL": "img/projects/efes/charles.jpg",
           "teachURL": "teach/notes/arches.html",
           "title_en": "Arches Karel",
           "title_tr": "Sütun Tamircisi",
@@ -73,7 +73,7 @@
           "url": "projects/stripeKarel.html"
         },
         {
-          "imageURL": "img/icons/hospitalKarel.png",
+          "imageURL": "img/projects/hospitalkarel/hospitalKarel.png",
           "teachURL": "teach/notes/hospitalKarel.html",
           "title_en": "Hospital Karel",
           "title_tr": "Hastaneci Karel",
@@ -183,7 +183,7 @@
           "teachURL": "teach/notes/viralVideo.html"
         },
         {
-          "imageURL": "img/icons/khansole.png",
+          "imageURL": "img/projects/khansole/khansole.png",
           "title_en": "Khansole Academy",
           "title_tr": "Khansole Akademi",
           "topic_en": "Conditionals",
@@ -246,7 +246,7 @@
           "teachURL": "teach/notes/someSum.html"
         },
         {
-          "imageURL": "img/icons/carbonDating.jpg",
+          "imageURL": "img/projects/carbonDating/carbondating.jpg",
           "title_en": "Carbon Dating",
           "title_tr": "Carbon Dating",
           "topic_en": "Loop variables",
@@ -332,7 +332,7 @@
           "teachURL": "teach/notes/funkyFunctions.html"
         },
         {
-          "imageURL": "img/icons/console.jpg",
+          "imageURL": "img/projects/fizzbuzz/fizzbuzz.png",
           "title_en": "FizzBuzz",
           "title_tr": "CızBız",
           "topic_en": "Params and Return",
@@ -382,7 +382,7 @@
           "teachURL": "teach/notes/printIndices.html"
         },
         {
-          "imageURL": "img/icons/illusion.png",
+          "imageURL": "img/projects/illusion/illusion1.png",
           "title_en": "Optical Illusion",
           "title_tr": "Optik İllüzyon",
           "topic_en": "For Loops",

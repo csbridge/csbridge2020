@@ -16,7 +16,7 @@
 			{
 				"title_en": "Checkerboard",
 				"title_tr": "Dama Tahtası",
-				"imageURL": "img/icons/checkerboard.png",
+				"imageURL": "img/projects/checkerboardKarel/checkerboard.png",
 				"url": "projects/checkerBoard.html",
 				"teachURL": "teach/notes/checkerBoard.html",
 				"difficulty": 2
@@ -48,7 +48,7 @@
 			{
 				"title_en": "Looping Fun",
 				"title_tr": "Eğlenceli Döngüler",
-				"imageURL": "img/icons/loopingfun.png",
+				"imageURL": "img/projects/loopingFun/loopingfun.png",
 				"url": "projects/loopingFun.html",
 				"teachURL": "teach/notes/loopingFun.html",
 				"difficulty": 1
@@ -56,7 +56,7 @@
 			{
 				"title_en": "Hailstone",
 				"title_tr": "Dolu Tanesi",
-				"imageURL": "img/icons/hailstone.png",
+				"imageURL": "img/projects/hailstone/hailstone.png",
 				"url": "projects/hailstone.html",
 				"teachURL": "teach/notes/hailstone.html",
 				"difficulty": 2
@@ -88,7 +88,7 @@
 			{
 				"title_en": "Creative Graphics",
 				"title_tr": "Yaratıcı Grafikler",
-				"imageURL": "img/icons/creativeGraphics.jpg",
+				"imageURL": "img/projects/creativeGraphics/creativeGraphics.jpg",
 				"url": "projects/creativeGraphics.html",
 				"teachURL": "teach/notes/creativeGraphics.html",
 				"difficulty": 1
@@ -96,7 +96,7 @@
 			{
 				"title_en": "Creative String Art",
 				"title_tr": "Yaratıcı Çizgi Sanatı",
-				"imageURL": "img/icons/creativeStringArt.png",
+				"imageURL": "img/projects/creativeStringArt/customfancy.png",
 				"url": "projects/creativeStringArt.html",
 				"teachURL": "teach/notes/creativeStringArt.html",
 				"difficulty": 1
