@@ -293,6 +293,13 @@
     "evening": {
       "projectURL": "starter/Day5PM.zip",
       "visible_after": "2020081009",
+      "examples": [
+        {
+          "title_en": "Robot Face",
+          "title_tr": "Robot Surat",
+          "url": "projects/robotFace/"
+        }
+      ],
       "projects": [
         {
           "imageURL": "img/projects/funkyFunctions/logo.png",

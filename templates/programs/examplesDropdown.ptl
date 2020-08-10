@@ -21,7 +21,7 @@ code to display the content in.  Currently "en" (English) and "tr" (Turkish) are
 	% for i, day_info in enumerate(data):
 		<% 
 			# Skip this day if it doesn't have any worked examples
-			if ("morning" in day_info and "examples" not in day_info["morning"]) or ("evening" in day_info and "examples" not in day_info["evening"]) or ("morning" not in day_info and "evening" not in day_info):
+			if ("morning" not in day_info and "evening" not in day_info) or ("evening" not in day_info and "examples" not in day_info["morning"]) or ("morning" not in day_info and "examples" not in day_info["evening"]) or ("morning" in day_info and "examples" not in day_info["morning"] and "evening" in day_info and "examples" not in day_info["evening"]):
 				continue
 			end
 		%>

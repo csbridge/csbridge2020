@@ -4,6 +4,8 @@ credit: Eric Roberts tarafından yazılmış, Chris Piech ve Lisa Yan tarafında
 solution: soln.py
 translation: Serhat Arslan, Ceren Kocaoğullar
 
+Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
+
 Bu resmi çizdiren bir program yazın. Verilmiş sabitleri (constant) kullanmalısınız, ama değerlerini (veya yüzün herhangi bir kısmının rengini) değiştirmekten çekinmeyin. </p>
 
 <center>
