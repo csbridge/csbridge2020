@@ -620,6 +620,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../../en/projects/division/">Division</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../../en/projects/drawPeople/">Draw People</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -798,12 +803,12 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<p>Handouts: <a href="../../../en/resources/graphics.html">Graphics Reference</a><br/></p>
-<p>This demo shows a simple function that draws people with the bottom of their feet at the provided (x, y) position.</p>
+<p>This demo shows a function that draws a person with the bottom of their feet centered at the provided (x, y) position.</p>
 <pre><code>def draw_person(x, y):
     # ... draws a person standing at (x, y)
 </code></pre>
 <p><center>
-<img style="width:500px" src="../../../img/projects/drawPeople/demo2.png"><br />
+<img style="width:500px; border: 1px solid black;" src="../../../img/projects/drawPeople/people.png"> <br />
 </center></p>
 	</div>
 </div>
@@ -818,19 +823,28 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:1140.0px">&quot;&quot;&quot;
+		<pre class="console" id="editor" style="height:1600.0px">&quot;&quot;&quot;
 File: draw_people.py
 -------------------
-Draws several people standing at specific (x, y) coordinates.
+This program implements a function called draw_person that draws a graphical
+person with its feet centered at a given (x, y) coordinate.  This program draws
+multiple people on the canvas using this function.
 &quot;&quot;&quot;
 
 from graphics import Canvas
 
+
+# Body dimensions
 BODY_WIDTH = 20
 BODY_HEIGHT = 60
+
+# Arm dimensions
 ARMS_WIDTH = 40
 ARMS_HEIGHT = 40
+
+# Head size
 HEAD_DIAMETER = 40
+
 
 def main():
     canvas = Canvas()
@@ -844,31 +858,45 @@ def main():
 
     canvas.mainloop()
 
+
 def draw_person(canvas, x, y):
-    # body is centered horizontally at x
-    # bottom of body should be at specified y
-    body_y = y - BODY_HEIGHT
-    body_x = x - BODY_WIDTH/2
-    body = canvas.create_rectangle(body_x,
-                                   body_y,
-                                   body_x + BODY_WIDTH,
-                                   body_y + BODY_HEIGHT)
+    &quot;&quot;&quot;
+    Draws a graphical person with its feet centered at the given coordinate.
+    The person is drawn with a green body, black arms on the sides (drawn as one
+    rectangle), and a blue head).
+    &quot;&quot;&quot;
+
+    body_top_left_y = y - BODY_HEIGHT
+
+    &quot;&quot;&quot;
+    The arms are a single rectangle &quot;behind&quot; the body
+    to appear as two separate rectangles.
+    &quot;&quot;&quot;
+    arms_x = x - ARMS_WIDTH / 2
+    arms = canvas.create_rectangle(arms_x,
+                                   body_top_left_y,
+                                   arms_x + ARMS_WIDTH,
+                                   body_top_left_y + ARMS_HEIGHT)
+    canvas.set_color(arms, &quot;green&quot;)
+
+    &quot;&quot;&quot;
+    The body is a single rectangle &quot;in front of&quot; the arms
+    that stretches from the bottom of the person to its head.
+    &quot;&quot;&quot;
+    body_top_left_x = x - BODY_WIDTH / 2
+    body = canvas.create_rectangle(body_top_left_x,
+                                   body_top_left_y,
+                                   body_top_left_x + BODY_WIDTH,
+                                   body_top_left_y + BODY_HEIGHT)
     canvas.set_color(body, &quot;black&quot;)
 
-    # arms should be at same height as the body
-    arms_x = x - ARMS_WIDTH/2
-    arms = canvas.create_rectangle(arms_x,
-                                   body_y,
-                                   arms_x + ARMS_WIDTH,
-                                   body_y + ARMS_HEIGHT)
-    canvas.set_color(arms, &quot;black&quot;)
-
-    # bottom of head should be top of body
-    head_y = body_y - HEAD_DIAMETER
-    head_x = x - HEAD_DIAMETER/2
-    head = canvas.create_oval(head_x, head_y,
-                              head_x + HEAD_DIAMETER,
-                              head_y + HEAD_DIAMETER)
+    # The head is a blue oval on top of the body and arms.
+    head_top_left_y = body_top_left_y - HEAD_DIAMETER
+    head_top_left_x = x - HEAD_DIAMETER / 2
+    head = canvas.create_oval(head_top_left_x,
+                              head_top_left_y,
+                              head_top_left_x + HEAD_DIAMETER,
+                              head_top_left_y + HEAD_DIAMETER)
     canvas.set_color(head, &quot;blue&quot;)
 
 

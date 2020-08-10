@@ -296,7 +296,7 @@
       "examples": [
         {
           "title_en": "Robot Face",
-          "title_tr": "Robot Surat",
+          "title_tr": "Robot Yüzü",
           "url": "projects/robotFace/"
         },
         {
@@ -313,6 +313,11 @@
           "title_en": "Division",
           "title_tr": "Bölme",
           "url": "projects/division/"
+        },
+        {
+          "title_en": "Draw People",
+          "title_tr": "İnsan Çiz",
+          "url": "projects/drawPeople/"
         }
       ],
       "projects": [

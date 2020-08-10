@@ -12,5 +12,5 @@ Bu örnek, ayaklarını referans alarak belirtilen (x,y) konumuna insan çizen b
         # ... (x,y) konumunda duran bir insan çizer
 
 <center>
-<img style="width:500px" src="{{pathToRoot}}img/projects/drawPeople/demo2.png">	
+<img style="width:500px; border: 1px solid black;" src="{{pathToRoot}}img/projects/drawPeople/people.png">	
 </center>
