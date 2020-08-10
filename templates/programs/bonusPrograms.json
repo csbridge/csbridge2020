@@ -118,5 +118,21 @@
 				"difficulty": 1
 			}
 		]
+	},
+	{
+		"title_en": "Loops and Animation",
+		"title_tr": "Loops and Animation",
+		"projectURL": "starter/BonusLoopsAnimation.zip",
+		"visible_after": "2020081100",
+		"projects": [
+			{
+				"title_en": "Number Grid",
+				"title_tr": "Number Grid",
+				"imageURL": "img/projects/numberGrid/grid.jpg",
+				"url": "projects/numberGrid.html",
+				"teachURL": "teach/notes/numberGrid.html",
+				"difficulty": 3
+			}
+		]
 	}
 ]
