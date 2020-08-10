@@ -53,6 +53,13 @@
 		"slidesURL": "slides/Lecture8-Functions.pdf",
 		"codeURL": "starter/lectures/Lecture8.zip",
 		"visible_after": "2020081000"
+	},
+	{
+		"title_en": "Nested Loops",
+		"title_tr": "",
+		"slidesURL": "slides/Lecture9.pdf",
+		"codeURL": "starter/lectures/Lecture9.zip",
+		"visible_after": "2020081100"
 	}
 
 ]
