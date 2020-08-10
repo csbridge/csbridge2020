@@ -16,7 +16,7 @@
       "projectURL": "starter/Day1PM.zip",
       "projects": [
         {
-          "imageURL": "img/icons/newspaper.jpg",
+          "imageURL": "img/projects/newspaper/newspaper.jpg",
           "teachURL": "teach/notes/collectNewspaper.html",
           "title_en": "Collect Newspaper",
           "title_tr": "Gazete Alma",
@@ -63,7 +63,7 @@
       "projectURL": "starter/Day2PM.zip",
       "projects": [
         {
-          "imageURL": "img/icons/stripeKarel.png",
+          "imageURL": "img/projects/stripeKarel/stripeKarel.png",
           "teachURL": "teach/notes/stripeKarel.html",
           "title_en": "Stripe Karel",
           "title_tr": "Şerit Karel",
@@ -106,7 +106,7 @@
       "projectURL": "starter/Day2AM.zip",
       "projects": [
         {
-          "imageURL": "img/icons/placeSquare.png",
+          "imageURL": "img/projects/placeSquare/placeSquare.png",
           "teachURL": "teach/notes/placeSquare.html",
           "title_en": "Place Square",
           "title_tr": "Kare Yerleştir",
@@ -116,7 +116,7 @@
           "url": "projects/placeSquare.html"
         },
         {
-          "imageURL": "img/icons/mountain.png",
+          "imageURL": "img/projects/mountain/mountain.png",
           "teachURL": "teach/notes/mountain.html",
           "title_en": "Mountain Karel",
           "title_tr": "Dağcı Karel",
@@ -173,7 +173,7 @@
           "teachURL": "teach/notes/8ball.html"
         },
         {
-          "imageURL": "img/icons/viralVideo.png",
+          "imageURL": "img/projects/viralvideo/viralVideo.png",
           "title_en": "Viral Video",
           "title_tr": "Viral Video",
           "topic_en": "Conditionals",
@@ -236,7 +236,7 @@
       "projectURL": "starter/Day4AM.zip",
       "projects": [
         {
-          "imageURL": "img/icons/someSum.png",
+          "imageURL": "img/projects/someSum/someSum.png",
           "title_en": "That's Some Sum!",
           "title_tr": "Toplama Diye Buna Derim!",
           "topic_en": "Loop variables",
@@ -342,7 +342,7 @@
           "teachURL": "teach/notes/fizzbuzz-functions.html"
         },
         {
-          "imageURL": "img/icons/target.png",
+          "imageURL": "img/projects/target/target.png",
           "title_en": "Target",
           "title_tr": "Hedef Tahtası",
           "topic_en": "Parameters",
@@ -352,7 +352,7 @@
           "teachURL": "teach/notes/target.html"
         },
         {
-          "imageURL": "img/icons/stringArt.png",
+          "imageURL": "img/projects/stringArt/stringArt.png",
           "title_en": "String Art",
           "title_tr": "Çizgi Sanatı",
           "topic_en": "For Loops",
@@ -397,7 +397,7 @@
       "projectURL": "starter/Day6PM.zip",
       "projects": [
         {
-          "imageURL": "img/icons/mysterySquare.png",
+          "imageURL": "img/projects/mysterySquare/mysterySquare.png",
           "title_en": "Mystery Square",
           "title_tr": "Gizemli Kare",
           "topic_en": "Animation",
@@ -417,7 +417,7 @@
           "teachURL": "teach/notes/bouncingBall.html"
         },
         {
-          "imageURL": "img/icons/sunset.png",
+          "imageURL": "img/projects/shortfilm/sunset.png",
           "title_en": "Short Film",
           "title_tr": "Kısa Film",
           "topic_en": "Animation",
@@ -437,7 +437,7 @@
       "projectURL": "starter/Day7AM.zip",
       "projects": [
         {
-          "imageURL": "img/icons/mouseLocation.png",
+          "imageURL": "img/projects/mouseLocation/mouseLocation.png",
           "title_en": "Mouse Location",
           "title_tr": "Mouse Location",
           "topic_en": "Mouse",

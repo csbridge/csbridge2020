@@ -8,7 +8,7 @@
 			{
 				"title_en": "Midpoint",
 				"title_tr": "Orta Nokta",
-				"imageURL": "img/icons/midpoint.png",
+				"imageURL": "img/projects/midpointKarel/midpointKarelFinish.png",
 				"url": "projects/midpointKarel.html",
 				"teachURL": "teach/notes/midpointKarel.html",
 				"difficulty": 3
@@ -24,7 +24,7 @@
 			{
 				"title_en": "Square Painter",
 				"title_tr": "Kare Boyama",
-				"imageURL": "img/icons/squarePainter.png",
+				"imageURL": "img/projects/squarePainter/5x5.png",
 				"url": "projects/squarePainter.html",
 				"teachURL": "teach/notes/squarePainter.html",
 				"difficulty": 2
@@ -64,7 +64,7 @@
 			{
 				"title_en": "Ancient Game of Nimm",
 				"title_tr": "Antik Nimm Oyunu",
-				"imageURL": "img/icons/nimm.jpg",
+				"imageURL": "img/projects/nimm/nimm.jpg",
 				"url": "projects/nimm.html",
 				"teachURL": "teach/notes/nimm.html",
 				"difficulty": 2
