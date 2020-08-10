@@ -605,6 +605,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../../tr/projects/robotFace/">Robot Surat</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../../tr/projects/halfGreen/">Yarısı Yeşil</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -787,7 +792,7 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../../en/resources/graphics.html">Graphics Reference</a><br/></p>
+		<p>Ders Notları: <a href="../../../tr/resources/graphics.html">Grafikler Referansı</a><br/></p>
 <p>Bu resmi çizdiren bir program yazın. Verilmiş sabitleri (constant) kullanmalısınız, ama değerlerini (veya yüzün herhangi bir kısmının rengini) değiştirmekten çekinmeyin. </p></p>
 <p><center>
     <img style="width:500px;border:1px solid #000000" src="../../../img/projects/robotFace/face.jpg">
@@ -900,7 +905,7 @@ def draw_eyes(canvas):
     eye_y = head_y + EYE_Y_OFFSET
 
     eye_x = canvas.get_canvas_width() / 2 - EYE_X_SEPARATION / 2 - EYE_DIAMETER
-    draw_eye(canvas,eye_x, eye_y, &quot;blue&quot;)
+    draw_eye(canvas, eye_x, eye_y, &quot;blue&quot;)
 
     eye_x += EYE_DIAMETER + EYE_X_SEPARATION
     draw_eye(canvas, eye_x, eye_y, &quot;green&quot;)

@@ -605,6 +605,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../../tr/projects/robotFace/">Robot Surat</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../../tr/projects/halfGreen/">Yarısı Yeşil</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -790,7 +795,7 @@ filePath - the total path to the markdown file being rendered in this template
 		<p>Ders Notları: <a href="../../../tr/resources/graphics.html">Grafikler Referansı</a><br/></p>
 <p>Ekranda rastgele konumlarda 1000 adet daire oluşturacağız. Sol alt köşeye daha yakın olan daireler mavi olurken sağ üste yakın olanlar yeşil olacak. Bu örnek döndürülen (return) değerlere dair bir örnek.</p>
 <p><center>
-<img style="width:500px" src="../../../img/projects/halfGreen/halfGreen.png"> <br />
+<img style="width:500px; border: 1px solid black;" src="../../../img/projects/halfGreen/halfGreen.png"> 
 </center></p>
 <ul>
 <li>
@@ -816,30 +821,40 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:840.0px">&quot;&quot;&quot;
+		<pre class="console" id="editor" style="height:1180.0px">&quot;&quot;&quot;
 File: half_green.py
 -------------------
 Draws circles randomly, where circles in the top-right half are green
 and circles in the bottom-left half are blue.
 &quot;&quot;&quot;
 
+from graphics import Canvas
 import random
 import time
-from graphics import Canvas
 
+# The size of the canvas
 CANVAS_WIDTH = 500
 CANVAS_HEIGHT = 500
-SIZE = 20
+
+# The diameter of each circle
+CIRCLE_SIZE = 20
+
+# The number of circles to draw
+NUM_CIRCLES = 1000
+
 
 def main():
     canvas = Canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
     canvas.set_canvas_title(&quot;Half Green&quot;)
 
-    for i in range(1000):
-        x = random.randint(0, canvas.get_canvas_width() - SIZE)
-        y = random.randint(0, canvas.get_canvas_height() - SIZE)
+    # Draw 1000
+    for i in range(NUM_CIRCLES):
+        x = random.randint(0, canvas.get_canvas_width() - CIRCLE_SIZE)
+        y = random.randint(0, canvas.get_canvas_height() - CIRCLE_SIZE)
 
-        circle = canvas.create_oval(x, y, x + SIZE, y + SIZE)
+        circle = canvas.create_oval(x, y, x + CIRCLE_SIZE, y + CIRCLE_SIZE)
+
+        # Set both the fill and outline color to be either green or blue
         canvas.set_color(circle, get_color(x, y))
 
         canvas.update()
@@ -847,13 +862,20 @@ def main():
 
     canvas.mainloop()
 
+
 def get_color(x, y):
-    if is_green(x, y):
+    &quot;&quot;&quot;
+    Returns the name of the color the circle with top-left coordinate (x, y)
+    should have.  Since (0, 0) is the top-left corner of the canvas, x increases
+    as we go to the right, and y increases as we go down.  So the line y = x is
+    the diagonal line from top-left to bottom right.  If y &lt; x, the dot is above
+    this line (in the top-right corner), so it&#039;s green.  If y &gt;= x, the dot is at
+    or below this line (in the bottom-left corner, so it&#039;s blue.
+    &quot;&quot;&quot;
+    if x &gt; y:
         return &quot;green&quot;
     return &quot;blue&quot;
 
-def is_green(x, y):
-    return x &gt; y
 
 if __name__ == &quot;__main__&quot;:
     main()

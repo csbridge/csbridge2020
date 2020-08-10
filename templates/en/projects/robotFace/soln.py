@@ -83,7 +83,7 @@ def draw_eyes(canvas):
     eye_y = head_y + EYE_Y_OFFSET
 
     eye_x = canvas.get_canvas_width() / 2 - EYE_X_SEPARATION / 2 - EYE_DIAMETER
-    draw_eye(canvas,eye_x, eye_y, "blue")
+    draw_eye(canvas, eye_x, eye_y, "blue")
 
     eye_x += EYE_DIAMETER + EYE_X_SEPARATION
     draw_eye(canvas, eye_x, eye_y, "green")
