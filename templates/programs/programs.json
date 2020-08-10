@@ -308,6 +308,11 @@
           "title_en": "Average Function",
           "title_tr": "Ortalama Fonksiyonu",
           "url": "projects/average/"
+        },
+        {
+          "title_en": "Division",
+          "title_tr": "Bölme",
+          "url": "projects/division/"
         }
       ],
       "projects": [

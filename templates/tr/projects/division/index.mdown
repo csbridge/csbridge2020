@@ -1,6 +1,7 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Bölünebilirlik
+title: Bölme
 credit: Chris Piech ve Lisa Yan
+solution: soln.py
 translation: Ceren Kocaoğullar
 
 Bu demo birkaç fonksiyonu gösterir:

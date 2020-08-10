@@ -1,23 +1,28 @@
 """
-File: divisible.py
+File: division.py
 -------------------
 This program shows various division functions.
 """
+
+
 def main():
-    divisor = 5
-    show_info(50, divisor)
+    show_info(50, 5)
+    show_info(99, 5)
+    show_info(73, 7)
 
-    show_info(99, divisor)
-
-    divisor = 7
-    show_info(73, divisor)
 
 def show_info(value, divisor):
+    """
+    Prints out information about the given value with the given divisor,
+    including whether the value is even or odd, what the integer division result
+    of value / divisor is, and what the remainder of that operation is.
+    """
     print("value = " + str(value))
     print("    is odd? " + str(is_odd(value)))
     print("    value / " + str(divisor)
-            + " = " + str(divide(value, divisor))
-            + " remainder " + str(remainder(value, divisor)))
+          + " = " + str(divide(value, divisor))
+          + " remainder " + str(remainder(value, divisor)))
+
 
 def is_odd(value):
     """
@@ -25,18 +30,19 @@ def is_odd(value):
     """
     return (value % 2) == 1
 
+
 def divide(value, divisor):
     """
-    Performs integer division.
+    Performs integer division for value / divisor.
     """
     return value // divisor
 
+
 def remainder(value, divisor):
     """
-    Returns remainder of integer division.
+    Returns remainder of the integer division for value / divisor.
     """
     return value % divisor
-
 
 
 if __name__ == '__main__':

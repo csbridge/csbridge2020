@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../../img/favicon.ico" type="image/x-icon">
-<title>CS Bridge  | Divisible</title>
+<title>CS Bridge  | Division</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -615,6 +615,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../../en/projects/average/">Average Function</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../../en/projects/division/">Division</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -780,7 +785,7 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Divisible
+		Division
 	</h1>
 
 		<p>
@@ -795,13 +800,94 @@ filePath - the total path to the markdown file being rendered in this template
 		<p>This demo shows several functions:</p>
 <ul>
 <li>One takes in input and returns whether or not that input is odd.</li>
-<li>Another takes in input and a divisor and returns the quotient using the <em>integer division</em> <code>//</code> function.</li>
-<li>A third takes in input and a divisor and returns the remainder using the <em>modulo</em> <code>%</code> function.</li>
+<li>Another takes in input and a divisor and returns the quotient using the <em>integer division</em> <code>//</code> operator.</li>
+<li>A third takes in input and a divisor and returns the remainder using the <em>modulo</em> <code>%</code> operator.</li>
 </ul>
 	</div>
 </div>
 
 <!-- Solution (if included) -->
+	<h2>Solution</h2>
+    <p>
+    	<a class="btn btn-primary" id="soln-btn" onclick="toggleButtonText()"
+    		data-toggle="collapse" href="#soln-collapse" aria-expanded="false" 
+    		aria-controls="Collapse">
+    		Show Solution
+    	</a>
+    </p>
+    <div class="collapse" id="soln-collapse">
+		<pre class="console" id="editor" style="height:1000.0px">&quot;&quot;&quot;
+File: division.py
+-------------------
+This program shows various division functions.
+&quot;&quot;&quot;
+
+
+def main():
+    show_info(50, 5)
+    show_info(99, 5)
+    show_info(73, 7)
+
+
+def show_info(value, divisor):
+    &quot;&quot;&quot;
+    Prints out information about the given value with the given divisor,
+    including whether the value is even or odd, what the integer division result
+    of value / divisor is, and what the remainder of that operation is.
+    &quot;&quot;&quot;
+    print(&quot;value = &quot; + str(value))
+    print(&quot;    is odd? &quot; + str(is_odd(value)))
+    print(&quot;    value / &quot; + str(divisor)
+          + &quot; = &quot; + str(divide(value, divisor))
+          + &quot; remainder &quot; + str(remainder(value, divisor)))
+
+
+def is_odd(value):
+    &quot;&quot;&quot;
+    Returns True if value is odd, False otherwise.
+    &quot;&quot;&quot;
+    return (value % 2) == 1
+
+
+def divide(value, divisor):
+    &quot;&quot;&quot;
+    Performs integer division for value / divisor.
+    &quot;&quot;&quot;
+    return value // divisor
+
+
+def remainder(value, divisor):
+    &quot;&quot;&quot;
+    Returns remainder of the integer division for value / divisor.
+    &quot;&quot;&quot;
+    return value % divisor
+
+
+if __name__ == &#039;__main__&#039;:
+    main()
+</pre>
+    </div>
+
+    <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+       editor.setTheme('ace/theme/eclipse');
+       editor.getSession().setMode("ace/mode/python");
+       editor.setReadOnly(true);
+       editor.setShowPrintMargin(false);
+       editor.renderer.setShowGutter(false); 
+    </script>
+
+    <script>
+    	function toggleButtonText() {
+    		var elem = document.getElementById("soln-btn");
+    		if (elem.innerHTML.trim() === "Show Solution") {
+    			elem.innerHTML = "Hide Solution";
+    		} else {
+    			elem.innerHTML = "Show Solution";
+    		}
+    	}
+    </script>
 
 					
 
