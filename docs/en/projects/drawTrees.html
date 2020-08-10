@@ -806,11 +806,16 @@ filePath - the total path to the markdown file being rendered in this template
 <p>Fill in the <code>draw_tree</code> function that draws a tree with the base of its trunk centered at the provided <code>(x, y)</code> position.</p>
 <p>The <code>main</code> function has already been written for you:</p>
 <pre><code>def main():
-    draw_tree(50, 150)
-    draw_tree(100, 300)
-    draw_tree(500, 200)
-    draw_tree(300, 250)
-    draw_tree(700, 310)
+    canvas = Canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
+    canvas.set_canvas_title(&quot;Draw Trees&quot;)
+
+    draw_tree(canvas, 50, 150)
+    draw_tree(canvas, 100, 300)
+    draw_tree(canvas, 500, 200)
+    draw_tree(canvas, 300, 250)
+    draw_tree(canvas, 700, 310)
+
+    canvas.mainloop()
 </code></pre>
 
 <p>Each tree should have a trunk with a width of 20 pixels (<code>TRUNK_WIDTH</code>) and a height of 80 pixels (<code>TRUNK_HEIGHT</code>). The leaves should have a radius of 30 pixels (<code>LEAVES_RADIUS</code>). Your output should look like this:</p>

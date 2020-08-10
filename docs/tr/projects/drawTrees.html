@@ -811,11 +811,16 @@ filePath - the total path to the markdown file being rendered in this template
 <p>Gövdesinin tabanı verilen <code>(x, y)</code> pozisyonunu merkez kabul eden bir ağaç çizmek için <code>draw_tree</code> fonksiyonunu doldurun.</p>
 <p><code>main</code> fonksiyonu sizler için önceden yazıldı:</p>
 <pre><code>def main():
-    draw_tree(50, 150)
-    draw_tree(100, 300)
-    draw_tree(500, 200)
-    draw_tree(300, 250)
-    draw_tree(700, 310)
+    canvas = Canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
+    canvas.set_canvas_title(&quot;Draw Trees&quot;)
+
+    draw_tree(canvas, 50, 150)
+    draw_tree(canvas, 100, 300)
+    draw_tree(canvas, 500, 200)
+    draw_tree(canvas, 300, 250)
+    draw_tree(canvas, 700, 310)
+
+    canvas.mainloop()
 </code></pre>
 
 <p>Her ağacın gövdesinin genişliği (<code>TRUNK_WIDTH</code>) 20 piksel ve uzunluğu (<code>TRUNK_HEIGHT</code>) 80 piksel olmalıdır. Yapraklar ise 30 piksel yarıçapa (<code>LEAVES_RADIUS</code>) sahip olmalıdır. Çıktınız bu şekilde gözükmelidir:</p>

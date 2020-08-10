@@ -61,17 +61,20 @@ This would produce an output of:
 ## Draw Centered Label
 File: `centered_label.py`
 
-Write a program that draws a centered label. The text for the label should be a parameter to a function. The `main()` function is already written for you:
+Write a program that draws a centered label. The text for the label should be a parameter to a function, as should be its font name and font size. The `main()` function is already written for you:
 
 ```
 def main():
-	draw_label("Coding Rocks!")
+    canvas = Canvas()
+    canvas.set_canvas_title("Centered Label")
+    draw_centered_label(canvas, "Coding Rocks!", "Courier", 40)
+    canvas.mainloop()
 ```
 
 This would produce an output like below:
 
 <center>
-<img style="width:500px" src="{{pathToRoot}}img/projects/moreFunctions/centeredLabelOutput.png">
+<img style="width:500px; border: 1px solid black" src="{{pathToRoot}}img/projects/moreFunctions/centeredLabel.png">
 </center>
 
 ## Speedy Shopper
