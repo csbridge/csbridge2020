@@ -82,6 +82,7 @@
 				"title_tr": "Zıplayan Toplar",
 				"imageURL": "img/icons/bouncingMultiple.png",
 				"url": "projects/bouncingBalls.html",
+				"teachURL": "teach/notes/bouncingBalls.html",
 				"difficulty": 1
 			},
 			{
@@ -89,6 +90,7 @@
 				"title_tr": "Yaratıcı Grafikler",
 				"imageURL": "img/icons/creativeGraphics.jpg",
 				"url": "projects/creativeGraphics.html",
+				"teachURL": "teach/notes/creativeGraphics.html",
 				"difficulty": 1
 			},
 			{
@@ -96,6 +98,7 @@
 				"title_tr": "Yaratıcı Çizgi Sanatı",
 				"imageURL": "img/icons/creativeStringArt.png",
 				"url": "projects/creativeStringArt.html",
+				"teachURL": "teach/notes/creativeStringArt.html",
 				"difficulty": 1
 			},
 			{
@@ -103,6 +106,7 @@
 				"title_tr": "Ağaç Çiz",
 				"imageURL": "img/projects/drawTrees/icon.png",
 				"url": "projects/drawTrees.html",
+				"teachURL": "teach/notes/drawTrees.html",
 				"difficulty": 1
 			},
 			{
@@ -110,6 +114,7 @@
 				"title_tr": "More Functions",
 				"imageURL": "img/icons/console.jpg",
 				"url": "projects/moreFunctions.html",
+				"teachURL": "teach/notes/moreFunctions.html",
 				"difficulty": 1
 			}
 		]
