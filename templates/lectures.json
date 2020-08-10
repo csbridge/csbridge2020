@@ -46,6 +46,13 @@
 		"slidesURL": "slides/Lecture7_Graphics.pdf",
 		"codeURL": "starter/lectures/Lecture7.zip",
 		"visible_after": "2020080700"
+	},
+	{
+		"title_en": "Functions",
+		"title_tr": "Fonksiyonlar",
+		"slidesURL": "slides/Lecture8.pdf",
+		"codeURL": "starter/lectures/Lecture8.zip",
+		"visible_after": "2020081000"
 	}
 
 ]
