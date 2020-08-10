@@ -3,7 +3,7 @@ title: Zıp Zıp Top
 credit: Mehran Sahami'nin bir örneği temel alınmıştır.
 translation: Serhat Arslan, Ceren Kocaoğullar
 
-Dosya: `bouncingball.py`
+Dosya: `bouncing_ball.py`
 
 Bir top oluşturan ve ekranın etrafında onu zıplatan bir grafik programı yazın. Yerçekimini göz ardı edin. Top sol ve sağ duvara çarptığında x eksenindeki yönünü, üst ya da alt duvara çarptığında ise y eksenindeki yönünü değiştirin.
 
@@ -15,7 +15,7 @@ Aşağıdaki şekil alt duvardan sekerek hareket eden bir topu gösteriyor.
 
 ## Aşama 1: Bir Top Yarat
 
-Top herhangi bir boyutta olabilir.  Make it start at a random onscreen location.
+Top herhangi bir boyutta olabilir. Ekranda rastgele bir konumda başlamasını sağlayın.
 
 ## Aşama 2: Topu Hareket Ettir
 
@@ -40,7 +40,7 @@ _dy_, nesnenin y yönünde hareket edeceği piksel sayısıdır. <BR>
 
 Şimdi, topun konumunu güncellemeden önce, top duvara çarpmış mı diye kontrol etmeli ve çarptıysa, hareket ettiği yönü güncellemelisiniz.
 
-Yansımalar, "gelen açı yansıyan açıya eşittir" kuralına uymalı. Ve bunu kod olarak yazması gayet kolay. Top sol ya da sağ duvara çarparsa x doğrultusundaki yönünü, alt ya da üst duvara çarparsa y doğrultusundaki yönünü değiştirerek bunu başarabilirsiniz.
+Yansımalar, "gelen açı yansıyan açıya eşittir" kuralına uymalı. Bunu, top sol ya da sağ duvara çarparsa x doğrultusundaki yönünü, alt ya da üst duvara çarparsa y doğrultusundaki yönünü değiştirerek bunu başarabilirsiniz.
 
 Topun konumunu nasıl bulacaksınız? Şu fonksiyonları kullanabilirsiniz:
 
