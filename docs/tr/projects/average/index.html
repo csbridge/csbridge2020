@@ -610,6 +610,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../../tr/projects/halfGreen/">Yarısı Yeşil</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../../tr/projects/average/">Ortalama Fonksiyonu</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -806,7 +811,7 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:380.0px">&quot;&quot;&quot;
+		<pre class="console" id="editor" style="height:520.0px">&quot;&quot;&quot;
 File: average.py
 -------------------
 This program contains an implementation of an average
@@ -814,17 +819,24 @@ function that takes in two inputs and returns their average.
 The main program calls this function several times with different
 inputs and prints out the results.
 &quot;&quot;&quot;
+
+
 def main():
     print(average(4, 5))
     print(average(10, 2))
     print(average(-4.1, 9.8))
 
+
 def average(a, b):
+    &quot;&quot;&quot;
+    Takes in two inputs and returns their average.
+    &quot;&quot;&quot;
     return (a + b) / 2
 
 
 if __name__ == &#039;__main__&#039;:
-    main()</pre>
+    main()
+</pre>
     </div>
 
     <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>

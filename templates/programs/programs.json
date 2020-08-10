@@ -303,6 +303,11 @@
           "title_en": "Half Green",
           "title_tr": "Yarısı Yeşil",
           "url": "projects/halfGreen/"
+        },
+        {
+          "title_en": "Average Function",
+          "title_tr": "Ortalama Fonksiyonu",
+          "url": "projects/average/"
         }
       ],
       "projects": [
