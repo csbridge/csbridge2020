@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
-<title>CS Bridge  | Print Indices</title>
+<title>CS Bridge  | İndeksleri Yazdır</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -418,7 +418,7 @@ visible-after, to ensure they display when you want them to.
 							<li
 									class="visible-after" data-visible-after="2020081100"
 							>
-								<a href="../../tr/projects/printIndices.html">Print Indices</a>
+								<a href="../../tr/projects/printIndices.html">İndeksleri Yazdır</a>
 							</li>
 							<li
 									class="visible-after" data-visible-after="2020081100"
@@ -791,13 +791,16 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Print Indices
+		İndeksleri Yazdır
 	</h1>
 
 		<p>
-			Hazırlayan: Written by Lisa Yan and Nick Troccoli
+			Hazırlayanlar: Lisa Yan, Nick Troccoli
 		</p>
 
+		<p>
+			Çeviren: Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
@@ -805,8 +808,8 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<p>File: <code>print_indices.py</code></p>
-<p>Print out the coordinates of a 5x5 grid.</p>
-<pre><code>Print the coordinates of a 5x5 grid, row by row.
+<p>5x5'lik bir ızgaranın (grid'in) koordinatlarını yazdırın.</p>
+<pre><code>5x5'lik bir ızgaranın koordinatlarını satır satır yazdırın.
 (0,0), (1,0), (2,0), (3,0), (4,0)
 (0,1), (1,1), (2,1), (3,1), (4,1)
 (0,2), (1,2), (2,2), (3,2), (4,2)
@@ -814,16 +817,17 @@ filePath - the total path to the markdown file being rendered in this template
 (0,4), (1,4), (2,4), (3,4), (4,4)
 </code></pre>
 
-<p>Hint: try the following code structure:</p>
+<p>İpucu: aşağıdaki kod yapısını deneyin:</p>
 <pre><code>for i in range(5):
     for j in range(5):
-        # some code...
+        # kodunuzu buraya yazın ...
 </code></pre>
 
-<h2 id="milestone-1">Milestone 1</h2>
-<p>Try adding just one print statement to print out the values of <code>i</code> and <code>j</code> in the body of the inner <code>for</code> loop.  What do you observe?</p>
-<h2 id="milestone-2">Milestone 2</h2>
-<p>Print out the coordinates, each on their own line, in row order, like this:</p>
+<h2 id="gorev-1">Görev 1</h2>
+<p>Try adding just one print statement to print out the values of <code>i</code> and <code>j</code> in the body of the inner <code>for</code> loop. What do you observe?</p>
+<p>İçteki <code>for</code> döngüsünün içine <code>i</code> ve <code>j</code> değerlerini yazdırmak için yalnızca bir print ifadesi eklemeyi deneyin. Ne gözlemliyorsunuz?</p>
+<h2 id="gorev-2">Görev 2</h2>
+<p>Koordinatları, her biri kendi satırında olacak şekilde, aşağıdaki gibi satır sırasına göre yazdırın:</p>
 <pre><code>(0,0)
 (1,0)
 (2,0)
@@ -834,8 +838,8 @@ filePath - the total path to the markdown file being rendered in this template
 ...
 </code></pre>
 
-<h2 id="milestone-3">Milestone 3</h2>
-<p>Now, try to print each row on the same line.  Note that using <code>print()</code> automatically adds a line break/new line after what is printed.  To tell it not to do this, add <code>end=''</code> right before the closing parentheses.  For instance, <code>print("some text or variables")</code> adds a line break/new line, whereas <code>print("some text or variables", end='')</code> does not.</p>
+<h2 id="gorev-3">Görev 3</h2>
+<p>Şimdi, her ızgara satırını aynı satıra yazdırmayı deneyin. <code>print()</code> kullanmanın, yazdırılandan sonra otomatik olarak bir satır sonu/yeni satır eklediğini unutmayın. Bunu yapmamasını söylemek için, kapanış parantezlerinin hemen önüne <code>end=''</code> ekleyin. Örneğin, <code>print ("bazı metin veya değişkenler")</code> bir satır sonu/yeni satır ekler, oysa <code>print("some text or variables", end='')</code> bunu yapmaz.</p>
 	</div>
 </div>
 
