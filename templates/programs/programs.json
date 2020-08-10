@@ -395,6 +395,18 @@
     },
     "evening": {
       "projectURL": "starter/Day6PM.zip",
+      "examples": [
+        {
+          "title_en": "Move to Center",
+          "title_tr": "Merkeze Git",
+          "url": "projects/moveToCenter/"
+        },
+        {
+          "title_en": "Gravity Ball",
+          "title_tr": "Seken Top",
+          "url": "projects/gravityBall/"
+        }
+      ],
       "projects": [
         {
           "imageURL": "img/projects/mysterySquare/mysterySquare.png",

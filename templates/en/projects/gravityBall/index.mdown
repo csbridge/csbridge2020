@@ -5,9 +5,11 @@ solution: soln.py
 
 Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 
-Make a ball that bounces as if under the influence of gravity.
+Make a ball that bounces as if under the influence of gravity.  To do this, adapt code for a regular bouncing ball, but each frame have the y velocity increase downward by a small amount to simulate the pull of gravity.  Additionally, each time the ball bounces off the bottom, decrease the y velocity by a certain percentage.
 
 
 <center>
 <img style="width:500px" src="{{pathToRoot}}img/projects/gravityBall/demo.png">	
 </center>
+
+(Note: the gray path in the image above is just an illustration - the working program will just have a black ball bouncing on the screen)

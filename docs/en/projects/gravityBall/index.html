@@ -627,6 +627,32 @@ visible-after, to ensure they display when you want them to.
 							</li>
 			</ul>
 		</li>
+
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081100"
+		>
+			<a tabindex="-1" href="#">6: Loops and Animation</a>
+
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081100"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../../../en/projects/moveToCenter/">Move to Center</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../../../en/projects/gravityBall/">Gravity Ball</a>
+							</li>
+			</ul>
+		</li>
 </ul>					</li>
 
 					<!-- Examples dropdown -->
@@ -833,10 +859,11 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<p>Handouts: <a href="../../../en/resources/graphics.html">Graphics Reference</a><br/></p>
-<p>Make a ball that bounces as if under the influence of gravity.</p>
+<p>Make a ball that bounces as if under the influence of gravity.  To do this, adapt code for a regular bouncing ball, but each frame have the y velocity increase downward by a small amount to simulate the pull of gravity.  Additionally, each time the ball bounces off the bottom, decrease the y velocity by a certain percentage.</p>
 <p><center>
 <img style="width:500px" src="../../../img/projects/gravityBall/demo.png"><br />
 </center></p>
+<p>(Note: the gray path in the image above is just an illustration - the working program will just have a black ball bouncing on the screen)</p>
 	</div>
 </div>
 
@@ -850,26 +877,33 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:940.0px">&quot;&quot;&quot;
+		<pre class="console" id="editor" style="height:1040.0px">&quot;&quot;&quot;
 File: gravity_ball.py
 -------------------
-A ball bounces as if due to gravity.
+A ball bounces as if due to gravity.  Specifically, each frame the y velocity increases
+downward to simulate gravity, and each time it bounces it loses some of its y velocity
+to simulate damping.
 &quot;&quot;&quot;
 
 import time
 from graphics import Canvas
 
-SIZE = 20
-DELAY = 0.02    # 20 milliseconds
+BALL_DIAMETER = 20
+ANIMATION_DELAY_SECONDS = 0.02
+
+# The amount to add each frame to the y velocity to simulate the pull of gravity
 GRAVITY = 0.5
+
+# The amount by which to multiply the y velocity each time we bounce (simulates losing energy)
 DAMPING = 0.7
+
 
 def main():
     canvas = Canvas()
     canvas.set_canvas_title(&quot;Gravity Ball&quot;)
 
     # draw a ball on the top left corner
-    ball = canvas.create_oval(0, 0, SIZE, SIZE)
+    ball = canvas.create_oval(0, 0, BALL_DIAMETER, BALL_DIAMETER)
     canvas.set_color(ball, &quot;black&quot;)
 
     # variables for velocity
@@ -881,18 +915,16 @@ def main():
         vy += GRAVITY
 
         # should the ball bounce?
-        if (canvas.get_top_y(ball) &gt; (canvas.get_canvas_height() - SIZE)) \
-                    and (vy &gt; 0):
+        if (canvas.get_top_y(ball) &gt; (canvas.get_canvas_height() - canvas.get_height(ball))) and vy &gt; 0:
+            # Dampen the velocity and invert the velocity
             vy = vy * -DAMPING
 
-        # move
         canvas.move(ball, vx, vy)
-
-        # animation pause. refresh canvas
-        time.sleep(DELAY)
+        time.sleep(ANIMATION_DELAY_SECONDS)
         canvas.update()
 
     canvas.mainloop()
+
 
 if __name__ == &quot;__main__&quot;:
     main()
