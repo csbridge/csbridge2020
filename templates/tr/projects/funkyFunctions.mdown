@@ -1,7 +1,7 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Fırlama Fonksiyonlar
 credit: Chris, Bryce, Lisa
-translation: Serhat Arslan, Ceren Kocaoğullar
+translation: Ceren Kocaoğullar, Serhat Arslan
 
 Örnek: [Ortalama Fonksiyonu]({{pathToRoot}}tr/projects/average/) <br/>
 
@@ -35,39 +35,43 @@ def main():
 0, 0, ve 0 sayılarının maksimumu: 0
 ```
 
-While there is a built-in `max` function in Python that we would normally use for this, for this problem you should not use it.  Instead, we want you to get practice implementing it with other things, like `if`, `elif` and `else` statements.
+Python'da normalde bunun için kullanacağımız yerleşik bir `max` fonksiyonu olmasına rağmen, bu problem için onu kullanmamalısınız. Bunun yerine, `if`, `elif` ve `else` ifadeleri gibi başka şeylerle uygulama pratiği yapmanızı istiyoruz.
 
 ## 2. Dog Years
 
 Dosya: `dog_years.py`
 
-Everyone knows that our furry friends age at a different rate to humans. Write a program that asks the user for a human age (expressed as a whole number) and prints the equivalent dog age using the fact that there are seven dog years per human year. Consider defining a constant `DOG_YEARS_PER_HUMAN_YEAR`. You can assume the user types in an integer age, but not necessarily that the integer is positive. If it isn't, print an error message.  If the user enters 0, the program should stop.
+Tüylü dostlarımızın insanlardan farklı bir oranda yaşlandığını herkes bilir. Kullanıcıdan bir insan yaşını (tam sayı olarak ifade edilir) soran ve insan yılı başına yedi köpek yılı olduğu gerçeğini kullanarak eşdeğer köpek yaşını yazdıran bir program yazın. Bir `DOG_YEARS_PER_HUMAN_YEAR` sabiti tanımlayın. Kullanıcıcının tamsayı girdiğini varsayabilirsiniz, ancak tam sayının pozitif olması şart değildir. Değilse, bir hata mesajı yazdırın. Kullanıcı 0 girerse, program durmalıdır.
 
-Your program should define a function called `compute_dog_years` which accepts as a parameter an integer called `human_years`. The function should return the converted human age. You should then edit the `main` function to call this function.
+Programınız, `human_years` olarak adlandırılan bir tamsayıyı parametre olarak kabul eden `compute_dog_years` adlı bir fonksiyon tanımlamalıdır. Fonksiyon, dönüştürülmüş insan yaşını döndürmelidir. Daha sonra bu fonksiyonu çağırmak için `main` fonksiyonunu düzenlemelisiniz.
+
 
 ```
 def compute_dog_years(human_years):
-    ... your code here ...
+    ... kodunuzu buraya yazın ...
 ```
 
-The main function is already written for you, but it is missing the code that calls your `compute_dog_years` function and prints out the correct statement.
+Main fonksiyonu zaten sizin için yazılmıştır, ancak `compute_dog_years` fonksiyonunuzu çağıran ve doğru ifadeyi yazdıran kod eksik.
+
 ```
 def main():
-    user_input = int(input("Enter an age in human years: "))
+    user_input = int(input("İnsan yılıyla bir yaş girin: "))
     while user_input != 0:
         if user_input < 0:
-            print("Sorry, please enter a positive number or 0 to exit")
+            print("Üzgünüz, lütfen pozitif bir sayı veya çıkmak için 0 girin:")
         else:
-            ... your code here ...
-        user_input = int(input("Enter an age in human years: "))
+            ... kodunuzu buraya yazın ...
+        user_input = int(input("İnsan yılıyla bir yaş girin: "))
 ```
 
-Here is an example of what one run of your program should look like (user inputs -12, 13, and 0, in order):
+
+İşte programınızın bir çalıştırmasının nasıl görünmesi gerektiğine dair bir örnek (kullanıcı girdilerinin sırayla -12, 13 ve 0 olduğunu düşünürsek):
+
 
 ```
-Enter an age in human years: -12
-Sorry, please enter a positive number or 0 to exit
-Enter an age in human years: 13
-The age in dog years is 91
-Enter an age in human years: 0
+İnsan yılıyla bir yaş girin: -12
+Üzgünüz, lütfen pozitif bir sayı veya çıkmak için 0 girin
+İnsan yaşında bir yaş girin: 13
+Köpek yılıyla yaş 91
+İnsan yılıyla bir yaş girin: 0
 ```
