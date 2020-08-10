@@ -80,7 +80,7 @@
 			{
 				"title_en": "Bouncing Balls",
 				"title_tr": "Zıplayan Toplar",
-				"imageURL": "img/icons/bouncingMultiple.png",
+				"imageURL": "img/projects/bouncingBalls/bouncingMultiple.png",
 				"url": "projects/bouncingBalls.html",
 				"teachURL": "teach/notes/bouncingBalls.html",
 				"difficulty": 1
