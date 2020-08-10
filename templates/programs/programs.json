@@ -73,7 +73,7 @@
           "url": "projects/stripeKarel.html"
         },
         {
-          "imageURL": "img/icons/hospitalKarel.png",
+          "imageURL": "img/projects/hospitalkarel/hospitalKarel.png",
           "teachURL": "teach/notes/hospitalKarel.html",
           "title_en": "Hospital Karel",
           "title_tr": "Hastaneci Karel",
@@ -183,7 +183,7 @@
           "teachURL": "teach/notes/viralVideo.html"
         },
         {
-          "imageURL": "img/icons/khansole.png",
+          "imageURL": "img/projects/khansole/khansole.png",
           "title_en": "Khansole Academy",
           "title_tr": "Khansole Akademi",
           "topic_en": "Conditionals",
@@ -382,7 +382,7 @@
           "teachURL": "teach/notes/printIndices.html"
         },
         {
-          "imageURL": "img/icons/illusion.png",
+          "imageURL": "img/projects/illusion/illusion1.png",
           "title_en": "Optical Illusion",
           "title_tr": "Optik İllüzyon",
           "topic_en": "For Loops",
