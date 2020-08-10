@@ -6,13 +6,13 @@ translation: Serhat Arslan ve Ahmet Uysal
 Ders Notları: [Grafik Referansı]({{pathToRoot}}tr/resources/graphics.html)<br/>
 Dosya: `illusion1.py`
 
-Bazen örüntülerin tekrar etmesi, gözlerimizin olmayan şeyleri görmesine yol açar. Aşağıdaki resme bakın. Beyaz çizgilerin kesişimlerindeki küçük gri kareleri görebiliyor musunuz? Optik illüzyon yaratan bir GraphicsProgram yazın:
+Bazen örüntülerin tekrar etmesi, gözlerimizin olmayan şeyleri görmesine yol açar. Aşağıdaki resme bakın. Beyaz çizgilerin kesişimlerindeki küçük gri kareleri görebiliyor musunuz? Optik illüzyon yaratan bir grafik programı yazın:
 
 <center>
   <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/illusion/illusion1.png">
 </center>
 
-# Sabitler
+## Sabitler
 
 Bu projenin başlangıç kodunda aşağıdaki satırların varlığı dikkatinizi çekmiş olabilir:
 
@@ -34,7 +34,7 @@ for i in range(100):
 
 Onun içindeki for döngüsü <code>i</code>' den başka bir döngü değişkeni kullanmalı.
 
-## Eklemeler
+# Eklemeler
 
 Dosya: `illusion2.py`
 
@@ -44,6 +44,4 @@ Vaktiniz olursa, bu optik illüzyonu yaratmayı deneyin! Tüm karelerin aynı bo
   <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/illusion/illusion2.png">
 </center>
 
-Eğer takılırsanız, her bir satırı ilk siyah karesi x = 0'da başlayacak şekilde çizmeyi deneyin. Ardından her satırın başındaki fazlalığın örüntüsünü nasıl oluşturabileceğinizi bulmaya çalışın.
-
-The top row is not offset, the row below it is offset 25% of the size of a square, the row below that is offset 50% the size of a square, the row below that is offset 25% of the size of a square, and this 4-row sequence repeats for the remaining rows.
+Eğer takılırsanız, her bir satırı ilk siyah karesi x = 0'da başlayacak şekilde çizmeyi deneyin. Ardından her satırın başındaki fazlalığın örüntüsünü nasıl oluşturabileceğinizi bulmaya çalışın. Üst sıra kaydırılmamıştır, altındaki satır bir karenin boyutunun %25'i kadar, bunun altındaki satır bir kare boyutunun %50'si kadar, altındaki satır ise bir karenin boyutunun %25'i kadar kaydırılmıştır. Bu 4 sıralı dizi, kalan sıralar için tekrar eder.

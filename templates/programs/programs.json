@@ -374,7 +374,7 @@
         {
           "imageURL": "img/projects/printIndices/logo.png",
           "title_en": "Print Indices",
-          "title_tr": "Print Indices",
+          "title_tr": "İndeksleri Yazdır",
           "topic_en": "For Loops",
           "topic_tr": "For Döngüsü",
           "type": "quickstart",

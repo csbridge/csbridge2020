@@ -418,7 +418,7 @@ visible-after, to ensure they display when you want them to.
 							<li
 									class="visible-after" data-visible-after="2020081100"
 							>
-								<a href="../../tr/projects/printIndices.html">Print Indices</a>
+								<a href="../../tr/projects/printIndices.html">İndeksleri Yazdır</a>
 							</li>
 							<li
 									class="visible-after" data-visible-after="2020081100"
@@ -807,14 +807,14 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Dosya: <code>bouncingball.py</code></p>
+		<p>Dosya: <code>bouncing_ball.py</code></p>
 <p>Bir top oluşturan ve ekranın etrafında onu zıplatan bir grafik programı yazın. Yerçekimini göz ardı edin. Top sol ve sağ duvara çarptığında x eksenindeki yönünü, üst ya da alt duvara çarptığında ise y eksenindeki yönünü değiştirin.</p>
 <p>Aşağıdaki şekil alt duvardan sekerek hareket eden bir topu gösteriyor.</p>
 <p><center>
   <img style="width:600px;" src="../../img/projects/bouncingBall/demo.png">
 </center></p>
 <h2 id="asama-1-bir-top-yarat">Aşama 1: Bir Top Yarat</h2>
-<p>Top herhangi bir boyutta olabilir.  Make it start at a random onscreen location.</p>
+<p>Top herhangi bir boyutta olabilir. Ekranda rastgele bir konumda başlamasını sağlayın.</p>
 <h2 id="asama-2-topu-hareket-ettir">Aşama 2: Topu Hareket Ettir</h2>
 <p>Sonsuza kadar çalışan bir döngü yazın. Döngünün içinde topun konumunu güncelleyin ve durdurun. Programınızın en yukarısına <code>import time</code> satırını ekleyerek ve aşağıdakini yaparak topu durdurabilirsiniz:</p>
 <pre><code>time.sleep(seconds)
@@ -829,7 +829,7 @@ filePath - the total path to the markdown file being rendered in this template
 <em>dy</em>, nesnenin y yönünde hareket edeceği piksel sayısıdır. <BR></p>
 <h2 id="asama-3-topu-sektir">Aşama 3: Topu Sektir</h2>
 <p>Şimdi, topun konumunu güncellemeden önce, top duvara çarpmış mı diye kontrol etmeli ve çarptıysa, hareket ettiği yönü güncellemelisiniz.</p>
-<p>Yansımalar, "gelen açı yansıyan açıya eşittir" kuralına uymalı. Ve bunu kod olarak yazması gayet kolay. Top sol ya da sağ duvara çarparsa x doğrultusundaki yönünü, alt ya da üst duvara çarparsa y doğrultusundaki yönünü değiştirerek bunu başarabilirsiniz.</p>
+<p>Yansımalar, "gelen açı yansıyan açıya eşittir" kuralına uymalı. Bunu, top sol ya da sağ duvara çarparsa x doğrultusundaki yönünü, alt ya da üst duvara çarparsa y doğrultusundaki yönünü değiştirerek bunu başarabilirsiniz.</p>
 <p>Topun konumunu nasıl bulacaksınız? Şu fonksiyonları kullanabilirsiniz:</p>
 <pre><code>canvas.get_left_x(obj)
 canvas.get_top_y(obj)
