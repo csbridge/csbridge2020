@@ -83,7 +83,7 @@
           "url": "projects/hospitalKarel.html"
         },
         {
-          "imageURL": "img/icons/randomPainter2.png",
+          "imageURL": "img/projects/randomPainter/randomPainter.png",
           "teachURL": "teach/notes/randomPainter.html",
           "title_en": "Random Painter",
           "title_tr": "Deli Ressam",
@@ -206,7 +206,7 @@
       "projectURL": "starter/Day3AM.zip",
       "projects": [
         {
-          "imageURL": "img/icons/sandcastle.jpg",
+          "imageURL": "img/projects/sandcastles/sandcastle.jpg",
           "title_en": "Sandcastles",
           "title_tr": "Kumdan Kaleler",
           "topic_en": "Variables",
@@ -216,7 +216,7 @@
           "teachURL": "teach/notes/sandcastles.html"
         },
         {
-          "imageURL": "img/icons/runningSum.png",
+          "imageURL": "img/projects/runningSum/runningSum.png",
           "title_en": "Run, Sum, Run!",
           "title_tr": "Topla ve Biriktir",
           "topic_en": "Variables",
@@ -279,7 +279,7 @@
           "teachURL": "teach/notes/awesome.html"
         },
         {
-          "imageURL": "img/icons/randomCircles.png",
+          "imageURL": "img/projects/randomCircles/demo1.png",
           "title_en": "Random Circles",
           "title_tr": "Tesadüfi Daireler",
           "topic_en": "Graphics and Randomness",
