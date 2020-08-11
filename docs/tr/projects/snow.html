@@ -487,6 +487,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../tr/projects/makingTracks.html">İz Çıkartmaca</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../tr/projects/snow.html">Kar</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -899,18 +904,14 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Çözümlü Örnekler: <a href="../../tr/projects/rocketShip.html">Roketler</a><br/>
+		<p>Çözümlü Örnekler: <a href="../../tr/projects/rocketPaddle/">Roketler</a><br/>
 Dosya: <code>snow.py</code></p>
 <p>Daireleri (kar) gökyüzünden düşecek ve yerde birikecek şekilde hareket ettirin.</p>
-<p><img src="../../img/projects/snow/snow.png" alt="a screenshot of the snow program with snow falling and stopping at the bottom of the screen" class="center" style="width: 90%" /></p>
+<p><img src="../../img/projects/snow/snow.png" alt="a screenshot of the snow program with snow falling and stopping at the bottom of the screen" class="center" style="width: 100%; border: 1px solid black" /></p>
 <p>Bir animasyon döngüsü kullanın. Her döngüde:</p>
 <ol>
-<li>
-<p>Yerde olmayan tüm kar tanelerini hareketlendirin</p>
-</li>
-<li>
-<p>Ekranın en üstünde rastgele yatay bir yerde %10 olasılıkla yeni bir kar tanesi oluşturun</p>
-</li>
+<li>Yerde olmayan tüm kar tanelerini hareketlendirin</li>
+<li>Ekranın en üstünde rastgele yatay bir yerde %10 olasılıkla yeni bir kar tanesi oluşturun</li>
 <li>Kanvas üzerinde <code>update()</code> fonksiyonunu çağırın</li>
 <li>10 milisaniye boyunca duraklatın</li>
 </ol>

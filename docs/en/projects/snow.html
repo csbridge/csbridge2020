@@ -487,6 +487,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../en/projects/makingTracks.html">Making Tracks</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/snow.html">Snow</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -894,18 +899,14 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Examples: <a href="../../en/projects/rocketShip.html">Rockets</a><br/>
+		<p>Examples: <a href="../../en/projects/rocketPaddle/">Rockets</a><br/>
 File: <code>snow.py</code></p>
 <p>Animate circles (snow) falling down from the sky and piling up on the ground.</p>
-<p><img src="../../img/projects/snow/snow.png" alt="a screenshot of the snow program with snow falling and stopping at the bottom of the screen" class="center" style="width: 90%" /></p>
+<p><img src="../../img/projects/snow/snow.png" alt="a screenshot of the snow program with snow falling and stopping at the bottom of the screen" class="center" style="width: 100%; border: 1px solid black" /></p>
 <p>Use an animation loop. Each time through the loop:</p>
 <ol>
-<li>
-<p>Animate all snow flakes not on the ground</p>
-</li>
-<li>
-<p>Generate a new snow flake at the top of the screen with 10% probability, at a random horizontal location</p>
-</li>
+<li>Animate all snow flakes not on the ground</li>
+<li>Generate a new snowflake at the top of the screen with 10% probability, at a random horizontal location</li>
 <li>Call <code>update()</code> on the canvas</li>
 <li>Pause for 10 milliseconds</li>
 </ol>

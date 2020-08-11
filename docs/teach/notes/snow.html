@@ -456,6 +456,10 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../en/projects/makingTracks.html">Making Tracks</a>
 							</li>
+							<li
+							>
+								<a href="../../en/projects/snow.html">Snow</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -839,75 +843,11 @@ visible-after, to ensure they display when you want them to.
 
 	<div class="row">
 		<div class="col-xs-12">
-            
-<p>
-	The problem below is the section problem for the day.  Here is information about the goals for the problem and what you should focus on during section:
-	<br />
-	<b>Learning Goal</b>: Basic ArrayList concepts, including add, remove, and looping through the elements in an ArrayList using a for loop and the index variable. 
-	<br />
-	<b>Milestone</b>: think through how to animate one snowflake - then how ArrayLists can help us animate multiple at the same time.  Then animate the snowflakes, but don't add new ones.  Finally, add the functionality to add new snowflakes 10% of the time.
-	<br />
-	<br />
-	The key concept is to realize that we can store all the snowflakes together and animate them "at the same time" (even though we are technically animating them each one after the other).
-    <br />
-    <br />
-    <p>Note: one potential solution approach that may be suggested is, instead of keeping all snowflakes in the arraylist forever and animating only the ones still falling, to remove ones that are no longer falling.  The challenge with this approach is it is tricky to update an arraylist while iterating over it due to the number of elements changing.  For this reason, it is easier to keep all snowflakes in the arraylist and animate only the ones that are falling.</p>
-</p>
-
-<h3>Solution</h3>
-<pre id="editor" style="height:700px">public class Snow extends GraphicsProgram {
-    
-    // The diameter of each snowflake
-    private static final int SNOWFLAKE_SIZE = 10;
-    
-    // How long to pause in between each animation frame
-    private static final int DELAY = 10;
-    
-    // The percent chance of creating a new snowflake each frame
-    private static final double SNOWFLAKE_CHANCE = 0.1;
-
-    private RandomGenerator rgen = new RandomGenerator();
-
-    public void run() {
-        ArrayList&lt;GOval&gt; snowflakes = new ArrayList&kt;GOval&gt;();
-
-        while(true) {
-            
-            // Move all snowflakes not at the bottom of the screen
-            for(int i = 0; i < snowflakes.size(); i++) {
-                GOval snowflake = snowflakes.get(i);
-                
-                // Move this snowflake if it is not at the bottom of the screen
-                if(snowflake.getY() < getHeight() - SNOWFLAKE_SIZE) {
-                    snowflake.move(0, 1);
-                }
-            }
-
-            // 10% chance of making a new snowflake at the top of the screen
-            if(rgen.nextBoolean(SNOWFLAKE_CHANCE)) {
-                GOval newSnowflake = new GOval(SNOWFLAKE_SIZE, SNOWFLAKE_SIZE);
-                newSnowflake.setFilled(true);
-                int snowflakeX = rgen.nextInt(getWidth() - SNOWFLAKE_SIZE);
-                add(newSnowflake, snowflakeX, -SNOWFLAKE_SIZE);
-                snowflakes.add(newSnowflake);
-            }
-
-            pause(DELAY);
-        }
-    }
-
-}</pre>
-    
-<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-   editor.setTheme('ace/theme/eclipse');
-   editor.getSession().setMode("ace/mode/java");
-   editor.setReadOnly(true);
-   editor.renderer.setShowGutter(false); 
-    /*editor.setTheme("ace/theme/eclipse");
-    editor.getSession().setMode("ace/mode/java");*/
-</script>	
+            <p>The problem below is the section problem for the day.  Here is information about the goals for the problem and what you should focus on during section:</p>
+<p><strong>Learning Goal:</strong> basic list concepts, including add, remove, and looping through the elements of a list using a <code>for</code> loop and the index variable.</p>
+<p><strong>Milestones</strong>: think through how to animate one snowflake - then how lists can help us animate multiple at the same time.  Then animate the snowflakes, but don't add new ones.  Finally, add the functionality to add new snowflakes 10% of the time.</p>
+<p>The key concept is to realize that we can store all the snowflakes together and animate them "at the same time" (even though we are technically animating them each one after the other).</p>
+<p>Note: one potential solution approach that may be suggested is, instead of keeping all snowflakes in the list forever and animating only the ones still falling, to remove ones that are no longer falling.  The challenge with this approach is it is tricky to update a list while iterating over it due to the number of elements changing.  For this reason, it is easier to keep all snowflakes in the list and animate only the ones that are falling.</p>	
 		</div>
 	</div>
 
