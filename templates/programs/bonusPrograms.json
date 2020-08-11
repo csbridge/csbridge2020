@@ -132,6 +132,14 @@
 				"url": "projects/numberGrid.html",
 				"teachURL": "teach/notes/numberGrid.html",
 				"difficulty": 3
+			},
+			{
+				"title_en": "Countdown",
+				"title_tr": "Countdown",
+				"imageURL": "img/projects/countdown/timesUp.png",
+				"url": "projects/countdown.html",
+				"teachURL": "teach/notes/countdown.html",
+				"difficulty": 2
 			}
 		]
 	}
