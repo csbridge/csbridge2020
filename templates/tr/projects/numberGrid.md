@@ -1,39 +1,40 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Number Grid
 credit: Lisa Yan
+translation: Ceren Kocaoğullar
 
-Handouts: [Graphics Reference]({{pathToRoot}}tr/resources/graphics.html)
+Ders Notları: [Graphikler Referansı]({{pathToRoot}}tr/resources/graphics.html)
 
-Relevant Example: [Optical Illusion]({{pathToRoot}}tr/projects/illusion.html)
+Alakalı Örnek: [Optik İlüzyon]({{pathToRoot}}tr/projects/illusion.html)
 
-File: `number_grid.py`
+Dosya: `number_grid.py`
 
-This is a bonus program! It's meant to be a bit difficult.
+Bu bir bonus programıdır! Biraz zorlayıcı olması için hazırlandı.
 
-Write a graphics program that draws a centered, numbered square grid on the screen, like this:
+Ekranda ortalanmış, numaralandırılmış kare bir ızgara çizen bir grafik programı yazın, örneğin:
 
 <center>
 	<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/numberGrid/grid25.jpg">	
 </center>
 
-Your program should do this by implementing a function `draw_numbered_grid` that can take in a dimension and draw a number grid with that many rows and that many columns.  Then your `main` function should call that function.  This means that your program should be able to handle different sizes of grids:
+Programınız bunu, bir boyut alabilen ve bu kadar satır ve o kadar sütunlu bir sayı ızgarası çizebilen bir `draw_numbered_grid` fonksiyonu oluşturarak yapmalıdır. Daha sonra, `main` fonksiyonunuz bu fonksiyonu çağırmalıdır. Bu, programınızın farklı boyutlardaki ızgaralarla başa çıkabilmesi gerektiği anlamına gelir:
 
 <center>
 	<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/numberGrid/grid36.jpg">	
 </center>
 
-## Milestones
+## Görevler
 
-1) First, try to draw a rectangle the size of the entire number grid in the correct position.  For instance, for 5x5 you would try to draw this:
+1. Önce, doğru konumda tüm sayı ızgarasının boyutunda bir dikdörtgen çizmeye çalışın. Örneğin, 5x5 için şunu çizmeye çalışmalısınız:
 
 <center>
 	<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/numberGrid/milestone1.png">	
 </center>
 
-2)  Break down your solution into another function that can draw a single square at a given position, displaying a given number.  Start by drawing just the red square, and not worrying about the number text within it.
+2. Çözümünüzü, belirli bir konumda tek bir kare çizebilen ve belirli bir sayıyı gösteren başka bir fonksiyona bölün. Sadece kırmızı kareyi çizerek başlayın ve içindeki sayı metni hakkında endişelenmeyin.
 
 <center>
 	<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/numberGrid/milestone2.png">	
 </center>
 
-3) Add the number text within each square.
+3. Her karenin içine sayı metnini ekleyin.

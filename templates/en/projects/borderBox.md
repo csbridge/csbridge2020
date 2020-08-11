@@ -53,7 +53,7 @@ Now let's see if we can get our box moving along the bottom of the screen.  Make
 </center>
 
 ### To the Window, to the Wall
-We don't want our box running into the wall!  Now, let's implement `fromt_is_clear()` to return `False` if the box cannot move any further without going past the edge of the canvas. (hint: you may need to add some parameters!)
+We don't want our box running into the wall!  Now, let's implement `front_is_clear()` to return `False` if the box cannot move any further without going past the edge of the canvas. (hint: you may need to add some parameters!)
 
 ### Getting Directions
 We're getting there!  Now let's implement `turn_left()` to return the new direction the box should face given its current direction.  (hint: you may need to add some parameters!)

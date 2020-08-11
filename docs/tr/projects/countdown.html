@@ -859,37 +859,40 @@ filePath - the total path to the markdown file being rendered in this template
 			Hazırlayan: Lisa Yan
 		</p>
 
+		<p>
+			Çeviren: Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../tr/resources/graphics.html">Graphics Reference</a></p>
-<p>File: <code>countdown.py</code></p>
-<p>This is a bonus program! It's meant to be a bit challenging.  Completing this program may help you write your final project.</p>
-<p>Write a graphics program that displays a timer counting down from ten, once a second, and displays a message once the timer hits zero.</p>
-<h1 id="milestones">Milestones</h1>
-<h2 id="setup">Setup</h2>
-<p>To implement this timer, we will need both a variable to store the graphical text on the canvas (the text object) and a counter variable that stores the number of seconds left, which we can decrement and use to update our graphical text.</p>
-<p>Your starting canvas should look something like this:</p>
+		<p>Ders Notları: <a href="../../tr/resources/graphics.html">Grafikler Referansı</a></p>
+<p>Dosya: <code>countdown.py</code></p>
+<p>Bu bir bonus programıdır! Biraz zorlayıcı olması için hazırlandı. Bu programı tamamlamak, final projenizi yazmanıza yardımcı olabilir.</p>
+<p>Saniyede bir ondan geriye doğru sayan bir zamanlayıcı gösteren ve zamanlayıcı sıfıra ulaştığında bir mesaj görüntüleyen bir grafik programı yazın.</p>
+<h1 id="gorevler">Görevler</h1>
+<h2 id="kurulum">Kurulum</h2>
+<p>Bu zamanlayıcıyı programlamak için, hem grafiksel metni canvas'ta (metin objesi) depolamak için bir değişkene hem de kalan saniye sayısını depolayan bir sayaç değişkenine ihtiyacımız olacak (bunu azaltabilir ve grafik metnimizi güncellemek için kullanabiliriz).</p>
+<p>Başlangıç canvas'ınız şunun gibi görünmelidir:</p>
 <p><center>
     <img style="width:500px" src="../../img/projects/countdown/countdown10.png">  <br />
 </center></p>
-<h2 id="implement-the-countdown">Implement the Countdown</h2>
-<p>Write your animation loop which updates both the logical and visual countdown representations every second.  You should update the text of the same label each time using <code>set_text()</code>.</p>
-<h2 id="zero-pad-the-timer">Zero-pad the Timer</h2>
-<p>Since this is a timer, we want to <em>zero-pad</em> our numbers, which means adding a zero to the front of a number so that it stays the same width. How would you update the visual representation of your countdown timer to display the following?</p>
+<h2 id="geri-saym-kodla">Geri Sayımı Kodla</h2>
+<p>Her saniye hem mantıksal hem de görsel geri sayım temsillerini güncelleyen bir animasyon döngüsü yazın. Her seferinde aynı etiketin metnini <code>set_text()</code> fonksiyonunu kullanarak güncellemelisiniz.</p>
+<h2 id="sola-sfr-ekle">Sola Sıfır Ekle</h2>
+<p>Bu bir zamanlayıcı olduğundan, sayılarımızı sola sıfır ekleyerek aynı uzunluğa getirmek istiyoruz. Aşağıdakileri görüntülemek için geri sayım sayacınızın görsel sunumunu nasıl güncellersiniz?</p>
 <p><center>
     <img style="width:500px" src="../../img/projects/countdown/countdown03.png">  <br />
 </center></p>
-<h2 id="end-message">End Message</h2>
-<p>Once the timer hits zero, display a message. It can be anything!</p>
+<h2 id="bitiris-mesaj">Bitiriş Mesajı</h2>
+<p>Zamanlayıcı sıfıra geldiğinde bir mesaj görüntüleyin. Herhangi bir şey olabilir!</p>
 <p><center>
     <img style="width:500px" src="../../img/projects/countdown/timesUp.png">  <br />
 </center></p>
-<h2 id="bonus-add-minutes">Bonus: Add Minutes</h2>
-<p>Now add minutes to your countdown display, so that the timer reads 1:00, 0:59, 0:58, and so on.  Try to keep a <em>single variable</em> that records your remaining time in seconds. Avoid tracking minutes and seconds separately.  But separate your single variable into minutes and seconds when you display the counter. Consider defining functions to make your logic very clear.To debug quickly, speed up your timer by reducing the pause time.  And don't forget the "mod" function! Example: <code>5 % 2</code>.</p>
+<h2 id="bonus-dakikalar-ekle">Bonus: Dakikaları Ekle</h2>
+<p>Şimdi geri sayım ekranınıza dakika ekleyin, böylece zamanlayıcı 1:00, 0:59, 0:58 vb. göstersin. Kalan sürenizi saniye olarak kaydeden <em>bir tek değişken</em> tutmaya çalışın. Dakikaları ve saniyeleri ayrı ayrı takip etmekten kaçının. Ancak sayacı görüntülerken değişkeninizi dakikalara ve saniyelere ayırın. Mantığınızı açık ve anlaşılır hale getirmek için fonksiyonlar tanımlamayı düşünün. Hızlı bir şekilde hata ayıklamak için duraklatma süresini kısaltarak zamanlayıcınızı hızlandırın. Ve "mod" işlevini unutmayın! Örnek: <code>5 % 2</code>.</p>
 	</div>
 </div>
 
