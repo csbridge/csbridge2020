@@ -1,61 +1,67 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Border Box
 credit: Lisa Yan
+translation: Ceren Kocaoğullar
 
-Handout: [Graphics Reference]({{pathToRoot}}tr/resources/graphics.html)
+Ders Notları: [Graphikler Referansı]({{pathToRoot}}tr/resources/graphics.html)
 
-File: `border_karel.py` and `border_box.py`
+Dosya: `border_karel.py` ve `border_box.py`
 
-This is a bonus program! It's meant to be a bit challenging.  Completing this program may help you write your final project.
+Bu bir bonus programıdır! Biraz zorlayıcı olması için hazırlandı. Bu programı tamamlamak, final projenizi yazmanıza yardımcı olabilir.
 
-The ultimate goal of this project is to write a graphics program that moves a box counter-clockwise around the border of the canvas.  But to give you more practice with functions, and to let you implement some of how Karel works, this bonus starts with a Karel program and turns it into a working graphics program.
+Bu projenin nihai amacı, bir kutuyu canvas'ın çevresinde saat yönünün tersine hareket ettiren bir grafik programı yazmaktır. Ancak size fonksiyonlarla ilgili daha fazla pratik vermek ve Karel'in çalışma şeklinin bir kısmını uygulamanıza izin vermek için, bu bonus bir Karel programıyla başlar ve onu çalışan bir grafik programına dönüştürür.
 
-# Welcome Back, Karel!
-title: `border_karel.py`
+# Tekrar Hoş Geldin Karel!
 
-Before we start with the Python version, let's write a Karel version.  Specifically, implement the `border_karel.py` program that has Karel move counter-clockwise around the border of the world.  One hiccup is that we want Karel to do this forever, so a `while True` loop seems like the right approach - but we can't use `while True` in Karel!  We need some Karel condition that will always be true.  Here's one - for this world, let's assume Karel always has beepers in its beeper bag.  Therefore, `beepers_in_bag()` will always be true, and `while beepers_in_bag()` will be an infinite loop, but in Karel!
+Dosya: `border_karel.py`
+
+Python versiyonuna başlamadan önce programın bir Karel versiyonu yazalım. Spesifik olarak, Karel'ın dünya sınırı boyunca saat yönünün tersine hareket etmesini sağlayan `border_karel.py` programını kodlayın. Dikkat edilmesi gereken bir şey, Karel'in bunu sonsuza kadar yapmasını istememizdir, bu nedenle bir `while True` döngüsü doğru yaklaşım gibi görünüyor - ancak Karel'da `while True` kullanamayız! Bu durumda, bunu sağlamak için her zaman doğru olacak bir Karel durumuna ihtiyacımız var. İşte bir tane - bu dünya için, Karel'in çağrı çantasında her zaman beeper'lar olduğunu varsayalım. Bu nedenle, `beepers_in_bag()` her zaman doğru olacak ve `while beepers_in_bag()`, Karel'da sonsuz bir döngü olacaktır!
 
 <center>
 	<img style="width:300px" src="{{pathToRoot}}img/projects/borderBox/borderKarel.png">	
 </center>
 
-# From Karel to Python
-Now, we're going to get a better idea of what functions like `move()`, `front_is_clear()` and `turn_left()` must do under the hood in Karel (hint: you should have used these functions in your solution from part 1!).  Follow these steps to copy your `border_karel.py` program over to `border_box.py`:
+# Karel'dan Python'a
 
-1) Copy your Karel code in between the two comments marking where to put your code.
+Şimdi, Karel'de `move()`, `front_is_clear()` ve `turn_left()` gibi fonksiyonların iç işleyişlerinde ne yapması gerektiğine dair daha iyi bir fikir edineceğiz (ipucu: bu fonksiyonları sizin 1. bölümdeki çözümünüzde kullanmış olmalısınız!). `border_karel.py` programınızı `border_box.py` üzerine kopyalamak için şu adımları izleyin:
 
-2) Change the `beepers_in_bag()` to `True` - since we can now use `while True` loops again.
+1. Karel kodunuzu, kodunuzu nereye koyacağınızı gösteren iki yorum arasında kopyalayın.
 
-3) PyCharm will complain that the Karel functions we have used are not defined.  Let's make stubs of these functions.  Add one for each like this:
+2. `beepers_in_bag()` değerini `True` olarak değiştirin - çünkü artık `while True` döngülerini tekrar kullanabiliyoruz.
+
+3. PyCharm, kullandığımız Karel fonksiyonlarının tanımlanmadığından şikayet edecektir. Bu işlevlerin taslaklarını yapalım. Her biri için şuna benzer bir tane ekleyin:
 
 ```
 def turn_left():
 	pass
 ```
 
-The `pass` just means the function does nothing - we'll actually implement them later.
+`pass`, fonksiyonun hiçbir şey yapmadığı anlamına gelir - onları daha sonra gerçekten uygulayacağız.
 
-### Be Square
+### Kare
 
-In our graphics program, we'll represent "Karel" with two variables - a green square graphical object and a direction.  The direction can be one of `NORTH`, `SOUTH`, `EAST` or `WEST` - these are all constants defined in the file for you.				
+Grafik programımızda "Karel" i iki değişkenle temsil edeceğiz - yeşil bir kare ve bir yön. Yön,`NORTH`, `SOUTH`, `EAST` veya `WEST` olabilir - bunların tümü sizin için dosyada tanımlanan sabitlerdir.
 
-Add new code in `main()` before your pasted Karel code to create the green box and initialize the direction to `EAST`.  The box should be initialized in the bottom left of the canvas, just like Karel.
-           
+Yeşil kutuyu oluşturmak ve yönü `EAST` olarak başlatmak için Karel kodunuzu yapıştırdığınızdan önce `main()` içine yeni kod ekleyin. Kutu, tıpkı Karel gibi, tuvalin sol alt kısmında başlatılmalıdır.
+
 <center>
 	<img style="width:300px" src="{{pathToRoot}}img/projects/borderBox/boxSetup.png">	
 </center>
 
-### Let's Move It
-Now let's see if we can get our box moving along the bottom of the screen.  Make your `front_is_clear()` function return `True` for now.  Then implement `move()` (hint: you may need to add some parameters!) to move the box one step to the east.  A "step" is defined just like it is for Karel - move the complete size of the box, plus a gap.  Use the constants to help you!  Finally, add a call to `canvas.update()` in your `while` loop after calling `move()` - remember that we must update the canvas each frame in our animation.  Also add a call to `time.sleep()` to make the animation slow enough so we can see it.
+### Haydi Hareket!
+
+Şimdi kutumuzu ekranın alt kısmında hareket ettirebilecekmiyiz görelim. `front_is_clear()` işlevinizin şimdilik `True` döndürmesini sağlayın. Ardından kutuyu bir adım doğuya taşımak için `move()`u kodlayın (ipucu: bazı parametreler eklemeniz gerekebilir!). Karel için olduğu gibi bir "adım" tanımlamalısınız - kutunun tam boyutunu artı bir boşluk taşıyın. Size yardımcı olması için sabitleri kullanın! Son olarak, `move()` öğesini çağırdıktan sonra `while` döngüsüne `canvas.update()` çağrısı ekleyin - animasyonumuzdaki her kareyi tuvali güncellememiz gerektiğini unutmayın. Ayrıca, animasyonu görebilmemiz için yeterince yavaş hale getirmek için `time.sleep()`i çağırmalısınız.
 
 <center>
 	<img style="width:300px" src="{{pathToRoot}}img/projects/borderBox/boxMove.png">	
 </center>
 
-### To the Window, to the Wall
-We don't want our box running into the wall!  Now, let's implement `fromt_is_clear()` to return `False` if the box cannot move any further without going past the edge of the canvas. (hint: you may need to add some parameters!)
+### Pencereye, Duvara
 
-### Getting Directions
-We're getting there!  Now let's implement `turn_left()` to return the new direction the box should face given its current direction.  (hint: you may need to add some parameters!)
+Kutumuzun duvara çarpmasını istemiyoruz! Şimdi, kutu tuvalin kenarını geçmeden daha fazla hareket edemiyorsa, `False` döndürmek için `front_is_clear()`ı kodlayalım. (ipucu: bazı parametreler eklemeniz gerekebilir!)
 
-Finally, update `front_is_clear()` and `move()` to behave differently depending on the current direction.
+### Yol Tarifi Alma
+
+Oraya gidiyoruz! Şimdi kutunun şu anki yönü verildiğinde bakması gereken yeni yönü döndürmek için`turn_left()` uygulayalım. (ipucu: bazı parametreler eklemeniz gerekebilir!)
+
+Son olarak, mevcut yöne bağlı olarak farklı davranmak için `front_is_clear()` ve `move()` öğelerini güncelleyin.
