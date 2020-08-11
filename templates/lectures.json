@@ -67,6 +67,13 @@
 		"slidesURL": "slides/10-Animation.pdf",
 		"codeURL": "starter/lectures/Lecture10.zip",
 		"visible_after": "2020081109"
+	},
+	{
+		"title_en": "Lists",
+		"title_tr": "",
+		"slidesURL": "slides/Lecture11.pdf",
+		"codeURL": "starter/lectures/Lecture11.zip",
+		"visible_after": "2020081200"
 	}
 
 ]
