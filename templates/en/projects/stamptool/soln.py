@@ -21,7 +21,8 @@ def main():
         for click in clicks:
             draw_stamp(canvas, click.x, click.y, 'black')
 
-        canvas.raise_to_front(stamp_tool)  # stamp tool should be topmost
+        # stamp tool should be topmost
+        canvas.raise_to_front(stamp_tool)
         center_stamp(canvas, stamp_tool, canvas.get_mouse_x(), canvas.get_mouse_y())
         canvas.update()
 
@@ -33,10 +34,9 @@ def draw_stamp(canvas, x, y, color):
     Draws a stamp (rect) of the given color centered around the given location.
     Returns the rectangle drawn.
     """
-    x -= STAMP_SIZE / 2
-    y -= STAMP_SIZE / 2
-    rect = canvas.create_rectangle(x, y, x + STAMP_SIZE, y + STAMP_SIZE)
-    canvas.set_fill_color(rect, color)
+    rect = canvas.create_rectangle(x - STAMP_SIZE / 2, y - STAMP_SIZE / 2,
+                                   x + STAMP_SIZE / 2, y + STAMP_SIZE / 2)
+    canvas.set_color(rect, color)
     return rect
 
 
@@ -44,7 +44,7 @@ def center_stamp(canvas, stamp, x, y):
     """
     Repositions the given stamp (rect) to be centered around the given location.
     """
-    canvas.move_to(stamp, x - STAMP_SIZE / 2, y - STAMP_SIZE / 2)
+    canvas.moveto(stamp, x - canvas.get_width(stamp) / 2, y - canvas.get_height(stamp) / 2)
 
 
 if __name__ == "__main__":

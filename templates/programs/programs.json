@@ -474,6 +474,13 @@
     "evening": {
       "projectURL": "starter/Day7PM.zip",
       "visible_after": "2020081209",
+      "examples": [
+        {
+        "title_en": "Stamp Tool",
+        "title_tr": "Damga Makinesi",
+        "url": "projects/stampTool/"
+        }
+      ],
       "projects": [
         {
           "imageURL": "img/projects/mouseLocation/mouseLocation.png",
