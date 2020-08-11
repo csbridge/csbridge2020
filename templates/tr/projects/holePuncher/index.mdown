@@ -7,11 +7,9 @@ solution: soln.py
 Bu örnek, bilgisayarınızı bir kağıt ve farenizi bir delgeç gibi kullanmanıza izin verir. Kullanıcı ekranda herhangi bir yere tıklayabilmeli ve orada delikler (ovaller) oluşturabilmelidir.
 
 <center>
-  <!--<img style="width:500px;border:1px solid #000000"
-          alt = "Hole puncher demo"
-          src="{{pathToRoot}}img/projects/hole_puncher/demo.gif">
-  -->
-  <img style="width:500px;border:1px solid #000000" src="demo.gif">
+  <img style="width:500px;border:1px solid #000000"
+       alt = "Hole puncher demo"
+       src="{{pathToRoot}}img/projects/holePuncher/demo.gif">
 </center>
 
 `HOLE_RADIUS` sabiti, delinecek olan her deliğin yarıçapını temsil eder. 10, bunun için iyi bir boyuttur.

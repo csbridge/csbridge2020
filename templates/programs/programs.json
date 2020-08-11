@@ -476,9 +476,14 @@
       "visible_after": "2020081209",
       "examples": [
         {
-        "title_en": "Stamp Tool",
-        "title_tr": "Damga Makinesi",
-        "url": "projects/stampTool/"
+          "title_en": "Stamp Tool",
+          "title_tr": "Damga Makinesi",
+          "url": "projects/stampTool/"
+        },
+        {
+          "title_en": "Hole Puncher",
+          "title_tr": "Delgeç",
+          "url": "projects/holePuncher/"
         }
       ],
       "projects": [

@@ -703,6 +703,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../../tr/projects/stampTool/">Damga Makinesi</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../tr/projects/holePuncher/">Delgeç</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -932,11 +937,9 @@ filePath - the total path to the markdown file being rendered in this template
 	<div class="col-xs-12">
 		<p>Bu örnek, bilgisayarınızı bir kağıt ve farenizi bir delgeç gibi kullanmanıza izin verir. Kullanıcı ekranda herhangi bir yere tıklayabilmeli ve orada delikler (ovaller) oluşturabilmelidir.</p>
 <p><center>
-  <!--<img style="width:500px;border:1px solid #000000"
-          alt = "Hole puncher demo"
-          src="../../../img/projects/hole_puncher/demo.gif">
-  -->
-  <img style="width:500px;border:1px solid #000000" src="demo.gif">
+  <img style="width:500px;border:1px solid #000000"
+       alt = "Hole puncher demo"
+       src="../../../img/projects/holePuncher/demo.gif">
 </center></p>
 <p><code>HOLE_RADIUS</code> sabiti, delinecek olan her deliğin yarıçapını temsil eder. 10, bunun için iyi bir boyuttur.</p>
 	</div>
@@ -952,7 +955,7 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:740.0px">&quot;&quot;&quot;
+		<pre class="console" id="editor" style="height:760.0px">&quot;&quot;&quot;
 File: hole_puncher.py
 ---------------------
 This program lets you click anywhere on the canvas to
@@ -982,8 +985,9 @@ def draw_hole(canvas, x, y):
     &quot;&quot;&quot;
     Draws a circle on the canvas centered at the given location.
     &quot;&quot;&quot;
-    oval = canvas.create_oval(x - HOLE_RADIUS, y - HOLE_RADIUS, x + HOLE_RADIUS, y + HOLE_RADIUS)
-    canvas.set_fill_color(oval, &#039;black&#039;)
+    oval = canvas.create_oval(x - HOLE_RADIUS, y - HOLE_RADIUS,
+                              x + HOLE_RADIUS, y + HOLE_RADIUS)
+    canvas.set_color(oval, &#039;black&#039;)
 
 
 if __name__ == &quot;__main__&quot;:
