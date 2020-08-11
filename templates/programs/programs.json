@@ -395,6 +395,7 @@
     },
     "evening": {
       "projectURL": "starter/Day6PM.zip",
+      "visible_after": "2020081109",
       "examples": [
         {
           "title_en": "Move to Center",

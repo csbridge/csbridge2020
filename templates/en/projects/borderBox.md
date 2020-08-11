@@ -46,7 +46,7 @@ Add new code in `main()` before your pasted Karel code to create the green box a
 </center>
 
 ### Let's Move It
-Now let's see if we can get our box moving along the bottom of the screen.  Make your `front_is_clear()` function return `True` for now.  Then implement `move()` (hint: you may need to add some parameters!) to move the box one step to the east.  A "step" is defined just like it is for Karel - move the complete size of the box, plus a gap.  Use the constants to help you!  Finally, add a call to `canvas.update()` in your `while` loop after calling `move()` - remember that we must update the canvas each frame in our animation.
+Now let's see if we can get our box moving along the bottom of the screen.  Make your `front_is_clear()` function return `True` for now.  Then implement `move()` (hint: you may need to add some parameters!) to move the box one step to the east.  A "step" is defined just like it is for Karel - move the complete size of the box, plus a gap.  Use the constants to help you!  Finally, add a call to `canvas.update()` in your `while` loop after calling `move()` - remember that we must update the canvas each frame in our animation.  Also add a call to `time.sleep()` to make the animation slow enough so we can see it.
 
 <center>
 	<img style="width:300px" src="{{pathToRoot}}img/projects/borderBox/boxMove.png">	
@@ -55,7 +55,7 @@ Now let's see if we can get our box moving along the bottom of the screen.  Make
 ### To the Window, to the Wall
 We don't want our box running into the wall!  Now, let's implement `fromt_is_clear()` to return `False` if the box cannot move any further without going past the edge of the canvas. (hint: you may need to add some parameters!)
 
-### Directions
+### Getting Directions
 We're getting there!  Now let's implement `turn_left()` to return the new direction the box should face given its current direction.  (hint: you may need to add some parameters!)
 
 Finally, update `front_is_clear()` and `move()` to behave differently depending on the current direction.
