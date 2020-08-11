@@ -443,11 +443,12 @@
     }
   },
   {
-    "title_en": "Mouse and Lists",
-    "title_tr": "Mouse and Lists",
+    "title_en": "Lists and Mouse",
+    "title_tr": "Lists and Mouse",
     "visible_after": "2020081200",
-    "morning": {
-      "projectURL": "starter/Day7AM.zip",
+    "evening": {
+      "projectURL": "starter/Day7PM.zip",
+      "visible_after": "2020081209",
       "projects": [
         {
           "imageURL": "img/projects/mouseLocation/mouseLocation.png",
@@ -468,6 +469,31 @@
           "type": "project",
           "url": "projects/makingTracks.html",
           "teachURL": "teach/notes/makingTracks.html"
+        }
+      ]
+    },
+    "morning": {
+      "projectURL": "starter/Day7AM.zip",
+      "projects": [
+        {
+          "imageURL": "img/projects/sorted/sorted.jpg",
+          "title_en": "Sorted Numbers",
+          "title_tr": "Sıralayıcı",
+          "topic_en": "Lists",
+          "topic_tr": "Lists",
+          "type": "quickstart",
+          "url": "projects/sorted.html",
+          "teachURL": "teach/notes/sorted.html"
+        },
+        {
+          "imageURL": "img/projects/ascending/icon.jpg",
+          "title_en": "Ascending Numbers",
+          "title_tr": "Ascending Numbers",
+          "topic_en": "Lists",
+          "topic_tr": "Lists",
+          "type": "project",
+          "url": "projects/ascending.html",
+          "teachURL": "teach/notes/ascending.html"
         }
       ]
     }
