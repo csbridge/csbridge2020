@@ -3,17 +3,16 @@ title: Karlar Düşer
 credit: Chris Piech
 translation: Ceren Kocaoğullar
 
-Çözümlü Örnekler: [Roketler]({{pathToRoot}}tr/projects/rocketShip.html)<br/>
+Çözümlü Örnekler: [Roketler]({{pathToRoot}}tr/projects/rocketPaddle/)<br/>
 Dosya: `snow.py`
 
 Daireleri (kar) gökyüzünden düşecek ve yerde birikecek şekilde hareket ettirin.
 
-<img src="{{pathToRoot}}img/projects/snow/snow.png" alt="a screenshot of the snow program with snow falling and stopping at the bottom of the screen" class="center" style="width: 90%" />
+<img src="{{pathToRoot}}img/projects/snow/snow.png" alt="a screenshot of the snow program with snow falling and stopping at the bottom of the screen" class="center" style="width: 100%; border: 1px solid black" />
 
 Bir animasyon döngüsü kullanın. Her döngüde:
 
 1. Yerde olmayan tüm kar tanelerini hareketlendirin
-
-- Ekranın en üstünde rastgele yatay bir yerde %10 olasılıkla yeni bir kar tanesi oluşturun
-- Kanvas üzerinde `update()` fonksiyonunu çağırın
-- 10 milisaniye boyunca duraklatın
+* Ekranın en üstünde rastgele yatay bir yerde %10 olasılıkla yeni bir kar tanesi oluşturun
+* Kanvas üzerinde `update()` fonksiyonunu çağırın
+* 10 milisaniye boyunca duraklatın

@@ -451,7 +451,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020081200"
 		>
-			<a tabindex="-1" href="#">7: Mouse and Lists</a>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
 
 			<!-- For each of morning/evening, add a "side popup" -->
 			<ul class="dropdown-menu">
@@ -464,12 +464,38 @@ visible-after, to ensure they display when you want them to.
 							<li
 									class="visible-after" data-visible-after="2020081200"
 							>
-								<a href="../../../en/projects/mouseLocation.html">Mouse Location</a>
+								<a href="../../../en/projects/sorted.html">Sorted Numbers</a>
 							</li>
 							<li
 									class="visible-after" data-visible-after="2020081200"
 							>
+								<a href="../../../en/projects/ascending.html">Ascending Numbers</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../en/projects/mouseLocation.html">Mouse Location</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
 								<a href="../../../en/projects/makingTracks.html">Making Tracks</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../en/projects/snow.html">Snow</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
 							</li>
 			</ul>
 		</li>
@@ -655,6 +681,32 @@ visible-after, to ensure they display when you want them to.
 									class="visible-after" data-visible-after="2020081109"
 							>
 								<a href="../../../en/projects/gravityBall/">Gravity Ball</a>
+							</li>
+			</ul>
+		</li>
+
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../en/projects/stampTool/">Stamp Tool</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../en/projects/holePuncher/">Hole Puncher</a>
 							</li>
 			</ul>
 		</li>
@@ -920,7 +972,8 @@ def main():
         for click in clicks:
             draw_stamp(canvas, click.x, click.y, &#039;black&#039;)
 
-        canvas.raise_to_front(stamp_tool)  # stamp tool should be topmost
+        # stamp tool should be topmost
+        canvas.raise_to_front(stamp_tool)
         center_stamp(canvas, stamp_tool, canvas.get_mouse_x(), canvas.get_mouse_y())
         canvas.update()
 
@@ -932,10 +985,9 @@ def draw_stamp(canvas, x, y, color):
     Draws a stamp (rect) of the given color centered around the given location.
     Returns the rectangle drawn.
     &quot;&quot;&quot;
-    x -= STAMP_SIZE / 2
-    y -= STAMP_SIZE / 2
-    rect = canvas.create_rectangle(x, y, x + STAMP_SIZE, y + STAMP_SIZE)
-    canvas.set_fill_color(rect, color)
+    rect = canvas.create_rectangle(x - STAMP_SIZE / 2, y - STAMP_SIZE / 2,
+                                   x + STAMP_SIZE / 2, y + STAMP_SIZE / 2)
+    canvas.set_color(rect, color)
     return rect
 
 
@@ -943,7 +995,7 @@ def center_stamp(canvas, stamp, x, y):
     &quot;&quot;&quot;
     Repositions the given stamp (rect) to be centered around the given location.
     &quot;&quot;&quot;
-    canvas.move_to(stamp, x - STAMP_SIZE / 2, y - STAMP_SIZE / 2)
+    canvas.moveto(stamp, x - canvas.get_width(stamp) / 2, y - canvas.get_height(stamp) / 2)
 
 
 if __name__ == &quot;__main__&quot;:

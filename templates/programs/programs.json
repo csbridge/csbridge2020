@@ -366,7 +366,7 @@
   },
   {
     "title_en": "Loops and Animation",
-    "title_tr": "Loops and Animation",
+    "title_tr": "Döngüsü / Animasyon",
     "visible_after": "2020081100",
     "morning": {
       "projectURL": "starter/Day6AM.zip",
@@ -443,11 +443,49 @@
     }
   },
   {
-    "title_en": "Mouse and Lists",
-    "title_tr": "Mouse and Lists",
+    "title_en": "Lists and Mouse",
+    "title_tr": "Lists and Mouse",
     "visible_after": "2020081200",
     "morning": {
       "projectURL": "starter/Day7AM.zip",
+      "projects": [
+        {
+          "imageURL": "img/projects/sorted/sorted.jpg",
+          "title_en": "Sorted Numbers",
+          "title_tr": "Sıralayıcı",
+          "topic_en": "Lists",
+          "topic_tr": "Lists",
+          "type": "quickstart",
+          "url": "projects/sorted.html",
+          "teachURL": "teach/notes/sorted.html"
+        },
+        {
+          "imageURL": "img/projects/ascending/icon.jpg",
+          "title_en": "Ascending Numbers",
+          "title_tr": "Ascending Numbers",
+          "topic_en": "Lists",
+          "topic_tr": "Lists",
+          "type": "project",
+          "url": "projects/ascending.html",
+          "teachURL": "teach/notes/ascending.html"
+        }
+      ]
+    },
+    "evening": {
+      "projectURL": "starter/Day7PM.zip",
+      "visible_after": "2020081209",
+      "examples": [
+        {
+          "title_en": "Stamp Tool",
+          "title_tr": "Damga Makinesi",
+          "url": "projects/stampTool/"
+        },
+        {
+          "title_en": "Hole Puncher",
+          "title_tr": "Delgeç",
+          "url": "projects/holePuncher/"
+        }
+      ],
       "projects": [
         {
           "imageURL": "img/projects/mouseLocation/mouseLocation.png",
@@ -465,9 +503,29 @@
           "title_tr": "İz Çıkartmaca",
           "topic_en": "Mouse",
           "topic_tr": "Mouse",
-          "type": "project",
+          "type": "section",
           "url": "projects/makingTracks.html",
           "teachURL": "teach/notes/makingTracks.html"
+        },
+        {
+          "imageURL": "img/projects/snow/snowflake.png",
+          "title_en": "Snow",
+          "title_tr": "Kar",
+          "topic_en": "Lists",
+          "topic_tr": "Lists",
+          "type": "section",
+          "url": "projects/snow.html",
+          "teachURL": "teach/notes/snow.html"
+        },
+        {
+          "imageURL": "img/projects/catchMeIfYouCan/demo1.png",
+          "title_en": "Catch Me If You Can",
+          "title_tr": "Catch Me If You Can",
+          "topic_en": "Lists and Mouse",
+          "topic_tr": "Lists and Mouse",
+          "type": "project",
+          "url": "projects/catchMeIfYouCan.html",
+          "teachURL": "teach/notes/catchMeIfYouCan.html"
         }
       ]
     }

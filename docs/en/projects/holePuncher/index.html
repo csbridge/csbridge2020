@@ -451,7 +451,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020081200"
 		>
-			<a tabindex="-1" href="#">7: Mouse and Lists</a>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
 
 			<!-- For each of morning/evening, add a "side popup" -->
 			<ul class="dropdown-menu">
@@ -464,12 +464,38 @@ visible-after, to ensure they display when you want them to.
 							<li
 									class="visible-after" data-visible-after="2020081200"
 							>
-								<a href="../../../en/projects/mouseLocation.html">Mouse Location</a>
+								<a href="../../../en/projects/sorted.html">Sorted Numbers</a>
 							</li>
 							<li
 									class="visible-after" data-visible-after="2020081200"
 							>
+								<a href="../../../en/projects/ascending.html">Ascending Numbers</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../en/projects/mouseLocation.html">Mouse Location</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
 								<a href="../../../en/projects/makingTracks.html">Making Tracks</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../en/projects/snow.html">Snow</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
 							</li>
 			</ul>
 		</li>
@@ -655,6 +681,32 @@ visible-after, to ensure they display when you want them to.
 									class="visible-after" data-visible-after="2020081109"
 							>
 								<a href="../../../en/projects/gravityBall/">Gravity Ball</a>
+							</li>
+			</ul>
+		</li>
+
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../en/projects/stampTool/">Stamp Tool</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../en/projects/holePuncher/">Hole Puncher</a>
 							</li>
 			</ul>
 		</li>
@@ -898,7 +950,7 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:740.0px">&quot;&quot;&quot;
+		<pre class="console" id="editor" style="height:760.0px">&quot;&quot;&quot;
 File: hole_puncher.py
 ---------------------
 This program lets you click anywhere on the canvas to
@@ -928,8 +980,9 @@ def draw_hole(canvas, x, y):
     &quot;&quot;&quot;
     Draws a circle on the canvas centered at the given location.
     &quot;&quot;&quot;
-    oval = canvas.create_oval(x - HOLE_RADIUS, y - HOLE_RADIUS, x + HOLE_RADIUS, y + HOLE_RADIUS)
-    canvas.set_fill_color(oval, &#039;black&#039;)
+    oval = canvas.create_oval(x - HOLE_RADIUS, y - HOLE_RADIUS,
+                              x + HOLE_RADIUS, y + HOLE_RADIUS)
+    canvas.set_color(oval, &#039;black&#039;)
 
 
 if __name__ == &quot;__main__&quot;:

@@ -405,7 +405,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020081100"
 		>
-			<a tabindex="-1" href="#">6: Loops and Animation</a>
+			<a tabindex="-1" href="#">6: Döngüsü / Animasyon</a>
 
 			<!-- For each of morning/evening, add a "side popup" -->
 			<ul class="dropdown-menu">
@@ -451,7 +451,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020081200"
 		>
-			<a tabindex="-1" href="#">7: Mouse and Lists</a>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
 
 			<!-- For each of morning/evening, add a "side popup" -->
 			<ul class="dropdown-menu">
@@ -464,12 +464,38 @@ visible-after, to ensure they display when you want them to.
 							<li
 									class="visible-after" data-visible-after="2020081200"
 							>
-								<a href="../../tr/projects/mouseLocation.html">Mouse Location</a>
+								<a href="../../tr/projects/sorted.html">Sıralayıcı</a>
 							</li>
 							<li
 									class="visible-after" data-visible-after="2020081200"
 							>
+								<a href="../../tr/projects/ascending.html">Ascending Numbers</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../tr/projects/mouseLocation.html">Mouse Location</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
 								<a href="../../tr/projects/makingTracks.html">İz Çıkartmaca</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../tr/projects/snow.html">Kar</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../tr/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
 							</li>
 			</ul>
 		</li>
@@ -636,7 +662,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020081100"
 		>
-			<a tabindex="-1" href="#">6: Loops and Animation</a>
+			<a tabindex="-1" href="#">6: Döngüsü / Animasyon</a>
 
 			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
 			<ul class="dropdown-menu">
@@ -655,6 +681,32 @@ visible-after, to ensure they display when you want them to.
 									class="visible-after" data-visible-after="2020081109"
 							>
 								<a href="../../tr/projects/gravityBall/">Seken Top</a>
+							</li>
+			</ul>
+		</li>
+
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../tr/projects/stampTool/">Damga Makinesi</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../tr/projects/holePuncher/">Delgeç</a>
 							</li>
 			</ul>
 		</li>
@@ -883,18 +935,14 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Çözümlü Örnekler: <a href="../../tr/projects/rocketShip.html">Roketler</a><br/>
+		<p>Çözümlü Örnekler: <a href="../../tr/projects/rocketPaddle/">Roketler</a><br/>
 Dosya: <code>snow.py</code></p>
 <p>Daireleri (kar) gökyüzünden düşecek ve yerde birikecek şekilde hareket ettirin.</p>
-<p><img src="../../img/projects/snow/snow.png" alt="a screenshot of the snow program with snow falling and stopping at the bottom of the screen" class="center" style="width: 90%" /></p>
+<p><img src="../../img/projects/snow/snow.png" alt="a screenshot of the snow program with snow falling and stopping at the bottom of the screen" class="center" style="width: 100%; border: 1px solid black" /></p>
 <p>Bir animasyon döngüsü kullanın. Her döngüde:</p>
 <ol>
-<li>
-<p>Yerde olmayan tüm kar tanelerini hareketlendirin</p>
-</li>
-<li>
-<p>Ekranın en üstünde rastgele yatay bir yerde %10 olasılıkla yeni bir kar tanesi oluşturun</p>
-</li>
+<li>Yerde olmayan tüm kar tanelerini hareketlendirin</li>
+<li>Ekranın en üstünde rastgele yatay bir yerde %10 olasılıkla yeni bir kar tanesi oluşturun</li>
 <li>Kanvas üzerinde <code>update()</code> fonksiyonunu çağırın</li>
 <li>10 milisaniye boyunca duraklatın</li>
 </ol>
