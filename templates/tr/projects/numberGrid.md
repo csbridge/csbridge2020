@@ -25,16 +25,16 @@ Programınız bunu, bir boyut alabilen ve bu kadar satır ve o kadar sütunlu bi
 
 ## Görevler
 
-1. Önce, doğru konumda tüm sayı ızgarasının boyutunda bir dikdörtgen çizmeye çalışın. Örneğin, 5x5 için şunu çizmeye çalışmalısınız:
+1) Önce, doğru konumda tüm sayı ızgarasının boyutunda bir dikdörtgen çizmeye çalışın. Örneğin, 5x5 için şunu çizmeye çalışmalısınız:
 
 <center>
 	<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/numberGrid/milestone1.png">	
 </center>
 
-2. Çözümünüzü, belirli bir konumda tek bir kare çizebilen ve belirli bir sayıyı gösteren başka bir fonksiyona bölün. Sadece kırmızı kareyi çizerek başlayın ve içindeki sayı metni hakkında endişelenmeyin.
+2) Çözümünüzü, belirli bir konumda tek bir kare çizebilen ve belirli bir sayıyı gösteren başka bir fonksiyona bölün. Sadece kırmızı kareyi çizerek başlayın ve içindeki sayı metni hakkında endişelenmeyin.
 
 <center>
 	<img style="width:400px;border:2px solid grey" src="{{pathToRoot}}img/projects/numberGrid/milestone2.png">	
 </center>
 
-3. Her karenin içine sayı metnini ekleyin.
+3) Her karenin içine sayı metnini ekleyin.
