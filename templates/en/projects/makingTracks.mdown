@@ -3,7 +3,7 @@ title: Making Tracks
 credit: Written by Eric Roberts and Mehran Sahami
 
 Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
-Worked Example: [Stamp Tool]({{pathToRoot}}en/projects/stampTool.html)<br/>
+Worked Example: [Stamp Tool]({{pathToRoot}}en/projects/stampTool/)<br/>
 File: `making_tracks.py`
 
 Write a program that draws an image anywhere the user clicks.
@@ -16,15 +16,7 @@ Write a program that draws an image anywhere the user clicks.
 
 This is our first example involving images!
 
-You may have to first install Pillow, a tool that has code for manipulating images and drawing them onto the Canvas. To install Pillow, open a terminal window (the "Terminal" tab within Pycharm), and type the following (note that Pillow has an uppercase P). On Windows, type `py` instead of `python3`:
-
-```
-> python3 -m pip install Pillow
-... prints stuff ...
-Successfully installed Pillow-7.1.1
-```
-
-You may see a different version number than the one we have above. That's perfectly okay.
+You may have to first install Pillow, a tool that has code for manipulating images and drawing them onto the Canvas.  Check out the [installation instructions at the bottom]({{pathToRoot}}/en/resources/install.html#installing-graphics) for how to do this.
 
 To load an image into Graphics, you can do something like the following:
 ```

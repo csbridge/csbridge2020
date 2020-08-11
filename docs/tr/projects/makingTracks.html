@@ -466,6 +466,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../tr/projects/mouseLocation.html">Mouse Location</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081200"
+							>
+								<a href="../../tr/projects/makingTracks.html">İz Çıkartmaca</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -864,7 +869,7 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<p>Ders Notları: <a href="../../tr/resources/graphics.html">Grafik Referansı</a><br/>
-Çözümlü Örnekler: <a href="../../tr/projects/stampTool.html">Damga Makinesi</a><br/>
+Çözümlü Örnekler: <a href="../../tr/projects/stampTool/">Damga Makinesi</a><br/>
 Dosya: <code>making_tracks.py</code></p>
 <p>Kullanıcının tıkladığı yerlere resim çizen bir program yazın.</p>
 <p><center>
@@ -872,16 +877,7 @@ Dosya: <code>making_tracks.py</code></p>
 </center></p>
 <h2 id="resimler">Resimler</h2>
 <p>Bu resimleri içeren ilk projemiz!</p>
-<p>Bu proje için <code>Pillow</code> adında resimleri modifiye etmek ve ekran üzerinde çizmek için kullanılan bir paket indirmeniz gerekiyor.
-<code>Pillow</code>'u indirmek için bir terminal penceresi açın (PyCharm'ın içindeki Terminal sekmesini kullanabilirsiniz) ve aşağıdaki komutu girin:</p>
-<p><strong>Not:</strong> Windows kullanıyorsanız <code>python3</code> yerine <code>py</code> komutunu kullanın.
-<strong>Not2:</strong> Python'da paket adları büyük/küçük harfe duyarlıdır. <code>Pillow</code>'u yazarken ilk harfin büyük olmasına dikkat edin.</p>
-<pre><code>&gt; python3 -m pip install Pillow
-... konsole'a yazılan kurulumla ilgili bilgiler ...
-Successfully installed Pillow-7.1.1
-</code></pre>
-
-<p>Yukarıda verilenden farklı bir versiyon numarası görebilirsiniz. Bu bir sorun değildir ve projenizi etkilemeyecektir.</p>
+<p>You may have to first install Pillow, a tool that has code for manipulating images and drawing them onto the Canvas.  Check out the <a href="../..//en/resources/install.html#installing-graphics">installation instructions at the bottom</a> for how to do this.</p>
 <p>Bir resim dosyası kullanarak Graphics objesi oluşturmak için alttakine benzer bir kod kullanabilirsiniz:</p>
 <pre><code>stamp = canvas.create_image(x, y, &quot;images/simba-sm.jpg&quot;)
 </code></pre>

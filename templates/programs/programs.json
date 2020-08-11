@@ -458,6 +458,16 @@
           "type": "quickstart",
           "url": "projects/mouseLocation.html",
           "teachURL": "teach/notes/mouseLocation.html"
+        },
+        {
+          "imageURL": "img/projects/makingTracks/makingTracks.png",
+          "title_en": "Making Tracks",
+          "title_tr": "İz Çıkartmaca",
+          "topic_en": "Mouse",
+          "topic_tr": "Mouse",
+          "type": "project",
+          "url": "projects/makingTracks.html",
+          "teachURL": "teach/notes/makingTracks.html"
         }
       ]
     }

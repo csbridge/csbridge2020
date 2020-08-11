@@ -466,6 +466,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../en/projects/mouseLocation.html">Mouse Location</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081200"
+							>
+								<a href="../../en/projects/makingTracks.html">Making Tracks</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -859,7 +864,7 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<p>Handouts: <a href="../../en/resources/graphics.html">Graphics Reference</a><br/>
-Worked Example: <a href="../../en/projects/stampTool.html">Stamp Tool</a><br/>
+Worked Example: <a href="../../en/projects/stampTool/">Stamp Tool</a><br/>
 File: <code>making_tracks.py</code></p>
 <p>Write a program that draws an image anywhere the user clicks.</p>
 <p><center>
@@ -867,13 +872,7 @@ File: <code>making_tracks.py</code></p>
 </center></p>
 <h2 id="images">Images</h2>
 <p>This is our first example involving images!</p>
-<p>You may have to first install Pillow, a tool that has code for manipulating images and drawing them onto the Canvas. To install Pillow, open a terminal window (the "Terminal" tab within Pycharm), and type the following (note that Pillow has an uppercase P). On Windows, type <code>py</code> instead of <code>python3</code>:</p>
-<pre><code>&gt; python3 -m pip install Pillow
-... prints stuff ...
-Successfully installed Pillow-7.1.1
-</code></pre>
-
-<p>You may see a different version number than the one we have above. That's perfectly okay.</p>
+<p>You may have to first install Pillow, a tool that has code for manipulating images and drawing them onto the Canvas.  Check out the <a href="../..//en/resources/install.html#installing-graphics">installation instructions at the bottom</a> for how to do this.</p>
 <p>To load an image into Graphics, you can do something like the following:</p>
 <pre><code>stamp = canvas.create_image(x, y, &quot;images/simba-sm.jpg&quot;)
 </code></pre>

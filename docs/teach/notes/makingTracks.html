@@ -438,6 +438,10 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../en/projects/mouseLocation.html">Mouse Location</a>
 							</li>
+							<li
+							>
+								<a href="../../en/projects/makingTracks.html">Making Tracks</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -806,34 +810,7 @@ visible-after, to ensure they display when you want them to.
 
 	<div class="row">
 		<div class="col-xs-12">
-            
-<p>
-	The problem below is the first lab problem for the day.  It is very similar to the lecture examples and meant as a warmup with mouse events.  They will need to add mouse listeners in their run method, and then add a bear track at each mouse click location.
-</p>
-
-<h3>Solution</h3>
-<pre id="editor" style="height:200px">public class MakingTracks extends GraphicsProgram {
-    
-    public void run() {
-        addMouseListeners();
-    }
-    
-    public void mouseClicked(MouseEvent e) {
-        drawBearTrack(e.getX(), e.getY());
-    }
-    
-...</pre>
-    
-<script src="../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-   editor.setTheme('ace/theme/eclipse');
-   editor.getSession().setMode("ace/mode/java");
-   editor.setReadOnly(true);
-   editor.renderer.setShowGutter(false); 
-    /*editor.setTheme("ace/theme/eclipse");
-    editor.getSession().setMode("ace/mode/java");*/
-</script>	
+            <p>The problem below is the first project for the day.  It is very similar to the lecture examples and meant as a warmup with mouse interactions.  They will need to use the standard pattern of looping and checking each time for new mouse clicks, and acting on each of those clicks.  In this case, the action will be to add an image at that mouse click location.</p>	
 		</div>
 	</div>
 

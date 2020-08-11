@@ -4,7 +4,7 @@ credit: Eric Roberts and Mehran Sahami
 translation: Ahmet Uysal
 
 Ders Notları: [Grafik Referansı]({{pathToRoot}}tr/resources/graphics.html)<br/>
-Çözümlü Örnekler: [Damga Makinesi]({{pathToRoot}}tr/projects/stampTool.html)<br/>
+Çözümlü Örnekler: [Damga Makinesi]({{pathToRoot}}tr/projects/stampTool/)<br/>
 Dosya: `making_tracks.py`
 
 Kullanıcının tıkladığı yerlere resim çizen bir program yazın.
@@ -17,19 +17,7 @@ Kullanıcının tıkladığı yerlere resim çizen bir program yazın.
 
 Bu resimleri içeren ilk projemiz!
 
-Bu proje için `Pillow` adında resimleri modifiye etmek ve ekran üzerinde çizmek için kullanılan bir paket indirmeniz gerekiyor.
-`Pillow`'u indirmek için bir terminal penceresi açın (PyCharm'ın içindeki Terminal sekmesini kullanabilirsiniz) ve aşağıdaki komutu girin:
-
-**Not:** Windows kullanıyorsanız `python3` yerine `py` komutunu kullanın.
-**Not2:** Python'da paket adları büyük/küçük harfe duyarlıdır. `Pillow`'u yazarken ilk harfin büyük olmasına dikkat edin.
-
-```
-> python3 -m pip install Pillow
-... konsole'a yazılan kurulumla ilgili bilgiler ...
-Successfully installed Pillow-7.1.1
-```
-
-Yukarıda verilenden farklı bir versiyon numarası görebilirsiniz. Bu bir sorun değildir ve projenizi etkilemeyecektir.
+You may have to first install Pillow, a tool that has code for manipulating images and drawing them onto the Canvas.  Check out the [installation instructions at the bottom]({{pathToRoot}}/en/resources/install.html#installing-graphics) for how to do this.
 
 Bir resim dosyası kullanarak Graphics objesi oluşturmak için alttakine benzer bir kod kullanabilirsiniz:
 ```
