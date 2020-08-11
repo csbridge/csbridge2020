@@ -491,7 +491,7 @@
           "title_tr": "İz Çıkartmaca",
           "topic_en": "Mouse",
           "topic_tr": "Mouse",
-          "type": "project",
+          "type": "section",
           "url": "projects/makingTracks.html",
           "teachURL": "teach/notes/makingTracks.html"
         },
@@ -504,6 +504,16 @@
           "type": "section",
           "url": "projects/snow.html",
           "teachURL": "teach/notes/snow.html"
+        },
+        {
+          "imageURL": "img/projects/catchMeIfYouCan/demo1.png",
+          "title_en": "Catch Me If You Can",
+          "title_tr": "Catch Me If You Can",
+          "topic_en": "Lists and Mouse",
+          "topic_tr": "Lists and Mouse",
+          "type": "project",
+          "url": "projects/catchMeIfYouCan.html",
+          "teachURL": "teach/notes/catchMeIfYouCan.html"
         }
       ]
     }

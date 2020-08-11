@@ -2,14 +2,13 @@ template: templates/tr/projects/projectTemplate.ptl
 title: Catch Me If You Can
 credit: Problem by Julia Lee, Kerem Goksel, and Chris Piech
 
-Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)
-File: `catchmeifyoucan.py`
+Handouts: [Graphics Reference]({{pathToRoot}}tr/resources/graphics.html)
+
+File: `catch_me_if_you_can.py`
 
 1. Add a blue "sneaky" square to the canvas.
-
-1. Add 20 black squares to the canvas.
-
-1. Add a mouse event listener that moves the "sneaky" square to a random position whenever the mouse touches it.
++ Add 20 black squares to the canvas.
++ Run the program forever, monitoring the location of the mouse and moving the "sneaky" square to a random position whenever the mouse touches it.
 
 <center>
   <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/catchMeIfYouCan/demo1.png">
@@ -20,3 +19,19 @@ When the mouse touches the "sneaky" square, it moves.
 <center>
   <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/catchMeIfYouCan/demo2.png">
 </center>
+
+How can we tell if the mouse is touching the sneaky square?  There is a function you can use called `find_overlapping` on the canvas.  It gives us back a list of all objects on the canvas that overlap with a given square, which we can iterate over.  For example:
+
+```
+overlapping_objects = canvas.find_overlapping(x1, y1, x2, y2)
+for overlapping_object in overlapping_objects:
+	# do something with overlapping_object ...
+```
+
+The coordinates provided to `find_overlapping` are the top-left corner and bottom-right corner of the box you want to get all overlapping objects for.  You can also specify a single point, like this:
+
+```
+overlapping_objects = canvas.find_overlapping(x, y, x, y)
+```
+
+This will get the objects overlapping with the point `(x, y)`.

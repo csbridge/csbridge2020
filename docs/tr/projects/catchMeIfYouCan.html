@@ -492,6 +492,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../tr/projects/snow.html">Kar</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../tr/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -901,18 +906,12 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../en/handouts/graphics.html">Graphics Reference</a>
-File: <code>catchmeifyoucan.py</code></p>
+		<p>Handouts: <a href="../../tr/resources/graphics.html">Graphics Reference</a></p>
+<p>File: <code>catch_me_if_you_can.py</code></p>
 <ol>
-<li>
-<p>Add a blue "sneaky" square to the canvas.</p>
-</li>
-<li>
-<p>Add 20 black squares to the canvas.</p>
-</li>
-<li>
-<p>Add a mouse event listener that moves the "sneaky" square to a random position whenever the mouse touches it.</p>
-</li>
+<li>Add a blue "sneaky" square to the canvas.</li>
+<li>Add 20 black squares to the canvas.</li>
+<li>Run the program forever, monitoring the location of the mouse and moving the "sneaky" square to a random position whenever the mouse touches it.</li>
 </ol>
 <p><center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/catchMeIfYouCan/demo1.png">
@@ -921,6 +920,17 @@ File: <code>catchmeifyoucan.py</code></p>
 <p><center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/catchMeIfYouCan/demo2.png">
 </center></p>
+<p>How can we tell if the mouse is touching the sneaky square?  There is a function you can use called <code>find_overlapping</code> on the canvas.  It gives us back a list of all objects on the canvas that overlap with a given square, which we can iterate over.  For example:</p>
+<pre><code>overlapping_objects = canvas.find_overlapping(x1, y1, x2, y2)
+for overlapping_object in overlapping_objects:
+    # do something with overlapping_object ...
+</code></pre>
+
+<p>The coordinates provided to <code>find_overlapping</code> are the top-left corner and bottom-right corner of the box you want to get all overlapping objects for.  You can also specify a single point, like this:</p>
+<pre><code>overlapping_objects = canvas.find_overlapping(x, y, x, y)
+</code></pre>
+
+<p>This will get the objects overlapping with the point <code>(x, y)</code>.</p>
 	</div>
 </div>
 
