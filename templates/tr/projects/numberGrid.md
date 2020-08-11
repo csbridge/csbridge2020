@@ -3,11 +3,11 @@ title: Number Grid
 credit: Lisa Yan
 translation: Ceren Kocaoğullar
 
-Handouts: [Graphics Reference]({{pathToRoot}}tr/resources/graphics.html)
+Ders Notları: [Graphikler Referansı]({{pathToRoot}}tr/resources/graphics.html)
 
-Relevant Example: [Optical Illusion]({{pathToRoot}}tr/projects/illusion.html)
+Alakalı Örnek: [Optik İlüzyon]({{pathToRoot}}tr/projects/illusion.html)
 
-File: `number_grid.py`
+Dosya: `number_grid.py`
 
 Bu bir bonus programıdır! Biraz zorlayıcı olması için hazırlandı.
 

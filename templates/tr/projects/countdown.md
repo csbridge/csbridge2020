@@ -3,9 +3,9 @@ title: Countdown
 credit: Lisa Yan
 translation: Ceren Kocaoğullar
 
-Handouts: [Graphics Reference]({{pathToRoot}}tr/resources/graphics.html)
+Ders Notları: [Grafikler Referansı]({{pathToRoot}}tr/resources/graphics.html)
 
-File: `countdown.py`
+Dosya: `countdown.py`
 
 Bu bir bonus programıdır! Biraz zorlayıcı olması için hazırlandı. Bu programı tamamlamak, final projenizi yazmanıza yardımcı olabilir.
 
