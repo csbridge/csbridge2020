@@ -56,10 +56,17 @@
 	},
 	{
 		"title_en": "Nested Loops",
-		"title_tr": "",
+		"title_tr": "Nested Loops",
 		"slidesURL": "slides/Lecture9.pdf",
 		"codeURL": "starter/lectures/Lecture9.zip",
 		"visible_after": "2020081100"
+	},
+	{
+		"title_en": "Animation",
+		"title_tr": "Animation",
+		"slidesURL": "slides/10-Animation.pdf",
+		"codeURL": "starter/lectures/Lecture10.zip",
+		"visible_after": "2020081109"
 	}
 
 ]
