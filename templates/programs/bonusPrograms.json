@@ -140,6 +140,14 @@
 				"url": "projects/countdown.html",
 				"teachURL": "teach/notes/countdown.html",
 				"difficulty": 2
+			},
+			{
+				"title_en": "Border Box",
+				"title_tr": "Border Box",
+				"imageURL": "img/projects/borderBox/borderBox.png",
+				"url": "projects/borderBox.html",
+				"teachURL": "teach/notes/borderBox.html",
+				"difficulty": 2
 			}
 		]
 	}
