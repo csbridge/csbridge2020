@@ -17,15 +17,15 @@ Kullanıcının tıkladığı yerlere resim çizen bir program yazın.
 
 Bu resimleri içeren ilk projemiz!
 
-You may have to first install Pillow, a tool that has code for manipulating images and drawing them onto the Canvas.  Check out the [installation instructions at the bottom]({{pathToRoot}}/en/resources/install.html#installing-graphics) for how to do this.
+İlk olarak, görüntüleri işlemek ve bunları Tuval üzerine çizmek için kod içeren bir araç olan Pillow'u kurmanız gerekebilir. Bunun nasıl yapılacağını öğrenmek için [alttaki kurulum talimatlarına]({{pathToRoot}}/en/resources/install.html#installing-graphics) bakın.
 
 Bir resim dosyası kullanarak Graphics objesi oluşturmak için alttakine benzer bir kod kullanabilirsiniz:
+
 ```
 stamp = canvas.create_image(x, y, "images/simba-sm.jpg")
 ```
 
 Bu fonksiyon'u çağırmak PyCharm projesi içinde `images` klasöründe bulunan `simba-sm.jpg` resim dosyasını yükler ve `(x, y)` konumu üzerine bu resmi çizer.
-Bu resmi (her Graphics objesi için geçerli olduğu gibi) modifiye etmek ve ekranda hareket ettirmek için `canvas.moveto(stamp, new_x, new_y)` gibi canvas fonksiyonlarını kullanabilirsiniz. 
+Bu resmi (her Graphics objesi için geçerli olduğu gibi) modifiye etmek ve ekranda hareket ettirmek için `canvas.moveto(stamp, new_x, new_y)` gibi canvas fonksiyonlarını kullanabilirsiniz.
 
 Resimler hakkında daha fazla bilgi almak için [Grafik Referansı]({{pathToRoot}}tr/resources/graphics.html)'nı inceleyebilirsiniz.
-
