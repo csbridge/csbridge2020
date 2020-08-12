@@ -469,7 +469,7 @@ visible-after, to ensure they display when you want them to.
 							<li
 									class="visible-after" data-visible-after="2020081200"
 							>
-								<a href="../../tr/projects/ascending.html">Ascending Numbers</a>
+								<a href="../../tr/projects/ascending.html">Yükseliyor</a>
 							</li>
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020081209"
@@ -480,7 +480,7 @@ visible-after, to ensure they display when you want them to.
 							<li
 									class="visible-after" data-visible-after="2020081209"
 							>
-								<a href="../../tr/projects/mouseLocation.html">Mouse Location</a>
+								<a href="../../tr/projects/mouseLocation.html">Farenin Konumu</a>
 							</li>
 							<li
 									class="visible-after" data-visible-after="2020081209"
@@ -495,7 +495,7 @@ visible-after, to ensure they display when you want them to.
 							<li
 									class="visible-after" data-visible-after="2020081209"
 							>
-								<a href="../../tr/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+								<a href="../../tr/projects/catchMeIfYouCan.html">Sıkıysa Yakala</a>
 							</li>
 			</ul>
 		</li>
@@ -716,7 +716,7 @@ visible-after, to ensure they display when you want them to.
 							<li
 									class="visible-after" data-visible-after="2020081209"
 							>
-								<a href="../../tr/projects/rocketPaddle/">Rocket Paddle</a>
+								<a href="../../tr/projects/rocketPaddle/">Roket Atar</a>
 							</li>
 			</ul>
 		</li>
@@ -948,40 +948,48 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Hazırlayanlar: Problem by Julia Lee, Kerem Goksel, and Chris Piech
+			Hazırlayanlar: Julia Lee, Kerem Goksel, Chris Piech
 		</p>
 
+		<p>
+			Çeviren: Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Handouts: <a href="../../tr/resources/graphics.html">Graphics Reference</a></p>
-<p>File: <code>catch_me_if_you_can.py</code></p>
+		<p>Ders Notları: <a href="../../tr/resources/graphics.html">Grafikler Referansı</a></p>
+<p>Dosya: <code>catch_me_if_you_can.py</code></p>
 <ol>
-<li>Add a blue "sneaky" square to the canvas.</li>
-<li>Add 20 black squares to the canvas.</li>
-<li>Run the program forever, monitoring the location of the mouse and moving the "sneaky" square to a random position whenever the mouse touches it.</li>
+<li>
+<p>Tuvale mavi "sinsi" bir kare ekleyin.</p>
+</li>
+<li>
+<p>Tuvale 20 siyah kare ekleyin.</p>
+</li>
+<li>Programı sonsuza kadar çalıştırın, farenin konumunu izleyin ve "sinsi" kareyi fare ona dokunduğunda rastgele bir konuma getirin.</li>
 </ol>
 <p><center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/catchMeIfYouCan/demo1.png">
 </center></p>
-<p>When the mouse touches the "sneaky" square, it moves.</p>
+<p>Fare "sinsi" kareye dokunduğunda, kare hareket eder.</p>
 <p><center>
   <img style="width:500px;border: 1px solid #000000" src="../../img/projects/catchMeIfYouCan/demo2.png">
 </center></p>
-<p>How can we tell if the mouse is touching the sneaky square?  There is a function you can use called <code>find_overlapping</code> on the canvas.  It gives us back a list of all objects on the canvas that overlap with a given square, which we can iterate over.  For example:</p>
+<p>Farenin sinsi kareye dokunup dokunmadığını nasıl anlarız? Tuval üzerinde <code>find_overlapping</code> adında kullanabileceğiniz bir fonksiyon var. Bize tuval üzerinde belirli bir kare ile örtüşen tüm nesnelerin bir listesini verir ve bu listenin üzerinde gezebiliriz. Örneğin:</p>
 <pre><code>overlapping_objects = canvas.find_overlapping(x1, y1, x2, y2)
 for overlapping_object in overlapping_objects:
-    # do something with overlapping_object ...
+    # overlapping_object ile bir şeyler yap ...
 </code></pre>
 
-<p>The coordinates provided to <code>find_overlapping</code> are the top-left corner and bottom-right corner of the box you want to get all overlapping objects for.  You can also specify a single point, like this:</p>
+<p>The coordinates provided to <code>find_overlapping</code> are the top-left corner and bottom-right corner of the box you want to get all overlapping objects for. You can also specify a single point, like this:</p>
+<p><code>find_overlapping</code> için sağlanan koordinatlar, tüm örtüşen nesneleri almak istediğiniz kutunun sol üst köşesi ve sağ alt köşesidir. Ayrıca aşağıdaki gibi tek bir nokta da belirtebilirsiniz:</p>
 <pre><code>overlapping_objects = canvas.find_overlapping(x, y, x, y)
 </code></pre>
 
-<p>This will get the objects overlapping with the point <code>(x, y)</code>.</p>
+<p>Bu, <code>(x, y)</code> noktası ile örtüşen nesneleri öğrenmemizi sağlayacaktır.</p>
 	</div>
 </div>
 

@@ -1,15 +1,16 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Mouse Location
+title: Farenin Konumu
 credit: Chris Piech
+translation: Ceren Kocaoğullar
 
-Worked Examples: [Stamp Tool]({{pathToRoot}}tr/projects/stampTool/)
+Çözümlü Örnekler: [Damga Makinesi]({{pathToRoot}}tr/projects/stampTool/)
 
-File: `mouse_location.py`
+Dosya: `mouse_location.py`
 
-Write a program with a label in the center of the screen that displays the current x and y coordinates of the mouse.  The label should update as the mouse moves around the screen.
+Ekranın ortasına farenin mevcut x ve y koordinatlarını gösteren etiketli bir program yazın. Fare ekranda hareket ettikçe etiket güncellenmelidir.
 
 <center>
   <img style="width:500px; border: 1px solid black" src="{{pathToRoot}}img/projects/mouseLocation/screenshot.png"> 
 </center>
 
-If you need to change the contents of an existing text label, check out `canvas.set_text()`.
+Mevcut bir metin etiketinin içeriğini değiştirmeniz gerekirse, `canvas.set_text()` e bakın.
