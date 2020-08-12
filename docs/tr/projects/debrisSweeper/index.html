@@ -952,7 +952,7 @@ filePath - the total path to the markdown file being rendered in this template
 		</p>
 
 		<p>
-			Çevirenler: Serhat Arslan, Demet Tümkaya
+			Çevirenler: Serhat Arslan, Demet Tümkaya, Ceren Kocaoğullar
 		</p>
 </div>
 <hr/>
@@ -960,19 +960,19 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>The goal of this example is to write a program that fills the screen with a random collection of debris (ovals) and then allows the user to click and remove debris pieces. This program lets you practice many techniques that we have learned in class. You will be using functions, <code>for</code> loops, graphics, random numbers, the mouse, and maybe even more!</p>
+		<p>Bu örneğin amacı, ekranı rastgele bir enkaz (oval) yığınıyla dolduran ve daha sonra kullanıcının kalıntı parçalarını tıklayıp kaldırmasına olanak tanıyan bir program yazmaktır. Bu program, sınıfta öğrendiğimiz birçok tekniği uygulamanıza izin verir. Fonksiyonlar, <code>for</code> döngüleri, grafikler, rasgele sayılar, fare ve belki daha fazlasını kullanacaksınız!</p>
 <p>İlk adım, enkazı oluşturmak. Enkaz parçalarının ne kadar büyük olabileceğine ve ekranda kaç parça bulunabileceğine dair limitleri sabitlerle oluşturun. Her parça için, rastgele (random) bir boyuta, konuma ve renge sahip (oluşturduğunuz lmitler içerisinde) yeni bir oval oluşturun. Bunun her boyutta ekran için çalışması gerektiğini unutmayın. Kodunuzu daha kolay okunabilir yapmak için bunu birkaç fonksiyona bölmek isteyebilirsiniz!</p>
 <p><center>
 <img style="width:500px" src="../../../img/projects/debrisSweeper/demo.png"> <br />
 </center></p>
 <p>Sonrasında, kullanıcıların enkazı ekrandan kaldırmalarını sağlamalıyız. Sonsuz bir döngü ekle ve kullanıcı bir objenin üstüne tıklayıp tıklamadığını kontrol edin. Eğer tıkladılarsa, o enkazı temizleyin (ekrandan kaldırın)!</p>
 <h2 id="tklanan-objeyi-almak">Tıklanan objeyi almak</h2>
-<p>The canvas function <code>canvas.find_element_at(x, y)</code> will get the object at the provided <code>(x, y)</code> argument.  If there is no object, it will return <code>None</code>. To perform some actions on an object (if it exists), you could write something like below:</p>
+<p><code>canvas.find_element_at(x, y)</code> tuval işlevi, sağlanan <code>(x, y)</code> bağımsız değişkenindeki nesneyi alacaktır. Hiçbir nesne yoksa, "Yok" döndürür. Bir nesne üzerinde bazı eylemler gerçekleştirmek için (eğer varsa), aşağıdaki gibi bir şey yazabilirsiniz:</p>
 <pre><code>object = canvas.find_element_at(x, y)    # x and y are some coordinates
 if object:    # If there was an object there...
-    print(&quot;Object found at (&quot; + str(x) + &quot;, &quot; + str(y) + &quot;)&quot;)
+    print(&quot;Obje (&quot; + str(x) + &quot;, &quot; + str(y) + &quot;) konumunda bulundu&quot;)
 else:
-    print(&quot;Object not found&quot;)
+    print(&quot;Obje bulunamadı&quot;)
 </code></pre>
 
 <h2 id="bonus">Bonus!</h2>
