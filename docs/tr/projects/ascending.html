@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
-<title>CS Bridge  | Ascending Numbers</title>
+<title>CS Bridge  | Yükseliyor</title>
 
 <!-- Fonts -->
 <!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -944,20 +944,23 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Header -->
 <div id="pageHeader">
 	<h1>
-		Ascending Numbers
+		Yükseliyor
 	</h1>
 
 		<p>
 			Hazırlayan: Nick Troccoli
 		</p>
 
+		<p>
+			Çeviren: Ceren Kocaoğullar
+		</p>
 </div>
 <hr/>
 
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Ask the user to enter numbers <em>until they enter -1</em>, then print those numbers as well as whether or not those numbers are ascending (in increasing order).  Here's an example output:</p>
+		<p>Kullanıcıdan -1_ girene kadar sayılar girmesini isteyin, ardından bu sayıları ve bu sayıların artan sırada olup olmadığını yazdırmasını isteyin. İşte bir örnek çıktı:</p>
 <pre><code>&gt; 1
 &gt; 4
 &gt; 9
@@ -967,10 +970,10 @@ filePath - the total path to the markdown file being rendered in this template
 4
 9
 16
-Ascending!
+Yükseliyor!
 </code></pre>
 
-<p>And here is another one:</p>
+<p>İşte bir tane daha:</p>
 <pre><code>&gt; 5
 &gt; 4
 &gt; 3
@@ -980,63 +983,63 @@ Ascending!
 4
 3
 2
-Not ascending
+Yükselmiyor
 </code></pre>
 
-<p>Note that the -1 is not included in the list of numbers - it is just to indicate when the user is done entering numbers.</p>
-<h2 id="milestone-1-storing-and-outputting-numbers">Milestone 1: Storing And Outputting Numbers</h2>
-<p>Store the numbers that the user entered in a list, until they enter -1.  Remember not to put the -1 in the list!  You should just stop asking them for input.  Then, print out the numbers they entered.</p>
-<h2 id="milestone-2-is-ascending">Milestone 2: Is Ascending</h2>
-<p>Now we need to print out whether or not the list is in ascending order.  It would be nice if we had a function that could tell us, like this:</p>
+<p>-1'in sayılar listesine dahil edilmediğine dikkat edin - yalnızca kullanıcının sayı girmeyi bitirdiğini belirtmek için bir gösterge olarak kullanılıyor.</p>
+<h2 id="gorev-1-saylar-saklamak-ve-ekrana-basmak">Görev 1: Sayıları Saklamak ve Ekrana Basmak</h2>
+<p>Kullanıcının bir listeye girdiği sayıları -1 girene kadar saklayın. Listeye -1 koymamayı unutmayın! -1 girildikten sonra onlardan girdi istemeyi bırakmalısın. Ardından, girdikleri sayıları yazdırın.</p>
+<h2 id="gorev-2-yukseliyor">Görev 2: Yükseliyor</h2>
+<p>Şimdi listenin artan sırada olup olmadığını yazdırmamız gerekiyor. Bize bunu söyleyebilecek bir işlevimiz olsaydı iyi olurdu, şunun gibi:</p>
 <pre><code>if is_ascending(my_list):
     # ...
 else:
     # ...
 </code></pre>
 
-<p>So let's write one!  Write a function <code>is_ascending</code> that takes in a list of numbers as a parameter and returns whether or not the numbers in the list are in ascending order.  The function would look something like this:</p>
+<p>Öyleyse bir tane yazalım! Bir sayılar listesini parametre olarak alan ve listedeki sayıların artan sırada olup olmadığını döndüren bir <code>is_ascending</code> fonksiyonu yazın. Fonksiyon şunun gibi görünecektir:</p>
 <pre><code>def is_ascending(numbers):
-    # TODO: return True if numbers is in ascending order, or False otherwise
+    # TODO: Sayılar artan sıradaysa True, aksi halde False döndür
 </code></pre>
 
-<p>It should iterate through the list and check that each pair of numbers is in the right order.  If any of them are in the wrong order, we know the list is not in ascending order, so we return <code>False</code>.  If we don't see any in the wrong order, it is ascending, and we return <code>True</code>!</p>
-<h2 id="list-hints">List Hints</h2>
-<p>To create a list of numbers use:</p>
+<p>Listeyi yinelemeli ve her sayı çiftinin doğru sırada olup olmadığını kontrol etmelidir. Bunlardan herhangi biri yanlış sıradaysa, listenin artan sırada olmadığını biliyoruz, bu nedenle <code>False</code> döndürüyoruz. Hiçbirini yanlış sırada göremezsek yükseliyor ve <code>True</code> olarak geri dönüyoruz!</p>
+<h2 id="listeler-icin-ipuclar">Listeler İçin İpuçları</h2>
+<p>Numara listesi oluşturmak için şunu kullanın:</p>
 <pre><code>my_list = []
 </code></pre>
 
-<p>Recall that you can read an integer from the user using:</p>
+<p>Şunları kullanarak kullanıcıdan bir tamsayı okuyabileceğinizi hatırlayın:</p>
 <pre><code>number = int(input(prompt))
 </code></pre>
 
-<p>To add an element to a list:</p>
+<p>Listeye bir eleman eklemek için:</p>
 <pre><code>my_list.append(newValue)
 </code></pre>
 
-<p>To get an element from a list:</p>
+<p>Listeden bir eleman almak için:</p>
 <pre><code>my_list[index]
 </code></pre>
 
-<p>To loop over all elements in a list:</p>
+<p>Bir listedeki tüm elemanlar üzerinde gezen bir döngü yapmak için:</p>
 <pre><code>for i in range(len(my_list)):
-    # do something with my_list[i]
+    # my_list[i] ile bir şeyler yap
 }
 
 -- OR --
 
 for elem in my_list:
-    # do something with elem
+    # elem ile bir şeyler yap
 </code></pre>
 
-<p>To loop over some elements in a list:</p>
+<p>Bir listedeki bazı elemanların üzerinden geçmek için:</p>
 <pre><code>for i in range(START, END):
-    # do something with my_list[i]
+    # my_list[i] ile bir şeyler yap
 
-e.g.
+örneğin
 
-# Loops over all but the last element in the list
+# Listedeki son eleman hariç tümünün üzerinde gezen bir döngü
 for i in range(0, len(my_list) - 1):
-    # do something with my_list[i]
+    # my_list[i] ile bir şeyler yap
 </code></pre>
 	</div>
 </div>

@@ -1,8 +1,9 @@
 template: templates/tr/projects/projectTemplate.ptl
-title: Ascending Numbers
+title: Yükseliyor
 credit: Nick Troccoli
+translation: Ceren Kocaoğullar
 
-Ask the user to enter numbers _until they enter -1_, then print those numbers as well as whether or not those numbers are ascending (in increasing order).  Here's an example output:
+Kullanıcıdan -1\_ girene kadar sayılar girmesini isteyin, ardından bu sayıları ve bu sayıların artan sırada olup olmadığını yazdırmasını isteyin. İşte bir örnek çıktı:
 
 ```
 > 1
@@ -14,10 +15,10 @@ Ask the user to enter numbers _until they enter -1_, then print those numbers as
 4
 9
 16
-Ascending!
+Yükseliyor!
 ```
 
-And here is another one:
+İşte bir tane daha:
 
 ```
 > 5
@@ -29,16 +30,18 @@ And here is another one:
 4
 3
 2
-Not ascending
+Yükselmiyor
 ```
 
-Note that the -1 is not included in the list of numbers - it is just to indicate when the user is done entering numbers.
+-1'in sayılar listesine dahil edilmediğine dikkat edin - yalnızca kullanıcının sayı girmeyi bitirdiğini belirtmek için bir gösterge olarak kullanılıyor.
 
-## Milestone 1: Storing And Outputting Numbers
-Store the numbers that the user entered in a list, until they enter -1.  Remember not to put the -1 in the list!  You should just stop asking them for input.  Then, print out the numbers they entered.
+## Görev 1: Sayıları Saklamak ve Ekrana Basmak
 
-## Milestone 2: Is Ascending
-Now we need to print out whether or not the list is in ascending order.  It would be nice if we had a function that could tell us, like this:
+Kullanıcının bir listeye girdiği sayıları -1 girene kadar saklayın. Listeye -1 koymamayı unutmayın! -1 girildikten sonra onlardan girdi istemeyi bırakmalısın. Ardından, girdikleri sayıları yazdırın.
+
+## Görev 2: Yükseliyor
+
+Şimdi listenin artan sırada olup olmadığını yazdırmamız gerekiyor. Bize bunu söyleyebilecek bir işlevimiz olsaydı iyi olurdu, şunun gibi:
 
 ```
 if is_ascending(my_list):
@@ -47,63 +50,63 @@ else:
 	# ...
 ```
 
-So let's write one!  Write a function `is_ascending` that takes in a list of numbers as a parameter and returns whether or not the numbers in the list are in ascending order.  The function would look something like this:
+Öyleyse bir tane yazalım! Bir sayılar listesini parametre olarak alan ve listedeki sayıların artan sırada olup olmadığını döndüren bir `is_ascending` fonksiyonu yazın. Fonksiyon şunun gibi görünecektir:
 
 ```
 def is_ascending(numbers):
-	# TODO: return True if numbers is in ascending order, or False otherwise
+	# TODO: Sayılar artan sıradaysa True, aksi halde False döndür
 ```
 
-It should iterate through the list and check that each pair of numbers is in the right order.  If any of them are in the wrong order, we know the list is not in ascending order, so we return `False`.  If we don't see any in the wrong order, it is ascending, and we return `True`!
+Listeyi yinelemeli ve her sayı çiftinin doğru sırada olup olmadığını kontrol etmelidir. Bunlardan herhangi biri yanlış sıradaysa, listenin artan sırada olmadığını biliyoruz, bu nedenle `False` döndürüyoruz. Hiçbirini yanlış sırada göremezsek yükseliyor ve `True` olarak geri dönüyoruz!
 
+## Listeler İçin İpuçları
 
-## List Hints
-To create a list of numbers use:
+Numara listesi oluşturmak için şunu kullanın:
 
 ```
 my_list = []
 ```
 
-Recall that you can read an integer from the user using:
+Şunları kullanarak kullanıcıdan bir tamsayı okuyabileceğinizi hatırlayın:
 
 ```
 number = int(input(prompt))
 ```
 
-To add an element to a list:
+Listeye bir eleman eklemek için:
 
 ```
 my_list.append(newValue)
 ```
 
-To get an element from a list:
+Listeden bir eleman almak için:
 
 ```
 my_list[index]
 ```
 
-To loop over all elements in a list:
+Bir listedeki tüm elemanlar üzerinde gezen bir döngü yapmak için:
 
 ```
 for i in range(len(my_list)):
-    # do something with my_list[i]
+    # my_list[i] ile bir şeyler yap
 }
 
 -- OR --
 
 for elem in my_list:
-	# do something with elem
+	# elem ile bir şeyler yap
 ```
 
-To loop over some elements in a list:
+Bir listedeki bazı elemanların üzerinden geçmek için:
 
 ```
 for i in range(START, END):
-	# do something with my_list[i]
+	# my_list[i] ile bir şeyler yap
 
-e.g.
+örneğin
 
-# Loops over all but the last element in the list
+# Listedeki son eleman hariç tümünün üzerinde gezen bir döngü
 for i in range(0, len(my_list) - 1):
-	# do something with my_list[i]
+	# my_list[i] ile bir şeyler yap
 ```
