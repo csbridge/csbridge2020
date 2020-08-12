@@ -489,6 +489,11 @@
           "title_en": "Debris Sweeper",
           "title_tr": "Enkazı Kaldır",
           "url": "projects/debrisSweeper/"
+        },
+        {
+          "title_en": "Rocket Paddle",
+          "title_tr": "Rocket Paddle",
+          "url": "projects/rocketPaddle/"
         }
       ],
       "projects": [
