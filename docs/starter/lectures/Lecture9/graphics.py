@@ -5,7 +5,10 @@ import tkinter.font
 """
 File: graphics.py
 Authors: Chris Piech, Lisa Yan and Nick Troccoli
-Version Date: July 20, 2020
+Version Date: August 11, 2020
+
+TODO notes:
+- support window resizing
 """
 
 
@@ -122,6 +125,9 @@ class Canvas(tkinter.Canvas):
         # List of presses not handled by a callback
         self.mouse_presses = []
 
+        # List of key presses not handled by a callback
+        self.key_presses = []
+
         # These are state variables so wait_for_click knows when to stop waiting and to
         # not call handlers when we are waiting for click
         self.wait_for_click_click_happened = False
@@ -131,7 +137,7 @@ class Canvas(tkinter.Canvas):
         self.focus_set()
         self.bind("<Button-1>", lambda event: self.__mouse_pressed(event))
         self.bind("<ButtonRelease-1>", lambda event: self.__mouse_released(event))
-        self.bind("<Key>", lambda event: self.on_key_pressed(event.char) if self.on_key_pressed else None)
+        self.bind("<Key>", lambda event: self.__key_pressed(event))
         self.bind("<Enter>", lambda event: self.__mouse_entered())
         self.bind("<Leave>", lambda event: self.__mouse_exited())
 
@@ -239,6 +245,20 @@ class Canvas(tkinter.Canvas):
         self.mouse_presses = []
         return presses
 
+    def get_new_key_presses(self):
+        """
+        Returns a list of all key presses that have occurred since the last call to this method or any registered
+        key handler.
+
+        Returns:
+            a list of all key presses that have occurred since the last call to this method or any registered
+                key handler.  Each key press contains a keysym property for the key pressed, e.g.
+                presses = canvas.get_new_key_presses(); print(presses[0].keysym).
+        """
+        presses = self.key_presses
+        self.key_presses = []
+        return presses
+
     def __mouse_pressed(self, event):
         """
         Called every time the mouse is pressed.  If we are currently waiting for a mouse click via
@@ -274,6 +294,20 @@ class Canvas(tkinter.Canvas):
         self.wait_for_click_click_happened = True
         if self.on_mouse_released:
             self.on_mouse_released(event.x, event.y)
+
+    def __key_pressed(self, event):
+        """
+        Called every time a keyboard key is pressed.  If we have a registered key press handler, call that.  Otherwise,
+        append the key press to the list of key presses to be handled later.
+
+        Args:
+            event: an object representing the key press that just occurred.  Assumed to have a keysym property
+                containing the name of this key press.
+        """
+        if self.on_key_pressed:
+            self.on_key_pressed(event.keysym)
+        else:
+            self.key_presses.append(event)
 
     def __mouse_entered(self):
         """
