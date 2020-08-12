@@ -462,7 +462,7 @@
         {
           "imageURL": "img/projects/ascending/icon.jpg",
           "title_en": "Ascending Numbers",
-          "title_tr": "Ascending Numbers",
+          "title_tr": "Yükseliyor",
           "topic_en": "Lists",
           "topic_tr": "Lists",
           "type": "project",
@@ -492,7 +492,7 @@
         },
         {
           "title_en": "Rocket Paddle",
-          "title_tr": "Rocket Paddle",
+          "title_tr": "Roket Atar",
           "url": "projects/rocketPaddle/"
         }
       ],
@@ -500,7 +500,7 @@
         {
           "imageURL": "img/projects/mouseLocation/mouseLocation.png",
           "title_en": "Mouse Location",
-          "title_tr": "Mouse Location",
+          "title_tr": "Farenin Konumu",
           "topic_en": "Mouse",
           "topic_tr": "Mouse",
           "type": "quickstart",
@@ -530,9 +530,9 @@
         {
           "imageURL": "img/projects/catchMeIfYouCan/demo1.png",
           "title_en": "Catch Me If You Can",
-          "title_tr": "Catch Me If You Can",
+          "title_tr": "Sıkıysa Yakala",
           "topic_en": "Lists and Mouse",
-          "topic_tr": "Lists and Mouse",
+          "topic_tr": "Listeler ve Fare (Mouse)",
           "type": "project",
           "url": "projects/catchMeIfYouCan.html",
           "teachURL": "teach/notes/catchMeIfYouCan.html"
