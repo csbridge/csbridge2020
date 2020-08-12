@@ -236,11 +236,11 @@ The text will be in size 13 font.</p>
 <dd>the graphical object to remove from the canvas</dd>
 </dl></div>
 </dd>
-<dt id="src.graphics.Canvas.find_closest"><code class="name flex">
-<span>def <span class="ident">find_closest</span></span>(<span>self, x, y)</span>
+<dt id="src.graphics.Canvas.find_element_at"><code class="name flex">
+<span>def <span class="ident">find_element_at</span></span>(<span>self, x, y)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Finds the closest object to this location</p>
+<div class="desc"><p>Finds the topmost element overlapping this location.</p>
 <h2 id="args">Args</h2>
 <dl>
 <dt><strong><code>x</code></strong></dt>
@@ -249,7 +249,7 @@ The text will be in size 13 font.</p>
 <dd>the y coordinate of the location</dd>
 </dl>
 <h2 id="returns">Returns</h2>
-<p>the top-most graphical object on the canvas closest to this location (None otherwise)</p></div>
+<p>the top-most graphical object on the canvas at this location (None otherwise)</p></div>
 </dd>
 <dt id="src.graphics.Canvas.find_overlapping"><code class="name flex">
 <span>def <span class="ident">find_overlapping</span></span>(<span>self, x1, y1, x2, y2)</span>
@@ -527,8 +527,8 @@ but behind all objects that the second object is also behind.</p>
 </code></dt>
 <dd>
 <div class="desc"><p>Sets the fill and outline color of the specified graphical object.
-Cannot be used on objects that are
-either not fillable or not outline-able, such as images or text.</p>
+If the object doesn't
+have one or more of a fill or outline color, setting of that color is ignored.</p>
 <h2 id="args">Args</h2>
 <dl>
 <dt><strong><code>obj</code></strong></dt>
@@ -545,7 +545,7 @@ the object will be set to be not filled and not outlined.</dd>
 <dd>
 <div class="desc"><p>Sets the fill color of the specified graphical object.
 Cannot be used to change the fill color
-of non-fillable objects such as images.</p>
+of non-fillable objects such as images - throws a tkinter.TclError.</p>
 <h2 id="args">Args</h2>
 <dl>
 <dt><strong><code>obj</code></strong></dt>
@@ -644,7 +644,8 @@ If this parameter is None, no function will be called when the mouse is released
 <dd>
 <div class="desc"><p>Sets the outline color of the specified graphical object.
 Cannot be used to change the outline color
-of non-outlined objects such as images or text.</p>
+of non-outlined objects such as images or text
+- throws a tkinter.TclError.</p>
 <h2 id="args">Args</h2>
 <dl>
 <dt><strong><code>obj</code></strong></dt>
@@ -738,7 +739,7 @@ Cannot be used on any non-text graphical object.</p>
 <li><code><a title="src.graphics.Canvas.create_rectangle" href="#src.graphics.Canvas.create_rectangle">create_rectangle</a></code></li>
 <li><code><a title="src.graphics.Canvas.create_text" href="#src.graphics.Canvas.create_text">create_text</a></code></li>
 <li><code><a title="src.graphics.Canvas.delete" href="#src.graphics.Canvas.delete">delete</a></code></li>
-<li><code><a title="src.graphics.Canvas.find_closest" href="#src.graphics.Canvas.find_closest">find_closest</a></code></li>
+<li><code><a title="src.graphics.Canvas.find_element_at" href="#src.graphics.Canvas.find_element_at">find_element_at</a></code></li>
 <li><code><a title="src.graphics.Canvas.find_overlapping" href="#src.graphics.Canvas.find_overlapping">find_overlapping</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_canvas_height" href="#src.graphics.Canvas.get_canvas_height">get_canvas_height</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_canvas_width" href="#src.graphics.Canvas.get_canvas_width">get_canvas_width</a></code></li>

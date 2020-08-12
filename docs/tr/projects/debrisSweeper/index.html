@@ -708,6 +708,11 @@ visible-after, to ensure they display when you want them to.
 							>
 								<a href="../../../tr/projects/holePuncher/">Delgeç</a>
 							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../tr/projects/debrisSweeper/">Enkazı Kaldır</a>
+							</li>
 			</ul>
 		</li>
 </ul>					</li>
@@ -935,19 +940,19 @@ filePath - the total path to the markdown file being rendered in this template
 <!-- Problem description -->
 <div class="row">
 	<div class="col-xs-12">
-		<p>Bu örneğin hedefi, ekranı rastgele yerleşmiş enkazlarla (ovallerle) dolduracak bir program yazmaktır ve sonrasında kullanıcıya tıkladığı yerdeki enkaz parçalarını kaldırmasına izin vermelidir. Bu program, sizlerin dersin ilk haftasında öğrediğiniz birçok tekniği pratik yapmanızı sağlar. Fonksiyonları, for döngülerini, grafikleri, rastgele (random) sayıları, fare takipçilerini ve belki de daha fazlasını kullanıyor olacaksınız!</p>
+		<p>The goal of this example is to write a program that fills the screen with a random collection of debris (ovals) and then allows the user to click and remove debris pieces. This program lets you practice many techniques that we have learned in class. You will be using functions, <code>for</code> loops, graphics, random numbers, the mouse, and maybe even more!</p>
 <p>İlk adım, enkazı oluşturmak. Enkaz parçalarının ne kadar büyük olabileceğine ve ekranda kaç parça bulunabileceğine dair limitleri sabitlerle oluşturun. Her parça için, rastgele (random) bir boyuta, konuma ve renge sahip (oluşturduğunuz lmitler içerisinde) yeni bir oval oluşturun. Bunun her boyutta ekran için çalışması gerektiğini unutmayın. Kodunuzu daha kolay okunabilir yapmak için bunu birkaç fonksiyona bölmek isteyebilirsiniz!</p>
 <p><center>
 <img style="width:500px" src="../../../img/projects/debrisSweeper/demo.png"> <br />
 </center></p>
 <p>Sonrasında, kullanıcıların enkazı ekrandan kaldırmalarını sağlamalıyız. Sonsuz bir döngü ekle ve kullanıcı bir objenin üstüne tıklayıp tıklamadığını kontrol edin. Eğer tıkladılarsa, o enkazı temizleyin (ekrandan kaldırın)!</p>
 <h2 id="tklanan-objeyi-almak">Tıklanan objeyi almak</h2>
-<p>Kanvas fonksiyonu, <code>canvas.find_closest(x, y)</code>, belirtilen (x,y) konumuna en yakın objeyi alacaktır. Eğer hiç obje yoksa, <code>None</code> olarak geri dönecektir. Bir obje üzerine bazı eylemler gerçekleştirmek için (eğer varsa), aşağıdaki gibi bir şey yazabilirsiniz:</p>
-<pre><code>object = canvas.find_closest(x, y)    # x ve y koordinatlardır
-if object is not None:
-    print(&quot;Object found at (&quot; + str(x) + &quot;, &quot; + str(y) + &quot;)&quot;)  #Obje (x,y) koordinatlarında bulundu
+<p>The canvas function <code>canvas.find_element_at(x, y)</code> will get the object at the provided <code>(x, y)</code> argument.  If there is no object, it will return <code>None</code>. To perform some actions on an object (if it exists), you could write something like below:</p>
+<pre><code>object = canvas.find_element_at(x, y)    # x and y are some coordinates
+if object:    # If there was an object there...
+    print(&quot;Object found at (&quot; + str(x) + &quot;, &quot; + str(y) + &quot;)&quot;)
 else:
-    print(&quot;Object not found&quot;)  #Obje bulunamadı
+    print(&quot;Object not found&quot;)
 </code></pre>
 
 <h2 id="bonus">Bonus!</h2>
@@ -965,22 +970,23 @@ else:
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:1040.0px">&quot;&quot;&quot;
+		<pre class="console" id="editor" style="height:1240.0px">&quot;&quot;&quot;
 File: debris_sweeper.py
 -------------------
 Puts a random collection of debris (ovals) on the screen
 and then allows the user to click and remove the debris.
 &quot;&quot;&quot;
 
-import random
 from graphics import Canvas
+import random
 
 # minimum and maximum size of a piece of debris
 MIN_DEBRIS_SIZE = 50
 MAX_DEBRIS_SIZE = 150
 
 # number of pieces of debris
-NUM_DEBRIS_PIECES = 100
+NUM_DEBRIS_PIECES = 2
+
 
 def main():
     canvas = Canvas()
@@ -995,24 +1001,33 @@ def main():
 
     canvas.mainloop()
 
+
 def create_debris(canvas):
+    &quot;&quot;&quot;
+    Creates NUM_DEBRIS_PIECES pieces of &quot;debris&quot; (ovals) with random locations,
+    sizes and colors.
+    &quot;&quot;&quot;
     for i in range(NUM_DEBRIS_PIECES):
-        create_single_debris_piece(canvas)
+        # Calculate a random location and size
+        width = random.randint(MIN_DEBRIS_SIZE, MAX_DEBRIS_SIZE)
+        height = random.randint(MIN_DEBRIS_SIZE, MAX_DEBRIS_SIZE)
+        x = random.randint(0, canvas.get_canvas_width() - width)
+        y = random.randint(0, canvas.get_canvas_height() - height)
 
-def create_single_debris_piece(canvas):
-    width = random.uniform(MIN_DEBRIS_SIZE, MAX_DEBRIS_SIZE)
-    height = random.uniform(MIN_DEBRIS_SIZE, MAX_DEBRIS_SIZE)
-    x = random.uniform(0, canvas.get_canvas_width() - width)
-    y = random.uniform(0, canvas.get_canvas_height() - height)
-
-    piece = canvas.create_oval(x, y, x + width, y + height)
-    canvas.set_color(canvas.get_random_color())
+        # Create with a random color
+        piece = canvas.create_oval(x, y, x + width, y + height)
+        canvas.set_color(piece, canvas.get_random_color())
 
 
 def remove_debris(canvas, x, y):
-    item = canvas.find_closest(x, y)
-    if item is not None:
+    &quot;&quot;&quot;
+    Removes the debris (if any) at the given location.  If multiple pieces
+    of debris are at this location, removes the one on the top.
+    &quot;&quot;&quot;
+    item = canvas.find_element_at(x, y)
+    if item:
         canvas.delete(item)
+
 
 if __name__ == &quot;__main__&quot;:
     main()

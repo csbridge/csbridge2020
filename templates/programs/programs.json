@@ -484,6 +484,11 @@
           "title_en": "Hole Puncher",
           "title_tr": "Delgeç",
           "url": "projects/holePuncher/"
+        },
+        {
+          "title_en": "Debris Sweeper",
+          "title_tr": "Enkazı Kaldır",
+          "url": "projects/debrisSweeper/"
         }
       ],
       "projects": [
