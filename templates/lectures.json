@@ -45,14 +45,14 @@
 		"title_tr": "Grafik",
 		"slidesURL": "slides/Lecture7_Graphics.pdf",
 		"codeURL": "starter/lectures/Lecture7.zip",
-		"visible_after": "2020080700"
+		"visible_after": "2020081000"
 	},
 	{
 		"title_en": "Functions",
 		"title_tr": "Fonksiyonlar",
 		"slidesURL": "slides/Lecture8-Functions.pdf",
 		"codeURL": "starter/lectures/Lecture8.zip",
-		"visible_after": "2020081000"
+		"visible_after": "2020081009"
 	},
 	{
 		"title_en": "Nested Loops",
@@ -70,10 +70,16 @@
 	},
 	{
 		"title_en": "Lists",
-		"title_tr": "",
+		"title_tr": "Lists",
 		"slidesURL": "slides/Lecture11.pdf",
 		"codeURL": "starter/lectures/Lecture11.zip",
 		"visible_after": "2020081200"
+	},
+	{
+		"title_en": "The Mouse",
+		"title_tr": "The Mouse",
+		"slidesURL": "slides/12-Mouse.pdf",
+		"codeURL": "starter/lectures/Lecture12.zip",
+		"visible_after": "2020081209"
 	}
-
 ]
