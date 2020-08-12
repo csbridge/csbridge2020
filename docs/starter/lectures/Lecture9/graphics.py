@@ -464,19 +464,30 @@ class Canvas(tkinter.Canvas):
             hidden: True if the object should be hidden, False if the object should be visible.
         """
         self.itemconfig(obj, state='hidden' if hidden else 'normal')
-        
-    def find_closest(self, x, y):
+
+    def find_element_at(self, x, y):
         """
-        Finds the closest object to this location
+        Finds the topmost element overlapping this location.
 
         Args:
             x: the x coordinate of the location
             y: the y coordinate of the location
 
         Returns:
-            the top-most graphical object on the canvas closest to this location (None otherwise)
+            the top-most graphical object on the canvas at this location (None otherwise)
         """
-        return super(Canvas, self).find_closest(x, y)
+        closest = self.find_closest(x, y)
+
+        closest_left_x = self.get_left_x(closest)
+        closest_right_x = closest_left_x + self.get_width(closest)
+        closest_top_y = self.get_top_y(closest)
+        closest_bottom_y = closest_top_y + self.get_height(closest)
+
+        # If this object entirely contains this point, then return it.  Otherwise, there is no object here.
+        if closest_left_x <= x <= closest_right_x and closest_top_y <= y <= closest_bottom_y:
+            return closest
+
+        return None
         
     def find_overlapping(self, x1, y1, x2, y2):
         """
@@ -505,7 +516,7 @@ class Canvas(tkinter.Canvas):
     def set_fill_color(self, obj, fill_color):
         """
         Sets the fill color of the specified graphical object.  Cannot be used to change the fill color
-        of non-fillable objects such as images.
+        of non-fillable objects such as images - throws a tkinter.TclError.
 
         Args:
             obj: the object for which to set the fill color
@@ -515,12 +526,12 @@ class Canvas(tkinter.Canvas):
         try:
             self.itemconfig(obj, fill=fill_color)
         except tkinter.TclError:
-            assert False, "You can't set the fill color on this object - perhaps the object is an image"
+            raise tkinter.TclError("You can't set the fill color on this object")
 
     def set_outline_color(self, obj, outline_color):
         """
         Sets the outline color of the specified graphical object.  Cannot be used to change the outline color
-        of non-outlined objects such as images or text.
+        of non-outlined objects such as images or text  - throws a tkinter.TclError.
 
         Args:
             obj: the object for which to set the outline color
@@ -529,21 +540,28 @@ class Canvas(tkinter.Canvas):
         """
         try:
             self.itemconfig(obj, outline=outline_color)
-        except tkinter.TclError:
-            assert False, "You can't set the outline color on this object - perhaps the object is an image or is text"
+        except tkinter.TclError as e:
+            raise tkinter.TclError("You can't set the outline color on this object")
 
     def set_color(self, obj, color):
         """
-        Sets the fill and outline color of the specified graphical object.  Cannot be used on objects that are
-        either not fillable or not outline-able, such as images or text.
+        Sets the fill and outline color of the specified graphical object.  If the object doesn't
+        have one or more of a fill or outline color, setting of that color is ignored.
 
         Args:
             obj: the object for which to set the color
             color: the color to set the fill and outline colors to be, as a string.  If this is the empty string,
                 the object will be set to be not filled and not outlined.
         """
-        self.set_fill_color(obj, color)
-        self.set_outline_color(obj, color)
+        try:
+            self.set_fill_color(obj, color)
+        except tkinter.TclError:
+            pass
+
+        try:
+            self.set_outline_color(obj, color)
+        except tkinter.TclError:
+            pass
 
     def set_outline_width(self, obj, width):
         """
