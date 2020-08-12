@@ -539,5 +539,26 @@
         }
       ]
     }
+  },
+  {
+    "title_en": "Breakout",
+    "title_tr": "Breakout",
+    "bonus": false,
+    "visible_after": "2020081300",
+    "morning": {
+      "projectURL": "starter/Breakout.zip",
+      "projects": [
+        {
+          "imageURL": "img/projects/breakout/breakout.jpg",
+          "title_en": "Breakout",
+          "title_tr": "Breakout",
+          "topic_en": "Python, Graphics, Animation, Lists and Mouse",
+          "topic_tr": "Python, Graphics, Animation, Lists and Mouse",
+          "type": "project",
+          "url": "projects/breakout.html",
+          "teachURL": "teach/notes/breakout.html"
+        }
+      ]
+    }
   }
 ]

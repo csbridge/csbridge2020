@@ -499,6 +499,26 @@ visible-after, to ensure they display when you want them to.
 							</li>
 			</ul>
 		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081300"
+		>
+			<a tabindex="-1" href="#">8: Breakout</a>
+
+			<!-- For each of morning/evening, add a "side popup" -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081300"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081300"
+							>
+								<a href="../../en/projects/breakout.html">Breakout</a>
+							</li>
+			</ul>
+		</li>
 </ul>					</li>
 
 					<!-- Examples dropdown -->
@@ -962,7 +982,7 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Written by Eric Roberts
+			Credit: Eric Roberts
 		</p>
 </div>
 <hr/>
@@ -971,9 +991,9 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<p>Handouts: <a href="../../en/resources/graphics.html">Graphics Reference</a><br/>
-Worked Example: <a href="../../en/projects/stampTool.html">Stamp Tool</a><br/>
+Worked Example: <a href="../../en/projects/stampTool/">Stamp Tool</a><br/>
 Project: <a href="../../en/projects/bouncingBall.html">Bouncing Ball</a><br/>
-<b>Starter code:</b> <a href="../../starter/Breakout.zip">Breakout.zip</a></p>
+File: <code>breakout.py</code></p>
 <p>Your job in this assignment is to write the classic arcade game of Breakout, which was invented by Steve Wozniak before he founded Apple with Steve Jobs (moment of silence).  It is a large assignment, but entirely manageable as long as you break the problem up into pieces.  </p>
 <h2 id="the-breakout-game">The Breakout Game</h2>
 <p>In Breakout, the initial configuration of the world appears as shown below. The colored rectangles in the top part of the screen are <strong>bricks</strong>, and the slightly larger rectangle at the bottom is the <strong>paddle</strong>. The paddle is in a fixed position in the vertical dimension, but moves back and forth across the screen along with the mouse until it reaches the edge of its space. </p>
@@ -993,7 +1013,7 @@ Project: <a href="../../en/projects/bouncingBall.html">Bouncing Ball</a><br/>
     </div>
 </div>
 
-<h2 id="1-create-bricks">1. Create bricks</h2>
+<h2 id="1-create-bricks">1. Create Bricks</h2>
 <p>Before you start playing the game, you have to set up the various pieces.  Thus, it probably makes sense to implement the <code>main</code> function as several smaller functions, each doing one piece of the game.  An important part of the setup consists of creating the rows of bricks at the top of the game, which look like this:</p>
 <p><center>
 <img style="padding:10px;max-width:100%" src="../../img/projects/breakout/breakoutBricks.png"></img>
@@ -1034,7 +1054,7 @@ def my_func(...):
 </code></pre>
 
 <h2 id="4-check-for-collisions">4. Check for Collisions</h2>
-<p>Now comes the interesting part.  In order to make Breakout into a real game, you have to be able to tell whether the ball is colliding with another object in the window.  There is a canvas function: <code>canvas.find_overlapping(x_1, y_1, x_2, y_2)</code>, which returns a list of all objects that are overlapping the rectangle with upper-left corner at <code>(x_1, y_1)</code> and bottom-right corner at <code>(_2, y_2)</code>.</p>
+<p>Now comes the interesting part.  In order to make Breakout into a real game, you have to be able to tell whether the ball is colliding with another object in the window.  There is a canvas function: <code>canvas.find_overlapping(x_1, y_1, x_2, y_2)</code>, which returns a list of all objects that are overlapping the rectangle with upper-left corner at <code>(x_1, y_1)</code> and bottom-right corner at <code>(x_2, y_2)</code>.</p>
 <pre><code>colliders = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 </code></pre>
 
@@ -1042,11 +1062,11 @@ def my_func(...):
 <p><center>
   <img src="../../img/projects/breakout/breakoutCollision.png"></img>
 </center></p>
-<p>To get a list of objects that are overlapping the ball, you can use code as follows which calls the canvas function <code>canvas.coords(obj)</code>, returning the 4 corners of an object:</p>
+<p>To get a list of objects that are overlapping the ball, you can use code as follows which calls the canvas function <code>canvas.coords(obj)</code>, returning the coordinates of the top-left and bottom-right of the object.</p>
 <pre><code># this graphics function gets the location of the ball as a list
 ball_coords = canvas.coords(ball)
 
-# the list has four elements:
+# the list has the coordinates for two points
 x_1 = ball_coords[0]
 y_1 = ball_coords[1]
 x_2 = ball_coords[2]
@@ -1073,7 +1093,7 @@ colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 <h2 id="extensions"><span style="color:blue">Extensions</span></h2>
 <p>If you have the basic play working well, then this would be a great opportunity to go above and beyond. Here are a few ideas of for possible extensions (of course, we encourage you to use your imagination to come up with other ideas as well):</p>
 <ul>
-<li><strong>Add sounds.</strong> It can be fun to add sound effects to your game, such as a sound whenever the ball bounces, whenever the brick is removed, whenever the user wins, and so forth.  To do this, first, add the sound file you want to use to your PyCharm project on your computer.  (Drag the file into the folder containing the project files on your computer).  Then, you'll need to install the library that can play sound files.  First open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following 2 commands below into the Terminal.  On Windows, type <code>py</code> instead of <code>python3</code>:</li>
+<li><strong>Add sounds.</strong> It can be fun to add sound effects to your game, such as a sound whenever the ball bounces, whenever a brick is removed, whenever the user wins, and so forth.  To do this, first, add the sound file you want to use to your PyCharm project on your computer.  (Drag the file into the folder containing the project files on your computer).  Then, you'll need to install the library that can play sound files.  First open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following 2 commands below into the Terminal.  On Windows, type <code>py</code> instead of <code>python3</code>:</li>
 </ul>
 <pre><code>&gt; python3 -m pip install playsound
 ...prints stuff...
@@ -1092,7 +1112,7 @@ colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 <p>You should replace <code>'mysoundfile.au'</code> with the name of the sound file in your project.  Make sure you don't forget to include the <code>block=False</code> at the end.</p>
 <ul>
 <li><strong>Improve the user control over bounces.</strong>  The program gets rather boring if the only thing the player has to do is hit the ball.  It is far more interesting if the player can control the ball by hitting it at different parts of the paddle.  The way the old arcade game worked was that the ball would bounce in both the x and y directions if you hit it on the edge of the paddle from which the ball was coming.  The web version implements this feature.</li>
-<li><strong>Use your imagination.</strong> What else have you always awanted a game like this for?</li>
+<li><strong>Use your imagination.</strong> What else have you always wanted a game like this to do?</li>
 </ul>
 	</div>
 </div>
