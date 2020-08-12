@@ -1003,12 +1003,8 @@ visible-after, to ensure they display when you want them to.
                 <td>Sets the location of <code>obj</code> to the specified coordinates.</td>
             </tr>
             <tr>
-                <td><code>set_outline_color(obj, color)</code></td>
-                <td>Sets the outline color (if applicable) of <code>obj</code>.</td>
-            </tr>
-            <tr>
-                <td><code>set_fill_color(obj, color)</code></td>
-                <td>Sets the fill color (if applicable) of <code>obj</code>.</td>
+                <td><code>set_color(obj, color)</code></td>
+                <td>Sets the outline and fill color (if applicable) of <code>obj</code>.</td>
             </tr>
             <tr>
                 <td><code>set_font(obj, font, size)</code></td>
@@ -1227,6 +1223,7 @@ canvas.set_outline_color(rect, '')    # no outline
 canvas.set_fill_color(rect, 'yellow') # yellow fill
 </code></pre>
 
+<p>Oftentimes we want to set both colors at the same time.  For this, we can use <code>set_color</code>.  This sets both the outline color and the fill color of a shape to a specified color.  You can even use it on shapes that don't have one of those - for instance, text has just a fill color, but you can use <code>set_color</code> to set its color anyway.  Therefore, most of the time, <code>set_color</code> is just what we need.  If you need more specificity in setting the outline color or fill color, however, you can use <code>set_outline_color</code> or <code>set_fill_color</code>.</p>
 <p>There are a ton of different colors available to use - for a complete list, <a href="https://www.tcl.tk/man/tcl8.6/TkCmd/colors.htm">check out this website</a>.</p>
 <h2 id="canvas-information">Canvas Information</h2>
 <p>You can get the width and height of the canvas itself using <code>get_canvas_width</code> and <code>get_canvas_height</code>:</p>
