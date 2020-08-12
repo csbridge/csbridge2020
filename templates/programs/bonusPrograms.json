@@ -150,5 +150,21 @@
         "difficulty": 2
       }
     ]
+  },
+  {
+    "title_en": "Lists and Mouse",
+    "title_tr": "Lists and Mouse",
+    "projectURL": "starter/BonusListsMouse.zip",
+    "visible_after": "2020081209",
+    "projects": [
+      {
+        "title_en": "Line Game",
+        "title_tr": "Çizgi Oyunu",
+        "imageURL": "img/projects/lineGame/icon.png",
+        "url": "projects/lineGame.html",
+        "teachURL": "teach/notes/lineGame.html",
+        "difficulty": 3
+      }
+    ]
   }
 ]
