@@ -328,6 +328,18 @@ The text will be in size 13 font.</p>
 <h2 id="returns">Returns</h2>
 <p>the mouse's current Y location on the canvas.</p></div>
 </dd>
+<dt id="src.graphics.Canvas.get_new_key_presses"><code class="name flex">
+<span>def <span class="ident">get_new_key_presses</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a list of all key presses that have occurred since the last call to this method or any registered
+key handler.</p>
+<h2 id="returns">Returns</h2>
+<p>a list of all key presses that have occurred since the last call to this method or any registered
+key handler.
+Each key press contains a keysym property for the key pressed, e.g.
+presses = canvas.get_new_key_presses(); print(presses[0].keysym).</p></div>
+</dd>
 <dt id="src.graphics.Canvas.get_new_mouse_clicks"><code class="name flex">
 <span>def <span class="ident">get_new_mouse_clicks</span></span>(<span>self)</span>
 </code></dt>
@@ -747,6 +759,7 @@ Cannot be used on any non-text graphical object.</p>
 <li><code><a title="src.graphics.Canvas.get_left_x" href="#src.graphics.Canvas.get_left_x">get_left_x</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_mouse_x" href="#src.graphics.Canvas.get_mouse_x">get_mouse_x</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_mouse_y" href="#src.graphics.Canvas.get_mouse_y">get_mouse_y</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_new_key_presses" href="#src.graphics.Canvas.get_new_key_presses">get_new_key_presses</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_new_mouse_clicks" href="#src.graphics.Canvas.get_new_mouse_clicks">get_new_mouse_clicks</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_random_color" href="#src.graphics.Canvas.get_random_color">get_random_color</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_text" href="#src.graphics.Canvas.get_text">get_text</a></code></li>
