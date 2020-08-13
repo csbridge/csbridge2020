@@ -4,7 +4,7 @@ credit: Eric Roberts
 translation: Ceren Kocaoğullar
 
 Handouts: [Grafikler Referansı]({{pathToRoot}}tr/handouts/graphics.html)<br/>
-Worked Example: [Damga Makinesi]({{pathToRoot}}tr/projects/stampTool/)<br/>
+Worked Example: [Damga Makinesi]({{pathToRoot}}tr/projects/stamptool/)<br/>
 Project: [Zıp Zıp Top]({{pathToRoot}}tr/projects/bouncingBall.html)<br/>
 File: `breakout.py`
 

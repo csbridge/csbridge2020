@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Mouse Location
 credit: Chris Piech
 
-Worked Examples: [Stamp Tool]({{pathToRoot}}en/projects/stampTool/)
+Worked Examples: [Stamp Tool]({{pathToRoot}}en/projects/stamptool/)
 
 File: `mouse_location.py`
 

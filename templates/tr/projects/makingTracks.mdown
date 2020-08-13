@@ -4,7 +4,7 @@ credit: Eric Roberts and Mehran Sahami
 translation: Ahmet Uysal
 
 Ders Notları: [Grafik Referansı]({{pathToRoot}}tr/resources/graphics.html)<br/>
-Çözümlü Örnekler: [Damga Makinesi]({{pathToRoot}}tr/projects/stampTool/)<br/>
+Çözümlü Örnekler: [Damga Makinesi]({{pathToRoot}}tr/projects/stamptool/)<br/>
 Dosya: `making_tracks.py`
 
 Kullanıcının tıkladığı yerlere resim çizen bir program yazın.

@@ -3,7 +3,7 @@ title: Farenin Konumu
 credit: Chris Piech
 translation: Ceren Kocaoğullar
 
-Çözümlü Örnekler: [Damga Makinesi]({{pathToRoot}}tr/projects/stampTool/)
+Çözümlü Örnekler: [Damga Makinesi]({{pathToRoot}}tr/projects/stamptool/)
 
 Dosya: `mouse_location.py`
 
