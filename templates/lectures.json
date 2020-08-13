@@ -81,5 +81,13 @@
 		"slidesURL": "slides/12-Mouse.pdf",
 		"codeURL": "starter/lectures/Lecture12.zip",
 		"visible_after": "2020081209"
+	},
+	{
+		"title_en": "Breakout Game",
+		"title_tr": "Breakout Oyunu",
+		"slidesURL": "slides/13-Breakout.pdf",
+		"codeURL": "starter/Breakout.zip",
+		"visible_after": "2020081209"
 	}
+
 ]
