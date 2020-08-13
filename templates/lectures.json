@@ -95,5 +95,11 @@
 		"slidesURL": "slides/14-Breakout-Extra.pdf",
 		"codeURL": "starter/Lecture14.zip",
 		"visible_after": "2020081309"
+	},
+	{
+		"title_en": "Breakout Extra Features",
+		"title_tr": "Brekaout Extra Features",
+		"slidesURL": "slides/Lecture15.pdf",
+		"visible_after": "2020081400"
 	}
 ]
