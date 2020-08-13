@@ -85,7 +85,7 @@
 	{
 		"title_en": "Breakout Game",
 		"title_tr": "Breakout Oyunu",
-		"slidesURL": "slides/13-Breakout.pdf",
+		"slidesURL": "slides/13-Lecture13-Breakout.pdf",
 		"codeURL": "starter/Breakout.zip",
 		"visible_after": "2020081100"
 	}
