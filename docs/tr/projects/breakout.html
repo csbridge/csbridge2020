@@ -1070,7 +1070,7 @@ def my_func(...):
 
 <h2 id="4-carpsmalar-tespit-et">4. Çarpışmaları tespit et</h2>
 <p>İlginç kısım burada geliyor. Breakout'u gerçek bir oyun haline getirmek için, topun ekrandaki başka bir nesneyle çarpışıp çarpışmadığını söyleyebilmeniz gerekiyor. Bilim insanlarının sık sık yaptığı gibi, basitleştiren bir varsayımda bulunarak başlamak ve sonrasında da bu varsayımı genişletmek yardımcı olabilir. Topu bir daireden çok tek bir nokta gibi düşünün. Bu durumda, başka bir nesne ile çarpışıp çarpışmadığını nasıl söyleyebilirsiniz?</p></p>
-<p>Dört koordinat tarafından tanımlanan dikdörtgenle üst üste binen tüm nesnelerin listesini döndüren bir canvas fonksiyonu vardır:<code>canvas.find_overlapping(x_1, y_1, x_2, y_2)</code></p>
+<p>Sol üst köşesi <code>(x_1, y_1)</code>'de ve sağ alt köşesi <code>(x_2, y_2)</code>'de olan dikdörtgenle üst üste binen tüm nesnelerin listesini döndüren bir canvas fonksiyonu vardır:<code>canvas.find_overlapping(x_1, y_1, x_2, y_2)</code></p>
 <pre><code>objs = canvas.find_overlapping(x_1,  y_1, x_2, y_2)
 </code></pre>
 
@@ -1078,10 +1078,10 @@ def my_func(...):
 <p><center>
   <img src="../../img/projects/breakout/breakoutCollision.png"></img>
 </center></p>
-<p>Topla çakışan nesnelerin bir listesini almak için, bir nesnenin 4 köşesini döndürerek <code>canvas.coords(obj)</code> canvas fonksiyonunu çağıran kodu aşağıdaki gibi kullanabilirsiniz:</p>
+<p>Topla çakışan nesnelerin bir listesini almak için, bir nesnenin sol üst ve sağ alt köşelerini döndürerek <code>canvas.coords(obj)</code> canvas fonksiyonunu çağıran kodu aşağıdaki gibi kullanabilirsiniz:</p>
 <pre><code># Bu grafik fonksiyonu topun yerini liste olarak alır
 ball_coords = canvas.coords(ball)
-# the list has four elements:
+# Bu listenin dört elemanı vardır:
 x_1 = ball_coords[0]
 y_1 = ball_coords[1]
 x_2 = ball_coords[2]
@@ -1114,7 +1114,7 @@ colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 <h2 id="eklemeler"><span style = "color: blue"> Eklemeler </span></h2>
 <p>Temel oyun iyi çalışıyorsa, bu daha da öteye gitmek için harika bir fırsat! Olası uzantılar için birkaç fikir (elbette, başka fikirleri de bulmak için hayal gücünüzü kullanmanızı öneririz):</p>
 <ul>
-<li><strong>Ses ekleyin.</strong> Topunuza sıçradığı zaman, tuğla çıkarıldığında, kullanıcı kazandığında vb. ses efektleri eklemek eğlenceli olabilir. Bunu yapmak için, önce kullanmak istediğiniz ses dosyasını bilgisayarınızdaki PyCharm projenize ekleyin. (Dosyayı bilgisayarınızdaki proje dosyalarını içeren klasöre sürükleyin). Ardından, ses dosyalarını çalabilen kitaplığı yüklemeniz gerekir. İlk önce bir "terminal" penceresi açın: Bunu yapmanın en kolay yolu, sol altta (“Run” ve “Python Console” sekmelerinin yanında) PyCharm içindeki “Terminal” sekmesini kullanmaktır. Terminal'e aşağıdaki 2 komutu yazın. Windows'ta, <code>python3</code> yerine <code>py</code> yazın:</li>
+<li><strong>Ses ekleyin.</strong> Topunuza sıçradığı zaman, bir tuğla çıkarıldığında, kullanıcı kazandığında vb. ses efektleri eklemek eğlenceli olabilir. Bunu yapmak için, önce kullanmak istediğiniz ses dosyasını bilgisayarınızdaki PyCharm projenize ekleyin. (Dosyayı bilgisayarınızdaki proje dosyalarını içeren klasöre sürükleyin). Ardından, ses dosyalarını çalabilen kitaplığı yüklemeniz gerekir. İlk önce bir "terminal" penceresi açın: Bunu yapmanın en kolay yolu, sol altta (“Run” ve “Python Console” sekmelerinin yanında) PyCharm içindeki “Terminal” sekmesini kullanmaktır. Terminal'e aşağıdaki 2 komutu yazın. Windows'ta, <code>python3</code> yerine <code>py</code> yazın:</li>
 </ul>
 <pre><code>&gt; python3 -m pip install playsound
 ...bir şeyler yazar...
