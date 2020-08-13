@@ -1,10 +1,11 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Breakout
-Hazırlayan: Written by Eric Roberts
+credit: Eric Roberts
 translation: Ceren Kocaoğullar
 
 Handouts: [Grafikler Referansı]({{pathToRoot}}tr/handouts/graphics.html)<br/>
-Worked Example: [Damga Makinesi]({{pathToRoot}}tr/projects/stampTool.html)<br/>
+Worked Example: [Damga Makinesi]({{pathToRoot}}tr/projects/stampTool/)<br/>
+Project: [Zıp Zıp Top]({{pathToRoot}}tr/projects/bouncingBall.html)<br/>
 File: `breakout.py`
 
 Bu projedeki işiniz Steve Jobs'la (saygı duruşu) Apple'ı kurmadan önce Steve Wozniak tarafından bulunan klasik arcade oyunu Breakout'u yazmak. Büyük bir proje, ama problemi parçalara böldüğünüz sürece tümüyle üstesinden gelinebilir.

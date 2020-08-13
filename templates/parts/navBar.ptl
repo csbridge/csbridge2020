@@ -134,13 +134,13 @@ Note: when adding support for additional languages, also make sure to add the ab
 					<!-- Projects dropdown -->
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{translation_dictionary["Projects"][lang]}} <b class="caret"></b></a>
-						% include('templates/programs/projectsDropdown.ptl')
+						% include('templates/programs/programsDropdown.ptl', content_type="projects")
 					</li>
 
 					<!-- Examples dropdown -->
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{translation_dictionary["Examples"][lang]}} <b class="caret"></b></a>
-						% include('templates/programs/examplesDropdown.ptl')
+						% include('templates/programs/programsDropdown.ptl', content_type="examples")
 					</li>
 
 					<!-- Examples dropdown -->
