@@ -87,7 +87,13 @@
 		"title_tr": "Breakout Oyunu",
 		"slidesURL": "slides/Lecture13-Breakout.pdf",
 		"codeURL": "starter/Breakout.zip",
-		"visible_after": "2020081100"
+		"visible_after": "2020081300"
+	},
+	{
+		"title_en": "Breakout Ideas",
+		"title_tr": "Brekaout Ideas",
+		"slidesURL": "slides/14-Breakout-Extra.pdf",
+		"codeURL": "starter/Lecture14.zip",
+		"visible_after": "2020081309"
 	}
-
 ]
