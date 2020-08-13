@@ -92,5 +92,5 @@ datetime_start,datetime_end,alert_type,category,location
 20200819 01:00, 20200819 02:30,alert-success,quickstart+teatime.ptl
 20200820 01:00, 20200820 02:30,alert-success,quickstart+teatime.ptl
 20200807 11:30, 20200807 13:00,alert-info,social-activity.ptl
-20200812 07:00, 20200812 08:00,alert-info,social-activity.ptl
+20200814 10:00, 20200812 08:00,alert-info,social-activity.ptl
 20200820 10:30, 20200807 12:00,alert-info,social-activity.ptl
