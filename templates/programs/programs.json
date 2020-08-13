@@ -588,6 +588,13 @@
                 "title_en": "Breakout",
                 "title_tr": "Breakout",
                 "projectURL": "starter/Breakout.zip",
+                "examples": [
+                    {
+                        "title_en": "Keyboard Karel",
+                        "title_tr": "Keyboard Karel",
+                        "url": "projects/keyboardKarel/"
+                    }
+                ],
                 "projects": [
                     {
                         "imageURL": "img/projects/breakout/breakout.jpg",
