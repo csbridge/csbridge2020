@@ -152,19 +152,27 @@ If you have the basic play working well, then this would be a great opportunity 
 ...prints stuff...
 ```
 
-Next, add the following import at the top of your program:
+Next, add the following import at the top of your program - **make sure to use the correct one for Mac or PC:**
 
 ```
+# Use this for Mac
 from playsound import playsound
+
+# Use this for PC
+from winsound import PlaySound,SND_FILENAME,SND_ASYNC
 ```
 
-Finally, whenever you want to play a sound in your program, call the following function:
+Finally, whenever you want to play a sound in your program, call the following function - **make sure to use the correct one for Mac or PC**:
 
 ```
+# Use this for Mac
 playsound('mysoundfile.au', block=False)
+
+# Use this for PC
+PlaySound('mysoundfile.au', SND_FILENAME | SND_ASYNC)
 ```
 
-You should replace `'mysoundfile.au'` with the name of the sound file in your project.  Make sure you don't forget to include the `block=False` at the end.
+You should replace `'mysoundfile.au'` with the name of the sound file in your project.
 
 + **Improve the user control over bounces.**  The program gets rather boring if the only thing the player has to do is hit the ball.  It is far more interesting if the player can control the ball by hitting it at different parts of the paddle.  The way the old arcade game worked was that the ball would bounce in both the x and y directions if you hit it on the edge of the paddle from which the ball was coming.  The web version implements this feature.
 + **Use your imagination.** What else have you always wanted a game like this to do?

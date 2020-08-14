@@ -971,6 +971,18 @@ visible-after, to ensure they display when you want them to.
 						</li>
 			</ul>
 		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081400"
+		>
+			<a tabindex="-1" href="#">15: Brekaout Extra Features</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lecture15.pdf">Sunum</a>
+						</li>
+			</ul>
+		</li>
 </ul>					</li>
 					
 					<!-- Bonus -->
@@ -1158,14 +1170,22 @@ colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 </code></pre>
 
 <p>Ardından, programınızın üstüne aşağıdaki içe aktarmayı ekleyin:</p>
-<pre><code>from playsound import playsound
+<pre><code># Use this for Mac
+from playsound import playsound
+
+# Use this for PC
+from winsound import PlaySound,SND_FILENAME,SND_ASYNC
 </code></pre>
 
 <p>Son olarak, programınızda bir ses çalmak istediğinizde, aşağıdaki fonksiyonu çağırın:</p>
-<pre><code>playsound('mysoundfile.au', block=False)
+<pre><code># Use this for Mac
+playsound('mysoundfile.au', block=False)
+
+# Use this for PC
+PlaySound('mysoundfile.au', SND_FILENAME | SND_ASYNC)
 </code></pre>
 
-<p><code>'mysoundfile.au'</code> dosyasını projenizdeki ses dosyasının adıyla değiştirmelisiniz. Sonuna <code>block=False</code> yazmayı unutmadığınızdan emin olun.</p>
+<p><code>'mysoundfile.au'</code> dosyasını projenizdeki ses dosyasının adıyla değiştirmelisiniz.</p>
 <ul>
 <li><strong>Sıçramalarda kullanıcı kontrolünü geliştirin.</strong> Oyuncunun yapması gereken tek şey topa vurmaksa program oldukça sıkıcı bir hal alabilir. Oyuncunun topu paddle'ın farklı yerlerine vurarak kontrol edebilmesi çok daha ilginç olur. Eski arcade oyununun çalışma şekli, topun geldiği raketin kenarına vurursanız topun hem x hem de y yönlerinde zıplamasıydı. Web sürümü bu özelliği uygular.</li>
 <li><strong>Hayal gücünüzü kullanın.</strong> Böyle bir oyunca başka neler yapabilmek istersiniz?</li>

@@ -162,16 +162,24 @@ Temel oyun iyi çalışıyorsa, bu daha da öteye gitmek için harika bir fırsa
 Ardından, programınızın üstüne aşağıdaki içe aktarmayı ekleyin:
 
 ```
+# Use this for Mac
 from playsound import playsound
+
+# Use this for PC
+from winsound import PlaySound,SND_FILENAME,SND_ASYNC
 ```
 
 Son olarak, programınızda bir ses çalmak istediğinizde, aşağıdaki fonksiyonu çağırın:
 
 ```
+# Use this for Mac
 playsound('mysoundfile.au', block=False)
+
+# Use this for PC
+PlaySound('mysoundfile.au', SND_FILENAME | SND_ASYNC)
 ```
 
-`'mysoundfile.au'` dosyasını projenizdeki ses dosyasının adıyla değiştirmelisiniz. Sonuna `block=False` yazmayı unutmadığınızdan emin olun.
+`'mysoundfile.au'` dosyasını projenizdeki ses dosyasının adıyla değiştirmelisiniz.
 
 - **Sıçramalarda kullanıcı kontrolünü geliştirin.** Oyuncunun yapması gereken tek şey topa vurmaksa program oldukça sıkıcı bir hal alabilir. Oyuncunun topu paddle'ın farklı yerlerine vurarak kontrol edebilmesi çok daha ilginç olur. Eski arcade oyununun çalışma şekli, topun geldiği raketin kenarına vurursanız topun hem x hem de y yönlerinde zıplamasıydı. Web sürümü bu özelliği uygular.
 - **Hayal gücünüzü kullanın.** Böyle bir oyunca başka neler yapabilmek istersiniz?

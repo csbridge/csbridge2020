@@ -1157,15 +1157,23 @@ colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 ...prints stuff...
 </code></pre>
 
-<p>Next, add the following import at the top of your program:</p>
-<pre><code>from playsound import playsound
+<p>Next, add the following import at the top of your program - <strong>make sure to use the correct one for Mac or PC:</strong></p>
+<pre><code># Use this for Mac
+from playsound import playsound
+
+# Use this for PC
+from winsound import PlaySound,SND_FILENAME,SND_ASYNC
 </code></pre>
 
-<p>Finally, whenever you want to play a sound in your program, call the following function:</p>
-<pre><code>playsound('mysoundfile.au', block=False)
+<p>Finally, whenever you want to play a sound in your program, call the following function - <strong>make sure to use the correct one for Mac or PC</strong>:</p>
+<pre><code># Use this for Mac
+playsound('mysoundfile.au', block=False)
+
+# Use this for PC
+PlaySound('mysoundfile.au', SND_FILENAME | SND_ASYNC)
 </code></pre>
 
-<p>You should replace <code>'mysoundfile.au'</code> with the name of the sound file in your project.  Make sure you don't forget to include the <code>block=False</code> at the end.</p>
+<p>You should replace <code>'mysoundfile.au'</code> with the name of the sound file in your project.</p>
 <ul>
 <li><strong>Improve the user control over bounces.</strong>  The program gets rather boring if the only thing the player has to do is hit the ball.  It is far more interesting if the player can control the ball by hitting it at different parts of the paddle.  The way the old arcade game worked was that the ball would bounce in both the x and y directions if you hit it on the edge of the paddle from which the ball was coming.  The web version implements this feature.</li>
 <li><strong>Use your imagination.</strong> What else have you always wanted a game like this to do?</li>
