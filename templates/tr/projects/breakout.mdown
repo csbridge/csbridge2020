@@ -181,5 +181,7 @@ PlaySound('mysoundfile.au', SND_FILENAME | SND_ASYNC)
 
 `'mysoundfile.au'` dosyasını projenizdeki ses dosyasının adıyla değiştirmelisiniz.
 
+We include `bounce.au` as a bounce sound you can use.  On Windows, you should use the included `bounce.wav` sound instead (`.au` files won't work).
+
 - **Sıçramalarda kullanıcı kontrolünü geliştirin.** Oyuncunun yapması gereken tek şey topa vurmaksa program oldukça sıkıcı bir hal alabilir. Oyuncunun topu paddle'ın farklı yerlerine vurarak kontrol edebilmesi çok daha ilginç olur. Eski arcade oyununun çalışma şekli, topun geldiği raketin kenarına vurursanız topun hem x hem de y yönlerinde zıplamasıydı. Web sürümü bu özelliği uygular.
 - **Hayal gücünüzü kullanın.** Böyle bir oyunca başka neler yapabilmek istersiniz?

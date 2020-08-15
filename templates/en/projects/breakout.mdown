@@ -174,5 +174,7 @@ PlaySound('mysoundfile.au', SND_FILENAME | SND_ASYNC)
 
 You should replace `'mysoundfile.au'` with the name of the sound file in your project.
 
+We include `bounce.au` as a bounce sound you can use.  On Windows, you should use the included `bounce.wav` sound instead (`.au` files won't work).
+
 + **Improve the user control over bounces.**  The program gets rather boring if the only thing the player has to do is hit the ball.  It is far more interesting if the player can control the ball by hitting it at different parts of the paddle.  The way the old arcade game worked was that the ball would bounce in both the x and y directions if you hit it on the edge of the paddle from which the ball was coming.  The web version implements this feature.
 + **Use your imagination.** What else have you always wanted a game like this to do?
