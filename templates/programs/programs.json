@@ -609,5 +609,64 @@
                 ]
             }
         ]
+    },
+    {
+        "title_en": "Breakout",
+        "title_tr": "Breakout",
+        "visible_after": "2020081400",
+        "bonus": false,
+        "sections": [
+            {
+                "title_en": "Breakout",
+                "title_tr": "Breakout",
+                "projectURL": "starter/Breakout.zip",
+                "projects": [
+                    {
+                        "imageURL": "img/projects/breakout/breakout.jpg",
+                        "teachURL": "teach/notes/breakout.html",
+                        "title_en": "Breakout",
+                        "title_tr": "Breakout",
+                        "topic_en": "Python, Graphics, Animation, Lists and Mouse",
+                        "topic_tr": "Python, Graphics, Animation, Lists and Mouse",
+                        "type": "project",
+                        "url": "projects/breakout.html"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title_en": "Breakout and Final Projects",
+        "title_tr": "Breakout and Final Projects",
+        "visible_after": "2020081700",
+        "bonus": false,
+        "sections": [
+            {
+                "title_en": "Morning",
+                "title_tr": "Sabah",
+                "projectURL": "starter/Day10.zip",
+                "projects": [
+                    {
+                        "imageURL": "",
+                        "title_en": "Phonebook",
+                        "title_tr": "Phonebook",
+                        "topic_en": "Dictionaries",
+                        "topic_tr": "Dictionaries",
+                        "type": "quickstart",
+                        "url": "projects/phonebook.html"
+                    },
+                    {
+                        "imageURL": "img/projects/breakout/breakout.jpg",
+                        "teachURL": "teach/notes/breakout.html",
+                        "title_en": "Breakout",
+                        "title_tr": "Breakout",
+                        "topic_en": "Python, Graphics, Animation, Lists and Mouse",
+                        "topic_tr": "Python, Graphics, Animation, Lists and Mouse",
+                        "type": "project",
+                        "url": "projects/breakout.html"
+                    }
+                ]
+            }
+        ]
     }
 ]
