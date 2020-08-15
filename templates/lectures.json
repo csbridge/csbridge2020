@@ -101,5 +101,12 @@
 		"title_tr": "Brekaout Extra Features",
 		"slidesURL": "slides/Lecture15.pdf",
 		"visible_after": "2020081400"
+	},
+	{
+		"title_en": "Dictionaries",
+		"title_tr": "Sözlükler",
+		"slidesURL": "slides/Lec16-Dictionaries",
+		"codeURL": "starter/Day10AM-Dictionaries.zip",
+		"visible_after": "2020081400"
 	}
 ]
