@@ -636,18 +636,19 @@
         ]
     },
     {
-        "title_en": "Breakout and Final Projects",
-        "title_tr": "Breakout and Final Projects",
+        "title_en": "Dictionaries, Breakout and Final Projects",
+        "title_tr": "Dictionaries, Breakout and Final Projects",
         "visible_after": "2020081700",
         "bonus": false,
         "sections": [
             {
                 "title_en": "Morning",
                 "title_tr": "Sabah",
-                "projectURL": "starter/Day10.zip",
+                "projectURL": "starter/Day10AM.zip",
                 "projects": [
                     {
-                        "imageURL": "",
+                        "imageURL": "img/projects/phonebook/icon.png",
+                        "teachURL": "teach/notes/phonebook.html",
                         "title_en": "Phonebook",
                         "title_tr": "Phonebook",
                         "topic_en": "Dictionaries",
