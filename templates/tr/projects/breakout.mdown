@@ -150,7 +150,7 @@ Eğer buraya kadar geldiyseniz, tüm zahmetli kısımları yapmışsınızdır. 
 
 Temel oyun iyi çalışıyorsa, bu daha da öteye gitmek için harika bir fırsat! Olası uzantılar için birkaç fikir (elbette, başka fikirleri de bulmak için hayal gücünüzü kullanmanızı öneririz):
 
-- **Ses ekleyin.** Topunuza sıçradığı zaman, bir tuğla çıkarıldığında, kullanıcı kazandığında vb. ses efektleri eklemek eğlenceli olabilir. Bunu yapmak için, önce kullanmak istediğiniz ses dosyasını bilgisayarınızdaki PyCharm projenize ekleyin. (Dosyayı bilgisayarınızdaki proje dosyalarını içeren klasöre sürükleyin). Ardından, ses dosyalarını çalabilen kitaplığı yüklemeniz gerekir. İlk önce bir "terminal" penceresi açın: Bunu yapmanın en kolay yolu, sol altta (“Run” ve “Python Console” sekmelerinin yanında) PyCharm içindeki “Terminal” sekmesini kullanmaktır. Terminal'e aşağıdaki 2 komutu yazın. Windows'ta, `python3` yerine `py` yazın:
+- **Ses ekleyin.** Topunuza sıçradığı zaman, bir tuğla çıkarıldığında, kullanıcı kazandığında vb. ses efektleri eklemek eğlenceli olabilir. Bunu yapmak için, önce kullanmak istediğiniz ses dosyasını bilgisayarınızdaki PyCharm projenize ekleyin. (Dosyayı bilgisayarınızdaki proje dosyalarını içeren klasöre sürükleyin). Ardından, ses dosyalarını çalabilen kitaplığı yüklemeniz gerekir. İlk önce bir "terminal" penceresi açın: Bunu yapmanın en kolay yolu, sol altta (“Run” ve “Python Console” sekmelerinin yanında) PyCharm içindeki “Terminal” sekmesini kullanmaktır. Terminal'e aşağıdaki 2 komutu yazın.  **The second one is for Mac only**.  Windows'ta, `python3` yerine `py` yazın:
 
 ```
 > python3 -m pip install playsound
