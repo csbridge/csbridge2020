@@ -236,6 +236,12 @@ The text will be in size 13 font.</p>
 <dd>the graphical object to remove from the canvas</dd>
 </dl></div>
 </dd>
+<dt id="src.graphics.Canvas.delete_all"><code class="name flex">
+<span>def <span class="ident">delete_all</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove all graphical objects from the canvas.</p></div>
+</dd>
 <dt id="src.graphics.Canvas.find_element_at"><code class="name flex">
 <span>def <span class="ident">find_element_at</span></span>(<span>self, x, y)</span>
 </code></dt>
@@ -270,6 +276,14 @@ The text will be in size 13 font.</p>
 <h2 id="returns">Returns</h2>
 <p>a list of graphical objects on the canvas that overlap with this bounding box.</p></div>
 </dd>
+<dt id="src.graphics.Canvas.get_canvas_background_color"><code class="name flex">
+<span>def <span class="ident">get_canvas_background_color</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the name of the background color of the canvas.</p>
+<h2 id="returns">Returns</h2>
+<p>the color of the canvas background, as a string.</p></div>
+</dd>
 <dt id="src.graphics.Canvas.get_canvas_height"><code class="name flex">
 <span>def <span class="ident">get_canvas_height</span></span>(<span>self)</span>
 </code></dt>
@@ -285,6 +299,23 @@ The text will be in size 13 font.</p>
 <div class="desc"><p>Get the width of the canvas.</p>
 <h2 id="returns">Returns</h2>
 <p>the current width of the canvas.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.get_fill_color"><code class="name flex">
+<span>def <span class="ident">get_fill_color</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the fill color of the specified graphical object.
+Cannot be used to get the fill color
+of non-fillable objects such as images - throws a tkinter.TclError.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object for which to set the fill color</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>The current fill color of the object, as a string.
+If this is the empty string,
+the object is not filled.</p></div>
 </dd>
 <dt id="src.graphics.Canvas.get_height"><code class="name flex">
 <span>def <span class="ident">get_height</span></span>(<span>self, obj)</span>
@@ -352,6 +383,24 @@ mouse handler.
 Each mouse click contains x and y properties for the click location, e.g.
 clicks = canvas.get_new_mouse_clicks(); print(clicks[0].x).</p></div>
 </dd>
+<dt id="src.graphics.Canvas.get_outline_color"><code class="name flex">
+<span>def <span class="ident">get_outline_color</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the outline color of the specified graphical object.
+Cannot be used to get the outline color
+of non-outlined objects such as images or text
+- throws a tkinter.TclError.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the object for which to get the outline color</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>the outline color of the given object, as a string.
+If this is the empty string,
+the object does not have an outline.</p></div>
+</dd>
 <dt id="src.graphics.Canvas.get_random_color"><code class="name flex">
 <span>def <span class="ident">get_random_color</span></span>(<span>self)</span>
 </code></dt>
@@ -399,6 +448,19 @@ Cannot be used on any non-text graphical object.</p>
 </dl>
 <h2 id="returns">Returns</h2>
 <p>the width of the specified graphical object.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.is_hidden"><code class="name flex">
+<span>def <span class="ident">is_hidden</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets whether or not the given graphical object is hidden or visible on the canvas.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>obj</code></strong></dt>
+<dd>the graphical object to get the state of</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>True if the given graphical object is hidden, or False otherwise.</p></div>
 </dd>
 <dt id="src.graphics.Canvas.lower_behind"><code class="name flex">
 <span>def <span class="ident">lower_behind</span></span>(<span>self, obj, behind)</span>
@@ -751,20 +813,25 @@ Cannot be used on any non-text graphical object.</p>
 <li><code><a title="src.graphics.Canvas.create_rectangle" href="#src.graphics.Canvas.create_rectangle">create_rectangle</a></code></li>
 <li><code><a title="src.graphics.Canvas.create_text" href="#src.graphics.Canvas.create_text">create_text</a></code></li>
 <li><code><a title="src.graphics.Canvas.delete" href="#src.graphics.Canvas.delete">delete</a></code></li>
+<li><code><a title="src.graphics.Canvas.delete_all" href="#src.graphics.Canvas.delete_all">delete_all</a></code></li>
 <li><code><a title="src.graphics.Canvas.find_element_at" href="#src.graphics.Canvas.find_element_at">find_element_at</a></code></li>
 <li><code><a title="src.graphics.Canvas.find_overlapping" href="#src.graphics.Canvas.find_overlapping">find_overlapping</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_canvas_background_color" href="#src.graphics.Canvas.get_canvas_background_color">get_canvas_background_color</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_canvas_height" href="#src.graphics.Canvas.get_canvas_height">get_canvas_height</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_canvas_width" href="#src.graphics.Canvas.get_canvas_width">get_canvas_width</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_fill_color" href="#src.graphics.Canvas.get_fill_color">get_fill_color</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_height" href="#src.graphics.Canvas.get_height">get_height</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_left_x" href="#src.graphics.Canvas.get_left_x">get_left_x</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_mouse_x" href="#src.graphics.Canvas.get_mouse_x">get_mouse_x</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_mouse_y" href="#src.graphics.Canvas.get_mouse_y">get_mouse_y</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_new_key_presses" href="#src.graphics.Canvas.get_new_key_presses">get_new_key_presses</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_new_mouse_clicks" href="#src.graphics.Canvas.get_new_mouse_clicks">get_new_mouse_clicks</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_outline_color" href="#src.graphics.Canvas.get_outline_color">get_outline_color</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_random_color" href="#src.graphics.Canvas.get_random_color">get_random_color</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_text" href="#src.graphics.Canvas.get_text">get_text</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_top_y" href="#src.graphics.Canvas.get_top_y">get_top_y</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_width" href="#src.graphics.Canvas.get_width">get_width</a></code></li>
+<li><code><a title="src.graphics.Canvas.is_hidden" href="#src.graphics.Canvas.is_hidden">is_hidden</a></code></li>
 <li><code><a title="src.graphics.Canvas.lower_behind" href="#src.graphics.Canvas.lower_behind">lower_behind</a></code></li>
 <li><code><a title="src.graphics.Canvas.lower_to_back" href="#src.graphics.Canvas.lower_to_back">lower_to_back</a></code></li>
 <li><code><a title="src.graphics.Canvas.mouse_is_on_canvas" href="#src.graphics.Canvas.mouse_is_on_canvas">mouse_is_on_canvas</a></code></li>
