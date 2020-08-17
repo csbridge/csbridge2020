@@ -2,17 +2,16 @@ template: templates/en/projects/projectTemplate.ptl
 title: Snow
 credit: Chris Piech
 
-Examples: [Rockets]({{pathToRoot}}en/projects/rocketShip.html)<br/>
+Examples: [Rockets]({{pathToRoot}}en/projects/rocketPaddle/)<br/>
 File: `snow.py`
 
 Animate circles (snow) falling down from the sky and piling up on the ground.
 
-<img src="{{pathToRoot}}img/projects/snow/snow.png" alt="a screenshot of the snow program with snow falling and stopping at the bottom of the screen" class="center" style="width: 90%" />
+<img src="{{pathToRoot}}img/projects/snow/snow.png" alt="a screenshot of the snow program with snow falling and stopping at the bottom of the screen" class="center" style="width: 100%; border: 1px solid black" />
 
 Use an animation loop. Each time through the loop:
 
 1. Animate all snow flakes not on the ground
-
-- Generate a new snow flake at the top of the screen with 10% probability, at a random horizontal location
-- Call `update()` on the canvas
-- Pause for 10 milliseconds
+* Generate a new snowflake at the top of the screen with 10% probability, at a random horizontal location
+* Call `update()` on the canvas
+* Pause for 10 milliseconds

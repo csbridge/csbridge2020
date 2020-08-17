@@ -1,11 +1,12 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Fırlama Fonksiyonlar
 credit: Chris, Bryce, Lisa
-translation: Serhat Arslan, Ceren Kocaoğullar
+translation: Ceren Kocaoğullar, Serhat Arslan
+
+Örnek: [Ortalama Fonksiyonu]({{pathToRoot}}tr/projects/average/) <br/>
 
 ## 1. Mad Max
 
-Örnek: [Ortalama Fonksiyonu]({{pathToRoot}}tr/projects/averageMethod.html}}) <br/>
 Dosya: `mad_max.py`
 
 Programı, üç sayının maksimumunu döndüren `mad_max` fonksiyonunu yazarak tamamlayın.
@@ -30,33 +31,47 @@ def main():
 ```
 4, 5, ve 6 sayılarının maksimumu: 6
 -4, 4, ve 0 sayılarının maksimumu: 4
-3, 2, ve 1 sayılarının maksimumu:
-0, 0, ve 0 sayılarının maksimumu:: 0
+3, 2, ve 1 sayılarının maksimumu: 3
+0, 0, ve 0 sayılarının maksimumu: 0
 ```
 
-## 2. Ağaçlar Çiz
+Python'da normalde bunun için kullanacağımız yerleşik bir `max` fonksiyonu olmasına rağmen, bu problem için onu kullanmamalısınız. Bunun yerine, `if`, `elif` ve `else` ifadeleri gibi başka şeylerle uygulama pratiği yapmanızı istiyoruz.
 
-Ders Notları: [Graphics Reference]({{pathToRoot}}tr/handouts/graphics.html)<br/>
-Örnekler: [Draw People]({{pathToRoot}}tr/projects/drawpeople.html}}),
-[Half Green]({{pathToRoot}}tr/projects/halfgreen.html}})<br/>
-Dosya: `draw_trees.py`
+## 2. Dog Years
 
-`draw_tree` fonksiyonunu doldurun. Bu fonksiyon verilen `(x, y)` koordinatlarında _*tabanı*_ ortalanmış bir ağaç çizer:
+Dosya: `dog_years.py`
 
-`main` fonksiyonu sizin için yazılmış durumda:
+Tüylü dostlarımızın insanlardan farklı bir oranda yaşlandığını herkes bilir. Kullanıcıdan bir insan yaşını (tam sayı olarak ifade edilir) soran ve insan yılı başına yedi köpek yılı olduğu gerçeğini kullanarak eşdeğer köpek yaşını yazdıran bir program yazın. Bir `DOG_YEARS_PER_HUMAN_YEAR` sabiti tanımlayın. Kullanıcıcının tamsayı girdiğini varsayabilirsiniz, ancak tam sayının pozitif olması şart değildir. Değilse, bir hata mesajı yazdırın. Kullanıcı 0 girerse, program durmalıdır.
+
+Programınız, `human_years` olarak adlandırılan bir tamsayıyı parametre olarak kabul eden `compute_dog_years` adlı bir fonksiyon tanımlamalıdır. Fonksiyon, dönüştürülmüş insan yaşını döndürmelidir. Daha sonra bu fonksiyonu çağırmak için `main` fonksiyonunu düzenlemelisiniz.
+
+
+```
+def compute_dog_years(human_years):
+    ... kodunuzu buraya yazın ...
+```
+
+Main fonksiyonu zaten sizin için yazılmıştır, ancak `compute_dog_years` fonksiyonunuzu çağıran ve doğru ifadeyi yazdıran kod eksik.
 
 ```
 def main():
-    draw_tree(50, 150)
-    draw_tree(100, 300)
-    draw_tree(500, 200)
-    draw_tree(300, 250)
-    draw_tree(700, 310)
-
+    user_input = int(input("İnsan yılıyla bir yaş girin: "))
+    while user_input != 0:
+        if user_input < 0:
+            print("Üzgünüz, lütfen pozitif bir sayı veya çıkmak için 0 girin:")
+        else:
+            ... kodunuzu buraya yazın ...
+        user_input = int(input("İnsan yılıyla bir yaş girin: "))
 ```
 
-Her ağacın gövdesi 20 piksel (`TRUNK_WIDTH`) genişliğinde ve 80 piksel `TRUNK_HEIGHT`) yüksekliğinde olmalıdır. Yaprakların yarıçapları 30 piksel (`LEAVES_RADIUS`) olmalıdır. Çıktınız aşağıdakine benzer olmalıdır:
 
-<center>
-  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/madmethods/demo.png">
-</center>
+İşte programınızın bir çalıştırmasının nasıl görünmesi gerektiğine dair bir örnek (kullanıcı girdilerinin sırayla -12, 13 ve 0 olduğunu düşünürsek):
+
+
+```
+İnsan yılıyla bir yaş girin: -12
+Üzgünüz, lütfen pozitif bir sayı veya çıkmak için 0 girin
+İnsan yaşında bir yaş girin: 13
+Köpek yılıyla yaş 91
+İnsan yılıyla bir yaş girin: 0
+```

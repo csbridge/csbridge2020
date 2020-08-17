@@ -1,0 +1,10 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Division
+credit: Chris Piech and Lisa Yan
+solution: soln.py
+
+This demo shows several functions:
+
+* One takes in input and returns whether or not that input is odd.
+* Another takes in input and a divisor and returns the quotient using the *integer division* `//` operator.
+* A third takes in input and a divisor and returns the remainder using the *modulo* `%` operator.

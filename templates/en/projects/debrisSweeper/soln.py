@@ -5,15 +5,16 @@ Puts a random collection of debris (ovals) on the screen
 and then allows the user to click and remove the debris.
 """
 
-import random
 from graphics import Canvas
+import random
 
 # minimum and maximum size of a piece of debris
 MIN_DEBRIS_SIZE = 50
 MAX_DEBRIS_SIZE = 150
 
 # number of pieces of debris
-NUM_DEBRIS_PIECES = 100
+NUM_DEBRIS_PIECES = 2
+
 
 def main():
     canvas = Canvas()
@@ -28,24 +29,33 @@ def main():
 
     canvas.mainloop()
 
+
 def create_debris(canvas):
+    """
+    Creates NUM_DEBRIS_PIECES pieces of "debris" (ovals) with random locations,
+    sizes and colors.
+    """
     for i in range(NUM_DEBRIS_PIECES):
-        create_single_debris_piece(canvas)
+        # Calculate a random location and size
+        width = random.randint(MIN_DEBRIS_SIZE, MAX_DEBRIS_SIZE)
+        height = random.randint(MIN_DEBRIS_SIZE, MAX_DEBRIS_SIZE)
+        x = random.randint(0, canvas.get_canvas_width() - width)
+        y = random.randint(0, canvas.get_canvas_height() - height)
 
-def create_single_debris_piece(canvas):
-    width = random.uniform(MIN_DEBRIS_SIZE, MAX_DEBRIS_SIZE)
-    height = random.uniform(MIN_DEBRIS_SIZE, MAX_DEBRIS_SIZE)
-    x = random.uniform(0, canvas.get_canvas_width() - width)
-    y = random.uniform(0, canvas.get_canvas_height() - height)
-
-    piece = canvas.create_oval(x, y, x + width, y + height)
-    canvas.set_color(canvas.get_random_color())
+        # Create with a random color
+        piece = canvas.create_oval(x, y, x + width, y + height)
+        canvas.set_color(piece, canvas.get_random_color())
 
 
 def remove_debris(canvas, x, y):
-    item = canvas.find_closest(x, y)
-    if item is not None:
+    """
+    Removes the debris (if any) at the given location.  If multiple pieces
+    of debris are at this location, removes the one on the top.
+    """
+    item = canvas.find_element_at(x, y)
+    if item:
         canvas.delete(item)
+
 
 if __name__ == "__main__":
     main()

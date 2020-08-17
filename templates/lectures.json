@@ -22,9 +22,97 @@
 	{
 		"title_en": "Variables",
 		"title_tr": "Değişkenler",
-		"slidesURL": "slides/IntroPython_Variables.pdf",
+		"slidesURL": "slides/Lecture4_Variables.pdf",
 		"codeURL": "starter/lectures/Lecture4.zip",
 		"visible_after": "2020080600"
+	},
+	{
+		"title_en": "Control Flow Revisited",
+		"title_tr": "Kontrol Akışına Geri Dönüş",
+		"slidesURL": "slides/5-ControlFlowRevisited.pdf",
+		"codeURL": "starter/lectures/Lecture5.zip",
+		"visible_after": "2020080609"
+	},
+	{
+		"title_en": "For Loops, Deconstructed",
+		"title_tr": "For döngüsü ve analizi",
+		"slidesURL": "slides/Lecture6.pdf",
+		"codeURL": "starter/lectures/Lecture6.zip",
+		"visible_after": "2020080700"
+	},
+	{
+		"title_en": "Graphics",
+		"title_tr": "Grafik",
+		"slidesURL": "slides/Lecture7_Graphics.pdf",
+		"codeURL": "starter/lectures/Lecture7.zip",
+		"visible_after": "2020081000"
+	},
+	{
+		"title_en": "Functions",
+		"title_tr": "Fonksiyonlar",
+		"slidesURL": "slides/Lecture8-Functions.pdf",
+		"codeURL": "starter/lectures/Lecture8.zip",
+		"visible_after": "2020081009"
+	},
+	{
+		"title_en": "Nested Loops",
+		"title_tr": "Nested Loops",
+		"slidesURL": "slides/Lecture9.pdf",
+		"codeURL": "starter/lectures/Lecture9.zip",
+		"visible_after": "2020081100"
+	},
+	{
+		"title_en": "Animation",
+		"title_tr": "Animation",
+		"slidesURL": "slides/10-Animation.pdf",
+		"codeURL": "starter/lectures/Lecture10.zip",
+		"visible_after": "2020081109"
+	},
+	{
+		"title_en": "Lists",
+		"title_tr": "Lists",
+		"slidesURL": "slides/Lecture11.pdf",
+		"codeURL": "starter/lectures/Lecture11.zip",
+		"visible_after": "2020081200"
+	},
+	{
+		"title_en": "The Mouse",
+		"title_tr": "The Mouse",
+		"slidesURL": "slides/12-Mouse.pdf",
+		"codeURL": "starter/lectures/Lecture12.zip",
+		"visible_after": "2020081209"
+	},
+	{
+		"title_en": "Breakout Game",
+		"title_tr": "Breakout Oyunu",
+		"slidesURL": "slides/Lecture13-Breakout.pdf",
+		"codeURL": "starter/Breakout.zip",
+		"visible_after": "2020081300"
+	},
+	{
+		"title_en": "Breakout Ideas",
+		"title_tr": "Brekaout Ideas",
+		"slidesURL": "slides/14-Breakout-Extra.pdf",
+		"codeURL": "starter/Lecture14.zip",
+		"visible_after": "2020081309"
+	},
+	{
+		"title_en": "Breakout Extra Features",
+		"title_tr": "Brekaout Extra Features",
+		"slidesURL": "slides/Lecture15.pdf",
+		"visible_after": "2020081400"
+	},
+	{
+		"title_en": "Dictionaries",
+		"title_tr": "Sözlükler",
+		"slidesURL": "slides/Lec16-Dictionaries.pdf",
+		"codeURL": "starter/Day10AM-Dictionaries.zip",
+		"visible_after": "2020081700"
+	},
+	{
+		"title_en": "Final Project",
+		"title_tr": "Final Projesi",
+		"slidesURL": "slides/17-Final-Project.pdf",
+		"visible_after": "2020081709"
 	}
-
 ]

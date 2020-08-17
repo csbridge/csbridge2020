@@ -82,12 +82,8 @@ title: Graphics Reference
 				<td>Sets the location of <code>obj</code> to the specified coordinates.</td>
 			</tr>
 			<tr>
-				<td><code>set_outline_color(obj, color)</code></td>
-				<td>Sets the outline color (if applicable) of <code>obj</code>.</td>
-			</tr>
-			<tr>
-				<td><code>set_fill_color(obj, color)</code></td>
-				<td>Sets the fill color (if applicable) of <code>obj</code>.</td>
+				<td><code>set_color(obj, color)</code></td>
+				<td>Sets the outline and fill color (if applicable) of <code>obj</code>.</td>
 			</tr>
 			<tr>
 				<td><code>set_font(obj, font, size)</code></td>
@@ -370,6 +366,8 @@ rect = canvas.create_rectangle(100, 200, 300, 400)
 canvas.set_outline_color(rect, '')    # no outline
 canvas.set_fill_color(rect, 'yellow') # yellow fill
 ```
+
+Oftentimes we want to set both colors at the same time.  For this, we can use `set_color`.  This sets both the outline color and the fill color of a shape to a specified color.  You can even use it on shapes that don't have one of those - for instance, text has just a fill color, but you can use `set_color` to set its color anyway.  Therefore, most of the time, `set_color` is just what we need.  If you need more specificity in setting the outline color or fill color, however, you can use `set_outline_color` or `set_fill_color`.
 
 There are a ton of different colors available to use - for a complete list, [check out this website](https://www.tcl.tk/man/tcl8.6/TkCmd/colors.htm).
 

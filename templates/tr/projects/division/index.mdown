@@ -1,0 +1,11 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Bölme
+credit: Chris Piech ve Lisa Yan
+solution: soln.py
+translation: Ceren Kocaoğullar
+
+Bu demo birkaç fonksiyonu gösterir:
+
+- Biri, bir girdi alır ve onun tek sayı olup olmadığını döndürür.
+- Başka biri, girdi ve bir bölen alır ve _tamsayı bölümü_ `//` fonksiyonunu kullanarak bölümü döndürür.
+- Üçüncüsü ise girdi ve bir bölen alır ve _modulo_ `%` fonksiyonunu kullanarak kalanı döndürür.

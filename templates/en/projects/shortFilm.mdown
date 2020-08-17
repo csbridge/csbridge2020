@@ -1,15 +1,15 @@
 template: templates/en/projects/projectTemplate.ptl
 title: Short Film
-credit: Written by Chris Piech and Keith Schwarz.
+credit: Written by Chris Piech and Keith Schwarz
 
 Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
-Worked Example: [Half Green]({{pathToRoot}}en/projects/halfgreen.html),
+Worked Example: [Half Green]({{pathToRoot}}en/projects/halfgreen/),
 [Target]({{pathToRoot}}en/projects/target.html)<br/>
 File: `short_film.py`
 
-Did you know that animated movies like <i>Toy Story</i>, <i>Up</i>, and <i>Frozen</i> are made using computer programs? In this assignment you are going to use a program to create a short film.
+Did you know that animated movies like _Toy Story_, _Up_, and _Frozen_ are made using computer programs? In this assignment you are going to use a program to create a short film.
 
-## Display Message Method
+## Display Message
 
 Every movie has a beginning and an end. Sometimes it will start "Once Upon a Time...", sometimes it will start with a title, sometimes it will start with something sillier. At the end of the movie it sometimes says "The end."
 
@@ -32,7 +32,7 @@ The font (and font size) that we used was:
 canvas.set_font(label, "Papyrus", 40)
 ```
 
-After two seconds you should remove the rectangle that is the background and the text that is the message. To do so you can use the `delete` function (which takes an object that was on the canvas and removes it).
+Make sure to color the text white!  After two seconds you should remove the rectangle that is the background and the text that is the message. To do so you can use the `delete` function (which takes an object that was on the canvas and removes it).
 
 ```
 canvas.delete(your_object)
@@ -48,19 +48,19 @@ Your movie must have one scene to start: A setting sun. First, draw the sky, the
   <img style="width:100%" src="{{pathToRoot}}img/projects/shortfilm/animation.png">
 </center>
 
-## `get_sun_color` Function
+## get_sun_color Function
 
 Write a function that takes some parameter, and returns the color of the sun. You should specify the parameter of this function: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.
 
 ```
-def getSunColor(...):
+def get_sun_color(...):
   ...
   return color
 ```
 
 Have the function return "yellow", "orange", or "red" based on how many iterations have passed.
 
-## Finishing up
+## Finishing Up
 
 After your movie ends, display a finishing message using your `display_message()` function defined earlier. The end message should look like the screen below.
 
@@ -68,7 +68,7 @@ After your movie ends, display a finishing message using your `display_message()
   <img style="width:500px" src="{{pathToRoot}}img/projects/shortfilm/theEnd.png">
 </center>
 
-# Make It Better
+## Make It Better
 
 Do anything you want to make your story more captivating than just a setting sun. Can you tell a tale of love or action? Don't forget to use functions to make your life easier.
 

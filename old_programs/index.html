@@ -1,0 +1,1772 @@
+<!--
+	A template used for every page - contains the header.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../images/stanford-favicon.png" type="image/x-icon">
+<title>CS Bridge  | Home</title>
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../plugins/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+<!-- Java Script -->
+<script src="../plugins/jquery.min.js"></script>
+<script src="../plugins/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+
+<script src="../karel/ace/ace.js" type="text/javascript"></script>
+<script type="text/javascript" src="../js/moment.min.js"></script>
+<script type="text/javascript" src="../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../js/time.js"></script>
+
+<!--
+<script type="text/javascript" src="../plugins/d3.v3/d3.v3.min.js"></script>
+-->
+
+
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+  </script>-->
+
+<script src="../karel/js/html/websiteImports.js"></script>
+<script>importCss();</script>
+<script>importJs();</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+	</head>
+	<body>
+		<!--
+	A template used for every English page - contains the nav bar, a container div, and the footer.
+-->
+
+<!-- Navigation Bar -->
+<nav class="navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+  	<div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="../en/index.html">CS Bridge</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <!--<li ><a href="#">Link</a></li>-->
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+	          	<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+	          	<li><a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+          		<li><a class="visible-after" data-visible-after="2019071009" href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></li>
+          		<li><a class="visible-after" data-visible-after="2019071009" href="../en/resources/quick-python.html">Python Reference</a></li>
+	          	<li><a class="visible-after" data-visible-after="2019071109" href="../en/resources/graphics.html">Graphics Reference</a>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li class="dropdown-header">Course information</li>
+              <li><a href="../en/resources/general-info.html">General Info</a></li>
+              <li><a href="../en/resources/student-faq.html">[Student] Course FAQs</a></li>
+              <li><a href="../en/resources/section-info.html">Section Info</a></li>
+	          	<li class="divider visible-after" data-visible-after="2019071009" />
+              <li><a href="../en/resources/install.html">Install PyCharm</a></li>
+              <li><a href="../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+              <li class="divider" />
+              <li><a href="../en/resources/submission-oh.html">Submission/Office Hours</a></li>
+
+              <!-- Not used nor visible -->
+				      <!--<a class="item visible-after" data-visible-after="2019071909"><a href="../en/resources/jar.html">Exporting Projects as JARs</a>-->
+	          	<!--<a class="visible-after" href="../en/resources/sections.html">Sections</a>-->
+	          </ul>
+	        </li>
+
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+
+	        <!-- Day 1 -->
+              <li class="dropdown-submenu">
+                <a tabindex"-1" href="#">1. Karel</a>
+                <ul class="dropdown-menu">
+	                <li>
+	                	<a href="../en/projects/collectNewspaper.html">Collect Newspaper</a>
+	                </li>
+	          	    <li class="visible-after" data-visible-after="2019070912">
+	          	    	<a href="../en/projects/arches.html">Arches Karel</a>
+	          	    </li>
+                </ul>
+              </li>
+
+	          	
+	        <!-- Day 2 -->
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">2. Control Flow</a>
+                <ul class="dropdown-menu">
+	          	    <li class="dropdown-header visible-after" data-visible-after="2019071009">Morning</li>
+	          	    <li class="visible-after" data-visible-after="2019070913">
+	          	    	<a href="../en/projects/placeSquare.html">Place Square</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019070913">
+	          	    	<a href="../en/projects/mountain.html">Mountain Karel</a>
+	          	    </li>
+	          	    <li class="divider visible-after" data-visible-after="2019071009" />
+	          	    <li class="dropdown-header visible-after" data-visible-after="2019071009">Evening</li>
+	          	    <li class="visible-after" data-visible-after="2019070913">
+	          	    	<a href="../en/projects/stripeKarel.html">Stripe Karel</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019070913">
+	          	    	<a href="../en/projects/hospitalKarel.html">Hospital Karel</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019070913">
+	          	    	<a href="../en/projects/randomPainter.html">Random Painter</a>
+	          	    </li>
+                </ul>
+              </li>
+	          	
+	        <!-- Day 3 -->
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">3. Variables</a>
+                <ul class="dropdown-menu">
+	          	    <li class="dropdown-header visible-after" data-visible-after="2019071109">Morning</li>
+          		    <li class="visible-after" data-visible-after="2019071009">
+          		    	<a href="../en/projects/sandcastles.html">Sandcastles</a>
+          		    </li>
+          		    <li class="visible-after" data-visible-after="2019071009">
+          		    	<a href="../en/projects/subtractNum.html">Subtract Numbers</a>
+          		    </li>
+	          	    <li class="divider visible-after" data-visible-after="2019071109" />
+	          	    <li class="dropdown-header visible-after" data-visible-after="2019071109">Evening</li>
+          		    <li class="visible-after" data-visible-after="2019071009">
+          		    	<a href="../en/projects/runningSum.html">Run, Sum, Rum</a>
+          		    </li>
+          		    <li class="visible-after" data-visible-after="2019071009">
+          		    	<a href="../en/projects/8ball.html">8 Ball</a>
+          		    </li>
+          		    <li class="visible-after" data-visible-after="2019071009">
+          		    	<a href="../en/projects/viralVideo.html">Viral Video</a>
+          		    </li>
+	          	    <li class="visible-after" data-visible-after="2019071013">
+	          	    	<a href="../en/projects/khansole.html">Khansole Academy</a>
+	          	    </li>
+                </ul>
+              </li>
+
+	        <!-- Day 4 -->
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">4. For loops</a>
+                <ul class="dropdown-menu">
+				          <li class="dropdown-header visible-after" data-visible-after="2019071209">Morning</li>
+	          	    <li class="visible-after" data-visible-after="2019071013">
+	          	    	<a href="../en/projects/someSum.html">Some Sum</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071013">
+	          	    	<a href="../en/projects/nimm.html">Nimm</a>
+	          	    </li>
+                </ul>
+              </li>
+
+				<!-- Day 5 -->
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
+                <ul class="dropdown-menu">
+          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
+          		    <li class="visible-after" data-visible-after="2019071109">
+          		    	<a href="../en/projects/awesome.html">Programming is Awesome</a>
+          		    </li>
+	          	    <li class="visible-after" data-visible-after="2019071113">
+	          	    	<a href="../en/projects/randomCircles.html">Random Circles</a>
+	          	    </li>
+          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
+	          	    <li class="visible-after" data-visible-after="2019071113">
+	          	    	<a href="../en/projects/funkyFunctions.html">Funky Functions</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071113">
+	          	    	<a href="../en/projects/fizzbuzz.html">Fizzbuzz</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071212">
+	          	    	<a href="../en/projects/target.html">Target</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071112">
+	          	    	<a href="../en/projects/stringArt.html">String Art</a>
+	          	    </li>
+                </ul>
+              </li>
+
+				<!-- Day 6 -->
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">6. Loops/Animation</a>
+                <ul class="dropdown-menu">
+          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
+	          	    <li class="visible-after" data-visible-after="2019071112">
+	          	    	<a href="../en/projects/indexCounter.html">Index Counter</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071213">
+	          	    	<a href="../en/projects/illusion.html">Optical Illusion</a>
+	          	    </li>
+          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
+	          	    <li class="visible-after" data-visible-after="2019071112">
+	          	    	<a href="../en/projects/mysterySquare.html">Mystery Square</a>
+	          	    </li>
+	                <li class="visible-after" data-visible-after="2019071113">
+	                	<a href="../en/projects/bouncingBall.html">Bouncing Ball</a>
+	                </li>
+	          	    <li class="visible-after" data-visible-after="2019071213">
+	          	    	<a href="../en/projects/sunset.html">Short Film</a>
+	          	    </li>
+                </ul>
+              </li>
+
+				<!-- Day 7 -->
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">7. Mouse/Lists</a>
+                <ul class="dropdown-menu">
+          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Morning</li>
+          		    <li class="visible-after" data-visible-after="2019071509">
+          		    	<a href="../en/projects/mouseLocation.html">Mouse Location</a>
+          		    </li>
+          		    <li class="visible-after" data-visible-after="2019071509">
+          		    	<a href="../en/projects/makingTracks.html">Making Tracks</a>
+          		    </li>
+          		    <li class="dropdown-header visible-after" data-visible-after="2019071509">Evening</li>
+	          	    <li class="visible-after" data-visible-after="2019071512">
+	          	    	<a href="../en/projects/isAscending.html">Is Ascending</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071512">
+	          	    	<a href="../en/projects/sorted.html">Sorted</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071712">
+	          	    	<a href="../en/projects/snow.html">Snow</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071712">
+	          	    	<a href="../en/projects/mouseGame.html">[Optional] The Line</a>
+	          	    </li>
+	          	    <li class="visible-after" data-visible-after="2019071712">
+	          	    	<a href="../en/projects/music.html">[Optional] Waves of Sound</a>
+	          	    </li>
+                </ul>
+              </li>
+
+				<!-- Day 8-9 -->
+          		<li class="visible-after" data-visible-after="2019071513">
+                <a href="../en/projects/breakout.html">Breakout</a>
+          		</li>
+
+				<!-- Day 10 -->
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">10. Dictionaries</a>
+                <ul class="dropdown-menu">
+          		    <li class="visible-after" data-visible-after="2019071513">
+          		    	<a href="../en/projects/phoneBook.html">Phone Book</a>
+          		    </li>
+                </ul>
+              </li>
+
+				<!-- Day end -->
+          		<li class="visible-after" data-visible-after="2019071513">
+                <a href="../en/projects/project.html">Make Your Own</a>
+          		</li>
+	          </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+              <li class="dropdown-submenu">
+                <a tabindex"-1" href="#">1. Karel</a>
+                <ul class="dropdown-menu">
+	          	    <li><a href="../en/projects/stepUp/index.html">Step Up</a></li>
+	          	    <li><a href="../en/projects/place100/index.html">Place 100</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">2. Control Flow</a>
+                <ul class="dropdown-menu">
+	          	    <li><a href="../en/projects/beeperLine/index.html">Beeper Line</a></li>
+	          	    <li><a href="../en/projects/invertBeeper/index.html">Invert Beeper</a></li>
+	          	    <li><a href="../en/projects/unKarel/index.html">UN Karel</a></li>
+	          	    <li><a href="../en/projects/banishWinter/index.html">Banish Winter</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">3. Variables</a>
+                <ul class="dropdown-menu">
+	          	    <li><a href="../en/projects/emc2/index.html">E=MC<sup>2</sup></a></li>
+	          	    <li><a href="../en/projects/fibonacci/index.html">Fibonacci</a></li>
+	          	    <li><a href="../en/projects/findPi/index.html">Find Pi</a></li>
+                  <!-- Used to be a main course component -->
+	          	    <li><a href="../en/projects/favoriteNumber/index.html">Favorite Number</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">4. For loops</a>
+                <ul class="dropdown-menu">
+                  <li><a>Stay tuned!</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">5. Graphics/Functions</a>
+                <ul class="dropdown-menu">
+	          	    <li><a href="../en/projects/robotFace/index.html">Robot Face</a></li>
+	          	    <li><a href="../en/projects/halfGreen/index.html">Half Green</a></li>
+                  <!-- Used to be a main course component -->
+	          	    <li><a href="../en/projects/average/index.html">Average Function</a></li>
+	          	    <li><a href="../en/projects/divisible/index.html">Division Functions</a></li>
+	          	    <li><a href="../en/projects/drawPeople/index.html">Draw People</a></li>
+	          	    <li><a href="../en/projects/medicine/index.html">Counterfeit Medicine</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">6. Loops/Animation</a>
+                <ul class="dropdown-menu">
+	          	    <li><a href="../en/projects/moveToCenter/index.html">Move to Center</a></li>
+	          	    <li><a href="../en/projects/gravityBall/index.html">Gravity Ball</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu visible-after" data-visible-after="2019071009">
+                <a tabindex"-1" href="#">7. Mouse/Lists</a>
+                <ul class="dropdown-menu">
+	          	    <li><a href="../en/projects/stampTool/index.html">Stamp Tool</a></li>
+	          	    <li><a href="../en/projects/holePuncher/index.html">Hole Puncher</a></li>
+	          	    <li><a href="../en/projects/debrisSweeper/index.html">Debris Sweeper</a></li>
+	          	    <li><a href="../en/projects/suchADrag/index.html">Such a Drag</a></li>
+	          	    <li><a href="../en/projects/keyboardKarel/index.html">Keyboard Karel</a></li>
+	          	    <li><a href="../en/projects/rocketPaddle/index.html">Rocket Paddle</a></li>
+                </ul>
+              </li>
+	        </ul>
+	        </li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="../slides/Welcome.pdf">1. Karel</a></li>
+	          	<li><a href="../slides/ControlFlow.pdf">2. Control Flow Slides)</a></li>
+	          	<li><a href="../starter/ControlFlow.zip">2. Control Flow (Code)</a></li>
+			<li><a href="../slides/IntroPython_Variable_Math_RandomNumbers.pdf">3. Variables (Slide)</a></li>
+			<li><a href="../starter/Day3-Variables.zip">3. Variables (Code)</a></li>
+	          	<li><a href="../slides/Graphics.pdf">Graphics (Slides)</a></li>
+	          	<li><a href="../starter/Graphics.zip">Graphics (Code)</a></li>
+	          	<li><a href="../slides/Animation.pdf">Animation</a></li>
+	          	<li><a href="../slides/Methods.pdf">Functions</a></li>
+	          	<li><a href="../slides/NestedLoops.pdf">Nested Loops</a></li>
+	          	<li><a href="../slides/Events.pdf">Events (Slides)</a></li>
+	          	<li><a href="../starter/Events.zip">Events (Code)</a></li>
+	          	<li><a href="../slides/Breakout.pdf">Breakout</a></li>
+	         	<li><a href="../slides/Beyond-CSBridge.pdf">Beyond CSBridge</a></li>
+	          </ul>
+	        </li>
+
+          <!--
+	        <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forms <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<li><a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">Survey</a></li>
+                <li><a href="https://forms.gle/eVsMyZb8HCSUETeV6">Sign in To Lab</a></li>
+	          </ul>
+	        </li>
+          -->
+
+			
+	        <!-- Bonus button -->
+	        <ul class="nav navbar-nav">
+	            <li><a href="../en/bonus-index.html">Bonus</a></li>
+	        </ul>
+
+	        <!-- TA Link -->
+
+	      </ul>
+
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	      	<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../img/english_flag.png"></img></a></li>
+	      	<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../img/turkish_flag.png"></img></a></li>
+	        
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+
+</script>
+
+<div class="container">
+	
+	
+<div class="page-header" style="backgroud-color:#cdbfe3">
+	<div class="container">
+			<div>
+        	<div id="logo">
+				<img id="logoImg" src="../img/logo.png"/>
+			</div>
+			<div id="headerText" style="padding-bottom:15px;">
+				<div class="h1" style="margin-top:0px;font-size:40px;">
+					Intro to Computer Science
+				</div>
+				<div>
+					Summer 2020
+				</div>
+				<div>
+					August 4th to August 20th, online
+				</div>
+			</div>
+          
+        </div>
+	</div>
+</div>
+	
+<br />
+
+
+  <div class="alert alert-warning visible-during" data-visible-start="20200731 17:00" data-visible-end=" 20200804 10:00">
+        The program starts soon! To make sure you are ready to go on 4 August, please do the following:
+1) Install PyCharm and learn how to use it - information for both can be found by clicking on the "Resources" tab at the top of this page.
+
+2) Click on the Ed account setup link you should have received in an email. Setup your account. Familiarize yourself with <a href="https://us.edstem.org/" target="_blank">Ed</a> and post questions with screenshots <a href="https://us.edstem.org/courses/968/discussion/98915" target="_blank">on Ed here</a> if you need help with the PyCharm installation.
+
+3) Download the "Zoom Client for Meetings" version 5.1.2 <a href="https://zoom.us/download" target="_blank">here</a>.
+
+Please read the information on the website under the resources tab, such as <a href="https://online.csbridge.org/en/resources/general-info.html" target="_blank">General Info</a>,
+ <a href="https://online.csbridge.org/en/resources/student-faq.html" target="_blank">Student Frequently Asked Questions</a>, and <a href="https://online.csbridge.org/en/resources/section-info.html" target="_blank">Section Info</a>.   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200803 14:00" data-visible-end=" 20200804 10:00">
+        The program starts TODAY! Make sure you have tried to install PyCharm before lecture starts. Did you try installing it but need help? Post your question to <a href="https://us.edstem.org/courses/968/discussion/98915" target="_blank">Ed</a>.
+Lecture begins at 19:00 in Czech Republic and 20:00 in Turkey. When it's time for lecture, click <a https://stanford.zoom.us/j/92718948442" target="_blank">here</a>. Check <a https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed</a> for the password.
+
+Hope you are getting excited for the start of the program! Please read the information on the website under the Resources tab, such as <a href="https://online.csbridge.org/en/resources/general-info.html" target="_blank">General Info</a>,
+ <a href="https://online.csbridge.org/en/resources/student-faq.html" target="_blank">Student Frequently Asked Questions</a> is where you can find the schedule - be sure to click on "Czech" or "Turkey" to make sure you're viewing the calendar in the correct time zone, and <a href="https://online.csbridge.org/en/resources/section-info.html" target="_blank">Section Info</a> to learn more about what will happen in section.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200729 14:37" data-visible-end=" 20200731 17:00">
+        Hope you are getting excited for the start of the program! Please read the information on the website under the Resources tab, such as <a href="https://online.csbridge.org/en/resources/general-info.html" target="_blank">General Info</a>,
+ <a href="https://online.csbridge.org/en/resources/student-faq.html" target="_blank">Student Frequently Asked Questions</a> is where you can find the schedule - be sure to click on "Czech" or "Turkey" to make sure you're viewing the calendar in the correct time zone, and <a href="https://online.csbridge.org/en/resources/section-info.html" target="_blank">Section Info</a> to learn more about what will happen in section.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200804 10:00" data-visible-end=" 20200804 10:45">
+        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200805 10:00" data-visible-end=" 20200805 10:45">
+        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200806 10:00" data-visible-end=" 20200806 10:45">
+        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200810 10:00" data-visible-end=" 20200810 10:45">
+        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200811 10:00" data-visible-end=" 20200811 10:45">
+        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200812 10:00" data-visible-end=" 20200812 10:45">
+        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200813 10:00" data-visible-end=" 20200813 10:45">
+        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200817 10:00" data-visible-end=" 20200817 10:45">
+        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200818 10:00" data-visible-end=" 20200818 10:45">
+        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200819 10:00" data-visible-end=" 20200819 10:45">
+        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200820 10:00" data-visible-end=" 20200820 10:45">
+        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200805 01:00" data-visible-end=" 20200805 1:45">
+        At this time, you should be in Morning lecture at <a href="https://zoom.us/j/96004783458" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200806 01:00" data-visible-end=" 20200806 1:45">
+        At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200807 01:00" data-visible-end=" 20200807 1:45">
+        At this time, you should be in Morning lecture at <a href="https://zoom.us/j/96004783458" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200810 01:00" data-visible-end=" 20200810 1:45">
+        At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200811 01:00" data-visible-end=" 20200811 1:45">
+        At this time, you should be in Morning lecture at <a href="https://zoom.us/j/96004783458" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200812 01:00" data-visible-end=" 20200812 1:45">
+        At this time, you should be in Morning lecture at <a href="https://zoom.us/j/96004783458" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200813 01:00" data-visible-end=" 20200813 1:45">
+        At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200814 01:00" data-visible-end=" 20200814 1:45">
+        At this time, you should be in Morning lecture at <a href="https://zoom.us/j/96004783458" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200817 01:00" data-visible-end=" 20200817 1:45">
+        At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200818 01:00" data-visible-end=" 20200818 1:45">
+        At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200819 01:00" data-visible-end=" 20200819 1:45">
+        At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200820 01:00" data-visible-end=" 20200820 1:45">
+        At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200804 10:00" data-visible-end=" 20200804 12:00">
+        Once lecture ends, you should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200805 10:00" data-visible-end=" 20200805 12:00">
+        Once lecture ends, you should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200806 10:00" data-visible-end=" 20200806 12:00">
+        Once lecture ends, you should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200810 10:00" data-visible-end=" 20200810 12:00">
+        Once lecture ends, you should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200811 10:00" data-visible-end=" 20200811 12:00">
+        Once lecture ends, you should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200812 10:00" data-visible-end=" 20200812 12:00">
+        Once lecture ends, you should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200813 10:00" data-visible-end=" 20200813 12:00">
+        Once lecture ends, you should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200817 10:00" data-visible-end=" 20200817 12:00">
+        Once lecture ends, you should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200818 10:00" data-visible-end=" 20200818 12:00">
+        Once lecture ends, you should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200819 10:00" data-visible-end=" 20200819 12:00">
+        Once lecture ends, you should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200804 12:00" data-visible-end=" 20200804 01:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200805 12:00" data-visible-end=" 20200805 01:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200806 12:00" data-visible-end=" 20200806 01:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200810 12:00" data-visible-end=" 20200810 01:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200811 12:00" data-visible-end=" 20200811 01:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200812 12:00" data-visible-end=" 20200812 01:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200813 12:00" data-visible-end=" 20200813 01:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200817 12:00" data-visible-end=" 20200817 01:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200818 12:00" data-visible-end=" 20200818 01:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200819 12:00" data-visible-end=" 20200819 01:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200805 02:30" data-visible-end=" 20200805 03:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200806 02:30" data-visible-end=" 20200806 03:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200807 02:30" data-visible-end=" 20200807 03:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200810 02:30" data-visible-end=" 20200810 03:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200811 02:30" data-visible-end=" 20200811 03:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200812 02:30" data-visible-end=" 20200812 03:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200813 02:30" data-visible-end=" 20200813 03:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200814 02:30" data-visible-end=" 20200814 03:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200817 02:30" data-visible-end=" 20200817 03:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200818 02:30" data-visible-end=" 20200818 03:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200819 02:30" data-visible-end=" 20200819 03:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20200820 02:30" data-visible-end=" 20200820 03:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help at <a href="https://stanford.zoom.us/j/96577560446" target="_blank">this link</a>.
+Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200805 03:30" data-visible-end=" 20200805 04:15">
+        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200806 03:30" data-visible-end=" 20200806 04:15">
+        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200807 03:30" data-visible-end=" 20200807 04:15">
+        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200810 03:30" data-visible-end=" 20200810 04:15">
+        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200811 03:30" data-visible-end=" 20200811 04:15">
+        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200812 03:30" data-visible-end=" 20200812 04:15">
+        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200813 03:30" data-visible-end=" 20200813 04:15">
+        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200814 03:30" data-visible-end=" 20200814 04:15">
+        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200817 03:30" data-visible-end=" 20200817 04:15">
+        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200818 03:30" data-visible-end=" 20200818 04:15">
+        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200819 03:30" data-visible-end=" 20200819 04:15">
+        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200820 03:30" data-visible-end=" 20200820 04:15">
+        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200804 13:00" data-visible-end=" 20200804 13:15">
+        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200805 13:00" data-visible-end=" 20200805 13:15">
+        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200806 13:00" data-visible-end=" 20200806 13:15">
+        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200810 13:00" data-visible-end=" 20200810 13:15">
+        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200811 13:00" data-visible-end=" 20200811 13:15">
+        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200812 13:00" data-visible-end=" 20200812 13:15">
+        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200813 13:00" data-visible-end=" 20200813 13:15">
+        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200817 13:00" data-visible-end=" 20200817 13:15">
+        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200818 13:00" data-visible-end=" 20200818 13:15">
+        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20200819 13:00" data-visible-end=" 20200819 13:15">
+        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html/">here</a>.
+If you haven't finished it, that's okay, submit what you have!
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200805 01:00" data-visible-end=" 20200805 02:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200806 01:00" data-visible-end=" 20200806 02:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200807 01:00" data-visible-end=" 20200807 02:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200810 01:00" data-visible-end=" 20200810 02:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200811 01:00" data-visible-end=" 20200811 02:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200812 01:00" data-visible-end=" 20200812 02:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200813 01:00" data-visible-end=" 20200813 02:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200814 01:00" data-visible-end=" 20200814 02:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200817 01:00" data-visible-end=" 20200817 02:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200818 01:00" data-visible-end=" 20200818 02:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200819 01:00" data-visible-end=" 20200819 02:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20200820 01:00" data-visible-end=" 20200820 02:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-info visible-during" data-visible-start="20200807 11:30" data-visible-end=" 20200807 13:00">
+        The social activity is happening now! Check <a href="https://us.edstem.org/courses/968/discussion/96933"_blank">Ed</a> for more information about the social activity and for information on how to join.
+   
+  </div>
+  <div class="alert alert-info visible-during" data-visible-start="20200812 07:00" data-visible-end=" 20200812 08:00">
+        The social activity is happening now! Check <a href="https://us.edstem.org/courses/968/discussion/96933"_blank">Ed</a> for more information about the social activity and for information on how to join.
+   
+  </div>
+  <div class="alert alert-info visible-during" data-visible-start="20200820 10:30" data-visible-end=" 20200807 12:00">
+        The social activity is happening now! Check <a href="https://us.edstem.org/courses/968/discussion/96933"_blank">Ed</a> for more information about the social activity and for information on how to join.
+   
+  </div>
+
+<div class="alert alert-warning visible-default">
+      Hope you are getting excited for the start of the program! Please read the information on the website under the Resources tab, such as <a href="https://online.csbridge.org/en/resources/general-info.html" target="_blank">General Info</a>,
+ <a href="https://online.csbridge.org/en/resources/student-faq.html" target="_blank">Student Frequently Asked Questions</a> is where you can find the schedule - be sure to click on "Czech" or "Turkey" to make sure you're viewing the calendar in the correct time zone, and <a href="https://online.csbridge.org/en/resources/section-info.html" target="_blank">Section Info</a> to learn more about what will happen in section.
+
+</div>
+
+
+<!-- <div class="alert alert-success">
+	<b>Who are you?</b> Fill in the <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_1BKsIM6dKTTW0JL">class survey</a>.
+</div> -->
+
+<!--
+<div class="alert alert-info">
+	Add to the class playlist here: <a href="https://open.spotify.com/user/1251835474/playlist/2E1ccnzfMTqDv2D1JEoFF3">Spotify Playlist</a>
+</div>
+-->
+
+<div>
+<!-- <center>
+	<img style="width: 100%;" src="../img/fun/classPhoto.jpg"></img>
+</center> -->
+
+<!--
+	<div class="alert alert-success">
+	  Finishing up your final project?  Please fill out this survey as we reach the end of CS Bridge: <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_9QQCN0ZyMq3Ly3r">click here</a>.
+	</div>
+-->
+
+	<h2>
+		The Idea of the Course
+	</h2>
+
+	<p>The point of this three week course is to teach you the fundamentals of computer programming to the point where you can go and learn on your own. It is taught by a collaboration of instructors from Stanford University, CTU, and Koç. You will learn to program using material for Stanford's Introduction to Computer Science course.</p>
+</div>
+
+
+
+<hr/>
+
+<!-- Daily schedule / list of programs -->
+<div class="section" id="schedule">
+	<h2>Programs</h2>
+  <!--
+	<div class="alert alert-info">
+	  Here are instructions for how to work on the programs below during labs: <a href="../en/handouts/eclipse.html">click here</a>.
+	</div>
+  -->
+
+
+<!-- Final Project -->
+<table class="table table-striped">
+
+		<thead
+				class="visible-after" data-visible-after="2020080700"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>Day 4: For loops, deconstructed</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+				<tr 
+						class="info visible-after" data-visible-after="2020080700"
+				>
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Morning Project [<a href="../starter/Day4AM.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<tbody
+						class="visible-after" data-visible-after="2020080700"
+	      		>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/someSum.png" />
+</td>
+<td>
+	<a href="../en/projects/someSum.html">That&#039;s Some Sum!</a>
+    <br/>
+
+    <span class="label label-default">Quickstart</span>	
+</td>
+<td>Loop variables</td>		      			</tr>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/carbonDating.jpg" />
+</td>
+<td>
+	<a href="../en/projects/carbonDating.html">Carbon Dating</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td>Loop variables</td>		      			</tr>
+		      	</tbody>
+		<thead
+				class="visible-after" data-visible-after="2020080600"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>Day 3: Variables</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+				<tr 
+						class="info visible-after" data-visible-after="2020080600"
+				>
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Morning Project [<a href="../starter/Day3AM.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<tbody
+						class="visible-after" data-visible-after="2020080600"
+	      		>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/sandcastle.jpg" />
+</td>
+<td>
+	<a href="../en/projects/sandcastles.html">Sandcastles</a>
+    <br/>
+
+    <span class="label label-default">Quickstart</span>	
+</td>
+<td>Variables</td>		      			</tr>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/runningSum.png" />
+</td>
+<td>
+	<a href="../en/projects/runningSum.html">Run, Sum, Run!</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td>Variables</td>		      			</tr>
+		      	</tbody>
+				<tr 
+						class="info visible-after" data-visible-after="2020080609"
+				>
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Evening Project [<a href="../starter/Day3PM.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<tbody
+						class="visible-after" data-visible-after="2020080609"
+	      		>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/areaCalculator.png" />
+</td>
+<td>
+	<a href="../en/projects/areaCalculator.html">Area Calculator</a>
+    <br/>
+
+    <span class="label label-default">Quickstart</span>	
+</td>
+<td>Variables</td>		      			</tr>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/8ball.png" />
+</td>
+<td>
+	<a href="../en/projects/8ball.html">8 Ball</a>
+    <br/>
+
+    <span class="label label-primary">Section</span>	
+</td>
+<td>Conditionals</td>		      			</tr>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/viralVideo.png" />
+</td>
+<td>
+	<a href="../en/projects/viralVideo.html">Viral Video</a>
+    <br/>
+
+    <span class="label label-primary">Section</span>	
+</td>
+<td>Conditionals</td>		      			</tr>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/khansole.png" />
+</td>
+<td>
+	<a href="../en/projects/khansole.html">Khansole Academy</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td>Conditionals</td>		      			</tr>
+		      	</tbody>
+		<thead
+				class="visible-after" data-visible-after="2020080500"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>Day 2: Karel and Control Flow</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+				<tr 
+						class="info visible-after" data-visible-after="2020080500"
+				>
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Morning Project [<a href="../starter/Day2AM.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<tbody
+						class="visible-after" data-visible-after="2020080500"
+	      		>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/placeSquare.png" />
+</td>
+<td>
+	<a href="../en/projects/placeSquare.html">Place Square</a>
+    <br/>
+
+    <span class="label label-default">Quickstart</span>	
+</td>
+<td>While Loops</td>		      			</tr>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/mountain.png" />
+</td>
+<td>
+	<a href="../en/projects/mountain.html">Mountain Karel</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td>While Loops</td>		      			</tr>
+		      	</tbody>
+				<tr 
+						class="info visible-after" data-visible-after="2020080509"
+				>
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Evening Project [<a href="../starter/Day2PM.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<tbody
+						class="visible-after" data-visible-after="2020080509"
+	      		>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/stripeKarel.png" />
+</td>
+<td>
+	<a href="../en/projects/stripeKarel.html">Stripe Karel</a>
+    <br/>
+
+    <span class="label label-default">Quickstart</span>	
+</td>
+<td>Nested Loops</td>		      			</tr>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/hospitalKarel.png" />
+</td>
+<td>
+	<a href="../en/projects/hospitalKarel.html">Hospital Karel</a>
+    <br/>
+
+    <span class="label label-primary">Section</span>	
+</td>
+<td>Nested Loops</td>		      			</tr>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/randomPainter2.png" />
+</td>
+<td>
+	<a href="../en/projects/randomPainter.html">Random Painter</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td>If Statements</td>		      			</tr>
+		      	</tbody>
+		<thead
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>Day 1: Karel</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+				<tr 
+						class="info"
+				>
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Evening Project [<a href="../starter/Day1PM.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<tbody
+	      		>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/newspaper.jpg" />
+</td>
+<td>
+	<a href="../en/projects/collectNewspaper.html">Collect Newspaper</a>
+    <br/>
+
+    <span class="label label-default">Quickstart</span>	
+</td>
+<td>Functions</td>		      			</tr>
+		      			<tr>
+<td>
+	<img class="projectImg" src="../img/icons/charles.jpg" />
+</td>
+<td>
+	<a href="../en/projects/arches.html">Arches Karel</a>
+    <br/>
+
+    <span class="label label-primary">Section</span>	
+</td>
+<td>For Loops</td>		      			</tr>
+		      	</tbody>
+
+</table>
+</div>
+
+<hr/>
+
+<!-- Course Staff -->
+<div class="section" id="staff">
+	<h2>Teachers</h2>
+
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/nickt.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Nick T.</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/ondra.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Ondra</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Ayca.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Ayca</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/chris.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Chris</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/nickm.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Nick M.</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Josef.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Josef</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Yosefa.JPG" alt="profile picture">
+				  		<div class="caption">
+							<b>Yosefa</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/default.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Burcu</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/lisa.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Lisa</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/ceren.PNG" alt="profile picture">
+				  		<div class="caption">
+							<b>Ceren</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Ahmet.png" alt="profile picture">
+				  		<div class="caption">
+							<b>Ahmet</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Anna.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Anna</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Demet.jpeg" alt="profile picture">
+				  		<div class="caption">
+							<b>Demet</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Eddie.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Eddie</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Eliška.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Eliška</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Emilia.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Emilia</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Emirhan.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Emirhan</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Eren.jpeg" alt="profile picture">
+				  		<div class="caption">
+							<b>Eren</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Ezgi.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Ezgi</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Gaby.jpeg" alt="profile picture">
+				  		<div class="caption">
+							<b>Gaby</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Gül Sena.JPG" alt="profile picture">
+				  		<div class="caption">
+							<b>Gül Sena</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Honza.jpeg" alt="profile picture">
+				  		<div class="caption">
+							<b>Honza</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Jan.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Jan</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/jaroslav.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Jaroslav</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/jillian.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Jillian</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Julie.jpeg" alt="profile picture">
+				  		<div class="caption">
+							<b>Julie</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Melis.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Melis</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Necla.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Necla</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Okan.png" alt="profile picture">
+				  		<div class="caption">
+							<b>Okan</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Oya.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Oya</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Ozan.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Ozan</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Pinar.jpeg" alt="profile picture">
+				  		<div class="caption">
+							<b>Pinar</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/peeps/Radek.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Radek</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+</div>
+
+<hr/>
+
+<!-- Curriculum Overview -->
+<div class="section" id="playWithKarel">
+	<h2>Curriculum</h2>
+	<img src = "../img/icons/curriculum.jpg" style="width:100%"></img>
+</div>
+
+
+<!--<div class="section" id="playWithKarel">
+	<h2>
+		Play With Karel
+	</h2>
+
+	<p>Meet Karel, The Java Robot that Stanford uses to introduce university students to programming. </p>
+
+	<p>Use Karel's commands to get her to move the beeper to the top of the ledge. Normally you will write your programs in an application called Eclipse, but to get you started we made a mini-eclipse for our website:
+	</p>
+
+
+<div style="width:100%;">
+	<div id="runButtonBar" class="buttonBar"></div> 
+       <script>importButtonBar();</script>
+</div>
+   <div id ='mainIde' class = "getStarted">
+ 
+      <div id = "mainIdeCenter" >
+      	
+         <div id = 'mainIdeEditorDiv'>
+            <script>importEditor('mainIdeEditor','mainIdeEditorDiv');</script>
+         </div>
+         <div id = 'mainIdeCanvasDiv' class = 'orange'>
+            <canvas id = 'mainIdeCanvas' class = 'red'></canvas>
+         </div>
+         
+      </div>
+
+   </div>
+
+
+   
+   
+
+<script>
+
+		
+
+  function init() {
+  	 var stepUpWorld = null;
+     var karelIde = null;
+
+     var onReadyCalled = false;
+
+     var buttonState = 'play';
+
+     document.onready = function() {
+        if (onReadyCalled) return;
+        onReadyCalled = true;
+        $("[title]").tooltip({ position: "bottom center", opacity: 0.9});
+        
+        initTabs();
+        var canvas = document.getElementById('mainIdeCanvas');
+        karelIde = KarelIde(window._editor, canvas, 'collectNewspaper');
+
+        var stepUpCanvase = document.getElementById('firstIdeCanvas');
+        stepUpWorld = KarelIde(window._editor, stepUpCanvase, '5x5');
+        
+        $('#playButton').click(function(){playClicked()});
+        $('#move').click(function(){stepUpWorld.stepMove()});
+        $('#left').click(function(){stepUpWorld.stepTurnLeft()});
+        $('#right').click(function(){stepUpWorld.stepTurnRight()});
+        $('#put').click(function(){stepUpWorld.stepPutBeeper()});
+        $('#pick').click(function(){stepUpWorld.stepPickBeeper()});
+        /*$('#worldSelector').change(
+           function() {
+              var worldName = $("#worldSelector option:selected").text();
+              karelIde.stopButton();
+              var playText = '<span class="glyphicon glyphicon-play"></span> Run Program';
+         	  $('#playButton').html(playText);
+         	  buttonState = 'play';
+	          karelIde.changeWorld(worldName);
+	        }
+        );*/
+        window.onresize();
+        
+     }
+
+     function playClicked() {
+     	if(buttonState == 'play') {
+     		karelIde.playButton();
+         	
+         	var resetText = '<span class="glyphicon glyphicon-repeat"></span> Reset Program';
+         	$('#playButton').html(resetText);
+         	buttonState = 'reset';
+         } else if (buttonState == 'reset') {
+         	karelIde.stopButton();
+         	var playText = '<span class="glyphicon glyphicon-play"></span> Run Program';
+         	$('#playButton').html(playText);
+         	buttonState = 'play';
+         }
+     	
+   }
+
+     window.onresize = function() { 
+        var parentHeight = 600;
+        var canvasWidth = 300
+        var parentWidth = $("#playWithKarel").width();
+        console.log('pw: ' + parentWidth);
+
+        var ide = document.getElementById('mainIde');
+        var editorDiv = document.getElementById('mainIdeEditorDiv');
+        var canvas = document.getElementById('mainIdeCanvasDiv');
+        var center = document.getElementById('mainIdeCenter');
+        
+        var ideHeight = parentHeight
+        ide.style.height = (ideHeight)+ 'px';
+        ide.style.width = parentWidth + 'px';
+        
+        var centerHeight = ideHeight;
+        center.style.height = centerHeight + 'px';
+        center.style.width = parentWidth + 'px';
+
+        //center.style.top = centerTop + 'px';
+
+        var availibleWidth = parentWidth ;
+        var elementSpacing = 12;
+
+        
+        var editorWidth = availibleWidth - canvasWidth - elementSpacing; 
+
+        canvas.style.width = canvasWidth + 'px';
+        canvas.style.height = canvasWidth + 'px';
+        canvas.style.left = (editorWidth + elementSpacing) + 'px';
+
+       	
+       	//editorWidth = Math.max(editorWidth, Const.MIN_EDITOR_WIDTH)
+
+        editorDiv.style.left = 0 + 'px'
+        editorDiv.style.width = editorWidth + 'px';
+
+        if (karelIde) {
+           karelIde.resizeCanvas(canvasWidth, canvasWidth);
+           stepUpWorld.resizeCanvas($("#firstIdeCanvas").width(), 200);
+        }
+        if (window._editor) {
+           window._editor.renderer.onResize();
+        }
+        ReferenceDialog.resize();
+        DeployDialog.resize();
+     }
+
+     
+  }
+  init();
+</script></div>-->
+
+			
+	<!-- Footer -->
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+		&#169; Stanford 2020 &#124; Created by 
+		<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
+		Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
+	</p>
+	<!--<p class="pull-right">
+		<a href="../fall12">Fall 2012</a>
+	</p>-->
+</div>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<script type="text/javascript">
+		console.log('got pubnub')
+    var pubnubDemo = new PubNub({
+        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+    });
+
+		// Subscribe to the demo_tutorial channel
+		pubnubDemo.addListener({
+		    message: function(request) {
+		    	let msg = request['message']
+		    	console.log(msg)
+		    	let swalData = msg['swal'];
+		    	console.log(swalData)
+	        Swal.fire(swalData)
+		    }
+		})
+
+		pubnubDemo.subscribe({
+		    channels: ['csbridge_alert']
+		});
+		console.log('success')
+		
+
+</script>
+
+</div>
+
+	</body>
+</html>

@@ -1,22 +1,41 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Catch Me If You Can
-credit: Problem by Julia Lee, Kerem Goksel, and Chris Piech
+credit: Julia Lee, Kerem Goksel, Chris Piech
+translation: Ceren Kocaoğullar
 
-Handouts: [Graphics Reference]({{pathToRoot}}en/handouts/graphics.html)
-File: `catchmeifyoucan.py`
+Ders Notları: [Grafikler Referansı]({{pathToRoot}}tr/resources/graphics.html)
 
-1. Add a blue "sneaky" square to the canvas.
+Dosya: `catch_me_if_you_can.py`
 
-1. Add 20 black squares to the canvas.
+1. Tuvale mavi "sinsi" bir kare ekleyin.
 
-1. Add a mouse event listener that moves the "sneaky" square to a random position whenever the mouse touches it.
+- Tuvale 20 siyah kare ekleyin.
+- Programı sonsuza kadar çalıştırın, farenin konumunu izleyin ve "sinsi" kareyi fare ona dokunduğunda rastgele bir konuma getirin.
 
 <center>
   <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/catchMeIfYouCan/demo1.png">
 </center>
 
-When the mouse touches the "sneaky" square, it moves.
+Fare "sinsi" kareye dokunduğunda, kare hareket eder.
 
 <center>
   <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/catchMeIfYouCan/demo2.png">
 </center>
+
+Farenin sinsi kareye dokunup dokunmadığını nasıl anlarız? Tuval üzerinde `find_overlapping` adında kullanabileceğiniz bir fonksiyon var. Bize tuval üzerinde belirli bir kare ile örtüşen tüm nesnelerin bir listesini verir ve bu listenin üzerinde gezebiliriz. Örneğin:
+
+```
+overlapping_objects = canvas.find_overlapping(x1, y1, x2, y2)
+for overlapping_object in overlapping_objects:
+	# overlapping_object ile bir şeyler yap ...
+```
+
+The coordinates provided to `find_overlapping` are the top-left corner and bottom-right corner of the box you want to get all overlapping objects for. You can also specify a single point, like this:
+
+`find_overlapping` için sağlanan koordinatlar, tüm örtüşen nesneleri almak istediğiniz kutunun sol üst köşesi ve sağ alt köşesidir. Ayrıca aşağıdaki gibi tek bir nokta da belirtebilirsiniz:
+
+```
+overlapping_objects = canvas.find_overlapping(x, y, x, y)
+```
+
+Bu, `(x, y)` noktası ile örtüşen nesneleri öğrenmemizi sağlayacaktır.

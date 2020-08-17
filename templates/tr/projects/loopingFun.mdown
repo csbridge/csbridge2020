@@ -103,24 +103,5 @@ for i in range(20):
 
 En sondaki tam sayıdan sonra virgül eklemektan kaçının!
 
-## Eğlenceli Döngüler 4
-İç içe 'for' döngüleri zamanı! 5*5'lik bir kareli kağıdın (grid) üzerindeki koordinatları yazdırın.
-
-```
-Satır satır 5*5'lik bir kareli kağıdın koordinatlarını yazdıralım.
-(0,0), (1,0), (2,0), (3,0), (4,0)
-(0,1), (1,1), (2,1), (3,1), (4,1)
-(0,2), (1,2), (2,2), (3,2), (4,2)
-(0,3), (1,3), (2,3), (3,3), (4,3)
-(0,4), (1,4), (2,4), (3,4), (4,4)
-```
-
-İpucu: Aşağıdaki kod yapısını deneyin:
-```
-for i in range(5):
-	for j in range(5):
-		# some code...
-```
-
 ## Ek Çalışmalar: `while` Döngüleri
 'while' döngüleriyle ilgili daha çok pratik mi istiyorsunuz? Yukarıdaki tüm alıştırmaları, 'for' yerine 'while' döngüsü ile yapmayı deneyin. Bol şans!

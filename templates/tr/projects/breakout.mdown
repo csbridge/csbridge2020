@@ -1,10 +1,11 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Breakout
-Hazırlayan: Written by Eric Roberts
+credit: Eric Roberts
 translation: Ceren Kocaoğullar
 
 Handouts: [Grafikler Referansı]({{pathToRoot}}tr/handouts/graphics.html)<br/>
-Worked Example: [Damga Makinesi]({{pathToRoot}}tr/projects/stampTool.html)<br/>
+Worked Example: [Damga Makinesi]({{pathToRoot}}tr/projects/stamptool/)<br/>
+Project: [Zıp Zıp Top]({{pathToRoot}}tr/projects/bouncingBall.html)<br/>
 File: `breakout.py`
 
 Bu projedeki işiniz Steve Jobs'la (saygı duruşu) Apple'ı kurmadan önce Steve Wozniak tarafından bulunan klasik arcade oyunu Breakout'u yazmak. Büyük bir proje, ama problemi parçalara böldüğünüz sürece tümüyle üstesinden gelinebilir.
@@ -99,7 +100,7 @@ mouse_x = canvas.get_mouse_x()
 
 İlginç kısım burada geliyor. Breakout'u gerçek bir oyun haline getirmek için, topun ekrandaki başka bir nesneyle çarpışıp çarpışmadığını söyleyebilmeniz gerekiyor. Bilim insanlarının sık sık yaptığı gibi, basitleştiren bir varsayımda bulunarak başlamak ve sonrasında da bu varsayımı genişletmek yardımcı olabilir. Topu bir daireden çok tek bir nokta gibi düşünün. Bu durumda, başka bir nesne ile çarpışıp çarpışmadığını nasıl söyleyebilirsiniz?</p>
 
-Dört koordinat tarafından tanımlanan dikdörtgenle üst üste binen tüm nesnelerin listesini döndüren bir canvas fonksiyonu vardır:`canvas.find_overlapping(x_1, y_1, x_2, y_2)`
+Sol üst köşesi `(x_1, y_1)`'de ve sağ alt köşesi `(x_2, y_2)`'de olan dikdörtgenle üst üste binen tüm nesnelerin listesini döndüren bir canvas fonksiyonu vardır:`canvas.find_overlapping(x_1, y_1, x_2, y_2)`
 
 ```
 objs = canvas.find_overlapping(x_1,  y_1, x_2, y_2)
@@ -111,12 +112,12 @@ Yapılacak en kolay şey, aslında gerçek bilgisayar oyunlarında da yapılan, 
   <img src="{{pathToRoot}}img/projects/breakout/breakoutCollision.png"></img>
 </center>
 
-Topla çakışan nesnelerin bir listesini almak için, bir nesnenin 4 köşesini döndürerek `canvas.coords(obj)` canvas fonksiyonunu çağıran kodu aşağıdaki gibi kullanabilirsiniz:
+Topla çakışan nesnelerin bir listesini almak için, bir nesnenin sol üst ve sağ alt köşelerini döndürerek `canvas.coords(obj)` canvas fonksiyonunu çağıran kodu aşağıdaki gibi kullanabilirsiniz:
 
 ```
 # Bu grafik fonksiyonu topun yerini liste olarak alır
 ball_coords = canvas.coords(ball)
-# the list has four elements:
+# Bu listenin dört elemanı vardır:
 x_1 = ball_coords[0]
 y_1 = ball_coords[1]
 x_2 = ball_coords[2]
@@ -149,7 +150,7 @@ Eğer buraya kadar geldiyseniz, tüm zahmetli kısımları yapmışsınızdır. 
 
 Temel oyun iyi çalışıyorsa, bu daha da öteye gitmek için harika bir fırsat! Olası uzantılar için birkaç fikir (elbette, başka fikirleri de bulmak için hayal gücünüzü kullanmanızı öneririz):
 
-- **Ses ekleyin.** Topunuza sıçradığı zaman, tuğla çıkarıldığında, kullanıcı kazandığında vb. ses efektleri eklemek eğlenceli olabilir. Bunu yapmak için, önce kullanmak istediğiniz ses dosyasını bilgisayarınızdaki PyCharm projenize ekleyin. (Dosyayı bilgisayarınızdaki proje dosyalarını içeren klasöre sürükleyin). Ardından, ses dosyalarını çalabilen kitaplığı yüklemeniz gerekir. İlk önce bir "terminal" penceresi açın: Bunu yapmanın en kolay yolu, sol altta (“Run” ve “Python Console” sekmelerinin yanında) PyCharm içindeki “Terminal” sekmesini kullanmaktır. Terminal'e aşağıdaki 2 komutu yazın. Windows'ta, `python3` yerine `py` yazın:
+- **Ses ekleyin.** Topunuza sıçradığı zaman, bir tuğla çıkarıldığında, kullanıcı kazandığında vb. ses efektleri eklemek eğlenceli olabilir. Bunu yapmak için, önce kullanmak istediğiniz ses dosyasını bilgisayarınızdaki PyCharm projenize ekleyin. (Dosyayı bilgisayarınızdaki proje dosyalarını içeren klasöre sürükleyin). Ardından, ses dosyalarını çalabilen kitaplığı yüklemeniz gerekir. İlk önce bir "terminal" penceresi açın: Bunu yapmanın en kolay yolu, sol altta (“Run” ve “Python Console” sekmelerinin yanında) PyCharm içindeki “Terminal” sekmesini kullanmaktır. Terminal'e aşağıdaki 2 komutu yazın.  **The second one is for Mac only**.  Windows'ta, `python3` yerine `py` yazın:
 
 ```
 > python3 -m pip install playsound
@@ -161,16 +162,26 @@ Temel oyun iyi çalışıyorsa, bu daha da öteye gitmek için harika bir fırsa
 Ardından, programınızın üstüne aşağıdaki içe aktarmayı ekleyin:
 
 ```
+# Use this for Mac
 from playsound import playsound
+
+# Use this for PC
+from winsound import PlaySound,SND_FILENAME,SND_ASYNC
 ```
 
 Son olarak, programınızda bir ses çalmak istediğinizde, aşağıdaki fonksiyonu çağırın:
 
 ```
+# Use this for Mac
 playsound('mysoundfile.au', block=False)
+
+# Use this for PC
+PlaySound('mysoundfile.au', SND_FILENAME | SND_ASYNC)
 ```
 
-`'mysoundfile.au'` dosyasını projenizdeki ses dosyasının adıyla değiştirmelisiniz. Sonuna `block=False` yazmayı unutmadığınızdan emin olun.
+`'mysoundfile.au'` dosyasını projenizdeki ses dosyasının adıyla değiştirmelisiniz.
+
+We include `bounce.au` as a bounce sound you can use.  On Windows, you should use the included `bounce.wav` sound instead (`.au` files won't work).
 
 - **Sıçramalarda kullanıcı kontrolünü geliştirin.** Oyuncunun yapması gereken tek şey topa vurmaksa program oldukça sıkıcı bir hal alabilir. Oyuncunun topu paddle'ın farklı yerlerine vurarak kontrol edebilmesi çok daha ilginç olur. Eski arcade oyununun çalışma şekli, topun geldiği raketin kenarına vurursanız topun hem x hem de y yönlerinde zıplamasıydı. Web sürümü bu özelliği uygular.
 - **Hayal gücünüzü kullanın.** Böyle bir oyunca başka neler yapabilmek istersiniz?

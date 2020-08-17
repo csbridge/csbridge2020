@@ -10,7 +10,7 @@ Dosya: `short_film.py`
 
 <i>Oyuncak Hikayesi</i>, <i>Yukarı Bak (Up)</i> ve <i>Frozen</i> gibi animasyon filmlerinin bilgisayar programları kullanılarak yapıldığını biliyor muydunuz? Bu ödevde kısa bir film oluşturmak için bir program kullanacaksınız.
 
-## Mesaj Görüntüleme Fonksiyonu
+## Mesaj Görüntüleme
 
 Her filmin bir başlangıcı ve bir sonu vardır. Bazen "Bir Zamanlar ..." diye, bazen bir başlık ile, bazense daha komik bir şeyle başlarlar. Filmin sonunda ise bazen "Son" yazar.
 
@@ -33,7 +33,7 @@ Burada kullandığımız font (ve font büyüklüğü) şunlardır:
 canvas.set_font(label, "Papyrus", 40)
 ```
 
-İki saniye sonra arka plan olan dikdörtgeni ve ileti olan metni kaldırmalısınız. Bunu yapmak için `delete` fonksiyonunu kullanabilirsiniz (Bu fonksiyon tuval üzerinde bulunan bir nesneyi parametre olarak alır ve ekrandan kaldırır).
+Yazının rengini beyaz yaptığınızdan emin olun! İki saniye sonra arka plan olan dikdörtgeni ve ileti olan metni kaldırmalısınız. Bunu yapmak için `delete` fonksiyonunu kullanabilirsiniz (Bu fonksiyon tuval üzerinde bulunan bir nesneyi parametre olarak alır ve ekrandan kaldırır).
 
 ```
 canvas.delete(your_object)
@@ -49,14 +49,14 @@ Filminizin başlaması için bir sahne olmalı: Gün batımı. Bunu yapmak için
   <img style="width:100%" src="{{pathToRoot}}img/projects/shortfilm/animation.png">
 </center>
 
-## `get_sun_color` Fonksiyonu
+## get_sun_color Fonksiyonu
 
 Write a function that takes some parameter, and returns the color of the sun. You should specify the parameter of this function: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.
 
 Bazı parametreleri alan ve güneşin rengini döndüren bir fonksiyon yazın. Bu fonksiyonun parametresini belirtmelisiniz: örneğin, zaman (filmin başlangıcından bu yana kare sayısı olarak) veya güneşin y konumu veya Güneş'in doğru rengini elde etmek için yararlı olacağını düşündüğünüz herhangi bir şey olabilir.
 
 ```
-def getSunColor(...):
+def get_sun_color(...):
   ...
   return color
 ```
@@ -71,7 +71,7 @@ Filminiz bittikten sonra, daha önce tanımlanan `display_message()` fonksiyonun
   <img style="width:500px" src="{{pathToRoot}}img/projects/shortfilm/theEnd.png">
 </center>
 
-# Daha da İyileştir
+## Daha da İyileştir
 
 Hikayenizi batan bir güneşten daha büyüleyici hale getirmek için istediğiniz her şeyi yapın. Bir aşk veya aksiyon hikayesi anlatabilir misiniz? Hayatınızı kolaylaştırmak için fonksiyonları kullanmayı unutmayın.
 

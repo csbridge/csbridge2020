@@ -8,7 +8,7 @@ Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 We are going to create 1000 circles in random positions on the screen. Circles closer to the bottom-left corner will be blue and circles closer to the top-right corner will be green. This is an example of return values.
 
 <center>
-<img style="width:500px" src="{{pathToRoot}}img/projects/halfGreen/halfGreen.png">	
+<img style="width:500px; border: 1px solid black;" src="{{pathToRoot}}img/projects/halfGreen/halfGreen.png">	
 </center>
 
 * Each circle is 20 pixels by 20 pixels.

@@ -28,8 +28,9 @@ def draw_hole(canvas, x, y):
     """
     Draws a circle on the canvas centered at the given location.
     """
-    oval = canvas.create_oval(x - HOLE_RADIUS, y - HOLE_RADIUS, x + HOLE_RADIUS, y + HOLE_RADIUS)
-    canvas.set_fill_color(oval, 'black')
+    oval = canvas.create_oval(x - HOLE_RADIUS, y - HOLE_RADIUS,
+                              x + HOLE_RADIUS, y + HOLE_RADIUS)
+    canvas.set_color(oval, 'black')
 
 
 if __name__ == "__main__":

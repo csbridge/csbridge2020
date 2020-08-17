@@ -11,15 +11,20 @@ Gövdesinin tabanı verilen `(x, y)` pozisyonunu merkez kabul eden bir ağaç ç
 
 ```
 def main():
-    draw_tree(50, 150)
-    draw_tree(100, 300)
-    draw_tree(500, 200)
-    draw_tree(300, 250)
-    draw_tree(700, 310)
+    canvas = Canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
+    canvas.set_canvas_title("Draw Trees")
+
+    draw_tree(canvas, 50, 150)
+    draw_tree(canvas, 100, 300)
+    draw_tree(canvas, 500, 200)
+    draw_tree(canvas, 300, 250)
+    draw_tree(canvas, 700, 310)
+
+    canvas.mainloop()
 ```
 
 Her ağacın gövdesinin genişliği (`TRUNK_WIDTH`) 20 piksel ve uzunluğu (`TRUNK_HEIGHT`) 80 piksel olmalıdır. Yapraklar ise 30 piksel yarıçapa (`LEAVES_RADIUS`) sahip olmalıdır. Çıktınız bu şekilde gözükmelidir:
 
 <center>
-<img style="width:500px" src="{{pathToRoot}}img/projects/madmethods/demo.png">	
+<img style="width:500px; border: 1px solid black" src="{{pathToRoot}}img/projects/drawTrees/demo.png">	
 </center>

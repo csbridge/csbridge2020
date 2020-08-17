@@ -6,7 +6,7 @@
 	<head>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" href="../../../images/stanford-favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="../../../img/favicon.ico" type="image/x-icon">
 <title>CS Bridge  | Ters Çevir (ve çözümü)</title>
 
 <!-- Fonts -->
@@ -22,35 +22,112 @@
 <script src="../../../plugins/jquery.min.js"></script>
 <script src="../../../plugins/bootstrap-3.4.1/js/bootstrap.min.js"></script>
 
-<script src="../../../karel/ace/ace.js" type="text/javascript"></script>
+<!--<script src="../../../karel/ace/ace.js" type="text/javascript"></script>-->
+
+<!-- Moment.js -->
 <script type="text/javascript" src="../../../js/moment.min.js"></script>
 <script type="text/javascript" src="../../../js/moment-timezone-with-data-10-year-range.min.js"></script>
 <script type="text/javascript" src="../../../js/time.js"></script>
 
+<!-- Date picker -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- Latex support -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
 <!--
-<script type="text/javascript" src="../../../plugins/d3.v3/d3.v3.min.js"></script>
--->
-
-
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
-  </script>-->
-
 <script src="../karel/js/html/websiteImports.js"></script>
 <script>importCss();</script>
 <script>importJs();</script>
-
+-->
 
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-		<script src="sweetalert2.all.min.js"></script>
-<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+		<!--<script src="sweetalert2.all.min.js"></script>-->
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+-->
 	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
 	</head>
 	<body>
 
 
+<!-- The datetime editor, for testing -->
+<!--
+This element is the datetime picker shown above the navigation bar, only when running the website
+locally.  It shows a compact form to enter a date and time for when you want to view what the website
+will look like at that time.  This is helpful to preview time-sensitive elements, such as
+visible-after, to ensure they display when you want them to.
+-->
+
+<div id="dateTimeEditor" style="margin: 10px 10px 10px 10px; display: none;">
+	<p style="margin-bottom: 10px;"><b>[VISIBLE ONLY LOCALLY] Optionally view what the website will look like at another time (in PDT):</b></p>
+
+	<form class="form-inline">
+	  	<div class="form-group">
+	    	<label class="sr-only" for="date">Date</label>
+	    	<input type="text" class="form-control" id="datePicker" placeholder="Click For Calendar">
+	  	</div>
+	  	<div class="form-group">
+	    	<label class="sr-only" for="time">Hour</label>
+	    	<input type="number" class="form-control" id="hourPicker" placeholder="Enter Hour (24hr)">
+	  	</div>
+	  	<div class="form-group">
+	  	  	<label class="sr-only" for="time">Minutes</label>
+	  	  	<input type="number" class="form-control" id="minutesPicker" placeholder="Enter Minutes">
+	  	</div>
+
+	  	<button type="button" onclick="dateTimeEditorSubmitted()" class="btn btn-default">Set Time</button>
+
+	  	<!-- Help text -->
+	  	<span id="helpBlock" class="help-block" style="color: red; display: none;">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+	</form>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// On page load, show the datetime picker if we're running locally
+		var url = window.location.href;
+		if (url.startsWith("http://localhost:") || url.startsWith("file://")) {
+			$("#dateTimeEditor").show();
+			$("#datePicker").datepicker();
+		}
+	});
+
+	// This function is called when the form is submitted
+	function dateTimeEditorSubmitted() {
+		if ($("#datePicker").val() == "" || $("#hourPicker").val() == ""
+			|| $("#minutesPicker").val() == "") {
+			
+			// Not all inputs entered
+			$("#helpBlock").text("Please make sure to fill out all fields.");
+			$("#helpBlock").show();
+		} else if (parseInt($("#hourPicker").val()) == NaN ||
+			parseInt($("#minutesPicker").val()) == NaN ||
+			parseInt($("#hourPicker").val()) > 23 || 
+			parseInt($("#hourPicker").val()) < 0 || 
+			parseInt($("#minutesPicker").val()) > 59 ||
+			parseInt($("#minutesPicker").val()) < 0) {
+			
+			// Invalid inputs
+			$("#helpBlock").text("Please enter an hour 0-23 and minutes 0-59.");
+			$("#helpBlock").show();
+		} else {
+			$("#helpBlock").hide();
+
+			// Re-process the time-sensitive elements with this time as the standard
+			dateString = $("#datePicker").val() + " " + $("#hourPicker").val() + ":" + $("#minutesPicker").val();
+			momentDate = moment(dateString, "MM/DD/YYYY HH:mm");
+
+			showHideRelevantElementsForDate(momentDate);
+		}
+	}
+</script>
+<!-- The navigation bar -->
 <nav class="navbar-inverse navbar-default" role="navigation">
 	<div class="container-fluid">
 		<div class="container">
@@ -128,13 +205,13 @@
 <ul class="dropdown-menu">
 
 
-	<!-- This dropdown should display one element for each day of projects -->
+	<!-- This dropdown should display one element for each day of content -->
 		<li 
 				class="dropdown-submenu"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
-			<!-- For each of morning/evening, add a "side popup" -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -157,7 +234,7 @@
 		>
 			<a tabindex="-1" href="#">2: Karel ve Kontrol Akışı</a>
 
-			<!-- For each of morning/evening, add a "side popup" -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080500"
@@ -203,7 +280,7 @@
 		>
 			<a tabindex="-1" href="#">3: Değişkenler</a>
 
-			<!-- For each of morning/evening, add a "side popup" -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080600"
@@ -254,7 +331,7 @@
 		>
 			<a tabindex="-1" href="#">4: For döngüsü ve analizi</a>
 
-			<!-- For each of morning/evening, add a "side popup" -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080700"
@@ -274,6 +351,230 @@
 							</li>
 			</ul>
 		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081000"
+		>
+			<a tabindex="-1" href="#">5: Grafikler ve Fonksiyonlar</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081000"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../../../tr/projects/programmingIsAwesome.html">Programlamak Bir Harika</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../../../tr/projects/randomCircles.html">Tesadüfi Daireler</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081009"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../../tr/projects/funkyFunctions.html">Fırlama Fonksiyonlar</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../../tr/projects/fizzbuzz-functions.html">CızBız</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../../tr/projects/target.html">Hedef Tahtası</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../../tr/projects/stringArt.html">Çizgi Sanatı</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081100"
+		>
+			<a tabindex="-1" href="#">6: Döngüsü / Animasyon</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081100"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../../../tr/projects/printIndices.html">İndeksleri Yazdır</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../../../tr/projects/illusion.html">Optik İllüzyon</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081109"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../../tr/projects/mysterySquare.html">Gizemli Kare</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../../tr/projects/shortFilm.html">Kısa Film</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081200"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081200"
+							>
+								<a href="../../../tr/projects/sorted.html">Sıralayıcı</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081200"
+							>
+								<a href="../../../tr/projects/ascending.html">Yükseliyor</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../tr/projects/mouseLocation.html">Farenin Konumu</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../tr/projects/makingTracks.html">İz Çıkartmaca</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../tr/projects/snow.html">Kar</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../tr/projects/catchMeIfYouCan.html">Sıkıysa Yakala</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081300"
+		>
+			<a tabindex="-1" href="#">8: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081300"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081300"
+							>
+								<a href="../../../tr/projects/breakout.html">Breakout</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081400"
+		>
+			<a tabindex="-1" href="#">9: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081400"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081400"
+							>
+								<a href="../../../tr/projects/breakout.html">Breakout</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081700"
+		>
+			<a tabindex="-1" href="#">10: Dictionaries, Breakout and Final Projects</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081700"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081700"
+							>
+								<a href="../../../tr/projects/phonebook.html">Phonebook</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081700"
+							>
+								<a href="../../../tr/projects/breakout.html">Breakout</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081710"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081710"
+							>
+								<a href="../../../tr/projects/project.html">Final Projesi</a>
+							</li>
+			</ul>
+		</li>
 </ul>					</li>
 
 					<!-- Examples dropdown -->
@@ -283,14 +584,13 @@
 <ul class="dropdown-menu">
 
 
-	<!-- This dropdown should display one element for each day of worked examples -->
-
+	<!-- This dropdown should display one element for each day of content -->
 		<li 
 				class="dropdown-submenu"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
-			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -308,13 +608,12 @@
 							</li>
 			</ul>
 		</li>
-
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020080500"
 		>
 			<a tabindex="-1" href="#">2: Karel ve Kontrol Akışı</a>
 
-			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080500"
@@ -350,13 +649,12 @@
 							</li>
 			</ul>
 		</li>
-
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020080600"
 		>
 			<a tabindex="-1" href="#">3: Değişkenler</a>
 
-			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080600"
@@ -389,6 +687,126 @@
 									class="visible-after" data-visible-after="2020080609"
 							>
 								<a href="../../../tr/projects/favoriteNumber/">Favori Sayım</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081000"
+		>
+			<a tabindex="-1" href="#">5: Grafikler ve Fonksiyonlar</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081009"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../../tr/projects/robotFace/">Robot Yüzü</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../../tr/projects/halfGreen/">Yarısı Yeşil</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../../tr/projects/average/">Ortalama Fonksiyonu</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../../tr/projects/division/">Bölme</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../../tr/projects/drawPeople/">İnsan Çiz</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081100"
+		>
+			<a tabindex="-1" href="#">6: Döngüsü / Animasyon</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081109"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../../tr/projects/moveToCenter/">Merkeze Git</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../../tr/projects/gravityBall/">Seken Top</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../tr/projects/stamptool/">Damga Makinesi</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../tr/projects/holePuncher/">Delgeç</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../tr/projects/debrisSweeper/">Enkazı Kaldır</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../../tr/projects/rocketPaddle/">Roket Atar</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081300"
+		>
+			<a tabindex="-1" href="#">8: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081300"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081300"
+							>
+								<a href="../../../tr/projects/keyboardKarel/">Keyboard Karel</a>
 							</li>
 			</ul>
 		</li>
@@ -452,10 +870,199 @@
 			<!-- When hovered, we want to show another side popup with links to the slides/code -->
 			<ul class="dropdown-menu">
 						<li>
-	      					<a href="../../../slides/IntroPython_Variables.pdf">Sunum</a>
+	      					<a href="../../../slides/Lecture4_Variables.pdf">Sunum</a>
 						</li>
 						<li>
 	      					<a href="../../../starter/lectures/Lecture4.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080609"
+		>
+			<a tabindex="-1" href="#">5: Kontrol Akışına Geri Dönüş</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../../slides/5-ControlFlowRevisited.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../../starter/lectures/Lecture5.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080700"
+		>
+			<a tabindex="-1" href="#">6: For döngüsü ve analizi</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../../slides/Lecture6.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../../starter/lectures/Lecture6.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081000"
+		>
+			<a tabindex="-1" href="#">7: Grafik</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../../slides/Lecture7_Graphics.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../../starter/lectures/Lecture7.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081009"
+		>
+			<a tabindex="-1" href="#">8: Fonksiyonlar</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../../slides/Lecture8-Functions.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../../starter/lectures/Lecture8.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081100"
+		>
+			<a tabindex="-1" href="#">9: Nested Loops</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../../slides/Lecture9.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../../starter/lectures/Lecture9.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081109"
+		>
+			<a tabindex="-1" href="#">10: Animation</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../../slides/10-Animation.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../../starter/lectures/Lecture10.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">11: Lists</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../../slides/Lecture11.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../../starter/lectures/Lecture11.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081209"
+		>
+			<a tabindex="-1" href="#">12: The Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../../slides/12-Mouse.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../../starter/lectures/Lecture12.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081300"
+		>
+			<a tabindex="-1" href="#">13: Breakout Oyunu</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../../slides/Lecture13-Breakout.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../../starter/Breakout.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081309"
+		>
+			<a tabindex="-1" href="#">14: Brekaout Ideas</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../../slides/14-Breakout-Extra.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../../starter/Lecture14.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081400"
+		>
+			<a tabindex="-1" href="#">15: Brekaout Extra Features</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../../slides/Lecture15.pdf">Sunum</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081700"
+		>
+			<a tabindex="-1" href="#">16: Sözlükler</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../../slides/Lec16-Dictionaries.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../../starter/Day10AM-Dictionaries.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081709"
+		>
+			<a tabindex="-1" href="#">17: Final Projesi</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../../slides/17-Final-Project.pdf">Sunum</a>
 						</li>
 			</ul>
 		</li>

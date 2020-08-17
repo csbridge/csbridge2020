@@ -10,7 +10,7 @@ File: `8ball.py`
 Elbette, cevabın önceden hazırlanmış cevaplardan rastgele seçiliyor olması haricinde doğru cevabı söylüyor. :)</p>
 
 <center>
-	<img style="width:300px" src="{{pathToRoot}}img/projects/8Ball/real.gif">	
+	<img style="width:300px" src="{{pathToRoot}}img/projects/8Ball/8ball.png">	
 	<p style="text-align:center"><i>A real life 8-Ball</i></p>
 </center>
 
@@ -24,9 +24,21 @@ Sürekli olarak kullanıcıdan bir evet hayır sorusu bekleyen ve sonrasında da
 
 Programın örnek bir çıktısını burada görebilirsiniz.
 
-<center>
-	  <img style="width:700px" src="{{pathToRoot}}img/projects/8Ball/sampleRun.png">	
-</center>
+```
+Ask a yes or no question: Will Ghana win the world cup?
+only Karel knows
+
+Ask a yes or no question: Is Karel married?
+good question!
+
+Ask a yes or no question: Is my real name Nick
+Without a doubt
+
+Ask a yes or no question: 8-Ball, are you using random numbers?
+yes
+
+Ask a yes or no question: 
+```
 
 ## Sonsuz döngü
 

@@ -1,6 +1,9 @@
 /*
 This script allows for hiding content until a specified time has passed, or
-for showing content between two specified dates/times. 
+for showing content between two specified dates/times.  It exports one function,
+showHideRelevantElementsForDate, that takes in a date/time, and updates all
+elements such that if they should be visible at that time, they are visible,
+and otherwise are made hidden.
 
 ----
 NOTE: for all times specified below in data- attributes, the assumed timezone
@@ -33,16 +36,23 @@ must be set and should have time format YYYYMMDD HH:mm.  For example:
 </div>
 
 this element would be visible only 7/9/19 5:12pm - 5:13pm.
-*/
-$(document).ready(function(){
-	moment.tz.setDefault("America/Los_Angeles");
 
+visible-default
+---------------
+Elements with the class "visible-default" are only visible if no other elements
+on the page have class "visible-during".  Useful if you want to have certain elements
+appear at certain times, but when no elements are visible, show some default element.
+*/
+
+function showHideRelevantElementsForDate(date) {
 	// only show certain content if it's after the specified timestamp
 	$(".visible-after").each(function(i) {
 	    var dateStr = $(this).attr("data-visible-after");
 	    var releaseDate = moment(dateStr, "YYYYMMDDHH");
-	    if (!releaseDate.isSameOrBefore(moment())) {
-	    	$(this).remove();
+	    if (!releaseDate.isSameOrBefore(date)) {
+	    	$(this).hide();
+	    } else {
+	    	$(this).show();
 	    }
 	});
 
@@ -55,17 +65,29 @@ $(document).ready(function(){
 	    var dateStrEnd = $(this).attr("data-visible-end");
 	    var releaseDateStart = moment(dateStrStart, "YYYYMMDD HH:mm");
 	    var releaseDateEnd = moment(dateStrEnd, "YYYYMMDD HH:mm");
-      	if (!moment().isBetween(releaseDateStart, releaseDateEnd)) {
-	        $(this).remove();
+      	if (!date.isBetween(releaseDateStart, releaseDateEnd)) {
+	        $(this).hide();
 	    } else {
+	    	$(this).show();
           	removeDefault = true;
       	}
 	});
 
-	// If any of the other posts are visible, remove the defualt post.
+	// If any of the other posts are visible, hide the defualt post.
   	$(".visible-default").each(function(i) {
       	if (removeDefault) {
-          	$(this).remove();
+          	$(this).hide();
+      	} else {
+      		$(this).show();
       	}
   	});
+}
+
+/* When the page first loads, automatically call this function to remove
+ * anything that shouldn't be visible at this point in time.  Also set the
+ * default timezone for parsing all datetimes to be PDT.
+ */
+$(document).ready(function() {
+	moment.tz.setDefault("America/Los_Angeles");
+	showHideRelevantElementsForDate(moment());
 });

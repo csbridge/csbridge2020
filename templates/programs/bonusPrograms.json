@@ -1,31 +1,170 @@
 [
-	{
-		"title_en": "Karel",
-		"title_tr": "Karel",
-		"projectURL": "starter/BonusKarel.zip",
-		"visible_after": "2020080500",
-		"projects": [
-			{
-				"title_en": "Midpoint",
-				"title_tr": "Orta Nokta",
-				"imageURL": "img/icons/midpoint.png",
-				"url": "projects/midpointKarel.html",
-				"difficulty": 3
-			},
-			{
-				"title_en": "Checkerboard",
-				"title_tr": "Dama Tahtası",
-				"imageURL": "img/icons/checkerboard.png",
-				"url": "projects/checkerBoard.html",
-				"difficulty": 2
-			},
-			{
-				"title_en": "Square Painter",
-				"title_tr": "Kare Boyama",
-				"imageURL": "img/icons/squarePainter.png",
-				"url": "projects/squarePainter.html",
-				"difficulty": 2
-			}
-		]
-	}
+  {
+    "title_en": "Karel",
+    "title_tr": "Karel",
+    "projectURL": "starter/BonusKarel.zip",
+    "visible_after": "2020080500",
+    "projects": [
+      {
+        "title_en": "Midpoint",
+        "title_tr": "Orta Nokta",
+        "imageURL": "img/projects/midpointKarel/midpointKarelFinish.png",
+        "url": "projects/midpointKarel.html",
+        "teachURL": "teach/notes/midpointKarel.html",
+        "difficulty": 3
+      },
+      {
+        "title_en": "Checkerboard",
+        "title_tr": "Dama Tahtası",
+        "imageURL": "img/projects/checkerboardKarel/checkerboard.png",
+        "url": "projects/checkerBoard.html",
+        "teachURL": "teach/notes/checkerBoard.html",
+        "difficulty": 2
+      },
+      {
+        "title_en": "Square Painter",
+        "title_tr": "Kare Boyama",
+        "imageURL": "img/projects/squarePainter/5x5.png",
+        "url": "projects/squarePainter.html",
+        "teachURL": "teach/notes/squarePainter.html",
+        "difficulty": 2
+      }
+    ]
+  },
+  {
+    "title_en": "Variables",
+    "title_tr": "Değişkenler",
+    "projectURL": "starter/BonusVariables.zip",
+    "visible_after": "2020080609",
+    "projects": [
+      {
+        "title_en": "Console Bonus",
+        "title_tr": "Bonus Konsol Programları",
+        "imageURL": "img/projects/console/console.jpg",
+        "url": "projects/consoleBonus.html",
+        "teachURL": "teach/notes/consoleBonus.html",
+        "difficulty": 1
+      },
+      {
+        "title_en": "Looping Fun",
+        "title_tr": "Eğlenceli Döngüler",
+        "imageURL": "img/projects/loopingFun/loopingfun.png",
+        "url": "projects/loopingFun.html",
+        "teachURL": "teach/notes/loopingFun.html",
+        "difficulty": 1
+      },
+      {
+        "title_en": "Hailstone",
+        "title_tr": "Dolu Tanesi",
+        "imageURL": "img/projects/hailstone/hailstone.png",
+        "url": "projects/hailstone.html",
+        "teachURL": "teach/notes/hailstone.html",
+        "difficulty": 2
+      },
+      {
+        "title_en": "Ancient Game of Nimm",
+        "title_tr": "Antik Nimm Oyunu",
+        "imageURL": "img/projects/nimm/nimm.jpg",
+        "url": "projects/nimm.html",
+        "teachURL": "teach/notes/nimm.html",
+        "difficulty": 2
+      }
+    ]
+  },
+  {
+    "title_en": "Graphics, Parameters and Return",
+    "title_tr": "Graphics, Parameters and Return",
+    "projectURL": "starter/BonusGraphics.zip",
+    "visible_after": "2020081009",
+    "projects": [
+      {
+        "title_en": "Bouncing Balls",
+        "title_tr": "Zıplayan Toplar",
+        "imageURL": "img/projects/bouncingBalls/bouncingMultiple.png",
+        "url": "projects/bouncingBalls.html",
+        "teachURL": "teach/notes/bouncingBalls.html",
+        "difficulty": 1
+      },
+      {
+        "title_en": "Creative Graphics",
+        "title_tr": "Yaratıcı Grafikler",
+        "imageURL": "img/projects/creativeGraphics/creativeGraphics.jpg",
+        "url": "projects/creativeGraphics.html",
+        "teachURL": "teach/notes/creativeGraphics.html",
+        "difficulty": 1
+      },
+      {
+        "title_en": "Creative String Art",
+        "title_tr": "Yaratıcı Çizgi Sanatı",
+        "imageURL": "img/projects/creativeStringArt/customfancy.png",
+        "url": "projects/creativeStringArt.html",
+        "teachURL": "teach/notes/creativeStringArt.html",
+        "difficulty": 1
+      },
+      {
+        "title_en": "Draw Trees",
+        "title_tr": "Ağaç Çiz",
+        "imageURL": "img/projects/drawTrees/icon.png",
+        "url": "projects/drawTrees.html",
+        "teachURL": "teach/notes/drawTrees.html",
+        "difficulty": 1
+      },
+      {
+        "title_en": "More Functions",
+        "title_tr": "More Functions",
+        "imageURL": "img/projects/console/console.jpg",
+        "url": "projects/moreFunctions.html",
+        "teachURL": "teach/notes/moreFunctions.html",
+        "difficulty": 1
+      }
+    ]
+  },
+  {
+    "title_en": "Loops and Animation",
+    "title_tr": "Döngüsü / Animasyon",
+    "projectURL": "starter/BonusLoopsAnimation.zip",
+    "visible_after": "2020081100",
+    "projects": [
+      {
+        "title_en": "Number Grid",
+        "title_tr": "Sayı Izgarası",
+        "imageURL": "img/projects/numberGrid/grid.jpg",
+        "url": "projects/numberGrid.html",
+        "teachURL": "teach/notes/numberGrid.html",
+        "difficulty": 3
+      },
+      {
+        "title_en": "Countdown",
+        "title_tr": "Geri Sayım",
+        "imageURL": "img/projects/countdown/timesUp.png",
+        "url": "projects/countdown.html",
+        "teachURL": "teach/notes/countdown.html",
+        "difficulty": 2
+      },
+      {
+        "title_en": "Border Box",
+        "title_tr": "Kenarda Gezen Kutu",
+        "imageURL": "img/projects/borderBox/borderBox.png",
+        "url": "projects/borderBox.html",
+        "teachURL": "teach/notes/borderBox.html",
+        "difficulty": 2
+      }
+    ]
+  },
+  {
+    "title_en": "Lists and Mouse",
+    "title_tr": "Lists and Mouse",
+    "projectURL": "starter/BonusListsMouse.zip",
+    "visible_after": "2020081209",
+    "projects": [
+      {
+        "title_en": "Line Game",
+        "title_tr": "Çizgi Oyunu",
+        "imageURL": "img/projects/lineGame/icon.png",
+        "url": "projects/lineGame.html",
+        "teachURL": "teach/notes/lineGame.html",
+        "difficulty": 3
+      }
+    ]
+  }
 ]

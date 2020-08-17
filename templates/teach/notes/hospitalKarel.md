@@ -1,7 +1,7 @@
 template: templates/teach/notes/template.ptl
 problemtitle: Hospital Karel
 
-This is the section problem for day 2.  Students are learning about control flow and the very basics of coding. Specifically:
+This is the section problem for day 1.  Students are learning about control flow and the very basics of coding. Specifically:
 
 + How to define helper functions
 + While loops

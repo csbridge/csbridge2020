@@ -7,36 +7,29 @@ Moves a square from the left edge to the center of the screen.
 import time
 from graphics import Canvas
 
-SIZE = 100
-DELAY = 0.1
+SQUARE_SIZE = 100
+ANIMATION_DELAY_SECONDS = 0.02
+SQUARE_MOVE_AMOUNT = 2
+
 
 def main():
     canvas = Canvas()
     canvas.set_canvas_title("Move to Center")
 
-    x = 0
-    y = (canvas.get_canvas_height() - SIZE)/2
-    # draw a square on the left of the screen
-    square = canvas.create_rectangle(x, y,
-                                     x + SIZE, y + SIZE)
+    # draw a square on the left side of the screen, centered
+    y = (canvas.get_canvas_height() - SQUARE_SIZE) / 2
+    square = canvas.create_rectangle(0, y, SQUARE_SIZE, y + SQUARE_SIZE)
     canvas.set_color(square, "black")
 
-    # move until we get to the center
-    target_x = (canvas.get_canvas_width() - canvas.get_width(square))/2
+    # move horizontally until we get to the center
+    target_x = (canvas.get_canvas_width() - canvas.get_width(square)) / 2
     while canvas.get_left_x(square) < target_x:
-        canvas.move(square, 5, 0)   # move 5 pixels to the right
-        time.sleep(DELAY) # animation pause
+        canvas.move(square, SQUARE_MOVE_AMOUNT, 0)
+        time.sleep(ANIMATION_DELAY_SECONDS)
         canvas.update()
 
     canvas.mainloop()
 
-def get_color(x, y):
-    if is_green(x, y):
-        return "green"
-    return "blue"
-
-def is_green(x, y):
-    return x > y
 
 if __name__ == "__main__":
     main()

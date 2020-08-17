@@ -19,6 +19,10 @@ pre {
     font-size:15px;
 }
 
+.blue {
+  color:blue;
+}
+
 .col-xs-2 {
    width: 16.6% !important;
    padding-left: 7px !important;
@@ -54,6 +58,11 @@ h1 {
 .projectImg {
   width:150px;
   height:100px;
+}
+
+.projectImgContainer { 
+  height: 140px; 
+  width: 140px; 
 }
 
 #splashHeader{

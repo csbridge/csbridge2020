@@ -16,7 +16,9 @@ code to display the content in.  Currently "en" (English) and "tr" (Turkish) are
 %>
 
 <table class="table table-striped">
-	% for topic_info in data:
+	% # Iterate in reverse order (so earlier topics are at the bottom)
+	% for i in range(len(data) - 1, -1, -1):
+		% topic_info = data[i]
 
 		<!-- The head of the table should show the topic title and starter code link -->
 		<thead
@@ -64,8 +66,9 @@ code to display the content in.  Currently "en" (English) and "tr" (Turkish) are
       		% for project in topic_info["projects"]:
       			<tr>
       				<!-- Project image -->
-      			    <td>	
-      			    	<img class="projectImg" src="{{pathToRoot}}{{project['imageURL']}}" />
+      			    <td>
+      			    	<div class="projectImgContainer" style='background-image:url({{pathToRoot}}{{project['imageURL']}}); background-size: contain; background-repeat: no-repeat;'>	
+      			    	</div>
       				</td>
 
       				<!-- Project name and link -->

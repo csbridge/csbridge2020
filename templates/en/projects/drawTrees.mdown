@@ -4,21 +4,26 @@ credit: Written by Chris, Bryce, and Julia
 
 Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 
-Fill in the `draw_tree` method that draws a tree with the base of its trunk centered at the provided `(x, y)` position.
+Fill in the `draw_tree` function that draws a tree with the base of its trunk centered at the provided `(x, y)` position.
 
-The `main` method has already been written for you:
+The `main` function has already been written for you:
 
 ```
 def main():
-    draw_tree(50, 150)
-    draw_tree(100, 300)
-    draw_tree(500, 200)
-    draw_tree(300, 250)
-    draw_tree(700, 310)
+    canvas = Canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
+    canvas.set_canvas_title("Draw Trees")
+
+    draw_tree(canvas, 50, 150)
+    draw_tree(canvas, 100, 300)
+    draw_tree(canvas, 500, 200)
+    draw_tree(canvas, 300, 250)
+    draw_tree(canvas, 700, 310)
+
+    canvas.mainloop()
 ```
 
 Each tree should have a trunk with a width of 20 pixels (`TRUNK_WIDTH`) and a height of 80 pixels (`TRUNK_HEIGHT`). The leaves should have a radius of 30 pixels (`LEAVES_RADIUS`). Your output should look like this:
 
 <center>
-<img style="width:500px" src="{{pathToRoot}}img/projects/madmethods/demo.png">	
+<img style="width:500px; border: 1px solid black" src="{{pathToRoot}}img/projects/drawTrees/demo.png">	
 </center>

@@ -3,23 +3,23 @@ title: Debris Sweeper (with solution)
 credit: Written by Chris Piech and Mystery CS106A people.
 solution: soln.py
 
-The goal of this example is to write a program that fills the screen with a random collection of debris (ovals) and then allows the user to click and remove debris pieces. This program lets you practice so many techniques that we learned in the first week of class. You will be using functions, for loops, graphics, random numbers, mouse listeners, and maybe even more!
+The goal of this example is to write a program that fills the screen with a random collection of debris (ovals) and then allows the user to click and remove debris pieces. This program lets you practice many techniques that we have learned in class. You will be using functions, `for` loops, graphics, random numbers, the mouse, and maybe even more!
 
 The first step is to make the debris. Create constants that set limits for how large the debris pieces can be and how many pieces the screen will contain. For every piece, create a new oval with a random size, position, and color (within the limits you have set). Remember, this should work with any size screen. Perhaps you want to split this into a few functions to make your code easy to read!
 
 <center>
-<img style="width:500px" src="{{pathToRoot}}img/projects/debrisSweeper/demo.png">   
+	<img style="width:500px" src="{{pathToRoot}}img/projects/debrisSweeper/demo.png">   
 </center>
 
 Next, we need to let users remove debris from the screen. Add an infinite loop and check if the user has clicked on an object. If they have, clean that debris up (remove it from the screen)!
 
 ## Getting a clicked object
 
-The canvas function `canvas.find_closest(x, y)` will get the object that is closest to the provided `(x, y)` argument. If there is no object, it will return `None`. To perform some actions on an object (if it exists), you could write something like below:
+The canvas function `canvas.find_element_at(x, y)` will get the object at the provided `(x, y)` argument.  If there is no object, it will return `None`. To perform some actions on an object (if it exists), you could write something like below:
 
 ```
-object = canvas.find_closest(x, y)    # x and y are some coordinates
-if object is not None:
+object = canvas.find_element_at(x, y)    # x and y are some coordinates
+if object:    # If there was an object there...
     print("Object found at (" + str(x) + ", " + str(y) + ")")
 else:
     print("Object not found")

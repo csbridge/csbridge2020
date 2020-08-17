@@ -1,11 +1,11 @@
 template: templates/en/projects/projectTemplate.ptl
 title: Breakout
-credit: Written by Eric Roberts
+credit: Eric Roberts
 
 Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
-Worked Example: [Stamp Tool]({{pathToRoot}}en/projects/stampTool.html)<br/>
+Worked Example: [Stamp Tool]({{pathToRoot}}en/projects/stamptool/)<br/>
 Project: [Bouncing Ball]({{pathToRoot}}en/projects/bouncingBall.html)<br/>
-<b>Starter code:</b> <a href="{{pathToRoot}}starter/Breakout.zip">Breakout.zip</a>
+File: `breakout.py`
 
 Your job in this assignment is to write the classic arcade game of Breakout, which was invented by Steve Wozniak before he founded Apple with Steve Jobs (moment of silence).  It is a large assignment, but entirely manageable as long as you break the problem up into pieces.  
 
@@ -34,7 +34,7 @@ Success in this assignment will depend on breaking up the problem into manageabl
 	</div>
 </div>
 
-## 1. Create bricks
+## 1. Create Bricks
 
 Before you start playing the game, you have to set up the various pieces.  Thus, it probably makes sense to implement the `main` function as several smaller functions, each doing one piece of the game.  An important part of the setup consists of creating the rows of bricks at the top of the game, which look like this:
 
@@ -93,7 +93,7 @@ mouse_x = canvas.get_mouse_x()
 ```
 
 ## 4. Check for Collisions
-Now comes the interesting part.  In order to make Breakout into a real game, you have to be able to tell whether the ball is colliding with another object in the window.  There is a canvas function: `canvas.find_overlapping(x_1, y_1, x_2, y_2)`, which returns a list of all objects that are overlapping the rectangle with upper-left corner at `(x_1, y_1)` and bottom-right corner at `(_2, y_2)`.
+Now comes the interesting part.  In order to make Breakout into a real game, you have to be able to tell whether the ball is colliding with another object in the window.  There is a canvas function: `canvas.find_overlapping(x_1, y_1, x_2, y_2)`, which returns a list of all objects that are overlapping the rectangle with upper-left corner at `(x_1, y_1)` and bottom-right corner at `(x_2, y_2)`.
 
 ```
 colliders = canvas.find_overlapping(x_1, y_1, x_2, y_2)
@@ -105,13 +105,13 @@ The easiest thing to do, which is in fact typical of real computer games, is to 
   <img src="{{pathToRoot}}img/projects/breakout/breakoutCollision.png"></img>
 </center>
 
-To get a list of objects that are overlapping the ball, you can use code as follows which calls the canvas function `canvas.coords(obj)`, returning the 4 corners of an object:
+To get a list of objects that are overlapping the ball, you can use code as follows which calls the canvas function `canvas.coords(obj)`, returning the coordinates of the top-left and bottom-right of the object.
 
 ```
 # this graphics function gets the location of the ball as a list
 ball_coords = canvas.coords(ball)
 
-# the list has four elements:
+# the list has the coordinates for two points
 x_1 = ball_coords[0]
 y_1 = ball_coords[1]
 x_2 = ball_coords[2]
@@ -143,7 +143,7 @@ If you've gotten to here, you've done all the hard parts.  There are, however, a
 ## <span style="color:blue">Extensions</span>
 If you have the basic play working well, then this would be a great opportunity to go above and beyond. Here are a few ideas of for possible extensions (of course, we encourage you to use your imagination to come up with other ideas as well):
 
-+ **Add sounds.** It can be fun to add sound effects to your game, such as a sound whenever the ball bounces, whenever the brick is removed, whenever the user wins, and so forth.  To do this, first, add the sound file you want to use to your PyCharm project on your computer.  (Drag the file into the folder containing the project files on your computer).  Then, you'll need to install the library that can play sound files.  First open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following 2 commands below into the Terminal.  On Windows, type `py` instead of `python3`:
++ **Add sounds.** It can be fun to add sound effects to your game, such as a sound whenever the ball bounces, whenever a brick is removed, whenever the user wins, and so forth.  To do this, first, add the sound file you want to use to your PyCharm project on your computer.  (Drag the file into the folder containing the project files on your computer).  Then, you'll need to install the library that can play sound files.  First open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following 2 commands below into the Terminal.  **The second one is for Mac only**.  On Windows, type `py` instead of `python3`:
 
 ```
 > python3 -m pip install playsound
@@ -152,19 +152,29 @@ If you have the basic play working well, then this would be a great opportunity 
 ...prints stuff...
 ```
 
-Next, add the following import at the top of your program:
+Next, add the following import at the top of your program - **make sure to use the correct one for Mac or PC:**
 
 ```
+# Use this for Mac
 from playsound import playsound
+
+# Use this for PC
+from winsound import PlaySound,SND_FILENAME,SND_ASYNC
 ```
 
-Finally, whenever you want to play a sound in your program, call the following function:
+Finally, whenever you want to play a sound in your program, call the following function - **make sure to use the correct one for Mac or PC**:
 
 ```
+# Use this for Mac
 playsound('mysoundfile.au', block=False)
+
+# Use this for PC
+PlaySound('mysoundfile.au', SND_FILENAME | SND_ASYNC)
 ```
 
-You should replace `'mysoundfile.au'` with the name of the sound file in your project.  Make sure you don't forget to include the `block=False` at the end.
+You should replace `'mysoundfile.au'` with the name of the sound file in your project.
+
+We include `bounce.au` as a bounce sound you can use.  On Windows, you should use the included `bounce.wav` sound instead (`.au` files won't work).
 
 + **Improve the user control over bounces.**  The program gets rather boring if the only thing the player has to do is hit the ball.  It is far more interesting if the player can control the ball by hitting it at different parts of the paddle.  The way the old arcade game worked was that the ball would bounce in both the x and y directions if you hit it on the edge of the paddle from which the ball was coming.  The web version implements this feature.
-+ **Use your imagination.** What else have you always awanted a game like this for?
++ **Use your imagination.** What else have you always wanted a game like this to do?

@@ -1,0 +1,70 @@
+<!--
+This element is the datetime picker shown above the navigation bar, only when running the website
+locally.  It shows a compact form to enter a date and time for when you want to view what the website
+will look like at that time.  This is helpful to preview time-sensitive elements, such as
+visible-after, to ensure they display when you want them to.
+-->
+
+<div id="dateTimeEditor" style="margin: 10px 10px 10px 10px; display: none;">
+	<p style="margin-bottom: 10px;"><b>[VISIBLE ONLY LOCALLY] Optionally view what the website will look like at another time (in PDT):</b></p>
+
+	<form class="form-inline">
+	  	<div class="form-group">
+	    	<label class="sr-only" for="date">Date</label>
+	    	<input type="text" class="form-control" id="datePicker" placeholder="Click For Calendar">
+	  	</div>
+	  	<div class="form-group">
+	    	<label class="sr-only" for="time">Hour</label>
+	    	<input type="number" class="form-control" id="hourPicker" placeholder="Enter Hour (24hr)">
+	  	</div>
+	  	<div class="form-group">
+	  	  	<label class="sr-only" for="time">Minutes</label>
+	  	  	<input type="number" class="form-control" id="minutesPicker" placeholder="Enter Minutes">
+	  	</div>
+
+	  	<button type="button" onclick="dateTimeEditorSubmitted()" class="btn btn-default">Set Time</button>
+
+	  	<!-- Help text -->
+	  	<span id="helpBlock" class="help-block" style="color: red; display: none;">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+	</form>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// On page load, show the datetime picker if we're running locally
+		var url = window.location.href;
+		if (url.startsWith("http://localhost:") || url.startsWith("file://")) {
+			$("#dateTimeEditor").show();
+			$("#datePicker").datepicker();
+		}
+	});
+
+	// This function is called when the form is submitted
+	function dateTimeEditorSubmitted() {
+		if ($("#datePicker").val() == "" || $("#hourPicker").val() == ""
+			|| $("#minutesPicker").val() == "") {
+			
+			// Not all inputs entered
+			$("#helpBlock").text("Please make sure to fill out all fields.");
+			$("#helpBlock").show();
+		} else if (parseInt($("#hourPicker").val()) == NaN ||
+			parseInt($("#minutesPicker").val()) == NaN ||
+			parseInt($("#hourPicker").val()) > 23 || 
+			parseInt($("#hourPicker").val()) < 0 || 
+			parseInt($("#minutesPicker").val()) > 59 ||
+			parseInt($("#minutesPicker").val()) < 0) {
+			
+			// Invalid inputs
+			$("#helpBlock").text("Please enter an hour 0-23 and minutes 0-59.");
+			$("#helpBlock").show();
+		} else {
+			$("#helpBlock").hide();
+
+			// Re-process the time-sensitive elements with this time as the standard
+			dateString = $("#datePicker").val() + " " + $("#hourPicker").val() + ":" + $("#minutesPicker").val();
+			momentDate = moment(dateString, "MM/DD/YYYY HH:mm");
+
+			showHideRelevantElementsForDate(momentDate);
+		}
+	}
+</script>

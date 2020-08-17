@@ -1,0 +1,86 @@
+<%
+"""
+This template renders a list of programs based on the programs.json file.
+See the README for an in-depth description of the expected format of that file.
+
+This template expects two provided parameters:
+
+- "lang", which should be the language code to display the content in.  Currently "en" (English) and "tr" (Turkish) are supported.
+
+- "content_type", the name of the field within each section of each day to display the programs for.  For instance, "examples" would mean that this dropdown should render a list of all the days with examples in their sections.  Another example is "projects", which would mean that this dropdown should render a list of all the days with projects in their sections.  This parameter must match exactly the name of the field within a section.
+
+This works for displaying any programs with title and URL fields.  For instance, both examples and projects have title_[LANG] and url fields.
+"""
+%>
+
+<ul class="dropdown-menu">
+
+	<%
+		# Read the data from the JSON file
+		import json
+		with open("templates/programs/programs.json", "r", encoding="utf8") as programs_file:
+	  		data = json.load(programs_file)
+	%>
+
+	<!-- This dropdown should display one element for each day of content -->
+	% for i, day_info in enumerate(data):
+		<% 	
+			# Skip this day if it doesn't have any content
+			has_content = False
+			for section in day_info["sections"]:
+				if content_type in section:
+					has_content = True
+					break
+				end
+			end
+			if not has_content:
+				continue
+			end 
+		%>
+		<li 
+			% if not get('taMode', False) and "visible_after" in day_info:
+				class="dropdown-submenu visible-after" data-visible-after="{{day_info["visible_after"]}}"
+			% else:
+				class="dropdown-submenu"
+			% end
+		>
+			<a tabindex="-1" href="#">{{i + 1}}: {{day_info["title_" + lang]}}</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+				% for section in day_info["sections"]:
+					% if content_type in section:
+						<%
+							visible_after = None
+							if "visible_after" in section:
+								visible_after = section["visible_after"]
+							elif "visible_after" in day_info:
+								visible_after = day_info["visible_after"]
+							end
+						%>
+						<li 
+							% if not get('taMode', False) and visible_after:
+								class="dropdown-header visible-after" data-visible-after="{{visible_after}}"
+							% else:
+								class="dropdown-header"
+							% end
+						>
+							{{section["title_" + lang]}}
+						</li>
+
+						% # For each program in this section of the day, add a row
+						% for program in section[content_type]:
+							<li
+								% if not get('taMode', False) and visible_after:
+									class="visible-after" data-visible-after="{{visible_after}}"
+								% end
+							>
+								<a href="{{pathToRoot}}{{lang}}/{{program['url']}}">{{program["title_" + lang]}}</a>
+							</li>
+						% end
+					% end
+				% end
+			</ul>
+		</li>
+	% end
+</ul>

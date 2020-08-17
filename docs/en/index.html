@@ -6,7 +6,7 @@
 	<head>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" href="../images/stanford-favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 <title>CS Bridge  | Home</title>
 
 <!-- Fonts -->
@@ -22,35 +22,112 @@
 <script src="../plugins/jquery.min.js"></script>
 <script src="../plugins/bootstrap-3.4.1/js/bootstrap.min.js"></script>
 
-<script src="../karel/ace/ace.js" type="text/javascript"></script>
+<!--<script src="../karel/ace/ace.js" type="text/javascript"></script>-->
+
+<!-- Moment.js -->
 <script type="text/javascript" src="../js/moment.min.js"></script>
 <script type="text/javascript" src="../js/moment-timezone-with-data-10-year-range.min.js"></script>
 <script type="text/javascript" src="../js/time.js"></script>
 
+<!-- Date picker -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- Latex support -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
 <!--
-<script type="text/javascript" src="../plugins/d3.v3/d3.v3.min.js"></script>
--->
-
-
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
-  </script>-->
-
 <script src="../karel/js/html/websiteImports.js"></script>
 <script>importCss();</script>
 <script>importJs();</script>
-
+-->
 
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-		<script src="sweetalert2.all.min.js"></script>
-<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+		<!--<script src="sweetalert2.all.min.js"></script>-->
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+-->
 	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
 	</head>
 	<body>
 
 
+<!-- The datetime editor, for testing -->
+<!--
+This element is the datetime picker shown above the navigation bar, only when running the website
+locally.  It shows a compact form to enter a date and time for when you want to view what the website
+will look like at that time.  This is helpful to preview time-sensitive elements, such as
+visible-after, to ensure they display when you want them to.
+-->
+
+<div id="dateTimeEditor" style="margin: 10px 10px 10px 10px; display: none;">
+	<p style="margin-bottom: 10px;"><b>[VISIBLE ONLY LOCALLY] Optionally view what the website will look like at another time (in PDT):</b></p>
+
+	<form class="form-inline">
+	  	<div class="form-group">
+	    	<label class="sr-only" for="date">Date</label>
+	    	<input type="text" class="form-control" id="datePicker" placeholder="Click For Calendar">
+	  	</div>
+	  	<div class="form-group">
+	    	<label class="sr-only" for="time">Hour</label>
+	    	<input type="number" class="form-control" id="hourPicker" placeholder="Enter Hour (24hr)">
+	  	</div>
+	  	<div class="form-group">
+	  	  	<label class="sr-only" for="time">Minutes</label>
+	  	  	<input type="number" class="form-control" id="minutesPicker" placeholder="Enter Minutes">
+	  	</div>
+
+	  	<button type="button" onclick="dateTimeEditorSubmitted()" class="btn btn-default">Set Time</button>
+
+	  	<!-- Help text -->
+	  	<span id="helpBlock" class="help-block" style="color: red; display: none;">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+	</form>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// On page load, show the datetime picker if we're running locally
+		var url = window.location.href;
+		if (url.startsWith("http://localhost:") || url.startsWith("file://")) {
+			$("#dateTimeEditor").show();
+			$("#datePicker").datepicker();
+		}
+	});
+
+	// This function is called when the form is submitted
+	function dateTimeEditorSubmitted() {
+		if ($("#datePicker").val() == "" || $("#hourPicker").val() == ""
+			|| $("#minutesPicker").val() == "") {
+			
+			// Not all inputs entered
+			$("#helpBlock").text("Please make sure to fill out all fields.");
+			$("#helpBlock").show();
+		} else if (parseInt($("#hourPicker").val()) == NaN ||
+			parseInt($("#minutesPicker").val()) == NaN ||
+			parseInt($("#hourPicker").val()) > 23 || 
+			parseInt($("#hourPicker").val()) < 0 || 
+			parseInt($("#minutesPicker").val()) > 59 ||
+			parseInt($("#minutesPicker").val()) < 0) {
+			
+			// Invalid inputs
+			$("#helpBlock").text("Please enter an hour 0-23 and minutes 0-59.");
+			$("#helpBlock").show();
+		} else {
+			$("#helpBlock").hide();
+
+			// Re-process the time-sensitive elements with this time as the standard
+			dateString = $("#datePicker").val() + " " + $("#hourPicker").val() + ":" + $("#minutesPicker").val();
+			momentDate = moment(dateString, "MM/DD/YYYY HH:mm");
+
+			showHideRelevantElementsForDate(momentDate);
+		}
+	}
+</script>
+<!-- The navigation bar -->
 <nav class="navbar-inverse navbar-default" role="navigation">
 	<div class="container-fluid">
 		<div class="container">
@@ -128,13 +205,13 @@
 <ul class="dropdown-menu">
 
 
-	<!-- This dropdown should display one element for each day of projects -->
+	<!-- This dropdown should display one element for each day of content -->
 		<li 
 				class="dropdown-submenu"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
-			<!-- For each of morning/evening, add a "side popup" -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -157,7 +234,7 @@
 		>
 			<a tabindex="-1" href="#">2: Karel and Control Flow</a>
 
-			<!-- For each of morning/evening, add a "side popup" -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080500"
@@ -203,7 +280,7 @@
 		>
 			<a tabindex="-1" href="#">3: Variables</a>
 
-			<!-- For each of morning/evening, add a "side popup" -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080600"
@@ -254,7 +331,7 @@
 		>
 			<a tabindex="-1" href="#">4: For loops, deconstructed</a>
 
-			<!-- For each of morning/evening, add a "side popup" -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080700"
@@ -274,6 +351,230 @@
 							</li>
 			</ul>
 		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081000"
+		>
+			<a tabindex="-1" href="#">5: Graphics and Functions</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081000"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../en/projects/programmingIsAwesome.html">Programming is Awesome</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../en/projects/randomCircles.html">Random Circles</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081009"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../en/projects/funkyFunctions.html">Funky Functions</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../en/projects/fizzbuzz-functions.html">FizzBuzz</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../en/projects/target.html">Target</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../en/projects/stringArt.html">String Art</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081100"
+		>
+			<a tabindex="-1" href="#">6: Loops and Animation</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081100"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../en/projects/printIndices.html">Print Indices</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../en/projects/illusion.html">Optical Illusion</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081109"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../en/projects/mysterySquare.html">Mystery Square</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../en/projects/bouncingBall.html">Bouncing Ball</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../en/projects/shortFilm.html">Short Film</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081200"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081200"
+							>
+								<a href="../en/projects/sorted.html">Sorted Numbers</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081200"
+							>
+								<a href="../en/projects/ascending.html">Ascending Numbers</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../en/projects/mouseLocation.html">Mouse Location</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../en/projects/makingTracks.html">Making Tracks</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../en/projects/snow.html">Snow</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081300"
+		>
+			<a tabindex="-1" href="#">8: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081300"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081300"
+							>
+								<a href="../en/projects/breakout.html">Breakout</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081400"
+		>
+			<a tabindex="-1" href="#">9: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081400"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081400"
+							>
+								<a href="../en/projects/breakout.html">Breakout</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081700"
+		>
+			<a tabindex="-1" href="#">10: Dictionaries, Breakout and Final Projects</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081700"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081700"
+							>
+								<a href="../en/projects/phonebook.html">Phonebook</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081700"
+							>
+								<a href="../en/projects/breakout.html">Breakout</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081710"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081710"
+							>
+								<a href="../en/projects/project.html">Final Project</a>
+							</li>
+			</ul>
+		</li>
 </ul>					</li>
 
 					<!-- Examples dropdown -->
@@ -283,14 +584,13 @@
 <ul class="dropdown-menu">
 
 
-	<!-- This dropdown should display one element for each day of worked examples -->
-
+	<!-- This dropdown should display one element for each day of content -->
 		<li 
 				class="dropdown-submenu"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
-			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -308,13 +608,12 @@
 							</li>
 			</ul>
 		</li>
-
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020080500"
 		>
 			<a tabindex="-1" href="#">2: Karel and Control Flow</a>
 
-			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080500"
@@ -350,13 +649,12 @@
 							</li>
 			</ul>
 		</li>
-
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020080600"
 		>
 			<a tabindex="-1" href="#">3: Variables</a>
 
-			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080600"
@@ -389,6 +687,126 @@
 									class="visible-after" data-visible-after="2020080609"
 							>
 								<a href="../en/projects/favoriteNumber/">Favorite Number</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081000"
+		>
+			<a tabindex="-1" href="#">5: Graphics and Functions</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081009"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../en/projects/robotFace/">Robot Face</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../en/projects/halfGreen/">Half Green</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../en/projects/average/">Average Function</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../en/projects/division/">Division</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../en/projects/drawPeople/">Draw People</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081100"
+		>
+			<a tabindex="-1" href="#">6: Loops and Animation</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081109"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../en/projects/moveToCenter/">Move to Center</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../en/projects/gravityBall/">Gravity Ball</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../en/projects/stamptool/">Stamp Tool</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../en/projects/holePuncher/">Hole Puncher</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../en/projects/debrisSweeper/">Debris Sweeper</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../en/projects/rocketPaddle/">Rocket Paddle</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081300"
+		>
+			<a tabindex="-1" href="#">8: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081300"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081300"
+							>
+								<a href="../en/projects/keyboardKarel/">Keyboard Karel</a>
 							</li>
 			</ul>
 		</li>
@@ -452,10 +870,199 @@
 			<!-- When hovered, we want to show another side popup with links to the slides/code -->
 			<ul class="dropdown-menu">
 						<li>
-	      					<a href="../slides/IntroPython_Variables.pdf">Slides</a>
+	      					<a href="../slides/Lecture4_Variables.pdf">Slides</a>
 						</li>
 						<li>
 	      					<a href="../starter/lectures/Lecture4.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080609"
+		>
+			<a tabindex="-1" href="#">5: Control Flow Revisited</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../slides/5-ControlFlowRevisited.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../starter/lectures/Lecture5.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080700"
+		>
+			<a tabindex="-1" href="#">6: For Loops, Deconstructed</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../slides/Lecture6.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../starter/lectures/Lecture6.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081000"
+		>
+			<a tabindex="-1" href="#">7: Graphics</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../slides/Lecture7_Graphics.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../starter/lectures/Lecture7.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081009"
+		>
+			<a tabindex="-1" href="#">8: Functions</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../slides/Lecture8-Functions.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../starter/lectures/Lecture8.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081100"
+		>
+			<a tabindex="-1" href="#">9: Nested Loops</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../slides/Lecture9.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../starter/lectures/Lecture9.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081109"
+		>
+			<a tabindex="-1" href="#">10: Animation</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../slides/10-Animation.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../starter/lectures/Lecture10.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">11: Lists</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../slides/Lecture11.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../starter/lectures/Lecture11.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081209"
+		>
+			<a tabindex="-1" href="#">12: The Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../slides/12-Mouse.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../starter/lectures/Lecture12.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081300"
+		>
+			<a tabindex="-1" href="#">13: Breakout Game</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../slides/Lecture13-Breakout.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../starter/Breakout.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081309"
+		>
+			<a tabindex="-1" href="#">14: Breakout Ideas</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../slides/14-Breakout-Extra.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../starter/Lecture14.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081400"
+		>
+			<a tabindex="-1" href="#">15: Breakout Extra Features</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../slides/Lecture15.pdf">Slides</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081700"
+		>
+			<a tabindex="-1" href="#">16: Dictionaries</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../slides/Lec16-Dictionaries.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../starter/Day10AM-Dictionaries.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081709"
+		>
+			<a tabindex="-1" href="#">17: Final Project</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../slides/17-Final-Project.pdf">Slides</a>
 						</li>
 			</ul>
 		</li>
@@ -664,18 +1271,10 @@ If lecture ends early, check out the next activity in the message below!
    
   </div>
   <div class="alert alert-danger visible-during" data-visible-start="20200818 01:00" data-visible-end=" 20200818 1:45">
-        At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
-If lecture ends early, check out the next activity in the message below!
+        At this time, you should be meeting with your morning Section Leader to discuss final project ideas.
    
   </div>
   <div class="alert alert-danger visible-during" data-visible-start="20200819 01:00" data-visible-end=" 20200819 1:45">
-        At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
-If lecture ends early, check out the next activity in the message below!
-   
-  </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200820 01:00" data-visible-end=" 20200820 1:45">
         At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
 Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
@@ -978,15 +1577,15 @@ If you haven't finished it, that's okay, submit what you have!
         Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
   </div>
   <div class="alert alert-info visible-during" data-visible-start="20200807 11:30" data-visible-end=" 20200807 13:00">
-        The social activity is happening now! Check <a href="https://us.edstem.org/courses/968/discussion/96933"_blank">Ed</a> for more information about the social activity and for information on how to join.
+        The Final Project Showcase and Party is happening now! Come join the <a href="https://stanford.zoom.us/j/92718948442"_blank">party</a>!!
    
   </div>
-  <div class="alert alert-info visible-during" data-visible-start="20200812 07:00" data-visible-end=" 20200812 08:00">
-        The social activity is happening now! Check <a href="https://us.edstem.org/courses/968/discussion/96933"_blank">Ed</a> for more information about the social activity and for information on how to join.
+  <div class="alert alert-info visible-during" data-visible-start="20200814 10:00" data-visible-end=" 20200814 11:00">
+        The Final Project Showcase and Party is happening now! Come join the <a href="https://stanford.zoom.us/j/92718948442"_blank">party</a>!!
    
   </div>
-  <div class="alert alert-info visible-during" data-visible-start="20200820 10:30" data-visible-end=" 20200807 12:00">
-        The social activity is happening now! Check <a href="https://us.edstem.org/courses/968/discussion/96933"_blank">Ed</a> for more information about the social activity and for information on how to join.
+  <div class="alert alert-info visible-during" data-visible-start="20200820 10:00" data-visible-end=" 20200820 12:00">
+        The Final Project Showcase and Party is happening now! Come join the <a href="https://stanford.zoom.us/j/92718948442"_blank">party</a>!!
    
   </div>
 
@@ -1011,6 +1610,559 @@ If you haven't finished it, that's okay, submit what you have!
 
 <table class="table table-striped">
 
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020081700"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>Day 10: Dictionaries, Breakout and Final Projects</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020081700"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Morning Project [<a href="../starter/Day10AM.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081700"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/phonebook/icon.png" />
+</td>
+<td>
+	<a href="../en/projects/phonebook.html">Phonebook</a>
+    <br/>
+
+    <span class="label label-default">Quickstart</span>	
+</td>
+<td>Dictionaries</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/breakout/breakout.jpg" />
+</td>
+<td>
+	<a href="../en/projects/breakout.html">Breakout</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td>Python, Graphics, Animation, Lists and Mouse</td>		      			</tr>
+		      	</tbody>
+				<tr 
+						class="info visible-after" data-visible-after="2020081710"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Evening Project [<a href="../starter/Day10PM.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081710"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/finalProject/project.png" />
+</td>
+<td>
+	<a href="../en/projects/project.html">Final Project</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td></td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020081400"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>Day 9: Breakout</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020081400"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Breakout Project [<a href="../starter/Breakout.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081400"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/breakout/breakout.jpg" />
+</td>
+<td>
+	<a href="../en/projects/breakout.html">Breakout</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td>Python, Graphics, Animation, Lists and Mouse</td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020081300"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>Day 8: Breakout</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020081300"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Breakout Project [<a href="../starter/Breakout.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081300"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/breakout/breakout.jpg" />
+</td>
+<td>
+	<a href="../en/projects/breakout.html">Breakout</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td>Python, Graphics, Animation, Lists and Mouse</td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020081200"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>Day 7: Lists and Mouse</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020081200"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Morning Project [<a href="../starter/Day7AM.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081200"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/sorted/sorted.jpg" />
+</td>
+<td>
+	<a href="../en/projects/sorted.html">Sorted Numbers</a>
+    <br/>
+
+    <span class="label label-default">Quickstart</span>	
+</td>
+<td>Lists</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/ascending/icon.jpg" />
+</td>
+<td>
+	<a href="../en/projects/ascending.html">Ascending Numbers</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td>Lists</td>		      			</tr>
+		      	</tbody>
+				<tr 
+						class="info visible-after" data-visible-after="2020081209"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Evening Project [<a href="../starter/Day7PM.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081209"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/mouseLocation/mouseLocation.png" />
+</td>
+<td>
+	<a href="../en/projects/mouseLocation.html">Mouse Location</a>
+    <br/>
+
+    <span class="label label-default">Quickstart</span>	
+</td>
+<td>Mouse</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/makingTracks/makingTracks.png" />
+</td>
+<td>
+	<a href="../en/projects/makingTracks.html">Making Tracks</a>
+    <br/>
+
+    <span class="label label-primary">Section</span>	
+</td>
+<td>Mouse</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/snow/snowflake.png" />
+</td>
+<td>
+	<a href="../en/projects/snow.html">Snow</a>
+    <br/>
+
+    <span class="label label-primary">Section</span>	
+</td>
+<td>Lists</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/catchMeIfYouCan/demo1.png" />
+</td>
+<td>
+	<a href="../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td>Lists and Mouse</td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+  		  	<tr 
+  		  			class="active visible-after" data-visible-after="2020081200"
+  		  	>
+  				<td colspan = "6">
+  					<center>
+  							Looking for more?  Check out the optional <a href="../en/bonus-index.html">bonus problems!</a>
+  					</center>
+  				</td>
+  			</tr>
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020081100"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>Day 6: Loops and Animation</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020081100"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Morning Project [<a href="../starter/Day6AM.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081100"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/printIndices/logo.png" />
+</td>
+<td>
+	<a href="../en/projects/printIndices.html">Print Indices</a>
+    <br/>
+
+    <span class="label label-default">Quickstart</span>	
+</td>
+<td>For Loops</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/illusion/illusion1.png" />
+</td>
+<td>
+	<a href="../en/projects/illusion.html">Optical Illusion</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td>For Loops</td>		      			</tr>
+		      	</tbody>
+				<tr 
+						class="info visible-after" data-visible-after="2020081109"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Evening Project [<a href="../starter/Day6PM.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081109"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/mysterySquare/mysterySquare.png" />
+</td>
+<td>
+	<a href="../en/projects/mysterySquare.html">Mystery Square</a>
+    <br/>
+
+    <span class="label label-default">Quickstart</span>	
+</td>
+<td>Animation</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/bouncingBall/demo.png" />
+</td>
+<td>
+	<a href="../en/projects/bouncingBall.html">Bouncing Ball</a>
+    <br/>
+
+    <span class="label label-primary">Section</span>	
+</td>
+<td>Animation</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/shortfilm/sunset.png" />
+</td>
+<td>
+	<a href="../en/projects/shortFilm.html">Short Film</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td>Animation</td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+  		  	<tr 
+  		  			class="active visible-after" data-visible-after="2020081100"
+  		  	>
+  				<td colspan = "6">
+  					<center>
+  							Looking for more?  Check out the optional <a href="../en/bonus-index.html">bonus problems!</a>
+  					</center>
+  				</td>
+  			</tr>
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020081000"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>Day 5: Graphics and Functions</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020081000"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Morning Project [<a href="../starter/Day5AM.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081000"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/programmingIsAwesome/demo.png" />
+</td>
+<td>
+	<a href="../en/projects/programmingIsAwesome.html">Programming is Awesome</a>
+    <br/>
+
+    <span class="label label-default">Quickstart</span>	
+</td>
+<td>Graphics</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/randomCircles/demo1.png" />
+</td>
+<td>
+	<a href="../en/projects/randomCircles.html">Random Circles</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td>Graphics and Randomness</td>		      			</tr>
+		      	</tbody>
+				<tr 
+						class="info visible-after" data-visible-after="2020081009"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Evening Project [<a href="../starter/Day5PM.zip">here</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081009"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/funkyFunctions/logo.png" />
+</td>
+<td>
+	<a href="../en/projects/funkyFunctions.html">Funky Functions</a>
+    <br/>
+
+    <span class="label label-default">Quickstart</span>	
+</td>
+<td>Params and Return</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/fizzbuzz/fizzbuzz.png" />
+</td>
+<td>
+	<a href="../en/projects/fizzbuzz-functions.html">FizzBuzz</a>
+    <br/>
+
+    <span class="label label-primary">Section</span>	
+</td>
+<td>Params and Return</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/target/target.png" />
+</td>
+<td>
+	<a href="../en/projects/target.html">Target</a>
+    <br/>
+
+    <span class="label label-primary">Section</span>	
+</td>
+<td>Parameters</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/stringArt/stringArt.png" />
+</td>
+<td>
+	<a href="../en/projects/stringArt.html">String Art</a>
+    <br/>
+
+    <span class="label label-success">Project</span>	
+</td>
+<td>For Loops</td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+  		  	<tr 
+  		  			class="active visible-after" data-visible-after="2020081000"
+  		  	>
+  				<td colspan = "6">
+  					<center>
+  							Looking for more?  Check out the optional <a href="../en/bonus-index.html">bonus problems!</a>
+  					</center>
+  				</td>
+  			</tr>
 
 		<!-- The head of the table should show the day's topic title -->
 		<thead
@@ -1044,7 +2196,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/someSum.png" />
+	<img class="projectImg" src="../img/projects/someSum/someSum.png" />
 </td>
 <td>
 	<a href="../en/projects/someSum.html">That&#039;s Some Sum!</a>
@@ -1056,7 +2208,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/carbonDating.jpg" />
+	<img class="projectImg" src="../img/projects/carbonDating/carbondating.jpg" />
 </td>
 <td>
 	<a href="../en/projects/carbonDating.html">Carbon Dating</a>
@@ -1110,7 +2262,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/sandcastle.jpg" />
+	<img class="projectImg" src="../img/projects/sandcastles/sandcastle.jpg" />
 </td>
 <td>
 	<a href="../en/projects/sandcastles.html">Sandcastles</a>
@@ -1122,7 +2274,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/runningSum.png" />
+	<img class="projectImg" src="../img/projects/runningSum/runningSum.png" />
 </td>
 <td>
 	<a href="../en/projects/runningSum.html">Run, Sum, Run!</a>
@@ -1150,7 +2302,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/areaCalculator.png" />
+	<img class="projectImg" src="../img/projects/areaCalculator/areaCalculator.png" />
 </td>
 <td>
 	<a href="../en/projects/areaCalculator.html">Area Calculator</a>
@@ -1162,7 +2314,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/8ball.png" />
+	<img class="projectImg" src="../img/projects/8Ball/8ball.png" />
 </td>
 <td>
 	<a href="../en/projects/8ball.html">8 Ball</a>
@@ -1174,7 +2326,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/viralVideo.png" />
+	<img class="projectImg" src="../img/projects/viralvideo/viralVideo.png" />
 </td>
 <td>
 	<a href="../en/projects/viralVideo.html">Viral Video</a>
@@ -1186,7 +2338,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/khansole.png" />
+	<img class="projectImg" src="../img/projects/khansole/khansole.png" />
 </td>
 <td>
 	<a href="../en/projects/khansole.html">Khansole Academy</a>
@@ -1240,7 +2392,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/placeSquare.png" />
+	<img class="projectImg" src="../img/projects/placeSquare/placeSquare.png" />
 </td>
 <td>
 	<a href="../en/projects/placeSquare.html">Place Square</a>
@@ -1252,7 +2404,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/mountain.png" />
+	<img class="projectImg" src="../img/projects/mountain/mountain.png" />
 </td>
 <td>
 	<a href="../en/projects/mountain.html">Mountain Karel</a>
@@ -1280,7 +2432,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/stripeKarel.png" />
+	<img class="projectImg" src="../img/projects/stripeKarel/stripeKarel.png" />
 </td>
 <td>
 	<a href="../en/projects/stripeKarel.html">Stripe Karel</a>
@@ -1292,7 +2444,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/hospitalKarel.png" />
+	<img class="projectImg" src="../img/projects/hospitalkarel/hospitalkarel.png" />
 </td>
 <td>
 	<a href="../en/projects/hospitalKarel.html">Hospital Karel</a>
@@ -1304,7 +2456,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/randomPainter2.png" />
+	<img class="projectImg" src="../img/projects/randomPainter/randomPainter.png" />
 </td>
 <td>
 	<a href="../en/projects/randomPainter.html">Random Painter</a>
@@ -1356,7 +2508,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/newspaper.jpg" />
+	<img class="projectImg" src="../img/projects/newspaper/newspaper.jpg" />
 </td>
 <td>
 	<a href="../en/projects/collectNewspaper.html">Collect Newspaper</a>
@@ -1368,7 +2520,7 @@ If you haven't finished it, that's okay, submit what you have!
 		      			<tr>
 
 <td>
-	<img class="projectImg" src="../img/icons/charles.jpg" />
+	<img class="projectImg" src="../img/projects/efes/charles.jpg" />
 </td>
 <td>
 	<a href="../en/projects/arches.html">Arches Karel</a>
@@ -1393,7 +2545,7 @@ If you haven't finished it, that's okay, submit what you have!
 	  	<div class="row">
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/nickt.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/nickt.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Nick T.</b>
 				  		</div>
@@ -1401,7 +2553,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/ondra.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/ondra.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Ondra</b>
 				  		</div>
@@ -1409,7 +2561,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Ayca.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Ayca.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Ayca</b>
 				  		</div>
@@ -1417,7 +2569,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/chris.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/chris.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Chris</b>
 				  		</div>
@@ -1425,7 +2577,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/nickm.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/nickm.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Nick M.</b>
 				  		</div>
@@ -1433,7 +2585,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Josef.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Josef.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Josef</b>
 				  		</div>
@@ -1443,7 +2595,7 @@ If you haven't finished it, that's okay, submit what you have!
 	  	<div class="row">
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Yosefa.JPG" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Yosefa.JPG" alt="profile picture">
 				  		<div class="caption">
 							<b>Yosefa</b>
 				  		</div>
@@ -1451,7 +2603,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Burcu.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Burcu.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Burcu</b>
 				  		</div>
@@ -1459,7 +2611,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/lisa.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/lisa.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Lisa</b>
 				  		</div>
@@ -1467,7 +2619,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/ceren.PNG" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/ceren.PNG" alt="profile picture">
 				  		<div class="caption">
 							<b>Ceren</b>
 				  		</div>
@@ -1475,7 +2627,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Ahmet.png" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Ahmet.png" alt="profile picture">
 				  		<div class="caption">
 							<b>Ahmet</b>
 				  		</div>
@@ -1483,7 +2635,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Anna.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Anna.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Anna</b>
 				  		</div>
@@ -1493,7 +2645,7 @@ If you haven't finished it, that's okay, submit what you have!
 	  	<div class="row">
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Demet.jpeg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Demet.jpeg" alt="profile picture">
 				  		<div class="caption">
 							<b>Demet</b>
 				  		</div>
@@ -1501,7 +2653,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Eddie.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Eddie.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Eddie</b>
 				  		</div>
@@ -1509,7 +2661,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Eliška.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Eliška.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Eliška</b>
 				  		</div>
@@ -1517,7 +2669,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Emilia.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Emilia.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Emilia</b>
 				  		</div>
@@ -1525,7 +2677,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Emirhan.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Emirhan.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Emirhan</b>
 				  		</div>
@@ -1533,7 +2685,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Eren.jpeg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Eren.jpeg" alt="profile picture">
 				  		<div class="caption">
 							<b>Eren</b>
 				  		</div>
@@ -1543,7 +2695,7 @@ If you haven't finished it, that's okay, submit what you have!
 	  	<div class="row">
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Ezgi.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Ezgi.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Ezgi</b>
 				  		</div>
@@ -1551,7 +2703,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Gaby.jpeg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Gaby.jpeg" alt="profile picture">
 				  		<div class="caption">
 							<b>Gaby</b>
 				  		</div>
@@ -1559,7 +2711,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Gül Sena.JPG" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Gül Sena.JPG" alt="profile picture">
 				  		<div class="caption">
 							<b>Gül Sena</b>
 				  		</div>
@@ -1567,7 +2719,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Honza.jpeg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Honza.jpeg" alt="profile picture">
 				  		<div class="caption">
 							<b>Honza</b>
 				  		</div>
@@ -1575,7 +2727,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Jan.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Jan.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Jan</b>
 				  		</div>
@@ -1583,7 +2735,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/jaroslav.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/jaroslav.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Jaroslav</b>
 				  		</div>
@@ -1593,7 +2745,7 @@ If you haven't finished it, that's okay, submit what you have!
 	  	<div class="row">
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/jillian.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/jillian.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Jillian</b>
 				  		</div>
@@ -1601,7 +2753,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Julie.jpeg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Julie.jpeg" alt="profile picture">
 				  		<div class="caption">
 							<b>Julie</b>
 				  		</div>
@@ -1609,7 +2761,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Melis.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Melis.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Melis</b>
 				  		</div>
@@ -1617,7 +2769,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Necla.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Necla.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Necla</b>
 				  		</div>
@@ -1625,7 +2777,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Okan.png" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Okan.png" alt="profile picture">
 				  		<div class="caption">
 							<b>Okan</b>
 				  		</div>
@@ -1633,7 +2785,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Oya.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Oya.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Oya</b>
 				  		</div>
@@ -1643,7 +2795,7 @@ If you haven't finished it, that's okay, submit what you have!
 	  	<div class="row">
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Ozan.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Ozan.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Ozan</b>
 				  		</div>
@@ -1651,7 +2803,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Pinar.jpeg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Pinar.jpeg" alt="profile picture">
 				  		<div class="caption">
 							<b>Pinar</b>
 				  		</div>
@@ -1659,7 +2811,7 @@ If you haven't finished it, that's okay, submit what you have!
 		  		</div>
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="../img/peeps/Radek.jpg" alt="profile picture">
+			  			<img class="thumbnailImg" src="../img/staff/Radek.jpg" alt="profile picture">
 				  		<div class="caption">
 							<b>Radek</b>
 				  		</div>
@@ -1673,7 +2825,7 @@ If you haven't finished it, that's okay, submit what you have!
 <!-- Curriculum Overview -->
 <div class="section" id="playWithKarel">
 	<h2>Curriculum</h2>
-	<img src = "../img/icons/curriculum.jpg" style="width:100%"></img>
+	<img src = "../img/resources/curriculum.jpg" style="width:100%"></img>
 </div>
 
 

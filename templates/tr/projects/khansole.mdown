@@ -1,6 +1,6 @@
 template: templates/tr/projects/projectTemplate.ptl
 title: Khansole Akademi
-credit: Nick Parlante
+credit: Chris Piech and Sonja Johnson-Yu
 translation: Gül Sena Altıntaş
 
 File: `khansole_academy.py`

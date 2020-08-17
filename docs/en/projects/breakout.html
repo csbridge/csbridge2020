@@ -6,7 +6,7 @@
 	<head>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
 <title>CS Bridge  | Breakout</title>
 
 <!-- Fonts -->
@@ -22,35 +22,112 @@
 <script src="../../plugins/jquery.min.js"></script>
 <script src="../../plugins/bootstrap-3.4.1/js/bootstrap.min.js"></script>
 
-<script src="../../karel/ace/ace.js" type="text/javascript"></script>
+<!--<script src="../../karel/ace/ace.js" type="text/javascript"></script>-->
+
+<!-- Moment.js -->
 <script type="text/javascript" src="../../js/moment.min.js"></script>
 <script type="text/javascript" src="../../js/moment-timezone-with-data-10-year-range.min.js"></script>
 <script type="text/javascript" src="../../js/time.js"></script>
 
+<!-- Date picker -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- Latex support -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
 <!--
-<script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
--->
-
-
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
-  </script>-->
-
 <script src="../karel/js/html/websiteImports.js"></script>
 <script>importCss();</script>
 <script>importJs();</script>
-
+-->
 
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-		<script src="sweetalert2.all.min.js"></script>
-<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+		<!--<script src="sweetalert2.all.min.js"></script>-->
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+-->
 	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
 	</head>
 	<body>
 
 
+<!-- The datetime editor, for testing -->
+<!--
+This element is the datetime picker shown above the navigation bar, only when running the website
+locally.  It shows a compact form to enter a date and time for when you want to view what the website
+will look like at that time.  This is helpful to preview time-sensitive elements, such as
+visible-after, to ensure they display when you want them to.
+-->
+
+<div id="dateTimeEditor" style="margin: 10px 10px 10px 10px; display: none;">
+	<p style="margin-bottom: 10px;"><b>[VISIBLE ONLY LOCALLY] Optionally view what the website will look like at another time (in PDT):</b></p>
+
+	<form class="form-inline">
+	  	<div class="form-group">
+	    	<label class="sr-only" for="date">Date</label>
+	    	<input type="text" class="form-control" id="datePicker" placeholder="Click For Calendar">
+	  	</div>
+	  	<div class="form-group">
+	    	<label class="sr-only" for="time">Hour</label>
+	    	<input type="number" class="form-control" id="hourPicker" placeholder="Enter Hour (24hr)">
+	  	</div>
+	  	<div class="form-group">
+	  	  	<label class="sr-only" for="time">Minutes</label>
+	  	  	<input type="number" class="form-control" id="minutesPicker" placeholder="Enter Minutes">
+	  	</div>
+
+	  	<button type="button" onclick="dateTimeEditorSubmitted()" class="btn btn-default">Set Time</button>
+
+	  	<!-- Help text -->
+	  	<span id="helpBlock" class="help-block" style="color: red; display: none;">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+	</form>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// On page load, show the datetime picker if we're running locally
+		var url = window.location.href;
+		if (url.startsWith("http://localhost:") || url.startsWith("file://")) {
+			$("#dateTimeEditor").show();
+			$("#datePicker").datepicker();
+		}
+	});
+
+	// This function is called when the form is submitted
+	function dateTimeEditorSubmitted() {
+		if ($("#datePicker").val() == "" || $("#hourPicker").val() == ""
+			|| $("#minutesPicker").val() == "") {
+			
+			// Not all inputs entered
+			$("#helpBlock").text("Please make sure to fill out all fields.");
+			$("#helpBlock").show();
+		} else if (parseInt($("#hourPicker").val()) == NaN ||
+			parseInt($("#minutesPicker").val()) == NaN ||
+			parseInt($("#hourPicker").val()) > 23 || 
+			parseInt($("#hourPicker").val()) < 0 || 
+			parseInt($("#minutesPicker").val()) > 59 ||
+			parseInt($("#minutesPicker").val()) < 0) {
+			
+			// Invalid inputs
+			$("#helpBlock").text("Please enter an hour 0-23 and minutes 0-59.");
+			$("#helpBlock").show();
+		} else {
+			$("#helpBlock").hide();
+
+			// Re-process the time-sensitive elements with this time as the standard
+			dateString = $("#datePicker").val() + " " + $("#hourPicker").val() + ":" + $("#minutesPicker").val();
+			momentDate = moment(dateString, "MM/DD/YYYY HH:mm");
+
+			showHideRelevantElementsForDate(momentDate);
+		}
+	}
+</script>
+<!-- The navigation bar -->
 <nav class="navbar-inverse navbar-default" role="navigation">
 	<div class="container-fluid">
 		<div class="container">
@@ -128,13 +205,13 @@
 <ul class="dropdown-menu">
 
 
-	<!-- This dropdown should display one element for each day of projects -->
+	<!-- This dropdown should display one element for each day of content -->
 		<li 
 				class="dropdown-submenu"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
-			<!-- For each of morning/evening, add a "side popup" -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -157,7 +234,7 @@
 		>
 			<a tabindex="-1" href="#">2: Karel and Control Flow</a>
 
-			<!-- For each of morning/evening, add a "side popup" -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080500"
@@ -203,7 +280,7 @@
 		>
 			<a tabindex="-1" href="#">3: Variables</a>
 
-			<!-- For each of morning/evening, add a "side popup" -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080600"
@@ -254,7 +331,7 @@
 		>
 			<a tabindex="-1" href="#">4: For loops, deconstructed</a>
 
-			<!-- For each of morning/evening, add a "side popup" -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080700"
@@ -274,6 +351,230 @@
 							</li>
 			</ul>
 		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081000"
+		>
+			<a tabindex="-1" href="#">5: Graphics and Functions</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081000"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../../en/projects/programmingIsAwesome.html">Programming is Awesome</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../../en/projects/randomCircles.html">Random Circles</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081009"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/funkyFunctions.html">Funky Functions</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/fizzbuzz-functions.html">FizzBuzz</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/target.html">Target</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/stringArt.html">String Art</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081100"
+		>
+			<a tabindex="-1" href="#">6: Loops and Animation</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081100"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../../en/projects/printIndices.html">Print Indices</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../../en/projects/illusion.html">Optical Illusion</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081109"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../en/projects/mysterySquare.html">Mystery Square</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../en/projects/bouncingBall.html">Bouncing Ball</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../en/projects/shortFilm.html">Short Film</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081200"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081200"
+							>
+								<a href="../../en/projects/sorted.html">Sorted Numbers</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081200"
+							>
+								<a href="../../en/projects/ascending.html">Ascending Numbers</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/mouseLocation.html">Mouse Location</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/makingTracks.html">Making Tracks</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/snow.html">Snow</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081300"
+		>
+			<a tabindex="-1" href="#">8: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081300"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081300"
+							>
+								<a href="../../en/projects/breakout.html">Breakout</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081400"
+		>
+			<a tabindex="-1" href="#">9: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081400"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081400"
+							>
+								<a href="../../en/projects/breakout.html">Breakout</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081700"
+		>
+			<a tabindex="-1" href="#">10: Dictionaries, Breakout and Final Projects</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081700"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081700"
+							>
+								<a href="../../en/projects/phonebook.html">Phonebook</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081700"
+							>
+								<a href="../../en/projects/breakout.html">Breakout</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081710"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081710"
+							>
+								<a href="../../en/projects/project.html">Final Project</a>
+							</li>
+			</ul>
+		</li>
 </ul>					</li>
 
 					<!-- Examples dropdown -->
@@ -283,14 +584,13 @@
 <ul class="dropdown-menu">
 
 
-	<!-- This dropdown should display one element for each day of worked examples -->
-
+	<!-- This dropdown should display one element for each day of content -->
 		<li 
 				class="dropdown-submenu"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
-			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header"
@@ -308,13 +608,12 @@
 							</li>
 			</ul>
 		</li>
-
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020080500"
 		>
 			<a tabindex="-1" href="#">2: Karel and Control Flow</a>
 
-			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080500"
@@ -350,13 +649,12 @@
 							</li>
 			</ul>
 		</li>
-
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2020080600"
 		>
 			<a tabindex="-1" href="#">3: Variables</a>
 
-			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2020080600"
@@ -389,6 +687,126 @@
 									class="visible-after" data-visible-after="2020080609"
 							>
 								<a href="../../en/projects/favoriteNumber/">Favorite Number</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081000"
+		>
+			<a tabindex="-1" href="#">5: Graphics and Functions</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081009"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/robotFace/">Robot Face</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/halfGreen/">Half Green</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/average/">Average Function</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/division/">Division</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/drawPeople/">Draw People</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081100"
+		>
+			<a tabindex="-1" href="#">6: Loops and Animation</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081109"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../en/projects/moveToCenter/">Move to Center</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../en/projects/gravityBall/">Gravity Ball</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/stamptool/">Stamp Tool</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/holePuncher/">Hole Puncher</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/debrisSweeper/">Debris Sweeper</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/rocketPaddle/">Rocket Paddle</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081300"
+		>
+			<a tabindex="-1" href="#">8: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081300"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081300"
+							>
+								<a href="../../en/projects/keyboardKarel/">Keyboard Karel</a>
 							</li>
 			</ul>
 		</li>
@@ -452,10 +870,199 @@
 			<!-- When hovered, we want to show another side popup with links to the slides/code -->
 			<ul class="dropdown-menu">
 						<li>
-	      					<a href="../../slides/IntroPython_Variables.pdf">Slides</a>
+	      					<a href="../../slides/Lecture4_Variables.pdf">Slides</a>
 						</li>
 						<li>
 	      					<a href="../../starter/lectures/Lecture4.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080609"
+		>
+			<a tabindex="-1" href="#">5: Control Flow Revisited</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/5-ControlFlowRevisited.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../../starter/lectures/Lecture5.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080700"
+		>
+			<a tabindex="-1" href="#">6: For Loops, Deconstructed</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lecture6.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../../starter/lectures/Lecture6.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081000"
+		>
+			<a tabindex="-1" href="#">7: Graphics</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lecture7_Graphics.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../../starter/lectures/Lecture7.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081009"
+		>
+			<a tabindex="-1" href="#">8: Functions</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lecture8-Functions.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../../starter/lectures/Lecture8.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081100"
+		>
+			<a tabindex="-1" href="#">9: Nested Loops</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lecture9.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../../starter/lectures/Lecture9.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081109"
+		>
+			<a tabindex="-1" href="#">10: Animation</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/10-Animation.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../../starter/lectures/Lecture10.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">11: Lists</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lecture11.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../../starter/lectures/Lecture11.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081209"
+		>
+			<a tabindex="-1" href="#">12: The Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/12-Mouse.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../../starter/lectures/Lecture12.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081300"
+		>
+			<a tabindex="-1" href="#">13: Breakout Game</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lecture13-Breakout.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../../starter/Breakout.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081309"
+		>
+			<a tabindex="-1" href="#">14: Breakout Ideas</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/14-Breakout-Extra.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../../starter/Lecture14.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081400"
+		>
+			<a tabindex="-1" href="#">15: Breakout Extra Features</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lecture15.pdf">Slides</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081700"
+		>
+			<a tabindex="-1" href="#">16: Dictionaries</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lec16-Dictionaries.pdf">Slides</a>
+						</li>
+						<li>
+	      					<a href="../../starter/Day10AM-Dictionaries.zip">Code</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081709"
+		>
+			<a tabindex="-1" href="#">17: Final Project</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/17-Final-Project.pdf">Slides</a>
 						</li>
 			</ul>
 		</li>
@@ -514,7 +1121,7 @@ filePath - the total path to the markdown file being rendered in this template
 	</h1>
 
 		<p>
-			Credit: Written by Eric Roberts
+			Credit: Eric Roberts
 		</p>
 </div>
 <hr/>
@@ -523,9 +1130,9 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="row">
 	<div class="col-xs-12">
 		<p>Handouts: <a href="../../en/resources/graphics.html">Graphics Reference</a><br/>
-Worked Example: <a href="../../en/projects/stampTool.html">Stamp Tool</a><br/>
+Worked Example: <a href="../../en/projects/stamptool/">Stamp Tool</a><br/>
 Project: <a href="../../en/projects/bouncingBall.html">Bouncing Ball</a><br/>
-<b>Starter code:</b> <a href="../../starter/Breakout.zip">Breakout.zip</a></p>
+File: <code>breakout.py</code></p>
 <p>Your job in this assignment is to write the classic arcade game of Breakout, which was invented by Steve Wozniak before he founded Apple with Steve Jobs (moment of silence).  It is a large assignment, but entirely manageable as long as you break the problem up into pieces.  </p>
 <h2 id="the-breakout-game">The Breakout Game</h2>
 <p>In Breakout, the initial configuration of the world appears as shown below. The colored rectangles in the top part of the screen are <strong>bricks</strong>, and the slightly larger rectangle at the bottom is the <strong>paddle</strong>. The paddle is in a fixed position in the vertical dimension, but moves back and forth across the screen along with the mouse until it reaches the edge of its space. </p>
@@ -545,7 +1152,7 @@ Project: <a href="../../en/projects/bouncingBall.html">Bouncing Ball</a><br/>
     </div>
 </div>
 
-<h2 id="1-create-bricks">1. Create bricks</h2>
+<h2 id="1-create-bricks">1. Create Bricks</h2>
 <p>Before you start playing the game, you have to set up the various pieces.  Thus, it probably makes sense to implement the <code>main</code> function as several smaller functions, each doing one piece of the game.  An important part of the setup consists of creating the rows of bricks at the top of the game, which look like this:</p>
 <p><center>
 <img style="padding:10px;max-width:100%" src="../../img/projects/breakout/breakoutBricks.png"></img>
@@ -586,7 +1193,7 @@ def my_func(...):
 </code></pre>
 
 <h2 id="4-check-for-collisions">4. Check for Collisions</h2>
-<p>Now comes the interesting part.  In order to make Breakout into a real game, you have to be able to tell whether the ball is colliding with another object in the window.  There is a canvas function: <code>canvas.find_overlapping(x_1, y_1, x_2, y_2)</code>, which returns a list of all objects that are overlapping the rectangle with upper-left corner at <code>(x_1, y_1)</code> and bottom-right corner at <code>(_2, y_2)</code>.</p>
+<p>Now comes the interesting part.  In order to make Breakout into a real game, you have to be able to tell whether the ball is colliding with another object in the window.  There is a canvas function: <code>canvas.find_overlapping(x_1, y_1, x_2, y_2)</code>, which returns a list of all objects that are overlapping the rectangle with upper-left corner at <code>(x_1, y_1)</code> and bottom-right corner at <code>(x_2, y_2)</code>.</p>
 <pre><code>colliders = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 </code></pre>
 
@@ -594,11 +1201,11 @@ def my_func(...):
 <p><center>
   <img src="../../img/projects/breakout/breakoutCollision.png"></img>
 </center></p>
-<p>To get a list of objects that are overlapping the ball, you can use code as follows which calls the canvas function <code>canvas.coords(obj)</code>, returning the 4 corners of an object:</p>
+<p>To get a list of objects that are overlapping the ball, you can use code as follows which calls the canvas function <code>canvas.coords(obj)</code>, returning the coordinates of the top-left and bottom-right of the object.</p>
 <pre><code># this graphics function gets the location of the ball as a list
 ball_coords = canvas.coords(ball)
 
-# the list has four elements:
+# the list has the coordinates for two points
 x_1 = ball_coords[0]
 y_1 = ball_coords[1]
 x_2 = ball_coords[2]
@@ -625,7 +1232,7 @@ colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 <h2 id="extensions"><span style="color:blue">Extensions</span></h2>
 <p>If you have the basic play working well, then this would be a great opportunity to go above and beyond. Here are a few ideas of for possible extensions (of course, we encourage you to use your imagination to come up with other ideas as well):</p>
 <ul>
-<li><strong>Add sounds.</strong> It can be fun to add sound effects to your game, such as a sound whenever the ball bounces, whenever the brick is removed, whenever the user wins, and so forth.  To do this, first, add the sound file you want to use to your PyCharm project on your computer.  (Drag the file into the folder containing the project files on your computer).  Then, you'll need to install the library that can play sound files.  First open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following 2 commands below into the Terminal.  On Windows, type <code>py</code> instead of <code>python3</code>:</li>
+<li><strong>Add sounds.</strong> It can be fun to add sound effects to your game, such as a sound whenever the ball bounces, whenever a brick is removed, whenever the user wins, and so forth.  To do this, first, add the sound file you want to use to your PyCharm project on your computer.  (Drag the file into the folder containing the project files on your computer).  Then, you'll need to install the library that can play sound files.  First open a "terminal" window: the easiest way to do this is to use the “Terminal” tab within PyCharm on the lower-left (next to the “Run” and “Python Console” tabs). Type the following 2 commands below into the Terminal.  <strong>The second one is for Mac only</strong>.  On Windows, type <code>py</code> instead of <code>python3</code>:</li>
 </ul>
 <pre><code>&gt; python3 -m pip install playsound
 ...prints stuff...
@@ -633,18 +1240,27 @@ colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 ...prints stuff...
 </code></pre>
 
-<p>Next, add the following import at the top of your program:</p>
-<pre><code>from playsound import playsound
+<p>Next, add the following import at the top of your program - <strong>make sure to use the correct one for Mac or PC:</strong></p>
+<pre><code># Use this for Mac
+from playsound import playsound
+
+# Use this for PC
+from winsound import PlaySound,SND_FILENAME,SND_ASYNC
 </code></pre>
 
-<p>Finally, whenever you want to play a sound in your program, call the following function:</p>
-<pre><code>playsound('mysoundfile.au', block=False)
+<p>Finally, whenever you want to play a sound in your program, call the following function - <strong>make sure to use the correct one for Mac or PC</strong>:</p>
+<pre><code># Use this for Mac
+playsound('mysoundfile.au', block=False)
+
+# Use this for PC
+PlaySound('mysoundfile.au', SND_FILENAME | SND_ASYNC)
 </code></pre>
 
-<p>You should replace <code>'mysoundfile.au'</code> with the name of the sound file in your project.  Make sure you don't forget to include the <code>block=False</code> at the end.</p>
+<p>You should replace <code>'mysoundfile.au'</code> with the name of the sound file in your project.</p>
+<p>We include <code>bounce.au</code> as a bounce sound you can use.  On Windows, you should use the included <code>bounce.wav</code> sound instead (<code>.au</code> files won't work).</p>
 <ul>
 <li><strong>Improve the user control over bounces.</strong>  The program gets rather boring if the only thing the player has to do is hit the ball.  It is far more interesting if the player can control the ball by hitting it at different parts of the paddle.  The way the old arcade game worked was that the ball would bounce in both the x and y directions if you hit it on the edge of the paddle from which the ball was coming.  The web version implements this feature.</li>
-<li><strong>Use your imagination.</strong> What else have you always awanted a game like this for?</li>
+<li><strong>Use your imagination.</strong> What else have you always wanted a game like this to do?</li>
 </ul>
 	</div>
 </div>

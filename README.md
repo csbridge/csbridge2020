@@ -29,6 +29,8 @@ Note: there is a special `{{pathToRoot}}` placeholder that you can use in all te
 ### Local Development
 Run `./runLocal.sh` to compile and run a local copy of the website at `localhost:8000`.  The script is long-running, monitoring any changes to the `templates` folder and automatically recompiling whenever a file changes so that you can see modifications you make while you are working.  Enter `Ctl-c` to terminate the script.
 
+The website relies on several CSS classes (see [Timed Release](#timed-release)) to make certain content appear at certain times.  To help with testing, when running _locally only_ (e.g. viewing via `localhost:` or `file://`), the site will show a bar at the top that allows you to preview what the site looks like at another time of day.  When running hosted somewhere, such as `online.csbridge.org`, this bar does not show.
+
 ### Templates Structure
 
 + `announcements`: helper files relating to showing timed announcements on the main page of the website
@@ -60,25 +62,24 @@ For an example of a Markdown-written page, check out `templates/en/projects/pigl
 + `solution` (optional) - relative path to the solution file for this problem.  If included, in the output it is rendered in a hidden code area at the bottom that the student can view.
 
 ### Updating Projects or Examples
-The main project table on the course homepage, the project table on the SL page, and the content of the dropdowns in the navbar for Projects and Examples, are all **generated automatically** based on the contents of the `templates/programs/programs.json` file.  In other words, you should not modify the HTML file that represents the navbar - it is reading from this JSON file to know what to display.  This makes translation and updating easier because all translations and all program information is in one file for the entire site.  This file contains an array of JSON objects, one per day that should be displayed.  Each day's information contains what projects should be listed for students to complete that day, and what worked examples should be listed for that day, as well as when the problems should become visible to students.  See the file itself for an example of its structure.  Below, we specify in more detail the general format the file is expected to have.
+The main project table on the course homepage, the project table on the SL page, and the content of the dropdowns in the navbar for Projects and Examples, are all **generated automatically** based on the contents of the `templates/programs/programs.json` file.  In other words, you should not modify the HTML file that represents the navbar - it is reading from this JSON file to know what to display.  This makes translation and updating easier because all translations and all program information is in one file for the entire site.  This file contains an array of JSON objects, one per day that should be displayed.  Each day's information contains sections (such as "Morning" or "Evening"), each with what projects should be listed for students to complete, and what worked examples should be listed.  See the file itself for an example of its structure.  Below, we specify in more detail the general format the file is expected to have.
 
 The file itself should be an array of JSON objects, in order of days (e.g. day 1, then day 2, etc.).  Here are the fields the object can contain:
 
-+ `morning` (object): info about morning problems
-+ `evening` (object): info about evening problems
 + `title_en` (string): the day's topic (English)
 + `title_tr` (string): the day's topic (Turkish)
 + `visible_after` (string): optional timestamp when the day should become visible
 + `bonus` (boolean): optional, set to false if you do not want to show a banner linking to the bonus page for more projects to work on
++ `sections` (array): a list of section objects for the day, such as one for morning, one for evening
 
-At least one of "morning" or "evening" must be present.
+Each element of `sections` is an object specifying the content that should be displayed for that section of the day.  The sections should be in the order that they should be displayed on the website.  Here are the fields a section object can contain:
 
-Each of "morning" and "evening" is the same format - each is an object specifying the content that should be displayed for that day's morning or evening.  Here are the fields the object can contain:
-
-+ `examples` (array): optional info about worked examples
++ `title_en` (string): the section name (English) - e.g. "Morning"
++ `title_tr` (string): the section name (Turkish) - e.g. "Sabah"
++ `visible_after` (string): optional timestamp when this content should become visible.  If this is not included, this section will become visible when the entire day becomes visible.
 + `projectURL` (string): starter code URL.  Prepended with domain.   In other words, if the site is `online.csbridge.org`, the starter code would be assumed to have the URL `online.csbridge.org/[URL]`.
-+ `projects` (array): info about projects
-+ `visible_after` (string): optional timestamp when this content should become visible.  Does not apply to morning problems - "morning" will always display when the day itself displays.
++ `examples` (array): optional info about worked examples
++ `projects` (array): optional info about projects
 
 "examples" is a list of worked examples that should be displayed for that day in the navigation bar.  Here is the format each worked example should have (all fields required):
 
@@ -153,6 +154,10 @@ You can also make an HTML element visible during a specific range of times.  To 
 ```
 
 "visible-during" supports timestamps in the format "YYYYMMDD HH:mm".
+
+Elements with the class "visible-default" are only visible if no other elements
+on the page have class "visible-during".  Useful if you want to have certain elements
+appear at certain times, but when no elements are visible, show some default element.
 
 The timestamps are **all assumed to be timestamps in PST**.  The script that handles this hide/show functionality is in `docs/js/time.js`.
 

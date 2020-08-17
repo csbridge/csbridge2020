@@ -4,7 +4,7 @@ credit: Eric Roberts and Mehran Sahami
 translation: Ahmet Uysal
 
 Ders Notları: [Grafik Referansı]({{pathToRoot}}tr/resources/graphics.html)<br/>
-Çözümlü Örnekler: [Damga Makinesi]({{pathToRoot}}tr/projects/stampTool.html)<br/>
+Çözümlü Örnekler: [Damga Makinesi]({{pathToRoot}}tr/projects/stamptool/)<br/>
 Dosya: `making_tracks.py`
 
 Kullanıcının tıkladığı yerlere resim çizen bir program yazın.
@@ -17,27 +17,15 @@ Kullanıcının tıkladığı yerlere resim çizen bir program yazın.
 
 Bu resimleri içeren ilk projemiz!
 
-Bu proje için `Pillow` adında resimleri modifiye etmek ve ekran üzerinde çizmek için kullanılan bir paket indirmeniz gerekiyor.
-`Pillow`'u indirmek için bir terminal penceresi açın (PyCharm'ın içindeki Terminal sekmesini kullanabilirsiniz) ve aşağıdaki komutu girin:
-
-**Not:** Windows kullanıyorsanız `python3` yerine `py` komutunu kullanın.
-**Not2:** Python'da paket adları büyük/küçük harfe duyarlıdır. `Pillow`'u yazarken ilk harfin büyük olmasına dikkat edin.
-
-```
-> python3 -m pip install Pillow
-... konsole'a yazılan kurulumla ilgili bilgiler ...
-Successfully installed Pillow-7.1.1
-```
-
-Yukarıda verilenden farklı bir versiyon numarası görebilirsiniz. Bu bir sorun değildir ve projenizi etkilemeyecektir.
+İlk olarak, görüntüleri işlemek ve bunları Tuval üzerine çizmek için kod içeren bir araç olan Pillow'u kurmanız gerekebilir. Bunun nasıl yapılacağını öğrenmek için [alttaki kurulum talimatlarına]({{pathToRoot}}/en/resources/install.html#installing-graphics) bakın.
 
 Bir resim dosyası kullanarak Graphics objesi oluşturmak için alttakine benzer bir kod kullanabilirsiniz:
+
 ```
 stamp = canvas.create_image(x, y, "images/simba-sm.jpg")
 ```
 
 Bu fonksiyon'u çağırmak PyCharm projesi içinde `images` klasöründe bulunan `simba-sm.jpg` resim dosyasını yükler ve `(x, y)` konumu üzerine bu resmi çizer.
-Bu resmi (her Graphics objesi için geçerli olduğu gibi) modifiye etmek ve ekranda hareket ettirmek için `canvas.moveto(stamp, new_x, new_y)` gibi canvas fonksiyonlarını kullanabilirsiniz. 
+Bu resmi (her Graphics objesi için geçerli olduğu gibi) modifiye etmek ve ekranda hareket ettirmek için `canvas.moveto(stamp, new_x, new_y)` gibi canvas fonksiyonlarını kullanabilirsiniz.
 
 Resimler hakkında daha fazla bilgi almak için [Grafik Referansı]({{pathToRoot}}tr/resources/graphics.html)'nı inceleyebilirsiniz.
-

@@ -59,7 +59,7 @@
 	# A list of the rows of staff members.
 	# Each row is a list of the staff members to display photos for,
 	# with each staff member being a (name, image file) tuple.  The
-	# image files are assumed to live in img/peeps/.
+	# image files are assumed to live in img/staff/.
 	courseStaff = [
 	[
 	  ("Nick T.", "nickt.jpg"),
@@ -117,7 +117,7 @@
 			% for staffMember in courseStaff[i]:
 		  		<div class="col-xs-2">
 					<div class="thumbnail">
-			  			<img class="thumbnailImg" src="{{pathToRoot}}img/peeps/{{staffMember[1]}}" alt="profile picture">
+			  			<img class="thumbnailImg" src="{{pathToRoot}}img/staff/{{staffMember[1]}}" alt="profile picture">
 				  		<div class="caption">
 							<b>{{staffMember[0]}}</b>
 				  		</div>
@@ -133,7 +133,7 @@
 <!-- Müfredat Özeti -->
 <div class="section" id="playWithKarel">
 	<h2>Müfredat</h2>
-	<img src = "{{pathToRoot}}img/icons/curriculum.jpg" style="width:100%"></img>
+	<img src = "{{pathToRoot}}img/resources/curriculum.jpg" style="width:100%"></img>
 </div>
 
 

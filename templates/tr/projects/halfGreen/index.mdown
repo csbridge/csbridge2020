@@ -10,7 +10,7 @@ Ders Notları: [Grafikler Referansı]({{pathToRoot}}tr/resources/graphics.html)<
 Ekranda rastgele konumlarda 1000 adet daire oluşturacağız. Sol alt köşeye daha yakın olan daireler mavi olurken sağ üste yakın olanlar yeşil olacak. Bu örnek döndürülen (return) değerlere dair bir örnek.
 
 <center>
-<img style="width:500px" src="{{pathToRoot}}img/projects/halfGreen/halfGreen.png">	
+<img style="width:500px; border: 1px solid black;" src="{{pathToRoot}}img/projects/halfGreen/halfGreen.png">	
 </center>
 
 * Her daire 20 piksele 20 piksel.

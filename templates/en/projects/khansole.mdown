@@ -1,6 +1,6 @@
 template: templates/en/projects/projectTemplate.ptl
 title: Khansole Academy
-credit: Nick Parlante
+credit: Chris Piech and Sonja Johnson-Yu 
 
 File: `khansole_academy.py`
 

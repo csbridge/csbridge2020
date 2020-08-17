@@ -2,9 +2,11 @@ template: templates/en/projects/projectTemplate.ptl
 title: Funky Functions
 credit: Written by Chris, Bryce, Brahm, and Lisa
 
-Example: [Average Function]({{pathToRoot}}en/projects/averageFunction.html}})
+Example: [Average Function]({{pathToRoot}}en/projects/average/)
 
 ## 1. Mad Max
+File: `mad_max.py`
+
 Complete the program by filling in the `mad_max` function that returns the largest of three numbers:
 
 ```
@@ -29,22 +31,13 @@ The max of 3, 2, and 1 is: 3
 The max of 0, 0, and 0 is: 0
 ```
 
-Hint: There are several ways to write your `mad_max` function.
+While there is a built-in `max` function in Python that we would normally use for this, for this problem you should not use it.  Instead, we want you to get practice implementing it with other things, like `if`, `elif` and `else` statements.
 
-* One approach uses if and if-else conditionals.
-
-* Another approach uses the built-in Python function, `max`, which takes in two numbers and returns the maximum:
-
-        print(max(-3, 4)) # prints 4
-        print(max(100, 5)) # prints 100
-
-    Since your function must return the max of 3 numbers, you will have to call the Python function `max` multiple times!
-
-Try out both approaches if you have time!
 
 ## 2. Dog Years
+File: `dog_years.py`
 
-Everyone knows that our furry friends age at a different rate to humans. Write a program that takes asks the user for a human age (expressed as a whole number) and prints the equivalent dog age using the fact that there are seven dog years per human year. Consider defining a constant `DOG_YEARS_PER_HUMAN_YEAR`. You can assume the user types in an integer age, but not necessarily that the integer is positive. If it isn't, print an error message.
+Everyone knows that our furry friends age at a different rate to humans. Write a program that asks the user for a human age (expressed as a whole number) and prints the equivalent dog age using the fact that there are seven dog years per human year. Consider defining a constant `DOG_YEARS_PER_HUMAN_YEAR`. You can assume the user types in an integer age, but not necessarily that the integer is positive. If it isn't, print an error message.  If the user enters 0, the program should stop.
 
 Your program should define a function called `compute_dog_years` which accepts as a parameter an integer called `human_years`. The function should return the converted human age. You should then edit the `main` function to call this function.
 

@@ -2,7 +2,7 @@ template: templates/en/projects/projectTemplate.ptl
 title: Sorted Numbers
 credit: Chris Piech
 
-Ask the user to enter 10 numbers, then print thoses numbers in sorted order.  Here's example output:
+Ask the user to enter 10 numbers, then print those numbers in sorted order.  Here's example output:
 
 ```
 > 9

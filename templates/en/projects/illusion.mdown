@@ -5,13 +5,13 @@ credit: Based on an idea by Steve Cooper. Written by Chris Piech.
 Handouts: [Graphics Reference]({{pathToRoot}}en/resources/graphics.html)<br/>
 File: `illusion1.py`
 
-Sometimes repeating patterns can cause our eyes to see things that aren't there. Look at the picture below. Can you see little gray squares in the intersections of the white lines? Write a GraphicsProgram that create the optical illusion:
+Sometimes repeating patterns can cause our eyes to see things that aren't there. Look at the picture below. Can you see little gray squares in the intersections of the white lines? Write a graphics program that creates the optical illusion:
 
 <center>
   <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/illusion/illusion1.png">
 </center>
 
-# Constants
+## Constants
 You may notice that the starter code for this project has the lines:
 
 ```
@@ -19,7 +19,7 @@ SIZE = 100
 GAP = 10
 ```
 
-which are written outside the main() function. These lines define constants: variables whose values never change. Since they are defined outside all functions, you can read their values at any point in the program. Though you could write this optical illusion using the numbers 100 and 10 directly wherever you need them, using constants makes your program much easier to read.
+which are written outside the `main()` function. These lines define constants: variables whose values never change. Since they are defined outside all functions, you can read their values at any point in the program. Though you could write this optical illusion using the numbers 100 and 10 directly wherever you need them, using constants makes your program much easier to read.
 
 ## Double for loop
 
@@ -32,7 +32,7 @@ for i in range(100):
 
 The inner loop (the loop in the body) must iterate through a variable other than `i`.
 
-## Extension
+# Extension
 
 File: `illusion2.py`
 
@@ -42,4 +42,4 @@ If you have time, try creating this optical illusion! Note that all the squares 
   <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/illusion/illusion2.png">
 </center>
 
-If you are stuck, try drawing each row with the first black square always starting at x = 0. Then try to figure out how to create the offset pattern.
+If you are stuck, try drawing each row with the first black square always starting at x = 0. Then try to figure out how to create the offset pattern.  The top row is not offset, the row below it is offset 25% of the size of a square, the row below that is offset 50% the size of a square, the row below that is offset 25% of the size of a square, and this 4-row sequence repeats for the remaining rows.
