@@ -107,6 +107,12 @@
 		"title_tr": "Sözlükler",
 		"slidesURL": "slides/Lec16-Dictionaries.pdf",
 		"codeURL": "starter/Day10AM-Dictionaries.zip",
-		"visible_after": "2020081600"
+		"visible_after": "2020081700"
+	},
+	{
+		"title_en": "Final Project",
+		"title_tr": "Final Projesi",
+		"slidesURL": "slides/17-Final-Project.pdf",
+		"visible_after": "2020081709"
 	}
 ]
