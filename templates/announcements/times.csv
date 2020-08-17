@@ -23,8 +23,7 @@ datetime_start,datetime_end,alert_type,category,location
 20200814 01:00, 20200814 1:45,alert-danger,ondrej-lecture.ptl
 20200817 01:00, 20200817 1:45,alert-danger,ayca-lecture.ptl
 20200818 01:00, 20200818 1:45,alert-danger,lecture-am.ptl
-20200819 01:00, 20200819 1:45,alert-danger,lecture-am.ptl
-20200820 01:00, 20200820 1:45,alert-danger,lecture-am.ptl
+20200819 01:00, 20200819 1:45,alert-danger,ayca-lecture.ptl
 20200804 10:00, 20200804 12:00,alert-success,quickstart+section.ptl
 20200805 10:00, 20200805 12:00,alert-success,quickstart+section.ptl
 20200806 10:00, 20200806 12:00,alert-success,quickstart+section.ptl
@@ -93,4 +92,4 @@ datetime_start,datetime_end,alert_type,category,location
 20200820 01:00, 20200820 02:30,alert-success,quickstart+teatime.ptl
 20200807 11:30, 20200807 13:00,alert-info,social-activity.ptl
 20200814 10:00, 20200814 11:00,alert-info,social-activity.ptl
-20200820 10:30, 20200807 12:00,alert-info,social-activity.ptl
+20200820 10:00, 20200820 12:00,alert-info,social-activity.ptl
