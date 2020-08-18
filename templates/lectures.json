@@ -114,5 +114,11 @@
 		"title_tr": "Final Projesi",
 		"slidesURL": "slides/17-Final-Project.pdf",
 		"visible_after": "2020081709"
+	},
+	{
+		"title_en": "Artificial Intelligence",
+		"title_tr": "Artificial Intelligence",
+		"slidesURL": "slides/18-AI.pdf",
+		"visible_after": "2020081809"
 	}
 ]
