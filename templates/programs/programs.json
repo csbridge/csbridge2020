@@ -672,7 +672,57 @@
                 "title_en": "Evening",
                 "title_tr": "Akşam",
                 "visible_after": "2020081710",
-                "projectURL": "starter/Day10PM.zip",
+                "projectURL": "starter/FinalProject.zip",
+                "projects": [
+                    {
+                        "imageURL": "img/projects/finalProject/project.png",
+                        "teachURL": "teach/notes/finalProject.html",
+                        "title_en": "Final Project",
+                        "title_tr": "Final Projesi",
+                        "topic_en": "",
+                        "topic_tr": "",
+                        "type": "project",
+                        "url": "projects/project.html"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title_en": "Final Project",
+        "title_tr": "Final Projesi",
+        "visible_after": "2020081800",
+        "bonus": false,
+        "sections": [
+            {
+                "title_en": "Final Project",
+                "title_tr": "Final Projesi",
+                "projectURL": "starter/FinalProject.zip",
+                "projects": [
+                    {
+                        "imageURL": "img/projects/finalProject/project.png",
+                        "teachURL": "teach/notes/finalProject.html",
+                        "title_en": "Final Project",
+                        "title_tr": "Final Projesi",
+                        "topic_en": "",
+                        "topic_tr": "",
+                        "type": "project",
+                        "url": "projects/project.html"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title_en": "Final Project",
+        "title_tr": "Final Projesi",
+        "visible_after": "2020081900",
+        "bonus": false,
+        "sections": [
+            {
+                "title_en": "Final Project",
+                "title_tr": "Final Projesi",
+                "projectURL": "starter/FinalProject.zip",
                 "projects": [
                     {
                         "imageURL": "img/projects/finalProject/project.png",
