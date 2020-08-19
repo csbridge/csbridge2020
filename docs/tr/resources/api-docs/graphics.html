@@ -125,7 +125,10 @@ Must be unique among button names.</dd>
 <dd>other tkinter keyword args</dd>
 </dl>
 <h2 id="returns">Returns</h2>
-<p>a reference to the button added to the window at the specified location.</p></div>
+<p>a reference to the button added to the window at the specified location.
+Use this with the .destroy()
+function to delete the button later if needed.
+E.g. button = create_button(&hellip;); button.destroy();</p></div>
 </dd>
 <dt id="src.graphics.Canvas.create_image"><code class="name flex">
 <span>def <span class="ident">create_image</span></span>(<span>self, x, y, file_path, **kwargs)</span>
@@ -285,7 +288,7 @@ should be added around the canvas.</dd>
 <dd>other tkinter keyword args for the text field</dd>
 </dl>
 <h2 id="returns">Returns</h2>
-<p>a reference to the text field added to the window at the specified location.</p></div>
+<p>a reference to the text field and the label (in that order) added to the window at the specified location.</p></div>
 </dd>
 <dt id="src.graphics.Canvas.delete"><code class="name flex">
 <span>def <span class="ident">delete</span></span>(<span>self, obj)</span>
@@ -303,6 +306,18 @@ should be added around the canvas.</dd>
 </code></dt>
 <dd>
 <div class="desc"><p>Remove all graphical objects from the canvas.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.delete_text_field"><code class="name flex">
+<span>def <span class="ident">delete_text_field</span></span>(<span>self, text_field_name)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Removes the text field and corresponding label from both the canvas and the internal data
+structures tracking text fields.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>text_field_name</code></strong></dt>
+<dd>the name given when the text field was created.</dd>
+</dl></div>
 </dd>
 <dt id="src.graphics.Canvas.find_all"><code class="name flex">
 <span>def <span class="ident">find_all</span></span>(<span>self)</span>
@@ -932,6 +947,7 @@ Cannot be used on any non-text graphical object.</p>
 <li><code><a title="src.graphics.Canvas.create_text_field" href="#src.graphics.Canvas.create_text_field">create_text_field</a></code></li>
 <li><code><a title="src.graphics.Canvas.delete" href="#src.graphics.Canvas.delete">delete</a></code></li>
 <li><code><a title="src.graphics.Canvas.delete_all" href="#src.graphics.Canvas.delete_all">delete_all</a></code></li>
+<li><code><a title="src.graphics.Canvas.delete_text_field" href="#src.graphics.Canvas.delete_text_field">delete_text_field</a></code></li>
 <li><code><a title="src.graphics.Canvas.find_all" href="#src.graphics.Canvas.find_all">find_all</a></code></li>
 <li><code><a title="src.graphics.Canvas.find_element_at" href="#src.graphics.Canvas.find_element_at">find_element_at</a></code></li>
 <li><code><a title="src.graphics.Canvas.find_overlapping" href="#src.graphics.Canvas.find_overlapping">find_overlapping</a></code></li>
