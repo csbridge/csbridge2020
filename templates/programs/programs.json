@@ -723,6 +723,13 @@
                 "title_en": "Final Project",
                 "title_tr": "Final Projesi",
                 "projectURL": "starter/FinalProject.zip",
+                "examples": [
+                    {
+                        "title_en": "Colored Shapes",
+                        "title_tr": "Colored Shapes",
+                        "url": "projects/coloredShapes/"
+                    }
+                ],
                 "projects": [
                     {
                         "imageURL": "img/projects/finalProject/project.png",
