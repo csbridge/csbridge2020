@@ -1205,6 +1205,29 @@ filePath - the total path to the markdown file being rendered in this template
 <p><center>
 <img style="width:100%" src="../../../img/projects/coloredShapes/screenshot.png"> <br />
 </center></p>
+<h2 id="notes-on-interactors">Notes on Interactors</h2>
+<p>An interactor is a text field or a button - an interactive element that can appear around the perimeter of the canvas window.  Here's how to use them.</p>
+<h3 id="buttons">Buttons</h3>
+<p>You can create a button with the <code>create_button</code> function, specifying the text of the button, and whether it should be added to the top, left, bottom, or right side of the window:</p>
+<pre><code>canvas.create_button(&quot;Create Rectangle&quot;, Canvas.TOP)
+</code></pre>
+
+<p>You can check if a button is clicked just like you check for mouse clicks or keyboard presses.  In your program's main loop, call <code>get_new_button_clicks()</code> to get a list of recent clicks.  Each click will be the name of the button that was clicked (e.g. "Create Rectangle", for the above button).  Here's an example:</p>
+<pre><code>button_clicks = canvas.get_new_button_clicks()
+for button_click in button_clicks:
+    if button_click == &quot;Create Rectangle&quot;:
+        ...
+</code></pre>
+
+<h3 id="text-fields">Text Fields</h3>
+<p>You can create a text field with the <code>create_text_field</code> function, specifying the text describing the text field, and whether it should be added to the top, left, bottom, or right side of the window:</p>
+<pre><code>canvas.create_text_field(&quot;Color&quot;, Canvas.TOP)
+</code></pre>
+
+<p>The name you specify will be both the "name" of the text field and also the text that appears next to the text field describing its purpose to users.</p>
+<p>To get the current contents of the text field, use the <code>get_text_field_text</code> function, specifying the name of the text field you want to read from (e.g. "Color", for the above text field):</p>
+<pre><code>color = canvas.get_text_field_text(&quot;Color&quot;)
+</code></pre>
 	</div>
 </div>
 
