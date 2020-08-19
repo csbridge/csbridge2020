@@ -120,5 +120,11 @@
 		"title_tr": "Artificial Intelligence",
 		"slidesURL": "slides/18-AI.pdf",
 		"visible_after": "2020081809"
+	},
+	{
+		"title_en": "GUI Interactors",
+		"title_tr": "Arayüz Etkileşimcileri",
+		"slidesURL": "slides/20-GUI_Interactors.pdf",
+		"visible_after": "2020081809"
 	}
 ]
