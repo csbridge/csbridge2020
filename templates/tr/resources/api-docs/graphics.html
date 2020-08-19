@@ -66,6 +66,11 @@ the canvas is initialized with its default size.</p>
 </ul>
 <h3>Class variables</h3>
 <dl>
+<dt id="src.graphics.Canvas.BOTTOM"><code class="name">var <span class="ident">BOTTOM</span></code></dt>
+<dd>
+<div class="desc"><p>Directions to use for adding interactors to different sides of the canvas.<br>
+BOTTOM refers to the bottom of the window.</p></div>
+</dd>
 <dt id="src.graphics.Canvas.COLORS"><code class="name">var <span class="ident">COLORS</span></code></dt>
 <dd>
 <div class="desc"><p>This is a list of names of all colors available to use for graphics on the Canvas.
@@ -84,9 +89,44 @@ was taken from <a href="https://stackoverflow.com/questions/4969543/colour-chart
 <dd>
 <div class="desc"><p>The default width of the canvas is 754.</p></div>
 </dd>
+<dt id="src.graphics.Canvas.LEFT"><code class="name">var <span class="ident">LEFT</span></code></dt>
+<dd>
+<div class="desc"><p>Directions to use for adding interactors to different sides of the canvas.<br>
+LEFT refers to the left side of the window.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.RIGHT"><code class="name">var <span class="ident">RIGHT</span></code></dt>
+<dd>
+<div class="desc"><p>Directions to use for adding interactors to different sides of the canvas.<br>
+RIGHT refers to the right side of the window.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.TOP"><code class="name">var <span class="ident">TOP</span></code></dt>
+<dd>
+<div class="desc"><p>Directions to use for adding interactors to different sides of the canvas.<br>
+TOP refers to the top side of the window.</p></div>
+</dd>
 </dl>
 <h3>Methods</h3>
 <dl>
+<dt id="src.graphics.Canvas.create_button"><code class="name flex">
+<span>def <span class="ident">create_button</span></span>(<span>self, title, location, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Adds a button to the canvas with the specified title at the specified location.
+Buttons are added from left
+to right at the top and bottom of the window and top to bottom on the sides of the window.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>title</code></strong></dt>
+<dd>the title to display on the button.
+Must be unique among button names.</dd>
+<dt><strong><code>location</code></strong></dt>
+<dd>the region (Canvas.TOP/LEFT/BOTTOM/RIGHT) where the button should be added around the canvas.</dd>
+<dt><strong><code>kwargs</code></strong></dt>
+<dd>other tkinter keyword args</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>a reference to the button added to the window at the specified location.</p></div>
+</dd>
 <dt id="src.graphics.Canvas.create_image"><code class="name flex">
 <span>def <span class="ident">create_image</span></span>(<span>self, x, y, file_path, **kwargs)</span>
 </code></dt>
@@ -224,6 +264,28 @@ The text will be in size 13 font.</p>
 </dl>
 <h2 id="returns">Returns</h2>
 <p>the graphical text object that is displaying the specified text at the specified location.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.create_text_field"><code class="name flex">
+<span>def <span class="ident">create_text_field</span></span>(<span>self, label, location, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Adds a label and text field pair to the canvas with the specified label text at the specified location.
+Interactors are added from left to right at the top and bottom of the window and top to bottom on the sides
+of the window.
+Stores a reference to this text field in the Canvas map of text fields.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>label</code></strong></dt>
+<dd>the label text to display next to the text field, and the name of the text field.
+Must be unique among text field names.</dd>
+<dt><strong><code>location</code></strong></dt>
+<dd>the region (Canvas.TOP/LEFT/BOTTOM/RIGHT) where the label/text field
+should be added around the canvas.</dd>
+<dt><strong><code>kwargs</code></strong></dt>
+<dd>other tkinter keyword args for the text field</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>a reference to the text field added to the window at the specified location.</p></div>
 </dd>
 <dt id="src.graphics.Canvas.delete"><code class="name flex">
 <span>def <span class="ident">delete</span></span>(<span>self, obj)</span>
@@ -367,14 +429,26 @@ the object is not filled.</p></div>
 <h2 id="returns">Returns</h2>
 <p>the mouse's current Y location on the canvas.</p></div>
 </dd>
+<dt id="src.graphics.Canvas.get_new_button_clicks"><code class="name flex">
+<span>def <span class="ident">get_new_button_clicks</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a list of all button clicks that have occurred since the last call to this function or any registered
+button handler.</p>
+<h2 id="returns">Returns</h2>
+<p>a list of all button clicks that have occurred since the last call to this function or any registered
+button handler.
+Each button click is the name of the button clicked, e.g.
+clicks = canvas.get_new_button_clicked(); print(clicks[0]).</p></div>
+</dd>
 <dt id="src.graphics.Canvas.get_new_key_presses"><code class="name flex">
 <span>def <span class="ident">get_new_key_presses</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Returns a list of all key presses that have occurred since the last call to this method or any registered
+<div class="desc"><p>Returns a list of all key presses that have occurred since the last call to this function or any registered
 key handler.</p>
 <h2 id="returns">Returns</h2>
-<p>a list of all key presses that have occurred since the last call to this method or any registered
+<p>a list of all key presses that have occurred since the last call to this function or any registered
 key handler.
 Each key press contains a keysym property for the key pressed, e.g.
 presses = canvas.get_new_key_presses(); print(presses[0].keysym).</p></div>
@@ -383,10 +457,10 @@ presses = canvas.get_new_key_presses(); print(presses[0].keysym).</p></div>
 <span>def <span class="ident">get_new_mouse_clicks</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Returns a list of all mouse clicks that have occurred since the last call to this method or any registered
+<div class="desc"><p>Returns a list of all mouse clicks that have occurred since the last call to this function or any registered
 mouse handler.</p>
 <h2 id="returns">Returns</h2>
-<p>a list of all mouse clicks that have occurred since the last call to this method or any registered
+<p>a list of all mouse clicks that have occurred since the last call to this function or any registered
 mouse handler.
 Each mouse click contains x and y properties for the click location, e.g.
 clicks = canvas.get_new_mouse_clicks(); print(clicks[0].x).</p></div>
@@ -430,6 +504,19 @@ Cannot be used on any non-text graphical object.</p>
 </dl>
 <h2 id="returns">Returns</h2>
 <p>the text currently displayed by this graphical object.</p></div>
+</dd>
+<dt id="src.graphics.Canvas.get_text_field_text"><code class="name flex">
+<span>def <span class="ident">get_text_field_text</span></span>(<span>self, text_field_name)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the current contents of the text field with the specified name.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>text_field_name</code></strong></dt>
+<dd>the name given when the text field was created.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>the current contents of the given text field, or None if there is no text field with the given name.</p></div>
 </dd>
 <dt id="src.graphics.Canvas.get_top_y"><code class="name flex">
 <span>def <span class="ident">get_top_y</span></span>(<span>self, obj)</span>
@@ -668,6 +755,23 @@ graphical object.</p>
 <dd>True if the object should be hidden, False if the object should be visible.</dd>
 </dl></div>
 </dd>
+<dt id="src.graphics.Canvas.set_on_button_clicked"><code class="name flex">
+<span>def <span class="ident">set_on_button_clicked</span></span>(<span>self, callback)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the specified function to be called whenever a button is clicked.
+If this function is called
+multiple times, only the last specified function is called when a button is clicked.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>callback</code></strong></dt>
+<dd>a function to call whenever a button is clicked.
+Must take in one parameter, which
+is the text name of the button that was just clicked.
+E.g. func(button_name).
+If this parameter is None, no function will be called when a button is clicked.</dd>
+</dl></div>
+</dd>
 <dt id="src.graphics.Canvas.set_on_key_pressed"><code class="name flex">
 <span>def <span class="ident">set_on_key_pressed</span></span>(<span>self, callback)</span>
 </code></dt>
@@ -810,16 +914,22 @@ Cannot be used on any non-text graphical object.</p>
 <li>
 <h4><code><a title="src.graphics.Canvas" href="#src.graphics.Canvas">Canvas</a></code></h4>
 <ul class="">
+<li><code><a title="src.graphics.Canvas.BOTTOM" href="#src.graphics.Canvas.BOTTOM">BOTTOM</a></code></li>
 <li><code><a title="src.graphics.Canvas.COLORS" href="#src.graphics.Canvas.COLORS">COLORS</a></code></li>
 <li><code><a title="src.graphics.Canvas.DEFAULT_HEIGHT" href="#src.graphics.Canvas.DEFAULT_HEIGHT">DEFAULT_HEIGHT</a></code></li>
 <li><code><a title="src.graphics.Canvas.DEFAULT_TITLE" href="#src.graphics.Canvas.DEFAULT_TITLE">DEFAULT_TITLE</a></code></li>
 <li><code><a title="src.graphics.Canvas.DEFAULT_WIDTH" href="#src.graphics.Canvas.DEFAULT_WIDTH">DEFAULT_WIDTH</a></code></li>
+<li><code><a title="src.graphics.Canvas.LEFT" href="#src.graphics.Canvas.LEFT">LEFT</a></code></li>
+<li><code><a title="src.graphics.Canvas.RIGHT" href="#src.graphics.Canvas.RIGHT">RIGHT</a></code></li>
+<li><code><a title="src.graphics.Canvas.TOP" href="#src.graphics.Canvas.TOP">TOP</a></code></li>
+<li><code><a title="src.graphics.Canvas.create_button" href="#src.graphics.Canvas.create_button">create_button</a></code></li>
 <li><code><a title="src.graphics.Canvas.create_image" href="#src.graphics.Canvas.create_image">create_image</a></code></li>
 <li><code><a title="src.graphics.Canvas.create_image_with_size" href="#src.graphics.Canvas.create_image_with_size">create_image_with_size</a></code></li>
 <li><code><a title="src.graphics.Canvas.create_line" href="#src.graphics.Canvas.create_line">create_line</a></code></li>
 <li><code><a title="src.graphics.Canvas.create_oval" href="#src.graphics.Canvas.create_oval">create_oval</a></code></li>
 <li><code><a title="src.graphics.Canvas.create_rectangle" href="#src.graphics.Canvas.create_rectangle">create_rectangle</a></code></li>
 <li><code><a title="src.graphics.Canvas.create_text" href="#src.graphics.Canvas.create_text">create_text</a></code></li>
+<li><code><a title="src.graphics.Canvas.create_text_field" href="#src.graphics.Canvas.create_text_field">create_text_field</a></code></li>
 <li><code><a title="src.graphics.Canvas.delete" href="#src.graphics.Canvas.delete">delete</a></code></li>
 <li><code><a title="src.graphics.Canvas.delete_all" href="#src.graphics.Canvas.delete_all">delete_all</a></code></li>
 <li><code><a title="src.graphics.Canvas.find_all" href="#src.graphics.Canvas.find_all">find_all</a></code></li>
@@ -833,11 +943,13 @@ Cannot be used on any non-text graphical object.</p>
 <li><code><a title="src.graphics.Canvas.get_left_x" href="#src.graphics.Canvas.get_left_x">get_left_x</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_mouse_x" href="#src.graphics.Canvas.get_mouse_x">get_mouse_x</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_mouse_y" href="#src.graphics.Canvas.get_mouse_y">get_mouse_y</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_new_button_clicks" href="#src.graphics.Canvas.get_new_button_clicks">get_new_button_clicks</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_new_key_presses" href="#src.graphics.Canvas.get_new_key_presses">get_new_key_presses</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_new_mouse_clicks" href="#src.graphics.Canvas.get_new_mouse_clicks">get_new_mouse_clicks</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_outline_color" href="#src.graphics.Canvas.get_outline_color">get_outline_color</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_random_color" href="#src.graphics.Canvas.get_random_color">get_random_color</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_text" href="#src.graphics.Canvas.get_text">get_text</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_text_field_text" href="#src.graphics.Canvas.get_text_field_text">get_text_field_text</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_top_y" href="#src.graphics.Canvas.get_top_y">get_top_y</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_width" href="#src.graphics.Canvas.get_width">get_width</a></code></li>
 <li><code><a title="src.graphics.Canvas.is_hidden" href="#src.graphics.Canvas.is_hidden">is_hidden</a></code></li>
@@ -856,6 +968,7 @@ Cannot be used on any non-text graphical object.</p>
 <li><code><a title="src.graphics.Canvas.set_fill_color" href="#src.graphics.Canvas.set_fill_color">set_fill_color</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_font" href="#src.graphics.Canvas.set_font">set_font</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_hidden" href="#src.graphics.Canvas.set_hidden">set_hidden</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_on_button_clicked" href="#src.graphics.Canvas.set_on_button_clicked">set_on_button_clicked</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_on_key_pressed" href="#src.graphics.Canvas.set_on_key_pressed">set_on_key_pressed</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_on_mouse_pressed" href="#src.graphics.Canvas.set_on_mouse_pressed">set_on_mouse_pressed</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_on_mouse_released" href="#src.graphics.Canvas.set_on_mouse_released">set_on_mouse_released</a></code></li>
