@@ -125,6 +125,7 @@
 		"title_en": "GUI Interactors",
 		"title_tr": "Arayüz Etkileşimcileri",
 		"slidesURL": "slides/20-GUI_Interactors.pdf",
+		"codeURL": "starter/Gui_Interactors.zip",
 		"visible_after": "2020081809"
 	}
 ]
