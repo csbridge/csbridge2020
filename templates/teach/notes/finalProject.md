@@ -49,3 +49,5 @@ It doesn't have to be just the most technically complex project - look at the pr
 **Once you have chosen a student to nominate, [submit their info here](https://docs.google.com/forms/d/1iBxb28pWzGU7E0FkLLeVoLW0gb4PJUB-togmhkSKUW0)**
 
 Nominating them doesn't guarantee they will be demoed - we will further filter down the submissions.  But we will try to demo as many as we can!
+
+**Please submit your nomination as soon as you can, but no later than the start of section (1PM EDT / 10AM PDT / 8PM Turkey time / 7PM Prague time)**
