@@ -12,7 +12,6 @@ datetime_start,datetime_end,alert_type,category,location
 20200817 10:00, 20200817 10:45,alert-danger,lecture-pm.ptl
 20200818 10:00, 20200818 10:45,alert-danger,lecture-pm.ptl
 20200819 10:00, 20200819 10:45,alert-danger,lecture-pm.ptl
-20200820 10:00, 20200820 10:45,alert-danger,lecture-pm.ptl
 20200805 01:00, 20200805 1:45,alert-danger,ondrej-lecture.ptl
 20200806 01:00, 20200806 1:45,alert-danger,ayca-lecture.ptl
 20200807 01:00, 20200807 1:45,alert-danger,ondrej-lecture.ptl
