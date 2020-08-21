@@ -1,0 +1,19 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Birim Çevirme
+credit: Mehran Sahami, Keith Schwarz, Eric Roberts, Marty Stepp ve diğerleri.
+translation: Serhat Arslan, Demet Tümkaya
+
+Amerika, uzunluk birimleri için inç, feet, yard ve mil olan karışık bir ölçü sistemi kullanıyor. Bir foot 12 inç iken, 3 feet 1 yard'a eşit. Fakat, bilimsel ölçümler yaparken dünya genelinde ölçü birimleri olarak kullanılan santimetre, metre ve kilometreyi tercih etmek önemlidir. 2.54 santimetrenin 1 inç olduğunu bilerek, santimetreden inç'e birim çevrimi yapabilen bir program yazın. Aşağıda, programdan örnek bir çıktı görebilirsiniz. Program kullanıcı santimetre için alınan sayıyı -1 olarak girdiğinde durmalıdır.
+
+```
+Bu program santimetreyi inç'e çevirebilir.
+Cm girin: 2.54
+2.54 santimetre 1.0 inç'e eşittir.
+Cm girin: 68
+68.0 santimetre 26.771653543307085 inç'e eşittir.
+Cm girin: 100
+100.0 santimetre 39.37007874015748 inç'e eşittir.
+Cm girin: -1
+```
+
+Şimdi, istediğin türde birimleri birbirine çeviren bir program yazabilirsin!

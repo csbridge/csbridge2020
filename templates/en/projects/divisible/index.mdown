@@ -1,0 +1,9 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Divisible
+credit: Chris Piech and Lisa Yan
+
+This demo shows several functions:
+
+* One takes in input and returns whether or not that input is odd.
+* Another takes in input and a divisor and returns the quotient using the *integer division* `//` function.
+* A third takes in input and a divisor and returns the remainder using the *modulo* `%` function.

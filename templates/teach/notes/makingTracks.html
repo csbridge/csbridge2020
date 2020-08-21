@@ -1,0 +1,29 @@
+% rebase('templates/teach/notes/template.ptl', problemTitle="Making Tracks")
+
+<p>
+	The problem below is the first lab problem for the day.  It is very similar to the lecture examples and meant as a warmup with mouse events.  They will need to add mouse listeners in their run method, and then add a bear track at each mouse click location.
+</p>
+
+<h3>Solution</h3>
+<pre id="editor" style="height:200px">public class MakingTracks extends GraphicsProgram {
+    
+    public void run() {
+        addMouseListeners();
+    }
+    
+    public void mouseClicked(MouseEvent e) {
+        drawBearTrack(e.getX(), e.getY());
+    }
+    
+...</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>

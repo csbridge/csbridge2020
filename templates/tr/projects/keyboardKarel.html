@@ -1,0 +1,104 @@
+% rebase('templates/en/template.ptl', title="Keyboard Karel")
+
+	<!-- Main Content -->
+	<div class="container">
+
+		<!-- Header -->
+		<div id="pageHeader">
+			<h1>
+        Keyboard Karel (with Solution)
+			</h1>
+			<p>
+				Problem written by Barış Bozkurt and Lisa Yan.
+			</p>
+		<br />
+		Day5: <code>HolePuncher.java</code>
+		
+		</div>
+		<hr/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+        Write a program that lets the user to move Karel around with arrow keys.
+        Karel should start in the top-left corner of the screen and move exactly 100 pixels in the direction specified. (Hint: make sure to click on the program window after starting the program to let it start receiving keyboard events).
+        </p>
+        <p>Note that because you are not restricting Karel to the screen, Karel is free to move off-screen.</p>
+
+				<p>
+					<center>
+            <img style="width:500px;border:1px solid #000000" src="{{pathToRoot}}img/projects/keyboardKarel/demo.gif">
+					</center>
+				</p>
+
+        <p>Here is a Karel to help you out. You should save this Karel as <code>karel.png</code> into your Eclipse project folder.</p>
+			<center>
+						<img style="width:80px" src="{{pathToRoot}}img/projects/creativeGraphics/karel.png">	
+            </center>
+
+				
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Solution</h2>
+
+
+<pre id="editor" style="height:680px">
+/**
+ * Class: KeyboardKarel
+ * -----------------
+ * Karel moves around an infinite world.
+ */
+public class KeyboardKarel extends GraphicsProgram {
+
+	/**
+	 * Width and height of application window, in pixels.
+	 * These should be used when setting up the initial size of the game,
+	 * but in later calculations you should use getWidth() and getHeight()
+	 * rather than these constants for accurate size information.
+	 */
+	public static final int APPLICATION_WIDTH = 500;
+	public static final int APPLICATION_HEIGHT = 500;
+
+	GImage karel = null;
+	private static final int STEP = 100;
+
+	public void run() {
+		karel = new GImage("karel.png");
+		add(karel, 0, 0);
+		addKeyListeners();
+	}
+
+	/* When a key is pressed, move Karel.
+	 */
+	public void keyPressed(KeyEvent k) {
+		int code = k.getKeyCode();
+		if(code == KeyEvent.VK_UP) {
+			karel.move(0, -STEP);
+		} else if(code == KeyEvent.VK_DOWN){
+			karel.move(0, STEP);
+		} else if(code == KeyEvent.VK_LEFT){
+			karel.move(-STEP, 0);
+		} else if(code == KeyEvent.VK_RIGHT){
+			karel.move(STEP, 0);
+		}
+	}
+}
+</pre>
+    
+<script src="{{pathToRoot}}plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+   editor.setTheme('ace/theme/eclipse');
+   editor.getSession().setMode("ace/mode/java");
+   editor.setReadOnly(true);
+   editor.setShowPrintMargin(false);
+   editor.renderer.setShowGutter(false); 
+    /*editor.setTheme("ace/theme/eclipse");
+    editor.getSession().setMode("ace/mode/java");*/
+</script>
+	
+	</div>
+	</div>

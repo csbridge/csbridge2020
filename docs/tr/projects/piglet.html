@@ -1,0 +1,612 @@
+<!--
+	A template used for every page - contains the header, nav bar, a container div, and the footer.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../../images/stanford-favicon.png" type="image/x-icon">
+<title>CS Bridge  | Piglet</title>
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../../plugins/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../style.css">
+
+<!-- Java Script -->
+<script src="../../plugins/jquery.min.js"></script>
+<script src="../../plugins/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+
+<script src="../../karel/ace/ace.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/moment.min.js"></script>
+<script type="text/javascript" src="../../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../../js/time.js"></script>
+
+<!--
+<script type="text/javascript" src="../../plugins/d3.v3/d3.v3.min.js"></script>
+-->
+
+
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+  </script>-->
+
+<script src="../karel/js/html/websiteImports.js"></script>
+<script>importCss();</script>
+<script>importJs();</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+	</head>
+	<body>
+
+
+<nav class="navbar-inverse navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="container">
+
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../tr/index.html">CS Bridge</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+
+					<!-- Resources dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Kaynaklar<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Okuyucu</a></li>
+							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Referansı</a></li>
+
+							<!-- Divider only visible once Python resources visible -->
+							<li 
+									class="divider visible-after" data-visible-after="2020080600"
+							/>
+
+							<!-- Python reader visible later -->
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Okuyucu</a>
+							</li>
+
+							<!-- Python reference visible later -->
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../tr/resources/quick-python.html">Python Referansı</a>
+							</li>
+
+							<!-- Graphics reference visible later -->
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../../tr/resources/graphics.html">Grafikler Referansı</a>
+							</li>
+
+							<li class="divider" />
+
+							<!-- Yosefa's Part -->
+							<li class="dropdown-header">Program Bilgileri</li>
+							<li><a href="../../tr/resources/general-info.html">Genel Bilgiler</a></li>
+							<li><a href="../../tr/resources/student-faq.html">[Öğrenciler] Sıkça Sorulan Sorular</a></li>
+							<li><a href="../../tr/resources/section-info.html">Grup Bilgileri</a></li>
+							<!-- End Yosefa's Part -->
+
+							<li class="divider" />
+
+							<li><a href="../../tr/resources/install.html">PyCharm Kurulumu</a></li>
+							<li><a href="../../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
+							<li class="divider" />
+							<li><a href="../../tr/resources/submission-oh.html">Çalışmalarınızı Sisteme Yükleme/Ofis Saatleri</a></li>
+						</ul>
+					</li>
+
+					<!-- Projects dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projeler <b class="caret"></b></a>
+
+<ul class="dropdown-menu">
+
+
+	<!-- This dropdown should display one element for each day of projects -->
+		<li 
+				class="dropdown-submenu"
+		>
+			<a tabindex="-1" href="#">1: Karel</a>
+
+			<!-- For each of morning/evening, add a "side popup" -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header"
+						>
+							Akşam
+						</li>
+
+							<li
+							>
+								<a href="../../tr/projects/collectNewspaper.html">Gazete Alma</a>
+							</li>
+							<li
+							>
+								<a href="../../tr/projects/arches.html">Sütun Tamircisi</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080500"
+		>
+			<a tabindex="-1" href="#">2: Karel ve Kontrol Akışı</a>
+
+			<!-- For each of morning/evening, add a "side popup" -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080500"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../../tr/projects/placeSquare.html">Kare Yerleştir</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../../tr/projects/mountain.html">Dağcı Karel</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080509"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../tr/projects/stripeKarel.html">Şerit Karel</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../tr/projects/hospitalKarel.html">Hastaneci Karel</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../tr/projects/randomPainter.html">Deli Ressam</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080600"
+		>
+			<a tabindex="-1" href="#">3: Değişkenler</a>
+
+			<!-- For each of morning/evening, add a "side popup" -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080600"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../tr/projects/sandcastles.html">Kumdan Kaleler</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../tr/projects/runningSum.html">Topla ve Biriktir</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080609"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../tr/projects/areaCalculator.html">Alan Hesaplayıcı</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../tr/projects/8ball.html">8 Numaralı Top</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../tr/projects/viralVideo.html">Viral Video</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../tr/projects/khansole.html">Khansole Akademi</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080700"
+		>
+			<a tabindex="-1" href="#">4: For döngüsü ve analizi</a>
+
+			<!-- For each of morning/evening, add a "side popup" -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080700"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080700"
+							>
+								<a href="../../tr/projects/someSum.html">Toplama Diye Buna Derim!</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080700"
+							>
+								<a href="../../tr/projects/carbonDating.html">Carbon Dating</a>
+							</li>
+			</ul>
+		</li>
+</ul>					</li>
+
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Örnekler <b class="caret"></b></a>
+
+<ul class="dropdown-menu">
+
+
+	<!-- This dropdown should display one element for each day of worked examples -->
+
+		<li 
+				class="dropdown-submenu"
+		>
+			<a tabindex="-1" href="#">1: Karel</a>
+
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header"
+						>
+							Akşam
+						</li>
+
+							<li
+							>
+								<a href="../../tr/projects/stepUp/">Öne Çık</a>
+							</li>
+							<li
+							>
+								<a href="../../tr/projects/place100/">100 Tane Yerleştir</a>
+							</li>
+			</ul>
+		</li>
+
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080500"
+		>
+			<a tabindex="-1" href="#">2: Karel ve Kontrol Akışı</a>
+
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080500"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../../tr/projects/beeperLine/">Beeper Hattı</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080509"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../tr/projects/invertBeeper/">Ters Çevir</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../tr/projects/unKarel/">İnsani Yardım Karel&#039;ı</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../tr/projects/banishWinter/">Kışa Veda</a>
+							</li>
+			</ul>
+		</li>
+
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080600"
+		>
+			<a tabindex="-1" href="#">3: Değişkenler</a>
+
+			<!-- When hovered, we want to show another side popup with sections for each of morning/evening -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080600"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../tr/projects/emc2/">E=MC²</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080609"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../tr/projects/fibonacci/">Fibonacci</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../tr/projects/findPi/">Pi&#039;yi Bul</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../tr/projects/favoriteNumber/">Favori Sayım</a>
+							</li>
+			</ul>
+		</li>
+</ul>					</li>
+
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ders <b class="caret"></b></a>
+
+<ul class="dropdown-menu">
+
+
+	<!-- This dropdown should display one element for each lecture -->
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080409"
+		>
+			<a tabindex="-1" href="#">1: Karel</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lecture1.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../starter/lectures/Lecture1.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080500"
+		>
+			<a tabindex="-1" href="#">2: Karel ve Kontrol Akışı</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lecture2.pdf">Sunum</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080509"
+		>
+			<a tabindex="-1" href="#">3: Karel ve Kontrol Akışı 2</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lecture3.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../starter/lectures/Lecture3.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080600"
+		>
+			<a tabindex="-1" href="#">4: Değişkenler</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/IntroPython_Variables.pdf">Sunum</a>
+						</li>
+						<li>
+	      					<a href="../../starter/lectures/Lecture4.zip">Kod</a>
+						</li>
+			</ul>
+		</li>
+</ul>					</li>
+					
+					<!-- Bonus -->
+					<ul class="nav navbar-nav">
+						<li><a href="../../tr/bonus-index.html">Bonus</a></li>
+					</ul>
+
+					<!-- TA Link -->
+
+				</ul>
+
+				<!-- Language toggle button -->
+				<ul class="nav navbar-nav navbar-right">
+						<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/english_flag.png"></img></a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</nav>
+
+<!-- Script to toggle between languages -->
+<script>
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+	
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+</script>
+		<div class="container">
+			<!--
+Template for rendering a project page, for use with Markdown specs.  Expects
+the following properties passed in:
+
+title - problem title
+credit - problem credit (optional)
+translation - translation credit (optional)
+solution - problem solution python filename (optional)
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
+
+
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		Piglet
+	</h1>
+
+		<p>
+			Hazırlayanlar: Mehran Sahami, Keith Schwarz, Eric Roberts, Marty Stepp ve diğerleri.
+		</p>
+
+		<p>
+			Çevirenler: Serhat Arslan, Demet Tümkaya
+		</p>
+</div>
+<hr/>
+
+<!-- Problem description -->
+<div class="row">
+	<div class="col-xs-12">
+		<p>"Pig" oyununu temel alan, tek kişilik bir zar oyunu "Piglet" için bir konsol programı yazın. Oyuncunun hedefi, zar attığında 1 gelene kadar alabileceği en yüksek puanı kazanmaktır. Her turda öğrenci zar atar; eğer 1 gelirse, oyun biter ve oyuncu 0 puan alır. Eğer oyuncu 1'den farklı bir sayı elde ederse, bu sayı puanına eklenir. Sonrasında oyuncu tekrar zar atmayı veya oyunu güncel puanıyla bitirmeyi tercih edebilir. 2 örnek çıktı aşağıda gösterilmektedir.</p>
+<pre><code>Piglet'e hoş geldin!
+4 attın!
+Tekrar zar at? evet
+5 attın!
+Tekrar zar at? evet
+5 attın!
+Tekrar zar at? evet
+4 attın!
+Tekrar zar at? evet
+3 attın!
+Tekrar zar at? hayır
+21 puan kazandın.
+</code></pre>
+
+<pre><code>Piglet'e hoş geldin!
+5 attın!
+Tekrar zar at? evet
+2 attın!
+Tekrar zar at? evet
+4 attın!
+Tekrar zar at? evet
+1 attın!
+0 puan kazandın.
+</code></pre>
+	</div>
+</div>
+
+<!-- Solution (if included) -->
+
+					
+
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+
+		<!-- Start of content that must be translated -->
+			&#169; Stanford 2020 &#124; Hazırlayan: 
+    		<a href="http://stanford.edu/~cpiech">Chris</a> (Tüm ekibin de yardımıyla).
+			Pek yetenekli birçok eğitimci tarafından hazırlanan muhteşem CS106A sınıfından esinlenilmiştir. <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> ve <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>'ye özel teşekkürlerimizi sunarız. Türkçe tercüme ile ilgili tüm soru ve görüşleriniz için <a href="http://web.stanford.edu/~sarslan/">Serhat Arslan</a> ile iletişime geçebilirsiniz.
+		<!-- End of content that must be translated -->
+	</p>
+</div>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<script type="text/javascript">
+    var pubnubDemo = new PubNub({
+        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+    });
+
+	// Subscribe to the demo_tutorial channel
+	pubnubDemo.addListener({
+	    message: function(request) {
+	    	let msg = request['message']
+	    	console.log(msg)
+	    	let swalData = msg['swal'];
+	    	console.log(swalData)
+        Swal.fire(swalData)
+	    }
+	})
+
+	pubnubDemo.subscribe({
+	    channels: ['csbridge_alert']
+	});
+</script>
+		</div>
+
+	</body>
+</html>
